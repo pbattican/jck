@@ -1,0 +1,44 @@
+JAP_industrial_effort = {
+	JAP_streamline_fighter_production = {
+		icon = generic_research
+		allowed = {
+			original_tag = JAP
+		}
+		available = {
+			has_completed_focus = JAP_MIL_army_start
+		}
+		visible = {
+			original_tag = JAP
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POL_streamline_fighter_production"
+		}
+		days_remove = 70
+		remove_effect = {
+			add_ideas = JAP_air_industry
+		}
+	}
+	JAP_expand_naval_production = {
+		icon = generic_research
+		allowed = {
+			original_tag = JAP
+		}
+		available = {
+			has_completed_focus = JAP_MIL_naval_start
+		}
+		visible = {
+			original_tag = JAP
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision POL_streamline_fighter_production"
+		}
+		days_remove = 70
+		remove_effect = {
+			add_ideas = JAP_shipping_industries
+		}
+	}
+}

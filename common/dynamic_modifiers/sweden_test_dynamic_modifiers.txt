@@ -1,0 +1,8 @@
+SWE_subjugate_locals = {
+	icon = "GFX_idea_army_cooperation"
+	remove_trigger = {
+		NOT = { is_controlled_by = SWE }
+	}
+	
+	compliance_gain = 0.15
+}
