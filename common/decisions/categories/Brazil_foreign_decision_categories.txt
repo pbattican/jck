@@ -1,4 +1,4 @@
-OTT_foreign_policy = {
+BRA_foreign_policy = {
 	icon = GFX_decision_category_military_operation
 	allowed = {
 		original_tag = BRA
