@@ -68,7 +68,9 @@ ability = {
 				#org_damage_multiplier = -1.0
 				### ADDED FOR KRW ON 19-02-2021
 				org_damage_multiplier = -0.9
-				str_damage_multiplier = 0.6
+				#str_damage_multiplier = 0.6
+				### ADDED FOR KRW ON 19-02-2021
+				str_damage_multiplier = 0.5
 				war_support_reduction_on_damage = 0.2
 				cannot_retreat_while_defending = 1
 				days = 7
