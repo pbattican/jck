@@ -25,6 +25,10 @@
  OTT_join_entente:0 "Join the Entente"
  OTT_join_ENT_tech:0 "Join the Entente Technology Group"
 
+ BRA_foreign_policy:0 "Brazilian Foreign Policies"
+ BRA_join_entente:0 "Join the Entente"
+ BRA_join_ENT_tech:0 "Join the Entente Technology Group"
+
  POL_air_effort:0 "Polish Air Effort"
  POL_streamline_fighter_production:0 "Streamline fighter production"
  POL_expand_fighter_production:0 "Expand fighter production"
