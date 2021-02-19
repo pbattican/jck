@@ -1,31 +1,26 @@
 BRA_foreign_policy = {
-	BRA_join_entente = {
+	KRW_BRA_join_entente = {
 		icon = generic_political_discourse
 		allowed = {
 			original_tag = BRA
 		}
 		available = {
-			OR = {
-				GER = {
-					has_war_with = FRA
+			AND = {
+				NOT = {
+					has_socialist_government = yes
 				}
-				date > 1939.6.1
+				OR = {
+					GER = {
+						has_war_with = FRA
+					}
+					date > 1939.6.1
+				}
 			}
 			is_in_faction = no
 			is_subject = no
 		}
 		visible = {
-			country_exists = GER
-			CAN = {
-				is_faction_leader = yes
-			}
-			CAN = {
-				is_faction_leader = yes
-				NOT = {
-					is_in_faction_with = ROOT
-					has_war_with = ROOT
-				}
-			}
+			original_tag = BRA
 		}
 		fire_only_once = yes
 		cost = 0
