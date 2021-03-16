@@ -36,6 +36,7 @@ AUS_foreign_policy = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision AUS_join_Reichspakt"
+			set_country_flag = AUS_intervened_in_weltkrieg
 			GER = {
 				add_to_faction = AUS
 			}
