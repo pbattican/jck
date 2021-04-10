@@ -5,7 +5,7 @@ JAP_industrial_effort = {
 			original_tag = JAP
 		}
 		available = {
-			has_completed_focus = JAP_MIL_army_start
+			#has_completed_focus = JAP_MIL_army_start
 		}
 		visible = {
 			original_tag = JAP
