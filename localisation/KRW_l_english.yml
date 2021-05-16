@@ -57,8 +57,8 @@
 
  ### Force Attack
  KRW_ABILITY_FORCE_ATTACK:0 "Force Attack"
- KRW_ABILITY_ORCE_ATTACK_TOOLTIP:0 "Force Attack ($LEADER$)"
- KRW_ABILITY_ORCE_ATTACK_DESC:0 "Your armies will get a defensive bonus at the expense of some disadvantages.\n§BKRW Edit: Org. damage is now 0.75, instead of 1.0§"
+ KRW_ABILITY_FORCE_ATTACK_TOOLTIP:0 "Force Attack ($LEADER$)"
+ KRW_ABILITY_FORCE_ATTACK_DESC:0 "Your armies will get a defensive bonus at the expense of some disadvantages.\n§BKRW Edit: Org. damage is now 0.75, instead of 1.0§"
 
  ### Welcome event
  krw.intro.0.t:0 "Welcome to Kaiserreich Weekly!"
