@@ -5,12 +5,7 @@ RUS_foreign_affairs = {
 			original_tag = RUS
 		}
 		available = {
-			OR = {
-				GER = {
-					has_war_with = FRA
-				}
-				date > 1939.1.1
-			}
+			date > 1936.6.1
 			is_in_faction = no
 			is_subject = no
 		}
