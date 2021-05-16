@@ -41,6 +41,10 @@
  RUS_join_CoPro:0 "Join the Co-Pro"
  RUS_join_cp_tech:0 "Join the Co-Pro Technology Group"
 
+ PRF_foreign_affairs:0 "Princely Foreign Policies"
+ PRF_join_CoPro:0 "Join the Co-Pro"
+ PRF_join_cp_tech:0 "Join the Co-Pro Technology Group"
+
  SER_foreign_policy:0 "Serbian Foreign Policies"
  SER_join_Reichspakt:0 "Join the Reichspakt"
 
@@ -53,7 +57,12 @@
  ### Last Stand
  KRW_ABILITY_LAST_STAND:0 "Last Stand"
  KRW_ABILITY_LAST_STAND_TOOLTIP:0 "Last Stand ($LEADER$)"
- KRW_ABILITY_LAST_STAND_DESC:0 "Your armies will get a defensive bonus at the expense of some disadvantages.\n§BKRW Edit: Org. damage is now 0.9, instead of 1.0§"
+ KRW_ABILITY_LAST_STAND_DESC:0 "Your armies will get a defensive bonus at the expense of some disadvantages.\n§BKRW Edit: Org. damage is now 0.75, instead of 1.0§"
+
+ ### Force Attack
+ KRW_ABILITY_FORCE_ATTACK:0 "Force Attack"
+ KRW_ABILITY_FORCE_ATTACK_TOOLTIP:0 "Force Attack ($LEADER$)"
+ KRW_ABILITY_FORCE_ATTACK_DESC:0 "Your armies will get a defensive bonus at the expense of some disadvantages.\n§BKRW Edit: Org. damage is now 0.75, instead of 1.0§"
 
  ### Welcome event
  krw.intro.0.t:0 "Welcome to Kaiserreich Weekly!"

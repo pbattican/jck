@@ -1,7 +1,7 @@
 ability = {
 	force_attack = {
-		name = ABILITY_FORCE_ATTACK
-		desc = ABILITY_FORCE_ATTACK_DESC
+		name = KRW_ABILITY_FORCE_ATTACK
+		desc = KRW_ABILITY_FORCE_ATTACK_DESC
 		sound_effect = command_power_ability_offensive
 		type = army_leader
 		allowed = {
@@ -41,12 +41,14 @@ ability = {
 			add_temporary_buff_to_units = {
 				combat_offense = 0.2
 				combat_breakthrough = 0.25
-				org_damage_multiplier = -1
+				### ADDED FOR KRW ON 16-05-2021
+				#org_damage_multiplier = -1
+				org_damage_multiplier = -0.75
 				str_damage_multiplier = 0.6
 				war_support_reduction_on_damage = 0.2
 				cannot_retreat_while_attacking = 1
 				days = 7
-				tooltip = ABILITY_FORCE_ATTACK_TOOLTIP
+				tooltip = KRW_ABILITY_FORCE_ATTACK_TOOLTIP
 			}
 		}
 	}
@@ -67,7 +69,8 @@ ability = {
 				combat_entrenchment = 0.25
 				#org_damage_multiplier = -1.0
 				### ADDED FOR KRW ON 19-02-2021
-				org_damage_multiplier = -0.9
+				### CHANGED FOR KRW ON 16-05-2021
+				org_damage_multiplier = -0.75
 				#str_damage_multiplier = 0.6
 				### ADDED FOR KRW ON 19-02-2021
 				str_damage_multiplier = 0.5
