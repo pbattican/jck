@@ -797,14 +797,6 @@ is_chinese_state = {
 		state = 621 #Ulanqab (only by MON)
 
 		AND = {
-			owner = {
-				OR = {
-					can_become_china = yes
-					tag = TIB
-					tag = MON
-					tag = ETS
-				}
-			}
 			OR = {
 				#Tianjin concession 
 				state = 609 #Tianjin
@@ -835,6 +827,14 @@ is_chinese_state = {
 				state = 748 #Bome (non-integrable)
 				state = 858 #Tawang (non-integrable)
 				state = 1086 #Changtang (only by TIB)
+			}
+			owner = {
+				OR = {
+					can_become_china = yes
+					tag = TIB
+					tag = MON
+					tag = ETS
+				}
 			}
 		}
 	}

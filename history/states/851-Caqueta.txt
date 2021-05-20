@@ -3,11 +3,9 @@ state = {
 	name = "STATE_851"
 
 	history = {
-		owner = COL
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = COL
 	}
 
 	provinces = {

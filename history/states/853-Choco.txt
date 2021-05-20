@@ -3,11 +3,9 @@ state = {
 	name = "STATE_853"
 
 	history = {
-		owner = COL
 		buildings = {
 			infrastructure = 3
 		}
-		add_core_of = COL
 		victory_points = {
 			12872 1
 		}
