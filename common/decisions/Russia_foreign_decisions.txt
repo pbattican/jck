@@ -1,0 +1,90 @@
+RUS_foreign_affairs = {
+
+	RUS_bypass_Ger_Hegemony = {
+		icon = generic_political_discourse
+		allowed = {
+			original_tag = RUS
+		}
+		available = {
+            GER = {
+                has_war_with = RUS
+            }
+		}
+        
+		fire_only_once = yes
+		cost = 0
+		days_remove = 70
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision RUS_bypass_Ger_Hegemony"
+			RUS = {
+				unlock_national_focus = RUS_Crush_The_German_Hegemony
+			}
+		}
+	}
+    
+	RUS_join_CoPro = {
+		icon = generic_political_discourse
+		allowed = {
+			original_tag = RUS
+		}
+		available = {
+			OR = {
+				GER = {
+					has_war_with = FRA
+				}
+				date > 1939.6.1
+			}
+			is_in_faction = no
+			is_subject = no
+		}
+		visible = {
+			country_exists = JAP
+			JAP = {
+				is_faction_leader = yes
+			}
+			JAP = {
+				is_faction_leader = yes
+				NOT = {
+					is_in_faction_with = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 70
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision RUS_join_CoPro"
+			JAP = {
+				add_to_faction = RUS
+			}
+		}
+	}
+	RUS_join_cp_tech = {
+		icon = generic_research
+		allowed = {
+			original_tag = RUS
+		}
+		available = {
+			OR = {
+				is_in_faction_with = JAP
+				is_subject_of = JAP
+			}
+		}
+		visible = {
+			original_tag = RUS
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision RUS_join_cp_tech"
+			add_to_tech_sharing_group = japan_research
+		}
+	}
+}

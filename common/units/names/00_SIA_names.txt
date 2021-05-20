@@ -1,0 +1,187 @@
+﻿SIA = {
+	submarine = {
+		prefix = "HSMS"
+		generic = { "Reua Damnarm" }
+		unique = {
+			"Phlai-Chumphon" "Nilmangkorn" "Chalawan" "Kraitong" "Saruengkhamatsaya" "Vimala" "Loemlaiwan" "Taphao Tong" "Taphao Kaew"
+			"Mahachanok" "Komin" "Sutsakorn" "Suwanmalee" "Soisuwan" "Chansuda" "Suwannahong" "Manora" "Suthonthakumarn" "Suphannamatcha"
+			"Hemwarin" "Kunchornwaree" "Matchanakha" "Matchawarn"
+		}
+	}
+	destroyer = {
+		prefix = "HSMS"
+		generic = { "Reua Pikart" }
+		unique = {
+			"Maeklong" "Mongkut Rachakumarn" "Suriyamonthon" "Sarasin" "Prasae" "Tachin" "Songkhla" "Rayong" "Chumphon" "Klongyai" "Kangtang"
+			"Takbai" "Bangpakong" "Thiew Uthok" "Travane Vari" "Tongpliu" "Liulom" "Longlom" "Kraburi" "Saiburi" "Tapi" "Khirirat" "Krabi" "Narathiwat"
+			"Hua Hin" "Klang" "Sriracha" "Sattahip"
+		}
+	}
+	light_cruiser = {
+		prefix = "HSMS"
+		generic = { "Reua Lardtrawen" }
+		unique = {
+
+		## Other Historical Ships ##
+			"Thonburi" "Sri Ayutthaya"
+
+		## Ancient States ##
+			"Ligor" "Dvaravati" "Lavo" "Supannabhum" "Singhanavati" "Nyeonyang" "Haripunchai" "Pan Pan" "Raktamaritika"
+		}
+	}
+	heavy_cruiser = {
+		prefix = "HSMS"
+		generic = { "Reua Ladtrawen Humklor" }
+		unique = {
+			"Langkasuka" "Tarmpornling" "Nakhon Si Thammarat" "Isan" "Lanna" "Phitsanulok" "Si Kottaboon"
+		}
+	}
+	battleship = {
+		prefix = "HSMS"
+		generic = { "Reua Prajanbarn" }
+		unique = {
+		### Important Battles ###
+			"Bangrachan" "Nong Sarai" "Lardyah" "Bangkeo" "Tha Din Daeng" "Phosamton"
+		}
+	}
+	SH_battleship = {
+		prefix = "HSMS"
+		generic = { "Reua Prajanbarn" }
+		unique = {
+		}
+	}
+	carrier = {
+		prefix = "HSMS"
+		generic = { "Reua Bantukkreungbin" }
+		unique = {
+			"Nakharat" "Sawaettachat" "Phra Nakhon" "Chakri Naruebaet"
+		}
+	}
+	heavy_carrier = {
+		prefix = "HSMS"
+		generic = { "Reua Bantukkreungbin" }
+		unique = {
+		}
+	}
+
+	fleet_names_template = FLEET_NAME_SIA
+	air_wing_names_template = AIR_WING_NAME_SIA_FALLBACK
+
+	# Air wings can only be named through archetype
+	fighter_equipment = {
+		prefix = "Foongbin Khaplai"
+		generic = {
+			""
+		}
+		generic_pattern = AIR_WING_NAME_SIA_FIGHTER
+		unique = {}
+	}
+
+	jet_fighter_equipment = {
+		prefix = "Foongbin Khaplai"
+		generic = {
+			""
+		}
+		generic_pattern = AIR_WING_NAME_SIA_FIGHTER
+		unique = {}
+	}
+
+	heavy_fighter_equipment = {
+		prefix = "Foongbin Khaplai"
+		generic = {
+			""
+		}
+		generic_pattern = AIR_WING_NAME_SIA_FIGHTER
+		unique = {}
+	}
+
+	CAS_equipment = {
+		prefix = "Foongbin Ju-Jome"
+		generic = {
+			""
+		}
+		generic_pattern = AIR_WING_NAME_SIA_CAS
+		unique = {}
+	}
+
+	cv_fighter_equipment = {
+		prefix = "Foongbin Khaplai"
+		generic = {
+			""
+		}
+		generic_pattern = AIR_WING_NAME_SIA_CARRIER
+		unique = {}
+	}
+
+	cv_CAS_equipment = {
+		prefix = "Foongbin Ju-Jome"
+		generic = {
+			""
+		}
+		generic_pattern = AIR_WING_NAME_SIA_CARRIER
+		unique = {}
+	}
+	cv_nav_bomber_equipment = {
+		prefix = "Foongbin Tink-Torpedo"
+		generic = {
+			""
+		}
+		generic_pattern = AIR_WING_NAME_SIA_CARRIER
+		unique = {}
+	}
+
+	tac_bomber_equipment = {
+		prefix = "Foongbin Tink-Raburd"
+		generic = {
+			""
+		}
+		generic_pattern = AIR_WING_NAME_SIA_L_BOMBER
+		unique = {}
+	}
+
+	jet_tac_bomber_equipment = {
+		prefix = "Foongbin Tink-Raburd"
+		generic = {
+			""
+		}
+		generic_pattern = AIR_WING_NAME_SIA_L_BOMBER
+		unique = {}
+	}
+
+	nav_bomber_equipment = {
+		prefix = "Foongbin Tink-Torpedo"
+		generic = {
+			""
+		}
+		generic_pattern = AIR_WING_NAME_SIA_NAV_BOMBER
+		unique = {}
+	}
+
+	strategic_bomber_equipment = {
+		prefix = "Foongbin Tink-Raburd"
+		generic = {
+			""
+		}
+		generic_pattern = AIR_WING_NAME_SIA_H_BOMBER
+		unique = {}
+	}
+
+	jet_strategic_bomber_equipment = {
+		prefix = "Foongbin Tink-raburd"
+		generic = {
+			""
+		}
+		generic_pattern = AIR_WING_NAME_SIA_H_BOMBER
+		unique = {}
+	}
+
+	transport_plane_equipment = {
+		prefix = "Foongbin Khonsong"
+		generic = {
+			""
+		}
+		generic_pattern = AIR_WING_NAME_SIA_TRANSPORT
+		unique = {}
+	}
+}
+

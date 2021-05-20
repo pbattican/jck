@@ -1,0 +1,2220 @@
+﻿###########################
+# Liberia
+###########################
+# By Kraken
+###########################
+
+add_namespace = lib
+
+# Liberia introduction event (fired by history file)
+country_event = {
+	id = lib.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.1 FROM = [From.GetName]" }
+	title = lib.1.t
+	desc = lib.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.1.a
+	}
+}
+
+# Race Relations
+country_event = {
+	id = lib.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.2 FROM = [From.GetName]" }
+	title = lib.2.t
+	desc = lib.2.d
+	picture = GFX_report_event_SAF_crowd_1
+
+	is_triggered_only = yes
+
+	option = { #More rights for natives
+		ai_chance = {
+			base = 20
+		}
+		name = lib.2.a
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.05
+		}
+		add_stability = 0.03
+	}
+	option = { #No rights for natives
+		ai_chance = {
+			base = 80
+		}
+		name = lib.2.b
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.05
+		}
+		add_stability = -0.03
+	}
+}
+
+# Elections - 1939
+country_event = {
+	id = lib.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.3 FROM = [From.GetName]" }
+	title = lib.3.t
+	desc = lib.3.d
+	picture = GFX_report_event_SAF_parliament_3
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_elected_government = yes
+		NOT = { has_country_flag = LIB_1939_elections_held }
+	}
+
+	immediate = {
+		remove_all_ministers = yes
+		set_country_flag = LIB_1939_elections_held
+	}
+
+	option = { #True Whig Party
+		ai_chance = {
+			base = 50
+		}
+		name = lib.3.a
+		add_political_power = 50
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		add_ideas = {
+			LIB_Edwin_James_Barclay_hog_sco
+			LIB_George_S_Padmore_for_sco
+			LIB_J_A_Railey_eco_sco
+			LIB_Frank_Emmanuel_Tolbert_sec_sco
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.1
+		}
+	}
+	option = { #True Republicans
+		ai_chance = {
+			base = 20
+		}
+		name = lib.3.b
+		add_political_power = 25
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		add_ideas = {
+			LIB_Clarence_Lorenzo_Simpson_hog_mli
+			LIB_Gabriel_Lafayette_Dennis_for_mli
+			LIB_Nete_Sie_Brownell_eco_mli
+			LIB_Samuel_David_Coleman_sec_mli
+		}
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.15
+		}
+	}
+	option = { #Independent True Whigs
+		ai_chance = {
+			base = 20
+		}
+		name = lib.3.c
+		add_political_power = 25
+		set_politics = {
+			ruling_party = social_liberal
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		add_ideas = {
+			LIB_Clarence_Simpson_hog_sli
+			LIB_Cornelius_Bosman_van_Oudkarspel_for_sli
+			LIB_Benjamin_O_Davis_eco_sli
+			LIB_Anthony_Dash_Wilson_sec_sli
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.15
+		}
+	}
+	option = { #Liberia United
+		ai_chance = {
+			base = 10
+		}
+		name = lib.3.e
+		add_political_power = -25
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		add_ideas = {
+			LIB_Albert_Porte_hog_rso
+			LIB_Raymond_Leslie_Buell_for_rso
+			LIB_Harry_A_Greaves_Sr_eco_rso
+			LIB_S_Raymond_Horace_sec_tot
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.1
+		}
+	}
+}
+
+# Black Monday Hits Liberia
+country_event = {
+	id = lib.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.5 FROM = [From.GetName]" }
+	title = lib.5.t
+	desc = lib.5.d
+	picture = GFX_report_event_NOR_black_monday_2
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.5.a
+		add_stability = -0.10
+		add_ideas = LIB_black_monday
+	}
+}
+
+# Patronize Allies? (fired by focus)
+country_event = {
+	id = lib.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.6 FROM = [From.GetName]" }
+	title = lib.6.t
+	desc = lib.5.d
+	picture = GFX_report_event_SAF_parliament_3
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.6.a
+		add_political_power = 50
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.1
+		}
+	}
+	option = {
+		name = lib.6.b
+		add_political_power = -25
+		add_ideas = LIB_industrial_investments
+	}
+}
+
+# Status of Secret Societies (fired by focus)
+country_event = {
+	id = lib.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.7 FROM = [From.GetName]" }
+	title = lib.7.t
+	desc = lib.7.d
+	picture = GFX_report_event_SAF_parliament_2
+
+	is_triggered_only = yes
+
+	option = { # bring secret societies into the open
+		name = lib.7.a
+		add_stability = -0.03
+		add_political_power = 50
+		hidden_effect = {
+			country_event = { id = lib.10 days = 30 random_days = 180 }
+		}
+	}
+	option = { # ban secret societies
+		name = lib.7.b
+		add_stability = 0.03
+		add_political_power = -50
+		hidden_effect = {
+			country_event = { id = lib.11 days = 30 random_days = 180 }
+		}
+	}
+}
+
+# Social liberalism spreads throughout Afrika (fired by focus)
+country_event = {
+	id = lib.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.9 FROM = [From.GetName]" }
+	title = lib.9.t
+	desc = lib.9.d
+	picture = GFX_report_event_SAF_black_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.9.a
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.10
+		}
+		add_stability = -0.02
+	}
+}
+
+# The Freemasons attempt a coup
+country_event = {
+	id = lib.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.10 FROM = [From.GetName]" }
+	title = lib.10.t
+	desc = lib.10.d
+	picture = GFX_report_event_GER_march
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = LIB_1939_elections_held }
+	}
+
+	option = { #coup succeeds
+		name = lib.10.a
+		ai_chance = {
+			base = 30
+		}
+		add_stability = -0.10
+		add_ideas = LIB_broken_center
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			LIB_William_Richard_Tolbert_hog_npo
+			LIB_Allen_Yancey_for_npo
+			LIB_James_Agea_Himie_Jones_eco_npo
+			LIB_Cornelius_Bosman_van_Oudkarspel_sec_npo
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.20
+		}
+
+		# Remove Overlord & Faction
+		if = {
+			limit = { is_subject = yes }
+			set_country_flag = LIB_no_longer_puppet
+			overlord = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_free
+				}
+				country_event = lib.90
+			}
+		}
+		leave_faction = yes
+		separate_peace_all_wars = yes
+		if = {
+			limit = {
+				has_idea = LIB_bailout_usa_2
+			}
+			swap_ideas = {
+				remove_idea = LIB_bailout_usa_2
+				add_idea = LIB_bailout_usa
+			}
+		}
+	}
+	option = { #coup fails
+		name = lib.10.b
+		ai_chance = {
+			base = 70
+		}
+		add_stability = 0.05
+	}
+}
+
+# Totalists attempt a coup
+country_event = {
+	id = lib.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.11 FROM = [From.GetName]" }
+	title = lib.11.t
+	desc = lib.11.d
+	picture = GFX_report_event_CSA_black_militias
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = LIB_1939_elections_held }
+	}
+
+	option = { #coup succeeds
+		name = lib.11.a
+		ai_chance = {
+			base = 30
+		}
+		remove_all_ministers = yes
+		add_ideas = LIB_broken_center
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_ideas = {
+			LIB_Lovett_Fort_Whiteman_hog_tot
+			LIB_Thomas_Nimene_Botoe_for_tot
+			LIB_Gbaflen_Davies_eco_tot
+			LIB_S_Raymond_Horace_sec_tot
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.20
+		}
+		add_stability = -0.10
+
+		# Remove Overlord & Faction
+		if = {
+			limit = { is_subject = yes }
+			set_country_flag = LIB_no_longer_puppet
+			overlord = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_free
+				}
+				country_event = lib.90
+			}
+		}
+		leave_faction = yes
+		separate_peace_all_wars = yes
+		if = {
+			limit = {
+				has_idea = LIB_bailout_usa_2
+			}
+			swap_ideas = {
+				remove_idea = LIB_bailout_usa_2
+				add_idea = LIB_bailout_usa
+			}
+		}
+	}
+	option = { #coup fails
+		name = lib.11.b
+		ai_chance = {
+			base = 70
+		}
+		add_stability = 0.05
+	}
+}
+
+# Freemason purge of foreigners (fired by focus)
+country_event = {
+	id = lib.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.12 FROM = [From.GetName]" }
+	title = lib.12.t
+	desc = lib.12.d
+	picture = GFX_report_event_SAF_black_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.12.a
+		add_manpower = -30000
+		add_stability = -0.05
+		every_other_country = {
+			limit = {
+				has_democratic_government = yes
+			}
+			add_opinion_modifier = {
+				target = LIB
+				modifier = LIB_freemason_purge_1
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = lib.13
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = lib.12.b
+		add_political_power = -100
+		hidden_effect = {
+			country_event = {
+				id = lib.13
+				days = 5
+			}
+		}
+	}
+}
+
+# Freemason purge of socialists
+country_event = {
+	id = lib.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.13 FROM = [From.GetName]" }
+	title = lib.13.t
+	desc = lib.13.d
+	picture = GFX_report_event_SAF_black_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.13.a
+		add_manpower = -10000
+		add_stability = -0.05
+		every_other_country = {
+			limit = {
+				has_socialist_government = yes
+			}
+			add_opinion_modifier = {
+				target = LIB
+				modifier = LIB_freemason_purge_2
+			}
+		}
+		capital_scope = {
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = lib.14
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = lib.13.b
+		add_political_power = -100
+		hidden_effect = {
+			country_event = {
+				id = lib.14
+				days = 5
+			}
+		}
+	}
+}
+
+# Freemason purge of true whigs
+country_event = {
+	id = lib.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.14 FROM = [From.GetName]" }
+	title = lib.14.t
+	desc = lib.14.d
+	picture = GFX_report_event_SAF_black_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.14.a
+		add_manpower = -5000
+		add_stability = -0.2
+		every_other_country = {
+			limit = {
+				has_democratic_government = yes
+			}
+			add_opinion_modifier = {
+				target = LIB
+				modifier = LIB_freemason_purge_3
+			}
+		}
+	}
+	option = {
+		name = lib.14.b
+		add_political_power = -100
+	}
+}
+
+# Liberia demands Sierra Leone from National France
+country_event = {
+	id = lib.51
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.51 FROM = [From.GetName]" }
+	title = lib.51.t
+	desc = lib.51.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = { #Fine, let them have it
+		name = lib.51.a
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 3
+				strength_ratio = {
+					tag = LIB
+					ratio < 1.0
+				}
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = {
+					tag = LIB
+					ratio > 2.0
+				}
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = {
+					tag = LIB
+					ratio > 3.0
+				}
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+				surrender_progress > 0.20
+			}
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_outraged
+		}
+		add_political_power = -50
+		LIB = {
+			country_event = {
+				id = lib.53
+				days = 1
+			}
+		}
+	}
+	option = { #Absolutely not!
+		name = lib.51.b
+		ai_chance = {
+			base = 75
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_outraged
+		}
+		LIB = {
+			country_event = {
+				id = lib.52
+				days = 1
+			}
+		}
+	}
+}
+
+# National France has refused the demand
+country_event = {
+	id = lib.52
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.52 FROM = [From.GetName]" }
+	title = lib.52.t
+	desc = lib.52.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = { #war
+		name = lib.52.a
+		ai_chance = {
+			base = 75
+		}
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+	option = { #get cucked
+		name = lib.52.b
+		ai_chance = {
+			base = 25
+		}
+		add_political_power = -50
+	}
+}
+
+# National France has surrendered Sierra Leone
+country_event = {
+	id = lib.53
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.53 FROM = [From.GetName]" }
+	title = lib.53.t
+	desc = lib.53.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.53.a
+		transfer_state = 700
+	}
+}
+
+# Liberia controls Sierra Leone during war with National France
+country_event = {
+	id = lib.54
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.54 FROM = [From.GetName]" }
+	title = lib.54.t
+	desc = lib.54.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = LIB
+		has_war_with = NFA
+		700 = {
+			is_owned_by = NFA
+			is_controlled_by = ROOT
+		}
+		controls_state = 700
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+		NFA = { surrender_progress > 0.2 }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = lib.54.a #Send the French the peace proposal
+		NFA = { country_event = lib.55 }
+	}
+	option = {
+		name = lib.54.b #We are not ready for peace yet
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+# National France decides whether to accept the Liberian peace offer
+country_event = {
+	id = lib.55
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.55 FROM = [From.GetName]" }
+	title = lib.55.t
+	desc = lib.55.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.55.a #Let them have that backwater countryside
+		add_political_power = -100
+		LIB = {
+			transfer_state = 700
+			if = {
+				limit = {
+					controls_state = 806 #Guinea
+					ROOT = { owns_state = 806 }
+				}
+				transfer_state = 806
+			}
+			white_peace_with_ROOT = yes
+		}
+	}
+
+	option = {
+		name = lib.55.b #Never! French Honour is on the line!
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		LIB = {
+			country_event = {
+				id = lib.56
+				days = 1
+			}
+		}
+	}
+}
+
+# National France has refused the peace deal
+country_event = {
+	id = lib.56
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.56 FROM = [From.GetName]" }
+	title = lib.56.t
+	desc = lib.56.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.56.a
+	}
+}
+
+# Liberia marches into the Ivory Coast
+country_event = {
+	id = lib.57
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.57 FROM = [From.GetName]" }
+	title = lib.57.t
+	desc = lib.57.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = { #Fine, if they want it so badly they can have it
+		name = lib.57.a
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 3
+				strength_ratio = {
+					tag = FROM
+					ratio < 1.0
+				}
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = {
+					tag = FROM
+					ratio > 2.0
+				}
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio > 3.0
+				}
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+				surrender_progress > 0.20
+			}
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_outraged
+		}
+		add_political_power = -50
+		if = {
+			limit = { 807 = { is_owned_by_ROOT_or_subject = yes } }
+			FROM = { transfer_state = 807 }
+		}
+		if = {
+			limit = { 963 = { is_owned_by_ROOT_or_subject = yes } }
+			FROM = { transfer_state = 963 }
+		}
+		FROM = { country_event = lib.59 }
+	}
+	option = { #How dare they! We will push them back across the border and beyond!
+		name = lib.57.b
+		ai_chance = {
+			base = 75
+		}
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+		FROM = { country_event = lib.58 }
+	}
+}
+
+# They have refused the demand
+country_event = {
+	id = lib.58
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.58 FROM = [From.GetName]" }
+	title = lib.58.t
+	desc = lib.58.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.58.a
+		add_political_power = -50
+	}
+}
+
+# They have surrendered the Ivory Coast
+country_event = {
+	id = lib.59
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.59 FROM = [From.GetName]" }
+	title = lib.59.t
+	desc = lib.59.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.53.a
+		effect_tooltip = {
+			transfer_state = 807
+			transfer_state = 963
+		}
+	}
+}
+
+# Liberia controls Ivory Coast during war with Mittelafrika
+country_event = {
+	id = lib.60
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.60 FROM = [From.GetName]" }
+	title = lib.60.t
+	desc = lib.60.d
+	picture = GFX_report_event_USA_congress
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = LIB
+		has_war_with = MAF
+		OR = {
+			807 = {
+				is_owned_by = MAF
+				is_controlled_by = ROOT
+			}
+			963 = {
+				is_owned_by = MAF
+				is_controlled_by = ROOT
+			}
+		}
+		is_valid_peace_target = yes
+		surrender_progress < 0.1
+		MAF = { surrender_progress > 0.2 }
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = lib.60.a #Send MAF the peace proposal
+		MAF = { country_event = lib.61 }
+	}
+	option = {
+		name = lib.60.b #We are not ready for peace yet
+		trigger = { is_ai = no }
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+# Mittelafrika decides whether to accept the Liberian peace offer
+country_event = {
+	id = lib.61
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.61 FROM = [From.GetName]" }
+	title = lib.55.t
+	desc = lib.61.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.61.a #Let them have that backwater countryside
+		add_political_power = -100
+		every_state = {
+			limit = {
+				OR = {
+					state = 274 #Gold Coast
+					state = 807 #Ivory Coast
+					state = 877 #Togo
+					state = 876 #Dahomey
+					state = 963 #Akanland
+				}
+				is_owned_by_ROOT_or_ally = yes
+			}
+			FROM = { transfer_state = PREV }
+		}
+		FROM = { white_peace_with_ROOT = yes }
+	}
+
+	option = {
+		name = lib.61.b #Never! German Honour is on the line!
+		trigger = {
+			is_ai = no
+		}
+		add_political_power = 25
+		FROM = {
+			country_event = {
+				id = lib.62
+				days = 1
+			}
+		}
+	}
+}
+
+# Mittelafrika has refused the peace deal
+country_event = {
+	id = lib.62
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.62 FROM = [From.GetName]" }
+	title = lib.56.t
+	desc = lib.56.d
+	picture = GFX_report_event_USA_congress
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.56.a
+	}
+}
+
+### Finding a bailout partner (fired by focus)
+country_event = {
+	id = lib.85
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.85 FROM = [From.GetName]" }
+	title = lib.85.t
+	desc = lib.85.d
+	picture = GFX_report_event_generic_diplomacy4
+
+	is_triggered_only = yes
+
+	option = { #American Bailout
+		trigger = {
+			country_exists = USA
+			has_socialist_government = no
+			OR = {
+				is_subject_of = USA
+				is_subject = no
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+		name = lib.85.a
+		USA = {
+			country_event = lib.86
+		}
+	}
+	option = { #German Bailout
+		trigger = {
+			country_exists = GER
+			has_socialist_government = no
+			NOT = { is_subject_of = NFA }
+		}
+		ai_chance = {
+			base = 25
+		}
+		name = lib.85.c
+		GER = {
+			country_event = lib.87
+		}
+	}
+	option = { #Firestone Bailout
+		ai_chance = {
+			base = 20
+		}
+		name = lib.85.b
+		add_ideas = LIB_firestone_bailout
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.1
+		}
+	}
+}
+
+# America asked for aid
+country_event = {
+	id = lib.86
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.86 FROM = [From.GetName]" }
+	title = lib.86.t
+	desc = lib.86.d
+	picture = GFX_report_event_generic_diplomacy4
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.86.a #Of course we will help
+		ai_chance = {
+			base = 75
+			modifier = {
+				factor = 0.25
+				has_elected_government = no
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 0
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < -200
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { has_subject = LIB }
+			}
+		}
+		LIB = {
+			country_event = {
+				id = lib.89
+				days = 3
+			}
+		}
+		add_political_power = -50
+		reverse_add_opinion_modifier = {
+			target = LIB
+			modifier = LIB_usa_bailout
+		}
+	}
+	option = {
+		name = lib.86.b #They are on their own
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0.5
+				has_political_power > 100
+			}
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
+		set_country_flag = LIB_refused_bailout
+		LIB = {
+			country_event = {
+				id = lib.88
+				days = 3
+			}
+		}
+		reverse_add_opinion_modifier = {
+			target = LIB
+			modifier = KR_disapproves_of_govt
+		}
+	}
+}
+
+# Germany asked for aid
+country_event = {
+	id = lib.87
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.87 FROM = [From.GetName]" }
+	title = lib.86.t
+	desc = lib.87.d
+	picture = GFX_report_event_generic_diplomacy4
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.86.a #Of course we will help
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0.25
+				has_democratic_government = no
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 0
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < -200
+			}
+			modifier = {
+				factor = 0.5
+				LIB = { is_subject_of = USA }
+			}
+		}
+		LIB = {
+			country_event = {
+				id = lib.89
+				days = 3
+			}
+		}
+		add_political_power = -50
+		reverse_add_opinion_modifier = {
+			target = LIB
+			modifier = LIB_ger_bailout
+		}
+	}
+	option = {
+		name = lib.86.b #They are on their own
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 1.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power > 100
+			}
+		}
+		set_country_flag = LIB_refused_bailout
+		LIB = {
+			country_event = {
+				id = lib.88
+				days = 3
+			}
+		}
+		reverse_add_opinion_modifier = {
+			target = LIB
+			modifier = KR_disapproves_of_govt
+		}
+	}
+}
+
+# Aid refused
+country_event = {
+	id = lib.88
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.88 FROM = [From.GetName]" }
+	title = lib.88.t
+	desc = lib.88.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.88.a #America
+		trigger = {
+			NOT = {
+				USA = { has_country_flag = LIB_refused_bailout }
+			}
+			country_exists = USA
+			has_socialist_government = no
+			OR = {
+				is_subject_of = USA
+				is_subject = no
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+		USA = { country_event = lib.86 }
+	}
+	option = {
+		name = lib.88.b #Germany
+		trigger = {
+			country_exists = GER
+			has_socialist_government = no
+			NOT = {
+				GER = { has_country_flag = LIB_refused_bailout }
+				is_subject_of = NFA
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+		GER = { country_event = lib.87 }
+	}
+	option = {
+		name = lib.88.c #Firestone
+		ai_chance = {
+			base = 20
+		}
+		USA = { clr_country_flag = LIB_refused_bailout }
+		GER = { clr_country_flag = LIB_refused_bailout }
+		add_ideas = LIB_firestone_bailout
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.1
+		}
+	}
+}
+
+# Aid granted
+country_event = {
+	id = lib.89
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.89 FROM = [From.GetName]" }
+	title = lib.89.t
+	desc = lib.89.d
+	picture = GFX_report_event_generic_diplomacy3
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.89.a
+		USA = { clr_country_flag = LIB_refused_bailout }
+		GER = { clr_country_flag = LIB_refused_bailout }
+		if = {
+			limit = {
+				FROM = { tag = USA }
+			}
+			add_ideas = LIB_bailout_usa
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.1
+			}
+		}
+		else = {
+			add_ideas = LIB_ger_bailout
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.1
+			}
+		}
+	}
+}
+
+# Liberia breaks puppet status
+country_event = {
+	id = lib.90
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.90 FROM = [From.GetName]" }
+	title = lib.90.t
+	picture = GFX_report_event_generic_diplomacy2
+
+	is_triggered_only = yes
+
+	desc = {
+		text = lib.90.d.germany
+		trigger = {
+			FROM = {
+				has_country_flag = LIB_aligned_germany
+			}
+		}
+	}
+	desc = {
+		text = lib.90.d.totalist
+		trigger = {
+			FROM = {
+				has_government = totalist
+			}
+		}
+	}
+	desc = {
+		text = lib.90.d.natpop
+		trigger = {
+			FROM = {
+				has_government = national_populist
+			}
+		}
+	}
+	desc = {
+		text = lib.90.d.default
+		trigger = {
+			FROM = {
+				NOT = {
+					has_government = totalist
+					has_government = national_populist
+					has_country_flag = LIB_aligned_germany
+				}
+			}
+		}
+	}
+
+	option = {
+		name = lib.90.a #They cannot escape so easily
+		ai_chance = {
+			base = 0
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = FROM
+		}
+		FROM = { clr_country_flag = LIB_aligned_germany }
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_outraged
+		}
+	}
+	option = {
+		name = lib.90.b #We have little choice but to let them be
+		ai_chance = {
+			base = 70
+		}
+		add_political_power = -50
+		FROM = { clr_country_flag = LIB_aligned_germany }
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_outraged
+		}
+	}
+}
+
+# Liberia wishes to join the Internationale (fired from focus)
+country_event = {
+	id = lib.91
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.91 FROM = [From.GetName]" }
+	title = lib.91.t
+	desc = lib.91.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.91.a #Of course they may join!
+		ai_chance = {
+			base = 90
+			modifier = {
+				factor = 0
+				FROM = {
+					OR = {
+						has_war_with = NFA
+						has_war_with = MAF
+					}
+				}
+			}
+		}
+		add_political_power = 50
+		add_to_faction = FROM
+	}
+	option = {
+		name = lib.91.b #We have no need of them
+		ai_chance = {
+			base = 0
+		}
+		FROM = {
+			country_event = {
+				id = lib.92
+				days = 1
+			}
+		}
+	}
+}
+
+# France refuses
+country_event = {
+	id = lib.92
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.92 FROM = [From.GetName]" }
+	title = lib.92.t
+	desc = lib.92.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.92.a
+		add_political_power = -50
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_disapproves_of_govt
+		}
+	}
+}
+
+# Peacing out with ACW victor
+country_event = {
+	id = lib.93
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.93 FROM = [From.GetName]" }
+	title = lib.93.t
+	desc = lib.93.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = LIB
+		is_subject = no
+		is_in_faction = no
+		OR = {
+			has_war_with = CSA
+			has_war_with = TEX
+			has_war_with = PSA
+			has_war_with = NEE
+			has_war_with = MEX
+		}
+		NOT = {
+			country_exists = USA
+			has_country_flag = LIB_no_longer_puppet
+		}
+		surrender_progress < 0.1
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = { #We will go it alone
+		name = lib.93.a
+		ai_chance = {
+			base = 25
+		}
+		set_country_flag = LIB_no_longer_puppet
+		every_enemy_country = {
+			limit = {
+				is_valid_peace_target = yes
+				OR = {
+					tag = CSA
+					tag = TEX
+					tag = PSA
+					tag = NEE
+					tag = MEX
+				}
+			}
+			white_peace_with_ROOT = yes
+		}
+		if = {
+			limit = {
+				has_idea = LIB_bailout_usa
+			}
+			remove_ideas = LIB_bailout_usa
+		}
+		if = {
+			limit = {
+				has_idea = LIB_bailout_usa_2
+			}
+			remove_ideas = LIB_bailout_usa_2
+		}
+		if = {
+			limit = {
+				has_idea = LIB_tax_exemption_idea
+			}
+			remove_ideas = LIB_tax_exemption_idea
+		}
+		add_war_support = 0.15
+	}
+
+	option = {
+		name = lib.88.b #Germany
+		trigger = {
+			country_exists = GER
+			has_socialist_government = no
+			NOT = {
+				GER = { has_country_flag = LIB_refused_bailout }
+				is_subject_of = NFA
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+		set_country_flag = LIB_no_longer_puppet
+		every_enemy_country = {
+			limit = {
+				is_valid_peace_target = yes
+				OR = {
+					tag = CSA
+					tag = TEX
+					tag = PSA
+					tag = NEE
+					tag = MEX
+				}
+			}
+			white_peace_with_ROOT = yes
+		}
+		if = {
+			limit = {
+				has_idea = LIB_bailout_usa
+			}
+			remove_ideas = LIB_bailout_usa
+		}
+		if = {
+			limit = {
+				has_idea = LIB_bailout_usa_2
+			}
+			remove_ideas = LIB_bailout_usa_2
+		}
+		if = {
+			limit = {
+				has_idea = LIB_tax_exemption_idea
+			}
+			remove_ideas = LIB_tax_exemption_idea
+		}
+		GER = { country_event = lib.87 }
+	}
+
+	option = {
+		name = lib.88.c #Firestone
+		ai_chance = {
+			base = 20
+		}
+		set_country_flag = LIB_no_longer_puppet
+		every_enemy_country = {
+			limit = {
+				is_valid_peace_target = yes
+				OR = {
+					tag = CSA
+					tag = TEX
+					tag = PSA
+					tag = NEE
+					tag = MEX
+				}
+			}
+			white_peace_with_ROOT = yes
+		}
+		if = {
+			limit = {
+				has_idea = LIB_bailout_usa
+			}
+			remove_ideas = LIB_bailout_usa
+		}
+		if = {
+			limit = {
+				has_idea = LIB_bailout_usa_2
+			}
+			remove_ideas = LIB_bailout_usa_2
+		}
+		if = {
+			limit = {
+				has_idea = LIB_tax_exemption_idea
+			}
+			remove_ideas = LIB_tax_exemption_idea
+		}
+		USA = { clr_country_flag = LIB_refused_bailout }
+		GER = { clr_country_flag = LIB_refused_bailout }
+		add_ideas = LIB_firestone_bailout
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.1
+		}
+	}
+
+}
+
+country_event = {
+	id = lib.941 #hidden event to fire for FROM of decision to be FROM of lib.94
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.941 FROM = [From.GetName]" }
+	title = lib.941.t
+	desc = lib.941.desc
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = lib.941.a
+		FROM = { country_event = lib.94 } #asking for equipment
+	}
+}
+
+country_event = {
+	id = lib.94 #asking for equipment event- rifles
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.94 FROM = [From.GetName]" }
+	title = lib.94.t
+	desc = lib.94.desc
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.94.a
+		FROM = { country_event = lib.95 } #rifles/infantry equipment
+	}
+	option = {
+		name = lib.94.b
+		FROM = { country_event = lib.96 } #airframes
+	}
+	option = {
+		name = lib.94.c
+		trigger = {
+			NOT = { has_active_mission = LIB_dockyard_mission }
+			FROM = {
+				num_of_naval_factories > 3 #mostly here to avoid any possible edge cases with American tags without enough dockyards
+			}
+		}
+		FROM = { country_event = lib.97 } #Dockyards
+	}
+	option = {
+		name = lib.94.d
+		trigger = {
+			NOT = { has_active_mission = LIB_industry_mission }
+		}
+		FROM = { country_event = lib.98 } #industrial investment
+	}
+}
+
+country_event = {
+	id = lib.95 #asking for equipment event- rifles
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.95 FROM = [From.GetName]" }
+	title = lib.95.t
+	desc = {
+		text = lib.95.desc
+		trigger = {
+			NOT = {
+				OR = {
+					tag = USA
+					tag = PSA
+					tag = TEX
+					tag = CSA
+				}
+			}
+		}
+	}
+	desc = {
+		text = lib.95.descUSA
+		trigger = {
+			OR = {
+				tag = USA
+				tag = PSA
+				tag = TEX
+				tag = CSA
+			}
+		}
+	}
+	picture = GFX_report_event_USA_guy_with_helmet
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.95.a
+		trigger = {
+			has_equipment = { infantry_equipment > 999 }
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 30
+				LIB = { is_ai = no }
+			}
+		}
+		send_equipment = {
+			target = LIB
+			type = infantry_equipment
+			amount = 1000
+		}
+		if = {
+			limit = { has_idea = LIB_buying_equipment }
+			modify_timed_idea = {
+				idea = LIB_buying_equipment
+				days = 60
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = LIB_buying_equipment
+				days = 60
+			}
+		}
+		add_political_power = 5
+		FROM = { country_event = lib.951 }
+	}
+	option = {
+		name = lib.95.b
+		trigger = {
+			has_equipment = { infantry_equipment > 999 }
+			has_equipment = { support_equipment > 49 }
+			has_equipment = { artillery_equipment > 99 }
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 90
+				LIB = { is_ai = no }
+			}
+		}
+		send_equipment = {
+			target = LIB
+			type = infantry_equipment
+			amount = 1000
+		}
+		send_equipment = {
+			target = LIB
+			type = support_equipment
+			amount = 50
+		}
+		send_equipment = {
+			target = LIB
+			type = artillery_equipment
+			amount = 100
+		}
+		if = {
+			limit = { has_idea = LIB_buying_equipment }
+			modify_timed_idea = {
+				idea = LIB_buying_equipment
+				days = 90
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = LIB_buying_equipment
+				days = 90
+			}
+		}
+		add_political_power = 5
+		FROM = { country_event = lib.952 }
+	}
+	option = {
+		name = lib.95.c
+		if = {
+			limit = { has_equipment = { infantry_equipment < 1000 } }
+			custom_effect_tooltip = LIB_Not_Enough_Stuff
+		}
+		FROM = { country_event = lib.953 }
+	}
+}
+
+country_event = {
+	id = lib.951 #LIB got just rifles
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.951 FROM = [From.GetName]" }
+	title = lib.951.t
+	desc = lib.951.desc
+	picture = GFX_report_event_SAF_black_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.951.a
+		effect_tooltip = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 producer = FROM }
+		}
+	}
+}
+
+country_event = {
+	id = lib.952 #LIB got both Rifles, Support equipment and artillery
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.952 FROM = [From.GetName]" }
+	title = lib.952.t
+	desc = lib.952.desc
+	picture = GFX_report_event_USA_artillery
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.952.a
+		effect_tooltip = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 producer = FROM }
+		}
+		effect_tooltip = {
+			add_equipment_to_stockpile = { type = artillery_equipment amount = 100 producer = FROM }
+		}
+		effect_tooltip = {
+			add_equipment_to_stockpile = { type = support_equipment amount = 1000 producer = FROM }
+		}
+	}
+}
+
+country_event = {
+	id = lib.953 #LIB got nothing
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.953 FROM = [From.GetName]" }
+	title = lib.953.t
+	desc = lib.953.desc
+	picture = GFX_report_event_SAF_crowd_1
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.953.a
+		hidden_effect = {
+			add_political_power = 250
+		}
+		custom_effect_tooltip = LIB_refund_on_fail_decision_TT
+	}
+	option = {
+		name = lib.953.b
+		trigger = {
+			is_ai = no
+		}
+		hidden_effect = {
+			FROM = {
+				country_event = { id = lib.941 } #if you are wondering why the scope change- its so I coould use FROM in event lib.94 and have it scope to FROM of this decision
+			}
+		}
+		effect_tooltip = {
+			country_event = lib.94
+		}
+	}
+}
+
+country_event = {
+	id = lib.96 #asking for equipment event- airwings
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.96 FROM = [From.GetName]" }
+	title = lib.96.t
+	desc = {
+		text = lib.96.desc
+		trigger = {
+			NOT = {
+				OR = {
+					tag = USA
+					tag = PSA
+					tag = TEX
+					tag = CSA
+				}
+			}
+		}
+	}
+	desc = {
+		text = lib.96.descUSA
+		trigger = {
+			OR = {
+				tag = USA
+				tag = PSA
+				tag = TEX
+				tag = CSA
+			}
+		}
+	}
+	picture = GFX_report_event_airplane_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.96.a
+		trigger = {
+			has_equipment = { fighter_equipment > 24 }
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 90
+				LIB = { is_ai = no }
+			}
+		}
+		send_equipment = {
+			target = LIB
+			type = fighter_equipment
+			amount = 25
+		}
+		if = {
+			limit = { has_idea = LIB_buying_equipment }
+			modify_timed_idea = {
+				idea = LIB_buying_equipment
+				days = 120
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = LIB_buying_equipment
+				days = 120
+			}
+		}
+		add_political_power = 5
+		FROM = { country_event = lib.961 } #LIB got planes
+	}
+	option = {
+		name = lib.96.a
+		if = {
+			limit = { has_equipment = { fighter_equipment < 25 } }
+			custom_effect_tooltip = LIB_Not_Enough_Stuff
+		}
+		FROM = { country_event = lib.953 } #LIB did not get nothing
+	}
+}
+
+country_event = {
+	id = lib.961 #LIB got Planes event
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.961 FROM = [From.GetName]" }
+	title = lib.961.t
+	desc = {
+		text = lib.961.desc
+		trigger = {
+			FROM = {
+				NOT = {
+					OR = {
+						tag = USA
+						tag = PSA
+						tag = TEX
+						tag = CSA
+					}
+				}
+			}
+		}
+	}
+	desc = {
+		text = lib.961.descUSA
+		trigger = {
+			FROM = {
+				OR = {
+					tag = USA
+					tag = PSA
+					tag = TEX
+					tag = CSA
+				}
+			}
+		}
+	}
+	picture = GFX_report_event_USA_plane_formation
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.961.a
+		effect_tooltip = {
+			add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 25 producer = FROM }
+		}
+	}
+}
+
+country_event = {
+	id = lib.97 #asking for dockyards
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.97 FROM = [From.GetName]" }
+	title = lib.97.t
+	desc = {
+		text = lib.97.desc
+		trigger = {
+			NOT = {
+				OR = {
+					tag = USA
+					tag = PSA
+					tag = TEX
+					tag = CSA
+				}
+			}
+		}
+	}
+	desc = {
+		text = lib.97.descUSA
+		trigger = {
+			OR = {
+				tag = USA
+				tag = PSA
+				tag = TEX
+				tag = CSA
+			}
+		}
+	}
+	picture = GFX_report_event_IRE_belfast_shipyards
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.97.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 90
+				LIB = { is_ai = no }
+			}
+		}
+		hidden_effect = {
+			random_owned_state = {
+				limit = {
+					dockyard > 0
+				}
+				remove_building = {
+					type = dockyard
+					level = 1
+				}
+			}
+			random_owned_state = {
+				limit = {
+					dockyard > 0
+				}
+				remove_building = {
+					type = dockyard
+					level = 1
+				}
+			}
+			random_owned_state = {
+				limit = {
+					dockyard > 0
+				}
+				remove_building = {
+					type = dockyard
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = LIB_buying_equipment }
+			modify_timed_idea = {
+				idea = LIB_buying_equipment
+				days = 300
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = LIB_buying_equipment
+				days = 300
+			}
+		}
+		add_political_power = 5
+		hidden_effect = {
+			country_event = { id = lib.972 days = 300 }
+		}
+		FROM = { country_event = lib.971 } #dockyards accepted
+	}
+	option = {
+		name = lib.97.b
+
+	}
+}
+
+country_event = {
+	id = lib.971 #granted dockyards
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.971 FROM = [From.GetName]" }
+	title = lib.971.t
+	desc = lib.971.desc
+	picture = GFX_report_event_IRE_belfast_shipyards
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.971.a
+		add_offsite_building = { type = dockyard level = 3 }
+		activate_mission = LIB_dockyard_mission
+	}
+}
+
+country_event = {
+	id = lib.972 #Dockyards retrun to FROM
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.972 FROM = [From.GetName]" }
+	title = lib.972.t
+	desc = lib.972.desc
+	picture = GFX_report_event_IRE_belfast_shipyards
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.972.a
+		hidden_effect = {
+			random_owned_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+					is_metropolis_state = no
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+					is_metropolis_state = no
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+					is_metropolis_state = no
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = lib.98 #asking for industry (FROM)
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.98 FROM = [From.GetName]" }
+	title = lib.98.t
+	desc = {
+		text = lib.98.desc
+		trigger = {
+			NOT = {
+				OR = {
+					tag = USA
+					tag = PSA
+					tag = TEX
+					tag = CSA
+				}
+			}
+		}
+	}
+	desc = {
+		text = lib.98.descUSA
+		trigger = {
+			OR = {
+				tag = USA
+				tag = PSA
+				tag = TEX
+				tag = CSA
+			}
+		}
+	}
+	picture = GFX_report_event_IRE_building_capital
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.98.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 90
+				LIB = { is_ai = no }
+			}
+		}
+		hidden_effect = {
+			random_owned_state = {
+				limit = {
+					industrial_complex > 0
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_state = {
+				limit = {
+					industrial_complex > 0
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_state = {
+				limit = {
+					industrial_complex > 0
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		if = {
+			limit = { has_idea = LIB_buying_equipment }
+			modify_timed_idea = {
+				idea = LIB_buying_equipment
+				days = 300
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = LIB_buying_equipment
+				days = 300
+			}
+		}
+		add_political_power = 5
+		hidden_effect = {
+			country_event = { id = lib.982 days = 300 }
+		}
+		FROM = { country_event = lib.981 } #industrial investments to LIB
+	}
+	option = {
+		name = lib.98.b
+
+	}
+}
+
+country_event = {
+	id = lib.981 #industrial investments to LIB
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.981 FROM = [From.GetName]" }
+	title = lib.981.t
+	desc = lib.981.desc
+	picture = GFX_report_event_IRE_building_capital
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.981.a
+		add_offsite_building = { type = industrial_complex level = 3 }
+		activate_mission = LIB_industry_mission
+	}
+}
+
+country_event = {
+	id = lib.982 #factories return to FROM
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lib.982 FROM = [From.GetName]" }
+	title = lib.982.t
+	desc = lib.982.desc
+	picture = GFX_report_event_IRE_building_capital
+
+	is_triggered_only = yes
+
+	option = {
+		name = lib.982.a
+		hidden_effect = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+					is_metropolis_state = no
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+					is_metropolis_state = no
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+					is_metropolis_state = no
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+

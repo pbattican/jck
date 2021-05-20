@@ -1,0 +1,522 @@
+﻿###########################
+# Nuclear Bomb Events
+###########################
+
+add_namespace = nuke_dropped
+
+# Hidden event to set flag on nuke dropped
+country_event = {
+	id = nuke_dropped.0
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.0 FROM = [From.GetName]" }
+
+	major = yes
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		news_event = {
+			id = nuke_dropped.1
+			days = 1
+		}
+	}
+
+	option = {
+		#name = dummy_nuke_option
+	}
+}
+
+# Nuclear Attack PLACEHOLDER
+news_event = {
+	id = nuke_dropped.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.1 FROM = [From.GetName]" }
+	title = nuke_dropped.1.t
+	desc = nuke_dropped.1.d
+	picture = GFX_news_event_nuke
+
+	major = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			FROM.FROM = {
+				OR = {
+					state = 2 #Rome
+					state = 16 #Paris
+					state = 37 #Copenhagen
+					state = 64 #Berlin
+					state = 126 #London
+					state = 141 #Stockholm
+					state = 219 #Moscow
+					state = 282 #Tokyo
+					state = 289 #Bangkok
+					state = 361 #Washington D.C.
+					state = 528 #Nagasaki
+					state = 529 #Hiroshima
+					state = 531 #Kyoto
+				}
+			}
+		}
+	}
+
+	option = {
+		name = nuke_dropped.1.a
+		trigger = {
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.1.b
+		trigger = {
+			owns_state = FROM.FROM
+		}
+	}
+}
+
+# Nuclear Attack on Hiroshima
+news_event = {
+	id = nuke_dropped.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.2 FROM = [From.GetName]" }
+	title = nuke_dropped.2.t
+	desc = nuke_dropped.2.d
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FROM.FROM = {
+			state = 529
+		}
+	}
+
+	option = {
+		name = nuke_dropped.2.a
+		trigger = {
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.2.b
+		trigger = {
+			owns_state = FROM.FROM
+		}
+	}
+}
+
+# Nuclear Attack on Nagasaki
+news_event = {
+	id = nuke_dropped.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.3 FROM = [From.GetName]" }
+	title = nuke_dropped.3.t
+	desc = nuke_dropped.3.d
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FROM.FROM = {
+			state = 528
+		}
+	}
+
+	option = {
+		name = nuke_dropped.3.a
+		trigger = {
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.3.b
+		trigger = {
+			owns_state = FROM.FROM
+		}
+	}
+}
+
+# Nuclear Attack on Berlin (KR)
+news_event = {
+	id = nuke_dropped.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.4 FROM = [From.GetName]" }
+	title = nuke_dropped.4.t
+	desc = nuke_dropped.4.d
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FROM.FROM = {
+			state = 64
+			is_owned_by = GER
+		}
+	}
+
+	option = {
+		name = nuke_dropped.4.a
+		trigger = {
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.4.b
+		trigger = {
+			owns_state = FROM.FROM
+		}
+	}
+}
+
+# Nuclear Attack on London
+news_event = {
+	id = nuke_dropped.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.5 FROM = [From.GetName]" }
+	title = nuke_dropped.5.t
+
+	desc = {
+		text = nuke_dropped.5.d.ENG
+		trigger = {
+			FROM.FROM = { is_owned_by = ENG }
+		}
+	}
+	desc = {
+		text = nuke_dropped.5.d.GBR
+		trigger = {
+			NOT = { FROM.FROM = { is_owned_by = ENG } }
+		}
+	}
+
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FROM.FROM = { state = 126 }
+	}
+
+	option = {
+		name = nuke_dropped.5.a
+		trigger = {
+			FROM.FROM = { is_owned_by = ENG }
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.5.b
+		trigger = {
+			FROM.FROM = { is_owned_by = ENG }
+			owns_state = FROM.FROM
+		}
+	}
+
+	option = {
+		name = nuke_dropped.5.c
+		trigger = {
+			NOT = {
+				FROM.FROM = { is_owned_by = ENG }
+				owns_state = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = nuke_dropped.5.d
+		trigger = {
+			NOT = { FROM.FROM = { is_owned_by = ENG } }
+			owns_state = FROM.FROM
+		}
+	}
+}
+
+# Nuclear Attack on Kyoto (Kansai)
+news_event = {
+	id = nuke_dropped.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.6 FROM = [From.GetName]" }
+	title = nuke_dropped.6.t
+	desc = nuke_dropped.6.d
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FROM.FROM = { state = 531 }
+	}
+
+	option = {
+		name = nuke_dropped.6.a
+		trigger = {
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.6.b
+		trigger = {
+			owns_state = FROM.FROM
+		}
+	}
+}
+
+# Nuclear Attack on Tokyo
+news_event = {
+	id = nuke_dropped.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.7 FROM = [From.GetName]" }
+	title = nuke_dropped.7.t
+	desc = nuke_dropped.7.d
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FROM.FROM = { state = 282 }
+	}
+
+	option = {
+		name = nuke_dropped.7.a
+		trigger = {
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.7.b
+		trigger = {
+			owns_state = FROM.FROM
+		}
+	}
+}
+
+# Nuclear Attack on Washington D.C.
+news_event = {
+	id = nuke_dropped.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.8 FROM = [From.GetName]" }
+	title = nuke_dropped.8.t
+	desc = nuke_dropped.8.d
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FROM.FROM = { state = 361 }
+	}
+
+	option = {
+		name = nuke_dropped.8.a
+		trigger = {
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.8.b
+		trigger = {
+			owns_state = FROM.FROM
+		}
+	}
+}
+
+# Nuclear Attack on Rome (ItaFed)
+news_event = {
+	id = nuke_dropped.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.9 FROM = [From.GetName]" }
+	title = nuke_dropped.9.t
+	desc = nuke_dropped.9.d
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FROM.FROM = { state = 2 }
+	}
+
+	option = {
+		name = nuke_dropped.9.a
+		trigger = {
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.9.b
+		trigger = {
+			owns_state = FROM.FROM
+		}
+	}
+}
+
+# Nuclear Attack on Paris
+news_event = {
+	id = nuke_dropped.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.10 FROM = [From.GetName]" }
+	title = nuke_dropped.10.t
+	desc = nuke_dropped.10.d
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FROM.FROM = { state = 16 }
+	}
+
+	option = {
+		name = nuke_dropped.10.a
+		trigger = {
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.10.b
+		trigger = {
+			owns_state = FROM.FROM
+		}
+	}
+}
+
+# Nuclear Attack on Moscow
+news_event = {
+	id = nuke_dropped.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.11 FROM = [From.GetName]" }
+	title = nuke_dropped.11.t
+	desc = nuke_dropped.11.d
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FROM.FROM = { state = 219 }
+	}
+
+	option = {
+		name = nuke_dropped.11.a
+		trigger = {
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.11.b
+		trigger = { owns_state = FROM.FROM }
+	}
+}
+
+# Nuclear Attack on Copenhagen
+news_event = {
+	id = nuke_dropped.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.12 FROM = [From.GetName]" }
+	title = nuke_dropped.12.t
+	desc = nuke_dropped.12.d
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FROM.FROM = { state = 37 }
+	}
+
+	option = {
+		name = nuke_dropped.12.a
+		trigger = {
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.12.b
+		trigger = {
+			owns_state = FROM.FROM
+		}
+	}
+}
+
+# Nuclear Attack on Stockholm
+news_event = {
+	id = nuke_dropped.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.13 FROM = [From.GetName]" }
+	title = nuke_dropped.13.t
+	desc = nuke_dropped.13.d
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FROM.FROM = { state = 141 }
+	}
+
+	option = {
+		name = nuke_dropped.13.a
+		trigger = {
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.13.b
+		trigger = {
+			owns_state = FROM.FROM
+		}
+	}
+}
+# Nuclear Attack on Bangkok
+news_event = {
+	id = nuke_dropped.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nuke_dropped.14 FROM = [From.GetName]" }
+	title = nuke_dropped.14.t
+	desc = nuke_dropped.14.d
+	picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		FROM.FROM = {
+			state = 289
+		}
+	}
+
+	option = {
+		name = nuke_dropped.14.a
+		trigger = {
+			NOT = { owns_state = FROM.FROM }
+		}
+	}
+
+	option = {
+		name = nuke_dropped.14.b
+		trigger = {
+			owns_state = FROM.FROM
+		}
+	}
+}
+

@@ -1,0 +1,324 @@
+﻿capital = 43
+oob = "HUN"
+set_war_support = 0.20
+set_research_slots = 3
+
+set_technology = {
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+
+	### Infantry ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	motorised_infantry = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+
+	### Air ###
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+}
+
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 1
+	radical_socialist = 0
+	syndicalist = 1
+	social_democrat = 9
+	social_liberal = 3
+	market_liberal = 24
+	social_conservative = 12
+	authoritarian_democrat = 9
+	paternal_autocrat = 32
+	national_populist = 9
+}
+
+add_ideas = {
+	HUN_Kalman_Daranyi_de_Pusztaszentgyoergyi_hog_pau
+	HUN_Endre_Bajcsy_Zsilinszky_for_pau
+	HUN_Lajos_Remenyi_Schneller_eco_pau
+	HUN_Kalman_Szell_sec_pau
+
+	HUN_financial_ties_broken
+}
+
+create_country_leader = {
+	name = "Béla Kun"
+	picture = "Portrait_HUN_Bela_Kun.dds"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+}
+
+create_country_leader = {
+	name = "Béla Kun"
+	picture = "Portrait_HUN_Bela_Kun.dds"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+}
+
+create_country_leader = {
+	name = "Árpád Szakasits"
+	picture = "Portrait_HUN_Arpad_Szakasits.dds"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+}
+
+create_country_leader = {
+	name = "Árpád Szakasits"
+	picture = "Portrait_HUN_Arpad_Szakasits.dds"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+}
+
+create_country_leader = {
+	name = "Oszkár Jászi"
+	picture = "Portrait_HUN_Oszkar_Jaszi.dds"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+}
+
+create_country_leader = {
+	name = "István Bethlen"
+	picture = "Portrait_HUN_Istvan_Bethlen.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+}
+
+create_country_leader = {
+	name = "István Bethlen"
+	picture = "Portrait_HUN_Istvan_Bethlen.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+}
+
+create_country_leader = {
+	name = "László Bárdossy"
+	picture = "Portrait_HUN_Laszlo_Bardossy.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+}
+
+create_country_leader = {
+	name = "IV. Károly"
+	desc = "POLITICS_KARL_DESC"
+	picture = "gfx/leaders/AUS/Portrait_AUS_Karl_I.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+}
+
+create_country_leader = {
+	name = "László Bárdossy"
+	picture = "Portrait_HUN_Laszlo_Bardossy.tga"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+}
+
+###########################
+### Generals & Admirals ###
+###########################
+
+### Field Marshals ###
+create_field_marshal = {
+	name = "Kocsárd Janky de Bulcs"
+	desc = "HUN_KOCSARD_JANKY_ARMY_DESC"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Kocsard_Janky.tga"
+	traits = {
+		old_guard
+		war_hero
+		cavalry_leader
+		inflexible_strategist
+		unyielding_defender
+		trickster
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+### Corps Commanders ###
+create_corps_commander = {
+	name = "Hugó Sónyi"
+	desc = "HUN_HUGO_SONYI_ARMY_DESC"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Hugo_Sonyi.tga"
+	traits = {
+		brilliant_strategist
+		infantry_leader
+		organizer
+		hill_fighter
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Vilmos Nagy de Nagybaczon"
+	desc = "HUN_VILMOS_NAGY_ARMY_DESC"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Vilmos_Nagy_de_Nagybaczon.tga"
+	traits = {
+		armor_officer
+		skilled_staffer
+		organizer
+		trickster
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Béla Miklós de Dálnok"
+	desc = "HUN_BELA_MIKLOS_ARMY_DESC"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Bela_Miklos.tga"
+	traits = {
+		armor_officer
+		cavalry_leader
+		organizer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Dezső László"
+	desc = "HUN_DEZSO_LASZLO_ARMY_DESC"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Dezso_Laszlo.tga"
+	traits = {
+		infantry_officer
+		skilled_staffer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Gusztáv Jány"
+	desc = "HUN_GUSZTAV_JANY_ARMY_DESC"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Gusztav_Jany.tga"
+	traits = {
+		trait_reckless
+		infantry_leader
+		skilled_staffer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Lajos Veress de Dálnok"
+	desc = "HUN_LAJOS_VERESS_ARMY_DESC"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Lajos_Veress.tga"
+	traits = {
+		trait_reckless
+		armor_officer
+		cavalry_leader
+		trickster
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Gusztáv Denk de Kistorony"
+	desc = "HUN_GUSZTAV_DENK_ARMY_DESC"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Gusztav_Denk.tga"
+	traits = {
+		politically_connected
+		cavalry_leader
+		organizer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Döme Sztójay"
+	desc = "HUN_DOME_SZTOJAY_ARMY_DESC"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Dome_Sztojay.tga"
+	traits = {
+		trickster
+		commando
+		trait_mountaineer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Szilárd Bakay"
+	desc = "HUN_SZILARD_BAKAY_ARMY_DESC"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Szilard_Bakay.tga"
+	traits = {
+		brilliant_strategist
+		infantry_leader
+		commando
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Károly Bartha de Dálnokfalva"
+	desc = "HUN_KAROLY_BARTHA_ARMY_DESC"
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Karoly_Bartha.tga"
+	traits = {
+		trait_engineer
+		artillery_specialist
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+### Admirals ###
+#create_navy_leader = {
+#	name = "Miklós Horthy"
+#	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Miklos_Horthy.tga"
+#	traits = {
+#		old_guard_navy
+#	}
+#	skill = 2
+#	attack_skill = 1
+#	defense_skill = 2
+#	maneuvering_skill = 2
+#	coordination_skill = 2
+#}

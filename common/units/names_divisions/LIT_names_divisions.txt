@@ -1,0 +1,364 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#			however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#			for example the current one is no longer available due to the can_use trigger saying so).
+#			In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#			mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#			this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names.
+#			Numbers must start from 1 and up.
+#			Numbers can't repeat in one scope.
+#			If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#			All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#			1st argument = The name. It must contain either:
+#						%d (for decimal number placement)
+#						%s (for string number placement - ROMAN numbers like XIV).
+#			2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#									where you choose the historical division name.
+#			3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#									the current game version.
+LIT_INF_01 = {
+	name = "Infantry Division"
+
+	for_countries = { LIT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LIT_INF_01 }
+
+	fallback_name = "%s. Pėstininkų pulkas"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Pirmasis pėstininkų 'Maltos sakalo' pulkas" }
+		2 = { "Antrasis pėstininkų 'Didžiojo Kunigaikščio Algirdo' pulkas" }
+		3 = { "Trečiasis pėstininkų 'Król Władysław Jagiełło' pulkas" }
+		4 = { "Ketvirtasis pėstininkų 'Karaliaus Mindaugo' pulkas" }
+		5 = { "Penktasis pėstininkų 'Didžiojo kunigaikščio Kęstučio' pulkas" }
+		6 = { "Šeštasis pėstininkų 'Pilėnų Kunigaikščio Margio' pulkas" }
+		7 = { "Septintasis pėstininkų 'Žemaičių kunigaikščio Butegeidžio' pulkas" }
+		8 = { "Aštuntasis pėstininkų 'Kauno Kunigaikščio Vaidoto' pulkas" }
+		9 = { "Devintasis pėstininkų 'Kunigaikščio Vytenio' pulkas" }
+		10 = { "%s. Pėstininkų pulkas" }
+		11 = { "%s. Pėstininkų pulkas" }
+		12 = { "%s. Pėstininkų pulkas" }
+		13 = { "%s. Pėstininkų pulkas" }
+		14 = { "%s. Pėstininkų pulkas" }
+		15 = { "%s. Pėstininkų pulkas" }
+		16 = { "%s. Pėstininkų pulkas" }
+		17 = { "%s. Pėstininkų pulkas" }
+		18 = { "%s. Pėstininkų pulkas" }
+		19 = { "%s. Pėstininkų pulkas" }
+		20 = { "%s. Pėstininkų pulkas" }
+	}
+}
+
+LIT_CAV_01 = {
+	name = "Cavalry Division"
+
+	for_countries = { LIT }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LIT_INF_01 }
+
+	fallback_name = "%s. Kavalerijos pulkas"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Pirmasis husarų 'Didžiojo Etmono Jonušo Radvilos' pulkas" }
+		2 = { "Antrasis ulonų 'Kunigaikštienės Birutės' pulkas" }
+		3 = { "Trečiasis dragūnų 'Geležinio Vilko' pulkas" }
+		4 = { "%s. Kavalerijos pulkas" }
+		5 = { "%s. Kavalerijos pulkas" }
+		6 = { "%s. Kavalerijos pulkas" }
+		7 = { "%s. Kavalerijos pulkas" }
+		8 = { "%s. Kavalerijos pulkas" }
+		9 = { "%s. Kavalerijos pulkas" }
+		10 = { "%s. Kavalerijos pulkas" }
+	}
+}
+
+LIT_MOT_01 = {
+	name = "Motorized Division"
+
+	for_countries = { LIT }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LIT_INF_01 }
+
+	fallback_name = "%s. Motorizuotoji pėstininkų brigada"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s. Motorizuotoji pėstininkų brigada" }
+		2 = { "%s. Motorizuotoji pėstininkų brigada" }
+		3 = { "%s. Motorizuotoji pėstininkų brigada" }
+		4 = { "%s. Motorizuotoji pėstininkų brigada" }
+		5 = { "%s. Motorizuotoji pėstininkų brigada" }
+		6 = { "%s. Motorizuotoji pėstininkų brigada" }
+		7 = { "%s. Motorizuotoji pėstininkų brigada" }
+		8 = { "%s. Motorizuotoji pėstininkų brigada" }
+		9 = { "%s. Motorizuotoji pėstininkų brigada" }
+		10 = { "%s. Motorizuotoji pėstininkų brigada" }
+	}
+}
+
+LIT_MEC_01 = {
+	name = "Mechanized Division"
+
+	for_countries = { LIT }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LIT_INF_01 }
+
+	fallback_name = "%s. Mechanizuotoji pėstininkų brigada"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s. Mechanizuotoji pėstininkų brigada" }
+		2 = { "%s. Mechanizuotoji pėstininkų brigada" }
+		3 = { "%s. Mechanizuotoji pėstininkų brigada" }
+		4 = { "%s. Mechanizuotoji pėstininkų brigada" }
+		5 = { "%s. Mechanizuotoji pėstininkų brigada" }
+		6 = { "%s. Mechanizuotoji pėstininkų brigada" }
+		7 = { "%s. Mechanizuotoji pėstininkų brigada" }
+		8 = { "%s. Mechanizuotoji pėstininkų brigada" }
+		9 = { "%s. Mechanizuotoji pėstininkų brigada" }
+		10 = { "%s. Mechanizuotoji pėstininkų brigada" }
+	}
+}
+
+LIT_ARM_01 = {
+	name = "Armored Division"
+
+	for_countries = { LIT }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LIT_INF_01 }
+
+	fallback_name = "%s. Šarvuočių rinktinė"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s. Šarvuočių rinktinė" }
+		2 = { "%s. Šarvuočių rinktinė" }
+		3 = { "%s. Šarvuočių rinktinė" }
+		4 = { "%s. Šarvuočių rinktinė" }
+		5 = { "%s. Šarvuočių rinktinė" }
+		6 = { "%s. Šarvuočių rinktinė" }
+		7 = { "%s. Šarvuočių rinktinė" }
+		8 = { "%s. Šarvuočių rinktinė" }
+		9 = { "%s. Šarvuočių rinktinė" }
+		10 = { "%s. Šarvuočių rinktinė" }
+	}
+}
+
+LIT_PAR_01 = {
+	name = "Paratrooper Division"
+
+	for_countries = { LIT }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LIT_INF_01 }
+
+	fallback_name = "%s. Oro desanto divizija"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s. Oro desanto divizija" }
+		2 = { "%s. Oro desanto divizija" }
+		3 = { "%s. Oro desanto divizija" }
+		4 = { "%s. Oro desanto divizija" }
+		5 = { "%s. Oro desanto divizija" }
+		6 = { "%s. Oro desanto divizija" }
+		7 = { "%s. Oro desanto divizija" }
+		8 = { "%s. Oro desanto divizija" }
+		9 = { "%s. Oro desanto divizija" }
+		10 = { "%s. Oro desanto divizija" }
+	}
+}
+
+LIT_MAR_01 = {
+	name = "Marine Division"
+
+	for_countries = { LIT }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LIT_INF_01 }
+
+	fallback_name = "%s. Jūrų pėstininkų divizija"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s. Jūrų pėstininkų divizija" }
+		2 = { "%s. Jūrų pėstininkų divizija" }
+		3 = { "%s. Jūrų pėstininkų divizija" }
+		4 = { "%s. Jūrų pėstininkų divizija" }
+		5 = { "%s. Jūrų pėstininkų divizija" }
+		6 = { "%s. Jūrų pėstininkų divizija" }
+		7 = { "%s. Jūrų pėstininkų divizija" }
+		8 = { "%s. Jūrų pėstininkų divizija" }
+		9 = { "%s. Jūrų pėstininkų divizija" }
+		10 = { "%s. Jūrų pėstininkų divizija" }
+	}
+}
+
+LIT_MTN_01 = {
+	name = "Mountain Division"
+
+	for_countries = { LIT }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LIT_INF_01 }
+
+	fallback_name = "%s. Kalnų šaulių divizija"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%s. Kalnų šaulių divizija" }
+		2 = { "%s. Kalnų šaulių divizija" }
+		3 = { "%s. Kalnų šaulių divizija" }
+		4 = { "%s. Kalnų šaulių divizija" }
+		5 = { "%s. Kalnų šaulių divizija" }
+		6 = { "%s. Kalnų šaulių divizija" }
+		7 = { "%s. Kalnų šaulių divizija" }
+		8 = { "%s. Kalnų šaulių divizija" }
+		9 = { "%s. Kalnų šaulių divizija" }
+		10 = { "%s. Kalnų šaulių divizija" }
+	}
+}
+
+LIT_GAR_01 = {
+	name = "National Defense Volunteer Forces"
+
+	for_countries = { LIT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	# link_numbering_with = { LIT_INF_01 }
+
+	fallback_name = "KASP %s apygardos rinktinė"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "KASP Dainavos apygardos rinktinė" }
+		2 = { "KASP Aukštaitijos apygardos rinktinė" }
+		3 = { "KASP Žemaičių apygardos rinktinė" }
+		4 = { "KASP Vyčio apygardos rinktinė" }
+		5 = { "KASP Prisikėlimo apygardos rinktinė" }
+		6 = { "KASP Didžiosios Kovos apygardos rinktinė" }
+		7 = { "KASP %s apygardos rinktinė" }
+		8 = { "KASP %s apygardos rinktinė" }
+		9 = { "KASP %s apygardos rinktinė" }
+		10 = { "KASP %s apygardos rinktinė" }
+		11 = { "KASP %s apygardos rinktinė" }
+		12 = { "KASP %s apygardos rinktinė" }
+		13 = { "KASP %s apygardos rinktinė" }
+		14 = { "KASP %s apygardos rinktinė" }
+		15 = { "KASP %s apygardos rinktinė" }
+		16 = { "KASP %s apygardos rinktinė" }
+		17 = { "KASP %s apygardos rinktinė" }
+		18 = { "KASP %s apygardos rinktinė" }
+		19 = { "KASP %s apygardos rinktinė" }
+		20 = { "KASP %s apygardos rinktinė" }
+	}
+}
+
+
+
+LIT_MIL_01 = {
+	name = "Lithuanian Riflemen Union"
+
+	for_countries = { LIT }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	# link_numbering_with = { LIT_INF_01 }
+
+	fallback_name = "%d-oji šaulių rinktinė"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d-oji šaulių rinktinė" }
+		2 = { "%d-oji šaulių rinktinė" }
+		3 = { "%d-oji šaulių rinktinė" }
+		4 = { "%d-oji šaulių rinktinė" }
+		5 = { "%d-oji šaulių rinktinė" }
+		6 = { "%d-oji šaulių rinktinė" }
+		7 = { "%d-oji šaulių rinktinė" }
+		8 = { "%d-oji šaulių rinktinė" }
+		9 = { "%d-oji šaulių rinktinė" }
+		10 = { "%d-oji šaulių rinktinė" }
+		11 = { "%d-oji šaulių rinktinė" }
+		12 = { "%d-oji šaulių rinktinė" }
+		13 = { "%d-oji šaulių rinktinė" }
+		14 = { "%d-oji šaulių rinktinė" }
+		15 = { "%d-oji šaulių rinktinė" }
+		16 = { "%d-oji šaulių rinktinė" }
+		17 = { "%d-oji šaulių rinktinė" }
+		18 = { "%d-oji šaulių rinktinė" }
+		19 = { "%d-oji šaulių rinktinė" }
+		20 = { "%d-oji šaulių rinktinė" }
+	}
+}
+

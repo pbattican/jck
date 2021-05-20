@@ -1,0 +1,182 @@
+on_actions = {
+
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+			### Dutch East Indies peace
+			if = {
+				limit = {
+					HOL = { is_ally_with = ROOT }
+					is_in_asia = yes
+				}
+				HOL = {
+					country_event = { id = asiapeace.4 days = 20 }
+				}
+			}
+			if = {
+				limit = {
+					tag = INS
+					has_war_with = DEI
+				}
+				DEI = {
+					annex_country = {
+						target = INS
+						transfer_troops = no
+					}
+				}
+			}
+		}
+	}
+
+	on_government_change = {
+		effect = {
+			if = {
+				limit = { tag = HOL }
+				if = {
+					limit = { has_socialist_government = yes }
+					HOL_add_socialist_ideas = yes
+					remove_ideas = {
+						HOL_idea_ambtenarenverbod
+						HOL_idea_ambtenarenverbod_01
+						HOL_idea_ambtenarenverbod_02
+						HOL_idea_orde_van_oranje_nassau
+						HOL_idea_outlawed_unions
+						HOL_idea_agreement_with_left_0
+						HOL_idea_agreement_with_left_1
+						HOL_idea_agreement_with_left_2
+						HOL_idea_agreement_with_right_0
+						HOL_idea_agreement_with_right_1
+						HOL_idea_agreement_with_right_2
+						HOL_idea_high_debts
+						HOL_idea_high_inflation
+					}
+					country_event = { id = holpostel.122 days = 4 }
+					GER = { country_event = { id = holpostel.117 days = 7 } }
+				}
+				else = {
+					HOL_remove_socialist_ideas = yes
+				}
+			}
+		}
+	}
+
+	on_new_term_election = {
+		effect = {
+			### Belgium ###
+			if = {
+				limit = { tag = BEL }
+				country_event = bel.1000
+				country_event = bel.1001
+				country_event = belind.14
+			}
+			### Flanders ###
+			if = {
+				limit = { tag = FLN }
+				country_event = fln.101	#Flemish Generic
+			}
+			### Netherlands ###
+			if = {
+				limit = { tag = HOL }
+				country_event = holel.1 #1937
+				country_event = holpostel.70 #Oud 1941
+				country_event = holpostel.76 #Colijn 1941
+				country_event = holpostel.81 #Swart 1941
+				country_event = holpostel.85 #Republican
+				country_event = holpostel.105 #Reijnders 1945+
+				country_event = holpostel.106 #VDB/RSAP 1945+
+				country_event = holpostel.111 #CNA 1945+
+			}
+			### Wallonia ###
+			if = {
+				limit = { tag = WLL }
+				country_event = wll.718
+			}
+		}
+	}
+
+	on_offer_join_faction = {
+		effect = {
+			if = {
+				limit = { tag = HOL }
+				remove_ideas = {
+					HOL_idea_ambtenarenverbod
+					HOL_idea_ambtenarenverbod_01
+					HOL_idea_ambtenarenverbod_02
+					HOL_idea_orde_van_oranje_nassau
+					HOL_idea_outlawed_unions
+					HOL_idea_agreement_with_left_0
+					HOL_idea_agreement_with_left_1
+					HOL_idea_agreement_with_left_2
+					HOL_idea_agreement_with_right_0
+					HOL_idea_agreement_with_right_1
+					HOL_idea_agreement_with_right_2
+					HOL_idea_high_debts
+					HOL_idea_high_inflation
+				}
+			}
+		}
+	}
+
+	#ROOT is winner #FROM is loser
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							tag = INS
+							FROM = { tag = DEI }
+						}
+						AND = {
+							tag = DEI
+							FROM = { tag = INS }
+						}
+					}
+				}
+				INS = { country_event = dei.31 }
+				DEI = { country_event = dei.310 }
+			}
+		}
+	}
+
+	on_state_control_changed = {
+		effect = {
+			### Clearing State Modifiers
+			if = { #French Flanders state modifier
+				limit = {
+					ROOT = {
+						980 = {
+							has_state_flag = FLN_conscription_flag
+						}
+						controls_state = 980
+						NOT = {
+							tag = FLN
+						}
+					}
+				}
+				add_state_modifier = {
+					modifier = {
+						local_non_core_manpower = -0.18
+					}
+				}
+			}
+			if = { #French Flanders state modifier put back for FLN
+				limit = {
+					ROOT = {
+						980 = {
+							has_state_flag = FLN_conscription_flag
+						}
+						controls_state = 980
+						tag = FLN
+					}
+				}
+				add_state_modifier = {
+					modifier = {
+						local_non_core_manpower = 0.18
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,24 @@
+SIA_Siamese-Burmese_War_category = {
+	icon = GFX_decision_category_patriotic
+	allowed = {
+		OR = {
+			original_tag = SIA
+			original_tag = BRM
+		}
+	}
+}
+
+SIA_infrastructure_category = {
+	icon = GFX_decision_category_sia_political
+	allowed = {
+		original_tag = SIA
+	}
+}
+
+SIA_diplomatic_matters_category = {
+	icon = GFX_decision_category_sia_diplomatic
+	allowed = {
+		original_tag = SIA
+	}
+}
+

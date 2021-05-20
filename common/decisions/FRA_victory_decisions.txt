@@ -1,0 +1,68 @@
+FRA_victory_decisions = {
+	FRA_third_int_victory = {
+		icon = generic_research
+		allowed = {
+			original_tag = FRA
+		}
+		available = {
+			AND = {
+
+				# Uses KR Scripted trigger in _useful_scripted_triggers.txt
+				64 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				43 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				272 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+
+				GER = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}
+				}
+				AUS = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}
+				}
+				NFA = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}				
+				}
+			}
+		}
+		fire_only_once = no
+
+		cancel_trigger = {
+					NOT = {
+						64 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						43 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						272 = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+				}
+		}
+
+		selectable_mission = yes
+		is_good = yes
+		days_remove = 30
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRA_third_int_victory"
+			news_event = {
+				id = krw.victory.0
+				days = 1
+			}
+		}
+	}
+}

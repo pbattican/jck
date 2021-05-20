@@ -1,0 +1,224 @@
+POL_create_admirals = {
+	create_navy_leader = {
+		name = "Józef Unrug"
+		portrait_path = "gfx/leaders/POL/Portrait_POL_Jozef_Unrug.tga"
+		traits = {
+			blockade_runner
+		}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		maneuvering_skill = 1
+		coordination_skill = 1
+	}
+
+	create_navy_leader = {
+		name = "Kazimierz Porębski"
+		portrait_path = "gfx/leaders/POL/Portrait_POL_Kazimierz_Porebski.tga"
+		traits = {
+			superior_tactician
+		}
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		maneuvering_skill = 1
+		coordination_skill = 1
+	}
+
+	create_navy_leader = {
+		name = "Jerzy Świrski"
+		portrait_path = "gfx/leaders/POL/Portrait_POL_Jerzy_Swirski.tga"
+		traits = { }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		maneuvering_skill = 2
+		coordination_skill = 1
+	}
+}
+
+POL_setup_august_wilhelm = {
+	create_country_leader = {
+		name = "August IV"
+		desc = "POLITICS_AUGUST_IV_DESC"
+		picture = "Portrait_POL_August_IV.tga"
+		expire = "1965.1.1"
+		ideology = social_democrat_subtype
+	}
+	create_country_leader = {
+		name = "August IV"
+		desc = "POLITICS_AUGUST_IV_DESC"
+		picture = "Portrait_POL_August_IV.tga"
+		expire = "1965.1.1"
+		ideology = social_liberal_subtype
+	}
+	create_country_leader = {
+		name = "August IV"
+		desc = "POLITICS_AUGUST_IV_DESC"
+		picture = "Portrait_POL_August_IV.tga"
+		expire = "1965.1.1"
+		ideology = market_liberal_subtype
+	}
+	create_country_leader = {
+		name = "August IV"
+		desc = "POLITICS_AUGUST_IV_DESC"
+		picture = "Portrait_POL_August_IV.tga"
+		expire = "1965.1.1"
+		ideology = social_conservative_subtype
+	}
+	create_country_leader = {
+		name = "August IV"
+		desc = "POLITICS_AUGUST_IV_DESC"
+		picture = "Portrait_POL_August_IV.tga"
+		expire = "1965.1.1"
+		ideology = authoritarian_democrat_subtype
+	}
+}
+
+POL_setup_mendog = {
+	create_country_leader = {
+		name = "Mendog III"
+		desc = "POLITICS_MENDOG_III_DESC"
+		picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.tga"
+		expire = "1965.1.1"
+		ideology = social_democrat_subtype
+	}
+	create_country_leader = {
+		name = "Mendog III"
+		desc = "POLITICS_MENDOG_III_DESC"
+		picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.tga"
+		expire = "1965.1.1"
+		ideology = social_liberal_subtype
+	}
+	create_country_leader = {
+		name = "Mendog III"
+		desc = "POLITICS_MENDOG_III_DESC"
+		picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.tga"
+		expire = "1965.1.1"
+		ideology = market_liberal_subtype
+	}
+	create_country_leader = {
+		name = "Mendog III"
+		desc = "POLITICS_MENDOG_III_DESC"
+		picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.tga"
+		expire = "1965.1.1"
+		ideology = social_conservative_subtype
+	}
+	create_country_leader = {
+		name = "Mendog III"
+		desc = "POLITICS_MENDOG_III_DESC"
+		picture = "gfx/leaders/LIT/Portrait_LIT_Mindaugas_III.tga"
+		expire = "1965.1.1"
+		ideology = authoritarian_democrat_subtype
+	}
+}
+
+POL_setup_karol = {
+	create_country_leader = {
+		name = "Karol Olbracht"
+		desc = "POLITICS_KAROL_OLBRACHT_HABSBURG_DESC"
+		picture = "gfx/leaders/GAL/Portrait_GAL_Karl_Albrecht.tga"
+		expire = "1965.1.1"
+		ideology = social_democrat_subtype
+	}
+	create_country_leader = {
+		name = "Karol Olbracht"
+		desc = "POLITICS_KAROL_OLBRACHT_HABSBURG_DESC"
+		picture = "gfx/leaders/GAL/Portrait_GAL_Karl_Albrecht.tga"
+		expire = "1965.1.1"
+		ideology = social_liberal_subtype
+	}
+	create_country_leader = {
+		name = "Karol Olbracht"
+		desc = "POLITICS_KAROL_OLBRACHT_HABSBURG_DESC"
+		picture = "gfx/leaders/GAL/Portrait_GAL_Karl_Albrecht.tga"
+		expire = "1965.1.1"
+		ideology = market_liberal_subtype
+	}
+	create_country_leader = {
+		name = "Karol Olbracht"
+		desc = "POLITICS_KAROL_OLBRACHT_HABSBURG_DESC"
+		picture = "gfx/leaders/GAL/Portrait_GAL_Karl_Albrecht.tga"
+		expire = "1965.1.1"
+		ideology = social_conservative_subtype
+	}
+	create_country_leader = {
+		name = "Karol Olbracht"
+		desc = "POLITICS_KAROL_OLBRACHT_HABSBURG_DESC"
+		picture = "gfx/leaders/GAL/Portrait_GAL_Karl_Albrecht.tga"
+		expire = "1965.1.1"
+		ideology = authoritarian_democrat_subtype
+	}
+}
+
+POL_setup_augustyn = {
+	create_country_leader = {
+		name = "Augustyn"
+		desc = "POLITICS_AUGUSTYN_I_CZARTORYSKI_DESC"
+		picture = "Portrait_POL_Augustyn_I_Czartoryski.tga"
+		expire = "1965.1.1"
+		ideology = social_democrat_subtype
+	}
+	create_country_leader = {
+		name = "Augustyn"
+		desc = "POLITICS_AUGUSTYN_I_CZARTORYSKI_DESC"
+		picture = "Portrait_POL_Augustyn_I_Czartoryski.tga"
+		expire = "1965.1.1"
+		ideology = social_liberal_subtype
+	}
+	create_country_leader = {
+		name = "Augustyn"
+		desc = "POLITICS_AUGUSTYN_I_CZARTORYSKI_DESC"
+		picture = "Portrait_POL_Augustyn_I_Czartoryski.tga"
+		expire = "1965.1.1"
+		ideology = market_liberal_subtype
+	}
+	create_country_leader = {
+		name = "Augustyn"
+		desc = "POLITICS_AUGUSTYN_I_CZARTORYSKI_DESC"
+		picture = "Portrait_POL_Augustyn_I_Czartoryski.tga"
+		expire = "1965.1.1"
+		ideology = social_conservative_subtype
+	}
+	create_country_leader = {
+		name = "Augustyn"
+		desc = "POLITICS_AUGUSTYN_I_CZARTORYSKI_DESC"
+		picture = "Portrait_POL_Augustyn_I_Czartoryski.tga"
+		expire = "1965.1.1"
+		ideology = authoritarian_democrat_subtype
+	}
+}
+
+POL_remove_monarchy = {
+	hidden_effect = {
+		kill_ideology_leader = social_democrat
+		kill_ideology_leader = social_liberal
+		kill_ideology_leader = market_liberal
+		kill_ideology_leader = social_conservative
+		kill_ideology_leader = authoritarian_democrat
+	}
+}
+
+POL_remove_regency_council = {
+	hidden_effect = {
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = POL_authoritarian_democrat_monarchy_party_long
+			name = POL_authoritarian_democrat_monarchy_party
+		}
+		if = {
+			limit = {
+				has_country_leader = { name = "Regency Council" }
+			}
+			kill_ideology_leader = authoritarian_democrat
+			create_country_leader = {
+				name = "Eustachy Sapieha"
+				desc = "POLITICS_EUSTACHY_SAPIEHA_DESC"
+				picture = "Portrait_POL_Eustachy_Sapieha.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democrat_subtype
+			}
+		}
+	}
+}
+

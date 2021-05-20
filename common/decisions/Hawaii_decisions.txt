@@ -1,0 +1,592 @@
+#### American Civil War Decisions by Herkles ####
+
+political_actions = {
+	JAP_hold_hawaii = {
+		icon = GFX_decision_generic_agreement
+
+		allowed = { always = no } #manually activated
+
+		available = {
+			HAW = { has_capitulated = no }
+		}
+
+		cancel_trigger = {
+			NOT = { has_war_with = var:HAW.faction_leader }
+		}
+
+		is_good = yes
+		fire_only_once = yes
+		days_mission_timeout = 180
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout JAP_hold_hawaii"
+			var:HAW.faction_leader = { country_event = hawaii.111 }
+		}
+	}
+}
+
+HAW_foreign_policy_decisions = {
+	HAW_join_faction = {
+		icon = generic_political_discourse
+
+		available = {
+			NOT = { has_country_flag = HAW_seeking_alliance }
+			at_peace_or_same_enemies_as_FROM = yes
+		}
+
+		visible = {
+			is_in_faction = no
+			has_socialist_government = no
+			FROM = {
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		cost = 0
+		days_remove = 10
+		fire_only_once = yes
+
+		targets = { ENT GER JAP }
+		target_root_trigger = {
+			is_in_faction = no
+			has_socialist_government = no
+		}
+		target_trigger = {
+			FROM = { is_faction_leader = yes }
+		}
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_join_faction target: [From.GetName]"
+			set_country_flag = { flag = HAW_seeking_alliance days = 12 value = 1 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove HAW_join_faction target: [From.GetName]"
+			FROM = { country_event = hawaii.101 }
+		}
+	}
+	HAW_join_international = {
+		name = HAW_join_faction
+		icon = generic_political_discourse
+
+		available = {
+			at_peace_or_same_enemies_as_FROM = yes
+		}
+
+		visible = {
+			is_in_faction = no
+			has_socialist_government = yes
+			FROM = {
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		cost = 0
+		days_remove = 10
+		fire_only_once = yes
+
+		targets = { INT }
+		target_root_trigger = { is_in_faction = no }
+		target_trigger = {
+			FROM = { is_faction_leader = yes }
+		}
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_join_international target: [From.GetName]"
+			INT = {
+				country_event = { id = hawaii.101 days = 3 }
+			}
+		}
+	}
+}
+
+HAW_economic_decisions = {# Economic Decisions
+	### Internationale ###
+	HAW_invite_international_economic_advisers = {# International Economic Advisers
+		icon = generic_research
+		visible = {
+			is_in_faction_with = INT
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_invite_international_economic_advisers"
+			add_ideas = HAW_international_advisors_idea
+		}
+	}
+
+	HAW_french_investment = {# French investment
+		icon = generic_research
+		visible = {
+			is_in_faction_with = FRA
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_french_investment"
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_tech_bonus = {
+				name = HAW_french_investment
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	HAW_syndie_indian_investment = {# Indian investment
+		icon = generic_research
+		visible = {
+			is_in_faction_with = HND
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_syndie_indian_investment"
+		}
+	}
+	HAW_syndie_american_investment = {# American investment
+		icon = generic_research
+		visible = {
+			is_in_faction_with = CSA
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_syndie_american_investment"
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+	### American ###
+	HAW_invite_american_economic_advisers = {# American Economic Advisers
+		icon = generic_research
+		visible = {
+			OR = {
+				is_in_faction_with = TEX
+				is_in_faction_with = USA
+				is_in_faction_with = PSA
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_invite_american_economic_advisers"
+			add_ideas = HAW_american_advisors
+		}
+	}
+	HAW_american_industrial_investment = {# industrial investment
+		icon = generic_research
+		visible = {
+			OR = {
+				is_in_faction_with = TEX
+				is_in_faction_with = USA
+				is_in_faction_with = PSA
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_american_industrial_investment"
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_tech_bonus = {
+				name = HAW_american_industrial_investment
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	HAW_american_military_investment = {# Military investment
+		icon = generic_research
+		visible = {
+			OR = {
+				is_in_faction_with = TEX
+				is_in_faction_with = USA
+				is_in_faction_with = PSA
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_american_military_investment"
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
+	}
+	HAW_american_comerical_investment = {# Commercial investment
+		icon = generic_research
+		visible = {
+			OR = {
+				is_in_faction_with = TEX
+				is_in_faction_with = USA
+				is_in_faction_with = PSA
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_american_comerical_investment"
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+	HAW_american_naval_investment = {# Naval investment
+		icon = generic_research
+		visible = {
+			OR = {
+				is_in_faction_with = TEX
+				is_in_faction_with = USA
+				is_in_faction_with = PSA
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_american_naval_investment"
+			add_offsite_building = { type = dockyard level = 2 }
+		}
+	}
+	### German ###
+	HAW_invite_german_economic_advisers = {
+		icon = generic_research
+		visible = {
+			is_in_faction_with = GER
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_invite_german_economic_advisers"
+			add_ideas = HAW_german_advisors
+		}
+	}
+	HAW_german_industrial_investment = {
+		icon = generic_research
+		visible = {
+			is_in_faction_with = GER
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_german_industrial_investment"
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_tech_bonus = {
+				name = HAW_german_industrial_investment
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	HAW_german_military_investment = {
+		icon = generic_research
+		visible = {
+			is_in_faction_with = GER
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_german_military_investment"
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
+	}
+	HAW_aog_investment = {
+		icon = generic_research
+		visible = {
+			is_in_faction_with = GER
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_aog_investment"
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+	HAW_gea_investment = {
+		icon = generic_research
+		visible = {
+			is_in_faction_with = GEA
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_gea_investment"
+			add_offsite_building = { type = dockyard level = 2 }
+		}
+	}
+	### Co-Prosperity Sphere ###
+	HAW_invite_japanese_economic_advisers = {
+		icon = generic_research
+		visible = {
+			is_in_faction_with = JAP
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_invite_japanese_economic_advisers"
+			add_ideas = HAW_japanese_advisors
+		}
+	}
+	HAW_japanese_industrial_investment = {
+		icon = generic_research
+		visible = {
+			is_in_faction_with = JAP
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_japanese_industrial_investment"
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_tech_bonus = {
+				name = HAW_japanese_industrial_investment
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	HAW_japanese_military_investment = {
+		icon = generic_research
+		visible = {
+			is_in_faction_with = JAP
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_japanese_military_investment"
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
+	}
+	HAW_japanese_comericial_investment = {
+		icon = generic_research
+		visible = {
+			is_in_faction_with = JAP
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_japanese_comericial_investment"
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+	HAW_japanese_naval_investment = {
+		icon = generic_research
+		visible = {
+			is_in_faction_with = JAP
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_japanese_naval_investment"
+			add_offsite_building = { type = dockyard level = 2 }
+		}
+	}
+	### Canada and the Entente ###
+	HAW_invite_entente_economic_advisers = {# Entente Economic Advisers
+		icon = generic_research
+		visible = {
+			is_in_faction_with = ENT
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_invite_entente_economic_advisers"
+			add_ideas = HAW_entente_advisors
+		}
+	}
+	HAW_canadian_industrial_investment = {# French investment
+		icon = generic_research
+		visible = {
+			is_in_faction_with = CAN
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_canadian_industrial_investment"
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_tech_bonus = {
+				name = HAW_canadian_industrial_investment
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	HAW_indian_investment = {# Indian investment
+		icon = generic_research
+		visible = {
+			is_in_faction_with = RAJ
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_indian_investment"
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
+	}
+	HAW_canadian_investment = {# American investment
+		icon = generic_research
+		visible = {
+			is_in_faction_with = CAN
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_canadian_investment"
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+	HAW_australasian_investment = {# Australasian investment
+		icon = generic_research
+		visible = {
+			is_in_faction_with = AST
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 70 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_australasian_investment"
+			add_offsite_building = { type = dockyard level = 2 }
+		}
+	}
+}
+HAW_buying_ships_decisions = {
+	HAW_buy_light_cruisers = {
+		icon = generic_research
+
+		available = {
+			NOT = { has_idea = HAW_bought_ship }
+		}
+
+		visible = {
+			country_exists = FROM
+			FROM = {
+				NOT = { has_war_with = ROOT }
+				if = {
+					limit = { is_american_tag = yes }
+					has_global_flag = USA_civil_war_over_flag
+				}
+			}
+			if = {
+				limit = { has_socialist_government = yes }
+				FROM = { has_socialist_government = yes }
+			}
+			else = {
+				FROM = { has_socialist_government = no }
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		targets = { AST CAN CSA PSA TEX USA GER JAP }
+		target_root_trigger = { has_completed_focus = HAW_navy }
+		target_trigger = {
+			FROM = {
+				NOT = { has_war_with = ROOT }
+				if = {
+					limit = { is_american_tag = yes }
+					has_global_flag = USA_civil_war_over_flag
+				}
+			}
+			if = {
+				limit = { has_socialist_government = yes }
+				FROM = { has_socialist_government = yes }
+			}
+			else = {
+				FROM = { has_socialist_government = no }
+			}
+		}
+
+		ai_will_do = { factor = 70 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_buy_light_cruisers target: [From.GetName]"
+			FROM = {
+				country_event = { id = hawaii.78 days = 3 }
+			}
+		}
+	}
+	HAW_buy_destroyers = {
+		icon = generic_research
+
+		available = {
+			NOT = { has_idea = HAW_bought_ship }
+		}
+
+		visible = {
+			country_exists = FROM
+			FROM = {
+				NOT = { has_war_with = ROOT }
+				if = {
+					limit = { is_american_tag = yes }
+					has_global_flag = USA_civil_war_over_flag
+				}
+			}
+			if = {
+				limit = { has_socialist_government = yes }
+				FROM = { has_socialist_government = yes }
+			}
+			else = {
+				FROM = { has_socialist_government = no }
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		targets = { AST CAN CSA PSA TEX USA GER JAP }
+		target_root_trigger = { has_completed_focus = HAW_navy }
+		target_trigger = {
+			FROM = {
+				NOT = { has_war_with = ROOT }
+				if = {
+					limit = { is_american_tag = yes }
+					has_global_flag = USA_civil_war_over_flag
+				}
+			}
+			if = {
+				limit = { has_socialist_government = yes }
+				FROM = { has_socialist_government = yes }
+			}
+			else = {
+				FROM = { has_socialist_government = no }
+			}
+		}
+
+		ai_will_do = { factor = 70 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision HAW_buy_destroyers target: [From.GetName]"
+			FROM = {
+				country_event = { id = hawaii.89 days = 3 }
+			}
+		}
+	}
+}
+

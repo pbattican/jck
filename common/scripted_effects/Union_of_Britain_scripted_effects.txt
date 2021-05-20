@@ -1,0 +1,75 @@
+create_communal_government = {
+	create_country_leader = {
+		name = "Central Committee"
+		desc = "POLITICS_COMMUNAL_DESC"
+		picture = "Portrait_England_Trade_Union_Congress.tga"
+		expire = "1965.1.1"
+		ideology = radical_socialist_subtype
+	}
+}
+ENG_diplo_irish_demands = {
+	hidden_effect = {
+		if = {
+			limit = {
+				CAN = {
+					is_faction_leader = yes
+					OR = {
+						has_global_flag = ENG_CANIRE_protection
+						has_global_flag = ENG_CANIRE_support
+					}
+				}
+			}
+			CAN = {
+				country_event = {
+					id = uob.46
+					days = 2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				GER = {
+					is_faction_leader = yes
+					OR = {
+						has_global_flag = ENG_GERIRE_protection
+						has_global_flag = ENG_GERIRE_support
+					}
+				}
+			}
+			GER = {
+				country_event = {
+					id = uob.53
+					days = 2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = ENG_IRE_alone
+				can_declare_war_on = IRE
+			}
+			if = {
+				limit = { has_country_flag = ENG_IRE_annex }
+				country_event = {
+					id = uob.61
+					days = 2
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ENG_IRE_bases }
+				country_event = {
+					id = uob.62
+					days = 2
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = ENG_IRE_influence }
+				country_event = {
+					id = uob.63
+					days = 2
+				}
+			}
+		}
+	}
+}
+

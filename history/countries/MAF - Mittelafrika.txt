@@ -1,0 +1,369 @@
+﻿capital = 965
+
+oob = "MAF"
+set_naval_oob= "MAF_naval"
+
+set_technology = {
+	### General ###
+	electronic_mechanical_engineering = 1
+
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1
+
+	### Infantry ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+
+	### Air ###
+	early_fighter = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	cv_early_fighter = 1
+	cv_CAS1 = 1
+	cv_naval_bomber1 = 1
+	fighter1 = 1
+	tactical_bomber1 = 1
+	CAS1 = 1
+}
+
+### Navy - MtG ###
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		weltkrieg_light_ship_hull = 1
+		contact_mine = 1
+		light_ship_hull_1936 = 1
+		weltkrieg_cruiser_hull = 1
+		cruiser_hull_1936 = 1
+		weltkrieg_submarine_hull = 1
+		submarine_hull_1936 = 1
+		cruiser_submarine = 1
+		carrier_conversion = 1
+		carrier_hull_1936 = 1
+		ship_hull_revived_ac = 1
+		weltkrieg_heavy_ship_hull = 1
+		heavy_ship_hull_1936 = 1
+
+		## Modules##
+		early_torpedo = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+		light_battery_one = 1
+		improved_ship_torpedo_launcher = 1
+		basic_cruiser_armor_scheme = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+		basic_heavy_armor_scheme = 1
+		capital_gunnery_one = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+		mechanical_computing = 1
+		basic_fire_control_system = 1
+
+		### Transport ###
+		transport = 1
+	}
+}
+
+### Navy - Non MtG ###
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		weltkrieg_destroyer_nonmtg = 1
+		interwar_destroyer_nonmtg = 1
+		weltkrieg_cruiser_nonmtg = 1
+		interwar_cruiser_nonmtg = 1
+		weltkrieg_submarine_nonmtg = 1
+		interwar_submarine_nonmtg = 1
+		weltkrieg_carrier_nonmtg = 1
+
+		### Transport ###
+		transport_n = 1
+	}
+}
+
+country_event = { id = mittel.167 days = 1 } #Intro
+country_event = { id = mittel.1 days = 5 } #MAF explanation for Portugal War
+country_event = { id = mittel.125 days = 265 } #Mau Mau Start
+country_event = { id = mittel.126 days = 270 random_days = 50 } #Stumpf murdered
+country_event = { id = mittel.103 days = 287 } #Anniversary of Mahiwa
+country_event = { id = mittel.176 days = 366 } #Budget 1937
+country_event = { id = mittel.104 days = 495 random_days = 50 } #Death of Bernhard Dernburg
+country_event = { id = mittel.178 days = 731 } #Budget 1938
+country_event = { id = mittel.127 days = 996 } #Colonisation Question
+country_event = { id = mittel.37 days = 880 random_days = 90 } #Assassination of Hans Albert von Lettow-Vorbeck
+country_event = { id = mittel.179 days = 1096 } #Budget 1939
+country_event = { id = literature.14 days = 1250 random_days = 200 } #Auf den Marmorklippen, a Book by Ernst Júnger
+country_event = { id = mittel.180 days = 1461 } #Budget 1940
+country_event = { id = mittel.129 days = 1250 random_days = 150 } #Death of Warahui
+
+set_research_slots = 3
+set_convoys = 50
+set_stability = 0.55
+set_war_support = 0.10
+add_political_power = -200
+
+GER = {
+	set_autonomy = {
+		target = MAF
+		autonomy_state = kr_colonial_government
+	}
+}
+
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 0
+	radical_socialist = 1
+	syndicalist = 1
+	social_democrat = 3
+	social_liberal = 10
+	market_liberal = 5
+	social_conservative = 15
+	authoritarian_democrat = 30
+	paternal_autocrat = 34
+	national_populist = 1
+}
+
+add_ideas = {
+	MAF_British_Settlers
+	MAF_Belgian_Investors
+	free_trade
+	MAF_Hermann_von_Goering_hog_pau
+	MAF_Arthur_Zimmermann_for_pau
+	MAF_August_Stauch_eco_ade
+	MAF_Hans_Albert_von_Lettow_Vorbeck_sec_pau
+}
+
+### Country Leaders ###
+create_country_leader = {
+	name = "Hermann von Göring"
+	desc = "POLITICS_GOERING_DESC"
+	picture = "Portrait_Mittelafrika_Hermann_Goering.tga"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+}
+
+create_country_leader = {
+	name = "Hermann von Göring"
+	desc = "POLITICS_GOERING_DESC"
+	picture = "Portrait_Mittelafrika_Hermann_Goering.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+}
+
+create_country_leader = {
+	name = "Georg Kraut"
+	picture = "Portrait_Mittelafrika_Georg_Kraut.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+}
+
+create_country_leader = {
+	name = "Theodor von Hassel"
+	picture = "Portrait_Mittelafrika_Theodor_von_Hassel.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+}
+
+create_country_leader = {
+	name = "Rea Leakey"
+	picture = "Portrait_Mittelafrika_Rea_Leakey.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+}
+
+create_country_leader = {
+	name = "Jules Cousin"
+	picture = "Portrait_Mittelafrika_Jules_Cousin.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+}
+
+create_country_leader = {
+	name = "Albert von Göring"
+	picture = "Portrait_Mittelafrika_Albert_Goering.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+}
+
+### Field Marshals ###
+create_field_marshal = {
+	name = "Hermann von Göring"
+	picture = "Portrait_Mittelafrika_Hermann_Goering.tga"
+	traits = {
+		trait_reckless
+		politically_connected
+		media_personality
+		logistics_wizard
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 198
+}
+create_field_marshal = {
+	name = "Prinz Oskar von Preußen"
+	portrait_path = "gfx/leaders/GEA/Portrait_GEA_Oskar_Von_Preussen.tga"
+	traits = {
+		war_hero
+		politically_connected #Willy's son
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+### Corps Commanders ###
+
+create_corps_commander = {
+	name = "Theodor von Hippel"
+	picture = "Portrait_Mittelafrika_Theodor_von_Hippel.tga"
+	traits = {
+		brilliant_strategist
+		war_hero
+		trickster
+		commando
+		camouflage_expert
+		guerilla_fighter
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Georg Kraut"
+	picture = "Portrait_Mittelafrika_Georg_Kraut.tga"
+	traits = {
+		war_hero
+		media_personality
+		desert_fox
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 17003
+}
+
+create_corps_commander = {
+	name = "Ernst Jünger"
+	picture = "Portrait_Mittelafrika_Ernst_Junger.tga"
+	traits = {
+		war_hero
+		infantry_officer
+		fortress_buster
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Alfred von Randow"
+	picture = "Portrait_Mittelafrika_Alfred_von_Randow.tga"
+	traits = {
+		harsh_leader
+		trickster
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Hermann Detzner"
+	portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Hermann_Detzner.tga"
+	traits = {
+		war_hero
+		jungle_rat
+		trickster
+		guerilla_fighter
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Ferdinand Schörner"
+	picture = "Portrait_Mittelafrika_Ferdinand_Schorner.tga"
+	traits = {
+		harsh_leader
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Alexander Duala-Bell"
+	picture = "Portrait_Mittelafrika_Alexandre_Douala_Bell.tga"
+	traits = {
+		career_officer
+		war_hero
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+### Navy Commanders ###
+create_navy_leader = {
+	name = "Max von Looff"
+	portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Max_Looff.tga"
+	traits = {
+		spotter
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 3
+	id = 17000
+}
+
+random_unit_leader = {
+	limit = { has_id = 17000 }
+	save_global_event_target_as = MAF_Max_Von_Looff
+}
+
+GER_start_naval_variant = yes

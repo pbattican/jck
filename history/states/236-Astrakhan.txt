@@ -1,0 +1,26 @@
+state = {
+	id = 236
+	name = "STATE_236"
+	manpower = 357962
+	state_category = four
+
+	history = {
+		owner = RUS
+		add_core_of = RUS
+		add_claim_by = TRM
+		victory_points = {
+			9753 5
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+			9753 = {
+				bunker = 1
+			}
+		}
+	}
+
+	provinces = {
+		618 757 3435 6486 6516 6620 9455 9592 9753 11429 11736
+	}
+}

@@ -1,0 +1,25 @@
+state = {
+	id = 36
+	name = "STATE_36"
+	manpower = 1066824
+
+	state_category = four
+	history = {
+		owner = HOL
+		add_core_of = HOL
+		victory_points = { 9335 1}
+		victory_points = { 11318 1 }
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			6336 = {
+				naval_base = 3
+				coastal_bunker = 1
+			}
+		}
+	}
+
+	provinces = {
+		6336 9309 9335 11318
+	}
+}

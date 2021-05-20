@@ -1,0 +1,176 @@
+on_actions = {
+	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
+	on_annex = {
+		effect = {
+			if = {
+				limit = { is_in_array = { global.iedc_members = FROM } }
+				remove_from_array = { array = global.iedc_members value = FROM }
+				FROM = {
+					clr_country_flag = CAN_refused_iedc
+					CAN_remove_from_iedc = yes
+				}
+			}
+		}
+	}
+
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+			# remove effects of the Halifax Conference if Germany capitulates
+			if = {
+				limit = {
+					tag = GER
+					country_exists = ENT
+					has_global_flag = GER_stay_out_france_uk
+				}
+				every_country = {
+					limit = { is_in_faction_with = ENT }
+					country_event = { id = entente.330 days = 5 }
+				}
+			}
+		}
+	}
+
+	#FROM is country getting invited.
+	on_offer_join_faction = {
+		effect = {
+			# removing from IEDC
+			if = {
+				limit = {
+					is_in_array = { global.iedc_members = FROM }
+					NOT = { has_idea = CAN_iedc_main }
+				}
+				FROM = { country_event = entente.12 }
+			}
+			# adding to Entente Air Training Program
+			if = {
+				limit = {
+					is_in_faction_with = CAN
+					has_idea = CAN_air_training_plan_idea
+				}
+				FROM = {
+					country_event = { id = entente.211 days = 1 random = 72 }
+				}
+			}
+		}
+	}
+
+	on_new_term_election = {
+		effect = {
+			### Australasia ###
+			if = {
+				limit = { tag = AST }
+				country_event = austral.10
+				country_event = austral.50
+				country_event = austral.53
+			}
+			### West Indies ###
+			if = {
+				limit = { tag = CAF }
+				country_event = wifpol.30
+			}
+			### Canada ###
+			if = {
+				limit = { tag = CAN }
+				country_event = canada.50 #1936
+				country_event = canada.67 #runoff
+				country_event = canada.75 #after 1936
+			}
+			### UK ###
+			if = {
+				limit = { tag = GBR }
+				country_event = uk.34
+			}
+		}
+	}
+
+	on_peace = {
+		effect = {
+			#Remove British Loyalist templates
+			if = {
+				limit = { has_country_flag = CAN_has_british_loyalists }
+				clr_country_flag = CAN_has_british_loyalists
+				delete_unit_template_and_units = { division_template = "Loyalist Rebels" }
+				delete_unit_template_and_units = { division_template = "Loyalist Mountaineers" }
+			}
+			if = {
+				limit = { has_country_flag = CAN_has_irish_loyalists }
+				clr_country_flag = CAN_has_irish_loyalists
+				delete_unit_template_and_units = { division_template = "Unionist Rebels" }
+			}
+		}
+	}
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			### HND Civil War
+			if = {
+				limit = {
+					FROM.FROM = { state = 431 } #Calcutta
+					tag = INR
+					has_government = totalist
+					FROM = { tag = HND }
+				}
+				FROM = { country_event = beng.83 }
+			}
+			if = {
+				limit = {
+					FROM.FROM = { state = 431 } #Calcutta
+					tag = INR
+					has_government = radical_socialist
+					FROM = { tag = HND }
+				}
+				FROM = { country_event = beng.90 }
+			}
+
+			### Zimbabwe events
+			if = {
+				limit = {
+					tag = ZIM
+					has_idea = ZIM_North_Int
+				}
+				country_event = { id = zim.46 days = 2 }
+			}
+		}
+	}
+
+	on_war = {
+		effect = {
+			if = {
+				limit = { tag = RAJ }
+				RAJ = {
+					country_event = {
+						id = delhi.25 #War with the British!
+						days = 2
+					}
+				}
+			}
+		}
+	}
+
+	#ROOT = attacking side
+	#FROM = defending side
+	#fired when two countries end up at war with each other (on_war is fired when a country goes to war against anyone and is not fired again when it enters war against another country unless it went to peace first)
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						tag = JAP
+						tag = ENT
+					}
+					FROM = {
+						OR = {
+							tag = JAP
+							tag = ENT
+						}
+					}
+				}
+				set_global_flag = JAP_war_vs_ENT
+			}
+		}
+
+	}
+
+}
+

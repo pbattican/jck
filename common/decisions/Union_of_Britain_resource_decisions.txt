@@ -1,0 +1,21 @@
+ENG_exploit_resources = {
+	ENG_integrate_icelands_defences = {
+		icon = generic_research
+		allowed = {
+			original_tag = ENG
+		}
+		available = {
+			is_in_faction_with = ICE
+		}
+		fire_only_once = yes
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ENG_integrate_icelands_defences"
+			puppet = ICE
+			set_autonomy = {
+				target = ICE
+				autonomy_state = kr_integrated_puppet
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+state = {
+	id = 654
+	name = "STATE_654" # Gorno-Altaysk
+	manpower = 153510
+	state_category = one
+
+	resources = {
+		steel = 17
+	}
+
+	history = {
+		owner = RUS
+		add_core_of = RUS
+		add_claim_by = TRM
+		victory_points = {
+			4800 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		4781 4800 10531 10713 12509
+	}
+}

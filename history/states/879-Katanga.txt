@@ -1,0 +1,25 @@
+state = {
+	id = 879
+	name = "STATE_879"
+	manpower = 2120490
+	state_category = three
+
+	history = {
+		owner = MAF
+		add_core_of = MAF
+		add_core_of = COG
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			191 3
+		}
+		victory_points = {
+			4515 1
+		}
+	}
+
+	provinces = {
+		191 1516 1817 1929 1968 4515 4902 12795 12907 13173 13495
+	}
+}

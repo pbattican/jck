@@ -1,0 +1,20 @@
+﻿###OOB File for BEL.txt
+units = {
+	fleet = {
+		name = "Smaldeel van Zeebrugge"
+		naval_base = 13659
+		task_force = {
+			name = "Smaldeel van Zeebrugge"
+			location = 13659
+			ship = { name = "BNS Scaldis" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BEL version_name = "Gent Class" } } }
+			ship = { name = "BNS Ysara" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BEL version_name = "Gent Class" } } }
+			ship = { name = "BNS Mosa" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BEL version_name = "Gent Class" } } }
+			ship = { name = "BNS Urta" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BEL version_name = "Gent Class" } } }
+			ship = { name = "BNS Legia" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BEL version_name = "Gent Class" } } }
+			ship = { name = "BNS Sabis" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = BEL version_name = "Gent Class" } } }
+			ship = { name = "BNS Antverpia" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = BEL version_name = "Graudenz/Cöln/Königsberg Class" } } }
+			ship = { name = "BNS Vlaanderen" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = BEL version_name = "König/Kaiser Class" } } }
+			ship = { name = "BNS Brabants" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = BEL version_name = "Nassau/Helgoland Class" } } }
+		}
+	}
+}

@@ -1,0 +1,20 @@
+FRA_army_decisions = {
+	FRA_foster_irridentism = {
+		icon = generic_research
+		allowed = {
+			original_tag = FRA
+		}
+		available = {
+			has_completed_focus = FRA_Our_time_has_come
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FRA_foster_irridentism"
+		}
+		days_remove = 70
+		remove_effect = {
+			add_ideas = FRA_irredentism_idea
+		}
+	}
+}

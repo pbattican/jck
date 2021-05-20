@@ -1,0 +1,67 @@
+millet_mektepleri_dynamic_modifier = {
+	research_speed_factor = var_millet_mektepleri
+}
+
+vilayet_stability_dynamic_modifier = {
+	stability_factor = var_state_stability
+	war_support_factor = var_state_martial_law
+}
+
+centralisation_dynamic_modifier = {
+	army_org_factor = centralisation
+	army_morale_factor = centralisation
+	army_bonus_air_superiority_factor = centralisation
+	production_speed_arms_factory_factor = centralisation
+	political_power_factor = centralisation
+}
+
+parliament_dynamic_modifier = {
+	political_power_gain = parliament
+	stability_factor = parliament
+	conscription_factor = parliament
+}
+
+AMN_member_dynamic_modifier = {
+	remove_trigger = {
+		has_war_with = OTT
+	}
+
+	political_power_gain = var_AMN_members
+	industrial_capacity_factory = var_AMN_members
+}
+
+autonomous_region = {
+	recruitable_population_factor = -0.75
+	local_building_slots_factor = -0.75
+	state_resources_factor = -0.75
+	state_production_speed_buildings_factor = -0.20
+
+	resistance_damage_to_garrison = -0.95
+	resistance_garrison_penetration_chance = -0.95
+}
+
+vilayet = {
+	recruitable_population_factor = -0.50
+	local_building_slots_factor = -0.50
+	state_resources_factor = -0.50
+	state_production_speed_buildings_factor = -0.10
+
+	resistance_damage_to_garrison = -0.95
+	resistance_garrison_penetration_chance = -0.95
+}
+
+ottoman_province = {
+	resistance_damage_to_garrison = -0.95
+	resistance_garrison_penetration_chance = -0.95
+}
+
+high_revolt_risk = {
+	resistance_target = 0.3
+	resistance_growth = 0.25
+}
+
+very_high_revolt_risk = {
+	resistance_target = 0.8
+	resistance_growth = 0.5
+}
+

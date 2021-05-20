@@ -1,0 +1,28 @@
+state = {
+	id = 310
+	name = "STATE_310"
+	manpower = 37010
+	state_category = zero
+
+	resources = {
+		aluminium = 90
+	}
+
+	history = {
+		owner = CAF
+		buildings = {
+			infrastructure = 3
+			12885 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			12885 1
+		}
+		add_core_of = CAF
+	}
+
+	provinces = {
+		12885 13417
+	}
+}

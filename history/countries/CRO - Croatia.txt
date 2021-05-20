@@ -1,0 +1,297 @@
+﻿capital = 109
+oob = "CRO"
+set_research_slots = 3
+set_war_support = 0.1
+set_convoys = 30
+set_cosmetic_tag = CRO_illyria
+
+set_technology = {
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+
+	### Infantry ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	motorised_infantry = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+
+	### Air ###
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+}
+
+### Navy - MtG ###
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+        weltkrieg_light_ship_hull = 1        
+        contact_mine = 1        
+        light_ship_hull_1936 = 1        
+        weltkrieg_cruiser_hull = 1        
+        cruiser_hull_1936 = 1        
+        weltkrieg_submarine_hull = 1
+        submarine_hull_1936 = 1        
+        cruiser_submarine = 1        
+        carrier_conversion = 1        
+        ship_hull_revived_ac = 1        
+        weltkrieg_heavy_ship_hull = 1        
+        heavy_ship_hull_1936 = 1  
+
+		## Modules##
+        early_torpedo = 1
+        weltkrieg_naval_gunnery = 1        
+        naval_ammo_one = 1        
+        light_battery_one = 1    
+        improved_ship_torpedo_launcher = 1   
+        basic_cruiser_armor_scheme = 1        
+        weltkrieg_naval_gunnery = 1        
+        naval_ammo_one = 1        
+        basic_heavy_armor_scheme = 1        
+        capital_gunnery_one = 1     
+        weltkrieg_naval_gunnery = 1        
+        naval_ammo_one = 1        
+	}
+}
+
+### Navy - Non MtG ###
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+        weltkrieg_destroyer_nonmtg = 1        
+        interwar_destroyer_nonmtg = 1        
+        weltkrieg_cruiser_nonmtg = 1        
+        interwar_cruiser_nonmtg = 1        
+        weltkrieg_submarine_nonmtg = 1        
+        interwar_submarine_nonmtg = 1        
+        weltkrieg_armored_cruiser_nonmtg = 1        
+        interwar_armored_cruiser_nonmtg = 1        
+        weltkrieg_fast_battleship_nonmtg = 1        
+        interwar_fast_battleship_nonmtg = 1        
+        weltkrieg_dreadnought_nonmtg = 1        
+        super_heavy_dreadnought_nonmtg = 1        
+	}
+}
+
+add_ideas = {
+	CRO_Vladko_Macek_hog_sli
+	CRO_Ivo_Krbek_for_sli
+	CRO_Barisa_Smoljan_eco_sli
+	CRO_Franjo_Gazi_sec_sli
+
+	CRO_croatian_command
+}
+
+country_event = { id = illyria.1 days = 1 }
+country_event = { id = illyria.2 days = 6 }
+country_event = { id = illyria.3 days = 135 }
+country_event = { id = illyria.4 days = 220 }
+country_event = { id = illyria.5 days = 330 }
+
+set_politics = {
+	ruling_party = social_liberal
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    totalist = 1
+    radical_socialist = 4
+    syndicalist = 2
+    social_democrat = 8
+    social_liberal = 34
+    market_liberal = 23
+    social_conservative = 2
+    authoritarian_democrat = 7
+    paternal_autocrat = 16
+    national_populist = 3
+}
+
+create_country_leader = {
+	name = "Stjepan Radić"
+	picture = "Portrait_CRO_Stjepan_Radic.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+}
+create_country_leader = {
+	name = "Stjepan Radić"
+	picture = "Portrait_CRO_Stjepan_Radic.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+}
+create_country_leader = {
+	name = "Stjepan Radić"
+	picture = "Portrait_CRO_Stjepan_Radic.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+}
+create_country_leader = {
+	name = "Stjepan Radić"
+	picture = "Portrait_CRO_Stjepan_Radic.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+}
+create_country_leader = {
+	name = "Ivo Pillar"
+	picture = "Portrait_CRO_Ivo_Pillar.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+}
+create_country_leader = {
+	name = "Ivo Pillar"
+	picture = "Portrait_CRO_Ivo_Pillar.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+}
+create_country_leader = {
+	name = "Ivo Pillar"
+	picture = "Portrait_CRO_Ivo_Pillar.tga"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+}
+
+### Field Marshals ###
+create_field_marshal = {
+	name = "Slavko Kvaternik"
+	desc = "CRO_SLAVKO_KVATERNIK_ARMY_DESC"
+	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Slavko_Kvaternik.tga"
+	traits = {
+		harsh_leader
+		organizer
+		skilled_staffer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+### Corps Commanders ###
+
+create_corps_commander = {
+	name = "Mihajlo Lukić"
+	desc = "CRO_MIHAJLO_LUKIC_ARMY_DESC"
+	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Mihajlo_Lukic.tga"
+	traits = {
+		career_officer
+		commando
+		trait_mountaineer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Fedor Dragojlov"
+	desc = "CRO_FEDOR_DRAGOJLOV_ARMY_DESC"
+	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Fedor_Dragojlov.tga"
+	traits = {
+		trait_engineer
+		artillery_specialist
+		skilled_staffer
+		trait_mountaineer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Eduard Bunić de Bona"
+	desc = "CRO_EDUARD_BONA_ARMY_DESC"
+	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Eduard_Bona.tga"
+	traits = {
+		trait_reckless
+		cavalry_leader
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Matija Čanić"
+	desc = "CRO_MATIJA_CANIC_ARMY_DESC"
+	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Matija_Canic.tga"
+	traits = {
+		cavalry_officer
+		hill_fighter
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Vladimir Laxa"
+	desc = "CRO_VLADIMIR_LAXA_ARMY_DESC"
+	portrait_path = "gfx/leaders/CRO/Portrait_CRO_Vladimir_Laxa.tga"
+	traits = {
+		inflexible_strategist
+		war_hero
+		infantry_leader
+		trait_mountaineer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+### Admirals ###
+create_navy_leader = {
+	name = "Đuro Jakčin"
+	portrait_path = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_3.tga"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Edgar Angeli"
+	portrait_path = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_4.tga"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Nikola Steinfel"
+	portrait_path = "gfx/leaders/Generic/Portrait_Europe_Generic_navy_new_2.tga"
+	traits = {
+		seawolf
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}

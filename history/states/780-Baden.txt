@@ -1,0 +1,44 @@
+state = {
+	id = 780
+	name = "STATE_780"
+	manpower = 2457323
+	state_category = seven
+
+	resources = {
+		aluminium = 7
+	}
+
+	history = {
+		owner = GER
+		add_core_of = GER
+		victory_points = {
+			6568 4
+		}
+		victory_points = {
+			3530 5
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 3
+			3530 = {
+				bunker = 1
+			}
+			6542 = {
+				bunker = 1
+			}
+			6568 = {
+				bunker = 1
+			}
+			6712 = {
+				bunker = 1
+			}
+			11640 = {
+				bunker = 1
+			}
+		}
+	}
+
+	provinces = {
+		3530 3679 3692 6542 6568 6581 6712 6934 11640 13126
+	}
+}

@@ -1,0 +1,31 @@
+state = {
+	id = 980
+	name = "STATE_980"
+	manpower = 1723308
+	state_category = ten
+
+	resources = {
+		steel = 50
+	}
+
+	history = {
+		owner = FRA
+		add_core_of = FRA
+		add_claim_by = NFA
+		victory_points = {
+			11483 20 #Lille
+		}
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 4
+			arms_factory = 2
+			11483 = {
+				bunker = 1
+			}
+		}
+	}
+
+	provinces = {
+		11483 11606
+	}
+}

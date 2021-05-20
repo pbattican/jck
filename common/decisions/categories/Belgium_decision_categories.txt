@@ -1,0 +1,62 @@
+BEL_Economic_decisions = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_mefo_bills
+
+	allowed = {
+		tag = BEL
+	}
+}
+
+BEL_Worlds_Fair_decisions = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+		tag = BEL
+	}
+}
+
+BEL_Internationale_decisions = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+		always = no
+	}
+
+	visible = {
+		has_socialist_government = yes
+	}
+}
+
+BEL_Netherlands_decisions = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_united_netherlands
+
+	allowed = {
+		tag = BEL
+	}
+
+	visible = {
+		HOL = { same_government_type_as_ROOT = yes }
+	}
+}
+
+BEL_Entente_decisions = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+		always = no
+	}
+
+	visible = {
+		has_socialist_government = no
+		BEL = { has_country_flag = Belgium_Independent }
+	}
+}
+

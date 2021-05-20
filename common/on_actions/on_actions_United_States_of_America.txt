@@ -1,0 +1,588 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			PUE = {
+				country_event = {
+					id = pue.205
+					days = 1433
+				}
+			}
+
+			USA = {
+				every_owned_state = {
+					limit = { is_in_home_area = yes }
+					set_state_flag = USA_mainland_state
+				}
+			}
+
+			#AFP starting support
+			150 = {
+				add_dynamic_modifier = { modifier = AFP_state_support_even }
+			}
+			371 = {
+				add_dynamic_modifier = { modifier = AFP_state_support_even }
+			}
+			375 = {
+				add_dynamic_modifier = { modifier = AFP_state_support_low }
+			}
+			372 = {
+				add_dynamic_modifier = { modifier = AFP_state_support_low }
+			}
+			370 = {
+				add_dynamic_modifier = { modifier = AFP_state_support_low }
+			}
+			367 = {
+				add_dynamic_modifier = { modifier = AFP_state_support_low }
+			}
+			364 = {
+				add_dynamic_modifier = { modifier = AFP_state_support_low }
+			}
+			365 = {
+				add_dynamic_modifier = { modifier = AFP_state_support_low }
+			}
+			366 = {
+				add_dynamic_modifier = { modifier = AFP_state_support_low }
+			}
+			#SPA starting support
+			358 = {
+				add_dynamic_modifier = { modifier = SPA_state_support_even }
+			}
+			395 = {
+				add_dynamic_modifier = { modifier = SPA_state_support_even }
+			}
+			396 = {
+				add_dynamic_modifier = { modifier = SPA_state_support_low }
+			}
+			393 = {
+				add_dynamic_modifier = { modifier = SPA_state_support_low }
+			}
+			394 = {
+				add_dynamic_modifier = { modifier = SPA_state_support_low }
+			}
+			261 = {
+				add_dynamic_modifier = { modifier = SPA_state_support_low }
+			}
+			929 = {
+				add_dynamic_modifier = { modifier = SPA_state_support_low }
+			}
+			360 = {
+				add_dynamic_modifier = { modifier = SPA_state_support_low }
+			}
+			975 = {
+				add_dynamic_modifier = { modifier = SPA_state_support_low }
+			}
+		}
+	}
+
+	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { has_country_flag = ACW_has_deal_with_devil }
+				}
+				clr_global_flag = ACW_deal_with_devil
+				FROM = { clr_country_flag = ACW_has_deal_with_devil }
+				every_country = {
+					limit = { has_country_flag = ACW_deal_with_devil_@FROM }
+					clr_country_flag = ACW_has_deal_with_devil
+					clr_country_flag = ACW_deal_with_devil_@FROM
+					FROM = { clr_country_flag = ACW_deal_with_devil_@PREV }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						is_american_tag = yes
+						FROM = { is_american_tag = yes }
+					}
+				}
+				random_country = {
+					limit = {
+						OR = {
+							tag = CSA
+							tag = USA
+							tag = TEX
+						}
+					}
+					country_event = { id = amcivwar.24 hours = 21 }
+				}
+				PSA = { country_event = { id = amcivwar.24 hours = 22 } }
+				NEE = { country_event = { id = amcivwar.24 hours = 23 } }
+				var:361.owner = { country_event = { id = amcivwar.24 hours = 24 } }
+			}
+			FROM = {
+				if = {
+					limit = { tag = TEX }
+					if = {
+						limit = { has_country_flag = TEX_war_committee_factories }
+						clr_country_flag = TEX_war_committee_factories
+						add_offsite_building = { type = arms_factory level = -8 }
+					}
+
+					### Restore the TEX VPs to their original values
+					USA_reset_southern_VP_values = yes
+					if = {
+						limit = { has_country_flag = TEX_baton_rouge_kept }
+						clr_country_flag = TEX_baton_rouge_kept
+						set_victory_points = { province = 1453 value = 12 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PSA
+					FROM = { tag = USA }
+					has_completed_focus = PSA_last_bastion
+				}
+				country_event = { id = pacificstates.205 days = 5 }
+			}
+		}
+	}
+
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+			### Rebuilding the US Navy
+			if = {
+				limit = {
+					is_american_tag = yes
+					is_in_faction = no
+					FROM = { is_american_tag = yes }
+				}
+				transfer_navy = { target = FROM }
+			}
+
+			### JAP-INT peace over HAW
+			if = {
+				limit = {
+					tag = HAW
+					has_war_with = JAP
+					is_in_faction_with = INT
+				}
+				JAP = { activate_mission = JAP_hold_hawaii }
+			}
+
+			### Removing BRA volunteers
+			if = {
+				limit = {
+					check_variable = { BRA.BRA_ACW_volunteers = ROOT }
+				}
+				BRA = { country_event = { id = bra.110 days = 15 random_days = 20 } }
+			}
+
+			### Restore Denver to its original VP value
+			if = {
+				limit = {
+					tag = USA
+					has_country_flag = ACW_denver_made_capital
+				}
+				clr_country_flag = ACW_denver_made_capital
+				set_variable = { historical_capital_state = 361.id }
+				set_victory_points = {
+					province = 1827
+					value = 20
+				}
+			}
+		}
+	}
+
+	#FROM is war target
+	on_declare_war = {
+		effect = {
+			# Clear ceasefire global flag
+			if = {
+				limit = {
+					has_global_flag = PSA_rockies_ceasefire
+					OR = {
+						tag = CSA
+						tag = USA
+						tag = PSA
+						tag = TEX
+					}
+					FROM = {
+						OR = {
+							tag = CSA
+							tag = USA
+							tag = PSA
+							tag = TEX
+						}
+					}
+				}
+				clr_global_flag = PSA_rockies_ceasefire
+			}
+
+			# Clear Deal with the Devil flags
+			if = {
+				limit = {
+					FROM = {
+						has_country_flag = ACW_has_deal_with_devil
+						has_country_flag = ACW_deal_with_devil_@ROOT
+					}
+				}
+				clr_global_flag = ACW_deal_with_devil
+				FROM = {
+					clr_country_flag = ACW_has_deal_with_devil
+					clr_country_flag = ACW_deal_with_devil_@ROOT
+				}
+				ROOT = {
+					clr_country_flag = ACW_has_deal_with_devil
+					clr_country_flag = ACW_deal_with_devil_@FROM
+				}
+				if = {
+					limit = {
+						CAN = {
+							has_country_flag = CAN_deal_with_devil_@ROOT
+							NOT = {
+								has_war_with = ROOT
+								has_war_with = FROM
+							}
+						}
+					}
+					save_event_target_as = can_ally
+					FROM = { save_event_target_as = can_enemy }
+					CAN = {
+						country_event = { id = amcivwar.526 hours = 4 }
+					}
+				}
+				else_if = {
+					limit = {
+						CAN = {
+							has_country_flag = CAN_deal_with_devil_@FROM
+							NOT = {
+								has_war_with = ROOT
+								has_war_with = FROM
+							}
+						}
+					}
+					save_event_target_as = can_enemy
+					FROM = { save_event_target_as = can_ally }
+					CAN = {
+						country_event = { id = amcivwar.526 hours = 4 }
+					}
+				}
+			}
+
+			# Attacking an American country post-ACW while it's in recovery
+			if = {
+				limit = {
+					ROOT = {
+						NOT = {
+							tag = USA
+							tag = PSA
+							tag = TEX
+							tag = CSA
+						}
+					}
+					FROM = {
+						OR = {
+							tag = USA
+							tag = PSA
+							tag = TEX
+							tag = CSA
+						}
+						OR = {
+							has_idea = USA_civil_war_aftermath_idea
+							has_idea = USA_civil_war_aftermath_idea2
+							has_idea = USA_civil_war_aftermath_idea3
+							has_idea = USA_civil_war_aftermath_idea4
+							has_idea = USA_civil_war_aftermath_idea5
+						}
+						NOT = { has_country_flag = ACW_attacked_during_recovery }
+					}
+				}
+				FROM = {
+					set_country_flag = ACW_attacked_during_recovery
+					country_event = amcivwar.615
+				}
+			}
+		}
+	}
+
+	on_new_term_election = {
+		effect = {
+			### Pacific States of America ###
+			if = {
+				limit = { tag = PSA }
+				country_event = pacificstates.6
+				country_event = pacificstates.11
+				country_event = pacificstates.16
+				country_event = pacificstates.21
+			}
+			### Combined Syndicates of America ###
+			if = {
+				limit = { tag = CSA }
+				country_event = csa.27
+				country_event = csa.30
+				country_event = csa.33
+				country_event = csa.36
+				country_event = csa.51
+			}
+			### Hawaii ###
+			if = {
+				limit = { tag = HAW }
+				country_event = hawaii.27
+				country_event = hawaii.34
+				country_event = hawaii.64
+			}
+			### New England ###
+			if = {
+				limit = { tag = NEE }
+				country_event = newengland.24
+				country_event = newengland.28
+				country_event = newengland.32
+				country_event = newengland.37
+			}
+			### American Union State ###
+			if = {
+				limit = { tag = TEX }
+				country_event = unionstate.10
+			}
+			### United States of America ###
+			if = {
+				limit = { tag = USA }
+				country_event = ustates.34
+				country_event = ustates.203
+				country_event = ustates.207
+				country_event = ustates.213
+				country_event = ustates.218
+			}
+		}
+	}
+
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			# Fate of Captured Politicians (CSA event)
+			if = {
+				limit = { tag = CSA }
+				FROM = { save_event_target_as = capture_tag }
+				FROM.FROM = { save_event_target_as = capture_state }
+				country_event = { id = amcivwar.39 days = 15 random_days = 30 }
+			}
+
+			# Update ACW restoring order arrays
+			if = {
+				limit = {
+					has_global_flag = USA_civil_war_begun_flag
+					FROM.FROM = { is_mainland_america = yes }
+				}
+				if = {
+					limit = {
+						is_american_tag = yes
+						NOT = { is_in_array = { ROOT.USA_restoring_order_array = FROM.FROM } }
+					}
+					add_to_array = { ROOT.USA_restoring_order_array = FROM.FROM }
+				}
+				if = {
+					limit = {
+						FROM = { is_american_tag = yes }
+						is_in_array = { FROM.USA_restoring_order_array = FROM.FROM }
+					}
+					remove_from_array = { FROM.USA_restoring_order_array = FROM.FROM }
+				}
+			}
+
+			# Wavering momentum
+			if = {
+				limit = {
+					FROM = {
+						is_american_tag = yes
+						has_war_with = ROOT
+					}
+					NOT = { has_global_flag = USA_civil_war_over_flag }
+				}
+				if = {
+					limit = {
+						FROM.FROM = {
+							is_owned_by = FROM
+							is_core_of = FROM
+							NOT = { has_state_flag = ACW_state_loss_cooldown }
+						}
+						if = {
+							limit = { FROM = { tag = CSA } }
+							has_completed_focus = CSA_the_long_haul
+							FROM.FROM = {
+								OR = {
+									state = 261 #Ohio
+									state = 358 #New York City
+									state = 359 #New Jersey
+									state = 360 #Philadelphia
+									state = 361 #Maryland
+									state = 393 #Michigan
+									state = 394 #Wisconsin
+									state = 395 #Illinois
+									state = 396 #Indiana
+									state = 930 #Buffalo
+									state = 975 #Pittsburgh
+								}
+							}
+						}
+						else_if = {
+							limit = { FROM = { tag = TEX } }
+							FROM.FROM = {
+								OR = {
+									state = 361 #Maryland
+									state = 362 #Virginia
+									state = 363 #North Carolina
+									state = 364 #South Carolina
+									state = 365 #Georgia
+									state = 366 #Florida
+									state = 367 #Alabama
+									state = 368 #Tennessee
+									state = 370 #Mississippi
+									state = 371 #New Orleans
+									state = 372 #Arkansas
+									state = 374 #Oklahoma
+									state = 375 #Northern Texas
+									state = 833 #Southern Texas
+								}
+							}
+						}
+						else_if = {
+							limit = { FROM = { tag = USA } }
+							FROM.FROM = {
+								OR = {
+									state = 358 #New York City
+									state = 359 #New Jersey
+									state = 361 #Maryland
+									state = 362 #Virginia
+									state = 363 #North Carolina
+									state = 365 #Georgia
+									state = 368 #Tennessee
+									state = 382 #Colorado
+									state = 383 #Kansas
+									state = 384 #Nebraska
+									state = 796 #Albany
+									state = 930 #Buffalo
+									state = 931 #Connecticut
+									state = 932 #Massachusetts
+								}
+							}
+						}
+						else_if = {
+							limit = { FROM = { tag = PSA } }
+							FROM.FROM = {
+								OR = {
+									state = 378 #Northern California
+									state = 385 #Oregon
+									state = 386 #Washington
+									state = 797 #San Francisco
+									state = 798 #Los Angeles
+									state = 829 #Southern California
+								}
+							}
+						}
+					}
+					FROM.FROM = {
+						set_state_flag = ACW_lost_state_@FROM
+						set_state_flag = { flag = ACW_state_loss_cooldown days = 120 value = 1 }
+						save_event_target_as = capture_state
+					}
+					FROM = { country_event = amcivwar.800 }
+				}
+				else_if = {
+					limit = {
+						FROM.FROM = { has_state_flag = ACW_lost_state_@ROOT }
+					}
+					FROM.FROM = {
+						clr_state_flag = ACW_lost_state_@ROOT
+						save_event_target_as = capture_state
+					}
+					country_event = amcivwar.801
+				}
+			}
+		}
+	}
+
+	on_peace = {
+		effect = {
+			#Remove emergency USA units
+			if = {
+				limit = {
+					OR = {
+						tag = USA
+						tag = PSA
+						tag = TEX
+						tag = CSA
+					}
+					has_country_flag = ACW_attacked_during_recovery
+				}
+				country_event = { id = amcivwar.616 days = 2 random_days = 3 }
+			}
+			if = {
+				limit = {
+					FROM = { is_american_tag = yes }
+				}
+				var:369.owner = { country_event = { id = amcivwar.24 days = 1 } }
+			}
+		}
+	}
+
+	#ROOT is winner #FROM is loser
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = { is_american_tag = yes }
+				random_country = {
+					limit = {
+						OR = {
+							tag = CSA
+							tag = USA
+							tag = TEX
+						}
+					}
+					country_event = { id = amcivwar.24 hours = 21 }
+				}
+				PSA = { country_event = { id = amcivwar.24 hours = 22 } }
+				NEE = { country_event = { id = amcivwar.24 hours = 23 } }
+				var:361.owner = { country_event = { id = amcivwar.24 hours = 24 } }
+
+				every_owned_state = {
+					limit = { is_mainland_america = yes }
+					if = {
+						limit = { is_in_array = { ROOT.USA_restoring_order_array = THIS } }
+						if = {
+							limit = { is_core_of = ROOT }
+							remove_from_array = { ROOT.USA_restoring_order_array = THIS }
+						}
+					}
+					else = {
+						add_to_array = { ROOT.USA_restoring_order_array = THIS }
+					}
+				}
+			}
+			else_if = {
+				limit = { FROM = { is_american_tag = yes } }
+				random_country = {
+					limit = {
+						OR = {
+							tag = CSA
+							tag = USA
+							tag = TEX
+						}
+					}
+					country_event = { id = amcivwar.24 hours = 21 }
+				}
+				PSA = { country_event = { id = amcivwar.24 hours = 22 } }
+				NEE = { country_event = { id = amcivwar.24 hours = 23 } }
+				var:361.owner = { country_event = { id = amcivwar.24 hours = 24 } }
+			}
+		}
+	}
+
+	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
+	on_annex = { #NEE getting annexed into American tag (That is not the CSA)
+		effect = {
+			if = {
+				limit = {
+					is_american_tag = yes
+					NOT = { tag = CSA }
+					FROM = { tag = NEE }
+				}
+				country_event = { id = amcivwar.768 days = 25 } #Trial event for NEE generals
+			}
+		}
+	}
+}
+

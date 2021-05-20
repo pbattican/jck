@@ -1,0 +1,25 @@
+state = {
+	id = 74
+	name = "STATE_74"
+	manpower = 342872
+	state_category = four
+
+	resources = {
+		aluminium = 1
+	}
+
+	history = {
+		owner = CZE
+		add_core_of = CZE
+		victory_points = {
+			3583 2 #Opava
+		}
+		buildings = {
+			infrastructure = 7
+		}
+	}
+
+	provinces = {
+		3583 6485
+	}
+}

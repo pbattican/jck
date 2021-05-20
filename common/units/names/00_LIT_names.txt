@@ -1,0 +1,80 @@
+﻿LIT = {
+	submarine = {
+		prefix = "LKL"
+		generic = { "Povandeninis laivas" }
+		unique = {
+			"Ruonis"
+			"Spidola"
+		}
+	}
+	destroyer = {
+		prefix = "LKL"
+		generic = { "Eskadrinis minininkas" }
+		unique = {
+			"Vytautas"
+			"Gediminas"
+			"Chodkevičius"
+			"Mindaugas"
+			"Kazimieras"
+			"Jogaila"
+		}
+	}
+	light_cruiser = {
+		prefix = "LKL"
+		generic = { "Lengvasis Kreiseris" }
+		unique = {
+			"Voruta"
+			"Kernave"
+			"Trakai"
+			"Vilnius"
+		}
+	}
+	heavy_cruiser = {
+		prefix = "LKL"
+		generic = { "Kreiseris" }
+		unique = {
+			"Vilkas"
+			"Lokys"
+			"Stumbras"
+		}
+	}
+	battle_cruiser = {
+		prefix = "LKL"
+		generic = { "Šarvuotas kreiseris" }
+		unique = {
+			"Vilkas"
+			"Lokys"
+			"Stumbras"
+		}
+	}
+	battleship = {
+		prefix = "LKL"
+		generic = { "Linijinis laivas" }
+		unique = {
+			"Zalgiris"
+			"Taryba"
+			"Basanavicius"
+		}
+	}
+	SH_battleship = {
+		prefix = "LKL"
+		generic = { "Drednoutas" }
+		unique = {
+			"Vytis"
+		}
+	}
+	carrier = {
+		prefix = "LKL"
+		generic = { "Lėktuvnešis" }
+		unique = {
+			"Kastytis"
+		}
+	}
+	heavy_carrier = {
+		prefix = "LKL"
+		generic = { "Sunkusis lėktuvnešis" }
+		unique = {
+		}
+	}
+}
+

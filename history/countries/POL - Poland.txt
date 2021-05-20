@@ -1,0 +1,524 @@
+﻿capital = 10
+oob = "POL"
+set_research_slots = 3
+set_stability = 0.35
+set_war_support = 0.05
+
+### Technologies ###
+set_technology = {
+	### Infantry ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	motorised_infantry = 1
+	tech_mountaineers = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+
+	### Air ###
+	early_fighter = 1
+	fighter1 = 1
+	CAS1 = 1
+	early_bomber = 1
+	tactical_bomber1 = 1
+}
+
+### Government ###
+set_politics = {
+	ruling_party = authoritarian_democrat
+	last_election = "1933.1.18"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	totalist = 4
+	syndicalist = 15
+	radical_socialist = 8
+	social_democrat = 12
+	social_liberal = 14
+	market_liberal = 10
+	social_conservative = 10
+	authoritarian_democrat = 4
+	paternal_autocrat = 13
+	national_populist = 10
+}
+
+### Ideas ###
+add_ideas = {
+	#Laws
+	volunteer_only
+
+	#Ideas
+	POL_eternal_regency
+	POL_german_industry
+
+	#Ministers
+	POL_Zdzislaw_Lubomirski_hog_ade
+	POL_Jan_hr_Szembek_for_ade
+	POL_Andrzej_Wierzbicki_eco_ade
+	POL_Stanislaw_Bukowiecki_sec_ade
+}
+
+### Events
+country_event = { id = poland.165 hours = 2 } #State of Poland
+country_event = { id = poland.124 days = 10 random_days = 2 } #The Great Debate Begins
+country_event = { id = poland.9 days = 200 random_days = 2 } #Another attempt at a King of Poland
+country_event = { id = poland.215 days = 309 } #20th Anniversary of Poland
+country_event = { id = poland.222 days = 335 random_days = 25 } #Expansion of Polskie Radio S.A. - Raszyn
+country_event = { id = poland.193 days = 366 random = 2880 } #Death of Josef Pilsudski
+country_event = { id = poland.220 days = 425 random_days = 25 } #Renovating Modlin Fortress
+country_event = { id = poland.52 days = 475 } #Comrade Dzierzynski Passes Away
+country_event = { id = poland.42 days = 645 random_days = 2 } #Cabinet Crisis
+country_event = { id = poland.74 days = 933 } #Dzierzynski Dies
+country_event = { id = poland.73 days = 949 } #Rozwadowski Dies
+country_event = { id = poland.75 days = 1093 } #Kakowski Dies
+country_event = { id = poland.63 days = 1097 } #Dwomski Passes Away
+country_event = { id = poland.91 days = 1097 } #Dwomski Dies
+country_event = { id = poland.205 days = 1461 random_days = 150 } #Monarchist Coup
+
+### PLC-only events
+country_event = { id = plcommon.40 days = 182 } #Anniversary of the Lublin Union
+
+### Disable LIT ministers
+set_country_flag = Aleksandras_Guzevicius_dead
+set_country_flag = Jonas_Cernius_dead
+set_country_flag = Stasys_Rastikis_dead
+set_country_flag = Marian_Januszajtis_Zegota_dead
+set_country_flag = Kazys_Musteikis_dead
+set_country_flag = Jurgis_Terleckas_dead
+
+create_country_leader = {
+	name = "Feliks Kon"
+	picture = "Portrait_POL_Feliks_Kon.tga"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+}
+
+create_country_leader = {
+	name = "Feliks Dzierzynski"
+	desc = "POLITICS_FELIKIS_DZIERZYNSKI_DESC"
+	picture = "Portrait_POL_Feliks_Dzierzynski.tga"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+}
+
+create_country_leader = {
+	name = "Róża Luksemburg"
+	desc = "POLITICS_ROZA_LUKSEMBURG_DESC"
+	picture = "Portriat_POL_Roza_Luksemburg.tga"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+	female = yes
+}
+
+create_country_leader = {
+	name = "Jakub Hanecki"
+	desc = "POLITICS_JAKUB_HANECKI_DESC"
+	picture = "Portrait_POL_Jakub_Hanceki.tga"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+}
+
+create_country_leader = {
+	name = "Norbert Barlicki"
+	picture = "Portrait_POL_Norbert_Barlicki.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+}
+
+create_country_leader = {
+	name = "Stanislaw Wojciechowski"
+	desc = "POLITICS_STANISLAW_WOJCIECHOWSKI_DESC"
+	picture = "Portrait_POL_Stanislaw_Wojciechowski.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+}
+
+create_country_leader = {
+	name = "Mieczyslaw Michalowicz"
+	desc = "POLITICS_MIECZYSLAW_MICHALOWICZ_DESC"
+	picture = "Portrait_POL_Mieczyslaw_Michalowicz.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+}
+
+create_country_leader = {
+	name = "Adam Chadzynski"
+	picture = "Portrait_POL_Adam_Chadzynski.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+}
+
+create_country_leader = {
+	name = "Regency Council"
+	desc = "POLITICS_POL_REGENCY_DESC"
+	picture = "Portrait_POL_Regency_Council.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+}
+
+create_country_leader = {
+	name = "Józef Haller von Hallenburg"
+	desc = "POLITICS_JOZEF_HALLER_DESC"
+	picture = "Portrait_POL_Jozef_Haller_von_Hallenburg.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+}
+
+create_country_leader = {
+	name = "Adam Doboszyñski"
+	desc = "POLITICS_ADAM_DOBOSZYNSKI_DESC"
+	picture = "Portrait_POL_Adam_Doboszynski.tga"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+}
+
+create_country_leader = {
+	name = "Roman Dmowski"
+	desc = "POLITICS_ROMAN_DMOWSKI_DESC"
+	picture = "Portrait_POL_Roman_Dmowski.tga"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+}
+
+### Field Marshals ###
+create_field_marshal = {
+	name = "Józef Haller von Hallenburg"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Jozef_Haller_von_Hallenburg.tga"
+	traits = {
+		war_hero
+		old_guard
+		defensive_doctrine
+		organizer
+		winter_specialist
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "Józef Piłsudski"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Jozef_Pilsudski.tga"
+	id = 19859
+	traits = {
+		war_hero
+		media_personality
+		offensive_doctrine
+		inspirational_leader
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+### Corps Commanders ###
+create_corps_commander = {
+	name = "Konstanty Rokossowski"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Konstanty_Rokossowski.tga"
+	desc = "POLITICS_KONSTANTIN_ROKOSSOVSKY_DESC"
+	id = 490
+	traits = {
+		brilliant_strategist
+		cavalry_leader
+		cavalry_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Edward Rydz-Śmigły"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Edward_Rydz_Smigly.tga"
+	traits = {
+		trait_cautious
+		skilled_staffer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Walery Sławek"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Walery_Slawek.tga"
+	traits = {
+		old_guard
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Adam Koc"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Adam_Koc.tga"
+	traits = {
+		politically_connected
+		infantry_leader
+		organizer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Leon Berbecki"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Leon_Berbecki.tga"
+	traits = {
+		war_hero
+		infantry_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Tadeusz Jordan-Rozwadowski"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Tadeusz_Jordan_Rozwadowski.tga"
+	id = 19860
+	traits = {
+		cavalry_officer
+		old_guard
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Zbigniew Antonowicz"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Zbigniew_Antonowicz.tga"
+	traits = {
+		urban_assault_specialist
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Józef Dowbor-Muśnicki"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Jozef_Dowbor_Musnicki.dds"
+	traits = {
+		infantry_officer
+		brilliant_strategist
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Stanislaw Sosabowski"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Stanislaw_Sosabowski.tga"
+	traits = {
+		commando
+		camouflage_expert
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Mikołaj Bołtuć"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Mikolaj_Boltuc.dds"
+	traits = {
+		infantry_officer
+		inflexible_strategist
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Witold Pilecki"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Witold_Pilecki.tga"
+	traits = {
+		trait_reckless
+		trickster
+		guerilla_fighter
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Władysław Anders"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Wladyslaw_Anders_KR.tga"
+	traits = {
+		panzer_leader
+		cavalry_officer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Stanislaw Magnuszewski"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Stanislaw_Magnuszewski.tga"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Artur Gorski"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Artur_Gorski.tga"
+	traits = {
+		artillery_specialist
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Henryk Dobrzanski"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Henryk_Dobrzanski.tga"
+	traits = {
+		inflexible_strategist
+		ranger
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Kazimierz Sosnkowski"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Kazimierz_Sosnkowski.tga"
+	traits = {
+		old_guard
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Juliusz Rómmel"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Juliusz_Rommel.tga"
+	traits = {
+		panzer_leader
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Wacław Stachiewicz"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Waclaw_Stachiewicz.tga"
+	traits = { }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Antoni Szylling"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Antoni_Szylling.tga"
+	traits = {
+		old_guard
+		politically_connected
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Bolesaw Wieniawa Długoszewski"
+	portrait_path = "gfx/leaders/POL/Portrait_POL_Bolesaw_Wieniawa_Dlugoszewski.tga"
+	traits = {
+		cavalry_officer
+		old_guard
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+### Event Targets ###
+random_unit_leader = {
+	limit = { has_id = 490 }
+	save_global_event_target_as = POL_Konstanty_Rokossowski
+	set_nationality = FRA
+}
+
+### Operatives ###
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_operative_leader = {
+		name = "Krystyna Skarbek"
+		GFX = GFX_portrait_kr_krystyna_skarbek
+		traits = {
+			operative_escape_artist
+			operative_infiltrator
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { POL }
+	}
+}

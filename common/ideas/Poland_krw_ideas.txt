@@ -1,0 +1,39 @@
+### Polish Ideas
+ideas = {
+	##########
+	#### Air and Naval Manufacturer ####
+	country = {
+		PLC_Streamlined_production = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea PLC_Streamlined_production"
+			}
+			allowed = {
+				original_tag = POL
+			}
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			picture = air_war_plans_division_focus
+		}
+	}
+	aircraft_manufacturer = {
+		designer = yes
+		FW_Warshau_GmBH = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FW_Warshau_GmBH"
+			}
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				fighter_producer_offense_2
+			}
+			research_bonus = {
+				air_equipment = 0.1
+			}
+		}
+	}
+}

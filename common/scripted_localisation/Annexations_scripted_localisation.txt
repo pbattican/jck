@@ -1,0 +1,187 @@
+defined_text = {
+	name = annexation_AST_CONQ_title
+	text = {
+		trigger = { has_country_flag = AST_restoring_australasia }
+		localization_key = annexation_AST_restoring_australasia
+	}
+	text = {
+		localization_key = annexation_AST_other
+	}
+}
+
+defined_text = {
+	name = annexation_AST_CONQ_description
+	text = {
+		trigger = { has_country_flag = AST_restoring_australasia }
+		localization_key = annexation_AST_restoring_australasia_desc
+	}
+	text = {
+		localization_key = annexation_AST_other_desc
+	}
+}
+
+defined_text = {
+	name = annexation_BEL_CONQ_title
+	text = {
+		trigger = {
+			34 = { is_valid_annexation_state = no } #Hainaut
+			948 = { is_valid_annexation_state = no } #Liège
+		}
+		localization_key = annexation_BEL_CONQ_flanders
+	}
+	text = {
+		localization_key = annexation_BEL_CONQ_full
+	}
+}
+
+defined_text = {
+	name = annexation_BEL_CONQ_description
+	text = {
+		trigger = {
+			34 = { is_valid_annexation_state = no } #Hainaut
+			948 = { is_valid_annexation_state = no } #Liège
+		}
+		localization_key = annexation_BEL_CONQ_flanders_desc
+	}
+	text = {
+		localization_key = annexation_BEL_CONQ_full_desc
+	}
+}
+
+defined_text = {
+	name = annexation_CUB_CONQ_description
+	text = {
+		trigger = {
+			is_american_tag = yes
+			NOT = { tag = CSA }
+		}
+		localization_key = annexation_CUB_CONQ_desc_USA
+	}
+	text = {
+		localization_key = annexation_CUB_CONQ_desc_other
+	}
+}
+
+defined_text = {
+	name = annexation_ENG_CONQ_title
+	text = {
+		trigger = {
+			NOT = { owns_state = 121 } #Lothian
+		}
+		localization_key = annexation_ENG_CONQ_england
+	}
+	text = {
+		localization_key = annexation_ENG_CONQ_britain
+	}
+}
+
+defined_text = {
+	name = annexation_ENG_CONQ_description
+	text = {
+		trigger = {
+			NOT = { owns_state = 121 } #Lothian
+		}
+		localization_key = annexation_ENG_CONQ_desc_england
+	}
+	text = {
+		trigger = {
+			tag = GER
+		}
+		localization_key = annexation_ENG_CONQ_desc_britain_GER
+	}
+	text = {
+		localization_key = annexation_ENG_CONQ_desc_britain
+	}
+}
+
+defined_text = {
+	name = annexation_GER_CONQ_description
+	text = {
+		trigger = {
+			OR = {
+				tag = RUS
+				tag = SOV
+			}
+		}
+		localization_key = annexation_GER_CONQ_desc_RUS
+	}
+	text = {
+		localization_key = annexation_GER_CONQ_desc_other
+	}
+}
+
+defined_text = {
+	name = annexation_IRE_CONQ_description
+	text = {
+		trigger = {
+			is_british_tag = yes
+			has_socialist_government = yes
+		}
+		localization_key = annexation_IRE_CONQ_desc_ENG
+	}
+	text = {
+		trigger = {
+			is_british_tag = yes
+			has_socialist_government = no
+		}
+		localization_key = annexation_IRE_CONQ_desc_GBR
+	}
+	text = {
+		localization_key = annexation_IRE_CONQ_desc_other
+	}
+}
+
+defined_text = {
+	name = annexation_LAT_CONQ_title
+	text = {
+		trigger = {
+			11 = { is_valid_annexation_state = yes } #Kaunas
+			13 = { is_valid_annexation_state = yes } #Estonia
+		}
+		localization_key = annexation_LAT_CONQ_baltic
+	}
+	text = {
+		localization_key = annexation_LAT_CONQ_latvia
+	}
+}
+
+defined_text = {
+	name = annexation_LAT_CONQ_description
+	text = {
+		trigger = {
+			11 = { is_valid_annexation_state = yes } #Kaunas
+			13 = { is_valid_annexation_state = yes } #Estonia
+		}
+		localization_key = annexation_LAT_CONQ_baltic_desc
+	}
+	text = {
+		localization_key = annexation_LAT_CONQ_latvia_desc
+	}
+}
+
+defined_text = {
+	name = annexation_LBA_CONQ_title
+	text = {
+		trigger = {
+			448 = { is_valid_annexation_state = yes } #Tripoli
+		}
+		localization_key = annexation_LBA_CONQ_libya
+	}
+	text = {
+		localization_key = annexation_LBA_CONQ_cyrenaica
+	}
+}
+
+defined_text = {
+	name = annexation_LBA_CONQ_description
+	text = {
+		trigger = {
+			448 = { is_valid_annexation_state = yes } #Tripoli
+		}
+		localization_key = annexation_LBA_CONQ_libya_desc
+	}
+	text = {
+		localization_key = annexation_LBA_CONQ_cyrenaica_desc
+	}
+}
+

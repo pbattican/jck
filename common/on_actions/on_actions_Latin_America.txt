@@ -1,0 +1,655 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			512 = {
+				create_unit = {
+					division = "division_template = \"Third Internationale Expeditionary Force\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+					owner = FOP
+					prioritize_location = 10953
+				}
+			}
+
+			add_to_array = { global.CEN_tags_array = GUA }
+			add_to_array = { global.CEN_tags_array = ELS }
+			add_to_array = { global.CEN_tags_array = HON }
+			add_to_array = { global.CEN_tags_array = NIC }
+			add_to_array = { global.CEN_tags_array = COS }
+		}
+	}
+
+	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
+	on_annex = {
+		effect = {
+			# Huey Long heading to Paraguay (event)
+			if = {
+				limit = {
+					FROM = { tag = TEX }
+				}
+				PAR = {
+					country_event = { id = par.14 days = 10 random = 480 }
+				}
+			}
+			if = {
+				limit = {
+					FROM = { tag = CSA }
+				}
+				CHL = {
+					country_event = { id = chl.15 days = 4 random = 96 } #Volunteers return to Chile
+					country_event = { id = chl.42 days = 5 random = 120 } #Leading the Revolution in America!
+				}
+			}
+			if = {
+				limit = {
+					tag = CSA
+					FROM = {
+						OR = {
+							tag = USA
+							tag = TEX
+							tag = PSA
+							tag = CAN
+						}
+					}
+				}
+				CHL = {
+					country_event = { id = chl.15 days = 4 random = 96 } #Volunteers return to Chile
+				}
+			}
+			if = {
+				limit = {
+					FROM = { tag = FOP }
+					country_exists = INT
+					NOT = { country_exists = SOV }
+				}
+				INT = {
+					country_event = { id = fopcoup.43 days = 10 }
+				}
+			}
+
+			# clear CEN variables
+			if = {
+				limit = { FROM = { tag = var:global.CEN_socialist_leader } }
+				clear_variable = global.CEN_socialist_leader
+			}
+			if = {
+				limit = { FROM = { tag = var:global.CEN_liberal_leader } }
+				clear_variable = global.CEN_liberal_leader
+			}
+			if = {
+				limit = { FROM = { tag = var:global.CEN_military_leader } }
+				clear_variable = global.CEN_military_leader
+			}
+
+			if = {
+				limit = { FROM = { tag = MEX } }
+				FROM = {
+					clr_country_flag = MEX_claims_central_america
+					clr_country_flag = MEX_claimed_lost_territories
+				}
+			}
+		}
+	}
+
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+			# GER-MEX peace deal
+			if = {
+				limit = {
+					tag = COS
+					OR = {
+						is_guaranteed_by = ENT
+						is_guaranteed_by = GER
+						ENT = { is_ally_with = PREV }
+						GER = { is_ally_with = PREV }
+					}
+				}
+				random_other_country = {
+					limit = {
+						OR = {
+							AND = {
+								COS = {
+									is_subject = no
+									is_in_faction = no
+								}
+								has_guaranteed = COS
+								OR = {
+									tag = ENT
+									tag = GER
+								}
+							}
+							COS = { is_ally_with = PREV }
+						}
+					}
+					country_event = { id = mexico.213 days = 1 }
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = HOL
+						OR = {
+							owns_state = 1077
+							owns_state = 695
+							AND = {
+								owns_state = 1038
+								owns_state = 309
+							}
+						}
+					}
+					308 = {
+						is_owned_and_controlled_by = CAF
+					}
+					NOT = {
+						CAF = { is_ally_with = FROM }
+					}
+				}
+				CAF = {
+					country_event = wiffor.9
+				}
+			}
+			if = {
+				limit = {
+					tag = CHL
+					FROM = { tag = ARG }
+				}
+				FROM = { country_event = southern.9 }
+			}
+		}
+	}
+
+	#ROOT is winner #FROM gets annexed
+	on_civil_war_end = {
+		effect = {
+			if = {
+				limit = { original_tag = PRU }
+				BRA = { country_event = { id = bra.143 days = 2 random_days = 4 } }
+			}
+		}
+	}
+
+	#FROM is war target
+	on_declare_war = {
+		effect = {
+			# Chilean-Argentinian War
+			if = {
+				limit = {
+					tag = ARG
+					FROM = { tag = FOP }
+				}
+				hidden_effect = {
+					CHL = { add_ideas = ARG_CHILE_STOP_BEING_A_TWAT }
+					random_other_country = {
+						news_event = { id = worldnews.16 days = 2 }
+					}
+					PAR = {
+						country_event = { id = southern.4 days = 2 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							tag = FOP
+							FROM = { tag = ARG }
+						}
+						AND = {
+							tag = ARG
+							FROM = { tag = FOP }
+						}
+					}
+				}
+				FOP = {
+					#country_event = { #Author event
+					#	id = fop.104
+					#	days = 10
+					#}
+					country_event = { id = fop.105 days = 10 random = 120 }
+					country_event = { id = fop.106 days = 15 random = 120 }
+					country_event = { id = fop.109 days = 25 random = 120 }
+					country_event = { id = fop.110 days = 35 random = 120 }
+				}
+			}
+
+			# Cancelling debt payments between Bolivia and Paraguay
+			if = {
+				limit = {
+					OR = {
+						ROOT = {
+							tag = PAR
+							NOT = {
+								has_war_with = BOL
+							}
+						}
+						FROM = {
+							tag = PAR
+							NOT = {
+								has_war_with = BOL
+							}
+						}
+					}
+				}
+				BOL = {
+					country_event = { id = bol.19 days = 2 random = 24 }
+				}
+			}
+		}
+	}
+
+	on_government_change = {
+		effect = {
+			if = {
+				limit = { tag = BRA }
+				if = {
+					limit = { has_elected_government = no }
+					set_country_flag = BRA_is_dictatorship
+				}
+				else = {
+					country_event = { id = bra.75 days = 2 }
+				}
+				country_event = { id = bra.352 days = 15 random = 45 } #Thirst for Rubber
+				country_event = { id = bra.356 days = 180 random = 540 } #Surge of Republican Populiarity
+				country_event = { id = bra.403 days = 180 random = 540 } #Borges Triumphs in the South
+			}
+			if = {
+				limit = {
+					is_central_american_tag = yes
+					OR = {
+						AND = {
+							is_in_faction_with = var:global.CEN_socialist_leader
+							has_socialist_government = no
+						}
+						AND = {
+							is_in_faction_with = var:global.CEN_liberal_leader
+							has_elected_government = no
+						}
+						AND = {
+							is_in_faction_with = var:global.CEN_military_leader
+							has_authoritarian_government = no
+						}
+					}
+				}
+				if = {
+					limit = { tag = var:global.CEN_socialist_leader }
+					clear_variable = global.CEN_socialist_leader
+				}
+				else_if = {
+					limit = { tag = var:global.CEN_liberal_leader }
+					clear_variable = global.CEN_liberal_leader
+				}
+				else_if = {
+					limit = { tag = var:global.CEN_military_leader }
+					clear_variable = global.CEN_military_leader
+				}
+				if = {
+					limit = { is_faction_leader = yes }
+					dismantle_faction = yes
+				}
+				else = {
+					leave_faction = yes
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = CUB
+						tag = PRU
+					}
+					CUB = {
+						has_country_leader = {
+							name = "Julio Mella McPartland"
+							ruling_only = yes
+						}
+					}
+					PRU = {
+						has_country_leader = {
+							name = "Victor R. Haya de la Torre"
+							ruling_only = yes
+						}
+					}
+				}
+				PRU = {
+					country_event = {
+						id = cuba.255
+						days = 7
+					}
+				}
+			}
+			#remove unit cap bonuses if puppeted
+			if = {
+				limit = {
+					tag = PAR
+					is_subject = yes
+				}
+				remove_ideas = PAR_prussia
+			}
+			if = {
+				limit = {
+					tag = CHL
+					is_subject = yes
+				}
+				remove_ideas = CHL_home_of_south_american_syndicalism
+			}
+		}
+	}
+
+	on_new_term_election = {
+		effect = {
+			### Argentina ###
+			if = {
+				limit = { tag = ARG }
+				country_event = argdem.5
+				country_event = argdem.6
+				country_event = argdem.7
+				country_event = argdem.71
+			}
+			### Bolivia ###
+			if = {
+				limit = { tag = BOL }
+				country_event = bol.4
+				country_event = bol.3
+				country_event = bol.2
+			}
+			### Brazil ###
+			if = {
+				limit = { tag = BRA }
+				country_event = bra.40
+				country_event = bra.45
+				country_event = bra.50
+				country_event = bra.55
+				country_event = bra.60
+				country_event = bra.65
+				country_event = bra.70
+			}
+			### Centroamerica ###
+			if = {
+				limit = { tag = CEN }
+				country_event = cendem.20 #Generic elections
+			}
+			### Chile ###
+			if = {
+				limit = { tag = CHL }
+				country_event = chl.2 #Third Chairman
+				country_event = chl.4 #Fourth Chairman
+				country_event = chl.5 #Fifth Chairman
+				country_event = chl.48 #1941 Democratic Elections
+				country_event = chl.49 #1947 Democratic Elections
+			}
+			### Costa Rica ###
+			if = {
+				limit = { tag = COS }
+				country_event = cos.4
+				country_event = cos.71
+				country_event = cos.86
+				country_event = cos.91
+				country_event = cos.99
+			}
+			### Cuba ###
+			if = {
+				limit = { tag = CUB }
+				country_event = { id = cuba.234 }
+				country_event = { id = cuba.235 }
+				country_event = { id = cuba.236 }
+				country_event = { id = cuba.239 }
+			}
+			### Ecuador ###
+			if = {
+				limit = { tag = ECU }
+				country_event = { id = ecu.4 }
+				country_event = { id = ecu.5 }
+				country_event = { id = ecu.6 }
+				country_event = { id = ecu.7 }
+				country_event = { id = ecu.8 }
+				country_event = { id = ecu.10 }
+				country_event = { id = ecu.11 }
+				country_event = { id = ecu.12 }
+				country_event = { id = ecu.13 }
+				country_event = { id = ecu.14 }
+			}
+			### Mexico ###
+			if = {
+				limit = { tag = MEX }
+				country_event = mexico.4 #1937
+				country_event = mexico.11 #Calles' rigged elections
+				country_event = mexico.26 #1942
+				country_event = mexico.27 #1947
+				country_event = mexico.81 #AuthDem 1937
+				country_event = mexico.82 #AuthDem 1942
+				country_event = mexico.83 #AuthDem 1947
+			}
+			### Nicaragua ###
+			if = {
+				limit = { tag = NIC }
+				country_event = nic.9
+				country_event = nic.57
+				country_event = nic.76
+			}
+			### Panama ###
+			if = {
+				limit = { tag = PAN }
+				country_event = panama.2	#1936
+				country_event = panama.22	#1940
+				country_event = panama.23	#1940, military
+			}
+			### Paraguay ###
+			if = {
+				limit = { tag = PAR }
+				country_event = par.15	#1941
+				country_event = par.16	#1946 (Estigarribato)
+				country_event = par.19	#1946
+				country_event = par.17	#1951 (Estigarribato)
+				country_event = par.21	#1951
+				country_event = par.18	#1956 (Estigarribato)
+				country_event = par.22	#1956
+			}
+			### Peru ###
+			if = {
+				limit = { tag = PRU }
+				country_event = pru.108
+			}
+			### Piratini ###
+			if = {
+				limit = { tag = PIR }
+				country_event = bra.1000
+			}
+			### Uruguay ###
+			if = {
+				limit = { tag = URG }
+				country_event = urg.20 #Council 1938
+				country_event = urg.21 #Council 1942+
+				country_event = urg.30 #Presidential 1938
+				country_event = urg.31 #Presidential 1942
+				country_event = urg.32 #Presidential 1946
+				country_event = urg.51 #Presidential 1950
+				country_event = urg.52 #Presidential 1954
+			}
+			### Venezuela ###
+			if = {
+				limit = { tag = VEN }
+				country_event = ven.3
+				country_event = ven.29
+				country_event = ven.30
+				country_event = ven.31
+				country_event = ven.32
+			}
+			### Yucatan ###
+			if = {
+				limit = { tag = YUC }
+				country_event = yucatan.20
+				country_event = yucatan.21
+			}
+		}
+	}
+
+	#ROOT is winner #FROM is loser
+	on_peaceconference_ended = {
+		effect = {
+			### FOP peace ###
+			if = {
+				limit = {
+					tag = FOP
+					FROM = { tag = ARG }
+				}
+				country_event = fop.103
+				country_event = fop.24
+				CHL = {
+					country_event = { id = chl.10 days = 7 } #Negotiate for Tierra del Fuego
+				}
+				BRA = {
+					country_event = { id = bra.139 days = 360 random_days = 40 }
+				}
+			}
+			else_if = {
+				limit = {
+					tag = ARG
+					FROM = { tag = FOP }
+				}
+				BRA = {
+					country_event = { id = bra.139 days = 360 random_days = 40 }
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { tag = FOP }
+					FROM = { tag = ARG }
+					PAR = { owns_state = 278 }
+				}
+				CHL = {
+					country_event = fop.360
+				}
+			}
+			### CEN annexing COS/PAN ###
+			if = {
+				limit = {
+					FROM = { tag = COS }
+					ROOT = {
+						tag = CEN
+						owns_state = 316 #Costa Rica
+					}
+				}
+				set_country_flag = CENmil_costa_dead_1_year
+			}
+			if = {
+				limit = {
+					FROM = { tag = PAN }
+					ROOT = {
+						tag = CEN
+						OR = {
+							owns_state = 304 #Panama
+							owns_state = 685 #Panama Canal
+							owns_state = 854 #David
+						}
+					}
+				}
+				set_country_flag = CENmil_panama_dead_1_year
+			}
+		}
+	}
+
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			### Chilean mid-war coup
+			if = {
+				limit = {
+					tag = ARG
+					FROM = { tag = CHL }
+				}
+				FROM = {
+					country_event = { id = chl.16 days = 8 random_days = 12 }
+				}
+			}
+
+			### FOP city capture events
+			if = {
+				limit = {
+					country_exists = FOP
+					FROM = {
+						tag = ARG
+						has_war_with = FOP
+					}
+					ROOT = {
+						OR = {
+							tag = FOP
+							tag = CHL
+						}
+					}
+					FROM.FROM = { state = 278 } #Buenos Aires
+				}
+				FOP = {
+					country_event = { id = fop.112 days = 7 } #Workers rise up
+				}
+			}
+			else_if = {
+				limit = {
+					country_exists = FOP
+					FROM = {
+						tag = ARG
+						has_war_with = FOP
+					}
+					ROOT = {
+						OR = {
+							tag = FOP
+							tag = CHL
+						}
+					}
+					FROM.FROM = { state = 902 } #Cordoba
+				}
+				FOP = {
+					country_event = { id = fop.113 days = 7 }
+				}
+			}
+			if = {
+				limit = {
+					tag = PRU
+					FROM = { tag = ECU }
+				}
+				ECU = { country_event = ecu.40 } #Peru is too strong- ask for peace
+			}
+			if = { #peace with Paraguay?
+				limit = {
+					ARG = {
+						has_war_with = PAR
+						has_war_with = CHI
+					}
+					ROOT = { tag = ARG }
+					FROM = { tag = PAR }
+					FROM.FROM = { state = 301 } #Asuncion
+				}
+				ARG = {
+					country_event = { id = southern.10 days = 1 }
+				}
+			}
+		}
+	}
+
+	on_war = {
+		effect = {
+			# Paraguay vs Bolivia
+			if = {
+				limit = { tag = PAR }
+				country_event = { id = par.8 days = 2 random = 120 }
+			}
+
+			# Chilean events
+			if = {
+				limit = { tag = CHL }
+				country_event = { id = chl.23 days = 60 random = 1440 }
+				country_event = { id = chl.9 days = 1 random = 48 }
+				country_event = { id = chl.21 days = 1 random = 48 }
+			}
+			if = {
+				limit = { tag = ECU }
+				CHL = {
+					country_event = { id = chl.12 days = 4 random = 96 }
+				}
+			}
+			if = {
+				limit = { tag = BRA }
+				country_event = { id = bra.508 days = 15 random_days = 45 }
+				country_event = { id = bra.516 days = 15 random_days = 45 }
+			}
+		}
+	}
+}
+

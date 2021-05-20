@@ -1,0 +1,438 @@
+﻿add_namespace = cend
+
+country_event = { #Forming bonds with socialist Guatemala
+	id = cend.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cend.1 FROM = [From.GetName]" }
+	title = cend.1.t
+
+	desc = {
+		text = cend.1.d.GUA_socialist
+		trigger = {
+			tag = GUA
+			has_socialist_government = yes
+		}
+	}
+	desc = {
+		text = cend.1.d.GUA_liberal
+		trigger = {
+			tag = GUA
+			has_elected_government = yes
+		}
+	}
+	desc = {
+		text = cend.1.d.GUA_military
+		trigger = {
+			tag = GUA
+			has_authoritarian_government = yes
+		}
+	}
+
+	desc = {
+		text = cend.1.d.ELS_socialist
+		trigger = {
+			tag = ELS
+			has_socialist_government = yes
+		}
+	}
+	desc = {
+		text = cend.1.d.ELS_liberal
+		trigger = {
+			tag = ELS
+			has_elected_government = yes
+		}
+	}
+	desc = {
+		text = cend.1.d.ELS_military
+		trigger = {
+			tag = ELS
+			has_authoritarian_government = yes
+		}
+	}
+
+	desc = {
+		text = cend.1.d.HON_socialist
+		trigger = {
+			tag = HON
+			has_socialist_government = yes
+		}
+	}
+	desc = {
+		text = cend.1.d.HON_liberal
+		trigger = {
+			tag = HON
+			has_elected_government = yes
+		}
+	}
+	desc = {
+		text = cend.1.d.HON_military
+		trigger = {
+			tag = HON
+			has_authoritarian_government = yes
+		}
+	}
+
+	desc = {
+		text = cend.1.d.NIC_socialist
+		trigger = {
+			tag = NIC
+			has_socialist_government = yes
+		}
+	}
+	desc = {
+		text = cend.1.d.NIC_liberal
+		trigger = {
+			tag = NIC
+			has_elected_government = yes
+		}
+	}
+	desc = {
+		text = cend.1.d.NIC_military
+		trigger = {
+			tag = NIC
+			has_authoritarian_government = yes
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cend.1.a
+		trigger = {
+			has_socialist_government = yes
+		}
+		add_political_power = 20
+		add_opinion_modifier = {
+			target = FROM
+			modifier = CEN_established_ties
+		}
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = CEN_established_ties
+		}
+	}
+
+	option = {
+		name = cend.1.b
+		trigger = {
+			has_elected_government = yes
+		}
+		add_political_power = 20
+		add_opinion_modifier = {
+			target = FROM
+			modifier = CEN_established_ties
+		}
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = CEN_established_ties
+		}
+	}
+
+	option = {
+		name = cend.1.c
+		trigger = {
+			has_authoritarian_government = yes
+		}
+		add_political_power = 20
+		add_opinion_modifier = {
+			target = FROM
+			modifier = CEN_established_ties
+		}
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = CEN_established_ties
+		}
+	}
+}
+
+country_event = { #Informed of Socialist faction being formed
+	id = cend.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cend.5 FROM = [From.GetName]" }
+	title = cend.5.t
+
+	desc = {
+		text = cend.5.d.socialist
+		trigger = { has_socialist_government = yes }
+	}
+	desc = {
+		text = cend.5.d.liberal
+		trigger = { has_elected_government = yes }
+	}
+	desc = {
+		text = cend.5.d.military
+		trigger = { has_authoritarian_government = yes }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cend.5.a #A chance for socialism...
+		trigger = { has_socialist_government = yes }
+	}
+
+	option = {
+		name = cend.5.b #A new threat emerges
+		trigger = { has_elected_government = yes }
+	}
+
+	option = {
+		name = cend.5.c #A threat to our existence!
+		trigger = { has_authoritarian_government = yes }
+	}
+}
+
+country_event = { #Informed of liberal faction being formed
+	id = cend.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cend.6 FROM = [From.GetName]" }
+	title = cend.6.t
+
+	desc = {
+		text = cend.6.d.socialist
+		trigger = { has_socialist_government = yes }
+	}
+	desc = {
+		text = cend.6.d.liberal
+		trigger = { has_elected_government = yes }
+	}
+	desc = {
+		text = cend.6.d.military
+		trigger = { has_authoritarian_government = yes }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cend.6.a #Those bunch are just as bad as the military
+		trigger = { has_socialist_government = yes }
+	}
+
+	option = {
+		name = cend.6.b #It's time for true democracy!
+		trigger = { has_elected_government = yes }
+	}
+
+	option = {
+		name = cend.6.c #You can't beat military democracy!
+		trigger = { has_authoritarian_government = yes }
+	}
+}
+
+country_event = { #Informed of military faction being formed
+	id = cend.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cend.7 FROM = [From.GetName]" }
+	title = cend.7.t
+
+	desc = {
+		text = cend.7.d.socialist
+		trigger = { has_socialist_government = yes }
+	}
+	desc = {
+		text = cend.7.d.liberal
+		trigger = { has_elected_government = yes }
+	}
+	desc = {
+		text = cend.7.d.military
+		trigger = { has_authoritarian_government = yes }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cend.7.a #Our biggest threat
+		trigger = { has_socialist_government = yes }
+	}
+
+	option = {
+		name = cend.7.b #They won't stand for long
+		trigger = { has_elected_government = yes }
+	}
+
+	option = {
+		name = cend.7.c #Together, we may stand strong!
+		trigger = { has_authoritarian_government = yes }
+	}
+}
+
+country_event = { #Country joins a faction
+	id = cend.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cend.8 FROM = [From.GetName]" }
+	title = cend.8.t
+
+	desc = {
+		text = cend.8.d.socialist
+		trigger = { has_socialist_government = yes }
+	}
+	desc = {
+		text = cend.8.d.liberal
+		trigger = { has_elected_government = yes }
+	}
+	desc = {
+		text = cend.8.d.military
+		trigger = { has_authoritarian_government = yes }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cend.8.a #Together for victory!
+		trigger = { has_socialist_government = yes }
+		add_to_faction = FROM
+		add_political_power = 20
+	}
+
+	option = {
+		name = cend.8.b #The torch of liberty stands strong.
+		trigger = { has_elected_government = yes }
+		add_to_faction = FROM
+		add_political_power = 20
+	}
+
+	option = {
+		name = cend.8.c #The status-quo will be retained.
+		trigger = { has_authoritarian_government = yes }
+		add_to_faction = FROM
+		add_political_power = 20
+	}
+}
+
+country_event = { #Country asked to join a faction
+	id = cend.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cend.9 FROM = [From.GetName]" }
+	title = cend.9.t
+
+	desc = {
+		text = cend.9.d.socialist
+		trigger = { has_socialist_government = yes }
+	}
+	desc = {
+		text = cend.9.d.liberal
+		trigger = { has_elected_government = yes }
+	}
+	desc = {
+		text = cend.9.d.military
+		trigger = { has_authoritarian_government = yes }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cend.9.a
+		add_to_faction = FROM
+		FROM = {
+			country_event = {
+				id = cend.10
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = cend.9.b
+		trigger = { is_ai = no }
+		add_political_power = -100
+		FROM = {
+			country_event = {
+				id = cend.11
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #They said yes
+	id = cend.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cend.10 FROM = [From.GetName]" }
+	title = cend.10.t
+
+	desc = {
+		text = cend.10.d.socialist
+		trigger = { has_socialist_government = yes }
+	}
+	desc = {
+		text = cend.10.d.liberal
+		trigger = { has_elected_government = yes }
+	}
+	desc = {
+		text = cend.10.d.military
+		trigger = { has_authoritarian_government = yes }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cend.10.a #Together for victory!
+		trigger = { has_authoritarian_government = no }
+	}
+
+	option = {
+		name = cend.10.b #We'll come out on top
+		trigger = { has_authoritarian_government = yes }
+	}
+}
+
+country_event = { #They said no?
+	id = cend.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cend.11 FROM = [From.GetName]" }
+	title = cend.11.t
+
+	desc = {
+		text = cend.11.d.socialist
+		trigger = { has_socialist_government = yes }
+	}
+	desc = {
+		text = cend.11.d.liberal
+		trigger = { has_elected_government = yes }
+	}
+	desc = {
+		text = cend.11.d.military
+		trigger = { has_authoritarian_government = yes }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cend.11.a #Victory will be pursued even without them.
+		trigger = { has_socialist_government = yes }
+	}
+
+	option = {
+		name = cend.11.b #The torch will still stand strong.
+		trigger = { has_elected_government = yes }
+	}
+
+	option = {
+		name = cend.11.c #The Vanguard can still stand strong.
+		trigger = { has_authoritarian_government = yes }
+	}
+}
+
+country_event = { #Conflict ready to escalate
+	id = cend.34
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cend.34 FROM = [From.GetName]" }
+	title = cend.34.t
+	desc = cend.34.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = cend.34.a
+		custom_effect_tooltip = CEN_prepare_your_ass
+	}
+}
+
+country_event = { #Conflict ready to escalate
+	id = cend.conflict
+	immediate = { log = "[GetDateText]: [Root.GetName]: event cend.conflict FROM = [From.GetName]" }
+	title = cend.conflict.t
+	desc = cend.conflict.desc
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = CEN_the_conflict_begins
+	}
+
+	option = {
+		name = cend.conflict.a
+		add_political_power = 20
+	}
+}
+

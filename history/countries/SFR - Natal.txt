@@ -1,0 +1,91 @@
+﻿capital = 719
+
+set_research_slots = 3
+
+set_convoys = 0
+set_war_support = 0.60
+set_stability = 0.40
+
+country_event = { id = saf.99 days = 2754 } #Duncan dies
+
+set_country_flag = {
+	flag = SFR_segregation_reform
+	value = 1
+}
+set_country_flag = SAF_flag_tree_sync
+
+set_politics = {
+	ruling_party = market_liberal
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 0
+	radical_socialist = 0
+	syndicalist = 0
+	social_democrat = 10
+	social_liberal = 0
+	market_liberal = 42
+	social_conservative = 10
+	authoritarian_democrat = 2
+	paternal_autocrat = 36
+	national_populist = 0
+}
+
+add_ideas = {
+	volunteer_only
+	partial_economic_mobilisation
+	SFR_segregation_3
+	SFR_idea_syndicalism_zulu
+	SFR_idea_indian_diaspora
+	SFR_idea_Natal_Res
+}
+
+create_country_leader = {
+	name = "Yusuf Dadoo"
+	picture = "gfx/leaders/Generic/Portrait_India_Generic_new_1.tga"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+}
+
+create_country_leader = {
+	name = "Thomas Boydell"
+	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_5.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+}
+
+create_country_leader = {
+	name = "Edgar Brookes"
+	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_6.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+}
+
+create_country_leader = {
+	name = "Heaton Nicholls"
+	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_4.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+}
+
+create_country_leader = {
+	name = "Douglas Mitchell"
+	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_new_7.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+}
+
+create_country_leader = {
+	name = "Ernest Janssen"
+	picture = "gfx/leaders/Generic/Portrait_Germany_Generic_1.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+}
+
+create_country_leader = {
+	name = "Charles Stallard"
+	picture = "gfx/leaders/Generic/Portrait_Europe_Generic_land_new_3.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+}

@@ -1,0 +1,44 @@
+state = {
+	id = 6
+	name = "STATE_6"
+	manpower = 2141276
+	state_category = twelve
+
+	resources = {
+		steel = 14
+	}
+
+	history = {
+		owner = BEL
+		add_core_of = BEL
+		victory_points = {
+			6560 10 #Ghent
+		}
+		victory_points = {
+			13659 5 #Bruges
+		}
+		buildings = {
+			infrastructure = 8
+			arms_factory = 2
+			industrial_complex = 4
+			air_base = 1
+			3576 = {
+				bunker = 1
+			}
+			6446 = {
+				bunker = 2
+			}
+			6560 = {
+				bunker = 1
+			}
+			13659 = {
+				bunker = 1
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces = {
+		3576 6446 6560 13659
+	}
+}

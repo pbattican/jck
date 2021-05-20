@@ -1,0 +1,25 @@
+state = {
+	id = 794
+	name = "STATE_794"
+	manpower = 246400
+
+	state_category = two
+
+	history = {
+		owner = CRO
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			11580 = {
+				bunker = 1
+			}
+		}
+
+		add_core_of = CRO
+		add_claim_by = HUN
+	}
+
+	provinces = {
+		11577 11580
+	}
+}

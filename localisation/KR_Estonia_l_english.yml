@@ -1,0 +1,30 @@
+﻿l_english:
+
+### Parties ###
+EST_totalist_party:0 "ETRL"
+EST_totalist_party_long:0 "Eesti Töötava Rahva Liit (Estonian Working People’s League)"
+EST_syndicalist_party:0 "EISTP"
+EST_syndicalist_party_long:0 "Eesti Iseseisev Sotsialistlik Tööliste Partei (Estonian Independent Socialist Workers Party)"
+EST_radical_socialist_party:0 "ESDTP"
+EST_radical_socialist_party_long:0 "Eesti Sotsiaaldemokraatlik Tööliste Partei (Estonian Socialist Democratic Workers’ Party)"
+EST_social_democrat_party:0 "ESDTP"
+EST_social_democrat_party_long:0 "Eesti Sotsiaaldemokraatlik Tööliste Partei (Estonian Socialist Democratic Workers’ Party)"
+EST_social_liberal_party:0 "Tööerakond"
+EST_social_liberal_party_long:0 "Eesti Tööerakond (Estonian Labour Party)"
+EST_market_liberal_party:0 "Rahvaerakond"
+EST_market_liberal_party_long:0 "Eesti Rahvaerakond (Estonian People’s Party)"
+EST_social_conservative_party:0 "Maarahva Liit"
+EST_social_conservative_party_long:0 "Maarahva Liit (Rural League)"
+EST_authoritarian_democrat_party:0 "Isamaaliit"
+EST_authoritarian_democrat_party_long:0 "Isamaaliit (Patriotic League)"
+EST_paternal_autocrat_party:0 "EVRK"
+EST_paternal_autocrat_party_long:0 "Eesti Vabariigi Rahvuskomitee (National Committee of the Republic of Estonia)"
+EST_national_populist_party:0 "ERD"
+EST_national_populist_party_long:0 "Eesti Rahvuslik Direktoorium (Estonian National Directorate)"
+
+### Ideas ###
+
+EST_era_of_silence:0 "Vaikiv ajastu"
+EST_era_of_silence_desc:0 "Elected by the Estonian National Congress in 1930, Artur Sirk is the leader of the National Committee of the Republic of Estonia in exile. His leadership has allowed the Estonian exile community to rebound, organize forces to retake the homeland, and finally land in Reval to claim their destiny.\n\nHowever, Sirk is an authoritarian leader, dismissing any dissent among his fellow exiles with fearmongering and the loyalty of the Omakaitse, whom he has transformed into a personal paramilitary. Should he remain in power after the war, there may not be hope for democracy in Estonia..."
+LAT_EST_roads_to_riga:0 "All Roads Lead to Riga"
+LAT_EST_roads_to_riga_desc:0 "The Baltic governorates were developed with Riga in mind. It is the main industrial centre and infrastructure hub of the region and the largest city in the Baltic states, and the industry in Livland, Courland and Estland is reliant on a stable connection with its services. Now, a border stands between Riga and the rest of the Baltic states, giving its government great leverage in keeping the two other states in line."

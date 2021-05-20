@@ -1,0 +1,1057 @@
+﻿capital = 361
+OOB = "USA"
+set_naval_oob= "USA_naval"
+
+### Starting Technologies ###
+set_technology = {
+	### General ###
+	electronic_mechanical_engineering = 1
+
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1
+
+	### Infantry ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	marines = 1
+
+	### Air ###
+	early_fighter = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	CAS1 = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+	cv_CAS1 = 1
+}
+
+### Navy - MtG ###
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		weltkrieg_light_ship_hull = 1
+		contact_mine = 1
+		light_ship_hull_1936 = 1
+		weltkrieg_cruiser_hull = 1
+		cruiser_hull_1936 = 1
+		weltkrieg_submarine_hull = 1
+		submarine_hull_1936 = 1
+		cruiser_submarine = 1
+		carrier_conversion = 1
+		carrier_hull_1936 = 1
+		ship_hull_revived_ac = 1
+		weltkrieg_heavy_ship_hull = 1
+		heavy_ship_hull_1936 = 1
+		ship_hull_super_heavy = 1
+
+		## Modules##
+		early_torpedo = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+		light_battery_one = 1
+		improved_ship_torpedo_launcher = 1
+		basic_cruiser_armor_scheme = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+		basic_heavy_armor_scheme = 1
+		capital_gunnery_one = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+		sonar = 1
+
+		### Transport ###
+		transport = 1
+	}
+}
+
+### Navy - Non MtG ###
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		weltkrieg_destroyer_nonmtg = 1
+		interwar_destroyer_nonmtg = 1
+		weltkrieg_cruiser_nonmtg = 1
+		interwar_cruiser_nonmtg = 1
+		weltkrieg_submarine_nonmtg = 1
+		interwar_submarine_nonmtg = 1
+		weltkrieg_armored_cruiser_nonmtg = 1
+		interwar_armored_cruiser_nonmtg = 1
+		weltkrieg_fast_battleship_nonmtg = 1
+		interwar_fast_battleship_nonmtg = 1
+		weltkrieg_dreadnought_nonmtg = 1
+		super_heavy_dreadnought_nonmtg = 1
+		weltkrieg_carrier_nonmtg = 1
+		interwar_carrier_nonmtg = 1
+		heavy_carrier_nonmtg = 1
+
+		### Transport ###
+		transport_n = 1
+	}
+}
+
+### LaR ###
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+country_event = { id = ustates.1 hours = 2 } #Intro Event
+country_event = { id = ustates.3 days = 36 } #The Coalition Ticket?
+country_event = { id = ustates.23 days = 76 } #St. Patrick's Day Floods
+country_event = { id = ustates.22 days = 121 } #May Day Riots
+country_event = { id = ustates.24 days = 181 } #Red Summer
+country_event = { id = ustates.538 days = 185 } #Fourth of July
+country_event = { id = ustates.25 days = 104 random = 720 } #Special Election(Senate) - Texas
+country_event = { id = ustates.26 days = 104 random = 1440 } #Special Election(Representatives) - Washington
+country_event = { id = ustates.27 days = 40 random = 2880 } #Crime spree
+country_event = { id = ustates.28 days = 60 random = 3600 } #Paramilitary groups
+country_event = { id = ustates.29 days = 73 random = 1440 } #More AFP members announcing congressional Bids
+country_event = { id = ustates.30 days = 104 random = 1440 } #More SPA members announcing Congressional Bids
+country_event = { id = ustates.31 days = 181 random = 1440 } #Gone with the Wind
+country_event = { id = ustates.32 days = 165 } #Great Heat Wave begins
+country_event = { id = ustates.168 days = 1229 } #End to the Coalition ticket
+country_event = { id = ustates.185 days = 1583 } #Floyd Olson Passes Away
+country_event = { id = csa.216 days = 1633 random_days = 180 } #Smedley Butler Passes Away
+country_event = { id = ustates.285 days = 5114 random_days = 1500 } #Cure for Polio
+
+
+country_event = { id = pacificstates.20600 days = 1582 random_days = 24 } #Chien-Shiung Wu
+CSA = {
+	country_event = { id = pacificstates.20600 days = 1582 random_days = 24 } #Chien-Shiung Wu
+	country_event = { id = csa.216 days = 1633 random_days = 180 } #Smedley Butler Passes Away
+}
+TEX = {
+	country_event = { id = pacificstates.20600 days = 1582 random_days = 24 } #Chien-Shiung Wu
+}
+
+PSA = {
+	country_event = { id = pacificstates.20600 days = 1582 random_days = 24 } #Chien-Shiung Wu
+}
+NEE = {
+	country_event = { id = pacificstates.20600 days = 1582 random_days = 24 } #Chien-Shiung Wu
+}
+
+CSA = {
+	embargo_ROOT = yes
+	TEX = { embargo_PREV = yes }
+	PSA = { embargo_PREV = yes }
+	NEE = { embargo_PREV = yes }
+}
+TEX = {
+	embargo_ROOT = yes
+	PSA = { embargo_PREV = yes }
+	NEE = { embargo_PREV = yes }
+}
+PSA = { embargo_ROOT = yes }
+
+save_global_event_target_as = GTM_holder
+add_opinion_modifier = { target = LEC modifier = LEC_member }
+add_opinion_modifier = { target = HAI modifier = HAI_foreign_council }
+LEC = { give_military_access = USA }
+DOM = { give_military_access = USA }
+HAI = { give_military_access = USA }
+# diplomatic_relation = { country = LEC relation = non_aggression_pact }
+give_guarantee = GUA
+give_guarantee = ELS
+give_guarantee = HON
+give_guarantee = COS
+give_guarantee = "PAN"
+give_guarantee = LEC
+give_guarantee = DOM
+give_guarantee = HAI
+set_country_flag = legation_council_vote
+add_to_array = { GUA.guarantor_array = USA }
+add_to_array = { ELS.guarantor_array = USA }
+add_to_array = { HON.guarantor_array = USA }
+add_to_array = { COS.guarantor_array = USA }
+add_to_array = { PAN.guarantor_array = USA }
+add_to_array = { LEC.guarantor_array = USA }
+add_to_array = { DOM.guarantor_array = USA }
+add_to_array = { HAI.guarantor_array = USA }
+
+set_variable = { AFP_strength = 0 }
+set_variable = { SPA_strength = 0 }
+
+### Politics
+set_country_flag = { flag = USA_liberal_democratic_power value = 5 }
+set_country_flag = { flag = USA_conservative_democratic_power value = 5 }
+
+set_research_slots = 4
+set_convoys = 100
+set_global_flag = monroe_doctrine
+set_stability = 0.00
+set_war_support = 0.25
+
+set_politics = {
+	ruling_party = social_liberal
+	last_election = "1932.11.08"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	totalist = 2
+	syndicalist = 10
+	radical_socialist = 13
+	social_democrat = 8
+	social_liberal = 18
+	market_liberal = 12
+	social_conservative = 12
+	authoritarian_democrat = 13
+	paternal_autocrat = 2
+	national_populist = 10
+}
+
+set_autonomy = {
+	target = PHI
+	autonomy_state = kr_default_puppet
+}
+set_autonomy = {
+	target = LIB
+	autonomy_state = kr_default_puppet
+}
+
+#Locking Chief of Navy before ACW
+set_country_flag = Frank_Jack_Fletcher_dead
+set_country_flag = Thomas_C_Kinkaid_dead
+set_country_flag = Thomas_Charles_Hart_dead
+set_country_flag = William_Halsey_Jr_dead
+#Locking CoS before ACW
+set_country_flag = Alexander_Vandegrift_dead
+
+# Resetting politics for all puppets which come earlier in the load order
+"PHI" = {
+	set_politics = {
+		ruling_party = social_liberal
+		last_election = "1888.6.15"
+		election_frequency = 48
+		elections_allowed = no
+	}
+
+	set_popularities = {
+		totalist = 2
+		radical_socialist = 3
+		syndicalist = 5
+		social_democrat = 13
+		social_liberal = 41
+		market_liberal = 21
+		social_conservative = 10
+		authoritarian_democrat = 3
+		paternal_autocrat = 2
+		national_populist = 0
+	}
+}
+
+### AI strategies ###
+add_ai_strategy = {
+	type = ignore_claim
+	id = "CSA"
+	value = 1
+}
+add_ai_strategy = {
+	type = ignore_claim
+	id = "TEX"
+	value = 1
+}
+add_ai_strategy = {
+	type = ignore_claim
+	id = "PSA"
+	value = 1
+}
+add_ai_strategy = {
+	type = ignore_claim
+	id = "NEE"
+	value = 1
+}
+
+create_country_leader = {# Jack Reed
+	name = "Jack Reed"
+	desc = "POLITICS_JACK_REED_DESC"
+	picture = "gfx/leaders/CSA/Portrait_CSA_Jack_Reed.tga"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+	traits = {
+		CSA_all_american_worker
+	}
+}
+create_country_leader = {# Jack Reed
+	name = "Jack Reed"
+	desc = "POLITICS_JACK_REED_DESC"
+	picture = "gfx/leaders/CSA/Portrait_CSA_Jack_Reed.tga"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+	traits = {
+		CSA_all_american_worker
+	}
+}
+create_country_leader = {# Jack Reed
+	name = "Jack Reed"
+	desc = "POLITICS_JACK_REED_DESC"
+	picture = "gfx/leaders/CSA/Portrait_CSA_Jack_Reed.tga"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+	traits = {
+		CSA_all_american_worker
+	}
+}
+create_country_leader = {# Floyd Olson
+	name = "Floyd Olson"
+	desc = "POLITICS_FLOYD_OLSON_DESC"
+	picture = "Portrait_USA_Floyd_Olson.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	traits = {
+		tenacious_negotiator
+	}
+}
+create_country_leader = {# Herbert Hoover
+	name = "Herbert Hoover"
+	desc = "POLITICS_HERBERT_HOOVER_DESC"
+	picture = "Portrait_USA_Herbert_Hoover.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+		indecisive
+	}
+}
+create_country_leader = {# John Nance Garner
+	name = "John Nance Garner"
+	desc = "POLITICS_JOHN_NANCE_GARNER_DESC"
+	picture = "Portrait_USA_John_Nance_Garner.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+	traits = {
+		strict_austerity_adherent
+	}
+}
+create_country_leader = {# John Nance Garner
+	name = "John Nance Garner"
+	desc = "POLITICS_JOHN_NANCE_GARNER_DESC"
+	picture = "Portrait_USA_John_Nance_Garner.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = {
+		strict_austerity_adherent
+	}
+}
+create_country_leader = {
+	name = "Charles Lindbergh"
+	picture = "gfx/leaders/TEX/Portrait_TEX_charles_lindbergh.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+}
+create_country_leader = {# Huey Long
+	name = "Huey Long"
+	desc = "POLITICS_HUEY_LONG_DESC"
+	picture = "gfx/leaders/TEX/Portrait_TEX_Huey_Long.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = {
+		TEX_the_kingfish
+	}
+}
+create_country_leader = {
+	name = "Charles Lindbergh"
+	picture = "gfx/leaders/TEX/Portrait_TEX_charles_lindbergh.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+}
+create_country_leader = {# Huey Long
+	name = "Huey Long"
+	desc = "POLITICS_HUEY_LONG_DESC"
+	picture = "gfx/leaders/TEX/Portrait_TEX_Huey_Long.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = {
+		TEX_the_kingfish
+	}
+}
+create_country_leader = {
+	name = "Charles Lindbergh"
+	picture = "gfx/leaders/TEX/Portrait_TEX_charles_lindbergh.tga"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+}
+create_country_leader = {# Huey Long
+	name = "Huey Long"
+	desc = "POLITICS_HUEY_LONG_DESC"
+	picture = "gfx/leaders/TEX/Portrait_TEX_Huey_Long.tga"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+	traits = {
+		TEX_the_kingfish
+	}
+}
+
+add_ideas = {
+	### cabinet ###
+	USA_Herbert_Hoover_hog_sli
+	USA_Henry_Lewis_Stimson_for_sli
+	USA_Charles_Edison_eco_sli
+	USA_Charles_Evans_Hughes_Sr_sec_sli
+	USA_Douglas_MacArthur_cos
+	# national ideas
+	USA_great_depression
+	USA_political_crisis
+	holds_leases_idea
+	undisturbed_isolation
+	free_trade
+}
+
+### Field Marshals ###
+create_field_marshal = {# Douglas MacArthur
+	name = "Douglas MacArthur"
+	desc = "USA_DOUGLAS_MACARTHUR_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_douglas_macarthur.tga"
+	traits = {
+		offensive_doctrine
+		brilliant_strategist
+		career_officer
+		media_personality
+		politically_connected
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+	id = 56
+}
+create_field_marshal = {# Malin Craig
+	name = "Malin Craig"
+	desc = "USA_MALIN_CRAIG_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Malin_Craig.tga"
+	traits = {
+		logistics_wizard
+		organizer
+		trait_cautious
+	}
+	skill = 3
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 4
+	id = 932
+}
+create_field_marshal = {# George Marshall
+	name = "George Marshall"
+	desc = "USA_GEORGE_MARSHALL_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_george_marshall.tga"
+	traits = {
+		career_officer
+		politically_connected
+		offensive_doctrine
+		organizer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+	id = 64
+}
+### Generals ###
+create_corps_commander = {# Henry H. Arnold
+	name = "Henry H. Arnold"
+	desc = "USA_HENRY_H_ARNOLD_ARMY_DESC"
+	portrait_path = "gfx/leaders/PSA/Portrait_PSA_Henry_Arnold.tga"
+	traits = {
+		career_officer
+		politically_connected
+		inspirational_leader
+		organizer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 58
+}
+create_corps_commander = {# Clarence Huebner
+	name = "Clarence Huebner"
+	desc = "USA_CLARENCE_HUEBNER_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Clarence_Huebner.tga"
+	traits = {
+		harsh_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+	id = 952
+}
+create_corps_commander = {# Edward H. Brooks
+	name = "Edward H. Brooks"
+	desc = "USA_EDWARD_BROOKS_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Edward_Brooks_KR.tga"
+	traits = {
+		trait_engineer
+		trait_reckless
+	}
+	skill = 1
+
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 953
+}
+create_corps_commander = {# Geoffrey Keyes
+	name = "Geoffrey Keyes"
+	desc = "USA_GEOFFREY_KEYES_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Geoffrey_Keyes.tga"
+	traits = {
+		cavalry_officer
+		organizer
+	}
+	skill = 1
+
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+	id = 954
+}
+create_corps_commander = {# Jonathan M. Wainwright
+	name = "Jonathan M. Wainwright"
+	desc = "USA_JONATHAN_WAINWRIGHT_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Jonathan_Wainwright.tga"
+	traits = {
+		cavalry_officer
+		trait_reckless
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 955
+}
+create_corps_commander = {# Joseph Stilwell
+	name = "Joseph Stilwell"
+	desc = "USA_JOSEPH_STILWELL_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Joseph_Stilwell.tga"
+	traits = {
+		politically_connected
+		infantry_officer
+		career_officer
+		harsh_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 956 #I dunno but I feel someone in China will thank me for this
+}
+create_corps_commander = {# Leonard Gerow
+	name = "Leonard Gerow"
+	desc = "USA_LEONARD_GEROW_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Leonard_Gerow_KR.tga"
+	traits = { armor_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+	id = 957
+}
+create_corps_commander = {# Leslie McNair
+	name = "Leslie McNair"
+	desc = "USA_LESLIE_MCNAIR_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Leslie_Mcnair.tga"
+	traits = {
+		old_guard
+		career_officer
+		artillery_officer
+	}
+	skill = 2
+
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 1
+	id = 958
+}
+create_corps_commander = {# Lloyd Fredendall
+	name = "Lloyd Fredendall"
+	desc = "USA_LLOYD_FREDENDALL_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Lloyd_Fredendall_KR.tga"
+	traits = {
+		old_guard
+		infantry_officer
+		inflexible_strategist
+	}
+	skill = 1
+
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+	id = 959
+}
+create_corps_commander = {# Lucian Truscott
+	name = "Lucian Truscott"
+	desc = "USA_LUCIAN_TRUSCOTT_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Lucian_Truscott.tga"
+	traits = {
+		trait_engineer
+		commando
+		cavalry_officer
+	}
+	skill = 2
+
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+	id = 934
+}
+create_corps_commander = {# Walter Krueger
+	name = "Walter Krueger"
+	desc = "USA_WALTER_KRUEGER_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Walter_Krueger.tga"
+	traits = {
+		armor_officer
+		career_officer
+		brilliant_strategist
+	}
+	skill = 2
+
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+	id = 961
+}
+create_corps_commander = {# Adna Chaffee
+	name = "Adna R. Chaffee"
+	desc = "USA_ADNA_CHAFFEE_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Adna_Chaffee.tga"
+	traits = {
+		armor_officer
+	}
+	skill = 3
+
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+	id = 933
+}
+
+create_corps_commander = {# Omar Bradley
+	name = "Omar Bradley"
+	desc = "USA_OMAR_BRADLEY_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_omar_bradley.tga"
+	traits = {
+		trait_engineer
+		trait_cautious
+		brilliant_strategist
+	}
+	skill = 2
+
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+	id = 951
+}
+create_corps_commander = {# Dwight D. Eisenhower
+	name = "Dwight D. Eisenhower"
+	desc = "USA_DWIGHT_EISENHOWER_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_gen_Dwight_Eisenhower.tga"
+	traits = {
+		organizer
+		trait_cautious
+		armor_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+	id = 950
+}
+
+create_corps_commander = {# Daniel Van Voorhis
+	name = "Daniel Van Voorhis"
+	desc = "USA_DANIEL_VAN_VOORHIS_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Daniel_Van_Voorhis.tga"
+	traits = {commando}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 647
+}
+create_corps_commander = {# John C. H. Lee
+	name = "John C. H. Lee"
+	desc = "USA_JOHN_LEE_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_john_lee.tga"
+	traits = {
+		career_officer
+		politically_connected
+		trait_engineer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 963
+}
+create_corps_commander = {# James Garesche Ord
+	name = "James Garesche Ord"
+	desc = "USA_JAMES_GARESCHE_ORD_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_james_ord.tga"
+	traits = {
+		trait_reckless
+		armor_officer
+		panzer_leader
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 964
+}
+create_corps_commander = {# Edwin F. Harding
+	name = "Edwin F. Harding"
+	desc = "USA_EDWIN_HARDING_ARMY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_edwin_harding.tga"
+	traits = {
+		career_officer
+		commando
+		trait_engineer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+	id = 965
+}
+
+create_corps_commander = {# Smedley Butler
+	name = "Smedley Butler"
+	desc = "USA_SMEDLEY_BUTLER_ARMY_DESC"
+	portrait_path = "gfx/leaders/CSA/Portrait_CSA_smedly_butler_G.tga"
+	traits = {
+		offensive_doctrine
+		inspirational_leader
+		commando
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 3
+	id = 60
+}
+create_corps_commander = {# Herbert Holdridge
+	name = "Herbert Charles Heitke"
+	desc = "USA_HERBERT_HOLDRIDGE_ARMY_DESC"
+	portrait_path = "gfx/leaders/CSA/Portrait_CSA_herbert_holdridge.tga"
+	traits = { trickster }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+	id = 61
+}
+create_corps_commander = {# George Van Horn Moseley
+	name = "George Van Horn Moseley"
+	desc = "USA_GEORGE_VAN_HORN_MOSELEY_ARMY_DESC"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_George_Van_Horn_Moseley.tga"
+	traits = {
+		politically_connected
+		brilliant_strategist
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+	id = 59
+}
+create_corps_commander = {# George S. Patton Jr.
+	name = "George S. Patton"
+	desc = "USA_GEORGE_PATTON_ARMY_DESC"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_george_patton.tga"
+	traits = {
+		trickster
+		armor_officer
+		panzer_leader
+		trait_reckless
+	}
+	skill = 3
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	id = 57
+}
+create_corps_commander = {# Fox Conner
+	name = "Fox Conner"
+	desc = "USA_FOX_CONNER_ARMY_DESC"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_Fox_Conner.tga"
+	traits = {
+		old_guard
+		politically_connected
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+	id = 988
+}
+create_corps_commander = {# John Lesesne DeWitt
+	name = "John L. DeWitt"
+	portrait_path = "gfx/leaders/PSA/Portrait_PSA_John_Lesesne_DeWitt.dds"
+	traits = {
+		inflexible_strategist
+		trait_cautious
+	}
+	desc = "USA_JOHN_DEWITT_ARMY_DESC"
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 4
+	id = 989
+}
+
+### Admirals ###
+create_navy_leader = {# William Halsey Jr.
+	name = "William Halsey Jr."
+	desc = "USA_WILLIAM_HALSEY_JR_NAVY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_William_Halsey_Jr_KR.tga"
+	traits = {
+		superior_tactician
+		spotter
+		aviation_enthusiast
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 3
+	id = 63
+}
+
+create_navy_leader = {# Raymond A. Spruance
+	name = "Raymond A. Spruance"
+	desc = "USA_RAYMOND_SPRUANCE_NAVY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Raymond_Spruance_KR.tga"
+	traits = {
+		superior_tactician
+		aviation_enthusiast
+		chief_engineer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {# Frank Jack Fletcher
+	name = "Frank Jack Fletcher"
+	desc = "USA_FRANK_JACK_FLETCHER_NAVY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_adm_Frank_Fletcher.tga"
+	traits = {spotter superior_tactician}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 1
+	id = 995
+}
+
+create_navy_leader = {# Thomas C. Kinkaid
+	name = "Thomas C. Kinkaid"
+	desc = "USA_THOMAS_KINKAID_NAVY_DESC"
+	portrait_path = "gfx/leaders/NEE/Portrait_NEE_thomas_kinkaid.tga"
+	traits = {ironside bold}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 3
+	id = 996
+}
+
+create_navy_leader = {# William D. Leahy
+	name = "William D. Leahy"
+	desc = "USA_WILLIAM_LEAHY_NAVY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_william_leahy.tga"
+	traits = {
+		old_guard_navy
+		superior_tactician
+		ironside
+		fleet_protector
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 4
+	id = 990
+}
+
+create_navy_leader = {# Chester W. Nimitz
+	name = "Chester W. Nimitz"
+	desc = "USA_CHESTER_NIMITZ_NAVY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Chester_Nimitz_KR.tga"
+	traits = {
+		superior_tactician
+		seawolf
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+	id = 62
+}
+
+create_navy_leader = {# Ernest King
+	name = "Ernest King"
+	desc = "USA_ERNEST_KING_NAVY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Ernest_King_KR.tga"
+	traits = {
+		superior_tactician
+		ironside
+		blockade_runner
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 4
+	id = 65
+}
+
+create_navy_leader = {# Harold Rainsford Stark
+	name = "Harold Rainsford Stark"
+	desc = "USA_HAROLD_RAINSFORD_STARK_NAVY_DESC"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Harold_Stark_KR.tga"
+	traits = {old_guard_navy spotter}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+	id = 991
+}
+
+create_navy_leader = {# Samuel Murray Robinson
+	name = "Samuel Murray Robinson"
+	desc = "USA_SAMUEL_ROBINSON_NAVY_DESC"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_samuel_robinson.tga"
+	traits = {old_guard_navy navy_career_officer chief_engineer}
+	skill = 3
+	attack_skill = 1
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+	id = 66
+}
+
+create_navy_leader = {# James O. Richardson
+	name = "James O. Richardson"
+	desc = "USA_JAMES_RICHARDSON_NAVY_DESC"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_james_richardson.tga"
+	traits = {old_guard_navy superior_tactician blue_water_expert}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 3
+	id = 992
+}
+
+create_navy_leader = {# David W. Bagley
+	name = "David W. Bagley"
+	desc = "USA_DAVID_BAGLEY_NAVY_DESC"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_david_bagley.tga"
+	traits = {fleet_protector fly_swatter}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+	id = 993
+}
+
+create_navy_leader = {# John S. McCain Sr.
+	name = "John S. McCain Sr."
+	desc = "TEX_JOHN_MCCAIN_NAVY_DESC"
+	portrait_path = "gfx/leaders/TEX/Portrait_TEX_john_mccain.tga"
+	traits = {
+		superior_tactician
+		aviation_enthusiast
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+	id = 994
+}
+
+### Event Targets ###
+random_army_leader = {
+	limit = { has_id = 59 }
+	save_global_event_target_as = USA_George_Van_Horn_Moseley
+}
+random_army_leader = {
+	limit = { has_id = 60 }
+	save_global_event_target_as = CSA_Smedley_Butler
+}
+
+### Operatives ###
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_operative_leader = {
+		name = "William J. Donovan"
+		GFX = GFX_portrait_kr_william_donovan
+		traits = {
+			operative_natural_orator
+			operative_tough
+		}
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { CSA USA TEX PSA NEE }
+	}
+}
+
+USA_start_naval_variant = yes
