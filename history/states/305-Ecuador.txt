@@ -9,8 +9,6 @@ state = {
 	}
 
 	history = {
-		owner = ECU
-		add_core_of = ECU
 		victory_points = {
 			12798 15
 		}
