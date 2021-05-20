@@ -1,0 +1,38 @@
+state = {
+	id = 160
+	name = "STATE_160"
+	manpower = 3349800
+	state_category = eight
+
+	resources = {
+		steel = 25
+		aluminium = 14
+	}
+
+	history = {
+		owner = ITA
+		add_core_of = ITA
+		add_claim_by = SRI
+		victory_points = {
+			603 3
+		}
+		victory_points = {
+			11584 20
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 1
+			dockyard = 1
+			air_base = 3
+			11584 = {
+				naval_base = 6
+				bunker = 1
+			}
+		}
+	}
+
+	provinces = {
+		603 3604 9582 11584
+	}
+}

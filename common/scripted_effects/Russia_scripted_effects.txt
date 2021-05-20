@@ -1,0 +1,883 @@
+RUS_setup_civil_war = {
+	hidden_effect = {
+		set_country_flag = Aleksandr_Kazakov_dead
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 195 #Petrograd
+					state = 205 #Kaluga
+					state = 208 #Luga
+					state = 209 #Pskov
+					state = 210 #Velikiye Luki
+					state = 219 #Moscow
+					state = 220 #Kursk
+					state = 222 #Orel
+					state = 223 #Tula
+					state = 224 #Bryansk
+					state = 242 #Smolensk
+					state = 243 #Roslavl
+					state = 244 #Volkhov
+					state = 246 #Rzhev
+					state = 247 #Tver
+					state = 248 #Yaroslavl
+					state = 253 #Vladimir
+					state = 254 #Ryazan
+					state = 258 #Lipetsk
+					state = 263 #Novgorod
+					state = 755 #Vitebsk
+					state = 880 #Dvinsk
+					state = 252 #Nizhny Novgorod
+					state = 257 #Tambov
+					state = 260 #Voronezh
+					state = 240 #Belgorod
+					AND = {
+						ROOT = { has_government = paternal_autocrat }
+						OR = {
+							state = 239 #Saratov
+							state = 250 #Simbisrk
+							state = 255 #Penza
+							state = 256 #Cheboksary
+							state = 265 #Kamyshin
+						}
+					}
+				}
+			}
+			SOV = { add_state_core = PREV }
+		}
+		release = SOV
+		delete_unit_template_and_units = { division_template = "Tankovaya Diviziya" }
+		set_temp_variable = { SOV_unit_fraction = 0.45 }
+		if = {
+			limit = { is_ai = yes }
+			add_to_temp_variable = { SOV_unit_fraction = 0.3 }
+		}
+		else_if = {
+			limit = { has_government = paternal_autocrat }
+			add_to_temp_variable = { SOV_unit_fraction = 0.1 }
+		}
+		transfer_units_fraction = {
+			target = SOV
+			size = var:SOV_unit_fraction
+			navy_ratio = 0
+			keep_unit_leaders_trigger = { always = yes }
+		}
+		SOV = {
+			set_major = yes
+			transfer_technology_without_doctrines = yes
+			transfer_navy = { target = RUS }
+			add_ideas = SOV_chaotic_revolution
+			country_lock_all_division_template = yes
+			add_state_claim = 329 #Tuva
+		}
+		219 = { #Moscow
+			create_unit = {
+				division = "division_template = \"Tankovaya Diviziya\" start_experience_factor = 0.34 start_equipment_factor = 0.96"
+				owner = SOV
+				prioritize_location = 6380
+			}
+			create_unit = {
+				division = "division_template = \"Tankovaya Diviziya\" start_experience_factor = 0.32 start_equipment_factor = 0.98"
+				owner = SOV
+				prioritize_location = 6380
+			}
+			create_unit = {
+				division = "division_template = \"Tankovaya Diviziya\" start_experience_factor = 0.32 start_equipment_factor = 0.99"
+				owner = SOV
+				prioritize_location = 6380
+			}
+		}
+		for_each_scope_loop = {
+			array = SOV.owned_states
+			remove_core_of = RUS
+			add_claim_by = RUS
+			teleport_armies = {
+				limit = { tag = RUS }
+				to_state_array = owned_controlled_states
+			}
+		}
+		for_each_scope_loop = {
+			array = RUS.core_states
+			add_core_of = SOV
+		}
+		every_state = {
+			limit = { is_claimed_by = RUS }
+			add_claim_by = SOV
+		}
+		set_major = yes
+	}
+}
+
+RUS_add_stability = {
+	if = {
+		limit = {
+			has_stability > 0.1
+		}
+		add_stability = 0.05
+	}
+	else_if = {
+		limit = {
+			has_stability > -0.1
+		}
+		add_stability = 0.1
+	}
+	else_if = {
+		limit = {
+			has_stability > -0.3
+		}
+		add_stability = 0.15
+	}
+	else_if = {
+		limit = {
+			has_stability > -0.5
+		}
+		add_stability = 0.2
+	}
+	else = {
+		add_stability = 0.25
+	}
+}
+
+RUS_setup_tsar_kirill = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = Kirill_Romanov_dead }
+		}
+		create_country_leader = {
+			name = "Kirill I"
+			desc = "POLITICS_KYRIL_ROMANOV_CON_DESC"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Kyril_Romanov.tga"
+			expire = "1965.1.1"
+			ideology = social_democrat_subtype
+		}
+		create_country_leader = {
+			name = "Kirill I"
+			desc = "POLITICS_KYRIL_ROMANOV_CON_DESC"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Kyril_Romanov.tga"
+			expire = "1965.1.1"
+			ideology = social_liberal_subtype
+		}
+		create_country_leader = {
+			name = "Kirill I"
+			desc = "POLITICS_KYRIL_ROMANOV_CON_DESC"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Kyril_Romanov.tga"
+			expire = "1965.1.1"
+			ideology = market_liberal_subtype
+		}
+		create_country_leader = {
+			name = "Kirill I"
+			desc = "POLITICS_KYRIL_ROMANOV_CON_DESC"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Kyril_Romanov.tga"
+			expire = "1965.1.1"
+			ideology = social_conservative_subtype
+		}
+		create_country_leader = {
+			name = "Kirill I"
+			desc = "POLITICS_KYRIL_ROMANOV_CON_DESC"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Kyril_Romanov.tga"
+			expire = "1965.1.1"
+			ideology = authoritarian_democrat_subtype
+		}
+		create_country_leader = {
+			name = "Kirill I"
+			desc = "POLITICS_KYRIL_ROMANOV_CON_DESC"
+			picture = "gfx/leaders/RUS/Portrait_RUS_Kyril_Romanov.tga"
+			expire = "1965.1.1"
+			ideology = paternal_autocrat_subtype
+		}
+	}
+	else = {
+		RUS_setup_tsar_vladimir = yes
+	}
+}
+
+RUS_setup_tsar_vladimir = {
+	create_country_leader = {
+		name = "Vladimir III"
+		desc = "POLITICS_VLADIMIR_ROMANOV_CON_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Romanov.tga"
+		expire = "1965.1.1"
+		ideology = social_democrat_subtype
+	}
+	create_country_leader = {
+		name = "Vladimir III"
+		desc = "POLITICS_VLADIMIR_ROMANOV_CON_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Romanov.tga"
+		expire = "1965.1.1"
+		ideology = social_liberal_subtype
+	}
+	create_country_leader = {
+		name = "Vladimir III"
+		desc = "POLITICS_VLADIMIR_ROMANOV_CON_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Romanov.tga"
+		expire = "1965.1.1"
+		ideology = market_liberal_subtype
+	}
+	create_country_leader = {
+		name = "Vladimir III"
+		desc = "POLITICS_VLADIMIR_ROMANOV_CON_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Romanov.tga"
+		expire = "1965.1.1"
+		ideology = social_conservative_subtype
+	}
+	create_country_leader = {
+		name = "Vladimir III"
+		desc = "POLITICS_VLADIMIR_ROMANOV_CON_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Romanov.tga"
+		expire = "1965.1.1"
+		ideology = authoritarian_democrat_subtype
+	}
+	create_country_leader = {
+		name = "Vladimir III"
+		desc = "POLITICS_VLADIMIR_ROMANOV_CON_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Romanov.tga"
+		expire = "1965.1.1"
+		ideology = paternal_autocrat_subtype
+	}
+}
+
+RUS_setup_tsar_dmitriy = {
+	create_country_leader = {
+		name = "Dmitriy III"
+		desc = "POLITICS_DMITRI_ROMANOV_TSAR_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Dmitri_Romanov_Tsar.tga"
+		expire = "1965.1.1"
+		ideology = social_democrat_subtype
+		traits = {
+			RUS_autocratic_charmer
+		}
+	}
+	create_country_leader = {
+		name = "Dmitriy III"
+		desc = "POLITICS_DMITRI_ROMANOV_TSAR_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Dmitri_Romanov_Tsar.tga"
+		expire = "1965.1.1"
+		ideology = social_liberal_subtype
+		traits = {
+			RUS_autocratic_charmer
+		}
+	}
+	create_country_leader = {
+		name = "Dmitriy III"
+		desc = "POLITICS_DMITRI_ROMANOV_TSAR_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Dmitri_Romanov_Tsar.tga"
+		expire = "1965.1.1"
+		ideology = market_liberal_subtype
+		traits = {
+			RUS_autocratic_charmer
+		}
+	}
+	create_country_leader = {
+		name = "Dmitriy III"
+		desc = "POLITICS_DMITRI_ROMANOV_TSAR_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Dmitri_Romanov_Tsar.tga"
+		expire = "1965.1.1"
+		ideology = social_conservative_subtype
+		traits = {
+			RUS_autocratic_charmer
+		}
+	}
+	create_country_leader = {
+		name = "Dmitriy III"
+		desc = "POLITICS_DMITRI_ROMANOV_TSAR_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Dmitri_Romanov_Tsar.tga"
+		expire = "1965.1.1"
+		ideology = authoritarian_democrat_subtype
+		traits = {
+			RUS_autocratic_charmer
+		}
+	}
+	create_country_leader = {
+		name = "Dmitriy III"
+		desc = "POLITICS_DMITRI_ROMANOV_TSAR_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Dmitri_Romanov_Tsar.tga"
+		expire = "1965.1.1"
+		ideology = paternal_autocrat_subtype
+		traits = {
+			RUS_autocratic_charmer
+		}
+	}
+}
+
+RUS_setup_tsar_wrangel = {
+	create_country_leader = {
+		name = "Pyetr IV"
+		desc = "POLITICS_PYOTR_WRANGEL_TSAR_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel_Tsar.tga"
+		expire = "1965.1.1"
+		ideology = social_democrat_subtype
+		traits = {
+			RUS_black_baron
+		}
+	}
+	create_country_leader = {
+		name = "Pyetr IV"
+		desc = "POLITICS_PYOTR_WRANGEL_TSAR_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel_Tsar.tga"
+		expire = "1965.1.1"
+		ideology = social_liberal_subtype
+		traits = {
+			RUS_black_baron
+		}
+	}
+	create_country_leader = {
+		name = "Pyetr IV"
+		desc = "POLITICS_PYOTR_WRANGEL_TSAR_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel_Tsar.tga"
+		expire = "1965.1.1"
+		ideology = market_liberal_subtype
+		traits = {
+			RUS_black_baron
+		}
+	}
+	create_country_leader = {
+		name = "Pyetr IV"
+		desc = "POLITICS_PYOTR_WRANGEL_TSAR_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel_Tsar.tga"
+		expire = "1965.1.1"
+		ideology = social_conservative_subtype
+		traits = {
+			RUS_black_baron
+		}
+	}
+	create_country_leader = {
+		name = "Pyetr IV"
+		desc = "POLITICS_PYOTR_WRANGEL_TSAR_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel_Tsar.tga"
+		expire = "1965.1.1"
+		ideology = authoritarian_democrat_subtype
+		traits = {
+			RUS_black_baron
+		}
+	}
+	create_country_leader = {
+		name = "Pyetr IV"
+		desc = "POLITICS_PYOTR_WRANGEL_TSAR_DESC"
+		picture = "gfx/leaders/RUS/Portrait_RUS_Pyotr_Wrangel_Tsar.tga"
+		expire = "1965.1.1"
+		ideology = paternal_autocrat_subtype
+		traits = {
+			RUS_black_baron
+		}
+	}
+}
+
+RUS_set_zemstvo_result_social = {
+	hidden_effect = {
+		random_list = {
+			33 = { set_country_flag = RUS_zemstvo_hospital } #stability
+			33 = { set_country_flag = RUS_zemstvo_schools } #pp
+			33 = { set_country_flag = RUS_zemstvo_housing } #war support
+		}
+		random = {
+			chance = 25
+			set_country_flag = RUS_zemstvo_failure
+			random_list = {
+				50 = { set_country_flag = RUS_zemstvo_failure_1 }
+				50 = { set_country_flag = RUS_zemstvo_failure_2 }
+			}
+		}
+	}
+}
+
+RUS_set_zemstvo_result_industry = {
+	hidden_effect = {
+		random_list = {
+			20 = { set_country_flag = RUS_zemstvo_civilian_industry } #civilian factories
+			20 = {
+				modifier = {
+					factor = 0
+					NOT = { has_completed_focus = RUS_War_Preparations_Programme }
+				}
+				set_country_flag = RUS_zemstvo_military_industry #military factories
+			}
+			20 = { set_country_flag = RUS_zemstvo_infrastructure } #infrastructure
+			20 = { set_country_flag = RUS_zemstvo_agriculture } #building slots
+			15 = {
+				modifier = {
+					factor = 0
+					NOT = { has_idea = RUS_large_zemstvo_investment }
+				}
+				set_country_flag = RUS_zemstvo_synthetics  #refinery
+			}
+		}
+		random = {
+			chance = 30
+			set_country_flag = RUS_zemstvo_failure
+			random_list = {
+				33 = { set_country_flag = RUS_zemstvo_failure_1 }
+				33 = { set_country_flag = RUS_zemstvo_failure_2 }
+				33 = { set_country_flag = RUS_zemstvo_failure_3 }
+			}
+		}
+	}
+}
+
+RUS_set_zemstvo_result_research = {
+	hidden_effect = {
+		random_list = {
+			30 = { set_country_flag = RUS_zemstvo_industry_research }
+			20 = { set_country_flag = RUS_zemstvo_industry_research_bonus }
+			30 = { set_country_flag = RUS_zemstvo_military_research }
+			20 = { set_country_flag = RUS_zemstvo_military_research_bonus }
+		}
+		random = {
+			chance = 40
+			set_country_flag = RUS_zemstvo_failure
+		}
+	}
+}
+
+#choosing number of states affected
+RUS_pick_zemstvo_states = {
+	random_owned_controlled_state = {
+		limit = {
+			RUS_choose_zemstvo_group = yes
+			RUS_has_free_building_slots = yes
+		}
+		save_event_target_as = RUS_zemstvo_state_1
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = RUS_increased_zemstvo_investment
+				has_idea = RUS_large_zemstvo_investment
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				RUS_choose_zemstvo_group = yes
+				RUS_has_free_building_slots = yes
+				NOT = { state = event_target:RUS_zemstvo_state_1 }
+			}
+			save_event_target_as = RUS_zemstvo_state_2
+		}
+	}
+	if = {
+		limit = { has_idea = RUS_large_zemstvo_investment }
+		random_owned_controlled_state = {
+			limit = {
+				RUS_choose_zemstvo_group = yes
+				RUS_has_free_building_slots = yes
+				NOT = {
+					state = event_target:RUS_zemstvo_state_1
+					state = event_target:RUS_zemstvo_state_2
+				}
+			}
+			save_event_target_as = RUS_zemstvo_state_3
+		}
+	}
+}
+
+RUS_zemstvo_events = {
+	if = {
+		limit = {
+			NOT = { has_completed_focus = RUS_National_Investment_Bank }
+		}
+		RUS_zemstvo_focus_events = yes
+	}
+	else = {
+		country_event = rusd.57
+	}
+}
+
+RUS_zemstvo_focus_events = {
+	if = {
+		limit = {
+			OR = {
+				has_completed_focus = RUS_Local_Development
+				has_completed_focus = RUS_War_Preparations_Programme
+				has_completed_focus = RUS_Zemstvo_Research_Initiatives
+			}
+		}
+		country_event = rusd.58
+	}
+	else = {
+		RUS_set_zemstvo_result_social = yes
+	}
+}
+
+RUS_calculate_zemstva_variables = {
+	set_temp_variable = { RUS_zemstvo_base_value = 25 }
+	if = {
+		limit = { has_idea = RUS_increased_zemstvo_investment }
+		add_to_temp_variable = { RUS_zemstvo_base_value = 25 }
+	}
+	if = {
+		limit = { has_idea = RUS_large_zemstvo_investment }
+		add_to_temp_variable = { RUS_zemstvo_base_value = 50 }
+	}
+}
+
+RUS_clear_zemstvo_data = {
+	clr_country_flag = RUS_funding_zemstva
+
+	clr_country_flag = RUS_zemstvo_failure
+	clr_country_flag = RUS_zemstvo_failure_1
+	clr_country_flag = RUS_zemstvo_failure_2
+	clr_country_flag = RUS_zemstvo_failure_3
+
+	#locations
+	clr_country_flag = RUS_northern_zemstva
+	clr_country_flag = RUS_southern_zemstva
+	clr_country_flag = RUS_eastern_zemstva
+	clr_country_flag = RUS_ural_zemstva
+
+	#bureaucracy
+	clr_country_flag = RUS_zemstvo_schools
+	clr_country_flag = RUS_zemstvo_hospital
+	clr_country_flag = RUS_zemstvo_housing
+
+	#industry
+	clr_country_flag = RUS_zemstvo_civilian_industry
+	clr_country_flag = RUS_zemstvo_military_industry
+	clr_country_flag = RUS_zemstvo_infrastructure
+	clr_country_flag = RUS_zemstvo_agriculture
+	clr_country_flag = RUS_zemstvo_synthetics
+
+	#research
+	clr_country_flag = RUS_zemstvo_industry_research
+	clr_country_flag = RUS_zemstvo_industry_research_bonus
+	clr_country_flag = RUS_zemstvo_military_research
+	clr_country_flag = RUS_zemstvo_military_research_bonus
+
+	#remove ideas
+	hidden_effect = {
+		remove_ideas = {
+			RUS_increased_zemstvo_investment
+			RUS_large_zemstvo_investment
+		}
+	}
+
+	#unlock the decisions
+	clr_country_flag = RUS_funding_zemstva
+}
+
+RUS_zemstvo_add_civilian_factory = {
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = industrial_complex
+		level = 1
+		instant_build = yes
+	}
+}
+RUS_zemstvo_add_military_factory = {
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}
+}
+RUS_zemstvo_add_infrastructure = {
+	add_building_construction = {
+		type = infrastructure
+		level = 1
+		instant_build = yes
+	}
+}
+
+RUS_reduce_black_monday = {
+	if = {
+		limit = { has_idea = RUS_economic_depression_1 }
+		hidden_effect = {
+			country_event = {
+				id = rusd.121
+				days = 25
+				random_days = 25
+			}
+		}
+	}
+	else_if = {
+		limit = { has_idea = RUS_economic_depression_2 }
+		swap_ideas = {
+			remove_idea = RUS_economic_depression_2
+			add_idea = RUS_economic_depression_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = RUS_economic_depression_3 }
+		swap_ideas = {
+			remove_idea = RUS_economic_depression_3
+			add_idea = RUS_economic_depression_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = RUS_economic_depression_4 }
+		swap_ideas = {
+			remove_idea = RUS_economic_depression_4
+			add_idea = RUS_economic_depression_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = RUS_economic_depression_5 }
+		remove_ideas = RUS_economic_depression_5
+	}
+}
+
+SOV_reduce_civil_war_devastation = {
+	if = {
+		limit = { has_idea = SOV_aftermath_of_the_civil_war_5 }
+		remove_ideas = SOV_aftermath_of_the_civil_war_5
+	}
+	else_if = {
+		limit = { has_idea = SOV_aftermath_of_the_civil_war_4 }
+		swap_ideas = {
+			remove_idea = SOV_aftermath_of_the_civil_war_4
+			add_idea = SOV_aftermath_of_the_civil_war_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = SOV_aftermath_of_the_civil_war_3 }
+		swap_ideas = {
+			remove_idea = SOV_aftermath_of_the_civil_war_3
+			add_idea = SOV_aftermath_of_the_civil_war_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SOV_aftermath_of_the_civil_war_2 }
+		swap_ideas = {
+			remove_idea = SOV_aftermath_of_the_civil_war_2
+			add_idea = SOV_aftermath_of_the_civil_war_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SOV_aftermath_of_the_civil_war_1 }
+		swap_ideas = {
+			remove_idea = SOV_aftermath_of_the_civil_war_1
+			add_idea = SOV_aftermath_of_the_civil_war_2
+		}
+	}
+}
+
+RUS_setup_attack_AI_GER = {
+	hidden_effect = {
+		for_each_scope_loop = {
+			array = FROM.faction_members
+			if = {
+				limit = {
+					OR = {
+						is_in_europe = yes
+						tag = DKB
+						tag = GEO
+						tag = AZR
+					}
+					is_neighbor_of = ROOT
+					ROOT = { can_declare_war_on = PREV }
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+				ROOT = {
+					set_country_flag = RUS_prepare_for_war_@PREV
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = PREV
+						value = 1000
+					}
+				}
+			}
+		}
+	}
+}
+
+clear_decision_attack_AI_GER = {
+	hidden_effect = {
+		every_other_country = {
+			limit = {
+				ROOT = { has_country_flag = RUS_prepare_for_war_@PREV }
+			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = ROOT
+				value = -1000
+			}
+			ROOT = {
+				clr_country_flag = RUS_prepare_for_war_@PREV
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = PREV
+					value = -1000
+				}
+			}
+		}
+	}
+}
+
+TRM_replace_dream_idea = {
+	if = {
+		limit = { has_idea = TRM_dream_1 }
+		remove_ideas = TRM_dream_1
+	}
+	else_if = {
+		limit = { has_idea = TRM_dream_2 }
+		remove_ideas = TRM_dream_2
+	}
+	else_if = {
+		limit = { has_idea = TRM_dream_3 }
+		swap_ideas = {
+			remove_idea = TRM_dream_3
+			add_idea = TRM_legacy_of_transamur_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = TRM_dream_4 }
+		swap_ideas = {
+			remove_idea = TRM_dream_4
+			add_idea = TRM_legacy_of_transamur_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = TRM_dream_5 }
+		swap_ideas = {
+			remove_idea = TRM_dream_5
+			add_idea = TRM_legacy_of_transamur_3
+		}
+	}
+}
+
+TRM_submits_to_japan = {
+	if = {
+		limit = { has_idea = TRM_kolchak }
+		remove_ideas = TRM_kolchak
+	}
+	TRM_replace_dream_idea = yes
+	hidden_effect = {
+		unlock_national_focus = TRM_Aftermath_Of_The_Coup
+		if = {
+			limit = {
+				OR = {
+					has_completed_focus = TRM_All_Power_To_The_Admiral
+					has_completed_focus = TRM_New_Leadership
+					has_completed_focus = TRM_Victory_For_Democracy
+				}
+			}
+			unlock_national_focus = TRM_Vladivostok_Under_Japan
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			TRM_Grigoriy_M_Semyenov_hog_pau
+			TRM_Boris_Bakhmetev_for_ade
+			TRM_Dmitriy_Lebedev_eco_pau
+			TRM_Arkady_Udintsev_sec_pau
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_claim_or_core_of_PREV = yes
+					has_variable = ambition_area_@PREV
+				}
+				NOT = {
+					is_owned_by = PREV
+					state = 408 #Vladivostok
+					state = 409 #Khabarovsk
+				}
+			}
+			remove_core_of = PREV
+			remove_claim_by = PREV
+			clear_variable = ambition_area_@PREV
+		}
+	}
+}
+
+TRM_rebels_against_japan = {
+	diplomatic_relation = {
+		country = TRM
+		relation = guarantee
+		active = no
+	}
+	hidden_effect = {
+		TRM = {
+			add_state_claim = 537 #Sakhalin
+			remove_ideas = {
+				TRM_economic_ties_to_japan_0
+				TRM_economic_ties_to_japan_1
+				TRM_economic_ties_to_japan_2
+				TRM_economic_ties_to_japan_3
+				TRM_economic_ties_to_japan_4
+				TRM_economic_ties_to_japan_5
+				TRM_economic_ties_to_japan_6
+				TRM_economic_ties_to_japan_7
+				TRM_economic_ties_to_japan_8
+				TRM_economic_ties_to_japan_9
+				TRM_economic_ties_to_japan_10
+				hino_automobile
+				nakajima_factory_vladivostok
+			}
+			remove_from_tech_sharing_group = japan_research
+		}
+	}
+}
+
+TRM_remove_japan_ideas = {
+	add_state_claim = 537 #Sakhalin
+	JAP = {
+		diplomatic_relation = {
+			country = ROOT
+			relation = guarantee
+			active = no
+		}
+	}
+	if = {
+		limit = { has_idea = TRM_economic_ties_to_japan_0 }
+		remove_ideas = TRM_economic_ties_to_japan_0
+	}
+	else_if = {
+		limit = { has_idea = TRM_economic_ties_to_japan_1 }
+		remove_ideas = TRM_economic_ties_to_japan_1
+	}
+	else_if = {
+		limit = { has_idea = TRM_economic_ties_to_japan_2 }
+		remove_ideas = TRM_economic_ties_to_japan_2
+	}
+	else_if = {
+		limit = { has_idea = TRM_economic_ties_to_japan_3 }
+		remove_ideas = TRM_economic_ties_to_japan_3
+	}
+	else_if = {
+		limit = { has_idea = TRM_economic_ties_to_japan_4 }
+		remove_ideas = TRM_economic_ties_to_japan_4
+	}
+	else_if = {
+		limit = { has_idea = TRM_economic_ties_to_japan_5 }
+		remove_ideas = TRM_economic_ties_to_japan_5
+	}
+	else_if = {
+		limit = { has_idea = TRM_economic_ties_to_japan_6 }
+		remove_ideas = TRM_economic_ties_to_japan_6
+	}
+	else_if = {
+		limit = { has_idea = TRM_economic_ties_to_japan_7 }
+		remove_ideas = TRM_economic_ties_to_japan_7
+	}
+	else_if = {
+		limit = { has_idea = TRM_economic_ties_to_japan_8 }
+		remove_ideas = TRM_economic_ties_to_japan_8
+	}
+	else_if = {
+		limit = { has_idea = TRM_economic_ties_to_japan_9 }
+		remove_ideas = TRM_economic_ties_to_japan_9
+	}
+	else_if = {
+		limit = { has_idea = TRM_economic_ties_to_japan_10 }
+		remove_ideas = TRM_economic_ties_to_japan_10
+	}
+	if = {
+		limit = { has_idea = hino_automobile }
+		remove_ideas = hino_automobile
+	}
+	if = {
+		limit = { has_idea = nakajima_factory_vladivostok }
+		remove_ideas = nakajima_factory_vladivostok
+	}
+	if = {
+		limit = { is_in_tech_sharing_group = japan_research }
+		remove_from_tech_sharing_group = japan_research
+	}
+}
+

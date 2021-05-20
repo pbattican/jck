@@ -1,0 +1,122 @@
+﻿division_template = {
+	name = "Royal Guard"
+	division_names_group = AFG_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Militia"
+	division_names_group = AFG_MIL_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+	}
+	template_counter = 68
+}
+division_template = {
+	name = "Tribal Riders"
+	division_names_group = AFG_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 2078
+		division_template = "Militia"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.5
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 2078
+		division_template = "Militia"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.5
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10737
+		division_template = "Militia"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.8
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 10737
+		division_template = "Militia"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.7
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 100
+		}
+		location = 10737
+		division_template = "Royal Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+}
+
+air_wings = {
+
+	445 = {
+		fighter_equipment_0 = {
+			owner = "PER"
+			amount = 50
+		}
+		tac_bomber_equipment_0 = {
+			owner = "PER"
+			amount = 25
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+		}
+		requested_factories = 2
+		progress = 0.82
+		efficiency = 100
+	}
+}

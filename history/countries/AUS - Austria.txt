@@ -1,0 +1,607 @@
+﻿capital = 4
+
+oob = "AUS"
+set_naval_oob= "AUS_naval"
+set_cosmetic_tag = AUS_empire
+
+set_research_slots = 4
+
+set_technology = {
+	### General ###
+	electronic_mechanical_engineering = 1
+
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+
+	### Infantry ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	motorised_infantry = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+
+	### Air ###
+	early_fighter = 1
+	naval_bomber1 = 1
+}
+
+### Navy - MtG ###
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		weltkrieg_light_ship_hull = 1
+		contact_mine = 1
+		light_ship_hull_1936 = 1
+		weltkrieg_cruiser_hull = 1
+		cruiser_hull_1936 = 1
+		weltkrieg_submarine_hull = 1
+		submarine_hull_1936 = 1
+		cruiser_submarine = 1
+		carrier_conversion = 1
+		ship_hull_revived_ac = 1
+		weltkrieg_heavy_ship_hull = 1
+		heavy_ship_hull_1936 = 1
+
+		## Modules##
+		early_torpedo = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+		light_battery_one = 1
+		improved_ship_torpedo_launcher = 1
+		basic_cruiser_armor_scheme = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+		basic_heavy_armor_scheme = 1
+		capital_gunnery_one = 1
+		weltkrieg_naval_gunnery = 1
+		naval_ammo_one = 1
+
+		### Transport ###
+		transport = 1
+	}
+}
+
+### Navy - Non MtG ###
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		weltkrieg_destroyer_nonmtg = 1
+		interwar_destroyer_nonmtg = 1
+		weltkrieg_cruiser_nonmtg = 1
+		interwar_cruiser_nonmtg = 1
+		weltkrieg_submarine_nonmtg = 1
+		interwar_submarine_nonmtg = 1
+		weltkrieg_armored_cruiser_nonmtg = 1
+		interwar_armored_cruiser_nonmtg = 1
+		weltkrieg_fast_battleship_nonmtg = 1
+		interwar_fast_battleship_nonmtg = 1
+		weltkrieg_dreadnought_nonmtg = 1
+		super_heavy_dreadnought_nonmtg = 1
+
+		### Transport ###
+		transport_n = 1
+	}
+}
+
+add_opinion_modifier = { target = LEC modifier = LEC_member }
+LEC = { give_military_access = AUS }
+give_guarantee = LEC
+add_to_array = { LEC.guarantor_array = AUS }
+diplomatic_relation = { country = GER relation = non_aggression_pact }
+set_country_flag = legation_council_vote
+
+country_event = { id = austria.1 days = 1 } # Intro event
+country_event = { id = aus.elections.1 days = 41 } #Austrian Elections of 1936
+country_event = { id = ausgleich.new.100 days = 470 } # Ausgleich of 1937
+country_event = { id = literature.1 days = 761 } #Alamut - newest book of Vladimir Bartol
+country_event = { id = austria.3 days = 4108 } #Death of Karl I
+
+set_war_support = 0.1
+
+set_politics = {
+	ruling_party = social_conservative
+	last_election = "1930.3.9"
+	election_frequency = 72
+	elections_allowed = yes
+}
+
+set_popularities = {
+	totalist = 0
+	syndicalist = 0
+	radical_socialist = 4
+	social_democrat = 37
+	social_liberal = 3
+	market_liberal = 4
+	social_conservative = 47
+	authoritarian_democrat = 3
+	paternal_autocrat = 2
+	national_populist = 0
+}
+
+set_convoys = 50
+
+set_autonomy = {
+	target = HUN
+	autonomy_state = kr_crownland
+}
+set_autonomy = {
+	target = CZE
+	autonomy_state = kr_crownland
+}
+set_autonomy = {
+	target = CRO
+	autonomy_state = kr_crownland
+}
+set_autonomy = {
+	target = GAL
+	autonomy_state = kr_crownland
+}
+set_autonomy = {
+	target = ITA
+	autonomy_state = kr_autonomous_puppet
+}
+
+add_ideas = {
+	AUS_financial_ties_broken
+	AUS_k_u_k_armee_bonus
+	AUS_vienna_circle
+
+	### Minister
+	AUS_Albert_von_Mensdorff_Pouilly_Dietrichstein_hog_ade
+	AUS_Edmund_Glaise_von_Horstenau_for_ade
+	AUS_Carl_Vaugoin_eco_sco
+	AUS_Richard_Schmitz_sec_sco
+	limited_conscription
+}
+
+set_stability = 0.55
+
+create_country_leader = {
+	name = "Alfred Klahr"
+	picture = "Portrait_AUS_Alfred_Klahr.dds"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+}
+
+create_country_leader = {
+	name = "Pierre Ramus"
+	picture = "Portrait_AUS_Pierre_Ramus.dds"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+}
+
+create_country_leader = {
+	name = "Friedrich Adler"
+	picture = "Portrait_AUS_Friedrich_Adler.dds"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+}
+
+create_country_leader = {
+	name = "Karl Renner"
+	picture = "Portrait_AUS_Karl_Renner.dds"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+}
+
+create_country_leader = {
+	name = "Karl I"
+	desc = "POLITICS_KARL_DESC"
+	picture = "Portrait_AUS_Karl_I.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+}
+
+create_country_leader = {
+	name = "Karl I"
+	desc = "POLITICS_KARL_DESC"
+	picture = "Portrait_AUS_Karl_I.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+}
+
+create_country_leader = {
+	name = "Karl I"
+	desc = "POLITICS_KARL_DESC"
+	picture = "Portrait_AUS_Karl_I.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+}
+
+create_country_leader = {
+	name = "Wilhelm Miklas"
+	picture = "Portrait_AUS_Wilhelm_Miklas.dds"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+}
+
+create_country_leader = {
+	name = "Karl I"
+	desc = "POLITICS_KARL_DESC"
+	picture = "Portrait_AUS_Karl_I.tga"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+}
+
+create_country_leader = {
+	name = "Wilhelm Miklas"
+	picture = "Portrait_AUS_Wilhelm_Miklas.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+}
+
+create_country_leader = {
+	name = "Karl I"
+	desc = "POLITICS_KARL_DESC"
+	picture = "Portrait_AUS_Karl_I.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+}
+
+create_country_leader = {
+	name = "Franz Dinghofer"
+	picture = "Portrait_AUS_Franz_Dinghofer.dds"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+}
+
+create_country_leader = {
+	name = "Karl I"
+	desc = "POLITICS_KARL_DESC"
+	picture = "Portrait_AUS_Karl_I.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+}
+
+create_country_leader = {
+	name = "Franz Dinghofer"
+	picture = "Portrait_AUS_Franz_Dinghofer.dds"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+}
+
+###########################
+### Generals & Admirals ###
+###########################
+
+### Field Marshals ###
+create_field_marshal = {
+	name = "Eugen von Habsburg-Lothringen"
+	desc = "AUS_ARCHDUKE_EUGEN_ARMY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Eugen_Habsburg_Lothringen.tga"
+	traits = {
+		old_guard
+		war_hero
+		offensive_doctrine
+		skilled_staffer
+		expert_delegator
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "Joseph von Habsburg-Lothringen"
+	desc = "AUS_ARCHDUKE_JOSEPH_ARMY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Joseph_August_von_Habsburg.tga"
+	traits = {
+		war_hero
+		trait_reckless
+		inflexible_strategist
+		unyielding_defender
+		inspirational_leader
+	}
+	skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_field_marshal = {
+	name = "Alfred Jansa von Tannenau"
+	desc = "AUS_ALFRED_JANSA_ARMY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Alfred_Jansa.tga"
+	traits = {
+		skilled_staffer
+		expert_delegator
+		organizer
+	}
+	skill = 3
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+### Corps Commanders ###
+create_corps_commander = {
+	name = "Erhard Raus"
+	desc = "AUS_ERHARD_RAUS_ARMY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Erhard_Raus.tga"
+	traits = {
+		armor_officer
+		organizer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Lothar Rendulic"
+	desc = "AUS_LOTHAR_RENDULIC_ARMY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Lothar_Rendulic.tga"
+	traits = {
+		harsh_leader
+		armor_officer
+		commando
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Karl Eglseer"
+	desc = "AUS_KARL_EGLSEER_ARMY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Karl_Eglseer.tga"
+	traits = {
+		trait_reckless
+		trait_mountaineer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Julius Ringel"
+	desc = "AUS_JULIUS_RINGEL_ARMY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Julius_Ringel.tga"
+	traits = {
+		harsh_leader
+		trait_mountaineer
+		commando
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Franz Böhme"
+	desc = "AUS_FRANZ_BOEHME_ARMY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Franz_Bohme.tga"
+	traits = {
+		harsh_leader
+		infantry_officer
+		winter_specialist
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Sigismund Schilhawsky von Bahnbrück"
+	desc = "AUS_SIGISMUND_SCHILHAWSKY_ARMY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Sigismund_Schilhawsky.tga"
+	traits = {
+		trait_cautious
+		infantry_leader
+		skilled_staffer
+		organizer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Eduard Barger"
+	desc = "AUS_EDUARD_BARGER_ARMY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Eduard_Barger.tga"
+	traits = {
+		trait_mountaineer
+		trickster
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Friedrich Materna"
+	desc = "AUS_FRIEDRICH_MATERNA_ARMY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Friedrich_Materna.tga"
+	traits = {
+		infantry_officer
+		organizer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Wilhelm Zehner"
+	desc = "AUS_WILHELM_ZEHNER_ARMY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Wilhelm_Zehner.tga"
+	traits = {
+		brilliant_strategist
+		infantry_leader
+		commando
+		urban_assault_specialist
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Ludwig von Eimannsberger"
+	desc = "AUS_LUDWIG_VON_EIMANNSBERGER_ARMY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Ludwig_von_Eimannsberger.tga"
+	traits = {
+		brilliant_strategist
+		artillery_specialist
+		panzer_leader
+		trait_engineer
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+### Admirals ###
+create_navy_leader = {
+	name = "Miklós Horthy de Nagybánya"
+	desc = "AUS_MIKLOS_HORTHY_NAVY_DESC"
+	ID = 40000
+	portrait_path = "gfx/leaders/HUN/Portrait_HUN_Miklos_Horthy.tga"
+	traits = {
+		old_guard_navy
+		bold
+		ironside
+		inshore_fighter
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Georg von Trapp"
+	desc = "AUS_GEORG_VON_TRAPP_NAVY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Georg_von_Trapp.tga"
+	traits = {
+		navy_media_personality
+		bold
+		seawolf
+		silent_hunter
+		spotter
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Heinrich Pergler von Perglas"
+	desc = "AUS_HEINRICH_PERGLER_NAVY_DESC"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Heinrich_Pergler_von_Perglas.tga"
+	traits = {
+		old_guard_navy
+		ironside
+		ground_pounder
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+###Resetting puppets
+CRO = {
+	set_politics = {
+		ruling_party = social_liberal
+		last_election = "1930.11.9"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		totalist = 1
+		radical_socialist = 4
+		syndicalist = 2
+		social_democrat = 8
+		social_liberal = 34
+		market_liberal = 23
+		social_conservative = 2
+		authoritarian_democrat = 7
+		paternal_autocrat = 16
+		national_populist = 3
+	}
+}
+
+CZE = {
+	set_politics = {
+		ruling_party = social_liberal
+		last_election = "1930.11.9"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		totalist = 0
+		syndicalist = 2
+		radical_socialist = 4
+		social_democrat = 12
+		social_liberal = 32
+		market_liberal = 22
+		social_conservative = 9
+		authoritarian_democrat = 6
+		paternal_autocrat = 11
+		national_populist = 2
+	}
+}
+ITA = {
+	set_politics = {
+		ruling_party = social_liberal
+		last_election = "1932.05.01"
+		election_frequency = 60
+		elections_allowed = yes
+	}
+	set_popularities = {
+		totalist = 0
+		radical_socialist = 0
+		syndicalist = 2
+		social_democrat = 4
+		social_liberal = 31
+		market_liberal = 8
+		social_conservative = 18
+		authoritarian_democrat = 16
+		paternal_autocrat = 3
+		national_populist = 18
+	}
+}
+
+AUS_start_naval_variant = yes

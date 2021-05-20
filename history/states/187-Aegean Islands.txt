@@ -1,0 +1,28 @@
+state = {
+	id = 187
+	name = "STATE_187"
+	manpower = 337123
+	state_category = one_island
+	history={
+		owner = OTT
+		buildings = {
+			infrastructure = 4
+			3401 = {
+				naval_base = 1
+			}
+			6550 = {
+				naval_base = 1
+			}
+			8435 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = OTT
+		add_core_of = GRE
+
+	}
+
+	provinces = {
+		3401 6550 8435
+	}
+}

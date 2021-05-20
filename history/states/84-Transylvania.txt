@@ -1,0 +1,39 @@
+state = {
+	id = 84
+	name = "STATE_84"
+	manpower = 1723144
+	state_category = four
+
+	resources = {
+		steel = 3
+	}
+
+	history = {
+		owner = HUN
+		add_core_of = HUN
+		add_core_of = TRS
+		add_claim_by = ROM
+		buildings = {
+			infrastructure = 4
+			6709 = {
+				bunker = 1
+			}
+			3676 = {
+				bunker = 1
+			}
+			11622 = {
+				bunker = 1
+			}
+		}
+		victory_points = {
+			6679 2
+		}
+		victory_points = {
+			3676 5
+		}
+	}
+
+	provinces = {
+		676 3665 3676 6679 6709 9619 11622 11639
+	}
+}

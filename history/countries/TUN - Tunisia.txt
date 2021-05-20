@@ -1,0 +1,166 @@
+﻿capital = 458
+set_research_slots = 2
+set_technology = {
+	### Infantry ###
+	infantry_weapons = 1
+	gw_artillery = 1
+}
+
+set_politics = {
+	ruling_party = authoritarian_democrat
+	last_election = "1888.6.15"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 8
+	radical_socialist = 12
+	syndicalist = 15
+	social_democrat = 3
+	social_liberal = 6
+	market_liberal = 5
+	social_conservative = 12
+	authoritarian_democrat = 32
+	paternal_autocrat = 7
+	national_populist = 0
+}
+
+create_country_leader = {
+	name = "Moncef Bey"
+	picture = "Portrait_Tunisia_Moncef_Bey.tga"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+}
+create_country_leader = {
+	name = "Moncef Bey"
+	picture = "Portrait_Tunisia_Moncef_Bey.tga"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+}
+create_country_leader = {
+	name = "Moncef Bey"
+	picture = "Portrait_Tunisia_Moncef_Bey.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+}
+create_country_leader = {
+	name = "Abdeljelil Zaouche"
+	picture = "gfx/leaders/Generic/Portrait_Arabia_Generic_new_3.tga"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+}
+create_country_leader = {
+	name = "Moncef Bey"
+	picture = "Portrait_Tunisia_Moncef_Bey.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+}
+create_country_leader = {
+	name = "Elie Cohen-Hadria"
+	picture = "gfx/leaders/Generic/Portrait_Arabia_Generic_new_4.tga"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+}
+create_country_leader = {
+	name = "Mohamed Ali el-Hammi"
+	picture = "gfx/leaders/Generic/Portrait_Arabia_Generic_new_2.tga"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+}
+create_country_leader = {
+	name = "Tahar Haddad"
+	picture = "gfx/leaders/Generic/Portrait_Arabia_Generic_new_7.tga"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+}
+create_country_leader = {
+	name = "Mahmoud El Materi"
+	picture = "gfx/leaders/Generic/Portrait_South_America_Generic_new_1.tga"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+}
+
+### Field Marshals ###
+create_field_marshal = {
+	name = "Ahmad bin-Ali"
+	portrait_path = "gfx/leaders/Generic/Portrait_Arabia_Generic_land_new_4.tga"
+	traits = {
+		old_guard
+		desert_fox
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Habib Bourguiba"
+	portrait_path = "gfx/leaders/Generic/Portrait_Arabia_Generic_land_new_5.tga"
+	traits = {
+		fast_planner
+		career_officer
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Abdelaziz Thâalbi"
+	portrait_path = "gfx/leaders/Generic/Portrait_South_America_Generic_land_new_4.tga"
+	traits = {
+		trickster
+		media_personality
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Hassen Belkhodja"
+	portrait_path = "gfx/leaders/Generic/Portrait_South_America_Generic_land_new_5.tga"
+	traits = {
+		fortress_buster
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Mahmoud El Materi"
+	portrait_path = "gfx/leaders/Generic/Portrait_South_America_Generic_land_new_8.tga"
+	traits = {
+		trait_engineer
+		politically_connected
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Hassan Ferjani"
+	portrait_path = "gfx/leaders/Generic/Portrait_Arabia_Generic_land_new_6.tga"
+	traits = {
+		harsh_leader
+		commando
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}

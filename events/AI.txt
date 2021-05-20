@@ -1,0 +1,239 @@
+﻿##############################################
+################KAISERREICH AI################
+##############################################
+#This file will allow more specific control over the AI that cannot be achieved through other means
+add_namespace = ai_events
+
+########Volunteers########
+#These events fire the volunteer switches and strategies via on_actions - specifically on_war and on_peace. Event #1 enables them - to add any automatic volunteer, see AI_scripted_triggers. Event #2 re-locks the system once the war is over.
+
+country_event = {
+	id = ai_events.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ai_events.100 FROM = [From.GetName]" }
+	hidden = yes
+
+	trigger = { willing_to_send_volunteers_to_FROM = yes }
+
+	is_triggered_only = yes
+
+	option = {
+		FROM = { save_event_target_as = volunteer_target }
+		send_volunteers_to_TARGET = yes
+	}
+}
+
+country_event = {
+	id = ai_events.101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ai_events.101 FROM = [From.GetName]" }
+	hidden = yes
+
+	trigger = { has_country_flag = sent_volunteers_@FROM }
+
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = {
+				FROM = { has_war = no }
+			}
+			FROM = { save_event_target_as = volunteer_target }
+			clear_volunteers_to_TARGET = yes
+		}
+	}
+}
+
+#### TEMP EVENTS, AWAITING FOR ON_WAR_RELATION_ADDED TO BE FIXED ####
+
+#2nd Weltkrieg
+country_event = {
+	id = ai_events.201
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ai_events.201 FROM = [From.GetName]" }
+	hidden = yes
+
+	trigger = {
+		tag = GER
+		has_war_with = INT
+		NOT = { has_global_flag = second_weltkrieg_has_started }
+	}
+
+	fire_only_once = yes
+
+	option = {
+		news_event = { id = worldnews.5 days = 1 }
+		country_event = { id = gerdom.101 days = 10 random_days = 30 }
+		INT = { country_event = worldtension.1 }
+		SWI = {
+			country_event = { id = swiss.135 days = 2 random_days = 4 }
+		}
+		SWE = {
+			country_event = { id = swe.50 days = 15 random_days = 10 }
+		}
+		DEN = {
+			country_event = { id = den.33 days = 4 random_days = 8 }
+		}
+		BRA = {
+			country_event = { id = bra.209 days = 15 random_days = 45 } #The New Rubber Boom
+			country_event = { id = bra.701 days = 180 random_days = 540 } #Carlos Drummond de Andrade Publishes 'Sentimento do Mundo'
+		}
+		set_global_flag = second_weltkrieg_has_started
+		clr_global_flag = KR_italy_balance
+	}
+}
+
+#HOL-JAP war
+country_event = {
+	id = ai_events.202
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ai_events.202 FROM = [From.GetName]" }
+	hidden = yes
+
+	trigger = {
+		tag = HOL
+		has_war_with = JAP
+	}
+
+	fire_only_once = yes
+
+	option = {
+		country_event = { id = holdei.4 days = 1095 }
+	}
+}
+
+### AI BOOSTS FOR SPECIFIC WARS
+
+country_event = {
+	id = ai_events.301
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ai_events.301 FROM = [From.GetName]" }
+	hidden = yes
+
+	trigger = {
+		date < 1943.1.1
+		OR = {
+			surrender_progress > 0.1
+			has_variable = AI_surrender_boost
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = {
+				surrender_progress > 0.5
+				NOT = { has_idea = WK2_AI_boost_5 }
+			}
+			if = {
+				limit = { has_variable = AI_surrender_boost }
+				remove_ideas = var:AI_surrender_boost
+			}
+			add_ideas = WK2_AI_boost_5
+			set_variable = { AI_surrender_boost = token:WK2_AI_boost_5 }
+		}
+		else_if = {
+			limit = {
+				surrender_progress > 0.4
+				NOT = { has_idea = WK2_AI_boost_4 }
+			}
+			if = {
+				limit = { has_variable = AI_surrender_boost }
+				remove_ideas = var:AI_surrender_boost
+			}
+			add_ideas = WK2_AI_boost_4
+			set_variable = { AI_surrender_boost = token:WK2_AI_boost_4 }
+		}
+		else_if = {
+			limit = {
+				surrender_progress > 0.3
+				NOT = { has_idea = WK2_AI_boost_3 }
+			}
+			if = {
+				limit = { has_variable = AI_surrender_boost }
+				remove_ideas = var:AI_surrender_boost
+			}
+			add_ideas = WK2_AI_boost_3
+			set_variable = { AI_surrender_boost = token:WK2_AI_boost_3 }
+		}
+		else_if = {
+			limit = {
+				surrender_progress > 0.2
+				NOT = { has_idea = WK2_AI_boost_2 }
+			}
+			if = {
+				limit = { has_variable = AI_surrender_boost }
+				remove_ideas = var:AI_surrender_boost
+			}
+			add_ideas = WK2_AI_boost_2
+			set_variable = { AI_surrender_boost = token:WK2_AI_boost_2 }
+		}
+		else_if = {
+			limit = {
+				surrender_progress > 0.1
+				NOT = { has_idea = WK2_AI_boost_1 }
+			}
+			if = {
+				limit = { has_variable = AI_surrender_boost }
+				remove_ideas = var:AI_surrender_boost
+			}
+			add_ideas = WK2_AI_boost_1
+			set_variable = { AI_surrender_boost = token:WK2_AI_boost_1 }
+		}
+		else_if = {
+			limit = { has_variable = AI_surrender_boost }
+			remove_ideas = var:AI_surrender_boost
+			clear_variable = AI_surrender_boost
+		}
+	}
+}
+
+country_event = {
+	id = ai_events.302
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ai_events.302 FROM = [From.GetName]" }
+	hidden = yes
+
+	trigger = {
+		has_variable = AI_surrender_boost
+		date > 1942.12.31
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		if = {
+			limit = { has_idea = WK2_AI_boost_5 }
+			swap_ideas = {
+				remove_idea = WK2_AI_boost_5
+				add_idea = WK2_AI_boost_4
+			}
+			set_variable = { AI_surrender_boost = token:WK2_AI_boost_4 }
+		}
+		else_if = {
+			limit = { has_idea = WK2_AI_boost_4 }
+			swap_ideas = {
+				remove_idea = WK2_AI_boost_4
+				add_idea = WK2_AI_boost_3
+			}
+			set_variable = { AI_surrender_boost = token:WK2_AI_boost_3 }
+		}
+		else_if = {
+			limit = { has_idea = WK2_AI_boost_3 }
+			swap_ideas = {
+				remove_idea = WK2_AI_boost_3
+				add_idea = WK2_AI_boost_2
+			}
+			set_variable = { AI_surrender_boost = token:WK2_AI_boost_2 }
+		}
+		else_if = {
+			limit = { has_idea = WK2_AI_boost_2 }
+			swap_ideas = {
+				remove_idea = WK2_AI_boost_2
+				add_idea = WK2_AI_boost_1
+			}
+			set_variable = { AI_surrender_boost = token:WK2_AI_boost_1 }
+		}
+		else = {
+			remove_ideas = var:AI_surrender_boost
+			clear_variable = AI_surrender_boost
+		}
+		country_event = { id = ai_events.302 days = 45 random_days = 30 }
+	}
+}
+

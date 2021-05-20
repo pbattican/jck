@@ -1,0 +1,16 @@
+AUS_elections_decisions = {
+	allowed = {
+		original_tag = AUS
+	}
+
+	visible = {
+		is_ai = no
+	}
+}
+
+AUS_integration_of_germany = {
+	allowed = {
+		original_tag = AUS
+	}
+}
+

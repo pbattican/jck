@@ -1,0 +1,26 @@
+state = {
+	id = 831
+	name = "STATE_831"
+
+	history = {
+		owner = SIA
+		add_claim_by = SIA
+		add_core_of = BRM
+		buildings = {
+			infrastructure = 3
+			1403 = { # Moulmein Estuary
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			1403 3 #Mawlaymein/Morlamaeng
+		}
+	}
+
+	provinces = {
+		1403 4408 12125 12238
+	}
+
+	manpower = 921600
+	state_category = three
+}

@@ -1,0 +1,23 @@
+state = {
+	id = 101
+	name = "STATE_101"
+
+	history = {
+		owner = DEN
+		victory_points = {
+			13601 1
+		}
+		buildings = {
+			infrastructure = 1
+			13601 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces = {
+		13593 13601
+	}
+	manpower = 17000
+	state_category = wasteland
+}

@@ -1,0 +1,1160 @@
+﻿###########################
+# Paraguay Events
+###########################
+
+add_namespace = par
+
+
+country_event = { #intro
+	id = par.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.1 FROM = [From.GetName]" }
+	title = par.1.t
+	desc = par.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			add_manpower = 2000
+		}
+	}
+
+	option = {
+		name = par.1.a
+	}
+}
+
+country_event = { #anti lpa rally
+	id = par.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.2 FROM = [From.GetName]" }
+	title = par.2.t
+	desc = par.2.d
+	picture = GFX_report_event_ELS_rally
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = par.2.a
+		add_political_power = 20
+	}
+}
+
+country_event = { #black monday
+	id = par.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.3 FROM = [From.GetName]" }
+	title = par.3.t
+	desc = par.3.d
+	picture = GFX_report_event_HOL_black_monday
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = par.4
+				days = 90
+			}
+			country_event = {
+				id = par.5
+				days = 27
+			}
+			country_event = {
+				id = par.7
+				days = 45
+				random = 120
+			}
+		}
+	}
+
+	option = {
+		name = par.3.a
+		add_ideas = PAR_bm
+		set_country_flag = PAR_black_monday
+		add_political_power = -200
+		add_stability = -0.95
+	}
+}
+
+
+country_event = { #military payment issues
+	id = par.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.4 FROM = [From.GetName]" }
+	title = par.4.t
+	desc = par.4.d
+	picture = GFX_report_event_SWE_military_meeting
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = par.6
+				days = 120
+			}
+		}
+	}
+
+	option = {
+		name = par.4.a
+		add_manpower = -1000
+		army_experience = -25
+	}
+}
+
+country_event = { #pensionists protest
+	id = par.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.5 FROM = [From.GetName]" }
+	title = par.5.t
+	desc = par.5.d
+	picture = GFX_report_event_AST_protest1
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = par.5.a
+		add_political_power = -100
+		add_stability = -0.2
+	}
+}
+
+
+country_event = { #military discontent
+	id = par.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.6 FROM = [From.GetName]" }
+	title = par.6.t
+	desc = par.6.d
+	picture = GFX_report_event_AST_protest2
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = par.6.a
+		add_stability = -0.2
+	}
+}
+
+country_event = { #franco in chile
+	id = par.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.7 FROM = [From.GetName]" }
+	title = par.7.t
+	desc = par.7.d
+	picture = GFX_report_event_ARG_gaucho_wars
+	trigger = {
+		has_idea = PAR_bm
+		CHL = { has_socialist_government = yes }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = par.7.a
+		add_political_power = -20
+		hidden_effect = {
+			CHL = {
+				country_event = {
+					id = chl.20
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = { #disturbances in occupied lands
+	id = par.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.8 FROM = [From.GetName]" }
+	title = par.8.t
+	desc = par.8.d
+	picture = GFX_report_event_ARG_gaucho_wars
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = par.8.a
+		add_stability = -0.15
+	}
+}
+
+
+country_event = { #huey long is elected president
+	id = par.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.9 FROM = [From.GetName]" }
+	title = par.9.t
+	desc = par.9.d
+	picture = GFX_report_event_USA_huey_long
+	trigger = {
+		has_socialist_government = no
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = par.9.a
+		add_political_power = 20
+		add_opinion_modifier = {
+			target = TEX
+			modifier = KR_trade_agreement
+		}
+	}
+}
+
+country_event = { #aid the AUS?
+	id = par.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.10 FROM = [From.GetName]" }
+	title = par.10.t
+	desc = par.10.d
+	picture = GFX_report_event_USA_huey_long
+	trigger = {
+		has_war = no
+		has_socialist_government = no
+		TEX = { has_war_with = USA }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = par.10.a
+		ai_chance = {
+			base = 45
+		}
+		reverse_add_opinion_modifier = {
+			target = TEX
+			modifier = SAF_aided_us
+		}
+		every_country = {
+			limit = {
+				has_war_with = TEX
+			}
+			add_opinion_modifier = {
+				target = PAR
+				modifier = SAF_aided_enemy
+			}
+		}
+		send_equipment = {
+			target = TEX
+			type = infantry_equipment
+			amount = 1000
+		}
+		hidden_effect = {
+			TEX = {
+				country_event = par.11
+			}
+		}
+	}
+
+	option = {
+		name = par.10.b
+		ai_chance = {
+			base = 45
+		}
+		add_political_power = -100
+	}
+}
+
+country_event = { #paraguyan volunteers!
+	id = par.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.11 FROM = [From.GetName]" }
+	title = par.11.t
+	desc = par.11.d
+	picture = GFX_report_event_AST_volunteers
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = par.11.a
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = SAF_we_support_them
+		}
+		effect_tooltip = {
+			FROM = {
+				send_equipment = {
+					target = ROOT
+					type = infantry_equipment
+					amount = 1000
+				}
+			}
+		}
+		FROM_send_volunteers_to_ROOT = yes
+	}
+}
+
+
+country_event = { #paraguayan congratulations!
+	id = par.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.12 FROM = [From.GetName]" }
+	title = par.12.t
+	desc = par.12.d
+
+	trigger = {
+		PAR = { has_socialist_government = no }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = par.12.a
+		add_political_power = 5
+	}
+}
+
+country_event = { #coup if you fail to do bm stuff
+	id = par.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.13 FROM = [From.GetName]" }
+	title = par.13.t
+	desc = par.13.d
+	picture = GFX_report_event_ELS_rally
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = par.13.a
+		ai_chance = {
+			base = 45
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_THOT
+				}
+			}
+		}
+		remove_ideas = PAR_slash
+		add_ideas = PAR_bm
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		if = {
+			limit = { is_in_faction = yes }
+			leave_faction = yes
+		}
+		hidden_effect = {
+			every_unit_leader = {
+				limit = { has_id = 14001 } #Estigarribia
+				set_nationality = XXA
+			}
+			add_ideas = {
+				PAR_Higinio_Morinigo_Martinez_hog_npo
+				PAR_Horacio_Chiriani_Cotor_for_pau
+				PAR_Vicente_Machuca_eco_npo
+				PAR_Nicolas_Delgado_Ruiz_Diaz_sec_pau
+			}
+			set_popularities = {
+				totalist = 9
+				radical_socialist = 7
+				syndicalist = 6
+				social_democrat = 5
+				social_liberal = 6
+				market_liberal = 4
+				social_conservative = 4
+				authoritarian_democrat = 2
+				paternal_autocrat = 5
+				national_populist = 52
+			}
+			random_other_country = { news_event = worldnews.167 }
+		}
+	}
+
+	option = { #Rafael Franco
+		name = par.13.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_NPOP
+				}
+			}
+		}
+		remove_ideas = PAR_slash
+		add_ideas = PAR_bm
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		remove_all_ministers = yes
+		if = {
+			limit = { is_in_faction = yes }
+			leave_faction = yes
+		}
+		hidden_effect = {
+			every_unit_leader = {
+				limit = { has_id = 14001 } #Estigarribia
+				set_nationality = XXA
+			}
+			add_ideas = {
+				PAR_Anselmo_Jover_Peralta_hog_tot
+				PAR_Juan_Stefanich_for_tot
+				PAR_Obdulio_Barthe_eco_rso
+				PAR_Carlos_Agustin_Pastore_Goiburu_sec_tot
+			}
+			set_popularities = {
+				totalist = 45
+				radical_socialist = 18
+				syndicalist = 6
+				social_democrat = 12
+				social_liberal = 6
+				market_liberal = 4
+				social_conservative = 4
+				authoritarian_democrat = 0
+				paternal_autocrat = 5
+				national_populist = 0
+			}
+			random_other_country = { news_event = worldnews.168 }
+		}
+	}
+}
+
+
+country_event = { #huey runs away. even on hold due to ACW delays
+	id = par.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.14 FROM = [From.GetName]" }
+	title = par.14.t
+	desc = par.14.d
+	picture = GFX_report_event_USA_huey_long
+	trigger = {
+		has_socialist_government = no
+		has_global_flag = USA_civil_war_begun_flag
+		NOT = { country_exists = TEX }
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = par.14.a
+		add_political_power = 200
+	}
+}
+
+country_event = { #1941 elections
+	id = par.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.15 FROM = [From.GetName]" }
+	title = par.15.t
+	desc = par.15.d
+	picture = GFX_report_event_PRU_elections
+	trigger = {
+		tag = PAR
+		date > 1941.10.01
+		NOT = {
+			has_government = syndicalist
+			has_government = radical_socialist
+			has_government = totalist
+			has_government = national_populist
+		}
+	}
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = par.15.a #Garribia stays
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_COLO
+				}
+			}
+		}
+		complete_national_focus = PAR_estigarribato
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		remove_all_ministers = yes
+		hidden_effect = {
+			add_ideas = {
+				PAR_Juan_Manuel_Frutos_hog_sco
+				PAR_Higinio_Morinigo_Martinez_for_sco
+				PAR_Luis_Andres_Avelino_Argana_Benegas_eco_sco
+				PAR_Ricardo_Odriosola_sec_sco
+			}
+		}
+	}
+
+	option = {
+		name = par.15.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_AUTH
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		remove_all_ministers = yes
+		hidden_effect = {
+			add_ideas = {
+				PAR_Juan_Manuel_Frutos_hog_sco
+				PAR_Higinio_Morinigo_Martinez_for_sco
+				PAR_Luis_Andres_Avelino_Argana_Benegas_eco_sco
+				PAR_Ricardo_Odriosola_sec_sco
+			}
+			set_popularities = {
+				totalist = 2
+				radical_socialist = 4
+				syndicalist = 3
+				social_democrat = 18
+				social_liberal = 4
+				market_liberal = 6
+				social_conservative = 53
+				authoritarian_democrat = 3
+				paternal_autocrat = 4
+				national_populist = 3
+			}
+		}
+	}
+}
+
+
+country_event = { #1946 elections
+	id = par.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.16 FROM = [From.GetName]" }
+	title = par.16.t
+	desc = par.16.d
+	picture = GFX_report_event_PRU_elections
+	trigger = {
+		tag = PAR
+		date > 1946.10.01
+		has_country_leader = {
+			name = "José Félix Estigarribia"
+			ruling_only = yes
+		}
+		NOT = {
+			has_government = syndicalist
+			has_government = radical_socialist
+			has_government = totalist
+			has_government = national_populist
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = par.16.a #Garribia stays
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_COLO
+				}
+			}
+		}
+	}
+
+	option = {
+		name = par.16.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_AUTH
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		remove_all_ministers = yes
+		hidden_effect = {
+			add_ideas = {
+				PAR_Juan_Manuel_Frutos_hog_sco
+				PAR_Higinio_Morinigo_Martinez_for_sco
+				PAR_Luis_Andres_Avelino_Argana_Benegas_eco_sco
+				PAR_Ricardo_Odriosola_sec_sco
+			}
+			set_popularities = {
+				totalist = 2
+				radical_socialist = 4
+				syndicalist = 3
+				social_democrat = 18
+				social_liberal = 4
+				market_liberal = 6
+				social_conservative = 53
+				authoritarian_democrat = 3
+				paternal_autocrat = 4
+				national_populist = 3
+			}
+		}
+	}
+}
+
+
+country_event = { #1951 elections
+	id = par.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.17 FROM = [From.GetName]" }
+	title = par.17.t
+	desc = par.17.d
+	picture = GFX_report_event_PRU_elections
+	trigger = {
+		tag = PAR
+		date > 1951.10.01
+		has_country_leader = {
+			name = "José Félix Estigarribia"
+			ruling_only = yes
+		}
+		NOT = {
+			has_government = syndicalist
+			has_government = radical_socialist
+			has_government = totalist
+			has_government = national_populist
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = par.17.a #Garribia stays
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_COLO
+				}
+			}
+		}
+	}
+
+	option = {
+		name = par.17.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_AUTH
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		remove_all_ministers = yes
+		hidden_effect = {
+			add_ideas = {
+				PAR_Juan_Manuel_Frutos_hog_sco
+				PAR_Higinio_Morinigo_Martinez_for_sco
+				PAR_Luis_Andres_Avelino_Argana_Benegas_eco_sco
+				PAR_Ricardo_Odriosola_sec_sco
+			}
+			set_popularities = {
+				totalist = 2
+				radical_socialist = 4
+				syndicalist = 3
+				social_democrat = 18
+				social_liberal = 4
+				market_liberal = 6
+				social_conservative = 53
+				authoritarian_democrat = 3
+				paternal_autocrat = 4
+				national_populist = 3
+			}
+		}
+	}
+}
+
+country_event = { #1956 elections
+	id = par.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.18 FROM = [From.GetName]" }
+	title = par.18.t
+	desc = par.18.d
+	picture = GFX_report_event_PRU_elections
+	trigger = {
+		tag = PAR
+		date > 1956.10.01
+		has_country_leader = {
+			name = "José Félix Estigarribia"
+			ruling_only = yes
+		}
+		NOT = {
+			has_government = syndicalist
+			has_government = radical_socialist
+			has_government = totalist
+			has_government = national_populist
+		}
+	}
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = par.18.a #Garribia stays
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_COLO
+				}
+			}
+		}
+	}
+
+	option = {
+		name = par.18.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_AUTH
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		remove_all_ministers = yes
+		hidden_effect = {
+			add_ideas = {
+				PAR_Juan_Manuel_Frutos_hog_sco
+				PAR_Higinio_Morinigo_Martinez_for_sco
+				PAR_Luis_Andres_Avelino_Argana_Benegas_eco_sco
+				PAR_Ricardo_Odriosola_sec_sco
+			}
+			set_popularities = {
+				totalist = 2
+				radical_socialist = 4
+				syndicalist = 3
+				social_democrat = 18
+				social_liberal = 4
+				market_liberal = 6
+				social_conservative = 53
+				authoritarian_democrat = 3
+				paternal_autocrat = 4
+				national_populist = 3
+			}
+		}
+	}
+}
+
+
+country_event = { #1946 elections - no estigarribia
+	id = par.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.19 FROM = [From.GetName]" }
+	title = par.19.t
+	desc = par.19.d
+	picture = GFX_report_event_PRU_elections
+	trigger = {
+		tag = PAR
+		date > 1946.10.01
+		NOT = {
+			has_country_leader = {
+				name = "José Félix Estigarribia"
+				ruling_only = yes
+			}
+			has_government = syndicalist
+			has_government = radical_socialist
+			has_government = totalist
+			has_government = national_populist
+		}
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = par.19.a
+		ai_chance = {
+			base = 45
+		}
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			remove_all_ministers = yes
+			add_ideas = {
+				PAR_Juan_Manuel_Frutos_hog_sco
+				PAR_Higinio_Morinigo_Martinez_for_sco
+				PAR_Luis_Andres_Avelino_Argana_Benegas_eco_sco
+				PAR_Ricardo_Odriosola_sec_sco
+			}
+			set_popularities = {
+				totalist = 2
+				radical_socialist = 4
+				syndicalist = 3
+				social_democrat = 18
+				social_liberal = 4
+				market_liberal = 6
+				social_conservative = 53
+				authoritarian_democrat = 3
+				paternal_autocrat = 4
+				national_populist = 3
+			}
+		}
+	}
+
+	option = { #Eusebio Ayala
+		name = par.19.b
+		ai_chance = {
+			base = 35
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_COLO
+				}
+			}
+		}
+		hidden_effect = { kill_ideology_leader = market_liberal }
+		create_country_leader = {
+			name = "Eusebio Ayala"
+			picture = "Portrait_PAR_Eusebio_Ayala.tga"
+			expire = "1965.1.1"
+			ideology = market_liberal_subtype
+			traits = {
+				financial_expert
+			}
+		}
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		remove_all_ministers = yes
+		hidden_effect = {
+			add_ideas = {
+				PAR_Felix_Paiva_hog_mli
+				PAR_Justo_Pastor_Prieto_for_mli
+				PAR_Arnaldo_Valdovinos_eco_mli
+				PAR_Efraim_Cardozo_sec_mli
+			}
+			set_popularities = {
+				totalist = 2
+				radical_socialist = 7
+				syndicalist = 6
+				social_democrat = 8
+				social_liberal = 8
+				market_liberal = 49
+				social_conservative = 8
+				authoritarian_democrat = 3
+				paternal_autocrat = 5
+				national_populist = 4
+			}
+		}
+	}
+}
+
+country_event = { #Paraguay in the Internationale
+	id = par.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.20 FROM = [From.GetName]" }
+	title = par.20.t
+	desc = par.20.d
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = par.20.a
+		ai_chance = {
+			base = 100
+		}
+		add_to_faction = PAR
+	}
+
+	option = {
+		name = par.20.b
+		ai_chance = {
+			base = 0
+		}
+		PAR = {
+			country_event = par.201
+		}
+	}
+}
+
+country_event = { #Paraguay in the Internationale - DENIED
+	id = par.201
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.201 FROM = [From.GetName]" }
+	title = par.201.t
+	desc = par.201.d
+	picture = GFX_report_event_generic_map_france
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = par.201.a
+		add_political_power = -50
+	}
+}
+
+country_event = { #1951 elections - no estigarribia
+	id = par.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.21 FROM = [From.GetName]" }
+	title = par.21.t
+	desc = par.21.d
+	picture = GFX_report_event_PRU_elections
+	trigger = {
+		tag = PAR
+		date > 1951.10.01
+		NOT = {
+			has_country_leader = {
+				name = "José Félix Estigarribia"
+				ruling_only = yes
+			}
+			has_government = syndicalist
+			has_government = radical_socialist
+			has_government = totalist
+			has_government = national_populist
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = par.21.a
+		ai_chance = {
+			base = 45
+		}
+		hidden_effect = { kill_ideology_leader = social_conservative }
+		create_country_leader = {
+			name = "Raimundo Rolón"
+			picture = "Portrait_Paraguay_Raimundo_Rolon.tga"
+			expire = "1965.1.1"
+			ideology = social_conservative_subtype
+			traits = {
+				indecisive
+			}
+		}
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		remove_all_ministers = yes
+		hidden_effect = {
+			add_ideas = {
+				PAR_Juan_Manuel_Frutos_hog_sco
+				PAR_Higinio_Morinigo_Martinez_for_sco
+				PAR_Luis_Andres_Avelino_Argana_Benegas_eco_sco
+				PAR_Ricardo_Odriosola_sec_sco
+			}
+			set_popularities = {
+				totalist = 2
+				radical_socialist = 4
+				syndicalist = 3
+				social_democrat = 18
+				social_liberal = 4
+				market_liberal = 6
+				social_conservative = 53
+				authoritarian_democrat = 3
+				paternal_autocrat = 4
+				national_populist = 3
+			}
+		}
+	}
+
+	option = { #Luis Alberto
+		name = par.21.b
+		ai_chance = {
+			base = 35
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_COLO
+				}
+			}
+		}
+		hidden_effect = { kill_ideology_leader = market_liberal }
+		create_country_leader = {
+			name = "Luis Alberto Riart"
+			picture = "Portrait_PAR_Luis_Alberto_Riart.tga"
+			expire = "1965.1.1"
+			ideology = market_liberal_subtype
+			traits = {
+				quartermaster_general
+			}
+		}
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		remove_all_ministers = yes
+		hidden_effect = {
+			add_ideas = {
+				PAR_Felix_Paiva_hog_mli
+				PAR_Justo_Pastor_Prieto_for_mli
+				PAR_Arnaldo_Valdovinos_eco_mli
+				PAR_Efraim_Cardozo_sec_mli
+			}
+			set_popularities = {
+				totalist = 2
+				radical_socialist = 7
+				syndicalist = 6
+				social_democrat = 8
+				social_liberal = 8
+				market_liberal = 49
+				social_conservative = 8
+				authoritarian_democrat = 3
+				paternal_autocrat = 5
+				national_populist = 4
+			}
+		}
+	}
+}
+
+country_event = { #1956 elections - no estigarribia
+	id = par.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event par.22 FROM = [From.GetName]" }
+	title = par.22.t
+	desc = par.22.d
+	picture = GFX_report_event_PRU_elections
+	trigger = {
+		tag = PAR
+		date > 1956.10.01
+		NOT = {
+			has_country_leader = {
+				name = "José Félix Estigarribia"
+				ruling_only = yes
+			}
+			has_government = syndicalist
+			has_government = radical_socialist
+			has_government = totalist
+			has_government = national_populist
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Mister S
+		name = par.22.a
+		ai_chance = {
+			base = 45
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_AUTH
+				}
+			}
+		}
+		hidden_effect = { kill_ideology_leader = social_conservative }
+		create_country_leader = {
+			name = "Alfredo Stroessner"
+			picture = "Portrait_PAR_Alfredo_Stroessner.tga"
+			expire = "1965.1.1"
+			ideology = social_conservative_subtype
+			traits = {
+				warmonger
+			}
+		}
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		remove_all_ministers = yes
+		hidden_effect = {
+			add_ideas = {
+				PAR_Juan_Manuel_Frutos_hog_sco
+				PAR_Higinio_Morinigo_Martinez_for_sco
+				PAR_Luis_Andres_Avelino_Argana_Benegas_eco_sco
+				PAR_Ricardo_Odriosola_sec_sco
+			}
+			set_popularities = {
+				totalist = 2
+				radical_socialist = 4
+				syndicalist = 3
+				social_democrat = 18
+				social_liberal = 4
+				market_liberal = 6
+				social_conservative = 53
+				authoritarian_democrat = 3
+				paternal_autocrat = 4
+				national_populist = 3
+			}
+		}
+	}
+
+	option = { #Him again
+		name = par.22.b
+		ai_chance = {
+			base = 35
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = PAR_last_man_standing
+					option = PAR_LAST_MAN_STANDING_COLO
+				}
+			}
+		}
+		hidden_effect = { kill_ideology_leader = market_liberal }
+		create_country_leader = {
+			name = "José Félix Estigarribia"
+			desc = "POLITICS_ESTIGARRIBIA_RETURNED_DESC"
+			picture = "Portrait_PAR_Estigarribia.tga"
+			expire = "1965.1.1"
+			ideology = market_liberal_subtype
+			traits = {
+				our_right_to_survive
+			}
+		}
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			remove_all_ministers = yes
+			add_ideas = {
+				PAR_Felix_Paiva_hog_mli
+				PAR_Justo_Pastor_Prieto_for_mli
+				PAR_Arnaldo_Valdovinos_eco_mli
+				PAR_Efraim_Cardozo_sec_mli
+			}
+			set_popularities = {
+				totalist = 2
+				radical_socialist = 7
+				syndicalist = 6
+				social_democrat = 8
+				social_liberal = 8
+				market_liberal = 49
+				social_conservative = 8
+				authoritarian_democrat = 3
+				paternal_autocrat = 5
+				national_populist = 4
+			}
+		}
+	}
+}
+

@@ -1,0 +1,31 @@
+state = {
+	id = 460
+	name = "STATE_460" # Constantine
+	manpower = 1376000
+
+	state_category = four
+
+	history = {
+		owner = NFA
+		add_core_of = NFA
+		add_core_of = ALG
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = { #Constantine
+			12051 10
+		}
+		victory_points = { #Bône
+			1160 5
+		}
+		victory_points = { #Setif
+			4046 3
+		}
+	}
+
+	provinces = {
+		1160 4046 4920 7065 7081 7166 8111 10078 12051
+	}
+}

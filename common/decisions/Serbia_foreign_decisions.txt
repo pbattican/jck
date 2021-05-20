@@ -1,0 +1,63 @@
+SER_foreign_policy = {
+	SER_join_Reichspakt = {
+		icon = generic_political_discourse
+		allowed = {
+			original_tag = SER
+		}
+		available = {
+			OR = {
+				GER = {
+					has_war_with = FRA
+				}
+				date > 1939.6.1
+			}
+			is_subject = no
+		}
+		visible = {
+			country_exists = GER
+			GER = {
+				is_faction_leader = yes
+			}
+			GER = {
+				is_faction_leader = yes
+				NOT = {
+					is_in_faction_with = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SER_join_Reichspakt"
+			every_country = {
+				limit = {
+					is_subject = no
+					is_in_faction_with = ROOT
+					NOT = {
+						tag = ROOT
+					}
+				}
+				GER = {
+					add_to_faction = PREV
+				}
+			}
+			dismantle_faction = yes
+			GER = {
+				add_to_faction = ROOT
+			}
+			meta_effect = {
+				text = {
+					add_to_war = {
+						targeted_alliance = GER
+						enemy = [ENEMY]
+					}
+				}
+				ENEMY = "[threat_country.GetTag]"
+			}
+		}
+	}
+}

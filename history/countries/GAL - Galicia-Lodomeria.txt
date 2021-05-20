@@ -1,0 +1,181 @@
+﻿capital = 91
+oob = "GAL"
+set_research_slots = 3
+set_stability = 0.60
+set_war_support = 0.1
+
+set_technology = {
+	### Tanks ###
+	gwtank = 1
+	basic_light_tank = 1
+
+	### Infantry ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	motorised_infantry = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+
+	### Air ###
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+}
+
+set_politics = {
+	ruling_party = authoritarian_democrat
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 0
+	radical_socialist = 0
+	syndicalist = 0
+	social_democrat = 2
+	social_liberal = 6
+	market_liberal = 6
+	social_conservative = 19
+	authoritarian_democrat = 54
+	paternal_autocrat = 12
+	national_populist = 1
+}
+
+add_ideas = {
+	GAL_Alfred_Potocki_hog_ade
+	GAL_Jerzy_Potocki_for_ade
+	GAL_Eugeniusz_Kwiatkowski_eco_ade
+	GAL_Kazimierz_Kumaniecki_sec_sco
+}
+
+create_country_leader = {
+	name = "Karl Albrecht von Habsburg-Lothringen"
+	desc = "POLITICS_KARL_STEPHAN_DESC"
+	picture = "Portrait_GAL_Karl_Albrecht.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+}
+
+create_field_marshal = {
+	name = "Karl Albrecht von Habsburg-Lothringen"
+	picture = "Portrait_GAL_Karl_Albrecht.tga"
+	traits = {
+		politically_connected
+		artillery_specialist
+		infantry_leader
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Stanisław Szeptycki"
+	picture = "Portrait_GAL_Stanislaw_Szeptycki.tga"
+	traits = {
+		old_guard
+		artillery_specialist
+		cavalry_leader
+		trait_engineer
+		skilled_staffer
+	}
+	id = 28000
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Dmytro Vitovsky"
+	picture = "Portrait_GAL_Dmytro_Vitovsky.tga"
+	traits = {
+		infantry_leader
+		organizer
+		commando
+	}
+	id = 28001
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Franciszek Kleeberg"
+	picture = "Portrait_GAL_Franciszek_Kleeberg.tga"
+	traits = {
+		brilliant_strategist
+		artillery_specialist
+		trait_engineer
+		organizer
+	}
+	id = 28002
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Tadeusz Kutrzeba"
+	picture = "Portrait_GAL_Tadeusz_Kutrzeba.tga"
+	traits = {
+		brilliant_strategist
+		trait_engineer
+		fortress_buster
+		panzer_leader
+	}
+	id = 28003
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Władysław Sikorski"
+	picture = "Portrait_GAL_Wladyslaw_Sikorski.tga"
+	traits = {
+		politically_connected
+		career_officer
+		organizer
+		skilled_staffer
+	}
+	id = 28004
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+}
+
+random_unit_leader = {
+	limit = { has_id = 28000 }
+	save_global_event_target_as = GAL_Stanislaw_Szeptycki
+}
+random_unit_leader = {
+	limit = { has_id = 28001 }
+	save_global_event_target_as = GAL_Dmytro_Vitovsky
+}
+random_unit_leader = {
+	limit = { has_id = 28002 }
+	save_global_event_target_as = GAL_Franciszek_Kleeberg
+}
+random_unit_leader = {
+	limit = { has_id = 28003 }
+	save_global_event_target_as = GAL_Tadeusz_Kutrzeba
+}
+random_unit_leader = {
+	limit = { has_id = 28004 }
+	save_global_event_target_as = GAL_Wladyslaw_Sikorski
+}

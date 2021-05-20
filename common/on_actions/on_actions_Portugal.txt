@@ -1,0 +1,55 @@
+on_actions = {
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = POR }
+					FROM.FROM = {
+						OR = {
+							state = 112 #Lisbon
+							state = 179 #Beja
+							state = 180 #Porto
+							state = 181 #Guarda
+						}
+					}
+				}
+				FROM = {
+					country_event = portugal_exile.1
+					country_event = portugal_exile.2
+				}
+			}
+		}
+	}
+
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = POR
+						NOT = { tag = POR }
+					}
+					POR = { is_ally_with = FROM }
+				}
+				ROOT = {
+					delete_unit = { disband = yes }
+				}
+				POR = {
+					annex_country = { target = ROOT transfer_troops = no }
+				}
+			}
+		}
+	}
+
+	on_peace = {
+		effect = {
+			if = {
+				limit = { tag = POR }
+				BRA = { country_event = { id = bra.701 days = 180 random = 540 } }
+			}
+		}
+	}
+}
+

@@ -1,0 +1,25 @@
+state = {
+	id = 584
+	name = "STATE_584"
+	manpower = 101898
+	state_category = wasteland
+	
+	resources = {
+		oil = 8
+	}
+
+	history = {
+		owner = KHI
+		add_core_of = KHI
+		victory_points = {
+			7477 1 #Kyzyl-Su
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		1493 1593 4563 4599 7477 7563 7618 7635 8099 10348 10359 10406 10485 12491
+	}
+}

@@ -1,0 +1,23 @@
+state = {
+	id = 804
+	name = "STATE_804"
+	manpower = 343573
+	state_category = one
+	
+	resources = {
+		chromium = 3
+		tungsten = 3
+	}
+
+	history = {
+		owner = BUK
+		add_core_of = BUK
+		buildings = {
+			infrastructure = 4
+		}
+	}
+
+	provinces = {
+		1384 4467 4542 7224 12218 12250
+	}
+}

@@ -1,0 +1,21 @@
+state = {
+	id = 890
+	name = "STATE_890"
+	manpower = 3450000
+
+	state_category = one
+
+	history = {
+		owner = RAJ
+		add_core_of = RAJ
+		add_claim_by = HND
+		add_claim_by = PRF
+		buildings = {
+			infrastructure = 3
+		}
+	}
+
+	provinces = {
+		1129 2076 7106 12708
+	}
+}

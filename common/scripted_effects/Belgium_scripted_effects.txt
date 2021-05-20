@@ -1,0 +1,199 @@
+WLL_reset_focus_tree_and_ideas = {
+	hidden_effect = {
+		remove_ideas = {
+			WLL_Monarchy
+			WLL_Monarchy_Army
+			WLL_Monarchy_Conscription
+			WLL_Republic_Chant_Des_Wallons
+			WLL_Monarchy_Disorderly
+			WLL_Monarchy_Disorderly2
+			WLL_Monarchy_Royal_Councillor
+			WLL_Monarchy_Constitution
+
+			WLL_REX
+			WLL_REX_SOC
+			WLL_REX_ROY
+			WLL_REX_BOTH
+			WLL_REX_CORP
+			WLL_REX_MIL
+
+			WLL_SYNDICALIST_LIB_DIS
+			WLL_SYNDICALIST_POB_PRES
+			WLL_SYNDICALIST_SYN_CHAIR
+			WLL_SYNDICALIST_SEIZE_BASIC
+			WLL_SYNDICALIST_NATIONAL_COMPANY
+			WLL_SYNDICALIST_STATE_EDUCATION
+			WLL_SYNDICALIST_CATHOLIC_EDUCATION_BANNED
+			WLL_SYNDICALIST_POB_CONTROL
+			WLL_SYNDICALIST_SYN_CONTROL
+
+			WLL_TOTALIST_RESISTANCE
+			WLL_TOTALIST_RESISTANCE2
+			WLL_TOTALIST_RESISTANCE3
+			WLL_TOTALIST_RESISTANCE4
+			WLL_TOTALIST_CONGRESS
+			WLL_TOTALIST_ARMY
+			WLL_TOTALIST_ROYAL_ASSETS
+		}
+		load_focus_tree = WLL_focus_blank
+		load_focus_tree = WLL_focus
+		if = {
+			limit = {
+				NOT = { has_government = authoritarian_democrat }
+				has_country_leader = { name = "Adelbert" }
+			}
+			kill_ideology_leader = social_democrat
+			kill_ideology_leader = social_liberal
+			kill_ideology_leader = market_liberal
+			kill_ideology_leader = social_conservative
+		}
+		if = {
+			limit = { has_socialist_government = yes }
+			complete_national_focus = WLL_Syndicalist_Revolution
+			if = {
+				limit = { has_government = totalist }
+				complete_national_focus = WLL_Revolution_By_Force
+			}
+			else = {
+				complete_national_focus = WLL_Peacefull_Transition
+			}
+		}
+		else_if = {
+			limit = { has_elected_government = yes }
+			set_politics = {
+				ruling_party = market_liberal
+				elections_allowed = no
+			}
+			add_ideas = WLL_Republic
+			complete_national_focus = WLL_Reform_Into_A_Republic
+		}
+		else_if = {
+			limit = { has_dictatorship_government = yes }
+			add_ideas = WLL_REX
+			complete_national_focus = WLL_The_Government_Has_Failed
+		}
+		else = {
+			add_ideas = WLL_Monarchy
+			add_ideas = WLL_Monarchy_Disorderly
+			complete_national_focus = WLL_Hold_On_To_The_Monarchy
+		}
+	}
+}
+
+WLL_move_unit_leaders = {
+	hidden_effect = {
+		event_target:BEL_Maurice_Keyaerts = { set_nationality = PREV }
+		event_target:BEL_Georges_Deffontaine = { set_nationality = PREV }
+		event_target:BEL_Jean_Baptiste_Piron = { set_nationality = PREV }
+		event_target:BEL_Maximilien_de_Neve_de_Roden = { set_nationality = PREV }
+	}
+}
+
+FLN_move_unit_leaders = {
+	hidden_effect = {
+		event_target:BEL_Edouard_van_den_Bergen = { set_nationality = PREV }
+		event_target:BEL_Victor_van_Strydonck_de_Burkel = { set_nationality = PREV }
+		event_target:BEL_Alexis_Vander_Veken = { set_nationality = PREV }
+		event_target:BEL_Victor_Billet = { set_nationality = PREV }
+		event_target:BEL_Georges_Timmermans = { set_nationality = PREV }
+	}
+}
+
+Release_Flanders = {
+	set_country_flag = Flandres_Independent
+	set_country_flag = Flanders_Quelled
+
+	hidden_effect = {
+		remove_ideas = BEL_Flandres_Lost
+
+		WLL = {
+			add_state_core = 34 #Hainaut
+			add_state_core = 741 #Ardennes
+			add_state_core = 948 #Liège
+			transfer_technology = yes
+			WLL_move_unit_leaders = yes
+		}
+		random_owned_state = {
+			limit = { is_core_of = WLL }
+			WLL = { transfer_state = PREV }
+		}
+		set_global_flag = TEMPORARY_DISABLED_FACTION_POPUP
+		GER = { add_to_faction = WLL }
+
+		FLN = {
+			add_state_core = 6 #Flanders
+			add_state_core = 29 #Maritime Flanders
+			add_state_core = 925 #Brabant
+			add_state_core = 979 #Westerscheldt
+			transfer_technology = yes
+			FLN_move_unit_leaders = yes
+		}
+		release = FLN
+		FLN = {
+			load_oob = FLN
+			load_oob = FLN_naval
+		}
+		GER = { add_to_faction = FLN }
+
+		BEL = {
+			transfer_navy = {
+				target = FLN
+			}
+		}
+
+		WLL = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+			load_oob = WLL_Uprising
+			country_event = { id = wll.1 days = 2 } #Flanders-Wallonia ceases to exist
+		}
+	}
+}
+
+WLL_ultimatum_for_flanders = {
+	if = {
+		limit = { country_exists = FLN }
+		FLN = { country_event = wll.10 }
+	}
+	else_if = {
+		limit = {
+			NOT = { owns_state = 6 }
+		}
+		var:6.owner = { country_event = wll.103 }
+	}
+	if = {
+		limit = {
+			var:925.owner = {
+				NOT = {
+					tag = ROOT
+					tag = var:6.owner
+				}
+			}
+		}
+		var:925.owner = { country_event = wll.103 }
+	}
+}
+
+WLL_breaks_from_germany = {
+	if = {
+		limit = { is_subject = yes }
+		overlord = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_free
+			}
+		}
+	}
+	if = {
+		limit = { is_in_faction = yes }
+		leave_faction = yes
+	}
+	if = {
+		limit = { NOT = { has_war_with = GER } }
+		separate_peace_all_wars = yes
+		GER = { country_event = { id = wll.112 hours = 4 } }
+	}
+}
+

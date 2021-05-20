@@ -1,0 +1,208 @@
+bookmarks = {
+	bookmark = {
+		name = "KR_SCENARIO_NAME"
+		desc = "KR_SCENARIO_DESC"
+		date = 1936.1.1.1
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+
+		"GER" = {
+			history = "GER_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+				GER_victors_of_wwi
+				GER_quenched_militarism
+				GER_imperial_pride
+			}
+
+			focuses = {
+				GER_black_monday_aftermath
+				GER_easter_promises
+				GER_tirpitzprogramm
+			}
+		}
+
+		"FRA" = {
+			history = "FRA_KR_GATHERING_STORM_DESC"
+			ideology = syndicalist
+			ideas = {
+				FRA_communard_spirit
+				FRA_bad_intel
+			}
+
+			focuses = {
+				FRA_Host_the_Internationale
+				FRA_Demand_Alsace_Lorraine
+				FRA_World_revolution
+			}
+		}
+
+		"ENG" = {
+			history = "ENG_KR_GATHERING_STORM_DESC"
+			ideology = syndicalist
+			ideas = {
+				ENG_naval_devotion
+			}
+
+			focuses = {
+				ENG_devolution
+				ENG_evolution
+				ENG_revolution
+			}
+		}
+
+		"CAN" = {
+			history = "CAN_KR_GATHERING_STORM_DESC"
+			ideology = market_liberal
+			ideas = {
+				CAN_anglo_french_tensions_2
+				CAN_great_depression_2
+			}
+
+			focuses = {
+				CAN_draft_bill_c7
+				CAN_preparations_for_war
+				CAN_canadian_referendum
+			}
+		}
+
+		"USA" = {
+			history = "USA_KR_GATHERING_STORM_DESC"
+			ideology = market_liberal
+			ideas = {
+				USA_great_depression
+				USA_political_crisis
+			}
+			focuses = {
+				USA_democracy_triumphs
+				USA_american_caesar
+				USA_pax_americana
+			}
+		}
+
+		"RUS" = {
+			history = "RUS_KR_GATHERING_STORM_DESC"
+			ideology = social_liberal
+			ideas = {
+				RUS_political_unrest
+				rus_divided_staff
+				rus_divided_marine
+			}
+
+			focuses = {
+				RUS_Restore_The_Monarchy
+				RUS_The_Republic_Survives
+				RUS_A_New_Russia
+			}
+		}
+
+		"JAP" = {
+			history = "JAP_KR_GATHERING_STORM_DESC"
+			ideology = social_conservative
+			ideas = {
+				JAP_rising_sun_idea_1
+				JAP_narrow_rail
+				JAP_bad_land
+			}
+
+			focuses = {
+				JAP_democratic_path
+				JAP_chuou
+				JAP_ishinha
+			}
+		}
+
+		"---" = {
+			history = "OTHER_KR_GATHERING_STORM_DESC"
+		}
+
+		"NFA" = {
+			minor = yes
+			history = "NFA_KR_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
+			ideas = {
+				NFA_anti_communard
+				NFA_native_unrest_2
+				NFA_internal_unrest
+			}
+
+			focuses = {
+				NATFRA_Restauration
+				NATFRA_Comite_du_Salut_National
+				NATFRA_Second_Union_Sacree
+			}
+		}
+
+		"JBS" = {
+			minor = yes
+			history = "JBS_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+				JBS_shammar_chauvinism
+				JBS_ottoman_lapdogs
+			}
+
+			focuses = {
+				JBS_second_rashidi_state
+				JBS_Fundamental_Provisions
+				JBS_guardians_of_the_haji
+			}
+		}
+
+		"OTT" = {
+			minor = yes
+			history = "OTT_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+				ott_institutionalised_islam
+				ott_widespread_illiteracy
+				ott_armed_neutrality
+			}
+
+			focuses = {
+				OTT_Maintenance_of_Order_Law
+				OTT_The_Sublime_Federation
+				OTT_Ottoman_Renaissance
+			}
+		}
+
+		"LBA" = {
+			minor = yes
+			history = "LBA_KR_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
+			ideas = {
+				LBA_home_of_the_Senussi
+				LBA_ottoman_naval_penetration
+			}
+
+			focuses = {
+				LBA_loyalty_own_reward
+				LBA_Unification_Libya
+				LBA_Maghrebi_Jihad
+			}
+		}
+
+		"GEO" = {
+			minor = yes
+			history = "GEO_KR_GATHERING_STORM_DESC"
+			ideology = social_democrat
+			ideas = {
+				GEO_treaty_of_poti_idea
+				GEO_minority_problem
+			}
+
+			focuses = {
+				GEO_the_monarchy_referendum
+				GEO_pipeline_seized
+				GEO_SSDP_victory
+			}
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}
+

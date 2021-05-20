@@ -1,0 +1,35 @@
+state = {
+	id = 925
+	name = "STATE_925"
+	manpower = 3071700
+	state_category = twelve
+
+	history = {
+		owner = BEL
+		add_claim_by = BEL
+		victory_points = {
+			516 30 #Brussels
+		}
+		victory_points = {
+			6598 20 #Antwerpen
+		}
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 4
+			dockyard = 1
+			air_base = 3
+			516 = {
+				bunker = 2
+			}
+			6598 = {
+				naval_base = 5
+				bunker = 2
+				coastal_bunker = 1
+			}
+		}
+	}
+
+	provinces = {
+		516 6598 9574 11419 13068 13660
+	}
+}

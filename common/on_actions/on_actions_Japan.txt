@@ -1,0 +1,375 @@
+on_actions = {
+	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					is_in_array = { global.asian_economic_sphere = FROM }
+				}
+				remove_from_array = { global.asian_economic_sphere = FROM }
+				FROM = {
+					if = {
+						limit = { has_idea = JAP_member_integration_1 }
+						remove_ideas = JAP_member_integration_1
+					}
+					if = {
+						limit = { has_idea = JAP_member_integration_2 }
+						remove_ideas = JAP_member_integration_2
+					}
+					if = {
+						limit = { has_idea = JAP_member_integration_3 }
+						remove_ideas = JAP_member_integration_3
+					}
+					if = {
+						limit = { has_idea = JAP_nav_tra_idea }
+						remove_ideas = JAP_nav_tra_idea
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = JAP_asian_economic_sphere_member }
+						}
+						remove_dynamic_modifier = { modifier = JAP_asian_economic_sphere_member }
+					}
+				}
+				JAP_recalculate_economic_integration = yes
+			}
+
+			if = {
+				limit = {
+					FROM = { has_country_flag = has_offsite_mils_from_JAP }
+					country_exists = JAP
+				}
+				FROM = {
+					add_offsite_building = { type = arms_factory level = -2 }
+					clr_country_flag = has_offsite_mils_from_JAP
+				}
+				JAP = {
+					every_owned_state = {
+						limit = { has_variable = JAP_mils_to_china_state }
+						add_building_construction = {
+							type = arms_factory
+							level = var:JAP_mils_to_china_state
+							instant_build = yes
+						}
+						clear_variable = JAP_mils_to_china_state
+					}
+				}
+			}
+
+			if = {
+				limit = { FROM = { tag = JAP } }
+				if = {
+					limit = {
+						LEC = {
+							exists = yes
+							is_subject = no
+						}
+					}
+					LEC = {
+						country_event = { id = lec.130 hours = 12 }
+					}
+				}
+				JAP_fading_sun = yes
+				FNG_break_with_japan = yes
+				524 = {
+					if = {
+						limit = { NOT = { is_owned_by = JAP } }
+						if = {
+							limit = { has_dynamic_modifier = { modifier = JAP_model_colony } }
+							remove_dynamic_modifier = { modifier = JAP_model_colony }
+						}
+						if = {
+							limit = { has_dynamic_modifier = { modifier = JAP_model_colony_2 } }
+							remove_dynamic_modifier = { modifier = JAP_model_colony_2 }
+						}
+					}
+				}
+				525 = {
+					if = {
+						limit = { NOT = { is_owned_by = JAP } }
+						if = {
+							limit = { has_dynamic_modifier = { modifier = JAP_korean_military_administration } }
+							remove_dynamic_modifier = { modifier = JAP_korean_military_administration }
+						}
+						if = {
+							limit = { has_dynamic_modifier = { modifier = JAP_korean_military_administration_2 } }
+							remove_dynamic_modifier = { modifier = JAP_korean_military_administration_2 }
+						}
+					}
+				}
+				527 = {
+					if = {
+						limit = { NOT = { is_owned_by = JAP } }
+						if = {
+							limit = { has_dynamic_modifier = { modifier = JAP_korean_military_administration } }
+							remove_dynamic_modifier = { modifier = JAP_korean_military_administration }
+						}
+						if = {
+							limit = { has_dynamic_modifier = { modifier = JAP_korean_military_administration_2 } }
+							remove_dynamic_modifier = { modifier = JAP_korean_military_administration_2 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					tag = JAP
+					NOT = { any_allied_country = { is_major = yes } }
+				}
+				JAP_fading_sun = yes
+				every_other_country = {
+					limit = { is_in_faction_with = JAP }
+					if = {
+						limit = {
+							OR = {
+								is_chinese_tag = yes
+								has_capitulated = yes
+							}
+						}
+						leave_faction = yes
+					}
+					else = {
+						set_country_flag = JAP_was_in_sphere
+						country_event = japfor.235
+					}
+				}
+				dismantle_faction = yes
+				every_country = {
+					limit = {
+						has_war = yes
+						has_capitulated = no
+						is_valid_peace_target = yes
+						any_enemy_country = {
+							OR = {
+								tag = FNG
+								has_country_flag = JAP_was_in_sphere
+							}
+						}
+					}
+					country_event = { id = japfor.236 hours = 1 }
+				}
+			}
+		}
+	}
+
+	#FROM is war target
+	on_declare_war = {
+		effect = {
+			# removing from Japanese economic sphere
+			if = {
+				limit = {
+					is_in_array = { global.asian_economic_sphere = ROOT }
+					FROM = { tag = JAP }
+				}
+				ROOT = { country_event = japfor.404 }
+			}
+			if = {
+				limit = {
+					is_in_array = { global.asian_economic_sphere = FROM }
+					ROOT = { tag = JAP }
+				}
+				FROM = { country_event = japfor.404 }
+			}
+
+			# removing Japanese extra mils
+			if = {
+				limit = {
+					FROM = { has_country_flag = has_offsite_mils_from_JAP }
+					ROOT = { tag = JAP }
+				}
+				FROM = {
+					add_offsite_building = { type = arms_factory level = -2 }
+					clr_country_flag = has_offsite_mils_from_JAP
+				}
+				ROOT = {
+					every_owned_state = {
+						limit = { has_variable = JAP_mils_to_china_state }
+						add_building_construction = {
+							type = arms_factory
+							level = var:JAP_mils_to_china_state
+							instant_build = yes
+						}
+						clear_variable = JAP_mils_to_china_state
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_country_flag = has_offsite_mils_from_JAP }
+					FROM = { tag = JAP }
+				}
+				ROOT = {
+					add_offsite_building = { type = arms_factory level = -2 }
+					clr_country_flag = has_offsite_mils_from_JAP
+				}
+				FROM = {
+					every_owned_state = {
+						limit = { has_variable = JAP_mils_to_china_state }
+						add_building_construction = {
+							type = arms_factory
+							level = var:JAP_mils_to_china_state
+							instant_build = yes
+						}
+						clear_variable = JAP_mils_to_china_state
+					}
+				}
+			}
+		}
+	}
+
+	on_government_change = {
+		effect = {
+			if = {
+				limit = {
+					is_in_array = { global.asian_economic_sphere = ROOT }
+					has_socialist_government = yes
+				}
+				country_event = japfor.404
+			}
+			if = {
+				limit = {
+					is_co_prosperity_candidate = yes
+					is_subject_of = JAP
+				}
+				add_to_array = { global.JAP_possible_allies_array = ROOT }
+				set_variable = { ROOT.japanese_economic_influence = 0 }
+			}
+		}
+	}
+
+	on_new_term_election = {
+		effect = {
+			if = {
+				limit = { tag = JAP }
+				country_event = japdom.3	#1936
+				country_event = japdom.54	#1940
+				country_event = japdom.55	#1944
+			}
+		}
+	}
+
+	#FROM is country getting invited.
+	on_offer_join_faction = {
+		effect = {
+			# removing from Japan's economic sphere
+			if = {
+				limit = {
+					NOT = { tag = JAP }
+					JAP = { has_completed_focus = JAP_osaka_conference }
+					is_in_array = { global.asian_economic_sphere = FROM }
+				}
+				JAP = { country_event = japfor.411 }
+			}
+
+			# remove BRM's German guarantee
+			if = {
+				limit = {
+					FROM = {
+						tag = BRM
+						has_guarantor = yes
+					}
+				}
+				every_other_country = {
+					limit = { has_guaranteed = BRM }
+					diplomatic_relation = {
+						country = BRM
+						relation = guarantee
+						active = no
+					}
+				}
+			}
+		}
+	}
+
+	#ROOT is winner #FROM is loser
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = { FROM = { original_tag = JAP } }
+				524 = {
+					if = {
+						limit = { NOT = { is_owned_by = JAP } }
+						if = {
+							limit = { has_dynamic_modifier = { modifier = JAP_model_colony } }
+							remove_dynamic_modifier = { modifier = JAP_model_colony }
+						}
+						if = {
+							limit = { has_dynamic_modifier = { modifier = JAP_model_colony_2 } }
+							remove_dynamic_modifier = { modifier = JAP_model_colony_2 }
+						}
+					}
+				}
+				525 = {
+					if = {
+						limit = { NOT = { is_owned_by = JAP } }
+						if = {
+							limit = { has_dynamic_modifier = { modifier = JAP_korean_military_administration } }
+							remove_dynamic_modifier = { modifier = JAP_korean_military_administration }
+						}
+						if = {
+							limit = { has_dynamic_modifier = { modifier = JAP_korean_military_administration_2 } }
+							remove_dynamic_modifier = { modifier = JAP_korean_military_administration_2 }
+						}
+					}
+				}
+				527 = {
+					if = {
+						limit = { NOT = { is_owned_by = JAP } }
+						if = {
+							limit = { has_dynamic_modifier = { modifier = JAP_korean_military_administration } }
+							remove_dynamic_modifier = { modifier = JAP_korean_military_administration }
+						}
+						if = {
+							limit = { has_dynamic_modifier = { modifier = JAP_korean_military_administration_2 } }
+							remove_dynamic_modifier = { modifier = JAP_korean_military_administration_2 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			# Add/remove Japanese modifiers
+			FROM.FROM = {
+				if = {
+					limit = {
+						is_core_of = KOR
+						NOT = { is_owned_by = JAP }
+					}
+					if = {
+						limit = { has_dynamic_modifier = { modifier = JAP_korean_military_administration } }
+						remove_dynamic_modifier = { modifier = JAP_korean_military_administration }
+					}
+					if = {
+						limit = { has_dynamic_modifier = { modifier = JAP_korean_military_administration_2 } }
+						remove_dynamic_modifier = { modifier = JAP_korean_military_administration_2 }
+					}
+				}
+				else_if = {
+					limit = {
+						state = 524
+						NOT = { is_owned_by = JAP }
+					}
+					if = {
+						limit = { has_dynamic_modifier = { modifier = JAP_model_colony } }
+						remove_dynamic_modifier = { modifier = JAP_model_colony }
+					}
+					if = {
+						limit = { has_dynamic_modifier = { modifier = JAP_model_colony_2 } }
+						remove_dynamic_modifier = { modifier = JAP_model_colony_2 }
+					}
+				}
+			}
+		}
+	}
+}
+

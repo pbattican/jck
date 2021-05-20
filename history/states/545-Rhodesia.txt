@@ -1,0 +1,29 @@
+state = {
+	id = 545
+	name = "STATE_545"
+	manpower = 1356800
+	state_category = three
+
+	resources = {
+		chromium = 56
+		tungsten = 14
+		steel = 2
+	}
+
+	history = {
+		owner = SAF
+		add_core_of = SAF
+		add_core_of = ZIM
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			7003 1 #Harare/Salisbury
+		}
+	}
+
+	provinces = {
+		1874 2151 2216 4205 4851 7003 7842 10000 10929 12207 13801 13802
+	}
+}

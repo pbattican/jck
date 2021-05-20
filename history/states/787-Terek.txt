@@ -1,0 +1,23 @@
+state = {
+	id = 787
+	name = "STATE_787"
+	manpower = 227251
+	state_category = two
+
+	history = {
+		owner = DKB
+		add_core_of = DKB
+		add_claim_by = RUS
+		add_claim_by = TRM
+		victory_points = {
+			6730 1 #Kizlyar
+		}
+		buildings = {
+			infrastructure = 4
+		}
+	}
+
+	provinces = {
+		700 6730 683 11632 712 728 6748
+	}
+}

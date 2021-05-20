@@ -1,0 +1,38 @@
+state = {
+	id = 812
+	name = "STATE_812"
+	manpower = 580800
+	state_category = two
+
+	resources = {
+		oil = 7
+	}
+
+	history = {
+		owner = OTT
+		add_core_of = OTT
+		add_core_of = IRQ
+		buildings = {
+			infrastructure = 2
+			2089 = {
+				naval_base = 1
+			}
+			8085 = {
+				naval_base = 3
+			}
+			12726 = {
+				bunker = 2
+			}
+		}
+		victory_points = {
+			2089 5
+		}
+		victory_points = {
+			8085 1
+		}
+	}
+
+	provinces = {
+		1901 2089 8085 12726
+	}
+}

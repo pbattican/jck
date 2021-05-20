@@ -1,0 +1,850 @@
+#####
+# BGT Event Chain Rework by Pbatt
+# Reworked timing of events to be 5 days uniformly. 28 days from start to finish. 
+# Moved start date to day 6 in history file
+#####
+
+add_namespace = bgtcomfrance
+
+#####
+##### BGT elections ####
+#####
+
+country_event = {
+	id = bgtcomfrance.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bgtcomfrance.5 FROM = [From.GetName]" }
+	title = comfrance.5.t
+	desc = comfrance.5.d
+	picture = GFX_report_event_worker_protests
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.5.a
+		add_stability = -0.2
+		add_ideas = FRA_Comite_de_Salut_Public_hog_syn
+		hidden_effect = {
+			country_event = {
+				id = bgtcomfrance.6
+				days = 7
+			}
+		}
+		# set 1936 election flags
+		set_country_flag = {
+			flag = FRA_ANAR
+			value = 0
+		}
+		set_country_flag = {
+			flag = FRA_JACO
+			value = 0
+		}
+		set_country_flag = {
+			flag = FRA_SORE
+			value = 0
+		}
+		set_country_flag = {
+			flag = FRA_TRAV
+			value = 0
+		}
+	}
+}
+
+country_event = {
+	id = bgtcomfrance.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bgtcomfrance.6 FROM = [From.GetName]" }
+	title = comfrance.6.t
+	desc = comfrance.6.d
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = bgtcomfrance.7
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.6.a #Paul Le Gentilhomme (Travailleur) - Tank proponent
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		set_country_flag = ARMY_TRAV
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.6.b #Jacques Duclos (Jacobin) - Centralized High Command
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		add_stability = 0.02
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		set_country_flag = ARMY_JACO
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.6.c #Jacques Doriot (Sorelian) - Officers' initiative
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+				}
+			}
+		}
+		add_stability = 0.02
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		set_country_flag = ARMY_SORE
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.6.e #Henri Tanguy (Anarchiste) - Mass conscription
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		add_stability = -0.02
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		set_country_flag = ARMY_ANAR
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+	}
+}
+
+country_event = {
+	id = bgtcomfrance.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bgtcomfrance.7 FROM = [From.GetName]" }
+	title = comfrance.7.t
+	desc = comfrance.7.d
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = bgtcomfrance.8
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.7.a #Roger Salengro (Travailleur)
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		add_stability = 0.02
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.7.b #Waldeck Rochet (Jacobin)
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.7.c #Pierre Villon (Sorelian)
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+				}
+			}
+		}
+		add_stability = -0.02
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.7.e #Devolve the position to the militias (Anarchiste)
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		add_stability = 0.05
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+	}
+}
+
+country_event = {
+	id = bgtcomfrance.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bgtcomfrance.8 FROM = [From.GetName]" }
+	title = comfrance.8.t
+	desc = comfrance.8.d
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = bgtcomfrance.9
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.8.a #Marceau Pivert (Travailleur)
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		hidden_effect = { remove_ideas_with_trait = security_minister }
+		add_ideas = FRA_Marceau_Pivert_sec_syn
+		add_stability = -0.05
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.8.b #Maurice Thorez (Jacobin)
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		hidden_effect = { remove_ideas_with_trait = security_minister }
+		add_ideas = FRA_Maurice_Thorez_sec_tot
+		add_stability = 0.05
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.8.c #Jean Marie Clamamus (Sorelian)
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+				}
+			}
+		}
+		hidden_effect = { remove_ideas_with_trait = security_minister }
+		add_ideas = FRA_Jean_Marie_Clamamus_sec_tot
+		add_stability = -0.05
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.8.e #Maurice Joyeux (Anarchiste)
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		hidden_effect = { remove_ideas_with_trait = security_minister }
+		add_ideas = FRA_Maurice_Joyeux_sec_rso
+		add_stability = 0.05
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+	}
+}
+
+country_event = {
+	id = bgtcomfrance.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bgtcomfrance.9 FROM = [From.GetName]" }
+	title = comfrance.9.t
+	desc = comfrance.9.d
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = bgtcomfrance.10
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.9.a #Benoît Frachon (Travailleur) - Orthodox Syndicalism
+		ai_chance = {
+			base = 35
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		hidden_effect = { remove_ideas_with_trait = economy_minister }
+		add_ideas = FRA_Benoit_Frachon_eco_syn
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		set_country_flag = ECO_TRAV
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.9.b #Ambroise Croizat (Jacobin) - Industrialisation
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		hidden_effect = { remove_ideas_with_trait = economy_minister }
+		add_ideas = FRA_Ambroise_Croizat_eco_tot
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		set_country_flag = ECO_JACO
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.9.c #Jacques Doriot (Sorelian) - War economy and agriculture
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+				}
+			}
+		}
+		hidden_effect = { remove_ideas_with_trait = economy_minister }
+		add_ideas = FRA_Jacques_Doriot_eco_tot
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		set_country_flag = ECO_SORE
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+	}
+
+	option = {
+		name = comfrance.9.e #Daniel Guérin (Anarchiste) - Cooperatives
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		hidden_effect = { remove_ideas_with_trait = economy_minister }
+		add_ideas = FRA_Daniel_Guerin_eco_rso
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		set_country_flag = ECO_ANAR
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+	}
+}
+
+country_event = {
+	id = bgtcomfrance.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event bgtcomfrance.10 FROM = [From.GetName]" }
+	title = comfrance.10.t
+	desc = comfrance.10.d
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	option = {
+		name = comfrance.10.a #Charles Rappoport (Travailleur)-Internationalism
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		hidden_effect = { remove_ideas_with_trait = foreign_minister }
+		add_ideas = FRA_Charles_Rappoport_for_syn
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_TRAV
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.900
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.10.b #Marcel Cachin (Jacobin)-World revolution
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			GER = { country_event = comfrance.60 }
+			remove_ideas_with_trait = foreign_minister
+		}
+		add_ideas = FRA_Marcel_Cachin_for_tot
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_JACO
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.900
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.10.c #Pierre Comert (Sorelian)-Revenge against Germany
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_RADICAL_SOCIALIST_ANARCHISTE
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			GER = { country_event = comfrance.60 }
+			remove_ideas_with_trait = foreign_minister
+		}
+		add_ideas = FRA_Pierre_Comert_for_tot
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_SORE
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.900
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = comfrance.10.e #Nestor Makhno (Anarchiste)- European Socialism
+		ai_chance = {
+			base = 15
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_SYNDICALIST_TRAVAILLEUR
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_JACOBIN
+					}
+					has_game_rule = {
+						rule = FRA_start_election
+						option = FRA_START_TOTALIST_SORELIAN
+					}
+				}
+			}
+		}
+		hidden_effect = { remove_ideas_with_trait = foreign_minister }
+		add_ideas = FRA_Nestor_Makhno_for_rso
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		modify_country_flag = {
+			flag = FRA_ANAR
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = comfrance.900
+				days = 1
+			}
+		}
+	}
+}

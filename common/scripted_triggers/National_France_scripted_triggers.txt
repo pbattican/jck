@@ -1,0 +1,64 @@
+NFA_has_monarchy = {
+	OR = {
+		NFA_has_jean = yes
+		has_country_leader = {
+			name = "Henri VI"
+			ruling_only = yes
+		}
+		has_country_leader = {
+			name = "Napoleon IV"
+			ruling_only = yes
+		}
+	}
+}
+
+NFA_has_jean = {
+	has_country_leader = {
+		name = "Jean III"
+		ruling_only = yes
+	}
+}
+
+NFA_has_petain = {
+	has_country_leader = {
+		name = "Philippe Pétain"
+		ruling_only = yes
+	}
+}
+
+NFA_is_possible_revolter = {
+	OR = {
+		tag = CHA
+		tag = NGR
+		tag = VOL
+		tag = MLI
+		tag = GNA
+		tag = MRT
+		tag = TUN
+	}
+}
+
+NFA_can_cross_sahara = {
+	OR = {
+		tag = ALG
+		tag = TUN
+		tag = MOR
+		tag = NGR
+		tag = CHA
+		tag = MLI
+		tag = VOL
+		tag = MRT
+		tag = SEN
+		tag = GNA
+		tag = SIE
+		tag = LBA
+	}
+}
+
+GER_has_Belgian_Ally = {
+	OR = {
+		BEL = { is_in_faction_with = GER }
+		WLL = { is_in_faction_with = GER }
+	}
+}
+

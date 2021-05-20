@@ -1,0 +1,313 @@
+defined_text = {
+	name = GetSIAcountryTH
+	text = {
+		trigger = {
+			NOT = {
+				has_cosmetic_tag = SIA_REP
+				has_cosmetic_tag = THI_REP
+				has_socialist_government = yes
+			}
+		}
+		localization_key = SIA_country_roy_th
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = SIA_REP
+				has_cosmetic_tag = THI_REP
+				has_socialist_government = yes
+			}
+		}
+		localization_key = SIA_country_rep_th
+	}
+}
+
+defined_text = {
+	name = GetSIAcountryEN
+	text = {
+		trigger = {
+			NOT = {
+				has_cosmetic_tag = SIA_REP
+				has_cosmetic_tag = THI_REP
+				has_socialist_government = yes
+			}
+		}
+		localization_key = SIA_country_roy_en
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = SIA_REP
+				has_cosmetic_tag = THI_REP
+				has_socialist_government = yes
+			}
+		}
+		localization_key = SIA_country_rep_en
+	}
+}
+
+defined_text = {
+	name = GetSIAprefixTH
+	text = {
+		trigger = {
+			NOT = {
+				has_cosmetic_tag = SIA_REP
+				has_cosmetic_tag = THI_REP
+				has_socialist_government = yes
+			}
+		}
+		localization_key = SIA_prefix_roy_th
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = SIA_REP
+				has_cosmetic_tag = THI_REP
+				has_socialist_government = yes
+			}
+		}
+		localization_key = SIA_prefix_rep_th
+	}
+}
+
+defined_text = {
+	name = GetSIAprefixEN
+	text = {
+		trigger = {
+			NOT = {
+				has_cosmetic_tag = SIA_REP
+				has_cosmetic_tag = THI_REP
+				has_socialist_government = yes
+			}
+		}
+		localization_key = SIA_prefix_roy_en
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = SIA_REP
+				has_cosmetic_tag = THI_REP
+				has_socialist_government = yes
+			}
+		}
+		localization_key = SIA_prefix_rep_en
+	}
+}
+
+defined_text = {
+	name = GetSIAshortname
+	text = {
+		trigger = {
+			NOT = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_shortname_SIA
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_shortname_THI
+	}
+}
+
+defined_text = {
+	name = GetProperAdjective # To prevent weird names during SiaCW
+	text = {
+		trigger = {
+			NOT = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_adjective_SIA
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_adjective_THI
+	}
+}
+
+defined_text = {
+	name = GetSIAairportAcronym
+	text = {
+		trigger = {
+			NOT = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_AAS_sl
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_AAT_sl
+	}
+}
+
+defined_text = {
+	name = GetSIAairIndustryAcronym
+	text = {
+		trigger = {
+			NOT = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_SAI_sl
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_TAI_sl
+	}
+}
+
+defined_text = {
+	name = GetSIAcementcorp
+	text = {
+		trigger = {
+			NOT = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_Siam_Cement_sl
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_Thai_Cement_sl
+	}
+}
+
+defined_text = {
+	name = GetSIAintAgencyName
+	text = {
+		trigger = {
+			NOT = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_SDSI_sl
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_TDSI_sl
+	}
+}
+
+defined_text = {
+	name = GetSIAnavyName
+	text = {
+		trigger = {
+			NOT = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_RSN_sl
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_cosmetic_tag = THI
+				has_cosmetic_tag = THI_REP
+			}
+		}
+		localization_key = SIA_RTN_sl
+	}
+}
+
+defined_text = {
+	name = GetSIAEngineers
+	text = {
+		trigger = {
+			has_socialist_government = yes
+		}
+		localization_key = "French and British"
+	}
+	text = {
+		trigger = {
+			is_in_faction_with = JAP
+			JAP = { is_subject = no }
+		}
+		localization_key = "Japanese"
+	}
+	text = {
+		trigger = {
+			country_exists = GER
+			country_exists = AUS
+			AUS = { is_subject = no }
+			NOT = {
+				has_war_with = GER
+				has_war_with = AUS
+			}
+		}
+		localization_key = "German and Austrian"
+	}
+	text = {
+		trigger = {
+			country_exists = GER
+			NOT = { has_war_with = GER }
+		}
+		localization_key = "German"
+	}
+	text = {
+		trigger = {
+			country_exists = RUS
+			RUS = {
+				is_subject = no
+				NOT = { has_war_with = SOV }
+			}
+			NOT = { has_war_with = RUS }
+		}
+		localization_key = "Russian"
+	}
+	text = {
+		trigger = {
+			OR = {
+				country_exists = USA
+				country_exists = PSA
+				country_exists = TEX
+			}
+			has_global_flag = USA_civil_war_over_flag
+			NOT = {
+				has_war_with = USA
+				has_war_with = PSA
+				has_war_with = TEX
+			}
+		}
+		localization_key = "American"
+	}
+}
+
