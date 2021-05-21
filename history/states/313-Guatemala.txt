@@ -6,7 +6,6 @@ state = {
 	}
 
 	history = {
-		owner = GUA
 		buildings = {
 			infrastructure = 4
 			arms_factory = 2
@@ -19,7 +18,6 @@ state = {
 				naval_base = 1
 			}
 		}
-		add_core_of = GUA
 		victory_points = {
 			10886 6
 		}

@@ -5,9 +5,6 @@ state = {
 	state_category = zero
 
 	history = {
-		owner = COS
-		add_core_of = COS
-		add_claim_by = PAN
 		buildings = {
 			infrastructure = 1
 		}
