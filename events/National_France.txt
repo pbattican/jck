@@ -13366,6 +13366,8 @@ country_event = { #Collapse of National France if killed or someone got algeria
 				controls_state = 459
 				controls_state = 805
 				controls_state = 458
+				controls_state = 665
+				controls_state = 513
 			}
 		}
 		NOT = { #One Major French city is back in our hands
