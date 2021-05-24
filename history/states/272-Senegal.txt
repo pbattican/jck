@@ -13,10 +13,10 @@ state = {
 		add_core_of = NFA
 		add_core_of = SEN
 		victory_points = {
-			4948 10 #Dakar
+			4948 20 #Dakar
 		}
 		victory_points = {
-			12710 3 #Saint Louis
+			12710 5 #Saint Louis
 		}
 		buildings = {
 			infrastructure = 4

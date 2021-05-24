@@ -13368,6 +13368,7 @@ country_event = { #Collapse of National France if killed or someone got algeria
 				controls_state = 458
 				controls_state = 665
 				controls_state = 513
+				controls_state = 272
 			}
 		}
 		NOT = { #One Major French city is back in our hands
@@ -13417,10 +13418,6 @@ country_event = { #Collapse of National France if killed or someone got algeria
 		
 		### Kill off NFA
 		force_capitulate = yes
-		if = {
-			limit = { is_in_faction = yes }
-			leave_faction = yes
-		}
 		hidden_effect = {
 			if = {
 				limit = {
