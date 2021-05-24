@@ -6,18 +6,6 @@ FRA_victory_decisions = {
 		}
 		available = {
 			AND = {
-
-				# Uses KR Scripted trigger in _useful_scripted_triggers.txt
-				64 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				43 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				272 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-
 				GER = {
 					OR = {
 						has_capitulated = yes
@@ -36,28 +24,38 @@ FRA_victory_decisions = {
 						exists = no
 					}				
 				}
+				# Uses KR Scripted trigger in _useful_scripted_triggers.txt
+				64 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				43 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				272 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
 			}
-		}
+		} 
 		fire_only_once = no
 
 		cancel_trigger = {
-					NOT = {
-						64 = {
-							is_controlled_by_ROOT_or_ally = yes
-						}
-						43 = {
-							is_controlled_by_ROOT_or_ally = yes
-						}
-						272 = {
-							is_controlled_by_ROOT_or_ally = yes
-						}
+			OR = {
+				64 = {
+					is_controlled_by_ROOT_or_ally = no
 				}
+				43 = {
+					is_controlled_by_ROOT_or_ally = no
+				}
+				272 = {
+					is_controlled_by_ROOT_or_ally = no
+				}
+			}
 		}
 
 		selectable_mission = yes
 		is_good = yes
 		days_remove = 30
-		timeout_effect = {
+		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision FRA_third_int_victory"
 			news_event = {
 				id = krw.victory.0

@@ -18,7 +18,7 @@ add_namespace = krw.victory
 news_event = {
 	id = krw.victory.0
 	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event krw.outtro.0"
+		log = "[GetDateText]: [Root.GetName]: event krw.victory.0"
 	}
 	title = krw.victory.0.t
 	desc = krw.victory.0.d
