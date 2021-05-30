@@ -6,9 +6,11 @@ GER_victory_decisions = {
 		}
 		available = {
 			AND = {
-				controls_state = 64
-				controls_state = 43
-				controls_state = 272
+				controls_state = 2
+				controls_state = 16
+				controls_province = 3529
+				controls_province = 6380
+				controls_province = 6174
 				NOT = {
 					country_exists = FRA
 					country_exists = SRI
