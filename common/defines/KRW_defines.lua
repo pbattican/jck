@@ -11,10 +11,11 @@ NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 6 --12
 
 --- Objective KR
-NDefines.NGame.GAME_SPEED_SECONDS = { 1, 0.35, 0.2, 0.1, 0.0 }
+NDefines.NGame.GAME_SPEED_SECONDS = { 1, 0.3, 0.175, 0.1, 0.0 }
 
---- Encourage more Lend-Lease for XP gain. Base is 0.005
+--- More XP gain per day of combat. Base is 3
 NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 3.5
+--- Encourage more Lend-Lease for XP gain. Base is 0.005
 NDefines.NMilitary.LEND_LEASE_FIELD_EXPERIENCE_SCALE = 0.0055
 
 --- Boost Max XP so it is not lost to the ether
