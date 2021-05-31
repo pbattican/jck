@@ -1,7 +1,7 @@
 state = {
 	id = 306
 	name = "STATE_306"
-	manpower = 0
+	manpower = 2543049
 	state_category = five
 
 	resources = {
