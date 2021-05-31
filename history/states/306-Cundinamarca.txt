@@ -1,11 +1,10 @@
 state = {
 	id = 306
 	name = "STATE_306"
-	manpower = 2543049
+	manpower = 0
 	state_category = five
 
 	resources = {
-		oil = 15
 	}
 
 	history = {
