@@ -5,7 +5,6 @@ state = {
 	manpower = 729761
 
 	resources = {
-		chromium = 1
 	}
 
 	history = {

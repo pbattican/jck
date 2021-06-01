@@ -3,7 +3,6 @@ state = {
 	name = "STATE_314"
 	manpower = 1597611
 	resources = {
-		chromium = 1
 	}
 
 	state_category = four
