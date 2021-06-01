@@ -67,4 +67,5 @@ tags={
 	"National Focuses"
 }
 name="JCK"
-supported_version="1.10.5"
+supported_version="1.10.*"
+remote_file_id="2502041023"
