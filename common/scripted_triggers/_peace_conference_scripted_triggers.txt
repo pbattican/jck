@@ -193,7 +193,7 @@ state_same_continent_as_state_FROM = {
 }
 
 is_impassable_to_PREV = {
-	check_variable = { impassable_to@PREV = 1 }
+	check_variable = { impassable_to_@PREV = 1 }
 }
 
 ### in country scope
