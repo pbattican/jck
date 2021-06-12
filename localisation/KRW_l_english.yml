@@ -1,0 +1,70 @@
+﻿l_english:
+ AUS_foreign_policy:0 "Austrian Foreign Policy"
+ AUS_join_Reichspakt:0 "Join the Reichspakt"
+ AUS_join_RP_tech:0 "Join the Reichspakt Technology Group"
+
+ BUL_foreign_policy:0 "Bulgarian Special Policies"
+ BUL_subdue_the_greeks:0 "Subdue the Greeks"
+ BUL_subdue_the_Serbs:0 "Subdue the Serbians"
+ BUL_subdue_the_romanians:0 "Subdue the Romanians"
+ BUL_subdue_the_turks:0 "Subdue the Turks"
+
+ CAN_exploit_resources:0 "Canada Special Decisions"
+ CAN_remove_POR:0 "Remove Portugal from the Entente"
+ CAN_remove_SRD:0 "Remove Sardinia from the Entente"
+ CAN_integrate_icelands_defences:0 "Integrate Iceland and its defenses"
+
+ FNG_foreign_affairs:0 "Fengtian Foreign Affairs"
+ FNG_join_cp_tech:0 "Join the Co-Pro Technology Group"
+
+ JAP_industrial_effort:0 "Japanese Indusrial Effort"
+ JAP_streamline_fighter_production:0 "Streamline fighter production"
+ JAP_expand_naval_production:0 "Expand naval production"
+
+ OTT_foreign_policy:0 "Ottomans Foreign Policies"
+ OTT_join_entente:0 "Join the Entente"
+ OTT_join_ENT_tech:0 "Join the Entente Technology Group"
+
+ BRA_foreign_policy:0 "Brazilian Foreign Policies"
+ KRW_BRA_join_entente:0 "Join the Entente"
+ BRA_join_ENT_tech:0 "Join the Entente Technology Group"
+
+ POL_air_effort:0 "Polish Air Effort"
+ POL_streamline_fighter_production:0 "Streamline fighter production"
+ POL_expand_fighter_production:0 "Expand fighter production"
+
+ ROM_foreign_policy_decisions:0 "Romanian Foreign Policies"
+ ROM_join_Reichspakt:0 "Join the Reichspakt"
+ ROM_join_RP_tech:0 "Join the Reichspakt Technology Group"
+
+ RUS_foreign_affairs:0 "Russian Foreign Policies"
+ RUS_join_CoPro:0 "Join the Co-Pro"
+ RUS_join_cp_tech:0 "Join the Co-Pro Technology Group"
+
+ PRF_foreign_affairs:0 "Princely Foreign Policies"
+ PRF_join_CoPro:0 "Join the Co-Pro"
+ PRF_join_cp_tech:0 "Join the Co-Pro Technology Group"
+
+ SER_foreign_policy:0 "Serbian Foreign Policies"
+ SER_join_Reichspakt:0 "Join the Reichspakt"
+
+ ENG_exploit_resources:0 "Union of Britain Special Decisions"
+ ENG_integrate_icelands_defences:0 "Integrate Iceland and its defenses"
+
+ GER_imperial_spirit:0 "German Imperial Spirit"
+ GER_imperial_spirit_desc:0 "Germans have won their place in the sun. However threats abound, not least of which from the specter cast by the Syndicalism of their once enemies; France and Britain. Germany must hold, for if she does not all of European civilisation will fall with her, centuries of history and tradition will be ground beneath the feet of the syndicalists."
+
+ ### Last Stand
+ KRW_ABILITY_LAST_STAND:0 "Last Stand"
+ KRW_ABILITY_LAST_STAND_TOOLTIP:0 "Last Stand ($LEADER$)"
+ KRW_ABILITY_LAST_STAND_DESC:0 "Your armies will get a defensive bonus at the expense of some disadvantages.\n§BKRW Edit: Org. damage is now 0.75, instead of 1.0§"
+
+ ### Force Attack
+ KRW_ABILITY_FORCE_ATTACK:0 "Force Attack"
+ KRW_ABILITY_FORCE_ATTACK_TOOLTIP:0 "Force Attack ($LEADER$)"
+ KRW_ABILITY_FORCE_ATTACK_DESC:0 "Your armies will get a defensive bonus at the expense of some disadvantages.\n§BKRW Edit: Org. damage is now 0.75, instead of 1.0§"
+
+ ### Welcome event
+ krw.intro.0.t:0 "Welcome to Kaiserreich Weekly!"
+ krw.intro.0.d:0 "\n\n\n\n\n\n\n\n\n\nWelcome and thank you for playing at Kaiserreich Weekly!"
+ krw.intro.0.a:0 "Let's get started!"

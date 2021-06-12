@@ -1,0 +1,23 @@
+FNG_foreign_affairs = {
+	FNG_join_cp_tech = {
+		icon = generic_prospect_for_resources
+		allowed = {
+			original_tag = FNG
+		}
+		available = {
+			OR = {
+				is_in_faction_with = JAP
+				is_subject_of = JAP
+			}
+		}
+		visible = {
+			original_tag = FNG
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision FNG_join_cp_tech"
+			add_to_tech_sharing_group = japan_research
+		}
+	}
+}

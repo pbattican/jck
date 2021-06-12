@@ -1,0 +1,15 @@
+add_namespace = krw.intro
+news_event = {
+	id = krw.intro.0
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event krw.intro.0"
+	}
+	title = krw.intro.0.t
+	desc = krw.intro.0.d
+	picture = GFX_news_event_KRW_welcome
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = krw.intro.0.a
+	}
+}
