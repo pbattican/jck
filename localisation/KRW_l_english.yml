@@ -11,11 +11,6 @@
  FNG_foreign_affairs:0 "Fengtian Foreign Affairs"
  FNG_join_cp_tech:0 "Join the Co-Pro Technology Group"
 
- FRA_irredentism_idea:0 "French Irredentism"
- FRA_army_decisions:0 "Communard Armed Forces"
- FRA_foster_irridentism:0 "Foster Irridentism"
- FRA_foster_irridentism_desc:0 "With the recent declaration of war against Germany, men have risen up in droves to fight for our former lands. With such irridentism, we cannot possibly fail!"
-
  JAP_industrial_effort:0 "Japanese Indusrial Effort"
  JAP_streamline_fighter_production:0 "Streamline fighter production"
  JAP_expand_naval_production:0 "Expand naval production"
@@ -49,11 +44,6 @@
 
  ENG_exploit_resources:0 "Union of Britain Special Decisions"
  ENG_integrate_icelands_defences:0 "Integrate Iceland and its defenses"
- ENG_synth_decisions:0 "War Measures"
- ENG_nationalize_GLCC:0 "Nationalize the Coal Gas Companies"
- ENG_nationalized_GLCC:0 "Nationalized Coal Gas Companies"
- ENG_nationalized_GLCC_desc:0 "England has produced manufactured gas since the time of Napoleon. The Gas Light and Coke Company is being directed by the Executive Committee to prioritize production of synthetic fuels for the military. The Trade Unions have tacitly accepted this for now..."
- ENG_nationalize_GLCC_desc:0 "The capitalist navies have cut off our oil supplies. The Gas Light and Coke Company must be directed by the Executive Committee to prioritize the production of synthetic fuels for our military. The Trade Unions will understand..."
 
  GER_imperial_spirit:0 "German Imperial Spirit"
  GER_imperial_spirit_desc:0 "Germans have won their place in the sun. However threats abound, not least of which from the specter cast by the Syndicalism of their once enemies; France and Britain. Germany must hold, for if she does not all of European civilisation will fall with her, centuries of history and tradition will be ground beneath the feet of the syndicalists."
@@ -72,6 +62,21 @@
  krw.intro.0.t:0 "Welcome to Kaiserreich Weekly!"
  krw.intro.0.d:0 "\n\n\n\n\n\n\n\n\n\nWelcome and thank you for playing at Kaiserreich Weekly!"
  krw.intro.0.a:0 "Let's get started!"
+
+ ### JCK 
+ FRA_irredentism_idea:0 "French Irredentism"
+ FRA_army_decisions:0 "Communard Armed Forces"
+ FRA_foster_irridentism:0 "Foster Irridentism"
+ FRA_foster_irridentism_desc:0 "With the recent declaration of war against Germany, men have risen up in droves to fight for our former lands. With such irridentism, we cannot possibly fail!"
+
+ ENG_synth_decisions:0 "War Measures"
+ ENG_nationalize_GLCC:0 "Nationalize the Coal Gas Companies"
+ ENG_nationalized_GLCC:0 "Nationalized Coal Gas Companies"
+ ENG_nationalized_GLCC_desc:0 "England has produced manufactured gas since the time of Napoleon. The Gas Light and Coke Company is being directed by the Executive Committee to prioritize production of synthetic fuels for the military. The Trade Unions have tacitly accepted this for now..."
+ ENG_nationalize_GLCC_desc:0 "The capitalist navies have cut off our oil supplies. The Gas Light and Coke Company must be directed by the Executive Committee to prioritize the production of synthetic fuels for our military. The Trade Unions will understand..."
+
+ NFA_seize_sardinia_decisions:0 "Necessary Measures"
+ NFA_annex_SRD:0 "Annex Sardinia"
 
  ### Victory event
  krw.victory.0.t:0 "[ROOT.GetFactionName] Wins!"
