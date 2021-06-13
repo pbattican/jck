@@ -136,6 +136,7 @@ been started. -10% Cost reduction on combat aircraft and all ships
 - Made the collapse event for National France require control of all North African states as well as Senegal. Event also will not remove the country from the faction but still capitulates them. 
 - Increased VPs of Dakar and Saint Louis to 20 and 5 respectively to prevent collapse of Nat France from losing the northern cores
 - Given Liberia as a core
+- Given decision to annex Sardinia IF Sardinia is an AI. This will transfer all troops and provide 100% compliance
 
 #### Ottomans
 

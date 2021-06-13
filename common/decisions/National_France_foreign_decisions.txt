@@ -1,0 +1,35 @@
+NFA_seize_sardinia_decisions = {
+	NFA_annex_SRD = {
+		icon = generic_political_discourse
+		allowed = {
+			original_tag = NFA
+		}
+		visible = {
+			country_exists = SRD
+			SRD = {
+				is_ai = yes
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NFA_annex_SRD"
+			NFA = {
+				annex_country = {
+					target = SRD
+					transfer_troops = yes
+				}
+				114 = {
+					set_compliance = 100
+				}
+				1002 = {
+					set_compliance = 100
+				}
+			}
+		}
+	}
+}

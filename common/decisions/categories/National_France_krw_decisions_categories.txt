@@ -1,0 +1,12 @@
+NFA_seize_sardinia_decisions = {
+	icon = GFX_decision_category_border_conflicts
+
+	picture = GFX_decision_cat_natfra_morocco
+
+	allowed = {
+		original_tag = NFA
+	}
+	visible = {
+		SRD = { is_ai = yes }
+	}
+}
