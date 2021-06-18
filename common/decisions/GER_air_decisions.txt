@@ -1,0 +1,22 @@
+GER_air_decisions = {
+	GER_streamline_air_production = {
+		icon = generic_research
+		allowed = {
+			original_tag = GER
+		}
+		available = {
+			date > 1939.1.1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GER_streamline_air_production"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Add timed idea GER_streamline_air_production"
+			add_timed_idea = { 
+				idea = GER_streamline_air_production
+				days = 180 
+			}
+		}
+	}
+}

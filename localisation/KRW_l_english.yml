@@ -17,6 +17,11 @@
  FNG_foreign_affairs:0 "Fengtian Foreign Affairs"
  FNG_join_cp_tech:0 "Join the Co-Pro Technology Group"
 
+ FRA_irredentism_idea:0 "All True Frenchmen"
+ FRA_army_decisions:0 "Communard Armed Forces"
+ FRA_foster_irridentism:0 "All True Frenchmen"
+ FRA_foster_irridentism_desc:0 "As the war against Germany drags onwards, we have lost many men. The call is out for all true Frenchmen to join up and reclaim our native lands."
+
  JAP_industrial_effort:0 "Japanese Indusrial Effort"
  JAP_streamline_fighter_production:0 "Streamline fighter production"
  JAP_expand_naval_production:0 "Expand naval production"
@@ -53,6 +58,9 @@
 
  GER_imperial_spirit:0 "German Imperial Spirit"
  GER_imperial_spirit_desc:0 "Germans have won their place in the sun. However threats abound, not least of which from the specter cast by the Syndicalism of their once enemies; France and Britain. Germany must hold, for if she does not all of European civilisation will fall with her, centuries of history and tradition will be ground beneath the feet of the syndicalists."
+
+ GER_air_decisions:0 "Kaiserreiches Luftstreitkräfte"
+ GER_streamline_air_production:0 "Streamline aircraft production"
 
  ### Last Stand
  KRW_ABILITY_LAST_STAND:0 "Last Stand"
