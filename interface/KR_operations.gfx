@@ -1,7 +1,0 @@
-spriteTypes = {
-	###Small Phase pictures
-	spriteType = {
-		name = "GFX_phase_chinese_warlords_small"
-		texturefile = "gfx/interface/operations/phases_small/phase_chinese_warlords_small.tga"
-	}
-}

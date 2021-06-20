@@ -1,5 +1,5 @@
 --- Objective KR
-NDefines.NGame.GAME_SPEED_SECONDS = { 1, 0.25, 0.18, 0.1, 0.0 }
+NDefines.NGame.GAME_SPEED_SECONDS = { 1, 0.25, 0.185, 0.1, 0.0 }
 
 --- More XP gain per day of combat. Base is 3
 NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 3.5

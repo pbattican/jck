@@ -7,6 +7,7 @@ add_ideas = {
 	GER_victors_of_wwi
 	GER_quenched_militarism
 	GER_imperial_pride
+	GER_imperial_spirit
 	limited_conscription
 
 	GER_Franz_von_Papen_hog_ade

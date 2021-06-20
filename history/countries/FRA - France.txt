@@ -7,7 +7,7 @@ set_war_support = 0.4
 set_research_slots = 4
 
 add_ideas = {
-	partial_economic_mobilisation
+	low_economic_mobilisation
 }
 
 ### Starting Technologies ###
@@ -143,7 +143,7 @@ add_ideas = {
 
 ### Events ###
 country_event = { id = comfrance.1 days = 1 }
-country_event = { id = bgtcomfrance.5 days = 14 }
+country_event = { id = comfrance.5 days = 14 }
 country_event = { id = comfrance.28 days = 77 }
 country_event = { id = iwo.23 days = 90 }
 country_event = { id = comfrance.163 days = 121 }

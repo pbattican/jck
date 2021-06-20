@@ -1,7 +1,0 @@
-ENG_synth_decisions = {
-	icon = generic_prospect_for_resources
-
-	allowed = {
-		original_tag = ENG
-	}
-}
