@@ -3,7 +3,7 @@ NDefines.NGame.GAME_SPEED_SECONDS = { 1, 0.25, 0.185, 0.1, 0.0 }
 
 --- Should prevent peace events appearing for all players if there aren't winners and losers on both sides. 
 NDefines.NDiplomacy.MP_NUM_WINNERS_FOR_PEACE_PAUSE = 1
-NDefines.NDiplomacy.MP_NUM_WINNERS_FOR_PEACE_PAUSE = 1
+NDefines.NDiplomacy.MP_NUM_LOSERS_FOR_PEACE_PAUSE = 1
 
 --- More XP gain per day of combat. Base is 3
 NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 3.5
