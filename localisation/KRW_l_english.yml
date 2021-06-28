@@ -76,3 +76,7 @@
  krw.intro.0.t:0 "Welcome to Kaiserreich Weekly!"
  krw.intro.0.d:0 "\n\n\n\n\n\n\n\n\n\nWelcome and thank you for playing at Kaiserreich Weekly!"
  krw.intro.0.a:0 "Let's get started!"
+
+ ### Tournament specific localisation
+ KRW_tournament_decisions:0 "KRW Tournament Specific Decisions"
+ UKR_annex_WHR:0 "Annex White Ruthenia"

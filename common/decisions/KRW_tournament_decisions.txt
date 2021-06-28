@@ -1,0 +1,39 @@
+KRW_tournament_decisions = {
+	# Generic decisions
+	# Limited per tag to make them visible, yet one file to contain them all
+	UKR_annex_WHR = {
+		icon = generic_political_discourse
+		allowed = {
+			original_tag = UKR
+		}
+		visible = {
+			tag = UKR
+			country_exists = WHR
+		}
+		available = {
+			tag = UKR
+			country_exists = WHR
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UKR_annex_WHR"
+			UKR = {
+				annex_country = {
+					target = WHR
+					transfer_troops = yes
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = WHR
+						has_resistance = yes
+					}
+					add_compliance = 50
+				}
+				add_political_power = 50
+				add_stability = 0.05
+				add_war_support = 0.05
+			}
+		}
+	}
+}
