@@ -54,6 +54,7 @@ KRW_tournament_decisions = {
 		fire_only_once = yes
 		cost = 0
 		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GER_annex_poland"
 			add_political_power = 50
 			add_stability = 0.05
 			add_war_support = 0.05
@@ -86,6 +87,7 @@ KRW_tournament_decisions = {
 		fire_only_once = yes
 		cost = 0
 		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GER_annex_belgium"
 			add_political_power = 50
 			add_stability = 0.05
 			add_war_support = 0.05
@@ -95,6 +97,55 @@ KRW_tournament_decisions = {
 				}
 				add_resistance_target = -50
 			}
+		}
+	}
+	BUL_complaince_ROM = {
+		icon = generic_political_discourse
+		allowed = {
+			original_tag = BUL
+		}
+		visible = {
+			tag = BUL
+		}
+		available = {
+			tag = BUL
+			NOT = {
+				country_exists = ROM
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_complaince_ROM"
+			every_owned_state = {
+				limit = {
+					is_core_of = ROM
+				}
+				add_state_modifier = {
+					modifier = {
+						compliance_gain = 0.15
+					}
+				}
+			}
+		}
+	}
+	COF_amour_production = {
+		icon = generic_political_discourse
+		allowed = {
+			original_tag = FRA
+		}
+		visible = {
+			tag = FRA
+		}
+		available = {
+			tag = FRA
+			NOT = {
+				country_exists = GER
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BUL_complaince_ROM"
+			add_ideas = FRA_armour_production_idea
 		}
 	}
 }

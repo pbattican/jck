@@ -1,10 +1,24 @@
 ideas = {
 	country = {
 		FRA_irredentism_idea = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea French_irredentism_idea"}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea French_irredentism_idea"
+			}
 			picture = FRA_idea_revenge
 			modifier = {
 				conscription = 0.02
+			}
+		}
+		FRA_armour_production_idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea FRA_armour_production_idea"
+			}
+			picture = FRA_idea_revenge
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
 			}
 		}
 	}
