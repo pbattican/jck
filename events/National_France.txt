@@ -444,7 +444,8 @@ country_event = {
 		random_unit_leader = {
 			limit = {
 				has_id = 806
-			}			#Mordacq
+			}
+			#Mordacq
 			promote_leader = yes
 		}
 		hidden_effect = {
@@ -566,7 +567,8 @@ country_event = {
 		random_unit_leader = {
 			limit = {
 				has_id = 802
-			}			#CdG
+			}
+			#CdG
 			promote_leader = yes
 		}
 		hidden_effect = {
@@ -1124,14 +1126,16 @@ country_event = {
 		random_unit_leader = {
 			limit = {
 				has_id = 802
-			}			#CdG
+			}
+			#CdG
 			retire = yes
 		}
 		set_country_flag = Charles_de_Gaulle_dead
 		random_unit_leader = {
 			limit = {
 				has_id = 812
-			}			#Leclerc
+			}
+			#Leclerc
 			retire = yes
 		}
 		set_country_flag = Philippe_de_Hauteclocque_dead
@@ -1268,14 +1272,16 @@ country_event = {
 		random_unit_leader = {
 			limit = {
 				has_id = 802
-			}			#CdG
+			}
+			#CdG
 			retire = yes
 		}
 		set_country_flag = Charles_de_Gaulle_dead
 		random_unit_leader = {
 			limit = {
 				has_id = 812
-			}			#Leclerc
+			}
+			#Leclerc
 			retire = yes
 		}
 		set_country_flag = Philippe_de_Hauteclocque_dead
@@ -1402,19 +1408,22 @@ country_event = {
 		random_unit_leader = {
 			limit = {
 				has_id = 806
-			}			#Mordacq
+			}
+			#Mordacq
 			retire = yes
 		}
 		random_unit_leader = {
 			limit = {
 				has_id = 807
-			}			#Doumenc
+			}
+			#Doumenc
 			retire = yes
 		}
 		random_unit_leader = {
 			limit = {
 				has_id = 818
-			}			#Lelong
+			}
+			#Lelong
 			retire = yes
 		}
 		hidden_effect = {
@@ -1452,7 +1461,8 @@ country_event = {
 		random_unit_leader = {
 			limit = {
 				has_id = 802
-			}			#CdG
+			}
+			#CdG
 			promote_leader = yes
 		}
 		hidden_effect = {
@@ -1512,7 +1522,8 @@ country_event = {
 			country_event = {
 				id = nfa.512
 				days = 28
-			}			#Restore the King
+			}
+			#Restore the King
 			country_event = {
 				id = nfa.271
 				days = 40
@@ -1576,11 +1587,13 @@ country_event = {
 			country_event = {
 				id = nfa.29
 				days = 18
-			}			# Allow Investment Missions
+			}
+			# Allow Investment Missions
 			country_event = {
 				id = nfa.30
 				days = 26
-			}			# Looping Corruption Checker
+			}
+			# Looping Corruption Checker
 			remove_ideas = NFA_Henri_Mordacq_sec_ade
 		}
 		add_ideas = NFA_George_Lamirand_sec_pau
@@ -2030,14 +2043,16 @@ country_event = {
 				country_event = {
 					id = nfa.35
 					days = 7
-				}				# Mordacq coups Petain
+				}
+				# Mordacq coups Petain
 				set_country_flag = NFA_Napoleon_0
 			}
 			else = {
 				country_event = {
 					id = nfa.39
 					days = 15
-				}				# Petain has more influence
+				}
+				# Petain has more influence
 			}
 		}
 	}
@@ -2061,7 +2076,8 @@ country_event = {
 			country_event = {
 				id = nfa.38
 				days = 28
-			}			#Le Redressement Français
+			}
+			#Le Redressement Français
 		}
 	}
 }
@@ -2090,7 +2106,8 @@ country_event = {
 			country_event = {
 				id = nfa.32
 				days = 1
-			}			# Corruption still coming
+			}
+			# Corruption still coming
 		}
 		else_if = {
 			limit = {
@@ -2112,11 +2129,13 @@ country_event = {
 			country_event = {
 				id = nfa.31
 				days = 1
-			}			# High Corruption warning
+			}
+			# High Corruption warning
 			country_event = {
 				id = nfa.30
 				days = 7
-			}			#Loop the checker
+			}
+			#Loop the checker
 		}
 		else_if = {
 			limit = {
@@ -2126,7 +2145,8 @@ country_event = {
 			country_event = {
 				id = nfa.30
 				days = 7
-			}			#Loop the checker
+			}
+			#Loop the checker
 		}
 		else = {
 			# Nothing to end this loop
@@ -2152,7 +2172,8 @@ country_event = {
 			country_event = {
 				id = nfa.34
 				days = 5
-			}			#Anti-Corruption Decisions
+			}
+			#Anti-Corruption Decisions
 		}
 	}
 }
@@ -2181,7 +2202,8 @@ country_event = {
 			country_event = {
 				id = nfa.33
 				days = 7
-			}			#Operation Tocata
+			}
+			#Operation Tocata
 		}
 	}
 	option = {
@@ -2194,7 +2216,8 @@ country_event = {
 			country_event = {
 				id = nfa.35
 				days = 12
-			}			#Mordacq Coup
+			}
+			#Mordacq Coup
 		}
 	}
 }
@@ -2215,7 +2238,8 @@ country_event = {
 			country_event = {
 				id = nfa.40
 				days = 2
-			}			#Continue the chain
+			}
+			#Continue the chain
 		}
 	}
 	option = {
@@ -2263,21 +2287,24 @@ country_event = {
 		random_unit_leader = {
 			limit = {
 				has_id = 806
-			}			#Mordacq
+			}
+			#Mordacq
 			promote_leader = yes
 		}
 		remove_unit_leader = 800
 		random_unit_leader = {
 			limit = {
 				has_id = 802
-			}			#CdG
+			}
+			#CdG
 			retire = yes
 		}
 		set_country_flag = Charles_de_Gaulle_dead
 		random_unit_leader = {
 			limit = {
 				has_id = 812
-			}			#Leclerc
+			}
+			#Leclerc
 			retire = yes
 		}
 		set_country_flag = Philippe_de_Hauteclocque_dead
@@ -2285,11 +2312,13 @@ country_event = {
 			country_event = {
 				id = nfa.51
 				days = 1
-			}			#Form the CSN
+			}
+			#Form the CSN
 			country_event = {
 				id = nfa.37
 				days = 24
-			}			#Trial of Pétain
+			}
+			#Trial of Pétain
 		}
 		clr_country_flag = Fight_for_influence_on
 	}
@@ -2548,19 +2577,22 @@ country_event = {
 		random_unit_leader = {
 			limit = {
 				has_id = 806
-			}			#Mordacq
+			}
+			#Mordacq
 			retire = yes
 		}
 		random_unit_leader = {
 			limit = {
 				has_id = 807
-			}			#Doumenc
+			}
+			#Doumenc
 			retire = yes
 		}
 		random_unit_leader = {
 			limit = {
 				has_id = 818
-			}			#Lelong
+			}
+			#Lelong
 			retire = yes
 		}
 		set_party_name = {
@@ -2634,7 +2666,8 @@ country_event = {
 			country_event = {
 				id = nfa.41
 				hours = 6
-			}			#Continue the chain
+			}
+			#Continue the chain
 		}
 	}
 	option = {
@@ -2659,7 +2692,8 @@ country_event = {
 			country_event = {
 				id = nfa.42
 				days = 2
-			}			#Continue the chain
+			}
+			#Continue the chain
 		}
 	}
 	option = {
@@ -2791,7 +2825,8 @@ country_event = {
 			random_unit_leader = {
 				limit = {
 					has_id = 806
-				}				#Mordacq
+				}
+				#Mordacq
 				promote_leader = yes
 			}
 		}
@@ -2820,11 +2855,13 @@ country_event = {
 			country_event = {
 				id = nfa.44
 				days = 6
-			}			#Mordacq Evasion
+			}
+			#Mordacq Evasion
 			country_event = {
 				id = nfa.45
 				days = 20
-			}			#Defamation Campaign
+			}
+			#Defamation Campaign
 		}
 		add_ideas = NFA_George_Lamirand_sec_pau
 	}
@@ -2867,7 +2904,8 @@ country_event = {
 			country_event = {
 				id = nfa.46
 				days = 20
-			}			#Lacaze Affair
+			}
+			#Lacaze Affair
 		}
 	}
 }
@@ -2891,7 +2929,8 @@ country_event = {
 			country_event = {
 				id = nfa.47
 				days = 12
-			}			#Parades
+			}
+			#Parades
 		}
 	}
 }
@@ -2919,7 +2958,8 @@ country_event = {
 			country_event = {
 				id = nfa.48
 				days = 35
-			}			#Parades Continue
+			}
+			#Parades Continue
 		}
 	}
 }
@@ -2962,7 +3002,8 @@ country_event = {
 			country_event = {
 				id = nfa.49
 				days = 65
-			}			#Final Parade
+			}
+			#Final Parade
 		}
 	}
 	option = {
@@ -2979,7 +3020,8 @@ country_event = {
 			country_event = {
 				id = nfa.52
 				days = 8
-			}			#AF Contacts us
+			}
+			#AF Contacts us
 		}
 	}
 }
@@ -3006,7 +3048,8 @@ country_event = {
 			country_event = {
 				id = nfa.50
 				days = 12
-			}			#Final Parade pt.2
+			}
+			#Final Parade pt.2
 		}
 	}
 }
@@ -3051,7 +3094,8 @@ country_event = {
 			country_event = {
 				id = nfa.51
 				days = 7
-			}			#Form the CSN
+			}
+			#Form the CSN
 		}
 	}
 }
@@ -3212,7 +3256,8 @@ country_event = {
 			country_event = {
 				id = nfa.53
 				days = 26
-			}			#400 Coups
+			}
+			#400 Coups
 		}
 	}
 	option = {
@@ -3232,7 +3277,8 @@ country_event = {
 			country_event = {
 				id = nfa.54
 				days = 26
-			}			#Handle it ourselves
+			}
+			#Handle it ourselves
 		}
 	}
 }
@@ -3269,7 +3315,8 @@ country_event = {
 			country_event = {
 				id = nfa.54
 				days = 21
-			}			#Handle it Ourselves
+			}
+			#Handle it Ourselves
 		}
 	}
 	option = {
@@ -3282,7 +3329,8 @@ country_event = {
 			country_event = {
 				id = nfa.58
 				days = 34
-			}			#Bloodbath
+			}
+			#Bloodbath
 		}
 	}
 }
@@ -3314,7 +3362,8 @@ country_event = {
 			country_event = {
 				id = nfa.49
 				days = 35
-			}			#Final Parade
+			}
+			#Final Parade
 		}
 	}
 	option = {
@@ -3326,7 +3375,8 @@ country_event = {
 			country_event = {
 				id = nfa.55
 				days = 4
-			}			#Offer from redressment
+			}
+			#Offer from redressment
 		}
 	}
 }
@@ -3348,7 +3398,8 @@ country_event = {
 			country_event = {
 				id = nfa.56
 				days = 40
-			}			#Accepted Offer
+			}
+			#Accepted Offer
 		}
 	}
 }
@@ -3383,7 +3434,8 @@ country_event = {
 			country_event = {
 				id = nfa.57
 				days = 20
-			}			#Parades end slowly
+			}
+			#Parades end slowly
 		}
 	}
 }
@@ -3421,19 +3473,22 @@ country_event = {
 		random_unit_leader = {
 			limit = {
 				has_id = 806
-			}			#Mordacq
+			}
+			#Mordacq
 			retire = yes
 		}
 		random_unit_leader = {
 			limit = {
 				has_id = 807
-			}			#Doumenc
+			}
+			#Doumenc
 			retire = yes
 		}
 		random_unit_leader = {
 			limit = {
 				has_id = 818
-			}			#Lelong
+			}
+			#Lelong
 			retire = yes
 		}
 		hidden_effect = {
@@ -3510,7 +3565,8 @@ country_event = {
 			country_event = {
 				id = nfa.59
 				days = 1
-			}			#Battleships fire on crowd
+			}
+			#Battleships fire on crowd
 		}
 	}
 }
@@ -3533,7 +3589,8 @@ country_event = {
 			country_event = {
 				id = nfa.69
 				days = 7
-			}			#AF and Petain victorious
+			}
+			#AF and Petain victorious
 		}
 	}
 }
@@ -3557,7 +3614,8 @@ country_event = {
 			country_event = {
 				id = nfa.73
 				days = 17
-			}			#AF Ultimatum
+			}
+			#AF Ultimatum
 		}
 		add_popularity = {
 			ideology = authoritarian_democrat
@@ -3586,7 +3644,8 @@ country_event = {
 			country_event = {
 				id = nfa.74
 				days = 8
-			}			#Petain surrenders
+			}
+			#Petain surrenders
 		}
 	}
 	option = {
@@ -3598,7 +3657,8 @@ country_event = {
 			country_event = {
 				id = nfa.75
 				days = 8
-			}			#Petain killed
+			}
+			#Petain killed
 		}
 	}
 }
@@ -3631,7 +3691,8 @@ country_event = {
 			country_event = {
 				id = nfa.76
 				days = 12
-			}			#AF in full control
+			}
+			#AF in full control
 		}
 	}
 }
@@ -3673,7 +3734,8 @@ country_event = {
 			country_event = {
 				id = nfa.76
 				days = 14
-			}			#AF in full control
+			}
+			#AF in full control
 		}
 	}
 }
@@ -3708,19 +3770,22 @@ country_event = {
 		random_unit_leader = {
 			limit = {
 				has_id = 806
-			}			#Mordacq
+			}
+			#Mordacq
 			retire = yes
 		}
 		random_unit_leader = {
 			limit = {
 				has_id = 807
-			}			#Doumenc
+			}
+			#Doumenc
 			retire = yes
 		}
 		random_unit_leader = {
 			limit = {
 				has_id = 818
-			}			#Lelong
+			}
+			#Lelong
 			retire = yes
 		}
 		add_ideas = NFA_republican_remnants
@@ -3728,7 +3793,8 @@ country_event = {
 			country_event = {
 				id = nfa.77
 				days = 24
-			}			#Results of the investigation
+			}
+			#Results of the investigation
 			set_country_flag = NFA_AF_victorious
 			set_variable = {
 				#Set up the variables for the purge decisions
@@ -3746,7 +3812,8 @@ country_event = {
 			country_event = {
 				id = nfa.512
 				days = 28
-			}			#Restore the King
+			}
+			#Restore the King
 			if = {
 				limit = {
 					has_country_flag = nfa_lessons_1914_chosen
@@ -3786,7 +3853,8 @@ country_event = {
 			country_event = {
 				id = nfa.78
 				days = 8
-			}			#Guilty
+			}
+			#Guilty
 		}
 	}
 	option = {
@@ -3798,11 +3866,13 @@ country_event = {
 			country_event = {
 				id = nfa.86
 				days = 10
-			}			#Purge
+			}
+			#Purge
 			country_event = {
 				id = nfa.272
 				days = 16
-			}			#Groussard flees
+			}
+			#Groussard flees
 		}
 	}
 }
@@ -4014,12 +4084,14 @@ state_event = {
 				modifier = {
 					disable_strategic_redeployment = -1
 				}
-			}			#A modifier of -1 turns strategic redeployment back on
+			}
+			#A modifier of -1 turns strategic redeployment back on
 			add_state_modifier = {
 				modifier = {
 					local_supplies_for_controller = 0.5
 				}
-			}			#Turn the supplies back to normal
+			}
+			#Turn the supplies back to normal
 		}
 	}
 }
@@ -4598,26 +4670,32 @@ country_event = {
 					amount = 4
 					16 = {
 						is_owned_and_controlled_by = GER
-					}					#Paris
+					}
+					#Paris
 					19 = {
 						is_owned_and_controlled_by = GER
-					}					#Bordeaux
+					}
+					#Bordeaux
 					20 = {
 						is_owned_and_controlled_by = GER
-					}					#Lyon
+					}
+					#Lyon
 					21 = {
 						is_owned_and_controlled_by = GER
-					}					#Marseilles
+					}
+					#Marseilles
 					980 = {
 						is_owned_and_controlled_by = GER
-					}					#Lille
+					}
+					#Lille
 				}
 			}
 			GER = {
 				country_event = {
 					id = nfa.134
 				}
-			}			#The French enter negotiations - Case 1
+			}
+			#The French enter negotiations - Case 1
 		}
 		else_if = {
 			limit = {
@@ -4625,26 +4703,32 @@ country_event = {
 					amount = 3
 					16 = {
 						is_owned_and_controlled_by = GER
-					}					#Paris
+					}
+					#Paris
 					19 = {
 						is_owned_and_controlled_by = GER
-					}					#Bordeaux
+					}
+					#Bordeaux
 					20 = {
 						is_owned_and_controlled_by = GER
-					}					#Lyon
+					}
+					#Lyon
 					21 = {
 						is_owned_and_controlled_by = GER
-					}					#Marseilles
+					}
+					#Marseilles
 					980 = {
 						is_owned_and_controlled_by = GER
-					}					#Lille
+					}
+					#Lille
 				}
 			}
 			GER = {
 				country_event = {
 					id = nfa.132
 				}
-			}			#The French enter negotiations - Case 2
+			}
+			#The French enter negotiations - Case 2
 		}
 		else_if = {
 			limit = {
@@ -4652,26 +4736,32 @@ country_event = {
 					amount = 2
 					16 = {
 						is_owned_and_controlled_by = GER
-					}					#Paris
+					}
+					#Paris
 					19 = {
 						is_owned_and_controlled_by = GER
-					}					#Bordeaux
+					}
+					#Bordeaux
 					20 = {
 						is_owned_and_controlled_by = GER
-					}					#Lyon
+					}
+					#Lyon
 					21 = {
 						is_owned_and_controlled_by = GER
-					}					#Marseilles
+					}
+					#Marseilles
 					980 = {
 						is_owned_and_controlled_by = GER
-					}					#Lille
+					}
+					#Lille
 				}
 			}
 			GER = {
 				country_event = {
 					id = nfa.130
 				}
-			}			#The French enter negotiations - Case 3
+			}
+			#The French enter negotiations - Case 3
 		}
 		else_if = {
 			limit = {
@@ -4679,26 +4769,32 @@ country_event = {
 					amount = 1
 					16 = {
 						is_owned_and_controlled_by = GER
-					}					#Paris
+					}
+					#Paris
 					19 = {
 						is_owned_and_controlled_by = GER
-					}					#Bordeaux
+					}
+					#Bordeaux
 					20 = {
 						is_owned_and_controlled_by = GER
-					}					#Lyon
+					}
+					#Lyon
 					21 = {
 						is_owned_and_controlled_by = GER
-					}					#Marseilles
+					}
+					#Marseilles
 					980 = {
 						is_owned_and_controlled_by = GER
-					}					#Lille
+					}
+					#Lille
 				}
 			}
 			GER = {
 				country_event = {
 					id = nfa.128
 				}
-			}			#The French enter negotiations - Case 4
+			}
+			#The French enter negotiations - Case 4
 		}
 		else_if = {
 			limit = {
@@ -4706,26 +4802,32 @@ country_event = {
 					amount = 0
 					16 = {
 						is_owned_and_controlled_by = GER
-					}					#Paris
+					}
+					#Paris
 					19 = {
 						is_owned_and_controlled_by = GER
-					}					#Bordeaux
+					}
+					#Bordeaux
 					20 = {
 						is_owned_and_controlled_by = GER
-					}					#Lyon
+					}
+					#Lyon
 					21 = {
 						is_owned_and_controlled_by = GER
-					}					#Marseilles
+					}
+					#Marseilles
 					980 = {
 						is_owned_and_controlled_by = GER
-					}					#Lille
+					}
+					#Lille
 				}
 			}
 			GER = {
 				country_event = {
 					id = nfa.125
 				}
-			}			#The French enter negotiations - Case 5
+			}
+			#The French enter negotiations - Case 5
 		}
 	}
 	option = {
@@ -4738,7 +4840,8 @@ country_event = {
 			country_event = {
 				id = nfa.121
 			}
-		}		#The French decline talks
+		}
+		#The French decline talks
 	}
 }
 
@@ -5153,7 +5256,8 @@ country_event = {
 			country_event = {
 				id = nfa.127
 			}
-		}		#French receive case deal 4
+		}
+		#French receive case deal 4
 		custom_effect_tooltip = NFA_Hawk_Warning_tt
 	}
 	option = {
@@ -5167,7 +5271,8 @@ country_event = {
 			country_event = {
 				id = nfa.126
 			}
-		}		#French receive case deal 5
+		}
+		#French receive case deal 5
 	}
 }
 
@@ -5196,7 +5301,8 @@ country_event = {
 			country_event = {
 				id = nfa.123
 			}
-		}		#France accepts the deal
+		}
+		#France accepts the deal
 	}
 	option = {
 		#Decline the offer
@@ -5213,7 +5319,8 @@ country_event = {
 			country_event = {
 				id = nfa.122
 			}
-		}		#France declines the deal
+		}
+		#France declines the deal
 	}
 }
 
@@ -5255,7 +5362,8 @@ country_event = {
 			country_event = {
 				id = nfa.123
 			}
-		}		#France accepts the deal
+		}
+		#France accepts the deal
 	}
 	option = {
 		#Decline the offer
@@ -5276,7 +5384,8 @@ country_event = {
 			country_event = {
 				id = nfa.122
 			}
-		}		#France declines the deal
+		}
+		#France declines the deal
 	}
 }
 
@@ -5342,7 +5451,8 @@ country_event = {
 			country_event = {
 				id = nfa.129
 			}
-		}		#French receive case deal 3
+		}
+		#French receive case deal 3
 		custom_effect_tooltip = NFA_Hawk_Warning_tt
 	}
 	option = {
@@ -5364,7 +5474,8 @@ country_event = {
 			country_event = {
 				id = nfa.127
 			}
-		}		#French receive case deal 4
+		}
+		#French receive case deal 4
 	}
 	option = {
 		#Push the dove plan
@@ -5389,7 +5500,8 @@ country_event = {
 			country_event = {
 				id = nfa.126
 			}
-		}		#French receive case deal 5
+		}
+		#French receive case deal 5
 		custom_effect_tooltip = NFA_Dove_tt
 	}
 }
@@ -5432,7 +5544,8 @@ country_event = {
 			country_event = {
 				id = nfa.123
 			}
-		}		#France accepts the deal
+		}
+		#France accepts the deal
 	}
 	option = {
 		#Decline the offer
@@ -5453,7 +5566,8 @@ country_event = {
 			country_event = {
 				id = nfa.122
 			}
-		}		#France declines the deal
+		}
+		#France declines the deal
 	}
 }
 
@@ -5519,7 +5633,8 @@ country_event = {
 			country_event = {
 				id = nfa.131
 			}
-		}		#French receive case deal 2
+		}
+		#French receive case deal 2
 		custom_effect_tooltip = NFA_Hawk_Warning_tt
 	}
 	option = {
@@ -5541,7 +5656,8 @@ country_event = {
 			country_event = {
 				id = nfa.129
 			}
-		}		#French receive case deal 3
+		}
+		#French receive case deal 3
 	}
 	option = {
 		#Push the dove plan
@@ -5574,7 +5690,8 @@ country_event = {
 			country_event = {
 				id = nfa.127
 			}
-		}		#French receive case deal 4
+		}
+		#French receive case deal 4
 		custom_effect_tooltip = NFA_Dove_tt
 	}
 }
@@ -5617,7 +5734,8 @@ country_event = {
 			country_event = {
 				id = nfa.123
 			}
-		}		#France accepts the deal
+		}
+		#France accepts the deal
 	}
 	option = {
 		#Decline the offer
@@ -5638,7 +5756,8 @@ country_event = {
 			country_event = {
 				id = nfa.122
 			}
-		}		#France declines the deal
+		}
+		#France declines the deal
 	}
 }
 
@@ -5704,7 +5823,8 @@ country_event = {
 			country_event = {
 				id = nfa.133
 			}
-		}		#French receive case deal 1
+		}
+		#French receive case deal 1
 		custom_effect_tooltip = NFA_Hawk_Warning_tt
 	}
 	option = {
@@ -5726,7 +5846,8 @@ country_event = {
 			country_event = {
 				id = nfa.131
 			}
-		}		#French receive case deal 2
+		}
+		#French receive case deal 2
 	}
 	option = {
 		#Push the dove plan
@@ -5759,7 +5880,8 @@ country_event = {
 			country_event = {
 				id = nfa.129
 			}
-		}		#French receive case deal 3
+		}
+		#French receive case deal 3
 		custom_effect_tooltip = NFA_Dove_tt
 	}
 }
@@ -5802,7 +5924,8 @@ country_event = {
 			country_event = {
 				id = nfa.123
 			}
-		}		#France accepts the deal
+		}
+		#France accepts the deal
 	}
 	option = {
 		#Decline the offer
@@ -5819,7 +5942,8 @@ country_event = {
 			country_event = {
 				id = nfa.122
 			}
-		}		#France declines the deal
+		}
+		#France declines the deal
 	}
 }
 
@@ -5875,7 +5999,8 @@ country_event = {
 			country_event = {
 				id = nfa.133
 			}
-		}		#French receive case deal 1
+		}
+		#French receive case deal 1
 	}
 	option = {
 		#Push the dove plan
@@ -5908,7 +6033,8 @@ country_event = {
 			country_event = {
 				id = nfa.131
 			}
-		}		#French receive case deal 2
+		}
+		#French receive case deal 2
 		custom_effect_tooltip = NFA_Dove_tt
 	}
 }
@@ -6058,7 +6184,8 @@ country_event = {
 					region = 19
 					NOT = {
 						state = 29
-					}					#Don't give away Dunkirk
+					}
+					#Don't give away Dunkirk
 				}
 				NFA = {
 					transfer_state = PREV
@@ -6606,7 +6733,8 @@ country_event = {
 				id = nfa.197
 				days = 1
 			}
-		}		#Germans agree to work together
+		}
+		#Germans agree to work together
 		add_offsite_building = {
 			type = industrial_complex
 			level = 3
@@ -6626,7 +6754,8 @@ country_event = {
 				id = nfa.198
 				days = 1
 			}
-		}		#Germans refuse to work together
+		}
+		#Germans refuse to work together
 		add_political_power = 10
 	}
 }
@@ -6693,7 +6822,8 @@ country_event = {
 				id = nfa.200
 				days = 3
 			}
-		}		#Germans agree to attend Verdun
+		}
+		#Germans agree to attend Verdun
 	}
 	option = {
 		name = nfa.199.b		#Not worth our time
@@ -6709,7 +6839,8 @@ country_event = {
 				id = nfa.201
 				days = 3
 			}
-		}		#Germans refuse to come to Verdun
+		}
+		#Germans refuse to come to Verdun
 	}
 }
 
@@ -6731,7 +6862,8 @@ country_event = {
 				id = nfa.203
 				days = 16
 			}
-		}		#Congress of Verdun - GER
+		}
+		#Congress of Verdun - GER
 	}
 }
 
@@ -6768,13 +6900,15 @@ country_event = {
 		country_event = {
 			id = nfa.209
 			days = 3
-		}		#Success of the Congress
+		}
+		#Success of the Congress
 		GER = {
 			country_event = {
 				id = nfa.210
 				days = 3
 			}
-		}		#Success of the Congress
+		}
+		#Success of the Congress
 	}
 }
 
@@ -6804,7 +6938,8 @@ country_event = {
 				id = nfa.202
 				days = 1
 			}
-		}		#Germans agree to peace at Verdun
+		}
+		#Germans agree to peace at Verdun
 	}
 	option = {
 		name = nfa.203.b		#Continue the Rivalry
@@ -6821,7 +6956,8 @@ country_event = {
 				id = nfa.204
 				days = 3
 			}
-		}		#Germans refuse peace at Verdun
+		}
+		#Germans refuse peace at Verdun
 	}
 }
 
@@ -6916,7 +7052,8 @@ country_event = {
 				id = nfa.213
 				days = 2
 			}
-		}		#Germans refuse to hand over A-L
+		}
+		#Germans refuse to hand over A-L
 		add_political_power = 100
 	}
 	option = {
@@ -6929,7 +7066,8 @@ country_event = {
 				id = nfa.214
 				days = 2
 			}
-		}		#Germans cede A-L
+		}
+		#Germans cede A-L
 		add_political_power = -500
 	}
 }
@@ -6952,7 +7090,8 @@ country_event = {
 		}
 		28 = {
 			add_claim_by = NFA
-		}		#Add a claim on Alsace Lorraine
+		}
+		#Add a claim on Alsace Lorraine
 		declare_war_on = {
 			target = GER
 			type = annex_everything
@@ -7181,7 +7320,8 @@ country_event = {
 		country_event = {
 			id = nfa.222
 			days = 8
-		}		#New Elections
+		}
+		#New Elections
 	}
 	option = {
 		name = nfa.221.b		#The Concentration stays together
@@ -7192,7 +7332,8 @@ country_event = {
 		country_event = {
 			id = nfa.222
 			days = 8
-		}		#Concentration wins the elections
+		}
+		#Concentration wins the elections
 	}
 }
 
@@ -7667,7 +7808,8 @@ country_event = {
 				id = nfa.226
 				days = 500
 				random = 1000
-			}			#Does Napoleon create the Empire?
+			}
+			#Does Napoleon create the Empire?
 		}
 	}
 	option = {
@@ -7720,14 +7862,16 @@ country_event = {
 			country_event = {
 				id = nfa.227
 				days = 1
-			}			#Does Napoleon create the Empire?
+			}
+			#Does Napoleon create the Empire?
 		}
 		else = {
 			country_event = {
 				id = nfa.226
 				days = 100
 				random = 1000
-			}			#Does Napoleon create the Empire?
+			}
+			#Does Napoleon create the Empire?
 		}
 	}
 }
@@ -7794,7 +7938,8 @@ country_event = {
 			country_event = {
 				id = nfa.238
 				days = 2373
-			}			#Loop the Hidden Event Check
+			}
+			#Loop the Hidden Event Check
 		}
 	}
 	option = {
@@ -7817,7 +7962,8 @@ country_event = {
 			country_event = {
 				id = nfa.238
 				days = 2373
-			}			#Loop the Hidden Event Check
+			}
+			#Loop the Hidden Event Check
 		}
 	}
 }
@@ -7918,7 +8064,8 @@ country_event = {
 					}
 					country_event = {
 						id = nfa.245
-					}					#Bonaparte elected to the presidency
+					}
+					#Bonaparte elected to the presidency
 				}
 			}
 		}
@@ -7951,7 +8098,8 @@ country_event = {
 					}
 					country_event = {
 						id = nfa.241
-					}					#De la Rocque elected to the presidency
+					}
+					#De la Rocque elected to the presidency
 				}
 			}
 		}
@@ -7984,7 +8132,8 @@ country_event = {
 					}
 					country_event = {
 						id = nfa.242
-					}					#Marin elected to the presidency
+					}
+					#Marin elected to the presidency
 				}
 			}
 		}
@@ -7992,15 +8141,18 @@ country_event = {
 			country_event = {
 				id = nfa.224
 				days = 2464
-			}			#NB Candidate
+			}
+			#NB Candidate
 			country_event = {
 				id = nfa.235
 				days = 2464
-			}			#Radicaux Candidate
+			}
+			#Radicaux Candidate
 			country_event = {
 				id = nfa.229
 				days = 2492
-			}			#Presidential Election
+			}
+			#Presidential Election
 			clr_country_flag = NFA_first_presidential_election
 		}
 	}
@@ -8094,15 +8246,18 @@ country_event = {
 			country_event = {
 				id = nfa.224
 				days = 2464
-			}			#NB Candidate
+			}
+			#NB Candidate
 			country_event = {
 				id = nfa.235
 				days = 2464
-			}			#Radicaux Candidate
+			}
+			#Radicaux Candidate
 			country_event = {
 				id = nfa.229
 				days = 2492
-			}			#Presidential Election
+			}
+			#Presidential Election
 		}
 	}
 }
@@ -8130,7 +8285,8 @@ country_event = {
 			country_event = {
 				id = nfa.230
 				days = 2555
-			}			#Loop the PSF Sham elections
+			}
+			#Loop the PSF Sham elections
 		}
 	}
 }
@@ -8165,15 +8321,18 @@ country_event = {
 			country_event = {
 				id = nfa.235
 				days = 2464
-			}			#Radicaux Candidate
+			}
+			#Radicaux Candidate
 			country_event = {
 				id = nfa.224
 				days = 2464
-			}			#NB Candidate
+			}
+			#NB Candidate
 			country_event = {
 				id = nfa.236
 				days = 2555
-			}			#Presidential Election
+			}
+			#Presidential Election
 			if = {
 				limit = {
 					has_idea = NFA_Edouard_Daladier_hog_sli
@@ -8217,7 +8376,8 @@ country_event = {
 			country_event = {
 				id = nfa.238
 				days = 2373
-			}			#Hidden Event Check
+			}
+			#Hidden Event Check
 		}
 	}
 }
@@ -8241,7 +8401,8 @@ country_event = {
 			country_event = {
 				id = nfa.237
 				days = 180
-			}			#United Legislature
+			}
+			#United Legislature
 		}
 	}
 	option = {
@@ -8253,7 +8414,8 @@ country_event = {
 			country_event = {
 				id = nfa.234
 				days = 180
-			}			#Legislative Election
+			}
+			#Legislative Election
 			if = {
 				limit = {
 					has_country_flag = NFA_Legislature_united
@@ -8464,7 +8626,8 @@ country_event = {
 			country_event = {
 				id = nfa.234
 				days = 1460
-			}			#Loop the Legislative Reelections
+			}
+			#Loop the Legislative Reelections
 		}
 	}
 	option = {
@@ -8643,7 +8806,8 @@ country_event = {
 			country_event = {
 				id = nfa.234
 				days = 1460
-			}			#Loop the Legislative Reelections
+			}
+			#Loop the Legislative Reelections
 		}
 	}
 }
@@ -8818,15 +8982,18 @@ country_event = {
 			country_event = {
 				id = nfa.235
 				days = 2464
-			}			#Radicaux Candidate
+			}
+			#Radicaux Candidate
 			country_event = {
 				id = nfa.224
 				days = 2464
-			}			#NB Candidate
+			}
+			#NB Candidate
 			country_event = {
 				id = nfa.236
 				days = 2555
-			}			#Presidential Election
+			}
+			#Presidential Election
 		}
 	}
 	option = {
@@ -8935,15 +9102,18 @@ country_event = {
 			country_event = {
 				id = nfa.235
 				days = 2464
-			}			#Radicaux Candidate
+			}
+			#Radicaux Candidate
 			country_event = {
 				id = nfa.224
 				days = 2464
-			}			#NB Candidate
+			}
+			#NB Candidate
 			country_event = {
 				id = nfa.236
 				days = 2555
-			}			#Presidential Election
+			}
+			#Presidential Election
 		}
 	}
 }
@@ -8967,7 +9137,8 @@ country_event = {
 			country_event = {
 				id = nfa.233
 				days = 1278
-			}			#Decide to stay United or split
+			}
+			#Decide to stay United or split
 			set_country_flag = NFA_Legislature_united
 		}
 	}
@@ -8995,7 +9166,8 @@ country_event = {
 			country_event = {
 				id = nfa.228
 				days = 180
-			}			#Decide between Flandin and Reynaud
+			}
+			#Decide between Flandin and Reynaud
 		}
 	}
 	option = {
@@ -9012,15 +9184,18 @@ country_event = {
 			country_event = {
 				id = nfa.235
 				days = 90
-			}			#Radicaux Candidate
+			}
+			#Radicaux Candidate
 			country_event = {
 				id = nfa.224
 				days = 90
-			}			#NB Candidate
+			}
+			#NB Candidate
 			country_event = {
 				id = nfa.236
 				days = 180
-			}			#Presidential Election
+			}
+			#Presidential Election
 		}
 	}
 }
@@ -9314,7 +9489,7 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}
-		add_political_power = 125
+		add_political_power = 25
 		add_stability = 0.075
 		swap_ideas = {
 			remove_idea = NFA_native_unrest_3
@@ -9399,7 +9574,8 @@ country_event = {
 					id = nfa.254
 					days = 75
 					random = 100
-				}				# Workers Strike
+				}
+				# Workers Strike
 			}
 		}
 	}
@@ -9464,7 +9640,8 @@ country_event = {
 					id = nfa.255
 					days = 75
 					random = 100
-				}				# Workers Strike
+				}
+				# Workers Strike
 			}
 		}
 	}
@@ -9509,7 +9686,8 @@ country_event = {
 						id = nfa.252
 						days = 75
 						random = 100
-					}					# Workers Strike
+					}
+					# Workers Strike
 				}
 				else = {
 					# Nothing happens
@@ -9692,7 +9870,8 @@ country_event = {
 				id = nfa.302
 				days = 45
 				random = 72
-			}			# Napoleon in France
+			}
+			# Napoleon in France
 		}
 	}
 	option = {
@@ -9727,7 +9906,8 @@ country_event = {
 				id = nfa.303
 				days = 1050
 				random = 300
-			}			# General Napoleon
+			}
+			# General Napoleon
 		}
 	}
 }
@@ -10480,7 +10660,8 @@ country_event = {
 			country_event = {
 				id = nfa.416
 				days = 3
-			}			# Mermoz Alive
+			}
+			# Mermoz Alive
 		}
 	}
 }
@@ -10937,7 +11118,8 @@ country_event = {
 			country_event = {
 				id = nfa.438
 				days = 355
-			}			# Repeat Eid event
+			}
+			# Repeat Eid event
 		}
 	}
 	option = {
@@ -10966,7 +11148,8 @@ country_event = {
 			country_event = {
 				id = nfa.439
 				days = 355
-			}			# Repeat Eid event
+			}
+			# Repeat Eid event
 		}
 	}
 	option = {
@@ -10994,7 +11177,8 @@ country_event = {
 		trigger = {
 			NOT = {
 				has_government = national_populist
-			}			#Not AF
+			}
+			#Not AF
 		}
 		add_political_power = -10
 		hidden_effect = {
@@ -11002,7 +11186,8 @@ country_event = {
 				id = nfa.441
 				days = 300
 				random = 500
-			}			# Boost in Compliance
+			}
+			# Boost in Compliance
 		}
 	}
 	option = {
@@ -11334,7 +11519,8 @@ country_event = {
 			country_event = {
 				id = nfa.506
 				days = 365
-			}			# Repeat the event
+			}
+			# Repeat the event
 		}
 	}
 	option = {
@@ -11536,20 +11722,24 @@ country_event = {
 			country_event = {
 				id = nfa.513
 				days = 100
-			}			#Women's suffrage
+			}
+			#Women's suffrage
 			country_event = {
 				id = nfa.517
 				days = 40
 				random = 50
-			}			#Meeting with the pope
+			}
+			#Meeting with the pope
 			country_event = {
 				id = nfa.537
 				days = 550
-			}			#Knights of Malta
+			}
+			#Knights of Malta
 			country_event = {
 				id = nfa.546
 				days = 50
-			}			#Attacks against the Anti-France
+			}
+			#Attacks against the Anti-France
 			random_country = {
 				limit = {
 					NOT = {
@@ -11584,7 +11774,8 @@ country_event = {
 			country_event = {
 				id = nfa.514
 				days = 100
-			}			#Down with Marianne
+			}
+			#Down with Marianne
 		}
 	}
 }
@@ -11607,7 +11798,8 @@ country_event = {
 			country_event = {
 				id = nfa.515
 				days = 100
-			}			#A new national day
+			}
+			#A new national day
 		}
 	}
 }
@@ -11628,7 +11820,8 @@ country_event = {
 			country_event = {
 				id = nfa.541
 				days = 100
-			}			#A new anthem?
+			}
+			#A new anthem?
 		}
 	}
 	option = {
@@ -11727,7 +11920,8 @@ country_event = {
 			country_event = {
 				id = nfa.535
 				days = 120
-			}			#Pontifical Zouaves
+			}
+			#Pontifical Zouaves
 		}
 	}
 }
@@ -12038,7 +12232,8 @@ country_event = {
 				id = nfa.518
 				days = 8
 				random = 48
-			}			#Restoration of Monaco
+			}
+			#Restoration of Monaco
 		}
 		if = {
 			limit = {
@@ -12073,7 +12268,8 @@ country_event = {
 			country_event = {
 				id = nfa.530
 				days = 2
-			}			#Festival d'Avignon
+			}
+			#Festival d'Avignon
 		}
 		if = {
 			limit = {
@@ -12082,11 +12278,13 @@ country_event = {
 			country_event = {
 				id = nfa.179
 				days = 95
-			}			#The question of Montmartre
+			}
+			#The question of Montmartre
 			country_event = {
 				id = nfa.531
 				days = 450
-			}			#A mosque in Paris?
+			}
+			#A mosque in Paris?
 		}
 		if = {
 			limit = {
@@ -12121,7 +12319,8 @@ country_event = {
 			country_event = {
 				id = nfa.532
 				days = 2
-			}			#First New Tour de France
+			}
+			#First New Tour de France
 		}
 		if = {
 			limit = {
@@ -12156,7 +12355,8 @@ country_event = {
 			country_event = {
 				id = nfa.540
 				days = 2
-			}			#Emmaus
+			}
+			#Emmaus
 		}
 		if = {
 			limit = {
@@ -12165,16 +12365,19 @@ country_event = {
 			country_event = {
 				id = nfa.533
 				days = 160
-			}			#Rouen Reconstruction
+			}
+			#Rouen Reconstruction
 			country_event = {
 				id = nfa.534
 				days = 250
-			}			#Tank in Vimoutiers
+			}
+			#Tank in Vimoutiers
 		}
 		country_event = {
 			id = nfa.529
 			days = 45
-		}		#Loop the event without jumping over months
+		}
+		#Loop the event without jumping over months
 	}
 }
 
@@ -12384,7 +12587,8 @@ country_event = {
 			country_event = {
 				id = nfa.542
 				days = 200
-			}			#Visit to Portugal
+			}
+			#Visit to Portugal
 		}
 	}
 }
@@ -12735,7 +12939,8 @@ country_event = {
 				has_country_flag = nfa_guinea_mission_attacked
 				806 = {
 					is_core_of = ROOT
-				}				#Guinea
+				}
+				#Guinea
 			}
 		}
 		ai_chance = {
@@ -12751,7 +12956,8 @@ country_event = {
 			id = nfa.443
 			days = 108
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Volta kings dispute - 471
@@ -12763,7 +12969,8 @@ country_event = {
 				has_country_flag = nfa_volta_kingdoms_dispute
 				808 = {
 					is_core_of = ROOT
-				}				#Upper Volta
+				}
+				#Upper Volta
 			}
 		}
 		ai_chance = {
@@ -12779,7 +12986,8 @@ country_event = {
 			id = nfa.443
 			days = 108
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Infrastructure Sabotaged - 445
@@ -12791,7 +12999,8 @@ country_event = {
 				806 = {
 					is_core_of = ROOT
 				}
-			}			#Upper Volta
+			}
+			#Upper Volta
 		}
 		ai_chance = {
 			base = 10
@@ -12820,7 +13029,8 @@ country_event = {
 			id = nfa.443
 			days = 144
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Garrison Attacked - 446
@@ -12832,7 +13042,8 @@ country_event = {
 				808 = {
 					is_core_of = ROOT
 				}
-			}			#Upper Volta
+			}
+			#Upper Volta
 		}
 		ai_chance = {
 			base = 5
@@ -12853,7 +13064,8 @@ country_event = {
 			id = nfa.443
 			days = 216
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#no effect
@@ -12876,7 +13088,8 @@ country_event = {
 			id = nfa.443
 			days = 108
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 }
 
@@ -13176,7 +13389,8 @@ country_event = {
 			country_event = {
 				id = nfa.451
 				days = 64
-			}			# Turn the Railroads back on
+			}
+			# Turn the Railroads back on
 		}
 	}
 }
@@ -13354,7 +13568,8 @@ country_event = {
 			id = nfa.452
 			days = 208
 			random = 172
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Burnt Village - 454
@@ -13375,7 +13590,8 @@ country_event = {
 			id = nfa.452
 			days = 208
 			random = 172
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#no effect
@@ -13394,14 +13610,16 @@ country_event = {
 				id = nfa.452
 				days = 108
 				random = 96
-			}			# Nothing happens
+			}
+			# Nothing happens
 		}
 		else = {
 			country_event = {
 				id = nfa.452
 				days = 208
 				random = 96
-			}			# Nothing happens
+			}
+			# Nothing happens
 		}
 	}
 }
@@ -13485,14 +13703,16 @@ country_event = {
 					id = nfa.455
 					days = 1
 					random = 36
-				}				# Lost in the Sand
+				}
+				# Lost in the Sand
 			}
 			else = {
 				country_event = {
 					id = nfa.456
 					days = 1
 					random = 36
-				}				# Caravan Captured
+				}
+				# Caravan Captured
 			}
 		}
 	}
@@ -13620,7 +13840,8 @@ country_event = {
 			id = nfa.457
 			days = 178
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Moncef Bey collaborates with nationalists - 459
@@ -13648,7 +13869,8 @@ country_event = {
 			id = nfa.457
 			days = 178
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Terrorist attack - 460
@@ -13687,7 +13909,8 @@ country_event = {
 			id = nfa.457
 			days = 178
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Leaflets found - 461
@@ -13726,7 +13949,8 @@ country_event = {
 			id = nfa.457
 			days = 178
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#no effect
@@ -13756,7 +13980,8 @@ country_event = {
 			id = nfa.457
 			days = 108
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 }
 
@@ -13940,7 +14165,8 @@ country_event = {
 				id = nfa.474
 				days = 75
 				random = 36
-			}			# Fervor dies down
+			}
+			# Fervor dies down
 		}
 	}
 }
@@ -14007,7 +14233,8 @@ country_event = {
 			id = nfa.462
 			days = 158
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Street fight between algerian syndies and muslims - 464
@@ -14029,7 +14256,8 @@ country_event = {
 			id = nfa.462
 			days = 158
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#A shipment from the Communards - 4650
@@ -14066,7 +14294,8 @@ country_event = {
 			id = nfa.462
 			days = 158
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Nationalist books seized - 466
@@ -14097,7 +14326,8 @@ country_event = {
 			id = nfa.462
 			days = 158
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Nothing happens
@@ -14127,7 +14357,8 @@ country_event = {
 			id = nfa.462
 			days = 158
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 }
 
@@ -14230,7 +14461,8 @@ country_event = {
 			id = nfa.467
 			days = 158
 			random = 36
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Miner strike - 468
@@ -14432,7 +14664,8 @@ country_event = {
 				has_country_flag = nfa_mad_prophet_chad
 				515 = {
 					is_core_of = ROOT
-				}				#Chad
+				}
+				#Chad
 			}
 		}
 		ai_chance = {
@@ -14444,7 +14677,8 @@ country_event = {
 			id = nfa.475
 			days = 108
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Clash between bedouins and the army in Niger - 477
@@ -14459,7 +14693,8 @@ country_event = {
 				809 = {
 					is_core_of = ROOT
 				}
-			}			#Niger
+			}
+			#Niger
 		}
 		ai_chance = {
 			base = 23
@@ -14473,7 +14708,8 @@ country_event = {
 			id = nfa.475
 			days = 108
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Assassination in Chad! - 478
@@ -14488,7 +14724,8 @@ country_event = {
 				515 = {
 					is_core_of = ROOT
 				}
-			}			#Chad
+			}
+			#Chad
 		}
 		ai_chance = {
 			base = 8
@@ -14502,7 +14739,8 @@ country_event = {
 			id = nfa.475
 			days = 108
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Bedouins attack a patrol Niger - 479
@@ -14517,7 +14755,8 @@ country_event = {
 				809 = {
 					is_core_of = ROOT
 				}
-			}			#Niger
+			}
+			#Niger
 		}
 		ai_chance = {
 			base = 10
@@ -14531,7 +14770,8 @@ country_event = {
 			id = nfa.475
 			days = 158
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 	option = {
 		#Nothing happens
@@ -14546,7 +14786,8 @@ country_event = {
 			id = nfa.475
 			days = 108
 			random = 96
-		}		#loop
+		}
+		#loop
 	}
 }
 
@@ -14877,6 +15118,9 @@ country_event = {
 			}
 		}
 		NOT = {
+			country_exists = USA
+		}
+		NOT = {
 			#One Major French city is back in our hands
 			16 = {
 				is_owned_by = NFA
@@ -14946,7 +15190,8 @@ country_event = {
 					country_event = {
 						id = nfa.625
 						days = 1
-					}					#Do you want to continue the war?
+					}
+					#Do you want to continue the war?
 				}
 			}
 			else_if = {
@@ -14967,7 +15212,8 @@ country_event = {
 					country_event = {
 						id = nfa.626
 						days = 2
-					}					#ENT sues for peace
+					}
+					#ENT sues for peace
 				}
 			}
 		}
@@ -15066,10 +15312,12 @@ country_event = {
 			limit = {
 				665 = {
 					is_core_of = LBA
-				}				#Gabes
+				}
+				#Gabes
 				458 = {
 					is_core_of = LBA
-				}				#Tunisia
+				}
+				#Tunisia
 				LBA = {
 					has_war_with = NFA
 				}
@@ -15266,7 +15514,8 @@ country_event = {
 			country_event = {
 				id = nfa.626
 				days = 1
-			}			#ENT sues for peace
+			}
+			#ENT sues for peace
 		}
 	}
 	option = {
@@ -15298,7 +15547,8 @@ country_event = {
 			white_peace_with_ROOT = yes
 			country_event = {
 				id = nfa.627
-			}			#EGY accepts peace
+			}
+			#EGY accepts peace
 		}
 	}
 	option = {
@@ -15311,7 +15561,8 @@ country_event = {
 		ENT = {
 			country_event = {
 				id = nfa.628
-			}			#EGY refuses peace
+			}
+			#EGY refuses peace
 		}
 	}
 }
