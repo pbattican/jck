@@ -143,9 +143,33 @@ KRW_tournament_decisions = {
 				country_exists = GER
 			}
 		}
+		fire_only_once = yes
+		cost = 0
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BUL_complaince_ROM"
+			log = "[GetDateText]: [Root.GetName]: Decision COF_amour_production"
 			add_ideas = FRA_armour_production_idea
+		}
+	}
+	GER_air_doctrine = {
+		icon = generic_political_discourse
+		allowed = {
+			original_tag = GER
+		}
+		visible = {
+			tag = GER
+		}
+		available = {
+			tag = GER
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision COF_amour_production"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = air_doctrine
+			}
 		}
 	}
 }

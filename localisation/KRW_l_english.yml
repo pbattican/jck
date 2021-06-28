@@ -84,4 +84,8 @@
  GER_annex_belgium:0 "Finalize annexation of Belgium"
  BUL_complaince_ROM:0 "Finalize subjugation of Romania"
  COF_amour_production:0 "Increase armour production"
- FRA_armour_production_idea:0 "Print these tanks!"
+ FRA_armour_production_idea:0 " Panzer Production Methods"
+ FRA_armour_production_idea_desc:0 "With the defeat of the German Empire, we have begun nationalizing the famed German automotiv industry. Already companies like BMW and Mercedes being consolidated into one join entety: The Peoples car manufactur or Volkswagen will be a great tool in exporting the revolution."`
+ GER_air_doctrine:0 "Speed up Air Doctrine research"
+ # OVERWRITE
+ RUS_Machine_And_Tractor_Stations_tooltip:0 "Modify §HVerkhovny Ekonomicheskiy Sovet§! by\nRecruitable Population Factor: [?-0.05|%+0]\n"

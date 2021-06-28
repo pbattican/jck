@@ -13,10 +13,10 @@ ideas = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea FRA_armour_production_idea"
 			}
-			picture = FRA_idea_revenge
+			picture = man_five_year_plan_tank
 			equipment_bonus = {
 				armor = {
-					build_cost_ic = -0.15
+					build_cost_ic = -0.05
 					instant = yes
 				}
 			}

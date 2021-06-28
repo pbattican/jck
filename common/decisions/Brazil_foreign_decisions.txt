@@ -13,7 +13,7 @@ BRA_foreign_policy = {
 					GER = {
 						has_war_with = FRA
 					}
-					date > 1939.1.1
+					date > 1937.7.1
 				}
 			}
 			is_in_faction = no
