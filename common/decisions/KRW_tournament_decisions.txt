@@ -82,7 +82,7 @@ KRW_tournament_decisions = {
 			NOT = {
 				country_exists = BEL
 			}
-			owns_state = 10
+			owns_state = 925
 		}
 		fire_only_once = yes
 		cost = 0
