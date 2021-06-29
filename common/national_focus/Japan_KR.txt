@@ -3741,10 +3741,12 @@ focus_tree = {
 			OR = {
 				327 = {
 					is_controlled_by_ROOT_or_ally = yes
-				}				#Luzon
+				}
+				#Luzon
 				1020 = {
 					is_controlled_by_ROOT_or_ally = yes
-				}				#Batavia
+				}
+				#Batavia
 			}
 			can_declare_war_on = AST
 			AST = {
@@ -4200,7 +4202,7 @@ focus_tree = {
 				GER = {
 					has_war_with = FRA
 				}
-				date > 1939.1.1
+				date > 1940.1.1
 			}
 		}
 		bypass = {
@@ -4374,10 +4376,12 @@ focus_tree = {
 		bypass = {
 			286 = {
 				is_controlled_by_ROOT_or_ally = yes
-			}			#Cochinchina
+			}
+			#Cochinchina
 			827 = {
 				is_controlled_by_ROOT_or_ally = yes
-			}			#Annam
+			}
+			#Annam
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_indochina_question"
@@ -4401,13 +4405,16 @@ focus_tree = {
 			OR = {
 				846 = {
 					is_controlled_by_ROOT_or_ally = yes
-				}				#Malaya
+				}
+				#Malaya
 				288 = {
 					is_controlled_by_ROOT_or_ally = yes
-				}				#Rangoon
+				}
+				#Rangoon
 				286 = {
 					is_controlled_by_ROOT_or_ally = yes
-				}				#Cochinchina
+				}
+				#Cochinchina
 			}
 			can_declare_war_on = SIA
 			SIA = {
@@ -4576,10 +4583,12 @@ focus_tree = {
 			OR = {
 				289 = {
 					is_controlled_by_ROOT_or_ally = yes
-				}				#Siam
+				}
+				#Siam
 				288 = {
 					is_controlled_by_ROOT_or_ally = yes
-				}				#Rangoon
+				}
+				#Rangoon
 			}
 			OR = {
 				can_declare_war_on = PRF
@@ -5270,25 +5279,32 @@ focus_tree = {
 			}
 			286 = {
 				is_owned_by_ROOT_or_ally = yes
-			}			#Cochinchina
+			}
+			#Cochinchina
 			336 = {
 				is_owned_by_ROOT_or_ally = yes
-			}			#Singapore
+			}
+			#Singapore
 			1020 = {
 				is_owned_by_ROOT_or_ally = yes
-			}			#Batavia
+			}
+			#Batavia
 			327 = {
 				is_owned_by_ROOT_or_ally = yes
-			}			#Central Luzon
+			}
+			#Central Luzon
 			629 = {
 				is_owned_by_ROOT_or_ally = yes
-			}			#Hawaii
+			}
+			#Hawaii
 			608 = {
 				is_owned_by_ROOT_or_ally = yes
-			}			#Beijing
+			}
+			#Beijing
 			743 = {
 				is_owned_by_ROOT_or_ally = yes
-			}			#Shanghai
+			}
+			#Shanghai
 		}
 		ai_will_do = {
 			factor = 10
