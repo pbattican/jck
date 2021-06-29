@@ -46,15 +46,21 @@ KRW_tournament_decisions = {
 		}
 		available = {
 			tag = GER
-			NOT = {
-				country_exists = POL
-			}
-			owns_state = 10
 		}
 		fire_only_once = yes
 		cost = 0
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GER_annex_poland"
+			GER = {
+				annex_country = {
+					target = POL
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = LIT
+					transfer_troops = yes
+				}
+			}
 			add_political_power = 50
 			add_stability = 0.05
 			add_war_support = 0.05
@@ -79,10 +85,6 @@ KRW_tournament_decisions = {
 		}
 		available = {
 			tag = GER
-			NOT = {
-				country_exists = BEL
-			}
-			owns_state = 925
 		}
 		fire_only_once = yes
 		cost = 0
@@ -91,6 +93,12 @@ KRW_tournament_decisions = {
 			add_political_power = 50
 			add_stability = 0.05
 			add_war_support = 0.05
+			GER = {
+				annex_country = {
+					target = BEL
+					transfer_troops = yes
+				}
+			}
 			every_owned_state = {
 				limit = {
 					is_core_of = BEL
