@@ -277,9 +277,9 @@ foreign_politics = {
 				}
 			}
 		}
+		# Remove so that AZR doesn't join the Istanbul Pact
 		targets = {
 			AFG
-			AZR
 		}
 		target_root_trigger = {
 			OR = {
