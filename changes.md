@@ -25,9 +25,6 @@ Incorporates the KRW Submod changes with some minor tweaks
 - Set LAG_DAYS_FOR_LOWER_SPEED = 100
 - Set LAG_DAYS_FOR_PAUSE = 60
 
-- Useless tags such as haiti, dominican republic and bhutan are removed to speed up game (only those three have been removed so far)
-- The sub-colonies that spawn out of Mittelafrika are disabled to speed up the game
-
 #### Detropat Additions
 
 - Set CAPITAL_ICON_CUTOFF = 800
@@ -59,7 +56,7 @@ RP
 
 #### Brazil
 
-- Brazil allowed to join the Entente if date is > 1937.7.1 OR Germany is at war
+- Brazil allowed to join the Entente if date is > 1939.1.1 OR Germany is at war
 with CoF AND Brazil does not have a socialist government
 - Brazil allowed to join Entente research group if in Canada's faction
 - Given Uruguay as a core
@@ -105,7 +102,7 @@ which adds 0.15 compliance gain
 - Modified initial country event tree to not fire the final calculation until the 5th event choice has been made
 - Increased mobilization law to Partial Mobilization
 - Added decision "French Irridentism" which is available after the completion of "French Revanchism" and provides a 5% recovery rate increase and 1% recruitable population.
-- Decision to to receive -5% armour cost reduction after Germany no longer exists
+- 
 
 #### Cuba
 
@@ -129,11 +126,6 @@ Co-Pro
 - Allows each of the Eastern Defense nations to assume control of the organization
 if the UBD collapses. Applies to Ukraine, Poland, Lithuania, White Ruthenia, UBD
 
-#### German Empire
-
-- Germany gets an idea called "Imperial Spirit" which mirrors the "Communard Spirit" from Commune of France which adds -25% compliance growth and +25% resistance growth
-- Decisions to Annex Belgium, Poland, and Lithuania which provides compensatory political power, stability, and war support for the subsequent `Fate of X` decisions. Resistance is also capped at 10%
-
 #### Japan
 
 - Decisions to add production cost buffs to Japan's air and navy once the Military focus tree has
@@ -144,15 +136,13 @@ been started. -10% Cost reduction on combat aircraft and all ships
 - Made the collapse event for National France require control of all North African states as well as Senegal. Event also will not remove the country from the faction but still capitulates them. 
 - Increased VPs of Dakar and Saint Louis to 20 and 5 respectively to prevent collapse of Nat France from losing the northern cores
 - Given Liberia as a core
-- Given decision to annex Sardinia IF Sardinia is an AI. This will transfer all troops and provide 100% compliance\
-- NFA focus ‘Algiers Conference’ requirement for NFA to own ile-de-france removed, allowing it to be taken at any time after finishing the preceding foci. The focus itself will now give 125 pp.
+- Given decision to annex Sardinia IF Sardinia is an AI. This will transfer all troops and provide 100% compliance
 
 #### Ottomans
 
 - Ottomans allowed to join the Entente when Germany is at war with CoF OR date
 is > 1939.6.1
 - Ottomans allowed to join the Entente research group once in the Entente
-- Will not invite Azerbaijan into their faction
 
 #### Peru
 
@@ -187,7 +177,6 @@ is > 1939.1.1
 - Russia is allowed to join the Co-Pro when Germany is at war with CoF OR the date
 is > 1939.1.1
 - Russia is allowed to join the Co-Pro research group when in the Co-Pro
-- The focus `Machine and Tractor Stations` +20% production efficiency cap bonus removed
 
 #### Serbia
 
@@ -203,18 +192,12 @@ is > 1939.1.1
 - Decision to puppet Iceland if Iceland joins the 3rd Internationale
 - Added a decision to to nationalize the GLCC which provides a 40% increase in refinery fuel income, 20% fuel capacity increase, and 20% refinery construction speed bonus. Additonally 20% research speed bonus for synthetic technologies. This decision may be taken after the focus "Total Mobilization"
 
-#### Sweden
+#### Venezuala
 
-- The focus `modern fighters` has an additional -2.5% production cost reduction to fighters, CAS, and tac bombers
-
-#### Ukraine
-
-- Ukraine given a decision to annex white ruthenia, decision compensates for subsequent annexation decision (plus flat 50% compliance buff)
-
-#### Venezuela
-
-- Will not declare war on the West Indies Federation
 - AI will not declare on Carribean Federation
+
+#### Germany
+
 
 ### Operations
 
