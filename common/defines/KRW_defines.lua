@@ -1,4 +1,4 @@
---- UPDATED ON 10-06-2021 | Let's see if Fredy notices this and send me a DM. :-)
+--- UPDATED ON 19-06-2021 | Tournament Update to force checksum)
 
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 100
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 60

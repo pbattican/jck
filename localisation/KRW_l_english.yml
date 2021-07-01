@@ -11,6 +11,11 @@
  FNG_foreign_affairs:0 "Fengtian Foreign Affairs"
  FNG_join_cp_tech:0 "Join the Co-Pro Technology Group"
 
+ FRA_irredentism_idea:0 "All True Frenchmen"
+ FRA_army_decisions:0 "Communard Armed Forces"
+ FRA_foster_irridentism:0 "All True Frenchmen"
+ FRA_foster_irridentism_desc:0 "As the war against Germany drags onwards, we have lost many men. The call is out for all true Frenchmen to join up and reclaim our native lands."
+
  JAP_industrial_effort:0 "Japanese Indusrial Effort"
  JAP_streamline_fighter_production:0 "Streamline fighter production"
  JAP_expand_naval_production:0 "Expand naval production"
@@ -48,6 +53,9 @@
  GER_imperial_spirit:0 "German Imperial Spirit"
  GER_imperial_spirit_desc:0 "Germans have won their place in the sun. However threats abound, not least of which from the specter cast by the Syndicalism of their once enemies; France and Britain. Germany must hold, for if she does not all of European civilisation will fall with her, centuries of history and tradition will be ground beneath the feet of the syndicalists."
 
+ GER_air_decisions:0 "Kaiserreiches Luftstreitkräfte"
+ GER_streamline_air_production:0 "Streamline aircraft production"
+
  ### Last Stand
  KRW_ABILITY_LAST_STAND:0 "Last Stand"
  KRW_ABILITY_LAST_STAND_TOOLTIP:0 "Last Stand ($LEADER$)"
@@ -63,6 +71,7 @@
  krw.intro.0.d:0 "\n\n\n\n\n\n\n\n\n\nWelcome and thank you for playing at Kaiserreich Weekly!"
  krw.intro.0.a:0 "Let's get started!"
 
+<<<<<<< HEAD
  ### JCK 
  FRA_irredentism_idea:0 "French Irredentism"
  FRA_army_decisions:0 "Communard Armed Forces"
@@ -82,3 +91,17 @@
  krw.victory.0.t:0 "[ROOT.GetFactionName] Wins!"
  krw.victory.0.d:0 "The [ROOT.GetFactionName] has completed their objectives!"
  krw.victory.0.a:0 "GG! Well Played!"
+=======
+ ### Tournament specific localisation
+ KRW_tournament_decisions:0 "KRW Tournament Specific Decisions"
+ UKR_annex_WHR:0 "Annex White Ruthenia"
+ GER_annex_poland:0 "Finalize annexation of Poland & Lithuania"
+ GER_annex_belgium:0 "Finalize annexation of Belgium"
+ BUL_complaince_ROM:0 "Finalize subjugation of Romania"
+ COF_amour_production:0 "Increase armour production"
+ FRA_armour_production_idea:0 " Panzer Production Methods"
+ FRA_armour_production_idea_desc:0 "With the defeat of the German Empire, we have begun nationalizing the famed German automotiv industry. Already companies like BMW and Mercedes being consolidated into one join entety: The Peoples car manufactur or Volkswagen will be a great tool in exporting the revolution."`
+ GER_air_doctrine:0 "Speed up Air Doctrine research"
+ # OVERWRITE
+ RUS_Machine_And_Tractor_Stations_tooltip:0 "Modify §HVerkhovny Ekonomicheskiy Sovet§! by\nRecruitable Population Factor: [?-0.05|%+0]\n"
+>>>>>>> krw_submod/pbatt-tournament-changes

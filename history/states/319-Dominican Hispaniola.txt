@@ -10,7 +10,10 @@ state = {
 		chromium = 1
 	}
 	history = {
+<<<<<<< HEAD
 		owner = CAF
+=======
+>>>>>>> krw_submod/pbatt-tournament-changes
 		buildings = {
 			infrastructure = 3
 			arms_factory = 2
@@ -20,7 +23,10 @@ state = {
 				naval_base = 2
 			}
 		}
+<<<<<<< HEAD
 		add_core_of = CAF
+=======
+>>>>>>> krw_submod/pbatt-tournament-changes
 		victory_points = {
 			7660 5
 		}
