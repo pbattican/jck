@@ -277,9 +277,9 @@ foreign_politics = {
 				}
 			}
 		}
+		# Remove AZR 
 		targets = {
 			AFG
-			AZR
 		}
 		target_root_trigger = {
 			OR = {
