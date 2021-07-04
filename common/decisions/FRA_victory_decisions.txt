@@ -39,21 +39,21 @@ FRA_victory_decisions = {
 		fire_only_once = no
 
 		cancel_trigger = {
-			OR = {
-				64 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
-				43 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
-				272 = {
-					is_controlled_by_ROOT_or_ally = no
+			hidden_trigger = {
+				OR = {
+					64 = {
+						is_controlled_by_ROOT_or_ally = no
+					}
+					43 = {
+						is_controlled_by_ROOT_or_ally = no
+					}
+					272 = {
+						is_controlled_by_ROOT_or_ally = no
+					}
 				}
 			}
 		}
 
-		selectable_mission = yes
-		is_good = yes
 		days_remove = 30
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision FRA_third_int_victory"
