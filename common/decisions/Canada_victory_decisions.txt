@@ -1,0 +1,148 @@
+CAN_victory_decisions = {
+	ENT_entente_victory = {
+		icon = generic_research
+		allowed = {
+			original_tag = CAN
+		}
+		available = {
+			AND = {
+				# Uses KR Scripted trigger in _useful_scripted_triggers.txt
+				16 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				126 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				333 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				336 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				633 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				635 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				639 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				641 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				643 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				646 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				647 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				725 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				734 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				737 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				757 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				828 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				846 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				941 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				NOT = {
+					country_exists = ENG
+					country_exists = FRA
+				}
+				country_exists = NFA
+				country_exists = RAJ
+			}
+		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					16 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					126 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					333 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					336 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					633 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					635 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					639 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					641 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					643 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					646 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					647 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					725 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					734 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					737 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					757 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					828 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					846 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					941 = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+					country_exists = NFA
+					country_exists = RAJ
+				}
+			}
+		}
+
+		fire_only_once = no
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ENT_entente_victory"
+		}
+		days_remove = 30
+		remove_effect = {
+			news_event = {
+				id = krw.victory.0
+				days = 1
+			}
+		}
+	}
+}
