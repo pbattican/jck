@@ -4,7 +4,7 @@ Incorporates the KRW Submod changes with some minor tweaks
 
 ### Victory Decisions
 
-- Added victory decisions to the RP and 3I leaders which provide conditions upon which the game will end.
+- Added victory decisions to Germany, Canada, Commune of France, and Japan which provide conditions upon which the game will end for their faction.
 - Decisions have a 30 day timer once fired and will be instantly cancelled if the conditions are no longer met
 
 ### Game Defines
