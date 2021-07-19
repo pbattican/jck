@@ -34,14 +34,10 @@ Incorporates the KRW Submod changes with some minor tweaks
 
 ### Abilities
 
-- Last Stand and Force Attack nerfed to 75% org damage
-- Last Stand strength damage reduced to 50% increased damage
+- Last Stand nerfed to -0.75 org damage and 0.5 strength damage
+- Force Attack nerfed to -0.75 org damage
 
-### Script Changes
-
-- Moved an owner scope in China_scripted_triggers to not fire for all tiles in the game when checking the state owner
-
-### Country Changes
+### Decisions
 
 #### Austria
 
@@ -56,7 +52,7 @@ RP
 
 #### Brazil
 
-- Brazil allowed to join the Entente if date is > 1939.1.1 OR Germany is at war
+- Brazil allowed to join the Entente if date is > 1937.7.1 OR Germany is at war
 with CoF AND Brazil does not have a socialist government
 - Brazil allowed to join Entente research group if in Canada's faction
 - Given Uruguay as a core
@@ -70,6 +66,7 @@ compliance gain
 which adds 0.15 compliance gain
 - Decision to subdue the Turks if most of Anatolia is controlled by Bulgaria
 which adds 0.15 compliance gain
+- Decision to join the RP once Germany is at war with FRA. 
 
 #### Canada
 
@@ -102,7 +99,6 @@ which adds 0.15 compliance gain
 - Modified initial country event tree to not fire the final calculation until the 5th event choice has been made
 - Increased mobilization law to Partial Mobilization
 - Added decision "French Irridentism" which is available after the completion of "French Revanchism" and provides a 5% recovery rate increase and 1% recruitable population.
-- 
 
 #### Cuba
 
@@ -118,8 +114,7 @@ which adds 0.15 compliance gain
 
 #### Fengtian Government
 
-- Fengtian is allowed to join the Co-Pro research group if Fengtian is in the
-Co-Pro
+- Fengtian is allowed to join the Co-Pro research group if Fengtian is in the Co-Pro
 
 #### German Intermarium
 
@@ -143,6 +138,7 @@ been started. -10% Cost reduction on combat aircraft and all ships
 - Ottomans allowed to join the Entente when Germany is at war with CoF OR date
 is > 1939.6.1
 - Ottomans allowed to join the Entente research group once in the Entente
+- Will not invite Azerbaijan into their faction
 
 #### Peru
 
@@ -187,17 +183,22 @@ is > 1939.1.1
 
 - Removed
 
+#### Sweden
+
+- The focus `modern fighters` has an additional -2.5% production cost reduction to fighters, CAS, and tac bombers
+
+#### Ukraine
+
+- Ukraine given a decision to annex white ruthenia, decision compensates for subsequent annexation decision (plus flat 50% compliance buff)
+
 #### Union of Britain
 
 - Decision to puppet Iceland if Iceland joins the 3rd Internationale
 - Added a decision to to nationalize the GLCC which provides a 40% increase in refinery fuel income, 20% fuel capacity increase, and 20% refinery construction speed bonus. Additonally 20% research speed bonus for synthetic technologies. This decision may be taken after the focus "Total Mobilization"
 
-#### Venezuala
+#### Venezuela
 
-- AI will not declare on Carribean Federation
-
-#### Germany
-
+- Will not declare war on the West Indies Federation
 
 ### Operations
 

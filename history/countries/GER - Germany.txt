@@ -1,39 +1,31 @@
 ﻿capital = 64
-
 oob = "GER"
-set_naval_oob= "GER_naval"
-
+set_naval_oob = "GER_naval"
 add_ideas = {
 	GER_victors_of_wwi
 	GER_quenched_militarism
 	GER_imperial_pride
 
 	limited_conscription
-
 	GER_Franz_von_Papen_hog_ade
 	GER_Friedrich_Werner_von_der_Schulenburg_for_ade
 	GER_Hjalmar_Schacht_eco_ade
 	GER_Johann_von_Bernstorff_sec_ade
-
 	GER_August_Von_Mackensen_carm_pau
 	GER_Manfred_Freiherr_von_Richthofen_cair_ade
 	GER_Hans_von_Seeckt_cos_pau
 }
 
 GER_start_naval_variant = yes
-
 ### Starting Technologies ###
-
 set_technology = {
 	### General ###
 	electronic_mechanical_engineering = 1
 	fuel_silos = 1
-
 	### Tanks ###
 	gwtank = 1
 	basic_light_tank = 1
 	basic_heavy_tank = 1
-
 	### Infantry ###
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -45,7 +37,6 @@ set_technology = {
 	marines = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-
 	### Air ###
 	early_fighter = 1
 	naval_bomber1 = 1
@@ -58,6 +49,7 @@ set_technology = {
 	strategic_bomber1 = 1
 	CAS1 = 1
 }
+
 if = {
 	limit = {
 		has_dlc = "La Resistance"
@@ -68,7 +60,6 @@ if = {
 }
 
 ### Navy - MtG ###
-
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
@@ -88,7 +79,6 @@ if = {
 		ship_hull_super_heavy = 1
 		cruiser_submarines = 1
 		panzerschiffe = 1
-
 		## Modules##
 		basic_torpedo = 1
 		basic_battery = 1
@@ -104,14 +94,12 @@ if = {
 		basic_depth_charges = 1
 		submarine_mine_laying = 1
 		pre_dreadnoughts = 1
-
 		### Transport ###
 		mtg_transport = 1
 	}
 }
 
 ### Navy - Non MtG ###
-
 if = {
 	limit = {
 		NOT = {
@@ -133,7 +121,6 @@ if = {
 		heavy_battleship = 1
 		early_carrier = 1
 		basic_carrier = 1
-
 		### Transport ###
 		transport = 1
 	}
@@ -153,10 +140,12 @@ add_to_array = { GEO.guarantor_array = GER }
 set_research_slots = 4
 set_convoys = 400
 set_stability = 0.6
-
 set_global_flag = GER_has_oil
 
-diplomatic_relation = { country = AUS relation = non_aggression_pact }
+add_opinion_modifier = {
+	target = MAF
+	modifier = colonial_master
+}
 
 add_opinion_modifier = { target = MAF modifier = colonial_master }
 add_opinion_modifier = { target = GEA modifier = colonial_master }
@@ -192,7 +181,6 @@ add_to_faction = UKR
 add_to_faction = MOR
 add_to_faction = MAF
 add_to_faction = GEA
-
 # Mitteleuropa
 every_country = {
 	limit = {
@@ -248,12 +236,45 @@ MAF = {
 }
 
 # End WK2 AI boosts
-country_event = { id = ai_events.302 days = 2558 }
-FRA = { country_event = { id = ai_events.302 days = 2558 } }
-ENG = { country_event = { id = ai_events.302 days = 2558 } }
-RUS = { country_event = { id = ai_events.302 days = 2558 } }
-SOV = { country_event = { id = ai_events.302 days = 2558 } }
-AUS = { country_event = { id = ai_events.302 days = 2558 } }
+country_event = {
+	id = ai_events.302
+	days = 2558
+}
+
+FRA = {
+	country_event = {
+		id = ai_events.302
+		days = 2558
+	}
+}
+
+ENG = {
+	country_event = {
+		id = ai_events.302
+		days = 2558
+	}
+}
+
+RUS = {
+	country_event = {
+		id = ai_events.302
+		days = 2558
+	}
+}
+
+SOV = {
+	country_event = {
+		id = ai_events.302
+		days = 2558
+	}
+}
+
+AUS = {
+	country_event = {
+		id = ai_events.302
+		days = 2558
+	}
+}
 
 create_country_leader = {
 	name = "Heinrich Claß"
@@ -335,7 +356,10 @@ create_field_marshal = {
 	name = "Gerd von Rundstedt"
 	desc = "POLITICS_GERD_VON_RUNDSTEDT_DESC"
 	picture = "Portrait_Germany_Gerd_von_Rundstedt_kr.png"
-	traits = { defensive_doctrine offensive_doctrine }
+	traits = {
+		defensive_doctrine
+		offensive_doctrine
+	}
 	skill = 4
 	attack_skill = 2
 	defense_skill = 3
@@ -347,7 +371,13 @@ create_field_marshal = {
 	name = "Rupprecht von Bayern"
 	desc = "POLITICS_RUPPRECHT_VON_BAYERN_DESC"
 	picture = "Portrait_Germany_Rupprecht_Bayern_kr.png"
-	traits = { trait_cautious inflexible_strategist defensive_doctrine organizer thorough_planner }
+	traits = {
+		trait_cautious
+		inflexible_strategist
+		defensive_doctrine
+		organizer
+		thorough_planner
+	}
 	skill = 4
 	attack_skill = 2
 	defense_skill = 4
@@ -359,7 +389,10 @@ create_field_marshal = {
 	name = "August von Mackensen"
 	desc = "POLITICS_AUGUST_VON_MACKENSEN_DESC"
 	picture = "Portrait_Germany_August_Mackensen_kr.png"
-	traits = { offensive_doctrine old_guard }
+	traits = {
+		offensive_doctrine
+		old_guard
+	}
 	skill = 4
 	attack_skill = 3
 	defense_skill = 3
@@ -372,7 +405,9 @@ create_field_marshal = {
 	name = "Wilhelm von Preußen"
 	desc = "POLITICS_WILHELM_III_GENERAL_DESC"
 	picture = "Portrait_Germany_Wilhelm_III_field_marshall.png"
-	traits = { politically_connected }
+	traits = {
+		politically_connected
+	}
 	skill = 3
 	attack_skill = 2
 	defense_skill = 2
@@ -384,7 +419,12 @@ create_corps_commander = {
 	name = "Erich von Manstein"
 	desc = "POLITICS_ERICH_VON_MANSTEIN_DESC"
 	picture = "Portrait_Germany_Erich_von_Manstein_kr.png"
-	traits = { trickster armor_officer brilliant_strategist trait_engineer }
+	traits = {
+		trickster
+		armor_officer
+		brilliant_strategist
+		trait_engineer
+	}
 	skill = 4
 	attack_skill = 3
 	defense_skill = 3
@@ -395,7 +435,13 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Heinz Guderian"
 	picture = "Portrait_Germany_Heinz_Guderian_kr.png"
-	traits = { trickster brilliant_strategist panzer_leader armor_officer career_officer }
+	traits = {
+		trickster
+		brilliant_strategist
+		panzer_leader
+		armor_officer
+		career_officer
+	}
 	skill = 4
 	attack_skill = 3
 	defense_skill = 3
@@ -406,7 +452,13 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Walter Model"
 	picture = "Portrait_Germany_Walter_Model_kr.png"
-	traits = { politically_connected trait_cautious harsh_leader brilliant_strategist trickster }
+	traits = {
+		politically_connected
+		trait_cautious
+		harsh_leader
+		brilliant_strategist
+		trickster
+	}
 	skill = 4
 	attack_skill = 3
 	defense_skill = 5
@@ -417,7 +469,11 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Werner von Blomberg"
 	picture = "Portrait_Germany_Werner_von_Blomberg.png"
-	traits = { trickster armor_officer career_officer }
+	traits = {
+		trickster
+		armor_officer
+		career_officer
+	}
 	skill = 3
 	attack_skill = 3
 	defense_skill = 2
@@ -428,7 +484,10 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Günther von Kluge"
 	picture = "Portrait_Germany_Gunther_Kluge_kr.png"
-	traits = { career_officer armor_officer }
+	traits = {
+		career_officer
+		armor_officer
+	}
 	skill = 4
 	attack_skill = 3
 	defense_skill = 3
@@ -439,7 +498,10 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Erwin von Witzleben"
 	picture = "Portrait_Germany_Erwin_von_Witzleben_kr.png"
-	traits = { skilled_staffer career_officer }
+	traits = {
+		skilled_staffer
+		career_officer
+	}
 	skill = 3
 	attack_skill = 2
 	defense_skill = 3
@@ -450,7 +512,10 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Wilhelm Ritter von Leeb"
 	picture = "Portrait_Germany_Wilhelm_Ritter_von_Leeb_kr.png"
-	traits = { skilled_staffer infantry_officer }
+	traits = {
+		skilled_staffer
+		infantry_officer
+	}
 	skill = 3
 	attack_skill = 2
 	defense_skill = 3
@@ -461,7 +526,10 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Albert Kesselring"
 	picture = "Portrait_Germany_Albert_Kesselring_kr.png"
-	traits = { inflexible_strategist infantry_officer }
+	traits = {
+		inflexible_strategist
+		infantry_officer
+	}
 	skill = 3
 	attack_skill = 2
 	defense_skill = 2
@@ -472,7 +540,10 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Eberhard von Mackensen"
 	picture = "Portrait_Germany_Eberhard_Mackensen_kr.png"
-	traits = { cavalry_leader cavalry_officer }
+	traits = {
+		cavalry_leader
+		cavalry_officer
+	}
 	skill = 3
 	attack_skill = 4
 	defense_skill = 2
@@ -483,7 +554,10 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Eduard Dietl"
 	picture = "Portrait_Germany_Eduard_Dietl_kr.png"
-	traits = { winter_specialist commando }
+	traits = {
+		winter_specialist
+		commando
+	}
 	skill = 3
 	attack_skill = 2
 	defense_skill = 2
@@ -494,7 +568,10 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Erich Hoepner"
 	picture = "Portrait_Germany_Erich_Hoepner_kr.png"
-	traits = { armor_officer trait_reckless }
+	traits = {
+		armor_officer
+		trait_reckless
+	}
 	skill = 3
 	attack_skill = 2
 	defense_skill = 2
@@ -505,7 +582,9 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Ewald von Kleist"
 	picture = "Portrait_Germany_Ewald_Kleist_kr.png"
-	traits = { skilled_staffer }
+	traits = {
+		skilled_staffer
+	}
 	skill = 3
 	attack_skill = 3
 	defense_skill = 2
@@ -516,7 +595,11 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Fedor von Bock"
 	picture = "Portrait_Germany_Fedor_Bock_kr.png"
-	traits = { brilliant_strategist harsh_leader trait_cautious }
+	traits = {
+		brilliant_strategist
+		harsh_leader
+		trait_cautious
+	}
 	skill = 3
 	attack_skill = 4
 	defense_skill = 2
@@ -527,7 +610,9 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Friedrich Paulus"
 	picture = "Portrait_Germany_Friedrich_Paulus_kr.png"
-	traits = { infantry_officer }
+	traits = {
+		infantry_officer
+	}
 	skill = 3
 	attack_skill = 2
 	defense_skill = 2
@@ -538,7 +623,10 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Georg von Küchler"
 	picture = "Portrait_Germany_Georg_Kuchler_kr.png"
-	traits = { politically_connected career_officer }
+	traits = {
+		politically_connected
+		career_officer
+	}
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
@@ -549,7 +637,9 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Franz Halder"
 	picture = "Portrait_Germany_Franz_Halder_kr.png"
-	traits = { organizer }
+	traits = {
+		organizer
+	}
 	skill = 3
 	attack_skill = 2
 	defense_skill = 2
@@ -560,7 +650,10 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Gotthard Heinrici"
 	picture = "Portrait_Germany_Gotthard_Heinrici_kr.png"
-	traits = { trait_engineer fortress_buster }
+	traits = {
+		trait_engineer
+		fortress_buster
+	}
 	skill = 3
 	attack_skill = 4
 	defense_skill = 2
@@ -585,7 +678,11 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Franz von Bayern"
 	picture = "Portrait_Germany_Franz_Bayern_kr.png"
-	traits = { trait_engineer fortress_buster hill_fighter }
+	traits = {
+		trait_engineer
+		fortress_buster
+		hill_fighter
+	}
 	skill = 2
 	attack_skill = 1
 	defense_skill = 2
@@ -596,7 +693,9 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Curt Haase"
 	picture = "Portrait_Germany_Curt_Hasse.png"
-	traits = { trickster }
+	traits = {
+		trickster
+	}
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
@@ -607,7 +706,8 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Walther von Reichenau"
 	picture = "Portrait_Germany_Walther_von_Reichenau.png"
-	traits = {}
+	traits = {
+	}
 	skill = 2
 	attack_skill = 2
 	defense_skill = 3
@@ -618,7 +718,10 @@ create_corps_commander = {
 create_navy_leader = {
 	name = "Karl Dönitz"
 	picture = "Portrait_Germany_Karl_Donitz_kr.png"
-	traits = { seawolf silent_hunter }
+	traits = {
+		seawolf
+		silent_hunter
+	}
 	skill = 4
 	attack_skill = 4
 	defense_skill = 2
@@ -629,7 +732,9 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Erich Raeder"
 	picture = "Portrait_Germany_Erich_Raeder_kr.png"
-	traits = { ironside }
+	traits = {
+		ironside
+	}
 	skill = 5
 	attack_skill = 5
 	defense_skill = 3
@@ -640,7 +745,9 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Lothar von Arnauld de la Perière"
 	picture = "Portrait_Germany_Lothar_Arnauld_Periere_kr.png"
-	traits = { seawolf }
+	traits = {
+		seawolf
+	}
 	skill = 4
 	attack_skill = 3
 	defense_skill = 4
@@ -651,7 +758,8 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Alfred Saalwächter"
 	picture = "Portrait_Germany_Alfred_Saalwachter_kr.png"
-	traits = { }
+	traits = {
+	}
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
@@ -662,7 +770,9 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Hermann Boehm"
 	picture = "Portrait_Germany_Hermann_Boehm_kr.png"
-	traits = { superior_tactician }
+	traits = {
+		superior_tactician
+	}
 	skill = 4
 	attack_skill = 4
 	defense_skill = 4
@@ -673,7 +783,9 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Wilhelm Marschall"
 	picture = "Portrait_Germany_Wilhelm_Marschall_kr.png"
-	traits = { blockade_runner }
+	traits = {
+		blockade_runner
+	}
 	skill = 3
 	attack_skill = 3
 	defense_skill = 2
@@ -684,7 +796,11 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Ludwig von Reuter"
 	picture = "Portrait_Germany_Ludwig_Reuter_kr.png"
-	traits = { ironside superior_tactician old_guard_navy }
+	traits = {
+		ironside
+		superior_tactician
+		old_guard_navy
+	}
 	skill = 5
 	id = 984
 	attack_skill = 5
@@ -696,7 +812,10 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Wilhelm Souchon"
 	picture = "Portrait_Germany_Wilhelm_Souchon_kr.png"
-	traits = { spotter old_guard_navy }
+	traits = {
+		spotter
+		old_guard_navy
+	}
 	skill = 3
 	attack_skill = 3
 	defense_skill = 2
@@ -707,7 +826,9 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Max Valentiner"
 	picture = "Portrait_Germany_Max_Valentiner_kr.png"
-	traits = { seawolf }
+	traits = {
+		seawolf
+	}
 	skill = 4
 	attack_skill = 4
 	defense_skill = 1
@@ -718,7 +839,10 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Rolf Carls"
 	picture = "Portrait_Germany_Rolf_Carls_kr.png"
-	traits = { blockade_runner old_guard_navy }
+	traits = {
+		blockade_runner
+		old_guard_navy
+	}
 	skill = 4
 	attack_skill = 3
 	defense_skill = 4
@@ -729,7 +853,8 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Günther Lütjens"
 	picture = "Portrait_Germany_Gunther_Lutjens_kr.png"
-	traits = { }
+	traits = {
+	}
 	skill = 3
 	attack_skill = 3
 	defense_skill = 1
@@ -740,7 +865,9 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Bernhard Rogge"
 	picture = "Portrait_Germany_Bernhard_Rogge_kr.png"
-	traits = { seawolf }
+	traits = {
+		seawolf
+	}
 	skill = 1
 	attack_skill = 2
 	defense_skill = 1
@@ -749,7 +876,9 @@ create_navy_leader = {
 }
 
 if = {
-	limit = { has_dlc = "La Resistance" }
+	limit = {
+		has_dlc = "La Resistance"
+	}
 	create_intelligence_agency = yes
 	create_operative_leader = {
 		name = "Hermann Giskes"
@@ -759,7 +888,9 @@ if = {
 		}
 		bypass_recruitment = no
 		available_to_spy_master = yes
-		nationalities = { GER }
+		nationalities = {
+			GER
+		}
 	}
 	create_operative_leader = {
 		name = "Hugo Bleicher"
@@ -769,7 +900,9 @@ if = {
 		}
 		bypass_recruitment = no
 		available_to_spy_master = yes
-		nationalities = { GER }
+		nationalities = {
+			GER
+		}
 	}
 	create_operative_leader = {
 		name = "Josef Jakobs"
@@ -779,6 +912,8 @@ if = {
 		}
 		bypass_recruitment = no
 		available_to_spy_master = yes
-		nationalities = { GER }
+		nationalities = {
+			GER
+		}
 	}
 }
