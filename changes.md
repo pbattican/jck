@@ -37,6 +37,11 @@ Incorporates the KRW Submod changes with some minor tweaks
 - Last Stand nerfed to -0.45 org damage and 0.5 cp per battalion
 - Force Attack nerfed to -0.45 org damage and 0.5 cp per battalion
 
+### Demobilization
+
+- Demob mission has a 60 day timeout
+- Demob mission now also causes you to lose 25 pp on timeout
+
 ### Nation Changes
 
 #### ACW Nations
