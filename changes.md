@@ -37,7 +37,11 @@ Incorporates the KRW Submod changes with some minor tweaks
 - Last Stand nerfed to -0.45 org damage and 0.5 cp per battalion
 - Force Attack nerfed to -0.45 org damage and 0.5 cp per battalion
 
-### Decisions
+### Nation Changes
+
+#### ACW Nations
+
+- You will not be able to use `focus on the X` decsions if they are not a player before July 1st 1938
 
 #### Austria
 
