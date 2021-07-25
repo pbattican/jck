@@ -9,16 +9,16 @@ Incorporates the KRW Submod changes with some minor tweaks
 
 ### Game Defines
 
-- Game speed has increased from { 2, 0.5, 0.2, 0.1, 0.0 } seconds per game hour to { 1, 0.3, 0.175, 0.1 0.0 }
+- Game speed has increased from { 2, 0.5, 0.2, 0.1, 0.0 } seconds per game hour to { 1, 0.3, 0.2, 0.08, 0.0 }
 - Set MAX_HEROES_BEING_KILLED_WAR_SUPPORT_IMPACT = -0.4
 - Set INTERPOLATED_FRONT_STEPS_SHORT = 1 which reduces the number of steps calculated for AI frontlines ( does not affect players )
-- Allow 20 days of saved focus progress
 - Increase max army XP gain per day from 3.0 to 3.5
 - Increase lend lease experience scale by 10% from 0.005 to 0.0055 to encourage more lend lease
 - Increased cap of all XP from 500 to 1000
 - Set submarines to want to escape from a battle while convoy raiding when on always engage. Has the same value as high engagement risk. 
 - Increased the decay of naval mines during peacetime just in-case the AI drops some and then is peaced out. 
 - Doubled the spotting percentage from full radar coverage of a sea zone from 5% to 10%
+- There will not be a peace pause unless there are at least 2 players on the victor side of a peace deal AND at least 0 players on the losers side of the peace deal
 
 ### Optimization
 
@@ -34,8 +34,8 @@ Incorporates the KRW Submod changes with some minor tweaks
 
 ### Abilities
 
-- Last Stand nerfed to -0.75 org damage and 0.5 strength damage
-- Force Attack nerfed to -0.75 org damage
+- Last Stand nerfed to -0.45 org damage and 0.5 cp per battalion
+- Force Attack nerfed to -0.45 org damage and 0.5 cp per battalion
 
 ### Decisions
 

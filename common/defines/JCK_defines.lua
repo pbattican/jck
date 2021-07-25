@@ -10,13 +10,13 @@ NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
 
 --- Game
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 6 --12
-NDefines.NGame.GAME_SPEED_SECONDS = { 0.5, 0.35, 0.2, 0.08, 0.0 }
+NDefines.NGame.GAME_SPEED_SECONDS = { 0.5, 0.3, 0.2, 0.08, 0.0 }
 
 --- Military ---
 
 --- Should prevent peace events appearing for all players if there aren't winners and losers on both sides. 
-NDefines.NDiplomacy.MP_NUM_WINNERS_FOR_PEACE_PAUSE = 1
-NDefines.NDiplomacy.MP_NUM_LOSERS_FOR_PEACE_PAUSE = 1
+NDefines.NDiplomacy.MP_NUM_WINNERS_FOR_PEACE_PAUSE = 2
+NDefines.NDiplomacy.MP_NUM_LOSERS_FOR_PEACE_PAUSE = 0
 
 --- More XP gain per day of combat. Base is 3
 NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 3.5
@@ -48,4 +48,4 @@ NDefines.NCountry.INTERPOLATED_FRONT_STEPS_SHORT = 1				-- Performance optimizat
 
 --- Focus ---
 --- Slightly easier to macro and not waste focus points
-NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20
+--- NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20
