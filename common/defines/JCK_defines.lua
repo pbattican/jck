@@ -28,6 +28,10 @@ NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 1000
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 1000
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 1000
 
+NDefines.NAir.AIR_WING_MAX_SIZE = 1200 --- convenience so you can split wings down to 200 easily
+--- NDefines.NAir.ACE_WING_SIZE	= 200 --- vanilla is 100
+--- NDefines.NAir.ACE_WING_SIZE_MAX_BONUS = 5
+
 ------------------
 
 --- Navy
