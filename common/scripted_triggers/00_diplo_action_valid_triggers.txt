@@ -44,4 +44,3 @@ is_diplomatic_action_valid_kick_from_faction = {
 is_diplomatic_action_valid_assume_faction_leadership = {
 	always = no # Disabled for JCK since no one SHOULD be taking over factions
 }
-

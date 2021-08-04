@@ -207,8 +207,8 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 			OR = {
 				AND = {
 					tag = SWE
-					GER = {
-						has_war = no
+					NOT = {
+						is_in_faction_with = GER
 					}
 				}
 				tag = SCA
