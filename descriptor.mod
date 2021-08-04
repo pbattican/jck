@@ -9,6 +9,6 @@ dependencies={
 	"Kaiserreich"
 }
 name="JCK"
-picture="JCK_flag.jpg"
+picture="JCK.jpg"
 supported_version="1.10.*"
 remote_file_id="2502041023"
