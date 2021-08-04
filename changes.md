@@ -42,6 +42,11 @@ Incorporates the KRW Submod changes with some minor tweaks
 - Demob mission has a 60 day timeout
 - Demob mission now also causes you to lose 25 pp on timeout
 
+### Equipment Changes
+
+- No conversion of heavy 1 to heavy 2 tanks
+- No aircraft conversion aside from scout planes
+
 ### Nation Changes
 
 #### ACW Nations
@@ -180,10 +185,6 @@ is > 1939.1.1
 #### Somalia
 
 - Removed
-
-#### Sweden
-
-- The focus `modern fighters` has an additional -2.5% production cost reduction to fighters, CAS, and tac bombers
 
 #### Ukraine
 
