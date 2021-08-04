@@ -42,6 +42,15 @@ Incorporates the KRW Submod changes with some minor tweaks
 - Demob mission has a 60 day timeout
 - Demob mission now also causes you to lose 25 pp on timeout
 
+### Diplomatic Actions
+
+- Lend Lease send / receive is disabled for Ottomans, Scandinavia, Sweden when not in the RP, and Venezuela
+
+### Equipment Changes
+
+- No conversion of heavy 1 to heavy 2 tanks
+- No aircraft conversion aside from scout planes
+
 ### Nation Changes
 
 #### ACW Nations
@@ -61,20 +70,10 @@ RP
 
 #### Brazil
 
-- Brazil allowed to join the Entente if date is > 1937.7.1 OR Germany is at war
-with CoF AND Brazil does not have a socialist government
-- Brazil allowed to join Entente research group if in Canada's faction
 - Given Uruguay as a core
 
 #### Bulgaria
 
-- Decision to subdue the Greeks if all Greek cores are controlled which adds 0.15 compliance gain
-- Decision to subdue the Serbs is all Serb cores are controlled which adds 0.15
-compliance gain
-- Decision to subdue the Romanians if all Romanian cores are controlled
-which adds 0.15 compliance gain
-- Decision to subdue the Turks if most of Anatolia is controlled by Bulgaria
-which adds 0.15 compliance gain
 - Decision to join the RP once Germany is at war with FRA. 
 
 #### Canada
@@ -87,7 +86,6 @@ which adds 0.15 compliance gain
 
 - Given Haiti and Dominican Republic as cores
 - Given British Honduras
-
 
 #### Cento-America
 
@@ -107,7 +105,6 @@ which adds 0.15 compliance gain
 - Added 1x 100% industry research bonus to the Worker Design Cooperatives focus for Orthodox Syndicalism
 - Modified initial country event tree to not fire the final calculation until the 5th event choice has been made
 - Increased mobilization law to Partial Mobilization
-- Added decision "French Irridentism" which is available after the completion of "French Revanchism" and provides a 5% recovery rate increase and 1% recruitable population.
 
 #### Cuba
 
@@ -182,6 +179,7 @@ is > 1939.1.1
 - Russia is allowed to join the Co-Pro when Germany is at war with CoF OR the date
 is > 1939.1.1
 - Russia is allowed to join the Co-Pro research group when in the Co-Pro
+- Armor bonuses apply for the armor category instead of light / mediums only. 
 
 #### Serbia
 
@@ -192,10 +190,6 @@ is > 1939.1.1
 
 - Removed
 
-#### Sweden
-
-- The focus `modern fighters` has an additional -2.5% production cost reduction to fighters, CAS, and tac bombers
-
 #### Ukraine
 
 - Ukraine given a decision to annex white ruthenia, decision compensates for subsequent annexation decision (plus flat 50% compliance buff)
@@ -204,6 +198,11 @@ is > 1939.1.1
 
 - Decision to puppet Iceland if Iceland joins the 3rd Internationale
 - Added a decision to to nationalize the GLCC which provides a 40% increase in refinery fuel income, 20% fuel capacity increase, and 20% refinery construction speed bonus. Additonally 20% research speed bonus for synthetic technologies. This decision may be taken after the focus "Total Mobilization"
+
+#### United States of America
+
+- Final chaffee reforms now provides +15% armor instead of +20%
+- American Values production efficiency cap reduced to 5% from 10%
 
 #### Venezuela
 

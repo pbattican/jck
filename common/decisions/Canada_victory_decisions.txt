@@ -13,54 +13,43 @@ CAN_victory_decisions = {
 				126 = {
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				333 = {
+				333 = { #North Borneo
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				336 = {
+				336 = { #Singapore
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				633 = {
+				633 = { #Marshall Islands
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				635 = {
+				635 = { #New Caledonia
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				639 = {
+				639 = { #Gilbert Islands
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				641 = {
+				643 = { #Ellice Islands
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				643 = {
+				646 = { #Mariana Islands
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				646 = {
+				647 = { #Palau Islands
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				647 = {
+				737 = { #Bismarck Arch
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				725 = {
+				757 = { #Kaiser Wilhelmsland
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				734 = {
+				828 = { #Sabah
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				737 = {
+				846 = { #Malaya
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				757 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				828 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				846 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				941 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
+
 				NOT = {
 					country_exists = ENG
 					country_exists = FRA
@@ -79,54 +68,43 @@ CAN_victory_decisions = {
 					126 = {
 						is_controlled_by_ROOT_or_ally = yes
 					}
-					333 = {
+					333 = { #North Borneo
 						is_controlled_by_ROOT_or_ally = yes
 					}
-					336 = {
+					336 = { #Singapore
 						is_controlled_by_ROOT_or_ally = yes
 					}
-					633 = {
+					633 = { #Marshall Islands
 						is_controlled_by_ROOT_or_ally = yes
 					}
-					635 = {
+					635 = { #New Caledonia
 						is_controlled_by_ROOT_or_ally = yes
 					}
-					639 = {
+					639 = { #Gilbert Islands
 						is_controlled_by_ROOT_or_ally = yes
 					}
-					641 = {
+					643 = { #Ellice Islands
 						is_controlled_by_ROOT_or_ally = yes
 					}
-					643 = {
+					646 = { #Mariana Islands
 						is_controlled_by_ROOT_or_ally = yes
 					}
-					646 = {
+					647 = { #Palau Islands
 						is_controlled_by_ROOT_or_ally = yes
 					}
-					647 = {
+					737 = { #Bismarck Arch
 						is_controlled_by_ROOT_or_ally = yes
 					}
-					725 = {
+					757 = { #Kaiser Wilhelmsland
 						is_controlled_by_ROOT_or_ally = yes
 					}
-					734 = {
+					828 = { #Sabah
 						is_controlled_by_ROOT_or_ally = yes
 					}
-					737 = {
+					846 = { #Malaya
 						is_controlled_by_ROOT_or_ally = yes
 					}
-					757 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					828 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					846 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					941 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
+						
 					country_exists = NFA
 					country_exists = RAJ
 				}
