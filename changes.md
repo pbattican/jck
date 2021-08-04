@@ -42,6 +42,10 @@ Incorporates the KRW Submod changes with some minor tweaks
 - Demob mission has a 60 day timeout
 - Demob mission now also causes you to lose 25 pp on timeout
 
+### Diplomatic Actions
+
+- Lend Lease send / receive is disabled for Ottomans, Scandinavia, Sweden when not in the RP, and Venezuela
+
 ### Equipment Changes
 
 - No conversion of heavy 1 to heavy 2 tanks
