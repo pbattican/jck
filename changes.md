@@ -65,13 +65,6 @@ RP
 
 #### Bulgaria
 
-- Decision to subdue the Greeks if all Greek cores are controlled which adds 0.15 compliance gain
-- Decision to subdue the Serbs is all Serb cores are controlled which adds 0.15
-compliance gain
-- Decision to subdue the Romanians if all Romanian cores are controlled
-which adds 0.15 compliance gain
-- Decision to subdue the Turks if most of Anatolia is controlled by Bulgaria
-which adds 0.15 compliance gain
 - Decision to join the RP once Germany is at war with FRA. 
 
 #### Canada
