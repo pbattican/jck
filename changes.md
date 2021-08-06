@@ -164,6 +164,10 @@ is > 1939.6.1
 - Decision to add 2 mil factories and 1 100% air doctrine buff after completing
 a focus
 
+#### Portugal
+
+- Is not able to join the Entente
+
 #### Princely Federation
 
 - Decision for PLAYERS to join the Co-Pro and research group available after 1940.1.1 and they have completed the 2nd to last focus in their chosen political tree
