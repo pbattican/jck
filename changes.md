@@ -127,6 +127,10 @@ RP
 - Allows each of the Eastern Defense nations to assume control of the organization
 if the UBD collapses. Applies to Ukraine, Poland, Lithuania, White Ruthenia, UBD
 
+#### Germany Empire
+
+- PLAYERs will not be able to use the "From the Caucasus" focus
+
 #### Japan
 
 - Decisions to add production cost buffs to Japan's air and navy once the Military focus tree has
