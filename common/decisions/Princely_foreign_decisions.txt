@@ -33,7 +33,7 @@ PRF_foreign_affairs = {
 		cost = 0
 		days_remove = 70
 		ai_will_do = {
-			factor = 100
+			factor = 0
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PRF_join_CoPro"
