@@ -135,6 +135,7 @@ if the UBD collapses. Applies to Ukraine, Poland, Lithuania, White Ruthenia, UBD
 
 - Decisions to add production cost buffs to Japan's air and navy once the Military focus tree has
 been started. -10% Cost reduction on combat aircraft and all ships
+- PLAYER Japan will not be able to use the "Pressure Hawaii" focus
 
 #### National France
 
