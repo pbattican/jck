@@ -166,7 +166,7 @@ a focus
 
 #### Princely Federation
 
-- Decision to join the Co-Pro and research group available after 1940.1.1 and they have completed the 2nd to last focus in their chosen political tree
+- Decision for PLAYERS to join the Co-Pro and research group available after 1940.1.1 and they have completed the 2nd to last focus in their chosen political tree
 
 #### Romania
 
