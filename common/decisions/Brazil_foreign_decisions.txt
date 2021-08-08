@@ -6,9 +6,6 @@ BRA_foreign_policy = {
 		}
 		available = {
 			AND = {
-				NOT = {
-					has_socialist_government = yes
-				}
 				OR = {
 					GER = {
 						has_war_with = FRA
