@@ -6,14 +6,11 @@ BRA_foreign_policy = {
 		}
 		available = {
 			AND = {
-				NOT = {
-					has_socialist_government = yes
-				}
 				OR = {
 					GER = {
 						has_war_with = FRA
 					}
-					date > 1939.6.1
+					date > 1937.7.1
 				}
 			}
 			is_in_faction = no

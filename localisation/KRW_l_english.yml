@@ -51,9 +51,6 @@
  ENG_exploit_resources:0 "Union of Britain Special Decisions"
  ENG_integrate_icelands_defences:0 "Integrate Iceland and its defenses"
 
- GER_imperial_spirit:0 "German Imperial Spirit"
- GER_imperial_spirit_desc:0 "Germans have won their place in the sun. However threats abound, not least of which from the specter cast by the Syndicalism of their once enemies; France and Britain. Germany must hold, for if she does not all of European civilisation will fall with her, centuries of history and tradition will be ground beneath the feet of the syndicalists."
-
  ### Last Stand
  KRW_ABILITY_LAST_STAND:0 "Last Stand"
  KRW_ABILITY_LAST_STAND_TOOLTIP:0 "Last Stand ($LEADER$)"
