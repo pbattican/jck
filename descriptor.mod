@@ -5,7 +5,7 @@ tags={
 dependencies={
 	"Kaiserreich"
 }
-name="KRW Submod"
+name="KRW Submod-dev"
 picture="KRW.jpg"
 supported_version="1.10.*"
 remote_file_id="2380382549"
