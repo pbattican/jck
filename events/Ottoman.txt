@@ -6977,6 +6977,7 @@ country_event = {	#Istanbul Pact - Invite
 		name = ottfor.18.a
 		ai_chance = {
 			base = 100
+			modifier = { tag = AZR factor = 0 }
 		}
 		FROM = {
 			if = {
@@ -6993,6 +6994,7 @@ country_event = {	#Istanbul Pact - Invite
 		name = ottfor.18.b
 		ai_chance = {
 			base = 0
+			modifier = { tag = AZR factor = 100 }
 		}
 		OTT = {
 			country_event = ottfor.19
