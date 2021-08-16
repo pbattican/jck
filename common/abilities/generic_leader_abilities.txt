@@ -35,16 +35,14 @@ ability = {
 				add = 2
 			}
 		}
-		cost = 0.22
+		cost = 0.4
 		duration = 168
 		one_time_effect = {
 			add_temporary_buff_to_units = {
 				combat_offense = 0.2
 				combat_breakthrough = 0.25
-				### ADDED FOR KRW ON 16-05-2021
-				#org_damage_multiplier = -1
-				org_damage_multiplier = -0.4
-				str_damage_multiplier = 0.25
+				org_damage_multiplier = -0.75 # nerfed from -0.9
+				str_damage_multiplier = 0.6
 				war_support_reduction_on_damage = 0.2
 				cannot_retreat_while_attacking = 1
 				days = 7
@@ -61,19 +59,14 @@ ability = {
 			is_leading_army_group = no
 			is_border_war = no
 		}
-		cost = 0.22
+		cost = 0.4
 		duration = 168
 		one_time_effect = {
 			add_temporary_buff_to_units = {
 				combat_defense = 0.2
 				combat_entrenchment = 0.25
-				#org_damage_multiplier = -1.0
-				### ADDED FOR KRW ON 19-02-2021
-				### CHANGED FOR KRW ON 16-05-2021
-				org_damage_multiplier = -0.4
-				#str_damage_multiplier = 0.6
-				### ADDED FOR KRW ON 19-02-2021
-				str_damage_multiplier = 0.25
+				org_damage_multiplier = -0.75 # nerfed from -0.9
+				str_damage_multiplier = 0.6
 				war_support_reduction_on_damage = 0.2
 				cannot_retreat_while_defending = 1
 				days = 7

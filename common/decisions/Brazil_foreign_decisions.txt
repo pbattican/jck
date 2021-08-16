@@ -6,6 +6,8 @@ BRA_foreign_policy = {
 		}
 		available = {
 			AND = {
+				has_socialist_government = no
+				has_left_democratic_government = no
 				OR = {
 					GER = {
 						has_war_with = FRA
@@ -22,9 +24,6 @@ BRA_foreign_policy = {
 		fire_only_once = yes
 		cost = 0
 		days_remove = 30
-		ai_will_do = {
-			factor = 100
-		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision BRA_join_entente"
 			CAN = {

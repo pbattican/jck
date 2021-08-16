@@ -1,12 +1,1 @@
-Beta version for the Kaiserreich Weekly community.
-
-Changes
-- All bug fixes are properly resolved. No longer the error.log is populated with unnecessary bugs.
-- Poland now gets the factories from the "Expand fighter production" decision.
-- German Imperial Spirit contains an actual icon and lore description.
-- Proper localisation for all KRW submod decisions.
-
-New testable features
-- Outstanding world news to welcome all KRW participants on a new session.
-- Intermarium, a.k.a. Eastern European Defense Cooperation, available for the Eastern European (EE) Reichpakts member (POL, LIT, UBD, WHR, UKR). UBD start as the initial leader, but if this is an AI controlled nation, Germany gets decisions which allows Germany to choose a player controlled country of the EE Reichspakt members.
-The aim is to provide the EE members the mechanic being playable in KRW.
+Kaiserreich Weekly Objective KR MP Format

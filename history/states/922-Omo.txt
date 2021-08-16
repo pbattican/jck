@@ -1,0 +1,16 @@
+state = {
+	id = 922
+	name = "STATE_922"
+
+	history = {
+		buildings = {
+			infrastructure = 3
+		}
+	}
+
+	provinces = {
+		7912 8019 10734
+	}
+	manpower = 1713680
+	state_category = one
+}

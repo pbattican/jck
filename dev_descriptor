@@ -1,0 +1,13 @@
+version="0.1"
+tags={
+	"Alternative History"
+	"Balance"
+	"Gameplay"
+	"National Focuses"
+}
+dependencies={
+	"Kaiserreich"
+}
+name="JCK-dev"
+picture="JCK.jpg"
+supported_version="1.10.*"

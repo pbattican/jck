@@ -1,0 +1,16 @@
+state = {
+	id = 491
+	name = "STATE_491"
+
+	history = {
+		buildings = {
+			infrastructure = 3
+		}
+	}
+
+	provinces = {
+		5162 8213 10970 13349 13533 13539
+	}
+	manpower = 176626
+	state_category = one
+}

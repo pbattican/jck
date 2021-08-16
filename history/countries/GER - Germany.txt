@@ -124,59 +124,30 @@ if = {
 	}
 }
 
-POL = {
-	give_military_access = GER
-}
-
-GEO = {
-	give_military_access = GER
-}
-
-AZR = {
-	give_military_access = GER
-}
-
-OTT = {
-	give_military_access = GER
-}
-
-ETH = {
-	give_military_access = GER
-}
+POL = { give_military_access = GER }
+GEO = { give_military_access = GER }
+AZR = { give_military_access = GER }
+OTT = { give_military_access = GER }
+ETH = { give_military_access = GER }
 
 give_guarantee = GEO
 give_guarantee = AZR
-add_to_array = {
-	AZR.guarantor_array = GER
-}
-
-add_to_array = {
-	GEO.guarantor_array = GER
-}
+add_to_array = { AZR.guarantor_array = GER }
+add_to_array = { GEO.guarantor_array = GER }
 
 set_research_slots = 4
 set_convoys = 400
 set_stability = 0.6
 set_global_flag = GER_has_oil
-diplomatic_relation = {
-	country = AUS
-	relation = non_aggression_pact
-}
 
 add_opinion_modifier = {
 	target = MAF
 	modifier = colonial_master
 }
 
-add_opinion_modifier = {
-	target = GEA
-	modifier = colonial_master
-}
-
-add_opinion_modifier = {
-	target = HAI
-	modifier = HAI_foreign_council
-}
+add_opinion_modifier = { target = MAF modifier = colonial_master }
+add_opinion_modifier = { target = GEA modifier = colonial_master }
+add_opinion_modifier = { target = HAI modifier = HAI_foreign_council }
 
 set_politics = {
 	ruling_party = authoritarian_democrat
@@ -236,145 +207,30 @@ every_country = {
 	GER_add_to_mitteleuropa = yes
 }
 
-country_event = {
-	id = gerdom.1
-	hours = 2
-}
-
-#Introduction Event
-country_event = {
-	id = mittel.43
-	days = 90
-}
-
-#The Kenyatta-Solf Affair
-news_event = {
-	id = gerfla.1
-	days = 238
-}
-
-#Sedanday
-country_event = {
-	id = gerdom.2
-	days = 360
-}
-
-#Hans von Seeckt dies
-news_event = {
-	id = gerfla.2
-	days = 400
-}
-
-#Trans-pacific flight
-country_event = {
-	id = gerfla.6
-	days = 525
-}
-
-# Ludendorff dies
-country_event = {
-	id = gerfla.7
-	days = 540
-}
-
-# Michaelis dies
-country_event = {
-	id = sprc.256
-	days = 720
-	random_hours = 3840
-}
-
-#Peace with Andorra
-country_event = {
-	id = gerdom.106
-	days = 731
-	random_days = 75
-}
-
-#Further increasing our internal security
-country_event = {
-	id = gerdom.43
-	days = 896
-}
-
-#Relations with Italy
-country_event = {
-	id = literature.15
-	days = 952
-}
-
-#Tintin and the Blue Lotus
-news_event = {
-	id = gerfla.3
-	days = 1218
-}
-
-#Wilhelm Groener dies
-country_event = {
-	id = gerdom.62
-	days = 1255
-}
-
-#Hoffmann vs Richthofen
-country_event = {
-	id = gerdom.40
-	days = 1354
-}
-
-#The first SPD Reichskanzler is dead!
-country_event = {
-	id = gerdom.41
-	days = 1354
-}
-
-#Otto Wels dies
-country_event = {
-	id = gerdom.63
-	days = 1374
-}
-
-#Johann von Bernstorff dies
-country_event = {
-	id = gerdom.4700
-	days = 1981
-}
-
-#Death of Wilhelm II
-country_event = {
-	id = gerdom.64
-	days = 2908
-}
-
-#Ludwig von Reuter dies
-country_event = {
-	id = gerdom.65
-	days = 3566
-}
-
-#Reichskanzler Vogel dies
-country_event = {
-	id = gerdom.65
-	days = 3665
-}
-
-#Wilhelm Souchon dies
-country_event = {
-	id = gerdom.66
-	days = 4408
-}
-
-#Georg Bruchmüller dies
+country_event = { id = gerdom.1 hours = 2 } #Introduction Event
+country_event = { id = mittel.43 days = 90 } #The Kenyatta-Solf Affair
+news_event = { id = gerfla.1 days = 238 } #Sedanday
+country_event = { id = gerdom.2 days = 360 } #Hans von Seeckt dies
+news_event = { id = gerfla.2 days = 400 } #Trans-pacific flight
+country_event = { id = gerfla.6 days = 525 } # Ludendorff dies
+country_event = { id = gerfla.7 days = 540 }  # Michaelis dies
+country_event = { id = sprc.256 days = 720 random_hours = 3840 } #Peace with Andorra
+country_event = { id = gerdom.106 days = 731 random_days = 75 } #Further increasing our internal security
+country_event = { id = gerdom.43 days = 896 } #Relations with Italy
+country_event = { id = literature.15 days = 952 } #Tintin and the Blue Lotus
+news_event = { id = gerfla.3 days = 1218 } #Wilhelm Groener dies
+country_event = { id = gerdom.62 days = 1255 } #Hoffmann vs Richthofen
+country_event = { id = gerdom.40 days = 1354 } #The first SPD Reichskanzler is dead!
+country_event = { id = gerdom.41 days = 1354 } #Otto Wels dies
+country_event = { id = gerdom.63 days = 1374 } #Johann von Bernstorff dies
+country_event = { id = gerdom.4700 days = 1981 } #Death of Wilhelm II
+country_event = { id = gerdom.64 days = 2908 } #Ludwig von Reuter dies
+country_event = { id = gerdom.65 days = 3566 } #Reichskanzler Vogel dies
+country_event = { id = gerdom.65 days = 3665 } #Wilhelm Souchon dies
+country_event = { id = gerdom.66 days = 4408 } #Georg Bruchmüller dies
 MAF = {
-	country_event = {
-		id = gerdom.4700
-		days = 1981
-	}
-	#Death of Wilhelm II
-	country_event = {
-		id = gerdom.64
-		days = 2908
-	}
-	#Ludwig von Reuter dies
+	country_event = { id = gerdom.4700 days = 1981 } #Death of Wilhelm II
+	country_event = { id = gerdom.64 days = 2908 } #Ludwig von Reuter dies
 }
 
 # End WK2 AI boosts

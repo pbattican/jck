@@ -1,0 +1,66 @@
+GER_victory_decisions = {
+	GER_reichspakt_victory = {
+		icon = generic_research
+		allowed = {
+			original_tag = GER
+		}
+		available = {
+			AND = {
+				# Uses KR Scripted trigger in _useful_scripted_triggers.txt
+				2 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				16 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				195 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				217 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				219 = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				NOT = {
+					country_exists = FRA
+					country_exists = SRI
+				}
+			}
+		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					2 = {
+						is_controlled_by_ROOT_or_ally = no
+					}
+					16 = {
+						is_controlled_by_ROOT_or_ally = no
+					}
+					195 = {
+						is_controlled_by_ROOT_or_ally = no
+					}
+					217 = {
+						is_controlled_by_ROOT_or_ally = no
+					}
+					219 = {
+						is_controlled_by_ROOT_or_ally = no
+					}
+				}
+			}
+		}
+
+		fire_only_once = no
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GER_reichspakt_victory"
+		}
+		days_remove = 30
+		remove_effect = {
+			news_event = {
+				id = krw.victory.0
+				days = 1
+			}
+		}
+	}
+}

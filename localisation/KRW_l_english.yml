@@ -3,12 +3,6 @@
  AUS_join_Reichspakt:0 "Join the Reichspakt"
  AUS_join_RP_tech:0 "Join the Reichspakt Technology Group"
 
- BUL_foreign_policy:0 "Bulgarian Special Policies"
- BUL_subdue_the_greeks:0 "Subdue the Greeks"
- BUL_subdue_the_Serbs:0 "Subdue the Serbians"
- BUL_subdue_the_romanians:0 "Subdue the Romanians"
- BUL_subdue_the_turks:0 "Subdue the Turks"
-
  CAN_exploit_resources:0 "Canada Special Decisions"
  CAN_remove_POR:0 "Remove Portugal from the Entente"
  CAN_remove_SRD:0 "Remove Sardinia from the Entente"
@@ -69,3 +63,23 @@
  krw.intro.0.t:0 "Welcome to Kaiserreich Weekly!"
  krw.intro.0.d:0 "\n\n\n\n\n\n\n\n\n\nWelcome and thank you for playing at Kaiserreich Weekly!"
  krw.intro.0.a:0 "Let's get started!"
+
+ ### JCK 
+ FRA_irredentism_idea:0 "French Irredentism"
+ FRA_army_decisions:0 "Communard Armed Forces"
+ FRA_foster_irridentism:0 "Foster Irridentism"
+ FRA_foster_irridentism_desc:0 "With the recent declaration of war against Germany, men have risen up in droves to fight for our former lands. With such irridentism, we cannot possibly fail!"
+
+ ENG_synth_decisions:0 "War Measures"
+ ENG_nationalize_GLCC:0 "Nationalize the Coal Gas Companies"
+ ENG_nationalized_GLCC:0 "Nationalized Coal Gas Companies"
+ ENG_nationalized_GLCC_desc:0 "England has produced manufactured gas since the time of Napoleon. The Gas Light and Coke Company is being directed by the Executive Committee to prioritize production of synthetic fuels for the military. The Trade Unions have tacitly accepted this for now..."
+ ENG_nationalize_GLCC_desc:0 "The capitalist navies have cut off our oil supplies. The Gas Light and Coke Company must be directed by the Executive Committee to prioritize the production of synthetic fuels for our military. The Trade Unions will understand..."
+
+ NFA_seize_sardinia_decisions:0 "Necessary Measures"
+ NFA_annex_SRD:0 "Annex Sardinia"
+
+ ### Victory event
+ krw.victory.0.t:0 "[ROOT.GetFactionName] Wins!"
+ krw.victory.0.d:0 "The [ROOT.GetFactionName] has completed their objectives!"
+ krw.victory.0.a:0 "GG! Well Played!"

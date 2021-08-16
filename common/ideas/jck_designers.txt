@@ -1,0 +1,24 @@
+######
+#
+# JCK Designers
+#
+
+ideas = {
+
+	##### Japan #####
+
+	naval_manufacturer = {
+		designer = yes
+
+		samsung_naval_dockyard = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea samsung_naval_dockyard" }
+			allowed = { tag = JAP }
+			traits = {
+				jck_cruiser_producers_japan_special
+			}
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+		}
+	}
+}
