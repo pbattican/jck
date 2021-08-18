@@ -35,6 +35,10 @@
  RUS_join_CoPro:0 "Join the Co-Pro"
  RUS_join_cp_tech:0 "Join the Co-Pro Technology Group"
 
+ MON_foreign_affairs:0 "Mongolian Foreign Policies"
+ MON_join_CoPro:0 "Join the Co-Pro"
+ MON_join_cp_tech:0 "Join the Co-Pro Technology Group"
+
  PRF_foreign_affairs:0 "Princely Foreign Policies"
  PRF_join_CoPro:0 "Join the Co-Pro"
  PRF_join_cp_tech:0 "Join the Co-Pro Technology Group"
@@ -44,9 +48,6 @@
 
  ENG_exploit_resources:0 "Union of Britain Special Decisions"
  ENG_integrate_icelands_defences:0 "Integrate Iceland and its defenses"
-
- GER_imperial_spirit:0 "German Imperial Spirit"
- GER_imperial_spirit_desc:0 "Germans have won their place in the sun. However threats abound, not least of which from the specter cast by the Syndicalism of their once enemies; France and Britain. Germany must hold, for if she does not all of European civilisation will fall with her, centuries of history and tradition will be ground beneath the feet of the syndicalists."
 
  ### Last Stand
  KRW_ABILITY_LAST_STAND:0 "Last Stand"

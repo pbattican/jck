@@ -34,8 +34,8 @@ Incorporates the KRW Submod changes with some minor tweaks
 
 ### Abilities
 
-- Last Stand nerfed to -0.45 org damage and 0.5 cp per battalion
-- Force Attack nerfed to -0.45 org damage and 0.5 cp per battalion
+- Last Stand nerfed to -0.75 org damage and 0.4 cp per battalion
+- Force Attack nerfed to -0.75 org damage and 0.4 cp per battalion
 
 ### Demobilization
 
@@ -103,7 +103,6 @@ RP
 
 - Added 1 additional building slot to each focus that adds factories or industry in the Orthodox Syndicalism and Communal Industry paths
 - Added 1x 100% industry research bonus to the Worker Design Cooperatives focus for Orthodox Syndicalism
-- Modified initial country event tree to not fire the final calculation until the 5th event choice has been made
 - Increased mobilization law to Partial Mobilization
 
 #### Cuba
