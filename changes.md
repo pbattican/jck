@@ -9,7 +9,7 @@ Incorporates the KRW Submod changes with some minor tweaks
 
 ### Game Defines
 
-- Game speed has increased from { 2, 0.5, 0.2, 0.1, 0.0 } seconds per game hour to { 1, 0.3, 0.2, 0.08, 0.0 }
+- Game speed has increased from { 2, 0.5, 0.2, 0.1, 0.0 } seconds per game hour to { 1, 0.3, 0.195, 0.075, 0.0 }
 - Set MAX_HEROES_BEING_KILLED_WAR_SUPPORT_IMPACT = -0.4
 - Set INTERPOLATED_FRONT_STEPS_SHORT = 1 which reduces the number of steps calculated for AI frontlines ( does not affect players )
 - Increase max army XP gain per day from 3.0 to 3.5
@@ -48,8 +48,8 @@ Incorporates the KRW Submod changes with some minor tweaks
 
 ### Equipment Changes
 
-- No conversion of heavy 1 to heavy 2 tanks
-- No aircraft conversion aside from scout planes
+- No conversion tanks / planes
+- Strategic bomber cost, air attack, speed, and bombing modified to nerf strats
 
 ### Nation Changes
 
