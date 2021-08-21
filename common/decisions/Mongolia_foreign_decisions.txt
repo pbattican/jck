@@ -36,7 +36,7 @@ MON_foreign_affairs = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision MON_join_CoPro"
 			JAP = {
-				add_to_faction = RUS
+				add_to_faction = MON
 			}
 		}
 	}
