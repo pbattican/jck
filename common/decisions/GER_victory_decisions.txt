@@ -22,9 +22,18 @@ GER_victory_decisions = {
 				219 = {
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				NOT = {
-					country_exists = FRA
-					country_exists = SRI
+
+				FRA = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}
+				}
+				SRI = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}
 				}
 			}
 		}
@@ -46,6 +55,18 @@ GER_victory_decisions = {
 					}
 					219 = {
 						is_controlled_by_ROOT_or_ally = no
+					}
+					FRA = {
+						OR = {
+							has_capitulated = no
+							exists = yes
+						}
+					}
+					SRI = {
+						OR = {
+							has_capitulated = no
+							exists = yes
+						}
 					}
 				}
 			}

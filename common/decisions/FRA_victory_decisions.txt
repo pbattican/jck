@@ -50,6 +50,24 @@ FRA_victory_decisions = {
 					272 = {
 						is_controlled_by_ROOT_or_ally = no
 					}
+					GER = {
+						OR = {
+							has_capitulated = no
+							exists = yes
+						}
+					}
+					AUS = {
+						OR = {
+							has_capitulated = no
+							exists = yes
+						}
+					}
+					NFA = {
+						OR = {
+							has_capitulated = no
+							exists = yes
+						}
+					}
 				}
 			}
 		}

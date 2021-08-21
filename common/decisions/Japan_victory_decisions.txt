@@ -34,9 +34,17 @@ JAP_victory_decisions = {
 				1020 = {
 					is_controlled_by_ROOT_or_ally = yes
 				}
-				NOT = {
-					country_exists = GER
-					country_exists = RAJ
+				GER = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}
+				}
+				RAJ = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}
 				}
 			}
 		}
@@ -70,6 +78,18 @@ JAP_victory_decisions = {
 					}
 					1020 = {
 						is_controlled_by_ROOT_or_ally = yes
+					}
+					GER = {
+						OR = {
+							has_capitulated = no
+							exists = yes
+						}
+					}
+					RAJ = {
+						OR = {
+							has_capitulated = no
+							exists = yes
+						}
 					}
 				}
 			}
