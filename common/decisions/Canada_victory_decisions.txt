@@ -50,12 +50,30 @@ CAN_victory_decisions = {
 					is_controlled_by_ROOT_or_ally = yes
 				}
 
-				NOT = {
-					country_exists = ENG
-					country_exists = FRA
+				ENG = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}
 				}
-				country_exists = NFA
-				country_exists = RAJ
+				FRA = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}				
+				}
+				NFA = {
+					OR = {
+						has_capitulated = no
+						exists = yes
+					}				
+				}
+				RAJ = {
+					OR = {
+						has_capitulated = no
+						exists = yes
+					}				
+				}
 			}
 		}
 
@@ -104,9 +122,31 @@ CAN_victory_decisions = {
 					846 = { #Malaya
 						is_controlled_by_ROOT_or_ally = yes
 					}
-						
-					country_exists = NFA
-					country_exists = RAJ
+					
+					ENG = {
+						OR = {
+							has_capitulated = no
+							exists = yes
+						}								
+					}
+					FRA = {
+						OR = {
+							has_capitulated = no
+							exists = yes
+						}								
+					}
+					NFA = {
+						OR = {
+							has_capitulated = yes
+							exists = no
+						}				
+					}
+					RAJ = {
+						OR = {
+							has_capitulated = yes
+							exists = no
+						}				
+					}
 				}
 			}
 		}

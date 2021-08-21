@@ -83,3 +83,20 @@
  krw.victory.0.t:0 "[ROOT.GetFactionName] Wins!"
  krw.victory.0.d:0 "The [ROOT.GetFactionName] has completed their objectives!"
  krw.victory.0.a:0 "GG! Well Played!"
+
+### Victory Decisions
+CAN_victory_decisions:0 "Entente Victory"
+ENT_entente_victory:0 "Entente Victory!"
+ENT_entente_victory_desc:0 "Meet the stated objectives and hold for 30 days. This decision will instantly cancel if any condition is not met continously!"
+
+FRA_victory_decisions:0 "Third Internationale Victory"
+FRA_third_int_victory:0 "Third Internationale Victory!"
+FRA_third_int_victory_desc:0 "Meet the stated objectives and hold for 30 days. This decision will instantly cancel if any condition is not met continously!"
+
+GER_victory_decisions:0 "Reichspakt Victory"
+GER_reichspakt_victory:0 "Reichspakt Victory!"
+GER_reichspakt_victory_desc:0 "Meet the stated objectives and hold for 30 days. This decision will instantly cancel if any condition is not met continously!"
+
+JAP_victory_decisions:0 "Co-prosperity Sphere Victory"
+JAP_copro_victory:0 "Co-prosperity Sphere Victory!"
+JAP_copro_victory_desc:0 "Meet the stated objectives and hold for 30 days. This decision will instantly cancel if any condition is not met continously!"
