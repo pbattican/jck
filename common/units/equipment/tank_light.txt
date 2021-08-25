@@ -1,453 +1,890 @@
 # All equipment based on light tank chassis
+
 equipments = {
+	
 	light_tank_equipment = {
-		year = 1934
-		can_be_produced = {
-			NOT = {
-				has_country_flag = cannot_produce_armor
-			}
-		}
 		is_archetype = yes
 		is_buildable = no
-		is_convertable = yes
-		picture = archetype_light_tank_equipment
 		type = armor
 		group_by = archetype
+		is_convertable = yes
 		interface_category = interface_category_armor
+		
 		upgrades = {
 			tank_reliability_upgrade
 			tank_engine_upgrade
 			tank_armor_upgrade
 			tank_gun_upgrade
 		}
+
 		#Misc Abilities
-		maximum_speed = 10
-		reliability = 0.8
+		maximum_speed = 5.5
+		reliability = 0.6
+
 		#Defensive Abilities
-		defense = 4
-		breakthrough = 26
-		hardness = 0.8
-		armor_value = 10
+		defense = 6
+		breakthrough = 24
+		hardness = 0.6
+		armor_value = 5 #10
+
 		#Offensive Abilities
-		soft_attack = 13
+		soft_attack = 4.5 #10
 		hard_attack = 4
 		ap_attack = 10
 		air_attack = 0
+
 		#Space taken in convoy
-		lend_lease_cost = 10
-		build_cost_ic = 8
+		lend_lease_cost = 8
+		
+		build_cost_ic = 21
 		resources = {
-			#oil = 1
-			steel = 2
-		}
-		fuel_consumption = 2.4
-	}
-	# WW1 tank
-	gw_tank_equipment = {
-		year = 1914
-		archetype = light_tank_equipment
-		priority = 5
-		visual_level = 0
-		#Misc Abilities
-		maximum_speed = 6
-		reliability = 0.8
-		#Defensive Abilities
-		defense = 4
-		breakthrough = 18
-		armor_value = 5
-		#Offensive Abilities
-		soft_attack = 8
-		hard_attack = 4
-		ap_attack = 15
-		air_attack = 0
-		build_cost_ic = 7		#gw tanks are clunky
-		fuel_consumption = 1
-		is_convertable = yes
-	}
-	light_tank_equipment_1 = {
-		year = 1934
-		archetype = light_tank_equipment
-		parent = gw_tank_equipment
-		priority = 10
-		visual_level = 0
-		is_convertable = yes
-	}
-	light_tank_equipment_2 = {
-		year = 1936
-		archetype = light_tank_equipment
-		parent = light_tank_equipment_1
-		priority = 10
-		visual_level = 1
-		is_convertable = yes
-		#Misc Abilities
-		maximum_speed = 12
-		#Defensive Abilities
-		defense = 5
-		breakthrough = 36
-		armor_value = 15
-		#Offensive Abilities
-		soft_attack = 16
-		hard_attack = 6
-		ap_attack = 30
-		air_attack = 0
-		build_cost_ic = 9
-		resources = {
-			#oil = 1
 			steel = 3
+			tungsten = 1
 		}
-	}
-	light_tank_equipment_3 = {
-		year = 1941
-		archetype = light_tank_equipment
-		parent = light_tank_equipment_2
-		priority = 10
-		visual_level = 2
-		is_convertable = yes
-		#Misc Abilities
-		maximum_speed = 14
-		#Defensive Abilities
-		defense = 6
-		breakthrough = 46
-		armor_value = 30
-		#Offensive Abilities
-		soft_attack = 22
-		hard_attack = 9
-		ap_attack = 50
-		air_attack = 0
-		build_cost_ic = 10
-		resources = {
-			#oil = 2
-			steel = 4
-		}
+        fuel_consumption = 2.4
 	}
 	light_tank_artillery_equipment = {
-		year = 1934
-		can_be_produced = {
-			NOT = {
-				has_country_flag = cannot_produce_armor
-			}
-		}
 		is_archetype = yes
-		is_convertable = yes
-		picture = archetype_light_tank_equipment
 		is_buildable = no
 		family = light_tank_equipment
-		type = {
+		type = { 
 			armor
 			artillery
 		}
 		group_by = archetype
+		
 		interface_category = interface_category_armor
+		
 		upgrades = {
 			tank_reliability_upgrade
 			tank_engine_upgrade
 			tank_armor_upgrade
 			tank_art_upgrade
 		}
-		#Misc Abilities
-		maximum_speed = 10
-		reliability = 0.8
-		#Defensive Abilities
-		defense = 4
-		breakthrough = 2
-		hardness = 0.5
-		armor_value = 5
-		#Offensive Abilities
-		soft_attack = 34
-		hard_attack = 0.5
-		ap_attack = 4
-		air_attack = 0
-		build_cost_ic = 8
+
+
+		maximum_speed = 7
+		reliability = 0.65
+		defense = 5
+		breakthrough = 5
+		hardness = 0.55
+		armor_value = 10
+		soft_attack = 27 
+		hard_attack = 1
+		ap_attack = 10
+		air_attack = 0 #0		
+		
+		#Space taken in convoy
+		lend_lease_cost = 8
+		
+		build_cost_ic = 21
 		resources = {
-			#oil = 1
 			steel = 2
 			tungsten = 1
-		}
+		}	
 		fuel_consumption = 1.2
 	}
-	light_tank_artillery_equipment_1 = {
-		year = 1934
-		archetype = light_tank_artillery_equipment
-		family = light_tank_equipment_1
-		priority = 20
-		visual_level = 0
-		can_convert_from = {
-			light_tank_equipment_1
-		}
-	}
-	light_tank_artillery_equipment_2 = {
-		year = 1936
-		archetype = light_tank_artillery_equipment
-		parent = light_tank_artillery_equipment_1
-		family = light_tank_equipment_2
-		priority = 20
-		visual_level = 1
-		can_convert_from = {
-			light_tank_artillery_equipment_1
-			light_tank_equipment_2
-		}
-		#Misc Abilities
-		maximum_speed = 12
-		#Defensive Abilities
-		defense = 5
-		breakthrough = 2.5
-		armor_value = 10
-		#Offensive Abilities
-		soft_attack = 42
-		hard_attack = 1
-		build_cost_ic = 9
-		resources = {
-			steel = 3
-			#oil = 1
-			tungsten = 1
-		}
-	}
-	light_tank_artillery_equipment_3 = {
-		year = 1941
-		archetype = light_tank_artillery_equipment
-		parent = light_tank_artillery_equipment_2
-		family = light_tank_equipment_3
-		priority = 20
-		visual_level = 2
-		can_convert_from = {
-			light_tank_artillery_equipment_2
-			light_tank_equipment_3
-		}
-		#Misc Abilities
-		maximum_speed = 14
-		#Defensive Abilities
-		defense = 7
-		breakthrough = 3.5
-		armor_value = 25
-		#Offensive Abilities
-		soft_attack = 46
-		hard_attack = 1.5
-		build_cost_ic = 10
-		resources = {
-			steel = 4
-			#oil = 2
-			tungsten = 1
-		}
-	}
 	light_tank_destroyer_equipment = {
-		year = 1934
-		can_be_produced = {
-			NOT = {
-				has_country_flag = cannot_produce_armor
-			}
-		}
 		is_archetype = yes
-		is_convertable = yes
-		picture = archetype_light_tank_equipment
 		is_buildable = no
 		family = light_tank_equipment
-		type = {
+		type = { 
 			armor
 			anti_tank
 		}
 		group_by = archetype
+		
 		interface_category = interface_category_armor
+		
 		upgrades = {
 			tank_reliability_upgrade
 			tank_engine_upgrade
 			tank_armor_upgrade
-			tank_at_upgrade
+			tank_at_upgrade 
 		}
-		#Misc Abilities
-		maximum_speed = 10
-		reliability = 0.8
+		
+		maximum_speed = 7.5
+		reliability = 0.6
+
 		#Defensive Abilities
-		defense = 4
-		breakthrough = 1
-		hardness = 0.8
+		defense = 5
+		breakthrough = 5
+		hardness = 0.6
 		armor_value = 10
+
 		#Offensive Abilities
-		soft_attack = 6
-		hard_attack = 10
-		ap_attack = 50
+		soft_attack = 1
+		hard_attack = 18
+		ap_attack = 43
 		air_attack = 0
-		build_cost_ic = 8
+		
+		build_cost_ic = 19
+		
+		#Space taken in convoy
+		lend_lease_cost = 8
+		
 		resources = {
-			#oil = 1
 			steel = 2
-			tungsten = 2
+			tungsten = 1
 		}
 		fuel_consumption = 1.2
 	}
-	light_tank_destroyer_equipment_1 = {
-		year = 1934
-		archetype = light_tank_destroyer_equipment
-		family = light_tank_equipment_1
-		priority = 40
-		visual_level = 0
-		can_convert_from = {
-			light_tank_equipment_1
-		}
-	}
-	light_tank_destroyer_equipment_2 = {
-		year = 1936
-		archetype = light_tank_destroyer_equipment
-		parent = light_tank_destroyer_equipment_1
-		family = light_tank_equipment_2
-		priority = 40
-		visual_level = 1
-		can_convert_from = {
-			light_tank_destroyer_equipment_1
-			light_tank_equipment_2
-		}
-		#Misc Abilities
-		maximum_speed = 12
-		#Defensive Abilities
-		defense = 5
-		breakthrough = 1.3
-		armor_value = 15
-		#Offensive Abilities
-		soft_attack = 6
-		hard_attack = 16
-		ap_attack = 77
-		build_cost_ic = 9
-		resources = {
-			#oil = 1
-			steel = 3
-			tungsten = 2
-		}
-	}
-	light_tank_destroyer_equipment_3 = {
-		year = 1941
-		archetype = light_tank_destroyer_equipment
-		parent = light_tank_destroyer_equipment_2
-		family = light_tank_equipment_3
-		priority = 40
-		visual_level = 2
-		can_convert_from = {
-			light_tank_destroyer_equipment_2
-			light_tank_equipment_3
-		}
-		#Misc Abilities
-		maximum_speed = 14
-		#Defensive Abilities
-		defense = 7
-		breakthrough = 1.8
-		armor_value = 30
-		#Offensive Abilities
-		soft_attack = 8
-		hard_attack = 24
-		ap_attack = 99
-		build_cost_ic = 10
-		resources = {
-			#oil = 2
-			steel = 4
-			tungsten = 2
-		}
-	}
 	light_tank_aa_equipment = {
-		year = 1934
-		can_be_produced = {
-			NOT = {
-				has_country_flag = cannot_produce_armor
-			}
-		}
 		is_archetype = yes
-		is_convertable = yes
-		picture = archetype_light_tank_equipment
 		is_buildable = no
 		family = light_tank_equipment
-		type = {
+		type = { 
 			armor
 			anti_air
 		}
 		group_by = archetype
+		
 		interface_category = interface_category_armor
+		
 		upgrades = {
 			tank_reliability_upgrade
 			tank_engine_upgrade
 			tank_armor_upgrade
 			tank_aa_upgrade
 		}
+
 		#Misc Abilities
-		maximum_speed = 10
-		reliability = 0.8
+		maximum_speed = 7.6
+		reliability = 0.65
+
 		#Defensive Abilities
 		defense = 2
 		breakthrough = 2
-		hardness = 0.5
+		hardness = 0.55
 		armor_value = 5
+
 		#Offensive Abilities
-		soft_attack = 2
-		hard_attack = 1
-		ap_attack = 5
-		air_attack = 15
-		build_cost_ic = 10
+		soft_attack = 1 
+		hard_attack = 0
+		ap_attack = 22 
+		air_attack = 10
+		
+		build_cost_ic = 17
+		
+		#Space taken in convoy
+		lend_lease_cost = 8
+		
 		resources = {
-			#oil = 1
 			steel = 2
+			tungsten = 1
 		}
 		fuel_consumption = 0.6
 	}
-	light_tank_aa_equipment_1 = {
+
+	light_tank_equipment_1934 = {   # 1934
 		year = 1934
-		archetype = light_tank_aa_equipment
-		family = light_tank_equipment_1
-		priority = 30
+		archetype = light_tank_equipment
+		priority = 10
 		visual_level = 0
-		can_convert_from = {
-			light_tank_equipment_1
-		}
-	}
-	light_tank_aa_equipment_2 = {
-		year = 1936
-		archetype = light_tank_aa_equipment
-		parent = light_tank_aa_equipment_1
-		family = light_tank_equipment_2
-		priority = 30
-		visual_level = 1
-		can_convert_from = {
-			light_tank_aa_equipment_1
-			light_tank_equipment_2
-		}
+		is_convertable = no
+		
 		#Misc Abilities
-		maximum_speed = 12
+		maximum_speed = 6.4
+		reliability = 0.69
+
 		#Defensive Abilities
-		defense = 2.5
-		breakthrough = 2.5
-		armor_value = 10
+		defense = 6.5
+		breakthrough = 22
+		armor_value = 16.5
+
+		#Offensive Abilities
+		soft_attack = 12.5
+		hard_attack = 5
+		ap_attack = 20.5
+		air_attack = 0
+
+		build_cost_ic = 13
+		
+	}
+
+	light_tank_equipment_1936 = {    # 1936
+		year = 1936
+		archetype = light_tank_equipment
+		parent = light_tank_equipment_1934
+		priority = 10
+		visual_level = 1
+		is_convertable = yes
+
+		#Misc Abilities
+		maximum_speed = 6.6
+		reliability = 0.70
+
+		#Defensive Abilities
+		defense = 7
+		breakthrough = 25
+		armor_value = 20
+
+		#Offensive Abilities
+		soft_attack = 14.5
+		hard_attack = 6
+		ap_attack = 24
+		fuel_consumption = 2.5		
+		
+		build_cost_ic = 14
+	}
+	light_tank_equipment_1938 = {   # 1938
+		year = 1938
+		archetype = light_tank_equipment
+		parent = light_tank_equipment_1936
+		priority = 10
+		visual_level = 2
+		is_convertable = yes
+
+		#Misc Abilities
+		maximum_speed = 7.2
+		reliability = 0.72
+
+		#Defensive Abilities
+		defense = 8
+		breakthrough = 30
+		armor_value = 27
+
+		#Offensive Abilities
+		soft_attack = 16.5
+		hard_attack = 8
+		ap_attack = 31
+		fuel_consumption = 2.6		
+
+		build_cost_ic = 15
+	}
+	light_tank_equipment_1939 = {    # 1939
+		year = 1939
+		archetype = light_tank_equipment
+		parent = light_tank_equipment_1938
+		priority = 10
+		visual_level = 3
+		is_convertable = yes
+
+		#Misc Abilities
+		maximum_speed = 7.6
+		reliability = 0.71
+
+		#Defensive Abilities
+		defense = 8.5
+		breakthrough = 32.5
+		armor_value = 30.5
+
+		#Offensive Abilities
+		soft_attack = 17.5
+		hard_attack = 9
+		ap_attack = 34.5
+		fuel_consumption = 2.65
+		
+		build_cost_ic = 15.5
+	}
+	light_tank_equipment_1940 = {
+		year = 1940
+		archetype = light_tank_equipment
+		parent = light_tank_equipment_1938
+		priority = 50
+		visual_level = 4
+		is_convertable = yes
+		
+		#Misc Abilities
+		maximum_speed = 7.8
+		reliability = 0.74
+		#Defensive Abilities
+		defense = 9
+		breakthrough = 35
+		armor_value = 34
+
+		#Offensive Abilities
+		soft_attack = 18.5
+		hard_attack = 10
+		ap_attack = 38	
+		fuel_consumption = 2.7		
+
+		build_cost_ic = 16
+	}
+	
+	light_tank_equipment_1941 = {   # 1941
+		year = 1941
+		archetype = light_tank_equipment
+		parent = light_tank_equipment_1938
+		priority = 10
+		visual_level = 5
+		is_convertable = yes
+
+		#Misc Abilities
+		maximum_speed = 8.1
+		reliability = 0.75
+		#Defensive Abilities
+		defense = 9.5
+		breakthrough = 37
+		armor_value = 37.5
+
+		#Offensive Abilities
+		soft_attack = 20.5
+		hard_attack = 11
+		ap_attack = 41.5
+		fuel_consumption = 2.7		
+
+		build_cost_ic = 17
+	}
+	
+	light_tank_equipment_1942 = {
+		year = 1942
+		archetype = light_tank_equipment
+		parent = light_tank_equipment_1940
+		priority = 50
+		visual_level = 6
+		is_convertable = yes
+		
+		#Misc Abilities
+		maximum_speed = 8.4
+		reliability = 0.76
+		
+		#Defensive Abilities
+		defense = 10
+		breakthrough = 40
+		armor_value = 41
+
+		#Offensive Abilities
+		soft_attack = 22.5
+		hard_attack = 12
+		ap_attack = 45
+
+		fuel_consumption = 2.8				
+
+		build_cost_ic = 18
+	}
+	light_tank_equipment_1944 = {   # 1944
+		year = 1944
+		archetype = light_tank_equipment
+		parent = light_tank_equipment_1942
+		priority = 10
+		visual_level = 7
+		is_convertable = yes
+
+		#Misc Abilities
+		maximum_speed = 8
+		reliability = 0.78
+
+		#Defensive Abilities
+		defense = 11
+		breakthrough = 45
+		armor_value = 48
+
+		#Offensive Abilities
+		soft_attack = 24.5
+		hard_attack = 14
+		ap_attack = 52
+		fuel_consumption = 2.9		
+
+		build_cost_ic = 19 
+	}
+
+	light_tank_artillery_equipment_1938 = {
+		year = 1938
+		archetype = light_tank_artillery_equipment
+		family = light_tank_equipment_1938
+		priority = 30
+		visual_level = 3
+		can_convert_from = {
+		    light_tank_equipment_1936
+		}
+		fuel_consumption = 1.6		
+		#Misc Abilities
+		maximum_speed = 7.2
+		reliability = 0.72
+
+		#Defensive Abilities
+		defense = 6
+		breakthrough = 3.6
+		armor_value = 24.3
+		
+		#Offensive Abilities
+		soft_attack = 32
+		hard_attack = 1.7
+		ap_attack = 12
+		
+		build_cost_ic = 14
+	}
+	light_tank_artillery_equipment_1939 = {
+		year = 1939
+		archetype = light_tank_artillery_equipment
+		family = light_tank_equipment_1939
+		priority = 30
+		visual_level = 4
+		can_convert_from = {
+		    light_tank_equipment_1937
+		}
+		fuel_consumption = 1.65		
+		#Misc Abilities
+		maximum_speed = 7.5
+		reliability = 0.73
+
+		#Defensive Abilities
+		defense = 6.5
+		breakthrough = 3.9
+		armor_value = 27.4
+		
+		#Offensive Abilities
+		soft_attack = 33
+		hard_attack = 1.8
+		ap_attack = 13
+		
+		build_cost_ic = 14.5
+	}
+    light_tank_artillery_equipment_1940 = {
+		year = 1940
+		archetype = light_tank_artillery_equipment
+		parent = light_tank_artillery_equipment_1938
+		family = light_tank_equipment_1940
+		priority = 30
+		
+		visual_level = 5
+		
+		can_convert_from = { 
+			light_tank_equipment_1938			
+		}
+		fuel_consumption = 1.7
+		#Misc Abilities
+		maximum_speed = 7.8
+		reliability = 0.74
+
+		#Defensive Abilities
+		defense = 7
+		breakthrough = 4.2
+		armor_value = 30.6
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 1.9
+		ap_attack = 14
+		
+		build_cost_ic = 15
+	}
+	
+	light_tank_artillery_equipment_1941 = {
+		year = 1941
+		archetype = light_tank_artillery_equipment
+		parent = light_tank_artillery_equipment_1938
+		family = light_tank_equipment_1941
+		priority = 30
+		visual_level = 6
+		can_convert_from = {
+		    light_tank_equipment_1938
+			
+		}
+		fuel_consumption = 1.7	
+		#Misc Abilities
+		maximum_speed = 8.1
+		reliability = 0.75
+
+		#Defensive Abilities
+		defense = 7.5
+		breakthrough = 4.5
+		armor_value = 33.75
+
+		#Offensive Abilities
+		soft_attack = 36
+		hard_attack = 2
+		ap_attack = 15
+		
+		build_cost_ic = 16
+	}
+	
+	light_tank_artillery_equipment_1942 = {
+		year = 1942
+		archetype = light_tank_artillery_equipment
+		parent = light_tank_artillery_equipment_1940
+		family = light_tank_equipment_1940
+		priority = 30
+		
+		visual_level = 7
+			can_convert_from = { 
+			light_tank_equipment_1940			
+		}
+		fuel_consumption = 1.8	
+		#Misc Abilities
+		maximum_speed = 8.4
+		reliability = 0.76
+
+		#Defensive Abilities
+		defense = 8
+		breakthrough = 4.8
+		armor_value = 36.9
+
+		#Offensive Abilities
+		soft_attack = 38
+		hard_attack = 2.1
+		ap_attack = 16
+		
+		build_cost_ic = 17
+	}
+	light_tank_artillery_equipment_1944 = {
+		year = 1944
+		archetype = light_tank_artillery_equipment
+		parent = light_tank_artillery_equipment_1941
+		parent = light_tank_artillery_equipment_1942
+		family = light_tank_equipment_1944
+		priority = 30
+		visual_level = 8
+		can_convert_from = {
+		    light_tank_equipment_1941
+			
+		}
+		fuel_consumption = 1.9	
+		#Misc Abilities
+		maximum_speed = 9
+		reliability = 0.78
+
+		#Defensive Abilities
+		defense = 9
+		breakthrough = 5.4
+		armor_value = 43.2
+
+		#Offensive Abilities
+		soft_attack = 41
+		hard_attack = 2.3
+		ap_attack = 18
+		
+		build_cost_ic = 18
+	}
+
+	light_tank_destroyer_equipment_1938 = {
+		year = 1938
+		archetype = light_tank_destroyer_equipment
+		family = light_tank_equipment_1938
+		priority = 40
+		visual_level = 3
+		can_convert_from = {
+		    light_tank_equipment_1936
+		}
+		
+		maximum_speed = 7.2
+		reliability = 0.72
+
+		#Defensive Abilities
+		defense = 2.6
+		breakthrough = 1.8
+		armor_value = 27
+
+		#Offensive Abilities
+		soft_attack = 2.6
+		hard_attack = 27
+		ap_attack = 84
+		
+		fuel_consumption = 1.6	
+		build_cost_ic = 14
+		
+	}
+	light_tank_destroyer_equipment_1939 = {
+		year = 1939
+		archetype = light_tank_destroyer_equipment
+		family = light_tank_equipment_1939
+		priority = 40
+		visual_level = 4
+		can_convert_from = {
+		    light_tank_equipment_1937
+		}
+		
+		maximum_speed = 7.5
+		reliability = 0.73
+
+		#Defensive Abilities
+		defense = 3
+		breakthrough = 1.9
+		armor_value = 30.5
+
 		#Offensive Abilities
 		soft_attack = 3
-		hard_attack = 1.5
-		ap_attack = 20
-		air_attack = 17
-		build_cost_ic = 11
-		resources = {
-			#oil = 1
-			steel = 3
-		}
+		hard_attack = 28.5
+		ap_attack = 88
+		
+		fuel_consumption = 1.6	
+		build_cost_ic = 14.5
+		
 	}
-	light_tank_aa_equipment_3 = {
+    
+	light_tank_destroyer_equipment_1940 = {
+		year = 1940
+		archetype = light_tank_destroyer_equipment
+		parent = light_tank_destroyer_equipment_1938
+		family = light_tank_equipment_1940
+		priority = 40
+		visual_level = 5
+		can_convert_from = { 
+			light_tank_equipment_1938	
+		}
+		
+		maximum_speed = 7.8
+		reliability = 0.74
+		fuel_consumption = 1.7	
+		#Defensive Abilities
+		defense = 3.4
+		breakthrough = 2.1
+		armor_value = 34
+
+		#Offensive Abilities
+		soft_attack = 3.4
+		hard_attack = 30
+		ap_attack = 92
+		
+		
+		build_cost_ic = 15
+	}
+	light_tank_destroyer_equipment_1941 = {
+		year = 1941
+		archetype = light_tank_destroyer_equipment
+		parent = light_tank_destroyer_equipment_1938
+		family = light_tank_equipment_1941
+		priority = 40
+		visual_level = 6
+		can_convert_from = {
+		    light_tank_equipment_1938
+			
+		}
+		maximum_speed = 8.1
+		reliability = 0.75
+		fuel_consumption = 1.7	
+		#Defensive Abilities
+		defense = 3.8
+		breakthrough = 2.25
+		armor_value = 37.5
+
+		#Offensive Abilities
+		soft_attack = 3.8
+		hard_attack = 33
+		ap_attack = 96
+		
+		
+		build_cost_ic = 16
+	}
+	
+	light_tank_destroyer_equipment_1942 = {
+		year = 1942
+		archetype = light_tank_destroyer_equipment
+		parent = light_tank_destroyer_equipment_1940
+		family = light_tank_equipment_1942
+		priority = 40
+		visual_level = 7
+		can_convert_from = { 
+			light_tank_equipment_1940		
+		}
+		
+		maximum_speed = 8.4
+		reliability = 0.76
+		fuel_consumption = 1.8
+		#Defensive Abilities
+		defense = 4.2
+		breakthrough = 2.4
+		armor_value = 41
+
+		#Offensive Abilities
+		soft_attack = 4.2
+		hard_attack = 36
+		ap_attack = 100
+		
+		
+		build_cost_ic = 17
+	}
+	light_tank_destroyer_equipment_1944 = {
+		year = 1944
+		archetype = light_tank_destroyer_equipment
+		parent = light_tank_destroyer_equipment_1941
+		parent = light_tank_destroyer_equipment_1942
+		family = light_tank_equipment_1944
+		priority = 40
+		visual_level = 8
+		can_convert_from = {
+		    light_tank_equipment_1941
+			
+		}
+		fuel_consumption = 1.9	
+		maximum_speed = 9
+		reliability = 0.78
+
+		#Defensive Abilities
+		defense = 5
+		breakthrough = 2.7
+		armor_value = 48
+
+		#Offensive Abilities
+		soft_attack = 5
+		hard_attack = 39
+		ap_attack = 108
+		
+		
+		build_cost_ic = 18
+	}
+
+	light_tank_aa_equipment_1938 = {
+		year = 1938
+		archetype = light_tank_aa_equipment
+		family = light_tank_equipment_1938
+		priority = 30
+		visual_level = 3
+		can_convert_from = {
+		    light_tank_equipment_1936	
+			light_tank_equipment_1936			
+		}
+		
+		#Misc Abilities
+		maximum_speed = 7.2
+		reliability = 0.72
+
+		#Defensive Abilities
+		defense = 3.8
+		breakthrough = 3.4
+		armor_value = 24.3
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 2.8
+		ap_attack = 23
+		air_attack = 24
+		fuel_consumption = 1.3	
+		build_cost_ic = 14
+	}
+	light_tank_aa_equipment_1939 = {
+		year = 1939
+		archetype = light_tank_aa_equipment
+		family = light_tank_equipment_1939
+		priority = 30
+		visual_level = 4
+		can_convert_from = {
+		    light_tank_equipment_1937		
+		}
+		
+		#Misc Abilities
+		maximum_speed = 7.5
+		reliability = 0.73
+
+		#Defensive Abilities
+		defense = 3.8
+		breakthrough = 3.6
+		armor_value = 27
+
+		#Offensive Abilities
+		soft_attack = 6.5
+		hard_attack = 3.2
+		ap_attack = 26
+		air_attack = 25
+		fuel_consumption = 1.3	
+		build_cost_ic = 14.5
+	}
+    light_tank_aa_equipment_1940 = {
+		year = 1940
+		archetype = light_tank_aa_equipment
+		parent = light_tank_aa_equipment_1938
+		family = light_tank_equipment_1940
+		priority = 30
+		visual_level = 5
+		can_convert_from = { 
+			light_tank_equipment_1938
+			
+		}
+		fuel_consumption = 1.4	
+		#Misc Abilities
+		maximum_speed = 7.8
+		reliability = 0.74
+
+		#Defensive Abilities
+		defense = 3.8
+		breakthrough = 3.8
+		armor_value = 30.6
+
+		#Offensive Abilities
+		soft_attack = 7 
+		hard_attack = 3.6
+		ap_attack = 29
+		air_attack = 26 
+		
+		build_cost_ic = 15
+	}
+	
+	light_tank_aa_equipment_1941 = {
 		year = 1941
 		archetype = light_tank_aa_equipment
-		parent = light_tank_aa_equipment_2
-		family = light_tank_equipment_3
+		parent = light_tank_aa_equipment_1938
+		family = light_tank_equipment_1941
 		priority = 30
-		visual_level = 2
+		visual_level = 6
 		can_convert_from = {
-			light_tank_aa_equipment_2
-			light_tank_equipment_3
+		    light_tank_equipment_1938
+			
 		}
+		fuel_consumption = 1.4	
 		#Misc Abilities
-		maximum_speed = 14
+		maximum_speed = 8.1
+		reliability = 0.75
+
 		#Defensive Abilities
-		defense = 3.5
-		breakthrough = 3.5
-		armor_value = 25
+		defense = 4
+		breakthrough = 4
+		armor_value = 33.75
 		#Offensive Abilities
-		soft_attack = 4.5
+		soft_attack = 7.5
 		hard_attack = 4
-		ap_attack = 35
-		air_attack = 32
-		build_cost_ic = 12
-		resources = {
-			#oil = 2
-			steel = 4
-		}
+		ap_attack = 32
+		air_attack = 27	
+		
+		build_cost_ic = 16
 	}
+	light_tank_aa_equipment_1942  = {
+		year = 1942
+		archetype = light_tank_aa_equipment
+		parent = light_tank_aa_equipment_1940
+		family = light_tank_equipment_1942
+		priority = 30
+		visual_level = 7
+		can_convert_from = { 
+			light_tank_equipment_1940
+			
+		}
+		fuel_consumption = 1.5	
+		#Misc Abilities
+		maximum_speed = 8.4
+		reliability = 0.76
+	     defense = 4.2
+		breakthrough = 4.2
+		armor_value = 36.9
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4.4 
+		ap_attack = 35
+		air_attack = 28
+		
+		build_cost_ic = 17
+	}	
+	light_tank_aa_equipment_1944 = {
+		year = 1944
+		archetype = light_tank_aa_equipment
+		parent = light_tank_aa_equipment_1941
+		parent = light_tank_aa_equipment_1942
+		family = light_tank_equipment_1944
+		priority = 30
+		visual_level = 8
+		can_convert_from = {
+		    light_tank_equipment_1941
+			light_tank_equipment_1942
+			
+		}
+		fuel_consumption = 1.6
+		#Misc Abilities
+		maximum_speed = 9
+		reliability = 0.78
+
+		#Defensive Abilities
+		defense = 4.6
+		breakthrough = 4.6
+		armor_value = 43.2
+
+		#Offensive Abilities
+		soft_attack = 9
+		hard_attack = 5.2
+		ap_attack = 41
+		air_attack = 30
+		
+		build_cost_ic = 18
+	}
+	
 }
