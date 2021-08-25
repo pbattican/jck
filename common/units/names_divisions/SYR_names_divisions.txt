@@ -80,7 +80,7 @@ SYR_ARM_01 = {
 	name = "Armoured Divisions"
 	for_countries = { SYR LEB PAL IRQ }
 	can_use = { always = yes }
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 	fallback_name = "Firqa ar-Rabi'a al-%di"
 
 	ordered = {

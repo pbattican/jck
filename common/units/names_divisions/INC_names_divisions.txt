@@ -267,7 +267,7 @@ INC_ARM_01 = {
 
 
 
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { INC_INF_01 }
@@ -295,7 +295,7 @@ INC_ARM_02 = {
 
 	for_countries = { INC }
 
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { INC_INF_01 }

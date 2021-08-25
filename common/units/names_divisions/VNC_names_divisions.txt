@@ -110,7 +110,7 @@ VNC_ARM_01 = {# Tanks
 	name = "Armored Division"
 	for_countries = { VNC }
 	can_use = { always = yes }
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 	link_numbering_with = { VNC_INF_01 }
 	fallback_name = "%da Divisione Corazzata"
 	ordered = {

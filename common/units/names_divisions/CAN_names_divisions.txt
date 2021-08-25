@@ -252,7 +252,7 @@ CAN_ARM_01 = {# Tanks
 	name = "Armoured Divisions"
 	for_countries = { CAN }
 	can_use = { always = yes }
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 	link_numbering_with = { CAN_INF_01 }
 	fallback_name = "%d Canadian (Armoured) Division"
 	ordered = {

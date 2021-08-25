@@ -187,7 +187,7 @@ VIN_ARM_01 = {
 
 
 
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { VIN_INF_01 }

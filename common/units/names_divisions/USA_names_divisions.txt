@@ -656,7 +656,7 @@ USA_ARM_01 = {
 	name = "Armored Cavalry"
 	for_countries = { USA PSA NEE HAW PUE }
 	can_use = { always = yes }
-	division_types = { "light_armor" "modern_armor" }
+	division_types = { "light_armor" }
 	link_numbering_with = { USA_CAV_01 USA_MEC_01 USA_ARM_02 }
 	fallback_name = "%d Cavalry Division"
 	ordered = {
@@ -720,7 +720,7 @@ USA_ARM_02 = {
 	name = "Armored Division"
 	for_countries = { USA PSA NEE HAW PUE }
 	can_use = { always = yes }
-	division_types = { "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "medium_armor" "heavy_armor" }
 	link_numbering_with = { USA_CAV_01 USA_MEC_01 USA_ARM_01 }
 	fallback_name = "%d Armored Division"
 	ordered = {

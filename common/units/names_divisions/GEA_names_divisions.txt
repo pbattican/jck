@@ -249,7 +249,7 @@ GEA_MON_01 = {
 GEA_ARM_01 = {
 	name = "Colonial Armour"
 
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor"  }
+	division_types = { "light_armor" "medium_armor" "heavy_armor"  }
 
 	for_countries = { GEA }
 	link_numbering_with = { GEA_INF_02 }

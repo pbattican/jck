@@ -811,7 +811,7 @@ CSA_ARM_01 = {
 	name = "Armored Division"
 	for_countries = { CSA }
 	can_use = { always = yes }
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 	fallback_name = "%d Continental Armored Division"
 	ordered = {
 		1 = { "%dst 'Steel Belt' Division" }

@@ -180,7 +180,7 @@ DKB_ARM_01 = {
 	name = "Tank Division"
 	for_countries = { DKB }
 	can_use = { always = yes }
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 
 	fallback_name = "%dya Kazatskaya Tankovaya Diviziya" #Cossack Tank Division
 

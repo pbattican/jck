@@ -284,7 +284,7 @@ GER_TNK_01 = {
 
 	can_use = { always = yes }
 
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 
 	fallback_name = "%d. Schwere Kampfwagen-Division"
 
@@ -359,7 +359,7 @@ GER_MOB_01 = {
 
 	can_use = { always = yes	}
 
-	division_types = { "cavalry" "motorized" "light_armor" "medium_armor" "heavy_armor" "modern_armor"  }
+	division_types = { "cavalry" "motorized" "light_armor" "medium_armor" "heavy_armor"  }
 
 	fallback_name = "%d. Schnelle-Division"
 

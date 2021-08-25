@@ -92,7 +92,7 @@ IRE_ARM_01 = {
 	name = "Armoured Division"
 	for_countries = { IRE ULS }
 	can_use = { always = yes }
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 	fallback_name = "%d Irish Armoured Division"
 	ordered = {
 		1 = { "%dst Irish Armoured Division" }

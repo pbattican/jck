@@ -203,7 +203,7 @@ SRI_ARM_01 = {# Tanks
 	name = "Armored Division"
 	for_countries = { SRI }
 	can_use = { always = yes }
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 	link_numbering_with = { SRI_INF_02 }
 	fallback_name = "%da Divisione Corazzata"
 	ordered = {

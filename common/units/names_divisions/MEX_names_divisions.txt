@@ -138,7 +138,7 @@ MEX_ARM_01 = {
 	name = "Armored Division"
 	for_countries = { MEX YUC }
 	can_use = { always = yes }
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 	fallback_name = "%da División Blindada"
 	ordered = {
 		1 = { "%da División Blindada" }

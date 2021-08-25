@@ -575,7 +575,7 @@ RUS_ARM_01 = {
 	name = "Tank Division"
 	for_countries = { RUS }
 	can_use = { always = yes }
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 	link_numbering_with = { RUS_ARM_02 }
 
 	fallback_name = "%dya Tankovaya Diviziya"
@@ -617,7 +617,7 @@ RUS_ARM_02 = {
 	name = "Tank Corps"
 	for_countries = { RUS }
 	can_use = { always = yes }
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 	link_numbering_with = { RUS_ARM_01 }
 
 	fallback_name = "%dy Tankovy Korpus"

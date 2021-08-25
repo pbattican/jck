@@ -297,7 +297,7 @@ FRA_ARM_01 = {
 
 	can_use = { always = yes }
 
-	division_types = { "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "medium_armor" "heavy_armor" }
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { FRA_INF_01 }

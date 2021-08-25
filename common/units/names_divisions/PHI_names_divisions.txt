@@ -114,7 +114,7 @@ PHI_ARM_01 = {
 	name = "Tank Group"
 	for_countries = { PHI }
 	can_use = { always = yes }
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 	fallback_name = "%dth Philippines Tank Group"
 	ordered = {
 		1 = { "%dst Philippines Tank Group" }

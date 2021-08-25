@@ -378,7 +378,7 @@ GBR_ARM_01 = {# Tanks
 	name = "Armoured Division"
 	for_countries = { GBR }
 	can_use = { always = yes }
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 	fallback_name = "%dth Armoured Division"
 	ordered = {
 		1 = { "%dst 'Royal Hussars' Armoured Div." }
@@ -420,7 +420,7 @@ GBR_ARM_02 = {# Also Tanks
 	name = "Armoured Brigade"
 	for_countries = { GBR }
 	can_use = { always = yes }
-	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
 	fallback_name = "%dth Army Tank Brigade"
 	ordered = {
 		1 = { "%dst Army Tank Brigade" }
