@@ -11,12 +11,6 @@ AUS_foreign_policy = {
 				}
 				date > 1939.6.1
 			}
-			NOT = {
-				has_country_flag = AUS_intervened_in_weltkrieg
-			}
-			is_in_faction = no
-			is_subject = no
-			has_war = no
 		}
 		visible = {
 			country_exists = GER

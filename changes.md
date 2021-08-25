@@ -4,21 +4,21 @@ Incorporates the KRW Submod changes with some minor tweaks
 
 ### Victory Decisions
 
-- Added victory decisions to the RP and 3I leaders which provide conditions upon which the game will end.
+- Added victory decisions to Germany, Canada, Commune of France, and Japan which provide conditions upon which the game will end for their faction.
 - Decisions have a 30 day timer once fired and will be instantly cancelled if the conditions are no longer met
 
 ### Game Defines
 
-- Game speed has increased from { 2, 0.5, 0.2, 0.1, 0.0 } seconds per game hour to { 1, 0.3, 0.175, 0.1 0.0 }
+- Game speed has increased from { 2, 0.5, 0.2, 0.1, 0.0 } seconds per game hour to { 1, 0.3, 0.195, 0.075, 0.0 }
 - Set MAX_HEROES_BEING_KILLED_WAR_SUPPORT_IMPACT = -0.4
 - Set INTERPOLATED_FRONT_STEPS_SHORT = 1 which reduces the number of steps calculated for AI frontlines ( does not affect players )
-- Allow 20 days of saved focus progress
 - Increase max army XP gain per day from 3.0 to 3.5
 - Increase lend lease experience scale by 10% from 0.005 to 0.0055 to encourage more lend lease
 - Increased cap of all XP from 500 to 1000
 - Set submarines to want to escape from a battle while convoy raiding when on always engage. Has the same value as high engagement risk. 
 - Increased the decay of naval mines during peacetime just in-case the AI drops some and then is peaced out. 
 - Doubled the spotting percentage from full radar coverage of a sea zone from 5% to 10%
+- There will not be a peace pause unless there are at least 2 players on the victor side of a peace deal AND at least 0 players on the losers side of the peace deal
 
 ### Optimization
 
@@ -34,14 +34,28 @@ Incorporates the KRW Submod changes with some minor tweaks
 
 ### Abilities
 
-- Last Stand and Force Attack nerfed to 75% org damage
-- Last Stand strength damage reduced to 50% increased damage
+- Last Stand nerfed to -0.75 org damage and 0.4 cp per battalion
+- Force Attack nerfed to -0.75 org damage and 0.4 cp per battalion
 
-### Script Changes
+### Demobilization
 
-- Moved an owner scope in China_scripted_triggers to not fire for all tiles in the game when checking the state owner
+- Demob mission has a 60 day timeout
+- Demob mission now also causes you to lose 25 pp on timeout
 
-### Country Changes
+### Diplomatic Actions
+
+- Lend Lease send / receive is disabled for Ottomans, Scandinavia, Sweden when not in the RP, and Venezuela
+
+### Equipment Changes
+
+- No conversion tanks / planes
+- Strategic bomber cost, air attack, speed, and bombing modified to nerf strats
+
+### Nation Changes
+
+#### ACW Nations
+
+- You will not be able to use `focus on the X` decsions if they are not a player before July 1st 1938
 
 #### Austria
 
@@ -56,20 +70,11 @@ RP
 
 #### Brazil
 
-- Brazil allowed to join the Entente if date is > 1939.1.1 OR Germany is at war
-with CoF AND Brazil does not have a socialist government
-- Brazil allowed to join Entente research group if in Canada's faction
 - Given Uruguay as a core
 
 #### Bulgaria
 
-- Decision to subdue the Greeks if all Greek cores are controlled which adds 0.15 compliance gain
-- Decision to subdue the Serbs is all Serb cores are controlled which adds 0.15
-compliance gain
-- Decision to subdue the Romanians if all Romanian cores are controlled
-which adds 0.15 compliance gain
-- Decision to subdue the Turks if most of Anatolia is controlled by Bulgaria
-which adds 0.15 compliance gain
+- Decision to join the RP once Germany is at war with FRA. 
 
 #### Canada
 
@@ -81,7 +86,6 @@ which adds 0.15 compliance gain
 
 - Given Haiti and Dominican Republic as cores
 - Given British Honduras
-
 
 #### Cento-America
 
@@ -99,10 +103,7 @@ which adds 0.15 compliance gain
 
 - Added 1 additional building slot to each focus that adds factories or industry in the Orthodox Syndicalism and Communal Industry paths
 - Added 1x 100% industry research bonus to the Worker Design Cooperatives focus for Orthodox Syndicalism
-- Modified initial country event tree to not fire the final calculation until the 5th event choice has been made
 - Increased mobilization law to Partial Mobilization
-- Added decision "French Irridentism" which is available after the completion of "French Revanchism" and provides a 5% recovery rate increase and 1% recruitable population.
-- 
 
 #### Cuba
 
@@ -118,18 +119,22 @@ which adds 0.15 compliance gain
 
 #### Fengtian Government
 
-- Fengtian is allowed to join the Co-Pro research group if Fengtian is in the
-Co-Pro
+- Fengtian is allowed to join the Co-Pro research group if Fengtian is in the Co-Pro
 
 #### German Intermarium
 
 - Allows each of the Eastern Defense nations to assume control of the organization
 if the UBD collapses. Applies to Ukraine, Poland, Lithuania, White Ruthenia, UBD
 
+#### Germany Empire
+
+- PLAYERs will not be able to use the "From the Caucasus" focus
+
 #### Japan
 
 - Decisions to add production cost buffs to Japan's air and navy once the Military focus tree has
 been started. -10% Cost reduction on combat aircraft and all ships
+- PLAYER Japan will not be able to use the "Pressure Hawaii" focus
 
 #### National France
 
@@ -143,6 +148,7 @@ been started. -10% Cost reduction on combat aircraft and all ships
 - Ottomans allowed to join the Entente when Germany is at war with CoF OR date
 is > 1939.6.1
 - Ottomans allowed to join the Entente research group once in the Entente
+- Will not invite Azerbaijan into their faction
 
 #### Peru
 
@@ -162,9 +168,13 @@ is > 1939.6.1
 - Decision to add 2 mil factories and 1 100% air doctrine buff after completing
 a focus
 
+#### Portugal
+
+- Is not able to join the Entente
+
 #### Princely Federation
 
-- Decision to join the Co-Pro and research group available after 1940.1.1 and they have completed the 2nd to last focus in their chosen political tree
+- Decision for PLAYERS to join the Co-Pro and research group available after 1940.1.1 and they have completed the 2nd to last focus in their chosen political tree
 
 #### Romania
 
@@ -177,6 +187,7 @@ is > 1939.1.1
 - Russia is allowed to join the Co-Pro when Germany is at war with CoF OR the date
 is > 1939.1.1
 - Russia is allowed to join the Co-Pro research group when in the Co-Pro
+- Armor bonuses apply for the armor category instead of light / mediums only. 
 
 #### Serbia
 
@@ -187,17 +198,23 @@ is > 1939.1.1
 
 - Removed
 
+#### Ukraine
+
+- Ukraine given a decision to annex white ruthenia, decision compensates for subsequent annexation decision (plus flat 50% compliance buff)
+
 #### Union of Britain
 
 - Decision to puppet Iceland if Iceland joins the 3rd Internationale
 - Added a decision to to nationalize the GLCC which provides a 40% increase in refinery fuel income, 20% fuel capacity increase, and 20% refinery construction speed bonus. Additonally 20% research speed bonus for synthetic technologies. This decision may be taken after the focus "Total Mobilization"
 
-#### Venezuala
+#### United States of America
 
-- AI will not declare on Carribean Federation
+- Final chaffee reforms now provides +15% armor instead of +20%
+- American Values production efficiency cap reduced to 5% from 10%
 
-#### Germany
+#### Venezuela
 
+- Will not declare war on the West Indies Federation
 
 ### Operations
 

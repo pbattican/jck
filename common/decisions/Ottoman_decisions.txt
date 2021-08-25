@@ -3,22 +3,32 @@
 ###########################
 # By Jeankedezeehond
 ###########################
+
 OTT_AMN_Category = {
 	OTT_Invite_AMN_Orient = {
 		name = OTT_Invite_AMN
-		icon = generic_political_discourse
+		icon = GFX_decision_generic_agreement
+
 		allowed = {
 			original_tag = OTT
 		}
+
 		visible = {
 			country_exists = FROM
-			NOT = {
-				has_war_with = FROM
-			}
+			NOT = { has_war_with = FROM }
 			FROM = {
 				OR = {
 					is_subject = no
 					is_subject_of = ROOT
+				}
+				if = {
+					limit = {
+						OR = {
+							tag = PER
+							tag = AFG
+						}
+					}
+					NOT = { has_global_flag = RUSSIAN_OTTOMAN_DEAL_PER_BUFFER }
 				}
 			}
 		}
@@ -48,40 +58,48 @@ OTT_AMN_Category = {
 			}
 		}
 		target_trigger = {
-			NOT = {
-				has_war_with = FROM
-			}
+			NOT = { has_war_with = FROM }
 			FROM = {
 				OR = {
 					is_subject = no
 					is_subject_of = ROOT
 				}
+				if = {
+					limit = {
+						OR = {
+							tag = PER
+							tag = AFG
+						}
+					}
+					NOT = { has_global_flag = RUSSIAN_OTTOMAN_DEAL_PER_BUFFER }
+				}
 			}
 		}
+
 		cost = 0
 		days_remove = 5
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 5
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_Invite_AMN_Orient target: [From.GetName]"
-			FROM = {
-				country_event = ottfor.84
-			}
+			FROM = { country_event = ottfor.84 }
 		}
 	}
 	OTT_Invite_AMN_Maghreb = {
 		name = OTT_Invite_AMN
-		icon = generic_political_discourse
+		icon = GFX_decision_generic_agreement
+
 		allowed = {
 			original_tag = OTT
 		}
+
 		visible = {
 			country_exists = FROM
-			NOT = {
-				has_war_with = FROM
-			}
+			NOT = { has_war_with = FROM }
 			FROM = {
 				OR = {
 					is_subject = no
@@ -89,20 +107,8 @@ OTT_AMN_Category = {
 				}
 			}
 		}
-		targets = {
-			MOR
-			ALG
-			LBA
-			TUN
-			EGY
-			SOM
-			SUD
-			CHA
-			MLI
-			NGR
-			CAR
-			ZZB
-		}
+
+		targets = { MOR ALG LBA TUN EGY SOM SUD CHA MLI NGR CAR ZZB }
 		target_root_trigger = {
 			OR = {
 				has_completed_focus = OTT_Islamic_Economic_Union
@@ -114,9 +120,7 @@ OTT_AMN_Category = {
 			}
 		}
 		target_trigger = {
-			NOT = {
-				has_war_with = FROM
-			}
+			NOT = { has_war_with = FROM }
 			FROM = {
 				OR = {
 					is_subject = no
@@ -124,30 +128,31 @@ OTT_AMN_Category = {
 				}
 			}
 		}
+
 		cost = 0
 		days_remove = 5
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 5
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_Invite_AMN_Maghreb target: [From.GetName]"
-			FROM = {
-				country_event = ottfor.84
-			}
+			FROM = { country_event = ottfor.84 }
 		}
 	}
 	OTT_Invite_AMN_Arabia = {
 		name = OTT_Invite_AMN
-		icon = generic_political_discourse
+		icon = GFX_decision_generic_agreement
+
 		allowed = {
 			original_tag = OTT
 		}
+
 		visible = {
 			country_exists = FROM
-			NOT = {
-				has_war_with = FROM
-			}
+			NOT = { has_war_with = FROM }
 			FROM = {
 				OR = {
 					is_subject = no
@@ -155,12 +160,8 @@ OTT_AMN_Category = {
 				}
 			}
 		}
-		targets = {
-			YEM
-			OMA
-			JBS
-			TRU
-		}
+
+		targets = { YEM OMA JBS TRU }
 		target_root_trigger = {
 			OR = {
 				has_completed_focus = OTT_Islamic_Economic_Union
@@ -172,9 +173,7 @@ OTT_AMN_Category = {
 			}
 		}
 		target_trigger = {
-			NOT = {
-				has_war_with = FROM
-			}
+			NOT = { has_war_with = FROM }
 			FROM = {
 				OR = {
 					is_subject = no
@@ -182,17 +181,18 @@ OTT_AMN_Category = {
 				}
 			}
 		}
+
 		cost = 0
 		days_remove = 5
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 5
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_Invite_AMN_Arabia target: [From.GetName]"
-			FROM = {
-				country_event = ottfor.84
-			}
+			FROM = { country_event = ottfor.84 }
 		}
 	}
 }
@@ -200,30 +200,29 @@ OTT_AMN_Category = {
 foreign_politics = {
 	ASY_White_Peace_Assyrian_Revolt = {
 		icon = oppression
-		allowed = {
-			always = no
-		}
-		#manually activated
+
+		allowed = { always = no } #manually activated
+
 		available = {
-			NOT = {
-				has_war_with = ASY
-			}
+			NOT = { has_war_with = ASY }
 		}
+
 		days_mission_timeout = 200
 		is_good = no
+
 		highlight_state_targets = {
 			state = 455
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ASY_White_Peace_Assyrian_Revolt target: [From.GetName]"
 			add_stability = 0.05
 		}
+
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout ASY_White_Peace_Assyrian_Revolt target: [From.GetName]"
 			every_owned_state = {
-				limit = {
-					OTT_is_turkish_state = no
-				}
+				limit = { OTT_is_turkish_state = no }
 				ott_increase_revolt_risk = yes
 			}
 			ASY = {
@@ -234,20 +233,20 @@ foreign_politics = {
 	}
 	ASY_White_Peace_Assyrian_Revolt_assyrian = {
 		icon = oppression
-		allowed = {
-			always = no
-		}
-		#manually activated
+
+		allowed = { always = no } #manually activated
+
 		available = {
-			NOT = {
-				has_war_with = OTT
-			}
+			NOT = { has_war_with = OTT }
 		}
+
 		days_mission_timeout = 200
 		is_good = no
+
 		highlight_state_targets = {
 			state = 812
 		}
+
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout ASY_White_Peace_Assyrian_Revolt_assyrian target: [From.GetName]"
 			effect_tooltip = {
@@ -257,15 +256,16 @@ foreign_politics = {
 	}
 	OTT_Invite_Istanbul_Pact_Orient = {
 		name = OTT_Invite_Istanbul_Pact
-		icon = generic_political_discourse
+		icon = GFX_decision_hand_out
+
 		allowed = {
 			original_tag = OTT
 		}
+
 		available = {
-			FROM = {
-				at_peace_or_same_enemies_as_ROOT = yes
-			}
+			FROM = { at_peace_or_same_enemies_as_ROOT = yes }
 		}
+
 		visible = {
 			is_faction_leader = yes
 			country_exists = FROM
@@ -275,11 +275,15 @@ foreign_politics = {
 					is_subject = no
 					is_subject_of = ROOT
 				}
+				if = {
+					limit = { tag = AFG }
+					NOT = { has_global_flag = RUSSIAN_OTTOMAN_DEAL_PER_BUFFER }
+				}
 			}
 		}
+		# Remove AZR 
 		targets = {
 			AFG
-			AZR
 		}
 		target_root_trigger = {
 			OR = {
@@ -295,32 +299,38 @@ foreign_politics = {
 					is_subject = no
 					is_subject_of = ROOT
 				}
+				if = {
+					limit = { tag = AFG }
+					NOT = { has_global_flag = RUSSIAN_OTTOMAN_DEAL_PER_BUFFER }
+				}
 			}
 		}
+
 		cost = 0
 		days_remove = 5
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 5
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_Invite_Istanbul_Pact_Orient target: [From.GetName]"
-			FROM = {
-				country_event = ottfor.18
-			}
+			FROM = { country_event = ottfor.18 }
 		}
 	}
 	OTT_Invite_Istanbul_Pact_Maghreb = {
 		name = OTT_Invite_Istanbul_Pact
-		icon = generic_political_discourse
+		icon = GFX_decision_hand_out
+
 		allowed = {
 			original_tag = OTT
 		}
+
 		available = {
-			FROM = {
-				at_peace_or_same_enemies_as_ROOT = yes
-			}
+			FROM = { at_peace_or_same_enemies_as_ROOT = yes }
 		}
+
 		visible = {
 			is_faction_leader = yes
 			country_exists = FROM
@@ -332,17 +342,8 @@ foreign_politics = {
 				}
 			}
 		}
-		targets = {
-			MOR
-			ALG
-			LBA
-			TUN
-			SOM
-			CHA
-			MLI
-			NGR
-			ZZB
-		}
+
+		targets = { MOR ALG LBA TUN SOM CHA MLI NGR ZZB }
 		target_root_trigger = {
 			OR = {
 				has_completed_focus = OTT_Maghrebi_Frontier
@@ -359,49 +360,46 @@ foreign_politics = {
 				}
 			}
 		}
+
 		cost = 0
 		days_remove = 5
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 5
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_Invite_Istanbul_Pact_Maghreb target: [From.GetName]"
-			FROM = {
-				country_event = ottfor.18
-			}
+			FROM = { country_event = ottfor.18 }
 		}
 	}
 	OTT_Invite_Istanbul_Pact_Arabia = {
 		name = OTT_Invite_Istanbul_Pact
-		icon = generic_political_discourse
+		icon = GFX_decision_hand_out
+
 		allowed = {
 			original_tag = OTT
 		}
+
 		available = {
-			FROM = {
-				at_peace_or_same_enemies_as_ROOT = yes
-			}
+			FROM = { at_peace_or_same_enemies_as_ROOT = yes }
 		}
+
 		visible = {
 			is_faction_leader = yes
 			country_exists = FROM
 			FROM = {
 				is_in_faction = no
-				NOT = {
-					has_war_with = ROOT
-				}
+				NOT = { has_war_with = ROOT }
 				OR = {
 					is_subject = no
 					is_subject_of = ROOT
 				}
 			}
 		}
-		targets = {
-			YEM
-			OMA
-			JBS
-		}
+
+		targets = { YEM OMA JBS }
 		target_root_trigger = {
 			OR = {
 				has_completed_focus = OTT_Security_on_the_Arab_Peninsula
@@ -410,9 +408,7 @@ foreign_politics = {
 			is_faction_leader = yes
 		}
 		target_trigger = {
-			NOT = {
-				has_war_with = FROM
-			}
+			NOT = { has_war_with = FROM }
 			FROM = {
 				is_in_faction = no
 				OR = {
@@ -421,69 +417,68 @@ foreign_politics = {
 				}
 			}
 		}
+
 		cost = 0
 		days_remove = 5
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 5
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_Invite_Istanbul_Pact_Arabia target: [From.GetName]"
-			FROM = {
-				country_event = ottfor.18
-			}
+			FROM = { country_event = ottfor.18 }
 		}
 	}
 	OTT_demand_western_thrace = {
-		icon = generic_flags
-		allowed = {
-			tag = OTT
-		}
+		icon = GFX_decision_eng_trade_unions_demand
+
+		allowed = { tag = OTT }
+
 		available = {
 			controls_all_owned_states = yes
-			NOT = {
-				has_country_flag = SER_supported_bulgaria
-			}
+			NOT = { has_country_flag = SER_supported_bulgaria }
 		}
+
 		visible = {
 			has_global_flag = balkan_war_started
-			NOT = {
-				has_global_flag = balkan_war_ended
-			}
-			owns_state = 341			#Adrianople
+			NOT = { has_global_flag = balkan_war_ended }
+			owns_state = 341 #Adrianople
 			can_declare_war_on = FROM
 			FROM = {
 				has_war_with = SER
 				OR = {
-					owns_state = 184					#Western Thrace
-					owns_state = 1089					#Momchilgrad
+					owns_state = 184 #Western Thrace
+					owns_state = 1089 #Momchilgrad
 				}
 			}
 		}
-		targets = {
-			BUL
-		}
+
+		targets = { BUL }
+
 		target_trigger = {
 			can_declare_war_on = FROM
 			FROM = {
 				has_war_with = SER
 				OR = {
-					owns_state = 184					#Western Thrace
-					owns_state = 1089					#Momchilgrad
+					owns_state = 184 #Western Thrace
+					owns_state = 1089 #Momchilgrad
 				}
 			}
 		}
+
 		fire_only_once = yes
 		cost = 0
 		days_remove = 14
+
 		war_with_on_remove = BUL
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_demand_western_thrace target: [From.GetName]"
 			add_war_support = 0.05
 			hidden_effect = {
-				FROM = {
-					country_event = pact.25
-				}
+				FROM = { country_event = pact.25 }
 			}
 		}
 		remove_effect = {
@@ -494,14 +489,15 @@ foreign_politics = {
 					FROM = {
 						has_war_with = SER
 						OR = {
-							owns_state = 184							#Western Thrace
-							owns_state = 1089							#Momchilgrad
+							owns_state = 184 #Western Thrace
+							owns_state = 1089 #Momchilgrad
 						}
 					}
 				}
 				country_event = pact.21
 			}
 		}
+
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -531,12 +527,15 @@ foreign_politics = {
 		}
 	}
 	OTT_leave_edirne_accords = {
-		icon = GFX_decision_soldierly_discipline
+		icon = GFX_decision_generic_break_treaty
+
 		visible = {
 			has_idea = ott_balkan_military_accords
 		}
+
 		cost = 0
 		fire_only_once = yes
+
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -544,9 +543,11 @@ foreign_politics = {
 				has_war = yes
 			}
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_leave_edirne_accords"
 			remove_ideas = ott_balkan_military_accords
+
 			every_country = {
 				limit = {
 					has_idea = ott_balkan_military_accords
@@ -555,25 +556,87 @@ foreign_politics = {
 			}
 		}
 	}
+	OTT_Join_Russia = {
+		name = SER_Join_Faction
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = OTT
+		}
+
+		available = {
+			has_war = no
+			at_peace_or_same_enemies_as_FROM = yes
+			FROM = {
+				has_government = national_populist
+				is_faction_leader = yes
+			}
+		}
+
+		visible = {
+			is_valid_peace_target = yes
+			is_in_faction = no
+			has_government = national_populist
+			has_completed_focus = OTT_Union_Party_State
+			FROM = {
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		targets = { RUS }
+		target_root_trigger = {
+			has_completed_focus = OTT_Union_Party_State
+		}
+		target_trigger = {
+			FROM = {
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		cost = 0
+		days_remove = 7
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 0
+				FROM = { surrender_progress > 0.20 }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OTT_Join_Russia target: [From.GetName]"
+			FROM = {
+				country_event = ottfor.8
+			}
+		}
+	}
 }
 
 OTT_Handling_Suriye = {
 	OTT_SYR_Abolish_Lebanon = {
 		icon = generic_break_treaty
+
 		available = {
 			has_completed_focus = OTT_Status_of_the_Autonomous_Regions
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
+
 		highlight_state_targets = {
 			state = 553
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_SYR_Abolish_Lebanon target: [From.GetName]"
-			add_stability = -0.1
+			add_stability = -0.10
 			553 = {
 				ott_increase_revolt_risk = yes
 			}
@@ -591,24 +654,29 @@ OTT_Handling_Suriye = {
 	}
 	OTT_SYR_Central_Tax_Collection_Agency = {
 		icon = ger_mefo_bills
+
 		available = {
 			has_completed_focus = OTT_Reeling_in_the_Arab_Vilayets
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
 		days_remove = 200
+
 		highlight_state_targets = {
 			state = 553
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_SYR_Central_Tax_Collection_Agency target: [From.GetName]"
 			add_political_power = 100
@@ -625,28 +693,34 @@ OTT_Handling_Suriye = {
 		}
 	}
 	OTT_SYR_Centralise_Infrastructural_Maintenance = {
-		icon = generic_construction
+		icon = GFX_decision_railroad
+
 		available = {
 			has_completed_focus = OTT_Order_by_the_Locomotive
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
 		days_remove = 100
+
 		highlight_state_targets = {
 			state = 995
 		}
+
 		modifier = {
 			civilian_factory_use = 1
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_SYR_Centralise_Infrastructural_Maintenance target: [From.GetName]"
 			custom_effect_tooltip = ott_increase_syr_int_10
@@ -660,6 +734,7 @@ OTT_Handling_Suriye = {
 				max = 100
 			}
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_SYR_Centralise_Infrastructural_Maintenance target: [From.GetName]"
 			995 = {
@@ -673,27 +748,33 @@ OTT_Handling_Suriye = {
 	}
 	OTT_SYR_Settle_Tribes = {
 		icon = infiltrate_state
+
 		available = {
 			has_completed_focus = OTT_Reeling_in_the_Arab_Vilayets
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
 		days_remove = 100
+
 		highlight_state_targets = {
 			state = 455
 		}
+
 		modifier = {
 			political_power_gain = -0.05
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_SYR_Settle_Tribes target: [From.GetName]"
 			455 = {
@@ -715,28 +796,35 @@ OTT_Handling_Suriye = {
 		}
 	}
 	OTT_SYR_Restrict_Arab_Nationalist_Newspapers = {
-		icon = eng_blackshirt_speech
+		icon = GFX_decision_generic_speech
+
 		available = {
 			has_completed_focus = OTT_Crack_down_on_the_SSNP
 			NOT = {
 				has_country_flag = free_press
 			}
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 50
+
 		highlight_state_targets = {
 			state = 554
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_SYR_Restrict_Arab_Nationalist_Newspapers target: [From.GetName]"
 			increase_ruling_party_popularity_by_5 = yes
 		}
 	}
 	OTT_SYR_Turkish_Integration_Resettlement_Program = {
-		icon = generic_operation
+		icon = GFX_decision_eng_blackshirt_march
+
 		available = {
 			has_completed_focus = OTT_Reeling_in_the_Arab_Vilayets
 			344 = {
@@ -747,27 +835,32 @@ OTT_Handling_Suriye = {
 			}
 			has_war = no
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 75
 		days_remove = 400
+
 		highlight_state_targets = {
 			state = 677
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_SYR_Turkish_Integration_Resettlement_Program target: [From.GetName]"
 			677 = {
 				ott_increase_revolt_risk = yes
 			}
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_SYR_Turkish_Integration_Resettlement_Program target: [From.GetName]"
 			344 = {
@@ -793,21 +886,26 @@ OTT_Handling_Suriye = {
 OTT_Handling_Greek_Vilayets = {
 	OTT_GRE_Abolish_Mutasarrifate = {
 		icon = generic_break_treaty
+
 		available = {
 			has_completed_focus = OTT_Status_of_the_Autonomous_Regions
-			has_completed_focus = OTT_Reform_Millet_System
 			183 = {
 				is_fully_controlled_by = OTT
 			}
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
+
 		highlight_state_targets = {
 			state = 183
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_GRE_Abolish_Mutasarrifate target: [From.GetName]"
 			183 = {
@@ -828,24 +926,29 @@ OTT_Handling_Greek_Vilayets = {
 	}
 	OTT_GRE_Central_Tax_Collection_Agency = {
 		icon = ger_mefo_bills
+
 		available = {
 			has_completed_focus = OTT_Status_of_the_Autonomous_Regions
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
 		days_remove = 200
+
 		highlight_state_targets = {
 			state = 164
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_GRE_Central_Tax_Collection_Agency target: [From.GetName]"
 			add_political_power = 50
@@ -862,31 +965,37 @@ OTT_Handling_Greek_Vilayets = {
 		}
 	}
 	OTT_GRE_Turkish_Employement_Program = {
-		icon = generic_political_discourse
+		icon = GFX_decision_cash_flow
+
 		available = {
 			has_completed_focus = OTT_OHP_Membership_Reward_Program
 			183 = {
 				is_fully_controlled_by = OTT
 			}
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
 		days_remove = 100
+
 		highlight_state_targets = {
 			state = 187
 		}
+
 		modifier = {
 			stability_weekly = -0.0035
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_GRE_Turkish_Employement_Program target: [From.GetName]"
 			183 = {
@@ -910,18 +1019,30 @@ OTT_Handling_Greek_Vilayets = {
 		}
 	}
 	OTT_GRE_Enforce_Turkish_Curriculum = {
-		icon = generic_research
+		icon = GFX_decision_eng_trade_unions_support
+
 		available = {
-			has_completed_focus = OTT_Millet_Mektepleri
+			custom_trigger_tooltip = {
+				tooltip = ott_millet_mektepleri_prereq_tt
+				OR = {
+					has_completed_focus = OTT_Millet_Mektepleri
+					has_completed_focus = OTT_Millet_Mektepleri_FEV
+				}
+			}
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
+
 		highlight_state_targets = {
 			state = 339
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_GRE_Enforce_Turkish_Curriculum target: [From.GetName]"
 			187 = {
@@ -951,24 +1072,34 @@ OTT_Handling_Greek_Vilayets = {
 	}
 	OTT_GRE_Crack_Down_Tax_Havens = {
 		icon = eng_trade_unions_demand
+
 		available = {
-			has_completed_focus = OTT_Reorganise_Vilayet_System
+			OR = {
+				has_completed_focus = OTT_Reorganise_Vilayet_System
+				hidden_trigger = { has_completed_focus = OTT_Vilayet_Reorganisation }
+				has_completed_focus = OTT_Multi_Level_Democracy_FEV
+				has_completed_focus = OTT_Committee_Inquest
+			}
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 35
 		days_remove = 100
+
 		highlight_state_targets = {
 			state = 187
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_GRE_Crack_Down_Tax_Havens target: [From.GetName]"
 			custom_effect_tooltip = ott_increase_gre_int_5
@@ -984,28 +1115,33 @@ OTT_Handling_Greek_Vilayets = {
 		}
 	}
 	OTT_GRE_Timar_System = {
-		icon = generic_operation
+		icon = GFX_population_icon
+
 		available = {
 			183 = {
 				is_fully_controlled_by = OTT
 			}
 			has_war = no
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
 		days_remove = 400
+
 		highlight_state_targets = {
 			state = 183
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_GRE_Timar_System target: [From.GetName]"
 			183 = {
@@ -1013,6 +1149,7 @@ OTT_Handling_Greek_Vilayets = {
 			}
 			army_experience = 15
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_GRE_Timar_System target: [From.GetName]"
 			49 = {
@@ -1038,24 +1175,29 @@ OTT_Handling_Greek_Vilayets = {
 OTT_Handling_Kurdish_Vilayets = {
 	OTT_KUR_Centralise_Tax_Collection = {
 		icon = ger_mefo_bills
+
 		available = {
 			has_completed_focus = OTT_Extend_Authority_Kurdish_Territories
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
 		days_remove = 200
+
 		highlight_state_targets = {
 			state = 819
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_KUR_Centralise_Tax_Collection target: [From.GetName]"
 			add_political_power = 75
@@ -1072,25 +1214,31 @@ OTT_Handling_Kurdish_Vilayets = {
 		}
 	}
 	OTT_KUR_Complete_the_Copper_Line = {
-		icon = generic_construction
+		icon = GFX_decision_railroad
+
 		available = {
 			has_completed_focus = OTT_Order_by_the_Locomotive
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 20
+
 		days_remove = 250
+
 		highlight_state_targets = {
 			state = 350
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_KUR_Complete_the_Copper_Line target: [From.GetName]"
 			350 = {
@@ -1113,25 +1261,31 @@ OTT_Handling_Kurdish_Vilayets = {
 		}
 	}
 	OTT_KUR_Settlement_Law = {
-		icon = generic_operation
+		icon = GFX_decision_eng_trade_unions_support
+
 		available = {
 			has_completed_focus = OTT_Extend_Authority_Kurdish_Territories
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 50
+
 		days_remove = 400
+
 		highlight_state_targets = {
 			state = 350
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_KUR_Settlement_Law target: [From.GetName]"
 			350 = {
@@ -1141,6 +1295,7 @@ OTT_Handling_Kurdish_Vilayets = {
 				ott_increase_revolt_risk = yes
 			}
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_KUR_Settlement_Law target: [From.GetName]"
 			345 = {
@@ -1162,7 +1317,8 @@ OTT_Handling_Kurdish_Vilayets = {
 		}
 	}
 	OTT_KUR_Increase_Ottoman_Gendarmerie = {
-		icon = generic_army_support
+		icon = GFX_decision_soldierly_discipline
+
 		available = {
 			350 = {
 				is_owned_and_controlled_by = OTT
@@ -1174,14 +1330,19 @@ OTT_Handling_Kurdish_Vilayets = {
 				is_owned_and_controlled_by = OTT
 			}
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 100
+
 		highlight_state_targets = {
 			state = 352
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_KUR_Increase_Ottoman_Gendarmerie target: [From.GetName]"
 			350 = {
@@ -1225,18 +1386,24 @@ OTT_Handling_Kurdish_Vilayets = {
 	}
 	OTT_KUR_Abolish_the_Hamidiye = {
 		icon = oppression
+
 		available = {
 			has_completed_focus = OTT_Reform_the_Conscription_System
 			has_completed_focus = OTT_Extend_Authority_Kurdish_Territories
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 15
+
 		highlight_state_targets = {
 			state = 354
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_KUR_Abolish_the_Hamidiye target: [From.GetName]"
 			add_stability = 0.06
@@ -1257,21 +1424,27 @@ OTT_Handling_Kurdish_Vilayets = {
 OTT_Handling_Arab_Vilayets = {
 	OTT_ARA_Abolish_Sharif = {
 		icon = generic_break_treaty
+
 		available = {
 			has_completed_focus = OTT_Status_of_the_Autonomous_Regions
 			has_country_flag = sharif_dead
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
+
 		highlight_state_targets = {
 			state = 679
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_ARA_Abolish_Sharif target: [From.GetName]"
-			add_stability = -0.1
+			add_stability = -0.10
 			set_country_flag = ott_sharif_abolished
 			679 = {
 				custom_effect_tooltip = ott_increase_revolt_risk_large_tt
@@ -1301,25 +1474,30 @@ OTT_Handling_Arab_Vilayets = {
 	}
 	OTT_ARA_Centralise_Tax_Collection = {
 		icon = ger_mefo_bills
+
 		available = {
 			has_completed_focus = OTT_Status_of_the_Autonomous_Regions
 			has_country_flag = ott_sharif_abolished
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
 		days_remove = 200
+
 		highlight_state_targets = {
 			state = 754
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_ARA_Centralise_Tax_Collection target: [From.GetName]"
 			add_political_power = 100
@@ -1337,27 +1515,32 @@ OTT_Handling_Arab_Vilayets = {
 	}
 	OTT_ARA_Salination_Plant = {
 		icon = generic_construction
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 30
 		days_remove = 200
+
 		highlight_state_targets = {
 			state = 679
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_ARA_Salination_Plant target: [From.GetName]"
 			679 = {
 				ott_decrease_revolt_risk = yes
 			}
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_ARA_Salination_Plant target: [From.GetName]"
 			679 = {
@@ -1377,27 +1560,33 @@ OTT_Handling_Arab_Vilayets = {
 	}
 	OTT_ARA_Settle_Tribes = {
 		icon = infiltrate_state
+
 		available = {
 			has_completed_focus = OTT_Reeling_in_the_Arab_Vilayets
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
 		days_remove = 100
+
 		highlight_state_targets = {
 			state = 754
 		}
+
 		modifier = {
 			political_power_gain = -0.05
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_ARA_Settle_Tribes target: [From.GetName]"
 			754 = {
@@ -1418,26 +1607,31 @@ OTT_Handling_Arab_Vilayets = {
 	}
 	OTT_ARA_Expand_Dubai_Air_Base = {
 		icon = GFX_decision_generic_air
+
 		available = {
 			has_completed_focus = OTT_army_aviation_unq
 			has_completed_focus = OTT_Restore_the_Vilayet_of_Najd
 			controls_state = 658
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 20
 		days_remove = 100
+
 		highlight_state_targets = {
 			state = 658
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_ARA_Expand_Dubai_Air_Base target: [From.GetName]"
 			658 = {
@@ -1460,20 +1654,26 @@ OTT_Handling_Arab_Vilayets = {
 	}
 	OTT_ARA_Abolish_Trucial_States = {
 		icon = generic_break_treaty
+
 		available = {
 			has_completed_focus = OTT_Restore_the_Vilayet_of_Najd
 			controls_state = 993
 			controls_state = 658
 			controls_state = 907
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
+
 		highlight_state_targets = {
 			state = 907
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_ARA_Abolish_Trucial_States target: [From.GetName]"
 			add_stability = -0.05
@@ -1509,25 +1709,30 @@ OTT_Handling_Arab_Vilayets = {
 	}
 	OTT_ARA_Crack_Down_Gulf_Smuggling = {
 		icon = GFX_decision_generic_naval
+
 		available = {
 			has_completed_focus = OTT_Restore_the_Vilayet_of_Najd
 			controls_state = 658
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 20
 		days_remove = 100
+
 		highlight_state_targets = {
 			state = 658
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_ARA_Crack_Down_Gulf_Smuggling target: [From.GetName]"
 			658 = {
@@ -1547,11 +1752,11 @@ OTT_Handling_Arab_Vilayets = {
 	}
 	OTT_ARA_Military_Mission_to_ARA = {
 		icon = generic_prepare_civil_war
+
 		available = {
-			has_equipment = {
-				infantry_equipment > 249
-			}
+			has_equipment = { infantry_equipment > 249 }
 		}
+
 		visible = {
 			country_exists = FROM
 			NOT = {
@@ -1562,17 +1767,13 @@ OTT_Handling_Arab_Vilayets = {
 				}
 				FROM = {
 					is_subject = yes
-					NOT = {
-						is_subject_of = ROOT
-					}
+					NOT = { is_subject_of = ROOT }
+					NOT = { has_idea = ott_army_training }
 				}
 			}
 		}
-		targets = {
-			JBS
-			OMA
-			YEM
-		}
+
+		targets = { JBS OMA YEM }
 		target_trigger = {
 			NOT = {
 				has_war_with = FROM
@@ -1582,17 +1783,19 @@ OTT_Handling_Arab_Vilayets = {
 				}
 				FROM = {
 					is_subject = yes
-					NOT = {
-						is_subject_of = ROOT
-					}
+					NOT = { is_subject_of = ROOT }
+					NOT = { has_idea = ott_army_training }
 				}
 			}
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
-		fire_only_once = yes
+
 		cost = 0
+		fire_only_once = yes
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_ARA_Military_Mission_to_ARA target: [From.GetName]"
 			add_political_power = 25
@@ -1608,7 +1811,7 @@ OTT_Handling_Arab_Vilayets = {
 				add_ideas = ott_army_training
 				custom_effect_tooltip = tooltip_white_line
 				army_experience = 35
-				add_war_support = 0.1
+				add_war_support = 0.10
 			}
 		}
 	}
@@ -1617,18 +1820,24 @@ OTT_Handling_Arab_Vilayets = {
 OTT_Handling_Iraqi_Vilayets = {
 	OTT_IRQ_Abolish_Assyrian_Autonomous_Zone = {
 		icon = generic_break_treaty
+
 		available = {
 			has_completed_focus = OTT_Status_of_the_Autonomous_Regions
 			has_country_flag = ASY_got_an_ass_whooping
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
+
 		highlight_state_targets = {
 			state = 812
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_IRQ_Abolish_Assyrian_Autonomous_Zone target: [From.GetName]"
 			812 = {
@@ -1648,6 +1857,7 @@ OTT_Handling_Iraqi_Vilayets = {
 	}
 	OTT_IRQ_Coordinate_Shia_Tourism = {
 		icon = eng_blackshirt_march
+
 		available = {
 			PER = {
 				OR = {
@@ -1657,14 +1867,19 @@ OTT_Handling_Iraqi_Vilayets = {
 				}
 			}
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
+
 		highlight_state_targets = {
 			state = 291
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_IRQ_Coordinate_Shia_Tourism target: [From.GetName]"
 			291 = {
@@ -1689,25 +1904,31 @@ OTT_Handling_Iraqi_Vilayets = {
 		}
 	}
 	OTT_IRQ_Iraqi_Road_System = {
-		icon = generic_construction
+		icon = GFX_decision_road
+
 		available = {
 			has_completed_focus = OTT_Order_by_the_Locomotive
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
+
 		days_remove = 300
+
 		highlight_state_targets = {
 			state = 291
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_IRQ_Iraqi_Road_System target: [From.GetName]"
 			676 = {
@@ -1755,32 +1976,39 @@ OTT_Handling_Iraqi_Vilayets = {
 		}
 	}
 	OTT_IRQ_Mosul_Development = {
-		icon = generic_operation
+		icon = GFX_decision_factories
+
 		available = {
 			has_completed_focus = OTT_Tigris_Program
 			has_completed_focus = OTT_Reeling_in_the_Arab_Vilayets
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 50
+
 		days_remove = 300
+
 		highlight_state_targets = {
 			state = 676
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_IRQ_Mosul_Development target: [From.GetName]"
 			676 = {
 				ott_increase_revolt_risk = yes
 			}
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_IRQ_Mosul_Development target: [From.GetName]"
 			346 = {
@@ -1804,25 +2032,31 @@ OTT_Handling_Iraqi_Vilayets = {
 	}
 	OTT_IRQ_Basra_Harbour_Project = {
 		icon = generic_naval_base
+
 		available = {
 			has_completed_focus = OTT_Basra_Kuwait
 			has_country_flag = ASY_got_an_ass_whooping
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 50
+
 		days_remove = 100
+
 		highlight_state_targets = {
 			state = 812
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_IRQ_Basra_Harbour_Project target: [From.GetName]"
 			812 = {
@@ -1854,18 +2088,24 @@ OTT_Handling_Iraqi_Vilayets = {
 	}
 	OTT_IRQ_Navigation_Law = {
 		icon = generic_naval
+
 		available = {
 			has_completed_focus = OTT_Reeling_in_the_Arab_Vilayets
 			has_completed_focus = OTT_Striving_for_Autarky
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 25
+
 		highlight_state_targets = {
 			state = 676
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_IRQ_Navigation_Law target: [From.GetName]"
 			every_country = {
@@ -1917,25 +2157,31 @@ OTT_Handling_Iraqi_Vilayets = {
 
 OTT_Handling_Libyan_Vilayets = {
 	OTT_TRI_Tripoli_Benghazi_Railway = {
-		icon = generic_construction
+		icon = GFX_decision_train
+
 		available = {
 			has_completed_focus = OTT_Order_by_the_Locomotive
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 200
+
 		days_remove = 600
+
 		highlight_state_targets = {
 			state = 450
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_TRI_Tripoli_Benghazi_Railway target: [From.GetName]"
 			hidden_effect = {
@@ -1945,6 +2191,7 @@ OTT_Handling_Libyan_Vilayets = {
 				}
 			}
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_TRI_Tripoli_Benghazi_Railway target: [From.GetName]"
 			450 = {
@@ -1999,36 +2246,37 @@ OTT_Handling_Libyan_Vilayets = {
 	}
 	OTT_TRI_Fezzan_Expedition = {
 		icon = generic_army_support
+
 		available = {
 			controls_state = 273
 		}
+
 		visible = {
 			owns_state = 273
-			273 = {
-				OTT_revolt_risk_high = yes
-			}
+			273 = { OTT_revolt_risk_high = yes }
 			has_country_flag = OTT_can_send_fezzan_expedition
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		cost = 50
 		days_remove = 50
 		fire_only_once = no
 		days_re_enable = 200
+
 		highlight_state_targets = {
 			state = 273
 		}
+
 		cancel_trigger = {
 			OR = {
 				OTT_has_centralist_government = no
-				NOT = {
-					273 = {
-						is_owned_and_controlled_by = ROOT
-					}
-				}
+				NOT = { 273 = { is_owned_and_controlled_by = ROOT } }
 			}
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_TRI_Fezzan_Expedition target: [From.GetName]"
 			273 = {
@@ -2055,24 +2303,30 @@ OTT_Handling_Libyan_Vilayets = {
 	}
 	OTT_TRI_Centralise_Taxation = {
 		icon = ger_mefo_bills
+
 		available = {
 			has_completed_focus = OTT_Reeling_in_the_Arab_Vilayets
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
+
 		days_remove = 300
+
 		highlight_state_targets = {
 			state = 448
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_TRI_Centralise_Taxation target: [From.GetName]"
 			add_political_power = 50
@@ -2090,25 +2344,31 @@ OTT_Handling_Libyan_Vilayets = {
 	}
 	OTT_TRI_Misrata_Program = {
 		icon = generic_naval_base
+
 		available = {
 			has_completed_focus = OTT_Naval_Program
 			controls_state = 448
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
+
 		days_remove = 150
+
 		highlight_state_targets = {
 			state = 448
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_TRI_Misrata_Program target: [From.GetName]"
 			448 = {
@@ -2148,20 +2408,26 @@ OTT_Handling_Libyan_Vilayets = {
 	}
 	OTT_TRI_Combat_Senussi_Order = {
 		icon = oppression
+
 		available = {
 			"LBA" = {
 				exists = yes
 				is_subject = no
 			}
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 10
+
 		highlight_state_targets = {
 			state = 663
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_TRI_Combat_Senussi_Order target: [From.GetName]"
 			"LBA" = {
@@ -2182,27 +2448,33 @@ OTT_Handling_Libyan_Vilayets = {
 	}
 	OTT_TRI_Settle_Tripolitanian_Tribes = {
 		icon = infiltrate_state
+
 		available = {
 			has_completed_focus = OTT_Reeling_in_the_Arab_Vilayets
 		}
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		fire_only_once = yes
+
 		cost = 0
 		days_remove = 100
+
 		highlight_state_targets = {
 			state = 448
 		}
+
 		modifier = {
 			political_power_gain = -0.05
 		}
+
 		cancel_trigger = {
 			has_authoritarian_government = no
-			NOT = {
-				has_country_flag = centralist_DF
-			}
+			NOT = { has_country_flag = centralist_DF }
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_TRI_Settle_Tripolitanian_Tribes target: [From.GetName]"
 			448 = {
@@ -2225,21 +2497,35 @@ OTT_Handling_Libyan_Vilayets = {
 OTT_Millet_Mektepleri_dec = {
 	OTT_MME_Anatolian_Expansion = {
 		icon = generic_research
-		available = {
-			has_completed_focus = OTT_Millet_Mektepleri
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
+
 		cost = 0
+		days_remove = 300
+		fire_only_once = yes
+
 		highlight_state_targets = {
-			state = 49
+			state = 49 #Ankara
+			state = 339 #Smyrna
+			state = 340 #Bursa
+			state = 342 #Mugla
+			state = 343 #Afyon
+			state = 344 #Adana
+			state = 345 #Sivas
+			state = 346 #Konya
+			state = 354 #Erzurum
+			state = 355 #Trebizond
+			state = 356 #Kastamonu
+			state = 585 #Batumi
+			state = 1001 #Lazistan
 		}
+
 		modifier = {
 			political_power_gain = -0.15
 		}
-		days_remove = 300
+
+		ai_will_do = {
+			factor = 100
+		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_MME_Anatolian_Expansion target: [From.GetName]"
 			custom_effect_tooltip = millet_mektepleri_increase_4
@@ -2251,21 +2537,26 @@ OTT_Millet_Mektepleri_dec = {
 	}
 	OTT_MME_Kurdish_Expansion = {
 		icon = generic_research
-		available = {
-			has_completed_focus = OTT_Millet_Mektepleri
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
+
 		cost = 0
+		days_remove = 300
+		fire_only_once = yes
+
 		highlight_state_targets = {
-			state = 350
+			state = 350 #Diyarbakir
+			state = 352 #Van
+			state = 819 #Sulaymaniyah
+			state = 1000 #Kars-Igdir
 		}
+
 		modifier = {
 			political_power_gain = -0.05
 		}
-		days_remove = 300
+
+		ai_will_do = {
+			factor = 100
+		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_MME_Kurdish_Expansion target: [From.GetName]"
 			custom_effect_tooltip = millet_mektepleri_increase_1
@@ -2277,21 +2568,30 @@ OTT_Millet_Mektepleri_dec = {
 	}
 	OTT_MME_Syrian_Expansion = {
 		icon = generic_research
-		available = {
-			has_completed_focus = OTT_Millet_Mektepleri
+
+		cost = 0
+		days_remove = 300
+		fire_only_once = yes
+
+		highlight_state_targets = {
+			state = 454 #Jerusalem
+			state = 455 #Ma'an
+			state = 553 #Beirut
+			state = 554 #Syria
+			state = 677 #Aleppo
+			state = 680 #Latakia
+			state = 992 #Haifa
+			state = 995 #Homs
 		}
+
+		modifier = {
+			political_power_gain = -0.10
+		}
+
 		ai_will_do = {
 			factor = 100
 		}
-		fire_only_once = yes
-		cost = 0
-		highlight_state_targets = {
-			state = 554
-		}
-		modifier = {
-			political_power_gain = -0.1
-		}
-		days_remove = 300
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_MME_Syrian_Expansion target: [From.GetName]"
 			custom_effect_tooltip = millet_mektepleri_increase_2
@@ -2303,21 +2603,27 @@ OTT_Millet_Mektepleri_dec = {
 	}
 	OTT_MME_Mesopotamian_Expansion = {
 		icon = generic_research
-		available = {
-			has_completed_focus = OTT_Millet_Mektepleri
+
+		cost = 0
+		days_remove = 300
+		fire_only_once = yes
+
+		highlight_state_targets = {
+			state = 291 #Baghdad
+			state = 349 #Kirkuk
+			state = 676 #Mosul
+			state = 812 #Basra
 		}
+
+		modifier = {
+			political_power_gain = -0.10
+		}
+
+
 		ai_will_do = {
 			factor = 100
 		}
-		fire_only_once = yes
-		cost = 0
-		highlight_state_targets = {
-			state = 291
-		}
-		modifier = {
-			political_power_gain = -0.1
-		}
-		days_remove = 300
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_MME_Mesopotamian_Expansion target: [From.GetName]"
 			custom_effect_tooltip = millet_mektepleri_increase_2
@@ -2329,21 +2635,24 @@ OTT_Millet_Mektepleri_dec = {
 	}
 	OTT_MME_Hejazi_Expansion = {
 		icon = generic_research
-		available = {
-			has_completed_focus = OTT_Millet_Mektepleri
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
+
 		cost = 0
+		days_remove = 300
+		fire_only_once = yes
+
 		highlight_state_targets = {
-			state = 679
+			state = 679 #Hejaz
+			state = 754 #Medina
 		}
+
 		modifier = {
 			political_power_gain = -0.05
 		}
-		days_remove = 300
+
+		ai_will_do = {
+			factor = 100
+		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_MME_Hejazi_Expansion target: [From.GetName]"
 			custom_effect_tooltip = millet_mektepleri_increase_1
@@ -2358,9 +2667,11 @@ OTT_Millet_Mektepleri_dec = {
 ##############
 # PARLIAMENT #
 ##############
+
 OTT_congress = {
 	OTT_prorogue_parliament = {
 		icon = eng_ally_imperialist_coup
+
 		available = {
 			has_completed_focus = OTT_Revise_Constitution
 			has_government = social_conservative
@@ -2369,11 +2680,14 @@ OTT_congress = {
 				ruling_only = yes
 			}
 		}
+
 		cost = 35
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_prorogue_parliament"
 			country_event = ottars.8
@@ -2381,36 +2695,44 @@ OTT_congress = {
 			custom_effect_tooltip = prorogue_timer_tt
 		}
 	}
+
 	OTT_prorogue_parliament_mission = {
 		icon = eng_ally_imperialist_coup
+
 		allowed = {
 			always = no
 		}
+
 		available = {
-			hidden_trigger = {
-				always = no
-			}
+			hidden_trigger = { always = no }
 		}
+
 		selectable_mission = no
 		days_mission_timeout = 150
+
 		is_good = no
+
 		ai_will_do = {
 			factor = 30
 		}
+
 		cancel_trigger = {
 			NOT = {
 				has_government = social_conservative
 				has_government = paternal_autocrat
 			}
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_prorogue_parliament_mission"
 		}
+
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision timeout OTT_prorogue_parliament_mission"
 			decrease_ruling_party_popularity_by_10 = yes
 		}
 	}
+
 	OTT_early_elections = {
 		icon = eng_trade_unions_support
 		available = {
@@ -2422,39 +2744,47 @@ OTT_congress = {
 			}
 			date > 1938.01.01
 		}
+
 		visible = {
-			NOT = {
-				has_government = social_conservative
-			}
+			NOT = { has_government = social_conservative }
 		}
+
 		cost = 100
+
 		fire_only_once = yes
+
 		days_remove = 30
+
 		ai_will_do = {
 			base = 0
 		}
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_early_elections"
 			add_stability = -0.15
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_early_elections"
 			country_event = ottlib.13
 		}
 	}
+
 	OTT_df_coalition = {
-		icon = eng_trade_unions_demand
+		icon = GFX_decision_hand_out
+
 		visible = {
-			NOT = {
-				has_government = social_conservative
-			}
+			NOT = { has_government = social_conservative }
 		}
+
 		cost = 0
 		fire_only_once = yes
 		days_remove = 20
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_df_coalition"
 			country_event = ottlib.9
@@ -2466,18 +2796,23 @@ OTT_congress = {
 OTT_congress_turkish_nationalists = {
 	### TURKISH NATIONALIST CATERING
 	OTT_con_halkevleri_program = {
-		icon = eng_propaganda_campaigns
+		icon = GFX_decision_cash_flow
 		available = {
 			NOT = {
 				has_country_flag = reform_enacted_tt
 			}
 		}
+
 		cost = 0
+
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		days_remove = 30
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_con_halkevleri_program"
 			add_popularity = {
@@ -2488,14 +2823,11 @@ OTT_congress_turkish_nationalists = {
 				ideology = national_populist
 				popularity = 0.03
 			}
+
 			### Add Turkish Nationalist votes in favour
 			custom_effect_tooltip = 10_nat_tur_sup_tt
-			add_to_variable = {
-				nat_tur_sup_deputies = 10
-			}
-			subtract_from_variable = {
-				nat_tur_opp_deputies = 10
-			}
+			add_to_variable = { nat_tur_sup_deputies = 10 }
+			subtract_from_variable = { nat_tur_opp_deputies = 10 }
 			clamp_variable = {
 				var = nat_tur_opp_deputies
 				min = 0
@@ -2506,17 +2838,20 @@ OTT_congress_turkish_nationalists = {
 				min = 0
 				max = nat_tur_deputies
 			}
+
 			### Calculate coalition strength
 			OTT_calc_coalition_strength = yes
+
 			set_country_flag = reform_enacted_tt
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_con_halkevleri_program"
 			clr_country_flag = reform_enacted_tt
 		}
 	}
 	OTT_con_anatolian_relief_program = {
-		icon = ger_mefo_bills
+		icon = GFX_decision_generic_agriculture
 		available = {
 			num_of_civilian_factories_available_for_projects > 3
 			has_global_flag = black_monday
@@ -2524,28 +2859,31 @@ OTT_congress_turkish_nationalists = {
 				has_country_flag = reform_enacted_tt
 			}
 		}
+
 		cost = 0
+
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		modifier = {
 			civilian_factory_use = 4
 		}
+
 		highlight_state_targets = {
 			state = 49
 		}
+
 		days_remove = 200
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_con_anatolian_relief_program target: [From.GetName]"
 			### Add Turkish Nationalist votes in favour
 			custom_effect_tooltip = 30_nat_tur_sup_tt
-			add_to_variable = {
-				nat_tur_sup_deputies = 30
-			}
-			subtract_from_variable = {
-				nat_tur_opp_deputies = 30
-			}
+			add_to_variable = { nat_tur_sup_deputies = 30 }
+			subtract_from_variable = { nat_tur_opp_deputies = 30 }
 			clamp_variable = {
 				var = nat_tur_opp_deputies
 				min = 0
@@ -2556,9 +2894,11 @@ OTT_congress_turkish_nationalists = {
 				min = 0
 				max = nat_tur_deputies
 			}
+
 			### Calculate coalition strength
 			OTT_calc_coalition_strength = yes
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_con_anatolian_relief_program target: [From.GetName]"
 			clr_country_flag = reform_enacted_tt
@@ -2578,26 +2918,28 @@ OTT_congress_turkish_nationalists = {
 				has_country_flag = reform_enacted_tt
 			}
 		}
+
 		cost = 0
+
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		days_remove = 30
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_con_turkish_language_decree"
 			add_popularity = {
 				ideology = authoritarian_democrat
 				popularity = 0.06
 			}
+
 			### Add Turkish Nationalist votes in favour
 			custom_effect_tooltip = 60_nat_tur_sup_tt
-			add_to_variable = {
-				nat_tur_sup_deputies = 60
-			}
-			subtract_from_variable = {
-				nat_tur_opp_deputies = 60
-			}
+			add_to_variable = { nat_tur_sup_deputies = 60 }
+			subtract_from_variable = { nat_tur_opp_deputies = 60 }
 			clamp_variable = {
 				var = nat_tur_opp_deputies
 				min = 0
@@ -2608,14 +2950,11 @@ OTT_congress_turkish_nationalists = {
 				min = 0
 				max = nat_tur_deputies
 			}
+
 			### Add Arab Nationalist votes to coalition
 			custom_effect_tooltip = 60_nat_ara_opp_tt
-			add_to_variable = {
-				nat_ara_opp_deputies = 60
-			}
-			subtract_from_variable = {
-				nat_ara_sup_deputies = 60
-			}
+			add_to_variable = { nat_ara_opp_deputies = 60 }
+			subtract_from_variable = { nat_ara_sup_deputies = 60 }
 			clamp_variable = {
 				var = nat_ara_opp_deputies
 				min = 0
@@ -2626,10 +2965,13 @@ OTT_congress_turkish_nationalists = {
 				min = 0
 				max = nat_ara_deputies
 			}
+
 			### Calculate coalition strength
 			OTT_calc_coalition_strength = yes
+
 			set_country_flag = reform_enacted_tt
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_con_turkish_language_decree"
 			clr_country_flag = reform_enacted_tt
@@ -2640,29 +2982,30 @@ OTT_congress_turkish_nationalists = {
 OTT_congress_arab_nationalists = {
 	### ARAB NATIONALIST CATERING
 	OTT_con_elevate_arab_language = {
-		icon = GFX_decision_generic_decision
+		icon = GFX_decision_eng_trade_unions_support
 		available = {
 			has_completed_focus = OTT_Multi_Level_Democracy
 			NOT = {
 				has_country_flag = reform_enacted_tt
 			}
 		}
+
 		cost = 0
+
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		days_remove = 30
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_con_elevate_arab_language"
 			### Add Turkish Nationalist votes in favour
 			custom_effect_tooltip = 60_nat_tur_opp_tt
-			add_to_variable = {
-				nat_tur_opp_deputies = 60
-			}
-			subtract_from_variable = {
-				nat_tur_sup_deputies = 60
-			}
+			add_to_variable = { nat_tur_opp_deputies = 60 }
+			subtract_from_variable = { nat_tur_sup_deputies = 60 }
 			clamp_variable = {
 				var = nat_tur_opp_deputies
 				min = 0
@@ -2673,14 +3016,11 @@ OTT_congress_arab_nationalists = {
 				min = 0
 				max = nat_tur_deputies
 			}
+
 			### Add Arab Nationalist votes in favour
 			custom_effect_tooltip = 60_nat_ara_sup_tt
-			add_to_variable = {
-				nat_ara_sup_deputies = 60
-			}
-			subtract_from_variable = {
-				nat_ara_opp_deputies = 60
-			}
+			add_to_variable = { nat_ara_sup_deputies = 60 }
+			subtract_from_variable = { nat_ara_opp_deputies = 60 }
 			clamp_variable = {
 				var = nat_ara_opp_deputies
 				min = 0
@@ -2691,10 +3031,13 @@ OTT_congress_arab_nationalists = {
 				min = 0
 				max = nat_ara_deputies
 			}
+
 			### Calculate coalition strength
 			OTT_calc_coalition_strength = yes
+
 			set_country_flag = reform_enacted_tt
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_con_elevate_arab_language"
 			clr_country_flag = reform_enacted_tt
@@ -2707,24 +3050,25 @@ OTT_congress_arab_nationalists = {
 				has_country_flag = reform_enacted_tt
 			}
 		}
+
 		cost = 0
+
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		days_remove = 30
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_con_reappoint_walis"
 			decrease_ruling_party_popularity_by_5 = yes
 			add_stability = -0.05
 			### Add Arab Nationalist votes in favour
 			custom_effect_tooltip = 30_nat_ara_sup_tt
-			add_to_variable = {
-				nat_ara_sup_deputies = 30
-			}
-			subtract_from_variable = {
-				nat_ara_opp_deputies = 30
-			}
+			add_to_variable = { nat_ara_sup_deputies = 30 }
+			subtract_from_variable = { nat_ara_opp_deputies = 30 }
 			clamp_variable = {
 				var = nat_ara_opp_deputies
 				min = 0
@@ -2735,10 +3079,13 @@ OTT_congress_arab_nationalists = {
 				min = 0
 				max = nat_ara_deputies
 			}
+
 			### Calculate coalition strength
 			OTT_calc_coalition_strength = yes
+
 			set_country_flag = reform_enacted_tt
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_con_reappoint_walis"
 			clr_country_flag = reform_enacted_tt
@@ -2752,23 +3099,24 @@ OTT_congress_arab_nationalists = {
 				has_country_flag = reform_enacted_tt
 			}
 		}
+
 		cost = 0
+
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		days_remove = 30
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_con_concessions_to_tribes"
 			decrease_ruling_party_popularity_by_10 = yes
 			### Add Arab Nationalist votes in favour
 			custom_effect_tooltip = 30_nat_ara_sup_tt
-			add_to_variable = {
-				nat_ara_sup_deputies = 30
-			}
-			subtract_from_variable = {
-				nat_ara_opp_deputies = 30
-			}
+			add_to_variable = { nat_ara_sup_deputies = 30 }
+			subtract_from_variable = { nat_ara_opp_deputies = 30 }
 			clamp_variable = {
 				var = nat_ara_opp_deputies
 				min = 0
@@ -2779,10 +3127,13 @@ OTT_congress_arab_nationalists = {
 				min = 0
 				max = nat_ara_deputies
 			}
+
 			### Calculate coalition strength
 			OTT_calc_coalition_strength = yes
+
 			set_country_flag = reform_enacted_tt
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_con_concessions_to_tribes"
 			clr_country_flag = reform_enacted_tt
@@ -2793,18 +3144,23 @@ OTT_congress_arab_nationalists = {
 OTT_congress_conservatives = {
 	### CONSERVATIVE CATERING
 	OTT_con_mosque_renovation_program = {
-		icon = ger_mefo_bills
+		icon = GFX_decision_cement_mixer
 		available = {
 			NOT = {
 				has_country_flag = reform_enacted_tt
 			}
 		}
+
 		cost = 0
+
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		days_remove = 30
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_con_mosque_renovation_program"
 			add_timed_idea = {
@@ -2813,12 +3169,8 @@ OTT_congress_conservatives = {
 			}
 			### Add Conservative votes to Coalition
 			custom_effect_tooltip = 30_con_sup_tt
-			add_to_variable = {
-				con_sup_deputies = 30
-			}
-			subtract_from_variable = {
-				con_opp_deputies = 30
-			}
+			add_to_variable = { con_sup_deputies = 30 }
+			subtract_from_variable = { con_opp_deputies = 30 }
 			clamp_variable = {
 				var = con_opp_deputies
 				min = 0
@@ -2829,10 +3181,13 @@ OTT_congress_conservatives = {
 				min = 0
 				max = con_deputies
 			}
+
 			### Calculate coalition strength
 			OTT_calc_coalition_strength = yes
+
 			set_country_flag = reform_enacted_tt
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_con_mosque_renovation_program"
 			clr_country_flag = reform_enacted_tt
@@ -2845,12 +3200,17 @@ OTT_congress_conservatives = {
 				has_country_flag = reform_enacted_tt
 			}
 		}
+
 		cost = 0
+
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		days_remove = 30
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_con_legalise_polygamy"
 			add_popularity = {
@@ -2864,12 +3224,8 @@ OTT_congress_conservatives = {
 			add_stability = -0.05
 			### Add Conservative votes to Coalition
 			custom_effect_tooltip = 30_con_sup_tt
-			add_to_variable = {
-				con_sup_deputies = 30
-			}
-			subtract_from_variable = {
-				con_opp_deputies = 30
-			}
+			add_to_variable = { con_sup_deputies = 30 }
+			subtract_from_variable = { con_opp_deputies = 30 }
 			clamp_variable = {
 				var = con_opp_deputies
 				min = 0
@@ -2880,39 +3236,43 @@ OTT_congress_conservatives = {
 				min = 0
 				max = con_deputies
 			}
+
 			### Calculate coalition strength
 			OTT_calc_coalition_strength = yes
+
 			set_country_flag = reform_enacted_tt
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_con_legalise_polygamy"
 			clr_country_flag = reform_enacted_tt
 		}
 	}
 	OTT_con_fund_medreses = {
-		icon = GFX_pol_power_icon
+		icon = GFX_decision_give_cash
 		available = {
 			has_completed_focus = OTT_Repeal_Unification_Law
 			NOT = {
 				has_country_flag = reform_enacted_tt
 			}
 		}
+
 		cost = 50
+
 		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 100
 		}
+
 		days_remove = 30
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision OTT_con_fund_medreses"
 			### Add Conservative votes to Coalition
 			custom_effect_tooltip = 30_con_sup_tt
-			add_to_variable = {
-				con_sup_deputies = 30
-			}
-			subtract_from_variable = {
-				con_opp_deputies = 30
-			}
+			add_to_variable = { con_sup_deputies = 30 }
+			subtract_from_variable = { con_opp_deputies = 30 }
 			clamp_variable = {
 				var = con_opp_deputies
 				min = 0
@@ -2923,13 +3283,17 @@ OTT_congress_conservatives = {
 				min = 0
 				max = con_deputies
 			}
+
 			### Calculate coalition strength
 			OTT_calc_coalition_strength = yes
+
 			set_country_flag = reform_enacted_tt
 		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_con_fund_medreses"
 			clr_country_flag = reform_enacted_tt
 		}
 	}
 }
+
