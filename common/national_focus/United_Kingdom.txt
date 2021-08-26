@@ -1621,11 +1621,11 @@ focus_tree = {
 			}
 			if = {
 				limit = { has_tech = CAS3 }
-				add_equipment_to_stockpile = { type = CAS_equipment_3 amount = 100 producer = GBR }
+				add_equipment_to_stockpile = { type = CAS_equipment_1943 amount = 100 producer = GBR }
 			}
 			else_if = {
 				limit = { has_tech = CAS2 }
-				add_equipment_to_stockpile = { type = CAS_equipment_2 amount = 100 producer = GBR }
+				add_equipment_to_stockpile = { type = CAS_equipment_1939 amount = 100 producer = GBR }
 			}
 			else_if = {
 				limit = { has_tech = CAS1 }
@@ -1633,11 +1633,11 @@ focus_tree = {
 			}
 			if = {
 				limit = { has_tech = tactical_bomber3 }
-				add_equipment_to_stockpile = { type = tac_bomber_equipment_3 amount = 100 producer = GBR }
+				add_equipment_to_stockpile = { type = tac_bomber_equipment_1943 amount = 100 producer = GBR }
 			}
 			else_if = {
 				limit = { has_tech = tactical_bomber2 }
-				add_equipment_to_stockpile = { type = tac_bomber_equipment_2 amount = 100 producer = GBR }
+				add_equipment_to_stockpile = { type = tac_bomber_equipment_1939 amount = 100 producer = GBR }
 			}
 			else_if = {
 				limit = { has_tech = tactical_bomber1 }
