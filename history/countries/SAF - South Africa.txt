@@ -69,7 +69,7 @@ SAF_start_naval_variant = yes
 
 set_technology = {
 	### Tanks ###
-	gwtank = 1
+	light_tank_1934 = 1
 
 	### INF ###
 	infantry_weapons = 1
@@ -81,7 +81,7 @@ set_technology = {
 
 	### AIR ###
 	early_fighter = 1
-	early_bomber = 1
+	tactical_bomber_1934 = 1
 	naval_bomber1 = 1
 }
 

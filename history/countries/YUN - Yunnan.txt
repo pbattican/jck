@@ -16,7 +16,7 @@ set_country_flag = YUN_sinicization_for_yall
 set_research_slots = 2
 set_technology = {
 	### Tanks ###
-	gwtank = 1
+	light_tank_1934 = 1
 	### Infantry ###
 	infantry_weapons = 1
 	tech_support = 1

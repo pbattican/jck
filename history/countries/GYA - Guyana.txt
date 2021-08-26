@@ -4,7 +4,7 @@ set_research_slots = 2
 ### Starting Technologies ###
 set_technology = {
 	### Tanks ###
-	gwtank = 1
+	light_tank_1934 = 1
 	### Infantry ###
 	infantry_weapons = 1
 	tech_support = 1

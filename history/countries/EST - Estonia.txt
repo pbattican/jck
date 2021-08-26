@@ -6,7 +6,7 @@ BAT_start_naval_variant = yes
 ## Init tech here, just in case it got released by other tags later on
 set_technology = {
 	### Tanks ###
-	gwtank = 1
+	light_tank_1934 = 1
 	basic_light_tank = 1
 
 	### Infantry ###
@@ -20,7 +20,7 @@ set_technology = {
 
 	### Air ###
 	early_fighter = 1
-	early_bomber = 1
+	tactical_bomber_1934 = 1
 }
 
 ### Navy - MtG ###

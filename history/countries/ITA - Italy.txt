@@ -19,9 +19,9 @@ set_technology = {
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	artillery1 = 1
-	gwtank = 1
+	light_tank_1934 = 1
 	early_fighter = 1
-	early_bomber = 1
+	tactical_bomber_1934 = 1
 	naval_bomber1 = 1
 	CAS1 = 1
 }
