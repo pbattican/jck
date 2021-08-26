@@ -136,8 +136,8 @@ armor_generic = {
 			mot_artillery_brigade
 			engineer
 			mot_recon
-			armored_car_recon
-			light_tank_recon
+			recon_ac
+			light_armor_recon
 			artillery
 			anti_tank
 			signal_company
@@ -256,7 +256,7 @@ armor_generic = {
 
 			engineer
 			mot_recon
-			armored_car_recon
+			recon_ac
 			signal_company
 			maintenance_company
 			logistics_company
@@ -382,7 +382,7 @@ armor_generic = {
 
 			engineer
 			mot_recon
-			armored_car_recon
+			recon_ac
 			signal_company
 			maintenance_company
 			logistics_company
@@ -497,7 +497,7 @@ armor_generic = {
 	# 		motorized_rocket_brigade
 	# 		engineer
 	# 		mot_recon
-	# 		armored_car_recon
+	# 		recon_ac
 	# 		signal_company
 	# 		maintenance_company
 	# 		logistics_company
@@ -616,7 +616,7 @@ armor_generic = {
 	# 		motorized_rocket_brigade
 	# 		engineer
 	# 		mot_recon
-	# 		armored_car_recon
+	# 		recon_ac
 	# 		signal_company
 	# 		maintenance_company
 	# 		logistics_company

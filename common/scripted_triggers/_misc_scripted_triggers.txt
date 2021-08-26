@@ -400,18 +400,18 @@ stop_carrier_fighter_prod = {
 	has_tech = cv_early_fighter
 	if = {
 		limit = { has_tech = cv_fighter3 }
-		check_variable = { num_equipment@cv_fighter_equipment_3 > 10 }
+		check_variable = { num_equipment@cv_fighter_equipment_1944 > 10 }
 	}
 	else_if = {
 		limit = { has_tech = cv_fighter2 }
-		check_variable = { num_equipment@cv_fighter_equipment_2 > 10 }
+		check_variable = { num_equipment@cv_fighter_equipment_1940 > 10 }
 	}
 	else_if = {
 		limit = { has_tech = cv_fighter1 }
-		check_variable = { num_equipment@cv_fighter_equipment_1 > 10 }
+		check_variable = { num_equipment@cv_fighter_equipment_1936 > 10 }
 	}
 	else = {
-		check_variable = { num_equipment@cv_fighter_equipment_0 > 10 }
+		check_variable = { num_equipment@cv_fighter_equipment_1934 > 10 }
 	}
 }
 
@@ -419,14 +419,14 @@ stop_carrier_navbomber_prod = {
 	has_tech = cv_naval_bomber1
 	if = {
 		limit = { has_tech = cv_naval_bomber3 }
-		check_variable = { num_equipment@cv_nav_bomber_equipment_3 > 10 }
+		check_variable = { num_equipment@cv_nav_bomber_equipment_1944 > 10 }
 	}
 	else_if = {
 		limit = { has_tech = cv_naval_bomber2 }
-		check_variable = { num_equipment@cv_nav_bomber_equipment_2 > 10 }
+		check_variable = { num_equipment@cv_nav_bomber_equipment_1940 > 10 }
 	}
 	else = {
-		check_variable = { num_equipment@cv_nav_bomber_equipment_1 > 10 }
+		check_variable = { num_equipment@cv_nav_bomber_equipment_1936 > 10 }
 	}
 }
 
@@ -434,14 +434,14 @@ stop_carrier_cas_prod = {
 	has_tech = cv_CAS1
 	if = {
 		limit = { has_tech = cv_CAS3 }
-		check_variable = { num_equipment@cv_CAS_equipment_3 > 10 }
+		check_variable = { num_equipment@cv_CAS_equipment_1937943 > 10 }
 	}
 	else_if = {
 		limit = { has_tech = cv_CAS2 }
-		check_variable = { num_equipment@cv_CAS_equipment_2 > 10 }
+		check_variable = { num_equipment@cv_CAS_equipment_1937939 > 10 }
 	}
 	else = {
-		check_variable = { num_equipment@cv_CAS_equipment_1 > 10 }
+		check_variable = { num_equipment@cv_CAS_equipment_1937 > 10 }
 	}
 }
 

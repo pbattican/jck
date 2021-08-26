@@ -191,7 +191,7 @@ has_excessive_army_size = {
 	multiply_temp_variable = { num_batt = 0.5 }
 	add_to_temp_variable = { total_manpower_need = num_batt }
 
-	set_temp_variable = { num_batt = num_battalions_with_type@mot_anti_tank_brigade }
+	set_temp_variable = { num_batt = num_battalions_with_type@anti_tank_brigade_mot }
 	multiply_temp_variable = { num_batt = 0.5 }
 	add_to_temp_variable = { total_manpower_need = num_batt }
 
@@ -203,7 +203,7 @@ has_excessive_army_size = {
 	multiply_temp_variable = { num_batt = 0.5 }
 	add_to_temp_variable = { total_manpower_need = num_batt }
 
-	set_temp_variable = { num_batt = num_battalions_with_type@mot_anti_air_brigade }
+	set_temp_variable = { num_batt = num_battalions_with_type@anti_air_mot }
 	multiply_temp_variable = { num_batt = 0.5 }
 	add_to_temp_variable = { total_manpower_need = num_batt }
 
@@ -279,11 +279,11 @@ has_excessive_army_size = {
 	multiply_temp_variable = { num_batt = 0.5 }
 	add_to_temp_variable = { total_manpower_need = num_batt }
 
-	set_temp_variable = { num_batt = num_battalions_with_type@armored_car_recon }
+	set_temp_variable = { num_batt = num_battalions_with_type@recon_ac }
 	multiply_temp_variable = { num_batt = 0.5 }
 	add_to_temp_variable = { total_manpower_need = num_batt }
 
-	set_temp_variable = { num_batt = num_battalions_with_type@light_tank_recon }
+	set_temp_variable = { num_batt = num_battalions_with_type@light_armor_recon }
 	multiply_temp_variable = { num_batt = 0.5 }
 	add_to_temp_variable = { total_manpower_need = num_batt }
 
