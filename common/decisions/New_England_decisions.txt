@@ -261,7 +261,7 @@ NEE_entente_allies = {
 			log = "[GetDateText]: [Root.GetName]: Decision NEE_Purchase_Planes"
 			if = {
 				limit = { CAN = { has_tech = fighter2 } }
-				add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 100 producer = CAN }
+				add_equipment_to_stockpile = { type = fighter_equipment_1939 amount = 100 producer = CAN }
 				else = {
 					add_equipment_to_stockpile = { type = fighter_equipment_1936 amount = 100 producer = CAN }
 				}
