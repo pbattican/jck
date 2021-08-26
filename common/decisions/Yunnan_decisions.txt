@@ -146,7 +146,7 @@ YUN_Buying_fighters_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove YUN_buying_fighters"
 			if = {
-				limit = { has_tech = fighter1 }
+				limit = { has_tech = fighter_1934 }
 				add_equipment_to_stockpile = {
 					type = fighter_equipment_1936
 					amount = 25

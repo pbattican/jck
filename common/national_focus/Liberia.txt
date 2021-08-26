@@ -2475,7 +2475,7 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = LIB_tuskegee }
 		available = {
-			has_tech = fighter1
+			has_tech = fighter_1934
 		}
 		relative_position_id = LIB_tuskegee
 		x = 0

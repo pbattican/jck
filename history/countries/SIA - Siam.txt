@@ -8,7 +8,7 @@ SIA_start_naval_variant = yes
 
 set_technology = {
 	### Tanks ###
-	gwtank = 1 #no tankettes for ya
+	light_tank_1934 = 1 #no tankettes for ya
 
 	### Infantry ###
 	infantry_weapons = 1

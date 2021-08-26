@@ -11,7 +11,7 @@ set_war_support = 0.20
 
 set_technology = {
 	### Tanks ###
-	gwtank = 1
+	light_tank_1934 = 1
 	basic_light_tank = 1
 	basic_light_td = 1
 

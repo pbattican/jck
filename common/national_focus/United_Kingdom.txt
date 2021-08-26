@@ -1608,15 +1608,15 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GBR_take_to_the_air"
 			add_manpower = 20000
 			if = {
-				limit = { has_tech = fighter3 }
+				limit = { has_tech = fighter_1944 }
 				add_equipment_to_stockpile = { type = fighter_equipment_1944 amount = 200 producer = GBR }
 			}
 			else_if = {
-				limit = { has_tech = fighter2 }
+				limit = { has_tech = fighter_1940 }
 				add_equipment_to_stockpile = { type = fighter_equipment_1940 amount = 200 producer = GBR }
 			}
 			else_if = {
-				limit = { has_tech = fighter1 }
+				limit = { has_tech = fighter_1934 }
 				add_equipment_to_stockpile = { type = fighter_equipment_1936 amount = 200 producer = GBR }
 			}
 			if = {

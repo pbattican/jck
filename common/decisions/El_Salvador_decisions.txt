@@ -6,10 +6,10 @@ ELS_Buying_planes_decisions = {
 		}
 		available = {
 			has_tech = early_fighter
-			NOT = { has_tech = fighter1 }
+			NOT = { has_tech = fighter_1934 }
 		}
 		visible = {
-			NOT = { has_tech = fighter1 }
+			NOT = { has_tech = fighter_1934 }
 		}
 		cost = 50
 		days_re_enable = 150
@@ -38,10 +38,10 @@ ELS_Buying_planes_decisions = {
 			original_tag = ELS
 		}
 		available = {
-			has_tech = fighter1
+			has_tech = fighter_1934
 		}
 		visible = {
-			has_tech = fighter1
+			has_tech = fighter_1934
 		}
 		cost = 50
 		days_re_enable = 150

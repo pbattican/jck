@@ -2880,7 +2880,7 @@ focus_tree = {
 			focus = SRI_maintance_schools
 		}
 		available = {
-			has_tech = fighter3
+			has_tech = fighter_1944
 		}
 		x = 0
 		y = 4

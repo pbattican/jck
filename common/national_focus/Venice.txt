@@ -1216,9 +1216,9 @@ focus_tree = {
 				name = VNC_offensive_priorty
 				bonus = 1
 				uses = 1
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
+				technology = fighter_1934
+				technology = fighter_1940
+				technology = fighter_1944
 			}
 			swap_ideas = {
 				remove_idea = VNC_aeronautica_militare_idea
@@ -1287,9 +1287,9 @@ focus_tree = {
 				name = VNC_defned_la_serenissim
 				bonus = 1
 				uses = 1
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
+				technology = fighter_1934
+				technology = fighter_1940
+				technology = fighter_1944
 			}
 			swap_ideas = {
 				remove_idea = VNC_aeronautica_militare_idea

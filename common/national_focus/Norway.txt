@@ -1348,9 +1348,9 @@ focus_tree = {
 				name = NOR_offensive_airforce
 				bonus = 1
 				uses = 1
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
+				technology = fighter_1934
+				technology = fighter_1940
+				technology = fighter_1944
 			}
 			swap_ideas = {
 				remove_idea = NOR_united_airforce_idea
@@ -1413,9 +1413,9 @@ focus_tree = {
 				name = NOR_defensive_airforce
 				bonus = 1
 				uses = 1
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
+				technology = fighter_1934
+				technology = fighter_1940
+				technology = fighter_1944
 			}
 			swap_ideas = {
 				remove_idea = NOR_united_airforce_idea
@@ -4149,8 +4149,8 @@ focus_tree = {
 				}
 			}
 			if = {
-				limit = { NOT = { has_tech = fighter1 } }
-				set_technology = { fighter1 = 1 }
+				limit = { NOT = { has_tech = fighter_1934 } }
+				set_technology = { fighter_1934 = 1 }
 			}
 			else = {
 				add_equipment_to_stockpile = {

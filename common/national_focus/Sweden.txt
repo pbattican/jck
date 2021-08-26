@@ -3442,7 +3442,7 @@ focus_tree = {
 				name = SWE_modern_fighter
 				bonus = 1
 				uses = 1
-				technology = fighter1
+				technology = fighter_1934
 			}
 			air_experience = 10
 		}
@@ -3893,7 +3893,7 @@ focus_tree = {
 				name = SWE_fighter_1
 				bonus = 1
 				uses = 1
-				technology = fighter2
+				technology = fighter_1940
 			}
 			add_ideas = SWE_nordenskiold_idea
 			air_experience = 10
@@ -3999,7 +3999,7 @@ focus_tree = {
 				name = SWE_fighter_2
 				bonus = 1
 				uses = 1
-				technology = fighter3
+				technology = fighter_1944
 			}
 			swap_ideas = {
 				remove_idea = SWE_nordenskiold_idea_3

@@ -7,7 +7,7 @@ FNG_start_naval_variant = yes
 
 set_technology = {
 	#### Tanks ####
-	gwtank = 1
+	light_tank_1934 = 1
 
 	#### INF ####
 	infantry_weapons = 1
