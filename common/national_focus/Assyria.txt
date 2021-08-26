@@ -2360,7 +2360,7 @@ focus_tree = {
 				uses = 1
 			}
 			add_equipment_to_stockpile = {
-				type = light_tank_equipment_1
+				type = light_tank_equipment_1934
 				amount = 50
 				producer = AST
 			}
@@ -2435,7 +2435,7 @@ focus_tree = {
 				uses = 1
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1
+				type = fighter_equipment_1934
 				amount = 30
 				producer = CAN
 			}

@@ -270,7 +270,7 @@ shared_focus = {
 		}
 		custom_effect_tooltip = BAT_armor_division_template_gained
 		add_equipment_to_stockpile = {
-			type = light_tank_equipment_1
+			type = light_tank_equipment_1934
 			amount = 200
 			producer = BAT
 		}
@@ -735,7 +735,7 @@ shared_focus = {
 			}
 			create_equipment_variant = {
 				name = "Sturmpanzerwagen 'Herzog Gotthard Kettler' v.1937"
-				type = light_tank_equipment_1
+				type = light_tank_equipment_1934
 				upgrades = {
 					tank_gun_upgrade = 2
 					tank_armor_upgrade = 2
@@ -753,7 +753,7 @@ shared_focus = {
 			}
 			create_equipment_variant = {
 				name = "Sturmpanzerwagen 'Herzog Gotthard Kettler' v.1937"
-				type = light_tank_equipment_2
+				type = light_tank_equipment_1938
 				upgrades = {
 					tank_gun_upgrade = 2
 					tank_armor_upgrade = 2
@@ -771,7 +771,7 @@ shared_focus = {
 			}
 			create_equipment_variant = {
 				name = "Sturmpanzerwagen 'Herzog Gotthard Kettler' v.1939"
-				type = medium_tank_equipment_1
+				type = medium_tank_equipment_1937
 				upgrades = {
 					tank_gun_upgrade = 2
 					tank_armor_upgrade = 2
@@ -789,7 +789,7 @@ shared_focus = {
 			}
 			create_equipment_variant = {
 				name = "Sturmpanzerwagen 'Herzog Gotthard Kettler' v.1941"
-				type = medium_tank_equipment_2
+				type = medium_tank_equipment_1939
 				upgrades = {
 					tank_gun_upgrade = 2
 					tank_armor_upgrade = 2
@@ -807,7 +807,7 @@ shared_focus = {
 			}
 			create_equipment_variant = {
 				name = "Sturmpanzerwagen 'Herzog Gotthard Kettler' v.1943"
-				type = medium_tank_equipment_3
+				type = medium_tank_equipment_1941
 				upgrades = {
 					tank_gun_upgrade = 2
 					tank_armor_upgrade = 2

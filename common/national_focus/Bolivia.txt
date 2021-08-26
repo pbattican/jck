@@ -1916,7 +1916,7 @@ focus_tree = {
 				uses = 1
 				category = light_air
 			}
-			add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 25 producer = CAN }
+			add_equipment_to_stockpile = { type = fighter_equipment_1934 amount = 25 producer = CAN }
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
