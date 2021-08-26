@@ -136,7 +136,7 @@ set_stability = 0.40
 set_war_support = 0.45
 
 add_equipment_to_stockpile = {
-	type = gw_tank_equipment
+	type = light_tank_equipment_1934
 	amount = 64
 	producer = JAP
 }

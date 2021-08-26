@@ -69,7 +69,7 @@ add_equipment_to_stockpile = {
 	producer = GXC
 }
 add_equipment_to_stockpile = {
-	type = fighter_equipment_0
+	type = fighter_equipment_1934
 	amount = 20
 	producer = GER
 }

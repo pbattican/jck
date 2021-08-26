@@ -13,7 +13,7 @@ add_ideas = {
 	BOL_Struggling_Economy
 }
 
-add_equipment_to_stockpile = { type = gw_tank_equipment amount = 3 producer = USA }
+add_equipment_to_stockpile = { type = light_tank_equipment_1934 amount = 3 producer = USA }
 
 country_event = {
 	id = bol.1

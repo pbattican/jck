@@ -171,7 +171,7 @@ set_variable = { GEA_AOG_CITIES_NUMBER = 4 }
 
 add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 4000 producer = GER }
 add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1000 producer = GER }
-add_equipment_to_stockpile = { type = gw_tank_equipment amount = 220 producer = GER }
+add_equipment_to_stockpile = { type = light_tank_equipment_1934 amount = 220 producer = GER }
 add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 600 producer = GER }
 add_manpower = 35000
 

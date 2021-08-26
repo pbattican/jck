@@ -116,18 +116,18 @@ add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 30 producer
 add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 40 producer = USA } # Some ford trucks (rough estimate)
 
 	# Tanks/Tankettes
-add_equipment_to_stockpile = { type = gw_tank_equipment amount = 2 producer = ENG } #Captured
-add_equipment_to_stockpile = { type = gw_tank_equipment amount = 52 producer = GER } # Bought (Replace OTL's Modified Carden Loyd tankette, Vickers-6-Ton)
-add_equipment_to_stockpile = { type = gw_tank_equipment amount = 1 producer = SIA } # Siam's Prototype Tank
+add_equipment_to_stockpile = { type = light_tank_equipment_1934 amount = 2 producer = ENG } #Captured
+add_equipment_to_stockpile = { type = light_tank_equipment_1934 amount = 52 producer = GER } # Bought (Replace OTL's Modified Carden Loyd tankette, Vickers-6-Ton)
+add_equipment_to_stockpile = { type = light_tank_equipment_1934 amount = 1 producer = SIA } # Siam's Prototype Tank
 
 	# Fighter Planes
-add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 1 producer = GER } # 2 - Heinkel HD 43
-add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 5 producer = SIA } # 20 - Fighter Type-5 Prajadhipok
-add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 42 producer = USA } # 124 - Curtis Hawk II & III, Vought O2U Corsair
+add_equipment_to_stockpile = { type = fighter_equipment_1934 amount = 1 producer = GER } # 2 - Heinkel HD 43
+add_equipment_to_stockpile = { type = fighter_equipment_1934 amount = 5 producer = SIA } # 20 - Fighter Type-5 Prajadhipok
+add_equipment_to_stockpile = { type = fighter_equipment_1934 amount = 42 producer = USA } # 124 - Curtis Hawk II & III, Vought O2U Corsair
 
 	# Bomber Planes
-add_equipment_to_stockpile = { type = tac_bomber_equipment_0 amount = 13 producer = NFA } # 42 - Breguet 14 & Nieuport-Delage NiD 29
-add_equipment_to_stockpile = { type = tac_bomber_equipment_0 amount = 3 producer = SIA } # 10 - Bomber Type-2 Boripatr
+add_equipment_to_stockpile = { type = tac_bomber_equipment_1934 amount = 13 producer = NFA } # 42 - Breguet 14 & Nieuport-Delage NiD 29
+add_equipment_to_stockpile = { type = tac_bomber_equipment_1934 amount = 3 producer = SIA } # 10 - Bomber Type-2 Boripatr
 
 BRM = { embargo_ROOT = yes }
 

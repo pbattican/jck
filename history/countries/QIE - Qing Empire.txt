@@ -99,13 +99,13 @@ add_equipment_to_stockpile = {
 }
 
 add_equipment_to_stockpile = {
-	type = tac_bomber_equipment_0
+	type = tac_bomber_equipment_1934
 	amount = 50
 	producer = GER
 }
 
 add_equipment_to_stockpile = {
-	type = fighter_equipment_0
+	type = fighter_equipment_1934
 	amount = 25
 	producer = GER
 }
