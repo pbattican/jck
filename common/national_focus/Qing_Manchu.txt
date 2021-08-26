@@ -646,7 +646,7 @@ focus_tree = {
 					name = QIE_ncera_industry
 					bonus = 0.5
 					uses = 1
-					category = dispersed_industry_tech
+					category = disp_industry
 				}
 			}
 		}
