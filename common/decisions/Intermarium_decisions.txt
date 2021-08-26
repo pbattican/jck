@@ -1036,7 +1036,7 @@ MIE_decisions = {
 			every_other_country = {
 				limit = {
 					has_country_flag = MIE_member
-					has_tech = early_fighter
+					has_tech = fighter_1934
 				}
 				country_event = mie.8
 				effect_tooltip = {

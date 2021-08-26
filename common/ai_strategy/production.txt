@@ -690,7 +690,7 @@ more_mobile_production = {
 
 default_armored_production = {
 	enable = {
-		has_tech = basic_light_tank
+		has_tech = light_tank_1936
 		num_of_military_factories > 10
 	}
 
@@ -776,7 +776,7 @@ more_heavy_armor_production = {
 
 higher_armored_production = {
 	enable = {
-		has_tech = basic_light_tank
+		has_tech = light_tank_1936
 		num_of_military_factories > 49
 	}
 
@@ -863,7 +863,7 @@ default_antitank_production = {
 	}
 	enable = {
 		num_of_military_factories > 50
-		has_tech = basic_light_td
+		has_tech = light_td_1938
 		has_tech = interwar_antitank
 		date > 1938.1.1
 		OR = {
@@ -921,7 +921,7 @@ default_antitank_template = {
 	}
 	enable = {
 		num_of_military_factories > 50
-		has_tech = basic_light_td
+		has_tech = light_td_1938
 		has_tech = interwar_antitank
 		OR = {
 			tag = GER

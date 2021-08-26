@@ -1977,7 +1977,7 @@ country_event = { #Fighter-Bombers or Bombers
 		}
 		if = {
 			limit = {
-				RUS = { has_tech = early_bomber }
+				RUS = { has_tech = tactical_bomber_1934 }
 			}
 			add_equipment_to_stockpile = {
 				type = tac_bomber_equipment

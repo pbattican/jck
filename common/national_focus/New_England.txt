@@ -498,7 +498,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_tech = tactical_bomber1
+			has_tech = tactical_bomber_1937
 		}
 		available_if_capitulated = yes
 		completion_reward = {
@@ -508,8 +508,8 @@ focus_tree = {
 				name = NEE_B25_Bomber
 				bonus = 1
 				uses = 1
-				technology = tactical_bomber2
-				technology = tactical_bomber3
+				technology = tactical_bomber_1939
+				technology = tactical_bomber_1943
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1001,7 +1001,7 @@ focus_tree = {
 		icon = GFX_focus_NZL_bob_semple_tank
 		cost = 6
 		available = {
-			has_tech = improved_light_tank
+			has_tech = light_tank_1938
 		}
 		prerequisite = {
 			focus = NEE_Maine_Steel
@@ -1023,7 +1023,7 @@ focus_tree = {
 				name = NEE_Minutetank
 				ahead_reduction = 2
 				uses = 1
-				technology = advanced_light_tank
+				technology = light_tank_1940
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1633,8 +1633,8 @@ focus_tree = {
 		}
 		available = {
 			is_in_faction_with = ENT
-			has_tech = improved_light_tank
-			ENT = { has_tech = improved_light_tank }
+			has_tech = light_tank_1938
+			ENT = { has_tech = light_tank_1938 }
 		}
 		available_if_capitulated = yes
 		completion_reward = {

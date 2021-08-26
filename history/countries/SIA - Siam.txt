@@ -23,7 +23,7 @@ set_technology = {
 
 	### Air ###
 	fighter_1934 = 1 #Prajadhipok
-	early_bomber = 1 #Boripatr
+	tactical_bomber_1934 = 1 #Boripatr
 	CAS_1937 = 1
 }
 
@@ -32,7 +32,7 @@ if = {
 		has_dlc = "La Resistance"
 	}
 	set_technology = {
-		armored_car1 = 1
+		tech_armored_cars = 1
 	}
 }
 

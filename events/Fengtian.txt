@@ -4739,7 +4739,7 @@ country_event = { # Fengtian requests tanks
 		if = {
 			limit = {
 				JAP = {
-					has_tech = basic_light_tank
+					has_tech = light_tank_1936
 					NOT = {
 						has_tech = light_tank_1936
 					}

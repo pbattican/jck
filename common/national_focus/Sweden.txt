@@ -3096,8 +3096,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SWE_pansartrupperna"
 			if = {
-				limit = { NOT = { has_tech = basic_light_tank } }
-				set_technology = { basic_light_tank = 1 }
+				limit = { NOT = { has_tech = light_tank_1936 } }
+				set_technology = { light_tank_1936 = 1 }
 
 				else = {
 					add_tech_bonus = {

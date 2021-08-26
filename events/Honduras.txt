@@ -1027,10 +1027,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = early_bomber }
+				NOT = { has_tech = tactical_bomber_1934 }
 			}
 			hidden_effect = {
-				set_technology = { early_bomber = 1 popup = no }
+				set_technology = { tactical_bomber_1934 = 1 popup = no }
 			}
 		}
 		add_equipment_to_stockpile = {
@@ -1048,10 +1048,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = early_bomber }
+				NOT = { has_tech = tactical_bomber_1934 }
 			}
 			hidden_effect = {
-				set_technology = { early_bomber = 1 popup = no }
+				set_technology = { tactical_bomber_1934 = 1 popup = no }
 			}
 		}
 		add_equipment_to_stockpile = {
@@ -1069,10 +1069,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = early_bomber }
+				NOT = { has_tech = tactical_bomber_1934 }
 			}
 			hidden_effect = {
-				set_technology = { early_bomber = 1 popup = no }
+				set_technology = { tactical_bomber_1934 = 1 popup = no }
 			}
 		}
 		if = {
@@ -1098,10 +1098,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = early_bomber }
+				NOT = { has_tech = tactical_bomber_1934 }
 			}
 			hidden_effect = {
-				set_technology = { early_bomber = 1 popup = no }
+				set_technology = { tactical_bomber_1934 = 1 popup = no }
 			}
 		}
 		add_equipment_to_stockpile = {

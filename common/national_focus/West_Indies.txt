@@ -1147,13 +1147,13 @@ focus_tree = {
 				name = CAF_reaching_all_skies
 				bonus = 0.5
 				uses = 1
-				technology = early_fighter
+				technology = fighter_1934
 				technology = fighter_1936
 				technology = fighter_1940
 				technology = fighter_1944
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				technology = heavy_fighter_1936
+				technology = heavy_fighter_1940
+				technology = heavy_fighter_1944
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1181,7 +1181,7 @@ focus_tree = {
 				name = CAF_control_our_skies
 				bonus = 1
 				uses = 1
-				technology = early_fighter
+				technology = fighter_1934
 				technology = fighter_1936
 				technology = fighter_1940
 				technology = fighter_1944
@@ -1212,9 +1212,9 @@ focus_tree = {
 				name = CAF_heavier_fighters
 				bonus = 1
 				uses = 1
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				technology = heavy_fighter_1936
+				technology = heavy_fighter_1940
+				technology = heavy_fighter_1944
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }

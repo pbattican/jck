@@ -397,7 +397,7 @@ stop_antitank_prod = {
 }
 
 stop_carrier_fighter_prod = {
-	has_tech = cv_early_fighter
+	has_tech = cv_fighter_1934
 	if = {
 		limit = { has_tech = cv_fighter3 }
 		check_variable = { num_equipment@cv_fighter_equipment_1944 > 10 }
@@ -416,7 +416,7 @@ stop_carrier_fighter_prod = {
 }
 
 stop_carrier_navbomber_prod = {
-	has_tech = cv_naval_bomber1
+	has_tech = cv_naval_bomber_1936
 	if = {
 		limit = { has_tech = cv_naval_bomber3 }
 		check_variable = { num_equipment@cv_nav_bomber_equipment_1944 > 10 }

@@ -850,13 +850,13 @@ focus_tree = {
 				name = GOY_aircraft
 				bonus = 1
 				uses = 2
-				technology = early_fighter
+				technology = fighter_1934
 				technology = fighter_1936
 				technology = fighter_1940
 				technology = fighter_1944
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				technology = heavy_fighter_1936
+				technology = heavy_fighter_1940
+				technology = heavy_fighter_1944
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -879,9 +879,9 @@ focus_tree = {
 				name = GOY_bombs
 				bonus = 1
 				uses = 2
-				technology = strategic_bomber1
-				technology = strategic_bomber2
-				technology = strategic_bomber3
+				technology = strategic_bomber_1937
+				technology = strategic_bomber_1939
+				technology = strategic_bomber_1943
 				category = tactical_bomber
 			}
 		}

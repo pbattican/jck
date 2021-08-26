@@ -1473,7 +1473,7 @@ focus_tree = {
 
 		available = {
 			has_tech = motorised_infantry
-			has_tech = basic_light_tank
+			has_tech = light_tank_1936
 		}
 
 		x = -1
