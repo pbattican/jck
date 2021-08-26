@@ -7,7 +7,7 @@ set_technology = {
 	### Tanks ###
 	light_tank_1934 = 1
 	### Air ###
-	early_fighter = 1
+	fighter_1934 = 1
 }
 
 set_politics = {

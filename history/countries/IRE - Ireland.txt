@@ -11,7 +11,7 @@ set_technology = {
 	### General ###
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	early_fighter = 1
+	fighter_1934 = 1
 	artillery1 = 1
 	light_tank_1934 = 1
 	tech_support = 1

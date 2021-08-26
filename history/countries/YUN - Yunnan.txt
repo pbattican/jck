@@ -25,7 +25,7 @@ set_technology = {
 	tech_recon = 1
 	artillery1 = 1
 	### Air ###
-	early_fighter = 1
+	fighter_1934 = 1
 }
 
 country_event = { id = yun.1 days = 1 }

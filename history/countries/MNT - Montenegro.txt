@@ -8,7 +8,7 @@ set_technology = {
 	tech_recon = 1
 	tech_mountaineers = 1
 	### Air ###
-	early_fighter = 1
+	fighter_1934 = 1
 }
 
 set_politics = {

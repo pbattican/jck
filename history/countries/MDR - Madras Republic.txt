@@ -15,7 +15,7 @@ set_technology = {
 	tech_engineers = 1
 	artillery1 = 1
 	### Air ###
-	early_fighter = 1
+	fighter_1934 = 1
 }
 
 add_ideas = {

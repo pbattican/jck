@@ -11,7 +11,7 @@ set_convoys = 70
 set_technology = {
 	### Tanks ###
 	light_tank_1934 = 1
-	basic_light_tank = 1
+	light_tank_1936 = 1
 
 	### Infantry ###
 	infantry_weapons = 1
@@ -23,9 +23,9 @@ set_technology = {
 	tech_mountaineers = 1
 
 	### Air ###
-	early_fighter = 1
+	fighter_1934 = 1
 	tactical_bomber_1934 = 1
-	naval_bomber1 = 1
+	naval_bomber_1936 = 1
 	strategic_bomber1 = 1
 }
 

@@ -12,7 +12,7 @@ AUS_start_naval_variant = yes
 set_technology = {
 	### Tanks ###
 	light_tank_1934 = 1
-	basic_light_tank = 1
+	light_tank_1936 = 1
 
 	### Infantry ###
 	infantry_weapons = 1
@@ -24,8 +24,8 @@ set_technology = {
 	artillery1 = 1
 
 	### Air ###
-	early_fighter = 1
-	naval_bomber1 = 1
+	fighter_1934 = 1
+	naval_bomber_1936 = 1
 }
 
 ### Navy - MtG ###

@@ -15,7 +15,7 @@ set_technology = {
 	tech_recon = 1
 
 	### Air ###
-	early_fighter = 1
+	fighter_1934 = 1
 }
 
 country_event = { id = whrpol.1 days = 1 } #Intro

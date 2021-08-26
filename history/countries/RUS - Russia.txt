@@ -27,11 +27,11 @@ set_technology = {
 	
 	### Tanks ###
 	light_tank_1934 = 1
-	basic_light_tank = 1
-	basic_heavy_tank = 1
+	light_tank_1936 = 1
+	heavy_tank_1934 = 1
 	
 	### Air ###
-	early_fighter = 1
+	fighter_1934 = 1
 	tactical_bomber_1934 = 1
 }
 

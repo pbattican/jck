@@ -20,10 +20,10 @@ set_technology = {
 	motorised_infantry = 1
 	artillery1 = 1
 	light_tank_1934 = 1
-	early_fighter = 1
+	fighter_1934 = 1
 	tactical_bomber_1934 = 1
-	naval_bomber1 = 1
-	CAS1 = 1
+	naval_bomber_1936 = 1
+	CAS_1937 = 1
 }
 
 ### Navy - MtG ###

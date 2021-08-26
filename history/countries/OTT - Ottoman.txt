@@ -22,7 +22,7 @@ set_technology = {
 	tech_armored_cars = 1
 	tech_military_police = 1
 	tech_field_hospital = 1
-	camelry = 1
+	
 
 	### AIR ###
 	fighter_1934 = 1

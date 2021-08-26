@@ -29,8 +29,8 @@ set_technology = {
 	artillery1 = 1
 
 	### Air ###
-	early_fighter = 1
-	naval_bomber1 = 1
+	fighter_1934 = 1
+	naval_bomber_1936 = 1
 	tactical_bomber_1934 = 1
 }
 
