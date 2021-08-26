@@ -971,10 +971,10 @@ QIE_buy_german_eqip_decisions = {	#purchase german small arms
 			base = 0
 			modifier = {
 				# avoid division by zero
-				check_variable = { num_target_equipment_in_armies@armored_car_equipment > 0 }
+				check_variable = { num_target_equipment_in_armies@armored_cars_equipment > 0 }
 
-				set_temp_variable = { QIE_armoured_car_ratio = num_equipment_in_armies@armored_car_equipment }
-				divide_temp_variable = { QIE_armoured_car_ratio = num_target_equipment_in_armies@armored_car_equipment }
+				set_temp_variable = { QIE_armoured_car_ratio = num_equipment_in_armies@armored_cars_equipment }
+				divide_temp_variable = { QIE_armoured_car_ratio = num_target_equipment_in_armies@armored_cars_equipment }
 
 				set_temp_variable = { QIE_purchase_armoured_car_factor = 1 }
 				subtract_from_temp_variable = { QIE_purchase_armoured_car_factor = QIE_armoured_car_ratio }
@@ -998,7 +998,7 @@ QIE_buy_german_eqip_decisions = {	#purchase german small arms
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_buy_ger_armored_cars"
 			add_equipment_to_stockpile = {
-				type = gw_armored_car_equipment
+				type = armored_cars_equipment_1
 				amount = 200
 				producer = GER
 			}
