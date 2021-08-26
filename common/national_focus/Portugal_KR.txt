@@ -2134,9 +2134,9 @@ focus_tree = {
 				bonus = 1
 				uses = 2
 				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
+				technology = fighter_1936
+				technology = fighter_1940
+				technology = fighter_1944
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }

@@ -806,7 +806,7 @@ JAP_influence_china = {
 		available = {
 			FROM = {
 				NOT = {
-					has_tech = fighter2
+					has_tech = fighter_1940
 				}
 			}
 		}
@@ -848,8 +848,8 @@ JAP_influence_china = {
 			}
 			if = {
 				limit = {
-					FROM = { has_tech = fighter1 }
-					has_tech = fighter2
+					FROM = { has_tech = fighter_1936 }
+					has_tech = fighter_1940
 				}
 				effect_tooltip = {
 					create_production_license = {

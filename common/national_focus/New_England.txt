@@ -471,7 +471,7 @@ focus_tree = {
 				name = NEE_Paladin_Fighter
 				bonus = 1
 				uses = 1
-				technology = fighter2
+				technology = fighter_1940
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -534,7 +534,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_tech = fighter1
+			has_tech = fighter_1936
 		}
 		available_if_capitulated = yes
 		completion_reward = {
@@ -543,7 +543,7 @@ focus_tree = {
 				name = NEE_P51_Mustang
 				bonus = 1
 				uses = 1
-				technology = fighter3
+				technology = fighter_1944
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
