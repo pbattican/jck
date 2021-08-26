@@ -1,0 +1,490 @@
+﻿capital = 840
+OOB = "FIN"
+set_naval_oob= "FIN_naval"
+
+FIN_start_naval_variant = yes
+
+set_technology = {
+	### General ###
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1
+	early_fighter = 1
+	early_bomber = 1
+	fighter_1936 = 1
+}
+### Naval ###
+
+### Navy - MtG ###
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		coastal_defense_ships = 1
+
+		## Modules##
+		basic_depth_charges = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_secondary_battery = 1
+		improved_ship_torpedo_launcher = 1
+		basic_cruiser_armor_scheme = 1
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+
+		### Transport ###
+		mtg_transport = 1
+	}
+}
+
+### Navy - Non MtG ###
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_submarine = 1
+		basic_submarine = 1
+
+		### Transport ###
+		transport = 1
+	}
+}
+
+country_event = { id = finland.1 days = 1 }
+country_event = { id = finland.129 days = 1609 }
+
+set_war_support = 0.4
+set_cosmetic_tag = FIN_kingdom
+
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 0
+	syndicalist = 3
+	radical_socialist = 0
+	social_democrat = 29
+	social_liberal = 7
+	market_liberal = 1
+	social_conservative = 14
+	authoritarian_democrat = 4
+	paternal_autocrat = 30
+	national_populist = 12
+}
+
+set_convoys = 20
+
+set_research_slots = 3
+
+add_opinion_modifier = { target = GER modifier = KR_approves_of_govt }
+reverse_add_opinion_modifier = { target = GER modifier = KR_approves_of_govt }
+diplomatic_relation = { country = GER relation = non_aggression_pact }
+give_military_access = GER
+
+add_ideas = {
+	FIN_sisu
+	FIN_mounting_dissent_idea
+	FIN_ukrainian_grain_imports_idea
+
+	FIN_Juho_Kusti_Paasikivi_hog_pau
+	FIN_Kaarle_Nestor_Rantakari_for_pau
+	FIN_Karl_Alfred_Paloheimo_eco_pau
+	FIN_Hjalmar_Procope_sec_pau
+
+	limited_conscription
+}
+
+create_country_leader = {
+	name = "Otto Wille Kuusinen"
+	picture = "Portrait_FIN_Otto_Wille_Kuusinen.png"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+	traits = {
+		backroom_backstabber
+	}
+}
+
+create_country_leader = {
+	name = "Kullervo Manner"
+	picture = "Portrait_FIN_Kullervo_Manner.png"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+	traits = {
+		permanent_revolutionary
+	}
+}
+
+create_country_leader = {
+	name = "Oskari Tokoi"
+	picture = "Portrait_FIN_Oskari_Tokoi.png"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+	traits = {
+		economic_reformer
+	}
+}
+
+create_country_leader = {
+	name = "Väinö Tanner"
+	picture = "Portrait_FIN_Vaino_Tanner.png"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+	traits = {
+		tenacious_negotiator
+	}
+}
+
+create_country_leader = {
+	name = "Kyösti Kallio"
+	picture = "Portrait_Fin_Kyosti_Kallio.png"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+		strict_austerity_adherent
+	}
+}
+
+create_country_leader = {
+	name = "Kaarlo Juho Ståhlberg"
+	picture = "Portrait_FIN_Kaarlo_Juho_Stahlberg.png"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+	traits = {
+		appeaser
+	}
+}
+
+create_country_leader = {
+	name = "Pehr Evind Svinhufvud"
+	picture = "Portrait_FIN_Pehr_Evind_Svinhufvud.png"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = {
+		silent_workhorse
+
+	}
+}
+
+create_country_leader = {
+	name = "Carl Gustaf Mannerheim"
+	picture = "Portrait_FIN_Carl_Gustaf_Mannerheim.png"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+	traits = {
+		great_war_hero
+	}
+}
+
+create_country_leader = {
+	name = "Juho Kusti Paasikivi"
+	picture = "Portrait_FIN_Juho_Kusti_Paasikivi.png"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = {
+		tenacious_negotiator
+	}
+}
+
+create_country_leader = {
+	name = "Fredrik Kaarle I"
+	desc = "POLITICS_FREDRIK_KAARLE_DESC"
+	picture = "Portrait_FIN_Fredrik_Kaarle_I.png"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+	traits = {
+		CAN_humble
+	}
+}
+
+create_country_leader = {
+	name = "Kurt Martti Wallenius"
+	picture = "Portrait_FIN_Kurt_Martti_Wallenius.png"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+	traits = {
+		propaganda_expert
+	}
+}
+
+### Field Marshals ###
+
+create_field_marshal = {
+	name = "Erik Heinrichs"
+	picture = "Portrait_FIN_Erik_Heinrichs.png"
+	id = 329
+	traits = {
+		career_officer
+		politically_connected
+		infantry_leader
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_field_marshal = {
+	name = "Lauri Malmberg"
+	picture = "Portrait_FIN_Lauri_Malmberg.png"
+	id = 331
+	traits = {
+		career_officer
+		politically_connected
+		organizer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+### Corps Commanders ###
+create_corps_commander = {
+	name = "Karl Lennart Oesch"
+	picture = "Portrait_FIN_Karl_Lennart_Oesch.png"
+	id = 326
+	traits = {
+		trait_cautious
+		inflexible_strategist
+		organizer
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Aksel Airo"
+	picture = "Portrait_FIN_Aksel_Airo.png"
+	traits = {
+		career_officer
+		artillery_specialist
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Aaro Pajari"
+	picture = "Portrait_FIN_Aaro_Pajari.png"
+	traits = {
+		brilliant_strategist
+		trait_reckless
+		trickster
+		guerilla_fighter
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Wiljo Tuompo"
+	picture = "Portrait_FIN_Wiljo_Tuompo.png"
+	traits = {
+		career_officer
+		skilled_staffer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Ruben Lagus"
+	picture = "Portrait_FIN_Ruben_Lagus.png"
+	id = 327
+	traits = {
+		trait_reckless
+		armor_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Vilho Peter Nenonen"
+	picture = "Portrait_FIN_Vilho_Peter_Nenonen.png"
+	id = 332
+	traits = {
+		career_officer
+		artillery_specialist
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Paavo Talvela"
+	picture = "Portrait_FIN_Paavo_Talvela.png"
+	id = 747910
+	traits = {
+		brilliant_strategist
+		politically_connected
+	}
+	skill = 2
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Paul von Gerich"
+	picture = "Portrait_FIN_Paul_von_Gerich.png"
+	traits = {
+		old_guard
+		inflexible_strategist
+		organizer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Hjalmar Siilasvuo"
+	picture = "Portrait_FIN_Hjalmar_Siilasvuo.png"
+	id = 328
+	traits = {
+		brilliant_strategist
+		ranger
+		commando
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Niilo Hersalo"
+	picture = "Portrait_FIN_Niilo_Hersalo.png"
+	traits = {
+		career_officer
+		infantry_leader
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Harald Öhquist"
+	picture = "Portrait_FIN_Harald_Ohquist.png"
+	id = 330
+	traits = {
+		career_officer
+		harsh_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+
+create_corps_commander = {
+	name = "Hugo Österman"
+	picture = "Portrait_FIN_Hugo_Osterman.png"
+	traits = {
+		career_officer
+		infantry_leader
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+### Admirals ###
+
+create_navy_leader = {
+	name = "Väinö Valve"
+	picture = "Portrait_FIN_Vaino_Valve.png"
+	traits = {
+		blockade_runner
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Eero Rahola"
+	picture = "Portrait_FIN_Eero_Rahola.png"
+	traits = {
+		spotter
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Svante Sundman"
+	picture = "Portrait_FIN_Svante_Sundman.png"
+	traits = {
+		superior_tactician
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 1
+}
