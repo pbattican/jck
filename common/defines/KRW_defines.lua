@@ -1,4 +1,4 @@
---- UPDATED ON 06-08-2021 | Let's see if Fredy notices this and send me a DM. :-)
+--- UPDATED ON 26-08-2021 | Let's see if Fredy notices this and send me a DM. :-)
 
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 100
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 60
@@ -10,6 +10,7 @@ NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
 
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 6 --12
 NDefines.NGame.GAME_SPEED_SECONDS = { 0.5, 0.3, 0.195, 0.075, 0.0 }
+NDefines.NCountry.INTERPOLATED_FRONT_STEPS_SHORT = 1
 
 --- Peace treaty behavior
 NDefines.NDiplomacy.MP_NUM_WINNERS_FOR_PEACE_PAUSE = 2
