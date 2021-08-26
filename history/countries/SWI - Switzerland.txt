@@ -9,11 +9,11 @@ set_technology = {
 	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
-	gw_artillery = 1
+	artillery1 = 1
 	### Air ###
-	early_fighter = 1
+	fighter_1934 = 1
 	early_bomber = 1
-	CAS1 = 1
+	CAS_1937 = 1
 }
 
 set_stability = 0.6

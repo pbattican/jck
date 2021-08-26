@@ -217,7 +217,7 @@ stop_infantry_prod = {
 }
 
 slow_artillery_prod = {
-	has_tech = gw_artillery
+	has_tech = artillery1
 	if = {
 		limit = { num_of_military_factories > 50 }
 		if = {
@@ -251,7 +251,7 @@ slow_artillery_prod = {
 }
 
 stop_artillery_prod = {
-	has_tech = gw_artillery
+	has_tech = artillery1
 	if = {
 		limit = { num_of_military_factories > 50 }
 		if = {

@@ -850,7 +850,7 @@ QIE_buy_german_eqip_decisions = {	#purchase german small arms
 			has_completed_focus = QIE_motorized_armor
 		}
 		visible = {
-			GER = { has_tech = basic_medium_tank }
+			GER = { has_tech = medium_tank_1937 }
 		}
 
 		fire_only_once = no

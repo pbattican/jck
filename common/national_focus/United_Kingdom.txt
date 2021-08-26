@@ -1628,7 +1628,7 @@ focus_tree = {
 				add_equipment_to_stockpile = { type = CAS_equipment_1939 amount = 100 producer = GBR }
 			}
 			else_if = {
-				limit = { has_tech = CAS1 }
+				limit = { has_tech = CAS_1937 }
 				add_equipment_to_stockpile = { type = CAS_equipment_1935 amount = 100 producer = GBR }
 			}
 			if = {

@@ -11223,8 +11223,8 @@ country_event = {
 	option = {
 		name = holfocus.400.a
 		if = {
-			limit = { can_research = fighter1 }
-			set_technology = { fighter1 = 1 }
+			limit = { can_research = fighter_1936 }
+			set_technology = { fighter_1936 = 1 }
 			create_equipment_variant = {
 				name = "Koolhoven FK.55-1"
 				type = fighter_equipment_1936
@@ -11236,7 +11236,7 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { can_research = fighter2 }
+			limit = { can_research = fighter_1940 }
 			create_equipment_variant = {
 				name = "Koolhoven FK.55-2"
 				type = fighter_equipment_1936
@@ -11248,7 +11248,7 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { can_research = fighter3 }
+			limit = { can_research = fighter_1944 }
 			create_equipment_variant = {
 				name = "Koolhoven FK.58"
 				type = fighter_equipment_1940
@@ -11282,28 +11282,28 @@ country_event = {
 	title = {
 		text = holfocus.401.dxxi-2.t
 		trigger = {
-			can_research = fighter1
+			can_research = fighter_1936
 		}
 	}
 
 	title = {
 		text = holfocus.401.dxxi-5.t
 		trigger = {
-			can_research = fighter2
+			can_research = fighter_1940
 		}
 	}
 
 	title = {
 		text = holfocus.401.dxxiii.t
 		trigger = {
-			can_research = fighter3
+			can_research = fighter_1944
 		}
 	}
 
 	title = {
 		text = holfocus.401.dxxv.t
 		trigger = {
-			can_research = fighter3
+			can_research = fighter_1944
 		}
 	}
 
@@ -11311,25 +11311,25 @@ country_event = {
 	desc = {
 		text = holfocus.401.dxxi-2.d
 		trigger = {
-			can_research = fighter1
+			can_research = fighter_1936
 		}
 	}
 	desc = {
 		text = holfocus.401.dxxi-5.d
 		trigger = {
-			can_research = fighter2
+			can_research = fighter_1940
 		}
 	}
 	desc = {
 		text = holfocus.401.dxxiii.d
 		trigger = {
-			can_research = fighter3
+			can_research = fighter_1944
 		}
 	}
 	desc = {
 		text = holfocus.401.dxxv.d
 		trigger = {
-			has_tech = fighter3
+			has_tech = fighter_1944
 		}
 	}
 
@@ -11338,8 +11338,8 @@ country_event = {
 	option = {
 		name = holfocus.401.a
 		if = {
-			limit = { can_research = fighter1 }
-			set_technology = { fighter1 = 1 }
+			limit = { can_research = fighter_1936 }
+			set_technology = { fighter_1936 = 1 }
 			create_equipment_variant = {
 				name = "Fokker D.XXI-2"
 				type = fighter_equipment_1936
@@ -11351,7 +11351,7 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { can_research = fighter2 }
+			limit = { can_research = fighter_1940 }
 			create_equipment_variant = {
 				name = "Fokker D.XXI-5"
 				type = fighter_equipment_1936
@@ -11363,7 +11363,7 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { can_research = fighter3 }
+			limit = { can_research = fighter_1944 }
 			create_equipment_variant = {
 				name = "Fokker D.XXIII"
 				type = fighter_equipment_1940
@@ -11400,8 +11400,8 @@ country_event = {
 	option = {
 		name = holfocus.402.a
 		if = {
-			limit = { can_research = CAS1 }
-			set_technology = { CAS1 = 1 }
+			limit = { can_research = CAS_1937 }
+			set_technology = { CAS_1937 = 1 }
 			create_equipment_variant = {
 				name = "Fokker C.X."
 				type = CAS_equipment_1935

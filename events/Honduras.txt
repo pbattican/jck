@@ -878,10 +878,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = fighter1 }
+				NOT = { has_tech = fighter_1936 }
 			}
 			hidden_effect = {
-				set_technology = { fighter1 = 1 popup = no }
+				set_technology = { fighter_1936 = 1 popup = no }
 			}
 		}
 		add_equipment_to_stockpile = {
@@ -934,10 +934,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = CAS1 }
+				NOT = { has_tech = CAS_1937 }
 			}
 			hidden_effect = {
-				set_technology = { CAS1 = 1 popup = no }
+				set_technology = { CAS_1937 = 1 popup = no }
 			}
 		}
 		add_equipment_to_stockpile = {
@@ -955,10 +955,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = CAS1 }
+				NOT = { has_tech = CAS_1937 }
 			}
 			hidden_effect = {
-				set_technology = { CAS1 = 1 popup = no }
+				set_technology = { CAS_1937 = 1 popup = no }
 			}
 		}
 		add_equipment_to_stockpile = {
@@ -976,10 +976,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = CAS1 }
+				NOT = { has_tech = CAS_1937 }
 			}
 			hidden_effect = {
-				set_technology = { CAS1 = 1 popup = no }
+				set_technology = { CAS_1937 = 1 popup = no }
 			}
 		}
 		add_equipment_to_stockpile = {
@@ -997,10 +997,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = CAS1 }
+				NOT = { has_tech = CAS_1937 }
 			}
 			hidden_effect = {
-				set_technology = { CAS1 = 1 popup = no }
+				set_technology = { CAS_1937 = 1 popup = no }
 			}
 		}
 		add_equipment_to_stockpile = {
@@ -1128,10 +1128,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = naval_bomber1 }
+				NOT = { has_tech = naval_bomber_1936 }
 			}
 			hidden_effect = {
-				set_technology = { naval_bomber1 = 1 popup = no }
+				set_technology = { naval_bomber_1936 = 1 popup = no }
 			}
 		}
 		add_equipment_to_stockpile = {
@@ -1153,10 +1153,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = naval_bomber1 }
+				NOT = { has_tech = naval_bomber_1936 }
 			}
 			hidden_effect = {
-				set_technology = { naval_bomber1 = 1 popup = no }
+				set_technology = { naval_bomber_1936 = 1 popup = no }
 			}
 		}
 		add_equipment_to_stockpile = {
@@ -1174,10 +1174,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = naval_bomber1 }
+				NOT = { has_tech = naval_bomber_1936 }
 			}
 			hidden_effect = {
-				set_technology = { naval_bomber1 = 1 popup = no }
+				set_technology = { naval_bomber_1936 = 1 popup = no }
 			}
 		}
 		add_equipment_to_stockpile = {
@@ -1195,10 +1195,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = naval_bomber1 }
+				NOT = { has_tech = naval_bomber_1936 }
 			}
 			hidden_effect = {
-				set_technology = { naval_bomber1 = 1 popup = no }
+				set_technology = { naval_bomber_1936 = 1 popup = no }
 			}
 		}
 		add_equipment_to_stockpile = {

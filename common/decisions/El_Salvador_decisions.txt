@@ -5,7 +5,7 @@ ELS_Buying_planes_decisions = {
 			original_tag = ELS
 		}
 		available = {
-			has_tech = early_fighter
+			has_tech = fighter_1934
 			NOT = { has_tech = fighter_1934 }
 		}
 		visible = {
@@ -70,7 +70,7 @@ ELS_Buying_planes_decisions = {
 			original_tag = ELS
 		}
 		available = {
-			has_tech = CAS1
+			has_tech = CAS_1937
 		}
 		cost = 50
 		days_re_enable = 150
@@ -99,7 +99,7 @@ ELS_Buying_planes_decisions = {
 			original_tag = ELS
 		}
 		available = {
-			has_tech = naval_bomber1
+			has_tech = naval_bomber_1936
 		}
 		cost = 50
 		days_re_enable = 150

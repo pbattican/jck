@@ -1991,7 +1991,7 @@ focus_tree = {
 			custom_effect_tooltip = DEI_pantser_gratis_tt
 			hidden_effect = {
 				if = {
-					limit = { has_tech = improved_light_tank }
+					limit = { has_tech = light_tank_1936 }
 					add_tech_bonus = {
 						name = HOL_armoured_cars
 						bonus = 1
@@ -1999,7 +1999,7 @@ focus_tree = {
 					}
 				}
 				else = {
-					set_technology = { improved_light_tank = 1 }
+					set_technology = { light_tank_1936 = 1 }
 				}
 				add_equipment_to_stockpile = {
 					type = light_tank_equipment_1934

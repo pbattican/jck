@@ -4741,7 +4741,7 @@ country_event = { # Fengtian requests tanks
 				JAP = {
 					has_tech = basic_light_tank
 					NOT = {
-						has_tech = improved_light_tank
+						has_tech = light_tank_1936
 					}
 				}
 			}
@@ -4756,7 +4756,7 @@ country_event = { # Fengtian requests tanks
 		if = {
 			limit = {
 				JAP = {
-					has_tech = improved_light_tank
+					has_tech = light_tank_1936
 				}
 			}
 			add_equipment_to_stockpile = { # ~1936

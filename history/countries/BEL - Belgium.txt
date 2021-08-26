@@ -21,13 +21,13 @@ set_technology = {
 	motorised_infantry = 1
 	tech_engineers = 1
 	tech_recon = 1
-	gw_artillery = 1
+	artillery1 = 1
 	interwar_antitank = 1
 	tech_support = 1
 	bicycle_infantry = 1
 
 	### Air ###
-	early_fighter = 1
+	fighter_1934 = 1
 	early_bomber = 1
 }
 

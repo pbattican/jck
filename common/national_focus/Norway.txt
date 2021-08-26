@@ -4139,8 +4139,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_NAT_hirdens_flykorps"
 			air_experience = 15
 			if = {
-				limit = { NOT = { has_tech = CAS1 } }
-				set_technology = { CAS1 = 1 }
+				limit = { NOT = { has_tech = CAS_1937 } }
+				set_technology = { CAS_1937 = 1 }
 			}
 			else = {
 				add_equipment_to_stockpile = {

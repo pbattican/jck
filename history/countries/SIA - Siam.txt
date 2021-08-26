@@ -18,13 +18,13 @@ set_technology = {
 	tech_engineers = 1
 	motorised_infantry = 1
 	marines = 1
-	gw_artillery = 1
+	artillery1 = 1
 	interwar_antiair = 1
 
 	### Air ###
-	early_fighter = 1 #Prajadhipok
+	fighter_1934 = 1 #Prajadhipok
 	early_bomber = 1 #Boripatr
-	CAS1 = 1
+	CAS_1937 = 1
 }
 
 if = {

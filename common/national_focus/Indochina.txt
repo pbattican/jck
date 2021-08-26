@@ -3088,16 +3088,16 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_tech = early_fighter
+						has_tech = fighter_1934
 					}
 				}
 				set_technology = {
-					early_fighter = 1
+					fighter_1934 = 1
 				}
 			}
 			if = {
 				limit = {
-					has_tech = early_fighter
+					has_tech = fighter_1934
 				}
 				add_tech_bonus = {
 					name = INC_Buy_Interceptors

@@ -2001,7 +2001,7 @@ country_event = { #Fighter-Bombers or Bombers
 		}
 		if = {
 			limit = {
-				NFA = { has_tech = CAS1 }
+				NFA = { has_tech = CAS_1937 }
 			}
 			add_equipment_to_stockpile = {
 				type = CAS_equipment
@@ -2042,7 +2042,7 @@ country_event = { #Fighter-Bombers or Bombers
 		}
 		if = {
 			limit = {
-				ITA = { has_tech = CAS1 }
+				ITA = { has_tech = CAS_1937 }
 			}
 			add_equipment_to_stockpile = {
 				type = CAS_equipment

@@ -418,7 +418,7 @@ political_actions = {
 			set_country_flag = KR_set_up_ai_templates
 			if = {
 				limit = {
-					has_tech = gwtank
+					has_tech = light_tank_1934
 					NOT = { ai_has_role_template = armor }
 				}
 				if = {
@@ -457,7 +457,7 @@ political_actions = {
 			}
 			if = {
 				limit = {
-					has_tech = basic_heavy_tank
+					has_tech = heavy_tank_1934
 					NOT = {	has_template_containing_unit = heavy_armor }
 				}
 				log = "		--- loading heavy tanks"
@@ -497,7 +497,7 @@ political_actions = {
 				limit = {
 					NOT = { ai_has_role_template = infantry }
 					OR = {
-						NOT = { has_tech = gw_artillery }
+						NOT = { has_tech = artillery1 }
 						num_of_military_factories < 10
 					}
 				}
@@ -520,7 +520,7 @@ political_actions = {
 			else_if = {
 				limit = {
 					NOT = {	has_template_containing_unit = artillery_brigade }
-					has_tech = gw_artillery
+					has_tech = artillery1
 					num_of_military_factories > 7
 				}
 				log = "		--- loading infantry div"

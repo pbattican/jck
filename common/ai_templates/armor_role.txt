@@ -9,7 +9,7 @@ armor_generic = {
 		factor = 5
 		modifier = {
 			factor = 0
-			NOT = { has_tech = gwtank }
+			NOT = { has_tech = light_tank_1934 }
 		}
 		modifier = {
 			factor = 0
@@ -27,7 +27,7 @@ armor_generic = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = gwtank }
+				NOT = { has_tech = light_tank_1934 }
 			}
 			modifier = {
 				factor = 3
@@ -149,7 +149,7 @@ armor_generic = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_medium_tank }
+				NOT = { has_tech = medium_tank_1937 }
 			}
 			modifier = {
 				factor = 0
@@ -164,7 +164,7 @@ armor_generic = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_medium_tank }
+				NOT = { has_tech = medium_tank_1937 }
 			}
 			modifier = {
 				factor = 0
@@ -274,7 +274,7 @@ armor_generic = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_medium_tank }
+				NOT = { has_tech = medium_tank_1937 }
 			}
 			modifier = {
 				factor = 0
@@ -289,7 +289,7 @@ armor_generic = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_medium_tank }
+				NOT = { has_tech = medium_tank_1937 }
 			}
 			modifier = {
 				factor = 0
@@ -635,7 +635,7 @@ heavy_armor_generic = {
 		factor = 5
 		modifier = {
 			factor = 0
-			NOT = { has_tech = basic_heavy_tank }
+			NOT = { has_tech = heavy_tank_1934 }
 		}
 		modifier = {
 			factor = 0
@@ -653,7 +653,7 @@ heavy_armor_generic = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_heavy_tank }
+				NOT = { has_tech = heavy_tank_1934 }
 			}
 			modifier = {
 				factor = 0
@@ -665,7 +665,7 @@ heavy_armor_generic = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_heavy_tank }
+				NOT = { has_tech = heavy_tank_1934 }
 			}
 			modifier = {
 				factor = 0.1
@@ -770,7 +770,7 @@ heavy_armor_generic = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_heavy_tank }
+				NOT = { has_tech = heavy_tank_1934 }
 			}
 			modifier = {
 				factor = 0
@@ -789,7 +789,7 @@ heavy_armor_generic = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_heavy_tank }
+				NOT = { has_tech = heavy_tank_1934 }
 			}
 			modifier = {
 				factor = 0
@@ -903,7 +903,7 @@ heavy_armor_generic = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_heavy_tank }
+				NOT = { has_tech = heavy_tank_1934 }
 			}
 			modifier = {
 				factor = 0
@@ -918,7 +918,7 @@ heavy_armor_generic = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_heavy_tank }
+				NOT = { has_tech = heavy_tank_1934 }
 			}
 			modifier = {
 				factor = 0

@@ -22,11 +22,11 @@ set_technology = {
 	infantry_weapons = 1
 	tech_support = 1
 	tech_engineers = 1
-	gw_artillery = 1
+	artillery1 = 1
 	tech_recon = 1
 
 	### Air ###
-	early_fighter = 1
+	fighter_1934 = 1
 	early_bomber = 1
 }
 

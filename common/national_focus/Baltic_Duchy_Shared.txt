@@ -730,7 +730,7 @@ shared_focus = {
 		if = {
 			limit = {
 				NOT = {
-					has_tech = improved_light_tank
+					has_tech = light_tank_1936
 				}
 			}
 			create_equipment_variant = {
@@ -746,9 +746,9 @@ shared_focus = {
 		}
 		else_if = {
 			limit = {
-				has_tech = improved_light_tank
+				has_tech = light_tank_1936
 				NOT = {
-					has_tech = basic_medium_tank
+					has_tech = medium_tank_1937
 				}
 			}
 			create_equipment_variant = {
@@ -764,7 +764,7 @@ shared_focus = {
 		}
 		else_if = {
 			limit = {
-				has_tech = basic_medium_tank
+				has_tech = medium_tank_1937
 				NOT = {
 					has_tech = improved_medium_tank
 				}
