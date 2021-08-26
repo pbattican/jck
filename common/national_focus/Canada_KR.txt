@@ -794,8 +794,8 @@ focus_tree = {
 				bonus = 1
 				uses = 1
 				category = efficiency_tech
-				category = concentrated_industry_tech
-				category = dispersed_industry_tech
+				category = conc_industry
+				category = disp_industry
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }

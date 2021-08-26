@@ -1301,7 +1301,7 @@ focus_tree = {
 				name = SYR_decentralized_development
 				bonus = 1
 				uses = 2
-				category = dispersed_industry_tech
+				category = disp_industry
 			}
 			add_ideas = syr_decentralised_development
 		}
