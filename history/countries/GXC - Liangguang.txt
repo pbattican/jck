@@ -1,0 +1,516 @@
+﻿capital = 592
+OOB = "GXC"
+
+CHYN_minor_start_naval_variant = yes
+
+set_research_slots = 2
+set_technology = {
+	### Tanks ###
+	gwtank = 1
+	### Infantry ###
+	infantry_weapons = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	### Air ###
+	early_fighter = 1
+	early_bomber = 1
+}
+
+add_offsite_building = {
+	type = arms_factory
+	level = 2
+}
+
+add_offsite_building = {
+	type = industrial_complex
+	level = 4
+}
+
+### Navy - MtG ###
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+
+		## Modules##
+		basic_depth_charges = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+### Navy - Non MtG ###
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_submarine = 1
+	}
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 5000
+	producer = GXC
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 175
+	producer = GXC
+}
+add_equipment_to_stockpile = {
+	type = fighter_equipment_0
+	amount = 20
+	producer = GER
+}
+
+set_politics = {
+	ruling_party = social_liberal
+	last_election = "1888.6.15"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 0
+	radical_socialist = 4
+	syndicalist = 2
+	social_democrat = 15
+	social_liberal = 32
+	market_liberal = 11
+	social_conservative = 6
+	authoritarian_democrat = 0
+	paternal_autocrat = 29
+	national_populist = 1
+}
+
+add_ideas = {
+	GXC_factionalism
+	GXC_AOG_leftovers
+	GXC_divided_military
+	GXC_backwards_guangxi
+
+	### Ministers
+	GXC_Lu_Rongting_hog_pau
+	GXC_Huang_Dingchen_for_sde
+	GXC_Li_Songshao_eco_mli
+	GXC_Zhao_Dingrong_sec_sli
+}
+
+# Flavor Events 
+country_event = { id = lngkmt.19 days = 399 } #Status of Temples in Guangdong
+country_event = { id = lngkmt.20 days = 650 } #The Opium Dens of Guangzhou
+country_event = { id = lngkmt.20 days = 230 } #Chinese High Tea
+country_event = { id = lngkmt.21 days = 611 } #Remembering Martyrs
+country_event = { id = lngkmt.22 days = 754 } #Guangzhou Film
+
+create_country_leader = {
+	name = "Chen Jiongming"
+	desc = "POLITICS_GXC_CHEN_JIONGMING_DESC"
+	picture = "Portrait_GXC_Chen_Jiongming.png"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+}
+create_country_leader = {
+	name = "Chen Jiongming"
+	desc = "POLITICS_GXC_CHEN_JIONGMING_DESC"
+	picture = "Portrait_GXC_Chen_Jiongming.png"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+}
+create_country_leader = {
+	name = "Chen Lianbo"
+	desc = "POLITICS_GXC_CHEN_LIANBO_DESC"
+	picture = "Portrait_GXC_Chen_Lianbo.png"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+}
+create_country_leader = {
+	name = "Li Zongren"
+	desc = "POLITICS_GXC_LI_ZONGREN_DESC"
+	picture = "gfx/leaders/YUN/Portrait_Yunnan_Li_Zongren.png"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+}
+create_country_leader = {
+	name = "Ma Ji"
+	desc = "POLITICS_GXC_MA_JI_DESC"
+	picture = "Portrait_GXC_Ma_Ji.png"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+}
+create_country_leader = {
+	name = "Zhang Tianran"
+	picture = "gfx/leaders/SQI/Portrait_Shandong_Zhang_Tianran.png"
+	expire = "1965.1.1"
+	ideology = national_populist_subtype
+}
+
+### Field Marshals ###
+
+create_field_marshal = { #Guangdong
+	name = "Chen Jiongming"
+	desc = "POLITICS_GXC_CHEN_JIONGMING_ARMY_DESC"
+	picture = "Portrait_GXC_Chen_Jiongming.png"
+	traits = {
+		GXC_guangdong_clique_officer
+		old_guard
+		trait_cautious
+		war_hero
+		organizer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 3
+
+	id = 1116
+}
+
+create_field_marshal = { #Guangxi
+	name = "Ma Ji"
+	desc = "POLITICS_GXC_MA_JI_ARMY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Ma_Ji.png"
+	traits = {
+		GXC_guangxi_clique_officer
+		infantry_officer
+		trait_reckless
+		trickster
+		politically_connected
+		war_hero
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+
+	id = 1117
+}
+
+### Corps Commanders ###
+create_corps_commander = { #Guangdong
+	name = "Chen Jitang"
+	desc = "POLITICS_GXC_CHEN_JITANG_ARMY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Chen_Jitang.png"
+	traits = {
+		GXC_guangdong_clique_officer
+		war_hero
+		career_officer
+		brilliant_strategist
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = { #Guangdong
+	name = "Jiang Guangnai"
+	desc = "POLITICS_GXC_JIANG_GUANGNAI_ARMY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Jiang_Guangnai.png"
+	traits = {
+		GXC_guangdong_clique_officer
+		war_hero
+		infantry_officer
+		career_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = { #Guangdong
+	name = "Chen Mingshu"
+	desc = "POLITICS_GXC_CHEN_MINSHU_ARMY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Chen_Mingshu_Army.png"
+	traits = {
+		GXC_guangdong_clique_officer
+		politically_connected
+		war_hero
+		infantry_officer
+		career_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+
+	id = 1120
+}
+create_corps_commander = { #Guangdong I mean he's from Guangxi but he's a Federalist
+	name = "Lin Hu"
+	desc = "POLITICS_GXC_LIN_HU_ARMY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Lin_Hu.png"
+	traits = {
+		GXC_guangdong_clique_officer
+		politically_connected
+		career_officer
+	}
+	skill = 3
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+
+	id = 1122
+}
+create_corps_commander = { #Guangxi
+	name = "Lu Yuguang"
+	desc = "POLITICS_GXC_LU_YUGUANG_ARMY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Lu_Yugang.png"
+	traits = {
+		GXC_guangxi_clique_officer
+		old_guard
+		politically_connected
+		infantry_leader
+		career_officer
+		trait_reckless
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+
+	id = 1123
+}
+create_corps_commander = { #Guangdong
+	name = "Cai Tingkai"
+	desc = "POLITICS_GXC_CAI_TINGKAI_ARMY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Cai_Tingkai.png"
+	traits = {
+		GXC_guangdong_clique_officer
+		infantry_officer
+		career_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = { #Guangxi
+	name = "Li Pinxian"
+	desc = "POLITICS_GXC_LI_PINXIAN_ARMY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Li_Pinxian.png"
+	traits = {
+		GXC_guangxi_clique_officer
+		politically_connected
+		infantry_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = { #Guangxi
+	name = "Zhang Gan"
+	desc = "POLITICS_GXC_ZHANG_GAN_ARMY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Zhang_Gan.png"
+	traits = {
+		GXC_guangxi_clique_officer
+		old_guard
+		career_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = { #Guangdong
+	name = "Hong Zhaolin"
+	desc = "POLITICS_GXC_HONG_ZHAOLIN_ARMY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Hong_Zhaolin.png"
+	traits = {
+		GXC_guangdong_clique_officer
+		old_guard
+		career_officer
+	}
+	id = 1142
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = { #Guangdong
+	name = "Huang Qixiang"
+	desc = "POLITICS_GXC_HUANG_QIXIANG_ARMY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Huang_Qixiang.png"
+	traits = {
+		GXC_guangdong_clique_officer
+		artillery_officer
+		trait_cautious
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = { #Guangxi
+	name = "Liu Fei"
+	desc = "POLITICS_GXC_LIU_FEI_ARMY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Liu_Fei.png"
+	traits = {
+		GXC_guangxi_clique_officer
+		career_officer
+		organizer
+		thorough_planner
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 1
+}
+create_corps_commander = { #Guangdong
+	name = "Ye Jianying"
+	desc = "POLITICS_GXC_YE_JIANYING_ARMY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Ye_Jianying.png"
+	traits = {
+		GXC_guangdong_clique_officer
+		career_officer
+		commando
+		organizer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+create_corps_commander = { #Guangdong
+	name = "Ye Ju"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Ye_Ju.png"
+	traits = {
+		GXC_guangdong_clique_officer
+		politically_connected
+	}
+	id = 1169
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+### Admirals ###
+create_navy_leader = {
+	name = "Li Qingwen"
+	desc = "POLITICS_GXC_LI_QINGWEN_NAVY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Li_Qingwen.png"
+	traits = {
+		GXC_guangdong_clique_officer
+		navy_career_officer
+		green_water_expert
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+create_navy_leader = {
+	name = "Chen Ce"
+	desc = "POLITICS_GXC_CHEN_CE_NAVY_DESC"
+	portrait_path = "gfx/leaders/GXC/Portrait_GXC_Chen_Ce.png"
+	traits = {
+		GXC_guangdong_clique_officer
+		navy_career_officer
+		navy_media_personality
+		green_water_expert
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+# New Guangxi Clique, in exile at game start
+XXA = {
+	create_field_marshal = {
+		name = "Li Zongren"
+		desc = "POLITICS_YUNNAN_LI_ZONGREN_ARMY_DESC"
+		portrait_path = "gfx/leaders/YUN/Portrait_Yunnan_Li_Zongren.png"
+		id = 1209
+		traits = {
+			GXC_guangxi_clique_officer
+			war_hero
+			offensive_doctrine
+			politically_connected
+			organizer
+			logistics_wizard
+		}
+		skill = 4
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 4
+	}
+	create_corps_commander = {
+		name = "Bai Chongxi"
+		desc = "POLITICS_YUNNAN_BAI_CHONGXI_ARMY_DESC"
+		portrait_path = "gfx/leaders/YUN/Portrait_Yunnan_Bai_Chongxi.png"
+		skill = 3
+		id = 1143
+		traits = {
+			GXC_guangxi_clique_officer
+			infantry_officer
+			politically_connected
+			brilliant_strategist
+		}
+		attack_skill = 4
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+	}
+	create_corps_commander = {
+		name = "Yu Zuobai"
+		desc = "POLITICS_YUNNAN_YU_ZUOBAI_ARMY_DESC"
+		portrait_path = "gfx/leaders/YUN/Portrait_Yunnan_Yu_Zuobai.png"
+		id = 1144
+		traits = {
+			GXC_guangxi_clique_officer
+			cavalry_officer
+			substance_abuser
+		}
+		skill = 2
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 2
+		logistics_skill = 3
+	}
+	random_unit_leader = {
+		limit = { has_id = 1209 }
+		save_global_event_target_as = GXC_Li_Zongren
+		set_unit_leader_flag = CHI_original_unit_leader
+	}
+	random_unit_leader = {
+		limit = { has_id = 1143 }
+		save_global_event_target_as = GXC_Bai_Chongxi
+		set_unit_leader_flag = CHI_original_unit_leader
+	}
+	random_unit_leader = {
+		limit = { has_id = 1144 }
+		save_global_event_target_as = GXC_Yu_Zuobai
+		set_unit_leader_flag = CHI_original_unit_leader
+	}
+}
