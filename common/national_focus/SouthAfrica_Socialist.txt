@@ -2259,7 +2259,7 @@ focus_tree = {
 				producer = SRI
 			}
 			add_equipment_to_stockpile = {
-				type = CAS_equipment_1
+				type = CAS_equipment_1935
 				amount = 75
 				producer = SRI
 			}

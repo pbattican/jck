@@ -1661,7 +1661,7 @@ focus_tree = {
 				producer = CAN
 			}
 			add_equipment_to_stockpile = {
-				type = CAS_equipment_1 amount = 50
+				type = CAS_equipment_1935 amount = 50
 				producer = CAN
 			}
 		}

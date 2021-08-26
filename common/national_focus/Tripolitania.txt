@@ -1298,7 +1298,7 @@ focus_tree = {
 				producer = EGY
 			}
 			add_equipment_to_stockpile = {
-				type = armored_car_equipment_1
+				type = armored_cars_equipment_1
 				amount = 150
 				producer = EGY
 			}

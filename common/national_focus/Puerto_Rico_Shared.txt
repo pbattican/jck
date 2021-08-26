@@ -672,7 +672,7 @@ shared_focus = {
 			category = naval_bomber
 		}
 		add_equipment_to_stockpile = {
-			type = nav_bomber_equipment_1
+			type = nav_bomber_equipment_1936
 			amount = 200
 			producer = USA
 		}
@@ -934,7 +934,7 @@ shared_focus = {
 			category = cas_bomber
 		}
 		add_equipment_to_stockpile = {
-			type = CAS_equipment_1
+			type = CAS_equipment_1935
 			amount = 75
 			producer = USA
 		}
