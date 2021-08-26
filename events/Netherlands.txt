@@ -11428,7 +11428,7 @@ country_event = {
 			limit = { can_research = CAS3 }
 			create_equipment_variant = {
 				name = "Fokker C.XIII-3"
-				type = CAS_equipment_2
+				type = CAS_equipment_1939
 				parent_version = 0
 				upgrades = {
 					plane_cas_upgrade = 2
