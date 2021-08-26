@@ -1,0 +1,79 @@
+﻿capital = 126
+set_research_slots = 3
+set_stability = 0.5
+set_war_support = 0.2
+set_convoys = 100
+
+ENG_start_naval_variant = yes
+
+set_politics = {
+	ruling_party = social_liberal
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	totalist = 0
+	radical_socialist = 0
+	syndicalist = 0
+	social_democrat = 15
+	social_liberal = 43
+	market_liberal = 27
+	social_conservative = 15
+	authoritarian_democrat = 0
+	paternal_autocrat = 0
+	national_populist = 0
+}
+
+create_country_leader = {
+	name = "Neil Francis Hawkins"
+	picture = "gfx/leaders/generic/Portrait_Europe_Generic_new_6.png"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+}
+create_country_leader = {
+	name = "Colbert Seymor"
+	picture = "gfx/leaders/generic/Portrait_Europe_Generic_new_8.png"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+}
+create_country_leader = {
+	name = "Fenner Brockway"
+	picture = "gfx/leaders/ENG/Portrait_England_Fenner_Brockway.png"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+}
+create_country_leader = {
+	name = "Hugh Gaitskell"
+	desc = "POLITICS_GBP_HUGH_GAITSKELL_DESC"
+	picture = "gfx/leaders/ENG/Portrait_Britain_Hugh_Gaitskell.png"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+}
+create_country_leader = {
+	name = "Herbert Samuel"
+	desc = "POLITICS_GBP_HERBERT_SAMUEL_DESC"
+	picture = "gfx/leaders/ENG/Portrait_England_Herbert_Samuel.png"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+}
+create_country_leader = {
+	name = "Anthony Ludovici"
+	picture = "gfx/leaders/ENG/Portrait_England_Anthony_Ludovici.png"
+	expire = "1965.1.1"
+	ideology = authoritarian_democrat_subtype
+}
+create_country_leader = {
+	name = "Anthony Ludovici"
+	desc = "POLITICS_GBP_ANTHONY_LUDOVICI_DESC"
+	picture = "gfx/leaders/ENG/Portrait_England_Anthony_Ludovici.png"
+	expire = "1965.1.1"
+	ideology = paternal_autocrat_subtype
+}
+
+### Field Marshals ###
+
+### Corps Commanders ###
+
+### Admirals ###
