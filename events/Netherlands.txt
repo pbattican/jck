@@ -11413,7 +11413,7 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { can_research = CAS2 }
+			limit = { can_research = CAS_1939 }
 			create_equipment_variant = {
 				name = "Fokker C.X-3"
 				type = CAS_equipment_1935
@@ -11425,7 +11425,7 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { can_research = CAS3 }
+			limit = { can_research = CAS_1943 }
 			create_equipment_variant = {
 				name = "Fokker C.XIII-3"
 				type = CAS_equipment_1939
@@ -11452,8 +11452,8 @@ country_event = {
 	option = {
 		name = holfocus.402.b
 		if = {
-			limit = { can_research = tactical_bomber1 }
-			set_technology = { tactical_bomber1 = 1 }
+			limit = { can_research = tactical_bomber_1937 }
+			set_technology = { tactical_bomber_1937 = 1 }
 			create_equipment_variant = {
 				name = "Fokker Tactical Bomber 1"
 				type = tac_bomber_equipment_1937
@@ -11465,7 +11465,7 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { can_research = tactical_bomber2 }
+			limit = { can_research = tactical_bomber_1939 }
 			create_equipment_variant = {
 				name = "Fokker T.V-3"
 				type = tac_bomber_equipment_1937
@@ -11477,7 +11477,7 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { can_research = tactical_bomber3 }
+			limit = { can_research = tactical_bomber_1943 }
 			create_equipment_variant = {
 				name = "Fokker T.IX-2"
 				type = tac_bomber_equipment_1939

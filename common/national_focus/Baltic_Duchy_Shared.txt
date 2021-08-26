@@ -766,7 +766,7 @@ shared_focus = {
 			limit = {
 				has_tech = medium_tank_1937
 				NOT = {
-					has_tech = improved_medium_tank
+					has_tech = medium_tank_1939
 				}
 			}
 			create_equipment_variant = {
@@ -782,9 +782,9 @@ shared_focus = {
 		}
 		else_if = {
 			limit = {
-				has_tech = improved_medium_tank
+				has_tech = medium_tank_1939
 				NOT = {
-					has_tech = advanced_medium_tank
+					has_tech = medium_tank_1941
 				}
 			}
 			create_equipment_variant = {
@@ -800,9 +800,9 @@ shared_focus = {
 		}
 		else_if = {
 			limit = {
-				has_tech = advanced_medium_tank
+				has_tech = medium_tank_1941
 				NOT = {
-					has_tech = main_battle_tank
+					has_tech = medium_tank_1945
 				}
 			}
 			create_equipment_variant = {

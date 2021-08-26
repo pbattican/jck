@@ -43,8 +43,8 @@ set_technology = {
 	cv_CAS1 = 1
 	cv_naval_bomber1 = 1
 	fighter_1934 = 1
-	tactical_bomber1 = 1
-	strategic_bomber1 = 1
+	tactical_bomber_1937 = 1
+	strategic_bomber_1937 = 1
 	CAS_1937 = 1
 }
 

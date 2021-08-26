@@ -1077,10 +1077,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_tech = tactical_bomber1 }
+				NOT = { has_tech = tactical_bomber_1937 }
 			}
 			hidden_effect = {
-				set_technology = { tactical_bomber1 = 1 popup = no }
+				set_technology = { tactical_bomber_1937 = 1 popup = no }
 			}
 		}
 		add_equipment_to_stockpile = {

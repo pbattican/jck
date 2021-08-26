@@ -400,7 +400,7 @@ armor_generic = {
 	# 		factor = 10
 	# 		modifier = {
 	# 			factor = 0
-	# 			NOT = { has_tech = main_battle_tank }
+	# 			NOT = { has_tech = medium_tank_1945 }
 	# 		}
 	# 		modifier = {
 	# 			factor = 0
@@ -411,7 +411,7 @@ armor_generic = {
 	# 		factor = 10
 	# 		modifier = {
 	# 			factor = 0
-	# 			NOT = { has_tech = main_battle_tank }
+	# 			NOT = { has_tech = medium_tank_1945 }
 	# 		}
 	# 		modifier = {
 	# 			factor = 0.1
@@ -514,7 +514,7 @@ armor_generic = {
 	# 		factor = 10
 	# 		modifier = {
 	# 			factor = 0
-	# 			NOT = { has_tech = main_battle_tank }
+	# 			NOT = { has_tech = medium_tank_1945 }
 	# 		}
 	# 		modifier = {
 	# 			factor = 0
@@ -525,7 +525,7 @@ armor_generic = {
 	# 		factor = 10
 	# 		modifier = {
 	# 			factor = 0
-	# 			NOT = { has_tech = main_battle_tank }
+	# 			NOT = { has_tech = medium_tank_1945 }
 	# 		}
 	# 		modifier = {
 	# 			factor = 0

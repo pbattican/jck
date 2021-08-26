@@ -353,9 +353,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = CAS2 }
+				PREV = { has_tech = CAS_1939 }
 			}
-			set_technology = { CAS2 = 1 popup = no }
+			set_technology = { CAS_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -365,9 +365,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = CAS3 }
+				PREV = { has_tech = CAS_1943 }
 			}
-			set_technology = { CAS3 = 1 popup = no }
+			set_technology = { CAS_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -419,21 +419,21 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = heavy_fighter1 }
+				PREV = { has_tech = heavy_fighter_1936 }
 			}
-			set_technology = { heavy_fighter1 = 1 popup = no }
+			set_technology = { heavy_fighter_1936 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = heavy_fighter2 }
+				PREV = { has_tech = heavy_fighter_1940 }
 			}
-			set_technology = { heavy_fighter2 = 1 popup = no }
+			set_technology = { heavy_fighter_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = heavy_fighter3 }
+				PREV = { has_tech = heavy_fighter_1944 }
 			}
-			set_technology = { heavy_fighter3 = 1 popup = no }
+			set_technology = { heavy_fighter_1944 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -449,21 +449,21 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = tactical_bomber1 }
+				PREV = { has_tech = tactical_bomber_1937 }
 			}
-			set_technology = { tactical_bomber1 = 1 popup = no }
+			set_technology = { tactical_bomber_1937 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = tactical_bomber2 }
+				PREV = { has_tech = tactical_bomber_1939 }
 			}
-			set_technology = { tactical_bomber2 = 1 popup = no }
+			set_technology = { tactical_bomber_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = tactical_bomber3 }
+				PREV = { has_tech = tactical_bomber_1943 }
 			}
-			set_technology = { tactical_bomber3 = 1 popup = no }
+			set_technology = { tactical_bomber_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -479,21 +479,21 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = strategic_bomber1 }
+				PREV = { has_tech = strategic_bomber_1937 }
 			}
-			set_technology = { strategic_bomber1 = 1 popup = no }
+			set_technology = { strategic_bomber_1937 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = strategic_bomber2 }
+				PREV = { has_tech = strategic_bomber_1939 }
 			}
-			set_technology = { strategic_bomber2 = 1 popup = no }
+			set_technology = { strategic_bomber_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = strategic_bomber3 }
+				PREV = { has_tech = strategic_bomber_1943 }
 			}
-			set_technology = { strategic_bomber3 = 1 popup = no }
+			set_technology = { strategic_bomber_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -564,9 +564,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_light_tank }
+				PREV = { has_tech = light_tank_1940 }
 			}
-			set_technology = { advanced_light_tank = 1 popup = no }
+			set_technology = { light_tank_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -612,9 +612,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_medium_tank }
+				PREV = { has_tech = medium_tank_1939 }
 			}
-			set_technology = { improved_medium_tank = 1 popup = no }
+			set_technology = { medium_tank_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -636,9 +636,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_medium_tank }
+				PREV = { has_tech = medium_tank_1941 }
 			}
-			set_technology = { advanced_medium_tank = 1 popup = no }
+			set_technology = { medium_tank_1941 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -660,9 +660,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = main_battle_tank }
+				PREV = { has_tech = medium_tank_1945 }
 			}
-			set_technology = { main_battle_tank = 1 popup = no }
+			set_technology = { medium_tank_1945 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -797,12 +797,12 @@ transfer_technology = {
 			}
 			set_technology = { artillery1 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = interwar_artillery }
-			}
-			set_technology = { interwar_artillery = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = interwar_artillery }
+		# 	}
+		# 	set_technology = { interwar_artillery = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = artillery1 }
@@ -3376,9 +3376,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = CAS2 }
+				PREV = { has_tech = CAS_1939 }
 			}
-			set_technology = { CAS2 = 1 popup = no }
+			set_technology = { CAS_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3388,9 +3388,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = CAS3 }
+				PREV = { has_tech = CAS_1943 }
 			}
-			set_technology = { CAS3 = 1 popup = no }
+			set_technology = { CAS_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3442,21 +3442,21 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = heavy_fighter1 }
+				PREV = { has_tech = heavy_fighter_1936 }
 			}
-			set_technology = { heavy_fighter1 = 1 popup = no }
+			set_technology = { heavy_fighter_1936 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = heavy_fighter2 }
+				PREV = { has_tech = heavy_fighter_1940 }
 			}
-			set_technology = { heavy_fighter2 = 1 popup = no }
+			set_technology = { heavy_fighter_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = heavy_fighter3 }
+				PREV = { has_tech = heavy_fighter_1944 }
 			}
-			set_technology = { heavy_fighter3 = 1 popup = no }
+			set_technology = { heavy_fighter_1944 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3472,21 +3472,21 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = tactical_bomber1 }
+				PREV = { has_tech = tactical_bomber_1937 }
 			}
-			set_technology = { tactical_bomber1 = 1 popup = no }
+			set_technology = { tactical_bomber_1937 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = tactical_bomber2 }
+				PREV = { has_tech = tactical_bomber_1939 }
 			}
-			set_technology = { tactical_bomber2 = 1 popup = no }
+			set_technology = { tactical_bomber_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = tactical_bomber3 }
+				PREV = { has_tech = tactical_bomber_1943 }
 			}
-			set_technology = { tactical_bomber3 = 1 popup = no }
+			set_technology = { tactical_bomber_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3502,21 +3502,21 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = strategic_bomber1 }
+				PREV = { has_tech = strategic_bomber_1937 }
 			}
-			set_technology = { strategic_bomber1 = 1 popup = no }
+			set_technology = { strategic_bomber_1937 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = strategic_bomber2 }
+				PREV = { has_tech = strategic_bomber_1939 }
 			}
-			set_technology = { strategic_bomber2 = 1 popup = no }
+			set_technology = { strategic_bomber_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = strategic_bomber3 }
+				PREV = { has_tech = strategic_bomber_1943 }
 			}
-			set_technology = { strategic_bomber3 = 1 popup = no }
+			set_technology = { strategic_bomber_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3587,9 +3587,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_light_tank }
+				PREV = { has_tech = light_tank_1940 }
 			}
-			set_technology = { advanced_light_tank = 1 popup = no }
+			set_technology = { light_tank_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3635,9 +3635,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_medium_tank }
+				PREV = { has_tech = medium_tank_1939 }
 			}
-			set_technology = { improved_medium_tank = 1 popup = no }
+			set_technology = { medium_tank_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3659,9 +3659,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_medium_tank }
+				PREV = { has_tech = medium_tank_1941 }
 			}
-			set_technology = { advanced_medium_tank = 1 popup = no }
+			set_technology = { medium_tank_1941 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3683,9 +3683,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = main_battle_tank }
+				PREV = { has_tech = medium_tank_1945 }
 			}
-			set_technology = { main_battle_tank = 1 popup = no }
+			set_technology = { medium_tank_1945 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3820,12 +3820,12 @@ transfer_technology_without_doctrines = {
 			}
 			set_technology = { artillery1 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = interwar_artillery }
-			}
-			set_technology = { interwar_artillery = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = interwar_artillery }
+		# 	}
+		# 	set_technology = { interwar_artillery = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = artillery1 }

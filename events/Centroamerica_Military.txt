@@ -2765,12 +2765,12 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					has_tech = tactical_bomber1
+					has_tech = tactical_bomber_1937
 				}
 			}
 			hidden_effect = {
 				set_technology = {
-					tactical_bomber1 = 1
+					tactical_bomber_1937 = 1
 				}
 			}
 		}
@@ -2790,12 +2790,12 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					has_tech = tactical_bomber1
+					has_tech = tactical_bomber_1937
 				}
 			}
 			hidden_effect = {
 				set_technology = {
-					tactical_bomber1 = 1
+					tactical_bomber_1937 = 1
 				}
 			}
 		}
@@ -2815,12 +2815,12 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					has_tech = strategic_bomber1
+					has_tech = strategic_bomber_1937
 				}
 			}
 			hidden_effect = {
 				set_technology = {
-					strategic_bomber1 = 1
+					strategic_bomber_1937 = 1
 				}
 			}
 		}

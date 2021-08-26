@@ -1936,9 +1936,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SFR_Natal_Air_CAS"
 			if = {
 				limit = {
-					NOT = { has_tech = CAS2 }
+					NOT = { has_tech = CAS_1939 }
 				}
-				set_technology = { CAS2 = 1 }
+				set_technology = { CAS_1939 = 1 }
 			}
 			else = {
 				add_political_power = 50
@@ -1967,9 +1967,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SFR_Natal_Air_Tac"
 			if = {
 				limit = {
-					NOT = { has_tech = tactical_bomber1 }
+					NOT = { has_tech = tactical_bomber_1937 }
 				}
-				set_technology = { tactical_bomber1 = 1 }
+				set_technology = { tactical_bomber_1937 = 1 }
 			}
 			else = {
 				add_political_power = 50
