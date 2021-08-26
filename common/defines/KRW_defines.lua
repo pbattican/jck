@@ -1,4 +1,4 @@
---- UPDATED ON 26-08-2021 | Let's see if Fredy notices this and send me a DM. :-)
+--- UPDATED ON 26-08-2021
 
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 100
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 60

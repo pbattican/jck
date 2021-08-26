@@ -6,6 +6,6 @@ dependencies={
 	"Kaiserreich"
 }
 name="KRW Submod"
-picture="KRW.jpg"
+picture="KRW.png"
 supported_version="1.10.*"
 remote_file_id="2380382549"
