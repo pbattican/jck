@@ -1255,14 +1255,14 @@ we_need_synth_oil_2 = {
 produce_more_armored_cars = {
 	enable = {
 		has_template_majority_unit = armored_car
-		stockpile_ratio = { archetype = armored_car_equipment ratio < 0.9 }
+		stockpile_ratio = { archetype = armored_cars_equipment ratio < 0.9 }
 	}
 
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = equipment_variant_production_factor
-		id = armored_car_equipment
+		id = armored_cars_equipment
 		value = 30
 	}
 }
