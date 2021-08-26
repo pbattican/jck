@@ -434,11 +434,11 @@ stop_carrier_cas_prod = {
 	has_tech = cv_CAS1
 	if = {
 		limit = { has_tech = cv_CAS3 }
-		check_variable = { num_equipment@cv_CAS_equipment_1937943 > 10 }
+		check_variable = { num_equipment@cv_CAS_equipment_1943 > 10 }
 	}
 	else_if = {
 		limit = { has_tech = cv_CAS2 }
-		check_variable = { num_equipment@cv_CAS_equipment_1937939 > 10 }
+		check_variable = { num_equipment@cv_CAS_equipment_1939 > 10 }
 	}
 	else = {
 		check_variable = { num_equipment@cv_CAS_equipment_1937 > 10 }
