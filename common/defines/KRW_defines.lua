@@ -9,6 +9,7 @@ NDefines_Graphics.NGraphics.DRAW_MAP_OBJECTS_CUTOFF = 250 					-- 550
 NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
 
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 6 --12
+NDefines.NGame.GAME_SPEED_SECONDS = { 0.5, 0.3, 0.195, 0.075, 0.0 }
 
 --- Peace treaty behavior
 NDefines.NDiplomacy.MP_NUM_WINNERS_FOR_PEACE_PAUSE = 2
