@@ -1400,12 +1400,12 @@ country_event = {
 			}
 			clr_country_flag = HND_airforce_aid
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = fighter_equipment_1934
 				amount = 20
 				producer = ENG
 			}
 			add_equipment_to_stockpile = {
-				type = tac_bomber_equipment_0
+				type = tac_bomber_equipment_1934
 				amount = 10
 				producer = ENG
 			}

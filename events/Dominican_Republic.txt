@@ -2294,7 +2294,7 @@ country_event = { #Aviation Overhaul
 
 		add_political_power = -100
 		add_equipment_to_stockpile = {
-			type = fighter_equipment_0
+			type = fighter_equipment_1934
 			amount = 20
 		}
 	}

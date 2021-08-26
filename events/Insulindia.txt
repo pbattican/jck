@@ -3766,12 +3766,12 @@ country_event = { #[INS.GetNameDef] wants to purchase fighters
 		}
 		effect_tooltip = {
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = fighter_equipment_1934
 				amount = -100
 			}
 			INS = {
 				add_equipment_to_stockpile = {
-					type = fighter_equipment_0
+					type = fighter_equipment_1934
 					amount = 100
 				}
 				add_timed_idea = {
@@ -3811,13 +3811,13 @@ country_event = { #[JAP.GetNameDef] accepts our offer
 		set_country_flag = thanks_yippon
 		JAP = {
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = fighter_equipment_1934
 				amount = -100
 			}
 		}
 		INS = {
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = fighter_equipment_1934
 				amount = 100
 			}
 			add_timed_idea = {
@@ -4556,7 +4556,7 @@ country_event = { #Adisucipto's flight
 		has_war_with = DEI
 		country_exists = HND
 		has_equipment = {
-			tac_bomber_equipment_0 > 0
+			tac_bomber_equipment_1934 > 0
 		}
 	}
 
@@ -4566,7 +4566,7 @@ country_event = { #Adisucipto's flight
 			base = 100
 		}
 		add_equipment_to_stockpile = {
-			type = tac_bomber_equipment_0
+			type = tac_bomber_equipment_1934
 			amount = -1
 		}
 		random_list = {
@@ -4667,7 +4667,7 @@ country_event = { #Adisucipto returns - HND gave medicine
 			producer = HND
 		}
 		add_equipment_to_stockpile = {
-			type = tac_bomber_equipment_0
+			type = tac_bomber_equipment_1934
 			amount = 1
 		}
 		add_war_support = 0.05
@@ -4686,7 +4686,7 @@ country_event = { #Adisucipto returns - HND didn't give medicine
 	option = { #Of course!
 		name = ins.101.a
 		add_equipment_to_stockpile = {
-			type = fighter_equipment_0
+			type = fighter_equipment_1934
 			amount = 1
 		}
 	}

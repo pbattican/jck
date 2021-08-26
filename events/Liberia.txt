@@ -1889,7 +1889,7 @@ country_event = {
 	option = {
 		name = lib.961.a
 		effect_tooltip = {
-			add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 25 producer = FROM }
+			add_equipment_to_stockpile = { type = fighter_equipment_1936 amount = 25 producer = FROM }
 		}
 	}
 }

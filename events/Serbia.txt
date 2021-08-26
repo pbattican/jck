@@ -1927,7 +1927,7 @@ country_event = { #Weltkrieg Aeroplanes Replacement
 		}
 		add_political_power = -50
 		add_equipment_to_stockpile = {
-			type = fighter_equipment_1
+			type = fighter_equipment_1936
 			amount = 50
 			producer = RUS
 		}
@@ -1940,7 +1940,7 @@ country_event = { #Weltkrieg Aeroplanes Replacement
 		}
 		add_political_power = -25
 		add_equipment_to_stockpile = {
-			type = fighter_equipment_1
+			type = fighter_equipment_1936
 			amount = 25
 			producer = NFA
 		}

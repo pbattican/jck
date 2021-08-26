@@ -1689,17 +1689,17 @@ country_event = { # Delivery not possible
 			producer = GER
 		}
 		add_equipment_to_stockpile = {
-			type = light_tank_equipment_2
+			type = light_tank_equipment_1938
 			amount = 250
 			producer = GER
 		}
 		add_equipment_to_stockpile = {
-			type = fighter_equipment_2
+			type = fighter_equipment_1940
 			amount = 100
 			producer = GER
 		}
 		add_equipment_to_stockpile = {
-			type = tac_bomber_equipment_2
+			type = tac_bomber_equipment_1939
 			amount = 50
 			producer = GER
 		}

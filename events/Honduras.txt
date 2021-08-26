@@ -864,7 +864,7 @@ country_event = {
 			has_socialist_government = no
 		}
 		add_equipment_to_stockpile = {
-			type = fighter_equipment_0
+			type = fighter_equipment_1934
 			amount = 25
 			producer = GER
 		}
@@ -885,7 +885,7 @@ country_event = {
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = fighter_equipment_1
+			type = fighter_equipment_1936
 			amount = 25
 			producer = USA
 		}
@@ -898,7 +898,7 @@ country_event = {
 			has_socialist_government = no
 		}
 		add_equipment_to_stockpile = {
-			type = fighter_equipment_0
+			type = fighter_equipment_1934
 			amount = 25
 			producer = JAP
 		}
@@ -911,7 +911,7 @@ country_event = {
 			has_socialist_government = yes
 		}
 		add_equipment_to_stockpile = {
-			type = fighter_equipment_0
+			type = fighter_equipment_1934
 			amount = 25
 			producer = ENG
 		}
@@ -941,7 +941,7 @@ country_event = {
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = CAS_equipment_1
+			type = CAS_equipment_1935
 			amount = 20
 			producer = JAP
 		}
@@ -962,7 +962,7 @@ country_event = {
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = CAS_equipment_1
+			type = CAS_equipment_1935
 			amount = 20
 			producer = GER
 		}
@@ -983,7 +983,7 @@ country_event = {
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = CAS_equipment_1
+			type = CAS_equipment_1935
 			amount = 20
 			producer = CAN
 		}
@@ -1004,7 +1004,7 @@ country_event = {
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = CAS_equipment_1
+			type = CAS_equipment_1935
 			amount = 20
 			producer = ENG
 		}
@@ -1034,7 +1034,7 @@ country_event = {
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = tac_bomber_equipment_0
+			type = tac_bomber_equipment_1934
 			amount = 10
 			producer = JAP
 		}
@@ -1055,7 +1055,7 @@ country_event = {
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = tac_bomber_equipment_0
+			type = tac_bomber_equipment_1934
 			amount = 10
 			producer = GER
 		}
@@ -1084,7 +1084,7 @@ country_event = {
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = tac_bomber_equipment_1
+			type = tac_bomber_equipment_1937
 			amount = 10
 			producer = CAN
 		}
@@ -1105,7 +1105,7 @@ country_event = {
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = tac_bomber_equipment_0
+			type = tac_bomber_equipment_1934
 			amount = 10
 			producer = ENG
 		}
@@ -1135,7 +1135,7 @@ country_event = {
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = nav_bomber_equipment_1
+			type = nav_bomber_equipment_1936
 			amount = 15
 			producer = JAP
 		}
@@ -1160,7 +1160,7 @@ country_event = {
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = nav_bomber_equipment_1
+			type = nav_bomber_equipment_1936
 			amount = 15
 			producer = GER
 		}
@@ -1181,7 +1181,7 @@ country_event = {
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = nav_bomber_equipment_1
+			type = nav_bomber_equipment_1936
 			amount = 15
 			producer = CAN
 		}
@@ -1202,7 +1202,7 @@ country_event = {
 			}
 		}
 		add_equipment_to_stockpile = {
-			type = nav_bomber_equipment_1
+			type = nav_bomber_equipment_1936
 			amount = 15
 			producer = ENG
 		}
