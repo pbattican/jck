@@ -2972,8 +2972,8 @@ country_event = { #Providing plane licenses
 		}
 		if = {
 			limit = {
-				has_tech = fighter1
-				FROM = { has_tech = fighter2 }
+				has_tech = fighter_1936
+				FROM = { has_tech = fighter_1940 }
 			}
 			FROM = {
 				create_production_license = {
