@@ -264,7 +264,7 @@ armor_generic = {
 			anti_tank
 			military_police
 			artillery
-			anti_air
+			anti_air_company
 			rocket_artillery
 		}
 	}
@@ -390,7 +390,7 @@ armor_generic = {
 			anti_tank
 			military_police
 			artillery
-			anti_air
+			anti_air_company
 			rocket_artillery
 		}
 	}
@@ -504,7 +504,7 @@ armor_generic = {
 	# 		anti_tank
 	# 		military_police
 	# 		artillery
-	# 		anti_air
+	# 		anti_air_company
 	# 		rocket_artillery
 	# 	}
 	# }
@@ -623,7 +623,7 @@ armor_generic = {
 	# 		anti_tank
 	# 		military_police
 	# 		artillery
-	# 		anti_air
+	# 		anti_air_company
 	# 		rocket_artillery
 	# 	}
 	# }
@@ -761,7 +761,7 @@ heavy_armor_generic = {
 			anti_tank
 			military_police
 			artillery
-			anti_air
+			anti_air_company
 			rocket_artillery
 		}
 	}
@@ -894,7 +894,7 @@ heavy_armor_generic = {
 			anti_tank
 			military_police
 			artillery
-			anti_air
+			anti_air_company
 			rocket_artillery
 		}
 	}
@@ -1024,7 +1024,7 @@ heavy_armor_generic = {
 			anti_tank
 			military_police
 			artillery
-			anti_air
+			anti_air_company
 			rocket_artillery
 		}
 	}
@@ -1073,7 +1073,7 @@ heavy_armor_generic = {
 #signal_company
 #maintenance_company
 #anti_tank_brigade
-#anti_air
+#anti_air_company
 #artillery
 #rocket_artillery
 #field_hospital
