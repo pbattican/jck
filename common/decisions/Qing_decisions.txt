@@ -1043,7 +1043,7 @@ QIE_buy_german_eqip_decisions = {	#purchase german small arms
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_buy_ger_fighter"
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1
+				type = fighter_equipment_1936
 				amount = 150
 				producer = GER
 			}
@@ -1087,7 +1087,7 @@ QIE_buy_german_eqip_decisions = {	#purchase german small arms
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove QIE_buy_ger_cas"
 			add_equipment_to_stockpile = {
-				type = CAS_equipment_1
+				type = CAS_equipment_1935
 				amount = 150
 				producer = GER
 			}

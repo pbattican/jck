@@ -148,13 +148,13 @@ YUN_Buying_fighters_decisions = {
 			if = {
 				limit = { has_tech = fighter1 }
 				add_equipment_to_stockpile = {
-					type = fighter_equipment_1
+					type = fighter_equipment_1936
 					amount = 25
 				}
 			}
 			else = {
 				add_equipment_to_stockpile = {
-					type = fighter_equipment_0
+					type = fighter_equipment_1934
 					amount = 25
 				}
 			}

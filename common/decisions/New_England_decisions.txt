@@ -263,7 +263,7 @@ NEE_entente_allies = {
 				limit = { CAN = { has_tech = fighter2 } }
 				add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 100 producer = CAN }
 				else = {
-					add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 100 producer = CAN }
+					add_equipment_to_stockpile = { type = fighter_equipment_1936 amount = 100 producer = CAN }
 				}
 			}
 			custom_effect_tooltip = NEE_legitimacy_minus_5_tt

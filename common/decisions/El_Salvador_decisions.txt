@@ -26,7 +26,7 @@ ELS_Buying_planes_decisions = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ELS_buying_fighters"
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = fighter_equipment_1934
 				amount = 10
 				producer = ELS
 			}
@@ -58,7 +58,7 @@ ELS_Buying_planes_decisions = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ELS_buying_fighters1"
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1
+				type = fighter_equipment_1936
 				amount = 10
 				producer = ELS
 			}
@@ -87,7 +87,7 @@ ELS_Buying_planes_decisions = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ELS_buying_CAS"
 			add_equipment_to_stockpile = {
-				type = CAS_equipment_1
+				type = CAS_equipment_1935
 				amount = 10
 				producer = ELS
 			}
@@ -116,7 +116,7 @@ ELS_Buying_planes_decisions = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ELS_buying_nav_bombers"
 			add_equipment_to_stockpile = {
-				type = nav_bomber_equipment_1
+				type = nav_bomber_equipment_1936
 				amount = 10
 				producer = ELS
 			}
