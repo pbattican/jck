@@ -1277,7 +1277,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HEJ_hawker_fury_deal"
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1
+				type = fighter_equipment_1936
 				amount = 36
 				producer = ENG
 			}

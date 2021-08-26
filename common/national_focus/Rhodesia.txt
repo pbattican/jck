@@ -1657,7 +1657,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ZIM_entente_planes"
 			add_political_power = -50
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1 amount = 75
+				type = fighter_equipment_1936 amount = 75
 				producer = CAN
 			}
 			add_equipment_to_stockpile = {

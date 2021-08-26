@@ -2249,12 +2249,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SAF_SOC_sri_red_gift"
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1
+				type = fighter_equipment_1936
 				amount = 75
 				producer = SRI
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = fighter_equipment_1934
 				amount = 50
 				producer = SRI
 			}

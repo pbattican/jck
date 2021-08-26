@@ -1109,7 +1109,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus VNC_army_air_upgrade"
 			air_experience = 10
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = fighter_equipment_1934
 				amount = 40
 				producer = VNC
 			}

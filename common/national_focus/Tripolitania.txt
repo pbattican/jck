@@ -836,7 +836,7 @@ focus_tree = {
 				producer = OTT
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = fighter_equipment_1934
 				amount = 10
 				producer = OTT
 			}
@@ -1037,12 +1037,12 @@ focus_tree = {
 				producer = FRA
 			}
 			add_equipment_to_stockpile = {
-				type = light_tank_equipment_1
+				type = light_tank_equipment_1934
 				amount = 100
 				producer = FRA
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = fighter_equipment_1934
 				amount = 75
 				producer = FRA
 			}
@@ -1303,7 +1303,7 @@ focus_tree = {
 				producer = EGY
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = fighter_equipment_1934
 				amount = 10
 				producer = EGY
 			}

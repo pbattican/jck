@@ -704,7 +704,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PAN_purchase_aircraft"
-		add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 25 producer = USA }
+		add_equipment_to_stockpile = { type = fighter_equipment_1934 amount = 25 producer = USA }
 	}
 	x = -1
 	y = 2

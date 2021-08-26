@@ -1400,7 +1400,7 @@ focus_tree = {
 				producer = OTT
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = fighter_equipment_1934
 				amount = 10
 				producer = OTT
 			}

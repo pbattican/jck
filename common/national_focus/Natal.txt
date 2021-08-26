@@ -1889,7 +1889,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SFR_Natal_Air"
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1
+				type = fighter_equipment_1936
 				amount = 50
 				producer = CAN
 			}

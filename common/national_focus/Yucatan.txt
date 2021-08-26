@@ -264,7 +264,7 @@ focus_tree = {
 		relative_position_id = YUC_the_military
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus YUC_star_war"
-			add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 50 producer = MEX }
+			add_equipment_to_stockpile = { type = fighter_equipment_1934 amount = 50 producer = MEX }
 			air_experience = 25
 			add_tech_bonus = {
 				name = YUC_star_war

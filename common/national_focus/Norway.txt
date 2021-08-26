@@ -1185,7 +1185,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus NOR_army_airforce"
 			air_experience = 10
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = fighter_equipment_1934
 				amount = 40
 				producer = NOR
 			}
@@ -2997,7 +2997,7 @@ focus_tree = {
 				add_ideas = NOR_canadian_mission_idea_2
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1
+				type = fighter_equipment_1936
 				amount = 100
 				producer = ENT
 			}
@@ -4154,7 +4154,7 @@ focus_tree = {
 			}
 			else = {
 				add_equipment_to_stockpile = {
-					type = fighter_equipment_1
+					type = fighter_equipment_1936
 					amount = 50
 				}
 			}

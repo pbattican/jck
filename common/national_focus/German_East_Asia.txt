@@ -461,7 +461,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_localtroops2"
 			army_experience = 50
 			add_equipment_to_stockpile = {
-				type = light_tank_equipment_1
+				type = light_tank_equipment_1934
 				amount = 200
 				producer = GER
 			}
@@ -779,12 +779,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_air6"
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1
+				type = fighter_equipment_1936
 				amount = 200
 				producer = GER
 			}
 			add_equipment_to_stockpile = {
-				type = cv_fighter_equipment_1
+				type = cv_fighter_equipment_1934
 				amount = 100
 				producer = GER
 			}

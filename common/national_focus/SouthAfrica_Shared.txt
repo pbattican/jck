@@ -2070,7 +2070,7 @@ shared_focus = {
 				}
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_1
+				type = fighter_equipment_1936
 				amount = 100
 				producer = CAN
 			}
@@ -2496,7 +2496,7 @@ shared_focus = {
 				}
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = fighter_equipment_1934
 				amount = 50
 				producer = HOL
 			}
