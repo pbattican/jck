@@ -1817,13 +1817,13 @@ focus_tree = {
 				name = HND_fighter_focus
 				bonus = 1
 				uses = 2
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				technology = fighter_1934
+				technology = fighter_1936
+				technology = fighter_1940
+				technology = fighter_1944
+				technology = heavy_fighter_1936
+				technology = heavy_fighter_1940
+				technology = heavy_fighter_1944
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1854,9 +1854,9 @@ focus_tree = {
 				name = HND_bomber_focus
 				bonus = 1
 				uses = 2
-				technology = strategic_bomber1
-				technology = strategic_bomber2
-				technology = strategic_bomber3
+				technology = strategic_bomber_1937
+				technology = strategic_bomber_1939
+				technology = strategic_bomber_1941
 				category = tactical_bomber
 			}
 		}

@@ -3565,8 +3565,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_top_of_the_line_artillery"
 			if = {
-				limit = { NOT = { has_tech = interwar_artillery } }
-				set_technology = { interwar_artillery = 1 }
+				limit = { NOT = { has_tech = artillery1 } }
+				set_technology = { artillery1 = 1 }
 				else_if = {
 					limit = { NOT = { has_tech = artillery1 } }
 					set_technology = { artillery1 = 1 }
@@ -3986,9 +3986,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_CAS_focus"
 			if = {
-				limit = { NOT = { has_tech = CAS2 } }
+				limit = { NOT = { has_tech = CAS_1939 } }
 				hidden_effect = {
-					set_technology = { CAS2 = 1 }
+					set_technology = { CAS_1939 = 1 }
 				}
 				custom_effect_tooltip = TEX_unlock_CAS
 				else = {
@@ -4054,15 +4054,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_flexible_bombers"
 			if = {
-				limit = { NOT = { has_tech = tactical_bomber1 } }
+				limit = { NOT = { has_tech = tactical_bomber_1934 } }
 				hidden_effect = {
-					set_technology = { tactical_bomber1 = 1 }
+					set_technology = { tactical_bomber_1934 = 1 }
 				}
 				custom_effect_tooltip = TEX_unlock_bomber_1
 				else_if = {
-					limit = { NOT = { has_tech = tactical_bomber2 } }
+					limit = { NOT = { has_tech = tactical_bomber_1937 } }
 					hidden_effect = {
-						set_technology = { tactical_bomber2 = 1 }
+						set_technology = { tactical_bomber_1937 = 1 }
 					}
 					custom_effect_tooltip = TEX_unlock_bomber_2
 				}
@@ -4133,9 +4133,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_strat_bomber_development"
 			if = {
-				limit = { NOT = { has_tech = strategic_bomber2 } }
+				limit = { NOT = { has_tech = strategic_bomber_1939 } }
 				hidden_effect = {
-					set_technology = { strategic_bomber2 = 1 }
+					set_technology = { strategic_bomber_1939 = 1 }
 				}
 				custom_effect_tooltip = TEX_unlock_strat_bomber
 				else = {
@@ -4202,15 +4202,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_long_range_interceptors"
 			if = {
-				limit = { NOT = { has_tech = heavy_fighter1 } }
+				limit = { NOT = { has_tech = heavy_fighter_1936 } }
 				hidden_effect = {
-					set_technology = { heavy_fighter1 = 1 }
+					set_technology = { heavy_fighter_1936 = 1 }
 				}
 				custom_effect_tooltip = TEX_unlock_heavy_fighter_1
 				else_if = {
-					limit = { NOT = { has_tech = heavy_fighter2 } }
+					limit = { NOT = { has_tech = heavy_fighter_1940 } }
 					hidden_effect = {
-						set_technology = { heavy_fighter2 = 1 }
+						set_technology = { heavy_fighter_1940 = 1 }
 					}
 					custom_effect_tooltip = TEX_unlock_heavy_fighter_2
 				}

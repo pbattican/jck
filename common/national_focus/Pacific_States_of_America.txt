@@ -2360,16 +2360,16 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_Long_Range_Interceptors"
 			if = {
-				limit = { NOT = { has_tech = heavy_fighter1 } }
+				limit = { NOT = { has_tech = heavy_fighter_1936 } }
 				hidden_effect = {
-					set_technology = { heavy_fighter1 = 1 }
+					set_technology = { heavy_fighter_1936 = 1 }
 				}
 				custom_effect_tooltip = TEX_unlock_heavy_fighter_1
 			}
 			else_if = {
-				limit = { NOT = { has_tech = heavy_fighter2 } }
+				limit = { NOT = { has_tech = heavy_fighter_1940 } }
 				hidden_effect = {
-					set_technology = { heavy_fighter2 = 1 }
+					set_technology = { heavy_fighter_1940 = 1 }
 				}
 				custom_effect_tooltip = TEX_unlock_heavy_fighter_2
 			}
@@ -2404,9 +2404,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PSA_Strategic_Bomber_Development"
 			if = {
-				limit = { NOT = { has_tech = strategic_bomber2 } }
+				limit = { NOT = { has_tech = strategic_bomber_1939 } }
 				hidden_effect = {
-					set_technology = { strategic_bomber2 = 1 }
+					set_technology = { strategic_bomber_1939 = 1 }
 				}
 				custom_effect_tooltip = TEX_unlock_strat_bomber
 			}
