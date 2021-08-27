@@ -418,11 +418,11 @@ stop_carrier_fighter_prod = {
 stop_carrier_navbomber_prod = {
 	has_tech = cv_naval_bomber_1936
 	if = {
-		limit = { has_tech = cv_naval_bomber3 }
+		limit = { has_tech = cv_naval_bomber_1944 }
 		check_variable = { num_equipment@cv_nav_bomber_equipment_1944 > 10 }
 	}
 	else_if = {
-		limit = { has_tech = cv_naval_bomber2 }
+		limit = { has_tech = cv_naval_bomber_1940 }
 		check_variable = { num_equipment@cv_nav_bomber_equipment_1940 > 10 }
 	}
 	else = {

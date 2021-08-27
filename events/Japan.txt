@@ -2653,7 +2653,7 @@ country_event = { #New Carrier plane
 		name = japdom.303.c
 		hidden_effect = {
 			if = {
-				limit = { has_tech = cv_naval_bomber2 }
+				limit = { has_tech = cv_naval_bomber_1940 }
 				set_country_flag = jap_torp_3
 			}
 			else = {
@@ -2737,7 +2737,7 @@ country_event = { #New plane ready
 			}
 		}
 		hidden_effect = {
-			set_technology = { cv_naval_bomber2 = 1 }
+			set_technology = { cv_naval_bomber_1940 = 1 }
 		}
 		custom_effect_tooltip = JAP_tooltip_Tenzan
 	}
@@ -2749,7 +2749,7 @@ country_event = { #New plane ready
 			}
 		}
 		hidden_effect = {
-			set_technology = { cv_naval_bomber3 = 1 }
+			set_technology = { cv_naval_bomber_1944 = 1 }
 		}
 		custom_effect_tooltip = JAP_tooltip_B7A
 	}

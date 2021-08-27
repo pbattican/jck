@@ -329,16 +329,16 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = jet_fighter1 }
+				PREV = { has_tech = jet_fighter_1946 }
 			}
-			set_technology = { jet_fighter1 = 1 popup = no }
+			set_technology = { jet_fighter_1946 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = jet_fighter2 }
-			}
-			set_technology = { jet_fighter2 = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = jet_fighter2 }
+		# 	}
+		# 	set_technology = { jet_fighter2 = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = CAS_1937 }
@@ -389,27 +389,27 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = naval_bomber2 }
+				PREV = { has_tech = naval_bomber_1940 }
 			}
-			set_technology = { naval_bomber2 = 1 popup = no }
+			set_technology = { naval_bomber_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_naval_bomber2 }
+				PREV = { has_tech = cv_naval_bomber_1940 }
 			}
-			set_technology = { cv_naval_bomber2 = 1 popup = no }
+			set_technology = { cv_naval_bomber_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = naval_bomber3 }
+				PREV = { has_tech = naval_bomber_1944 }
 			}
-			set_technology = { naval_bomber3 = 1 popup = no }
+			set_technology = { naval_bomber_1944 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_naval_bomber3 }
+				PREV = { has_tech = cv_naval_bomber_1944 }
 			}
-			set_technology = { cv_naval_bomber3 = 1 popup = no }
+			set_technology = { cv_naval_bomber_1944 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -465,18 +465,18 @@ transfer_technology = {
 			}
 			set_technology = { tactical_bomber_1943 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = jet_tactical_bomber1 }
-			}
-			set_technology = { jet_tactical_bomber1 = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = jet_tactical_bomber2 }
-			}
-			set_technology = { jet_tactical_bomber2 = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = jet_tactical_bomber1 }
+		# 	}
+		# 	set_technology = { jet_tactical_bomber1 = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = jet_tactical_bomber2 }
+		# 	}
+		# 	set_technology = { jet_tactical_bomber2 = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = strategic_bomber_1937 }
@@ -495,12 +495,12 @@ transfer_technology = {
 			}
 			set_technology = { strategic_bomber_1943 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = jet_strategic_bomber1 }
-			}
-			set_technology = { jet_strategic_bomber1 = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = jet_strategic_bomber1 }
+		# 	}
+		# 	set_technology = { jet_strategic_bomber1 = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = suicide_craft }
@@ -3352,16 +3352,16 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = jet_fighter1 }
+				PREV = { has_tech = jet_fighter_1946 }
 			}
-			set_technology = { jet_fighter1 = 1 popup = no }
+			set_technology = { jet_fighter_1946 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = jet_fighter2 }
-			}
-			set_technology = { jet_fighter2 = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = jet_fighter2 }
+		# 	}
+		# 	set_technology = { jet_fighter2 = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = CAS_1937 }
@@ -3412,27 +3412,27 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = naval_bomber2 }
+				PREV = { has_tech = naval_bomber_1940 }
 			}
-			set_technology = { naval_bomber2 = 1 popup = no }
+			set_technology = { naval_bomber_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_naval_bomber2 }
+				PREV = { has_tech = cv_naval_bomber_1940 }
 			}
-			set_technology = { cv_naval_bomber2 = 1 popup = no }
+			set_technology = { cv_naval_bomber_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = naval_bomber3 }
+				PREV = { has_tech = naval_bomber_1944 }
 			}
-			set_technology = { naval_bomber3 = 1 popup = no }
+			set_technology = { naval_bomber_1944 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_naval_bomber3 }
+				PREV = { has_tech = cv_naval_bomber_1944 }
 			}
-			set_technology = { cv_naval_bomber3 = 1 popup = no }
+			set_technology = { cv_naval_bomber_1944 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3488,18 +3488,18 @@ transfer_technology_without_doctrines = {
 			}
 			set_technology = { tactical_bomber_1943 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = jet_tactical_bomber1 }
-			}
-			set_technology = { jet_tactical_bomber1 = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = jet_tactical_bomber2 }
-			}
-			set_technology = { jet_tactical_bomber2 = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = jet_tactical_bomber1 }
+		# 	}
+		# 	set_technology = { jet_tactical_bomber1 = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = jet_tactical_bomber2 }
+		# 	}
+		# 	set_technology = { jet_tactical_bomber2 = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = strategic_bomber_1937 }
@@ -3518,12 +3518,12 @@ transfer_technology_without_doctrines = {
 			}
 			set_technology = { strategic_bomber_1943 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = jet_strategic_bomber1 }
-			}
-			set_technology = { jet_strategic_bomber1 = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = jet_strategic_bomber1 }
+		# 	}
+		# 	set_technology = { jet_strategic_bomber1 = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = suicide_craft }
@@ -3723,12 +3723,12 @@ transfer_technology_without_doctrines = {
 			}
 			set_technology = { heavy_art_1941 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = basic_heavy_spaa }
-			}
-			set_technology = { basic_heavy_spaa = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = basic_heavy_spaa }
+		# 	}
+		# 	set_technology = { basic_heavy_spaa = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = heavy_tank_1941 }
@@ -3747,12 +3747,12 @@ transfer_technology_without_doctrines = {
 			}
 			set_technology = { heavy_art_1943 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = improved_heavy_spaa }
-			}
-			set_technology = { improved_heavy_spaa = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = improved_heavy_spaa }
+		# 	}
+		# 	set_technology = { improved_heavy_spaa = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = heavy_tank_1943 }
@@ -3765,42 +3765,42 @@ transfer_technology_without_doctrines = {
 			}
 			set_technology = { heavy_td_1943 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = advanced_heavy_art }
-			}
-			set_technology = { advanced_heavy_art = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = advanced_heavy_spaa }
-			}
-			set_technology = { advanced_heavy_spaa = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = super_heavy_tank }
-			}
-			set_technology = { super_heavy_tank = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = super_heavy_td }
-			}
-			set_technology = { super_heavy_td = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = super_heavy_art }
-			}
-			set_technology = { super_heavy_art = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = super_heavy_spaa }
-			}
-			set_technology = { super_heavy_spaa = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = advanced_heavy_art }
+		# 	}
+		# 	set_technology = { advanced_heavy_art = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = advanced_heavy_spaa }
+		# 	}
+		# 	set_technology = { advanced_heavy_spaa = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = super_heavy_tank }
+		# 	}
+		# 	set_technology = { super_heavy_tank = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = super_heavy_td }
+		# 	}
+		# 	set_technology = { super_heavy_td = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = super_heavy_art }
+		# 	}
+		# 	set_technology = { super_heavy_art = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = super_heavy_spaa }
+		# 	}
+		# 	set_technology = { super_heavy_spaa = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = amphibious_tank }
