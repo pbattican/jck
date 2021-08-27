@@ -2706,15 +2706,15 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_tech = improved_medium_tank
-						has_tech = advanced_medium_tank
+						has_tech = medium_tank_1939
+						has_tech = medium_tank_1941
 					}
 				}
 				add_tech_bonus = {
 					name = CSA_armour_development
 					ahead_reduction = 2
-					technology = improved_medium_tank
-					technology = advanced_medium_tank
+					technology = medium_tank_1939
+					technology = medium_tank_1941
 				}
 				add_tech_bonus = {
 					name = CSA_armour_development

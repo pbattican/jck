@@ -1929,40 +1929,40 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = {
-						has_tech = fighter3
+						has_tech = fighter_1944
 						NOT = {
-							has_tech = cv_fighter3
+							has_tech = cv_fighter_1944
 						}
 					}
 					set_technology = {
-						cv_fighter3 = 1
+						cv_fighter_1944 = 1
 					}
 				}
 				else_if = {
 					limit = {
-						has_tech = fighter2
+						has_tech = fighter_1940
 						NOT = {
-							has_tech = cv_fighter2
+							has_tech = cv_fighter_1940
 						}
 					}
 					set_technology = {
-						cv_fighter2 = 1
+						cv_fighter_1940 = 1
 					}
 				}
 				else_if = {
 					limit = {
-						has_tech = fighter1
+						has_tech = fighter_1936
 						NOT = {
-							has_tech = cv_fighter1
+							has_tech = cv_fighter_1936
 						}
 					}
 					set_technology = {
-						cv_fighter1 = 1
+						cv_fighter_1936 = 1
 					}
 				}
 				else = {
 					set_technology = {
-						cv_early_fighter = 1
+						cv_fighter_1934 = 1
 					}
 				}
 			}
