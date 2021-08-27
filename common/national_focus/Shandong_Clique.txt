@@ -1760,9 +1760,9 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = {
-						NOT = { has_tech = early_bomber }
+						NOT = { has_tech = tactical_bomber_1934 }
 					}
-					set_technology = { early_bomber = 1 }
+					set_technology = { tactical_bomber_1934 = 1 }
 				}
 			}
 			add_equipment_to_stockpile = {
