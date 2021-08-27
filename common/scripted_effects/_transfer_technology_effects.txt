@@ -299,9 +299,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_fighter1 }
+				PREV = { has_tech = cv_fighter_1936 }
 			}
-			set_technology = { cv_fighter1 = 1 popup = no }
+			set_technology = { cv_fighter_1936 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -311,9 +311,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_fighter2 }
+				PREV = { has_tech = cv_fighter_1940 }
 			}
-			set_technology = { cv_fighter2 = 1 popup = no }
+			set_technology = { cv_fighter_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -323,9 +323,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_fighter3 }
+				PREV = { has_tech = cv_fighter_1944 }
 			}
-			set_technology = { cv_fighter3 = 1 popup = no }
+			set_technology = { cv_fighter_1944 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -347,9 +347,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_CAS1 }
+				PREV = { has_tech = cv_CAS_1937 }
 			}
-			set_technology = { cv_CAS1 = 1 popup = no }
+			set_technology = { cv_CAS_1937 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -359,9 +359,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_CAS2 }
+				PREV = { has_tech = cv_CAS_1939 }
 			}
-			set_technology = { cv_CAS2 = 1 popup = no }
+			set_technology = { cv_CAS_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -371,9 +371,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_CAS3 }
+				PREV = { has_tech = cv_CAS_1943 }
 			}
-			set_technology = { cv_CAS3 = 1 popup = no }
+			set_technology = { cv_CAS_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -528,9 +528,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_light_art }
+				PREV = { has_tech = light_art_1938 }
 			}
-			set_technology = { basic_light_art = 1 popup = no }
+			set_technology = { light_art_1938 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -594,9 +594,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_medium_td }
+				PREV = { has_tech = medium_td_1939 }
 			}
-			set_technology = { basic_medium_td = 1 popup = no }
+			set_technology = { medium_td_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -1679,22 +1679,22 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = armored_car2 }
+				PREV = { has_tech = tech_armored_cars2 }
 			}
-			set_technology = { armored_car2 = 1 popup = no }
+			set_technology = { tech_armored_cars2 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = armored_car3 }
+				PREV = { has_tech = tech_armored_cars3 }
 			}
-			set_technology = { armored_car3 = 1 popup = no }
+			set_technology = { tech_armored_cars3 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = armored_car_at_upgrade }
-			}
-			set_technology = { armored_car_at_upgrade = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = armored_car_at_upgrade }
+		# 	}
+		# 	set_technology = { armored_car_at_upgrade = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = mechanised_infantry }
@@ -1735,7 +1735,7 @@ transfer_technology = {
 			limit = {
 				PREV = { has_tech = camelry }
 			}
-			set_technology = { camelry = 1 popup = no }
+			set_technology = {  popup = no }
 		}
 		###land_doctrine###
 		if = {
@@ -3322,9 +3322,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_fighter1 }
+				PREV = { has_tech = cv_fighter_1936 }
 			}
-			set_technology = { cv_fighter1 = 1 popup = no }
+			set_technology = { cv_fighter_1936 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3334,9 +3334,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_fighter2 }
+				PREV = { has_tech = cv_fighter_1940 }
 			}
-			set_technology = { cv_fighter2 = 1 popup = no }
+			set_technology = { cv_fighter_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3346,9 +3346,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_fighter3 }
+				PREV = { has_tech = cv_fighter_1944 }
 			}
-			set_technology = { cv_fighter3 = 1 popup = no }
+			set_technology = { cv_fighter_1944 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3370,9 +3370,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_CAS1 }
+				PREV = { has_tech = cv_CAS_1937 }
 			}
-			set_technology = { cv_CAS1 = 1 popup = no }
+			set_technology = { cv_CAS_1937 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3382,9 +3382,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_CAS2 }
+				PREV = { has_tech = cv_CAS_1939 }
 			}
-			set_technology = { cv_CAS2 = 1 popup = no }
+			set_technology = { cv_CAS_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3394,9 +3394,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = cv_CAS3 }
+				PREV = { has_tech = cv_CAS_1943 }
 			}
-			set_technology = { cv_CAS3 = 1 popup = no }
+			set_technology = { cv_CAS_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3551,9 +3551,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_light_art }
+				PREV = { has_tech = light_art_1938 }
 			}
-			set_technology = { basic_light_art = 1 popup = no }
+			set_technology = { light_art_1938 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3617,9 +3617,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_medium_td }
+				PREV = { has_tech = medium_td_1939 }
 			}
-			set_technology = { basic_medium_td = 1 popup = no }
+			set_technology = { medium_td_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -4702,22 +4702,22 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = armored_car2 }
+				PREV = { has_tech = tech_armored_cars2 }
 			}
-			set_technology = { armored_car2 = 1 popup = no }
+			set_technology = { tech_armored_cars2 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = armored_car3 }
+				PREV = { has_tech = tech_armored_cars3 }
 			}
-			set_technology = { armored_car3 = 1 popup = no }
+			set_technology = { tech_armored_cars3 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = armored_car_at_upgrade }
-			}
-			set_technology = { armored_car_at_upgrade = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = armored_car_at_upgrade }
+		# 	}
+		# 	set_technology = { armored_car_at_upgrade = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = mechanised_infantry }
@@ -4758,7 +4758,7 @@ transfer_technology_without_doctrines = {
 			limit = {
 				PREV = { has_tech = camelry }
 			}
-			set_technology = { camelry = 1 popup = no }
+			set_technology = {  popup = no }
 		}
 		###MTG_naval###
 		if = {

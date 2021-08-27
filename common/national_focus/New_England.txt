@@ -461,7 +461,7 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_tech = naval_bomber1
+			has_tech = naval_bomber_1936
 		}
 		available_if_capitulated = yes
 		completion_reward = {

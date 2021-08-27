@@ -399,15 +399,15 @@ stop_antitank_prod = {
 stop_carrier_fighter_prod = {
 	has_tech = cv_fighter_1934
 	if = {
-		limit = { has_tech = cv_fighter3 }
+		limit = { has_tech = cv_fighter_1944 }
 		check_variable = { num_equipment@cv_fighter_equipment_1944 > 10 }
 	}
 	else_if = {
-		limit = { has_tech = cv_fighter2 }
+		limit = { has_tech = cv_fighter_1940 }
 		check_variable = { num_equipment@cv_fighter_equipment_1940 > 10 }
 	}
 	else_if = {
-		limit = { has_tech = cv_fighter1 }
+		limit = { has_tech = cv_fighter_1936 }
 		check_variable = { num_equipment@cv_fighter_equipment_1936 > 10 }
 	}
 	else = {
@@ -431,13 +431,13 @@ stop_carrier_navbomber_prod = {
 }
 
 stop_carrier_cas_prod = {
-	has_tech = cv_CAS1
+	has_tech = cv_CAS_1937
 	if = {
-		limit = { has_tech = cv_CAS3 }
+		limit = { has_tech = cv_CAS_1943 }
 		check_variable = { num_equipment@cv_CAS_equipment_1943 > 10 }
 	}
 	else_if = {
-		limit = { has_tech = cv_CAS2 }
+		limit = { has_tech = cv_CAS_1939 }
 		check_variable = { num_equipment@cv_CAS_equipment_1939 > 10 }
 	}
 	else = {

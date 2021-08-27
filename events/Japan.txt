@@ -2618,7 +2618,7 @@ country_event = { #New Carrier plane
 		name = japdom.303.a
 		hidden_effect = {
 			if = {
-				limit = { has_tech = cv_fighter2 }
+				limit = { has_tech = cv_fighter_1940 }
 				set_country_flag = jap_fighter_3
 			}
 			else = {
@@ -2636,7 +2636,7 @@ country_event = { #New Carrier plane
 		name = japdom.303.b
 		hidden_effect = {
 			if = {
-				limit = { has_tech = cv_CAS2 }
+				limit = { has_tech = cv_CAS_1939 }
 				set_country_flag = jap_cas_3
 			}
 			else = {
@@ -2686,7 +2686,7 @@ country_event = { #New plane ready
 			}
 		}
 		hidden_effect = {
-			set_technology = { cv_fighter2 = 1 }
+			set_technology = { cv_fighter_1940 = 1 }
 		}
 		custom_effect_tooltip = JAP_tooltip_Reisen
 	}
@@ -2699,7 +2699,7 @@ country_event = { #New plane ready
 			}
 		}
 		hidden_effect = {
-			set_technology = { cv_fighter3 = 1 }
+			set_technology = { cv_fighter_1944 = 1 }
 		}
 		custom_effect_tooltip = JAP_tooltip_Reppu
 	}
@@ -2712,7 +2712,7 @@ country_event = { #New plane ready
 			}
 		}
 		hidden_effect = {
-			set_technology = { cv_CAS2 = 1  }
+			set_technology = { cv_CAS_1939 = 1  }
 		}
 		custom_effect_tooltip = JAP_tooltip_D3A
 	}
@@ -2725,7 +2725,7 @@ country_event = { #New plane ready
 			}
 		}
 		hidden_effect = {
-			set_technology = { cv_CAS3 = 1  }
+			set_technology = { cv_CAS_1943 = 1  }
 		}
 		custom_effect_tooltip = JAP_tooltip_Suisei
 	}
