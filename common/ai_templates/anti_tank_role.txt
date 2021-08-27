@@ -13,7 +13,7 @@ antitank_generic = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { has_tech = basic_light_td }
+			NOT = { has_tech = light_td_1938 }
 		}
 		modifier = {
 			factor = 0
@@ -40,11 +40,11 @@ antitank_generic = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_light_td }
+				NOT = { has_tech = light_td_1938 }
 			}
 			modifier = {
 				factor = 0
-				has_tech = basic_medium_td
+				has_tech = medium_td_1939
 			}
 			modifier = {
 				factor = 0
@@ -59,11 +59,11 @@ antitank_generic = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_light_td }
+				NOT = { has_tech = light_td_1938 }
 			}
 			modifier = {
 				factor = 0
-				has_tech = basic_medium_td
+				has_tech = medium_td_1939
 			}
 			modifier = {
 				factor = 0
@@ -164,7 +164,7 @@ antitank_generic = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_medium_td }
+				NOT = { has_tech = medium_td_1939 }
 			}
 			modifier = {
 				factor = 0
@@ -179,7 +179,7 @@ antitank_generic = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_medium_td }
+				NOT = { has_tech = medium_td_1939 }
 			}
 			modifier = {
 				factor = 0

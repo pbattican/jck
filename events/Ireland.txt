@@ -8737,10 +8737,10 @@ country_event = {
 			name = ire.223.t
 			bonus = 1
 			uses = 1
-			technology = early_fighter
-			technology = fighter1
-			technology = fighter2
-			technology = fighter3
+			technology = fighter_1934
+			technology = fighter_1936
+			technology = fighter_1940
+			technology = fighter_1944
 		}
 		add_popularity = {
 			ideology = radical_socialist

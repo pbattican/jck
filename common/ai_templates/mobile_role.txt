@@ -272,8 +272,8 @@ mobile_generic = {
 			}
 			modifier = {
 				factor = 0
-				has_tech = basic_light_art
-				has_tech = basic_light_td
+				has_tech = light_art_1938
+				has_tech = light_td_1938
 				num_of_military_factories > 59
 			}
 		}
@@ -293,8 +293,8 @@ mobile_generic = {
 			}
 			modifier = {
 				factor = 0
-				has_tech = basic_light_art
-				has_tech = basic_light_td
+				has_tech = light_art_1938
+				has_tech = light_td_1938
 				num_of_military_factories > 59
 			}
 		}
@@ -380,11 +380,11 @@ mobile_generic = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_light_art }
+				NOT = { has_tech = light_art_1938 }
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_light_td }
+				NOT = { has_tech = light_td_1938 }
 			}
 			modifier = {
 				factor = 0
@@ -403,11 +403,11 @@ mobile_generic = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_light_art }
+				NOT = { has_tech = light_art_1938 }
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_light_td }
+				NOT = { has_tech = light_td_1938 }
 			}
 			modifier = {
 				factor = 0
