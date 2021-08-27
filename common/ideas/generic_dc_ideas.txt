@@ -833,7 +833,7 @@ ideas = {
 				navy_fuel_consumption_factor = -0.9
 				stability_weekly = 0.1
 				war_support_weekly = 0.1
-				neutrality_drift = 1
+				
 			}
 		}
 		cheater_idea = {
@@ -910,398 +910,398 @@ ideas = {
 				operative_slot = -5
 			}
 		}
-		nationalism = {
+		# nationalism = {
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				has_government = fascism
-			}
+		# 	allowed_civil_war = {
+		# 		has_government = fascism
+		# 	}
 
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_infantry_bonus
+		# 	picture = generic_infantry_bonus
 
 			
-			modifier = {
-				fascism_drift = 0.1
-			}
-		}
+		# 	modifier = {
+		# 		fascism_drift = 0.1
+		# 	}
+		# }
 
-		internationalism = {
+		# internationalism = {
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				has_government = communism
-			}
+		# 	allowed_civil_war = {
+		# 		has_government = communism
+		# 	}
 
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_intel_bonus
+		# 	picture = generic_intel_bonus
 			
-			modifier = {
-				#justify_war_goal_time = -0.25
-				communism_drift = 0.1
-			}
-		}
+		# 	modifier = {
+		# 		#justify_war_goal_time = -0.25
+		# 		communism_drift = 0.1
+		# 	}
+		# }
 
-		fascist_influence = {
+		# fascist_influence = {
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				has_government = fascism
-			}
+		# 	allowed_civil_war = {
+		# 		has_government = fascism
+		# 	}
 
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_fascism_drift_bonus
+		# 	picture = generic_fascism_drift_bonus
 			
-			modifier = {
-				fascism_drift = 0.1
-				fascism_acceptance = 85
-			}
-		}
+		# 	modifier = {
+		# 		fascism_drift = 0.1
+		# 		fascism_acceptance = 85
+		# 	}
+		# }
 		
-		communist_influence = {
+		# communist_influence = {
 			
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				has_government = communism
-			}
+		# 	allowed_civil_war = {
+		# 		has_government = communism
+		# 	}
 
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_communism_drift_bonus
+		# 	picture = generic_communism_drift_bonus
 			
-			modifier = {
-				communism_drift = 0.1
-				communism_acceptance = 85
-			}
-		}
+		# 	modifier = {
+		# 		communism_drift = 0.1
+		# 		communism_acceptance = 85
+		# 	}
+		# }
 		
-		democratic_influence = {
+		# democratic_influence = {
 			
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				has_government = democratic
-			}
+		# 	allowed_civil_war = {
+		# 		has_government = democratic
+		# 	}
 
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_democratic_drift_bonus
+		# 	picture = generic_democratic_drift_bonus
 			
-			modifier = {
-				democratic_drift = 0.1
-				democratic_acceptance = 85
-			}
-		}
+		# 	modifier = {
+		# 		democratic_drift = 0.1
+		# 		democratic_acceptance = 85
+		# 	}
+		# }
 		
 		
-		communism_banned = {
-			picture = anti_soviet_pact
-			allowed = {
-				always = no
-			}
+		# communism_banned = {
+		# 	picture = anti_soviet_pact
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				NOT = {
-					has_government = communism
-				}
-			}
+		# 	allowed_civil_war = {
+		# 		NOT = {
+		# 			has_government = communism
+		# 		}
+		# 	}
 
-			modifier = {
-				communism_drift = -0.05
-			}
-		}
+		# 	modifier = {
+		# 		communism_drift = -0.05
+		# 	}
+		# }
 
-		fascism_banned = {
+		# fascism_banned = {
 
-			picture = generic_fascism_banned
+		# 	picture = generic_fascism_banned
 
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				NOT = {
-					has_government = fascism
-				}
-			}
+		# 	allowed_civil_war = {
+		# 		NOT = {
+		# 			has_government = fascism
+		# 		}
+		# 	}
 
-			modifier = {
-				fascism_drift = -0.05
-			}
-		}
+		# 	modifier = {
+		# 		fascism_drift = -0.05
+		# 	}
+		# }
 		
-		soviet_german_friendship = {
-			allowed = {
-				always = no
-			}
+		# soviet_german_friendship = {
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				OR = {
-					AND = {
-						tag = GER
-						has_government = fascism
-						SOV = {
-							has_government = communism
-						}
-					}
-					AND = {
-						tag = SOV
-						has_government = communism
-						GER = {
-							has_government = fascism
-						}
-					}
-				}
-			}
+		# 	allowed_civil_war = {
+		# 		OR = {
+		# 			AND = {
+		# 				tag = GER
+		# 				has_government = fascism
+		# 				SOV = {
+		# 					has_government = communism
+		# 				}
+		# 			}
+		# 			AND = {
+		# 				tag = SOV
+		# 				has_government = communism
+		# 				GER = {
+		# 					has_government = fascism
+		# 				}
+		# 			}
+		# 		}
+		# 	}
 
-			removal_cost = -1
+		# 	removal_cost = -1
 			
-			modifier = {
-				communism_acceptance = 100
-				fascism_acceptance = 100
-			}
-		}
+		# 	modifier = {
+		# 		communism_acceptance = 100
+		# 		fascism_acceptance = 100
+		# 	}
+		# }
 		
-		communist_pressure = {
+		# communist_pressure = {
 			
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				has_government = communism
-			}
+		# 	allowed_civil_war = {
+		# 		has_government = communism
+		# 	}
 
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_communism_drift_bonus
+		# 	picture = generic_communism_drift_bonus
 			
-			modifier = {
-				communism_drift = 0.05
-			}
-		}
+		# 	modifier = {
+		# 		communism_drift = 0.05
+		# 	}
+		# }
 		
-		intermarial_influance = {
+		# intermarial_influance = {
 
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				always = no
-			}
+		# 	allowed_civil_war = {
+		# 		always = no
+		# 	}
 
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_intel_bonus
+		# 	picture = generic_intel_bonus
 
-			modifier = {
-				democratic_drift = -0.05
-				fascism_drift = -0.05
-			}
-		}
+		# 	modifier = {
+		# 		democratic_drift = -0.05
+		# 		fascism_drift = -0.05
+		# 	}
+		# }
 		
 		# Generic Focus Ideas
 
 		
 		
-		collectivist_ethos_focus = {
+		# collectivist_ethos_focus = {
 			
 		
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				has_government = communism
-			}
+		# 	allowed_civil_war = {
+		# 		has_government = communism
+		# 	}
 		
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_pp_unity_bonus
+		# 	picture = generic_pp_unity_bonus
 
-			modifier = {
-				democratic_drift = -0.02
-			}
-		}
+		# 	modifier = {
+		# 		democratic_drift = -0.02
+		# 	}
+		# }
 	
-		liberty_ethos_focus = {
+		# liberty_ethos_focus = {
 			
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				has_government = democratic
-			}
+		# 	allowed_civil_war = {
+		# 		has_government = democratic
+		# 	}
 			
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_democratic_drift_bonus
+		# 	picture = generic_democratic_drift_bonus
 	
-			modifier = {
-				trade_opinion_factor = 0.2
-			}
-		}
+		# 	modifier = {
+		# 		trade_opinion_factor = 0.2
+		# 	}
+		# }
 	
-		militarism_focus = {
+		# militarism_focus = {
 			
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				has_government = fascism
-			}
+		# 	allowed_civil_war = {
+		# 		has_government = fascism
+		# 	}
 			
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_manpower_bonus
+		# 	picture = generic_manpower_bonus
 	
-			modifier = {
-				conscription = 0.02
-				resistance_damage_to_garrison = -0.1 
-			}
-		}
+		# 	modifier = {
+		# 		conscription = 0.02
+		# 		resistance_damage_to_garrison = -0.1 
+		# 	}
+		# }
 	
-		military_youth_focus = {
+		# military_youth_focus = {
 			
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				OR = {
-					has_government = communism
-					has_government = fascism
-				}
-			}
+		# 	allowed_civil_war = {
+		# 		OR = {
+		# 			has_government = communism
+		# 			has_government = fascism
+		# 		}
+		# 	}
 			
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_manpower_bonus
+		# 	picture = generic_manpower_bonus
 	
-			modifier = {
-				conscription = 0.01
-			}
-		}
+		# 	modifier = {
+		# 		conscription = 0.01
+		# 	}
+		# }
 	
-		paramilitarism_focus = {
+		# paramilitarism_focus = {
 			
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				OR = {
-					has_government = communism
-					has_government = fascism
-				}
-			}
+		# 	allowed_civil_war = {
+		# 		OR = {
+		# 			has_government = communism
+		# 			has_government = fascism
+		# 		}
+		# 	}
 			
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_infantry_bonus
+		# 	picture = generic_infantry_bonus
 	
-			modifier = {
-				training_time_army_factor = -0.1
-			}
-		}
+		# 	modifier = {
+		# 		training_time_army_factor = -0.1
+		# 	}
+		# }
 	
-		indoctrination_focus = {
+		# indoctrination_focus = {
 			
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				OR = {
-					has_government = communism
-					has_government = fascism
-				}
-			}
+		# 	allowed_civil_war = {
+		# 		OR = {
+		# 			has_government = communism
+		# 			has_government = fascism
+		# 		}
+		# 	}
 			
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_pp_unity_bonus
+		# 	picture = generic_pp_unity_bonus
 	
-			modifier = {
-				stability_factor = 0.15
-				conscription = 0.02
-			}
-		}
+		# 	modifier = {
+		# 		stability_factor = 0.15
+		# 		conscription = 0.02
+		# 	}
+		# }
 	
-		ideological_fanaticism_focus = {
+		# ideological_fanaticism_focus = {
 			
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				always = yes
-			}
+		# 	allowed_civil_war = {
+		# 		always = yes
+		# 	}
 			
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_pp_unity_bonus
+		# 	picture = generic_pp_unity_bonus
 	
-			rule = {
-				can_create_factions = yes
-			}
+		# 	rule = {
+		# 		can_create_factions = yes
+		# 	}
 	
-			modifier = {
-				stability_factor = 0.05
-				production_factory_max_efficiency_factor = 0.1
-				army_core_attack_factor = 0.2
-				army_core_defence_factor = 0.2
-			}
-		}
+		# 	modifier = {
+		# 		stability_factor = 0.05
+		# 		production_factory_max_efficiency_factor = 0.1
+		# 		army_core_attack_factor = 0.2
+		# 		army_core_defence_factor = 0.2
+		# 	}
+		# }
 	
-		political_commissars_focus = {
+		# political_commissars_focus = {
 			
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				has_government = communism
-			}
+		# 	allowed_civil_war = {
+		# 		has_government = communism
+		# 	}
 			
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = generic_morale_bonus
+		# 	picture = generic_morale_bonus
 	
-			modifier = {
-				army_morale_factor = 0.1
-			}
-		}
+		# 	modifier = {
+		# 		army_morale_factor = 0.1
+		# 	}
+		# }
 	
 		neutrality_idea = {
 						
@@ -1329,37 +1329,37 @@ ideas = {
 				ai_get_ally_desire_factor = -100
 			}
 		}
-		neutrality_war = {
+		# neutrality_war = {
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				#has_government = neutrality
-				always = yes
-			}
+		# 	allowed_civil_war = {
+		# 		#has_government = neutrality
+		# 		always = yes
+		# 	}
 
-			cancel = {
-				has_war = yes
-			}
-			rule = {
-				can_join_factions = no 
-			}
-			removal_cost = -1
+		# 	cancel = {
+		# 		has_war = yes
+		# 	}
+		# 	rule = {
+		# 		can_join_factions = no 
+		# 	}
+		# 	removal_cost = -1
 	
-			modifier = {						
-				army_core_defence_factor = 0.15
-				democratic_drift = -0.1
-				democratic_acceptance = -85
-				communism_drift = -0.1
-				communism_acceptance = -85
-				fascism_drift = -0.1
-				fascism_acceptance = -85
-				conscription = 0.01
-				ai_get_ally_desire_factor = -100
-			}
-		}
+		# 	modifier = {						
+		# 		army_core_defence_factor = 0.15
+		# 		democratic_drift = -0.1
+		# 		democratic_acceptance = -85
+		# 		communism_drift = -0.1
+		# 		communism_acceptance = -85
+		# 		fascism_drift = -0.1
+		# 		fascism_acceptance = -85
+		# 		conscription = 0.01
+		# 		ai_get_ally_desire_factor = -100
+		# 	}
+		# }
 		deterrence = {
 			
 			
@@ -1504,23 +1504,23 @@ ideas = {
 			}
 		}
 		
-		received_attache = {
+		# received_attache = {
 			
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				always = yes
-			}
+		# 	allowed_civil_war = {
+		# 		always = yes
+		# 	}
 
-			removal_cost = -1
+		# 	removal_cost = -1
 			
-			modifier = {
-				army_org_factor = 0.02
-				planning_speed = 0.10
-			}
-		}
+		# 	modifier = {
+		# 		army_org_factor = 0.02
+		# 		planning_speed = 0.10
+		# 	}
+		# }
 		draft_dodging = {
 			
 			allowed = {
@@ -1748,26 +1748,26 @@ ideas = {
 				war_support_factor = -0.002
 			}
 		}
-		idea_weapons_for_the_resistance = {
+		# idea_weapons_for_the_resistance = {
 
-			allowed = {
-				always = no
-			}
+		# 	allowed = {
+		# 		always = no
+		# 	}
 
-			allowed_civil_war = {
-				always = yes
-			}
+		# 	allowed_civil_war = {
+		# 		always = yes
+		# 	}
 			
-			removal_cost = -1
+		# 	removal_cost = -1
 
-			picture = chi_war_of_resistance3
+		# 	picture = chi_war_of_resistance3
 			
-			modifier = {
-				resistance_damage_to_garrison = 0.5
-				compliance_growth_on_our_occupied_states = -0.2
-				resistance_growth_on_our_occupied_states  = 0.2
-			}
-		}
+		# 	modifier = {
+		# 		resistance_damage_to_garrison = 0.5
+		# 		compliance_growth_on_our_occupied_states = -0.2
+		# 		resistance_growth_on_our_occupied_states  = 0.2
+		# 	}
+		# }
 		MTG_naval_treaty_adherent = {
 
 			allowed = {
@@ -1854,144 +1854,144 @@ ideas = {
 		}
 	}
 	
-	political_advisor = {
-		# POLITICAL	
+	# political_advisor = {
+	# 	# POLITICAL	
 		
-		generic_communist_revolutionary = {
+	# 	generic_communist_revolutionary = {
 			
-			allowed = {
-				NOT = { OR = { tag = BUL tag = EFR tag = MAN tag = MEX tag = HOL tag = CZE tag = ROM tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CHI tag = AST tag = RAJ tag = CAN tag = SAF tag = HUN tag = CHI tag = SLO tag = IRE tag = ETH original_tag = SPR is_reichskommissariat_ger = yes tag = POR} }
-				NOT = {
-					has_available_idea_with_traits = { idea = communist_revolutionary limit = 1 }
-				}
+	# 		allowed = {
+	# 			NOT = { OR = { tag = BUL tag = EFR tag = MAN tag = MEX tag = HOL tag = CZE tag = ROM tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CHI tag = AST tag = RAJ tag = CAN tag = SAF tag = HUN tag = CHI tag = SLO tag = IRE tag = ETH original_tag = SPR is_reichskommissariat_ger = yes tag = POR} }
+	# 			NOT = {
+	# 				has_available_idea_with_traits = { idea = communist_revolutionary limit = 1 }
+	# 			}
 				
-			}
+	# 		}
 
-			traits = { communist_revolutionary }
+	# 		traits = { communist_revolutionary }
 	
-			do_effect = {
-				NOT = {
-					has_government = communism
-				}
-			}
+	# 		do_effect = {
+	# 			NOT = {
+	# 				has_government = communism
+	# 			}
+	# 		}
 	
-			ai_will_do = {
-				factor = 0
-			}
-		}
+	# 		ai_will_do = {
+	# 			factor = 0
+	# 		}
+	# 	}
 			
-		generic_democratic_reformer = {
+	# 	generic_democratic_reformer = {
 			
-			allowed = {
-				NOT = { OR = { tag = BUL tag = EFR tag = MAN tag = PRC tag = MEX tag = HOL tag = CZE tag = ROM tag = HUN tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CHI tag = SLO tag = ETH original_tag = SPR is_reichskommissariat_ger = yes } }
-				NOT = {
-					has_available_idea_with_traits = { idea = democratic_reformer limit = 1 }
-				}
+	# 		allowed = {
+	# 			NOT = { OR = { tag = BUL tag = EFR tag = MAN tag = PRC tag = MEX tag = HOL tag = CZE tag = ROM tag = HUN tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CHI tag = SLO tag = ETH original_tag = SPR is_reichskommissariat_ger = yes } }
+	# 			NOT = {
+	# 				has_available_idea_with_traits = { idea = democratic_reformer limit = 1 }
+	# 			}
 				
-			}
+	# 		}
 			
-			available = {
-				if = {
-					limit = { 
-						original_tag = NZL
-						has_dlc = "Together for Victory"
-					}
-					OR = {
-						has_completed_focus = NZL_strengthen_the_commonwealth
+	# 		available = {
+	# 			if = {
+	# 				limit = { 
+	# 					original_tag = NZL
+	# 					has_dlc = "Together for Victory"
+	# 				}
+	# 				OR = {
+	# 					has_completed_focus = NZL_strengthen_the_commonwealth
 						
-					}
-				}
-			}
+	# 				}
+	# 			}
+	# 		}
 
 			
-			traits = { democratic_reformer }
+	# 		traits = { democratic_reformer }
 	
 			
 	
-			do_effect = {
-				NOT = {
-					has_government = democratic
-				}
-			}
+	# 		do_effect = {
+	# 			NOT = {
+	# 				has_government = democratic
+	# 			}
+	# 		}
 	
-			ai_will_do = {
-				factor = 0
-			}
-		}
+	# 		ai_will_do = {
+	# 			factor = 0
+	# 		}
+	# 	}
 		
-		generic_fascist_demagogue = {
+	# 	generic_fascist_demagogue = {
 			
-			allowed = {
-				NOT = { OR = { tag = MAN tag = PRC tag = MEX tag = HOL tag = CZE tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = ROM tag = CHI tag = IRE original_tag = SPR is_reichskommissariat_ger = yes tag = POR } }
-				NOT = {
-					has_available_idea_with_traits = { idea = fascist_demagogue limit = 1 }
-				}
+	# 		allowed = {
+	# 			NOT = { OR = { tag = MAN tag = PRC tag = MEX tag = HOL tag = CZE tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = ROM tag = CHI tag = IRE original_tag = SPR is_reichskommissariat_ger = yes tag = POR } }
+	# 			NOT = {
+	# 				has_available_idea_with_traits = { idea = fascist_demagogue limit = 1 }
+	# 			}
 
-			}
+	# 		}
 			
 			
-			available = {
+	# 		available = {
 				
-				if = {
-					limit = { 
-						original_tag = CZE
-						has_dlc = "Death or Dishonor"
-					}
-					has_completed_focus = CZE_go_right
-				}
-			}
+	# 			if = {
+	# 				limit = { 
+	# 					original_tag = CZE
+	# 					has_dlc = "Death or Dishonor"
+	# 				}
+	# 				has_completed_focus = CZE_go_right
+	# 			}
+	# 		}
 			
-			traits = { fascist_demagogue }
+	# 		traits = { fascist_demagogue }
 	
 			
 	
-			do_effect = {
-				NOT = {
-					has_government = fascism
-				}
-			}
+	# 		do_effect = {
+	# 			NOT = {
+	# 				has_government = fascism
+	# 			}
+	# 		}
 	
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		generic_head_of_intelligence = {
-			allowed = { 
-				has_dlc = "La Resistance"
-				NOT = {
-					OR = {
-						tag = ENG
-						tag = CHI
-						tag = PRC
-						tag = FRA
-						tag = GER
-						tag = ITA
-						tag = JAP
-						tag = POL
-						tag = SOV
-						tag = USA
-						is_reichskommissariat_ger = yes
-					}
-				}
-			}
-			visible = {
+	# 		ai_will_do = {
+	# 			factor = 0
+	# 		}
+	# 	}
+	# 	generic_head_of_intelligence = {
+	# 		allowed = { 
+	# 			has_dlc = "La Resistance"
+	# 			NOT = {
+	# 				OR = {
+	# 					tag = ENG
+	# 					tag = CHI
+	# 					tag = PRC
+	# 					tag = FRA
+	# 					tag = GER
+	# 					tag = ITA
+	# 					tag = JAP
+	# 					tag = POL
+	# 					tag = SOV
+	# 					tag = USA
+	# 					is_reichskommissariat_ger = yes
+	# 				}
+	# 			}
+	# 		}
+	# 		visible = {
 				
-			}
-			available = {
-				has_intelligence_agency = yes
-			}
-			traits = { head_of_intelligence }
+	# 		}
+	# 		available = {
+	# 			has_intelligence_agency = yes
+	# 		}
+	# 		traits = { head_of_intelligence }
 
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					has_intelligence_agency = no
-					factor = 0
-				}
-			}
+	# 		ai_will_do = {
+	# 			factor = 1
+	# 			modifier = {
+	# 				has_intelligence_agency = no
+	# 				factor = 0
+	# 			}
+	# 		}
 
-		}
-	}
+	# 	}
+	# }
 	
 	
 
