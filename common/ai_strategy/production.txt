@@ -1070,7 +1070,7 @@ base_camelry_template = {
 	}
 	ai_strategy = {
 		type = template_prio
-		id = camelry
+		id = cavalry
 		value = 50
 	}
 }

@@ -133,7 +133,7 @@ armor_generic = {
 			light_sp_artillery_brigade
 			light_tank_destroyer_brigade
 			light_sp_anti_air_brigade
-			mot_artillery_brigade
+			artillery_brigade_mot
 			engineer
 			mot_recon
 			recon_ac

@@ -534,9 +534,9 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_light_spaa }
+				PREV = { has_tech = light_spaa_1938 }
 			}
-			set_technology = { basic_light_spaa = 1 popup = no }
+			set_technology = { light_spaa_1938 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -546,21 +546,21 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_light_td }
+				PREV = { has_tech = light_td_1940 }
 			}
-			set_technology = { improved_light_td = 1 popup = no }
+			set_technology = { light_td_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_light_art }
+				PREV = { has_tech = light_art_1940 }
 			}
-			set_technology = { improved_light_art = 1 popup = no }
+			set_technology = { light_art_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_light_spaa }
+				PREV = { has_tech = light_spaa_1940 }
 			}
-			set_technology = { improved_light_spaa = 1 popup = no }
+			set_technology = { light_spaa_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -570,21 +570,21 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_light_td }
+				PREV = { has_tech = light_td_1942 }
 			}
-			set_technology = { advanced_light_td = 1 popup = no }
+			set_technology = { light_td_1942 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_light_art }
+				PREV = { has_tech = light_art_1942 }
 			}
-			set_technology = { advanced_light_art = 1 popup = no }
+			set_technology = { light_art_1942 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_light_spaa }
+				PREV = { has_tech = light_spaa_1942 }
 			}
-			set_technology = { advanced_light_spaa = 1 popup = no }
+			set_technology = { light_spaa_1942 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -600,15 +600,15 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_medium_art }
+				PREV = { has_tech = medium_art_1939 }
 			}
-			set_technology = { basic_medium_art = 1 popup = no }
+			set_technology = { medium_art_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_medium_spaa }
+				PREV = { has_tech = medium_spaa_1939 }
 			}
-			set_technology = { basic_medium_spaa = 1 popup = no }
+			set_technology = { medium_spaa_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -618,21 +618,21 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_medium_td }
+				PREV = { has_tech = medium_td_1941 }
 			}
-			set_technology = { improved_medium_td = 1 popup = no }
+			set_technology = { medium_td_1941 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_medium_art }
+				PREV = { has_tech = medium_art_1941 }
 			}
-			set_technology = { improved_medium_art = 1 popup = no }
+			set_technology = { medium_art_1941 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_medium_spaa }
+				PREV = { has_tech = medium_spaa_1941 }
 			}
-			set_technology = { improved_medium_spaa = 1 popup = no }
+			set_technology = { medium_spaa_1941 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -642,21 +642,21 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_medium_td }
+				PREV = { has_tech = medium_td_1943 }
 			}
-			set_technology = { advanced_medium_td = 1 popup = no }
+			set_technology = { medium_td_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_medium_art }
+				PREV = { has_tech = medium_art_1943 }
 			}
-			set_technology = { advanced_medium_art = 1 popup = no }
+			set_technology = { medium_art_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_medium_spaa }
+				PREV = { has_tech = medium_spaa_1943 }
 			}
-			set_technology = { advanced_medium_spaa = 1 popup = no }
+			set_technology = { medium_spaa_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -664,24 +664,24 @@ transfer_technology = {
 			}
 			set_technology = { medium_tank_1945 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = modern_td }
-			}
-			set_technology = { modern_td = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = modern_art }
-			}
-			set_technology = { modern_art = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = modern_spaa }
-			}
-			set_technology = { modern_spaa = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = modern_td }
+		# 	}
+		# 	set_technology = { modern_td = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = modern_art }
+		# 	}
+		# 	set_technology = { modern_art = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = modern_spaa }
+		# 	}
+		# 	set_technology = { modern_spaa = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = heavy_tank_1934 }
@@ -690,94 +690,94 @@ transfer_technology = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_heavy_td }
+				PREV = { has_tech = heavy_td_1941 }
 			}
-			set_technology = { basic_heavy_td = 1 popup = no }
+			set_technology = { heavy_td_1941 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_heavy_art }
+				PREV = { has_tech = heavy_art_1941 }
 			}
-			set_technology = { basic_heavy_art = 1 popup = no }
+			set_technology = { heavy_art_1941 = 1 popup = no }
+		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = basic_heavy_spaa }
+		# 	}
+		# 	set_technology = { basic_heavy_spaa = 1 popup = no }
+		# }
+		if = {
+			limit = {
+				PREV = { has_tech = heavy_tank_1941 }
+			}
+			set_technology = { heavy_tank_1941 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_heavy_spaa }
+				PREV = { has_tech = heavy_td_1943 }
 			}
-			set_technology = { basic_heavy_spaa = 1 popup = no }
+			set_technology = { heavy_td_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_heavy_tank }
+				PREV = { has_tech = heavy_art_1943 }
 			}
-			set_technology = { improved_heavy_tank = 1 popup = no }
+			set_technology = { heavy_art_1943 = 1 popup = no }
+		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = improved_heavy_spaa }
+		# 	}
+		# 	set_technology = { improved_heavy_spaa = 1 popup = no }
+		# }
+		if = {
+			limit = {
+				PREV = { has_tech = heavy_tank_1943 }
+			}
+			set_technology = { heavy_tank_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_heavy_td }
+				PREV = { has_tech = heavy_td_1943 }
 			}
-			set_technology = { improved_heavy_td = 1 popup = no }
+			set_technology = { heavy_td_1943 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = improved_heavy_art }
-			}
-			set_technology = { improved_heavy_art = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = improved_heavy_spaa }
-			}
-			set_technology = { improved_heavy_spaa = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = advanced_heavy_tank }
-			}
-			set_technology = { advanced_heavy_tank = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = advanced_heavy_td }
-			}
-			set_technology = { advanced_heavy_td = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = advanced_heavy_art }
-			}
-			set_technology = { advanced_heavy_art = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = advanced_heavy_spaa }
-			}
-			set_technology = { advanced_heavy_spaa = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = super_heavy_tank }
-			}
-			set_technology = { super_heavy_tank = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = super_heavy_td }
-			}
-			set_technology = { super_heavy_td = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = super_heavy_art }
-			}
-			set_technology = { super_heavy_art = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = super_heavy_spaa }
-			}
-			set_technology = { super_heavy_spaa = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = advanced_heavy_art }
+		# 	}
+		# 	set_technology = { advanced_heavy_art = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = advanced_heavy_spaa }
+		# 	}
+		# 	set_technology = { advanced_heavy_spaa = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = super_heavy_tank }
+		# 	}
+		# 	set_technology = { super_heavy_tank = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = super_heavy_td }
+		# 	}
+		# 	set_technology = { super_heavy_td = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = super_heavy_art }
+		# 	}
+		# 	set_technology = { super_heavy_art = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = super_heavy_spaa }
+		# 	}
+		# 	set_technology = { super_heavy_spaa = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = amphibious_tank }
@@ -1731,12 +1731,12 @@ transfer_technology = {
 			}
 			set_technology = { bicycle_infantry = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = camelry }
-			}
-			set_technology = {  popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = camelry }
+		# 	}
+		# 	set_technology = {  popup = no }
+		# }
 		###land_doctrine###
 		if = {
 			limit = {
@@ -3557,9 +3557,9 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_light_spaa }
+				PREV = { has_tech = light_spaa_1938 }
 			}
-			set_technology = { basic_light_spaa = 1 popup = no }
+			set_technology = { light_spaa_1938 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3569,21 +3569,21 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_light_td }
+				PREV = { has_tech = light_td_1940 }
 			}
-			set_technology = { improved_light_td = 1 popup = no }
+			set_technology = { light_td_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_light_art }
+				PREV = { has_tech = light_art_1940 }
 			}
-			set_technology = { improved_light_art = 1 popup = no }
+			set_technology = { light_art_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_light_spaa }
+				PREV = { has_tech = light_spaa_1940 }
 			}
-			set_technology = { improved_light_spaa = 1 popup = no }
+			set_technology = { light_spaa_1940 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3593,21 +3593,21 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_light_td }
+				PREV = { has_tech = light_td_1942 }
 			}
-			set_technology = { advanced_light_td = 1 popup = no }
+			set_technology = { light_td_1942 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_light_art }
+				PREV = { has_tech = light_art_1942 }
 			}
-			set_technology = { advanced_light_art = 1 popup = no }
+			set_technology = { light_art_1942 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_light_spaa }
+				PREV = { has_tech = light_spaa_1942 }
 			}
-			set_technology = { advanced_light_spaa = 1 popup = no }
+			set_technology = { light_spaa_1942 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3623,15 +3623,15 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_medium_art }
+				PREV = { has_tech = medium_art_1939 }
 			}
-			set_technology = { basic_medium_art = 1 popup = no }
+			set_technology = { medium_art_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_medium_spaa }
+				PREV = { has_tech = medium_spaa_1939 }
 			}
-			set_technology = { basic_medium_spaa = 1 popup = no }
+			set_technology = { medium_spaa_1939 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3641,21 +3641,21 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_medium_td }
+				PREV = { has_tech = medium_td_1941 }
 			}
-			set_technology = { improved_medium_td = 1 popup = no }
+			set_technology = { medium_td_1941 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_medium_art }
+				PREV = { has_tech = medium_art_1941 }
 			}
-			set_technology = { improved_medium_art = 1 popup = no }
+			set_technology = { medium_art_1941 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_medium_spaa }
+				PREV = { has_tech = medium_spaa_1941 }
 			}
-			set_technology = { improved_medium_spaa = 1 popup = no }
+			set_technology = { medium_spaa_1941 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3665,21 +3665,21 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_medium_td }
+				PREV = { has_tech = medium_td_1943 }
 			}
-			set_technology = { advanced_medium_td = 1 popup = no }
+			set_technology = { medium_td_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_medium_art }
+				PREV = { has_tech = medium_art_1943 }
 			}
-			set_technology = { advanced_medium_art = 1 popup = no }
+			set_technology = { medium_art_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_medium_spaa }
+				PREV = { has_tech = medium_spaa_1943 }
 			}
-			set_technology = { advanced_medium_spaa = 1 popup = no }
+			set_technology = { medium_spaa_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3687,24 +3687,24 @@ transfer_technology_without_doctrines = {
 			}
 			set_technology = { medium_tank_1945 = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = modern_td }
-			}
-			set_technology = { modern_td = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = modern_art }
-			}
-			set_technology = { modern_art = 1 popup = no }
-		}
-		if = {
-			limit = {
-				PREV = { has_tech = modern_spaa }
-			}
-			set_technology = { modern_spaa = 1 popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = modern_td }
+		# 	}
+		# 	set_technology = { modern_td = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = modern_art }
+		# 	}
+		# 	set_technology = { modern_art = 1 popup = no }
+		# }
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = modern_spaa }
+		# 	}
+		# 	set_technology = { modern_spaa = 1 popup = no }
+		# }
 		if = {
 			limit = {
 				PREV = { has_tech = heavy_tank_1934 }
@@ -3713,15 +3713,15 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_heavy_td }
+				PREV = { has_tech = heavy_td_1941 }
 			}
-			set_technology = { basic_heavy_td = 1 popup = no }
+			set_technology = { heavy_td_1941 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = basic_heavy_art }
+				PREV = { has_tech = heavy_art_1941 }
 			}
-			set_technology = { basic_heavy_art = 1 popup = no }
+			set_technology = { heavy_art_1941 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3731,21 +3731,21 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_heavy_tank }
+				PREV = { has_tech = heavy_tank_1941 }
 			}
-			set_technology = { improved_heavy_tank = 1 popup = no }
+			set_technology = { heavy_tank_1941 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_heavy_td }
+				PREV = { has_tech = heavy_td_1943 }
 			}
-			set_technology = { improved_heavy_td = 1 popup = no }
+			set_technology = { heavy_td_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = improved_heavy_art }
+				PREV = { has_tech = heavy_art_1943 }
 			}
-			set_technology = { improved_heavy_art = 1 popup = no }
+			set_technology = { heavy_art_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -3755,15 +3755,15 @@ transfer_technology_without_doctrines = {
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_heavy_tank }
+				PREV = { has_tech = heavy_tank_1943 }
 			}
-			set_technology = { advanced_heavy_tank = 1 popup = no }
+			set_technology = { heavy_tank_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
-				PREV = { has_tech = advanced_heavy_td }
+				PREV = { has_tech = heavy_td_1943 }
 			}
-			set_technology = { advanced_heavy_td = 1 popup = no }
+			set_technology = { heavy_td_1943 = 1 popup = no }
 		}
 		if = {
 			limit = {
@@ -4754,12 +4754,12 @@ transfer_technology_without_doctrines = {
 			}
 			set_technology = { bicycle_infantry = 1 popup = no }
 		}
-		if = {
-			limit = {
-				PREV = { has_tech = camelry }
-			}
-			set_technology = {  popup = no }
-		}
+		# if = {
+		# 	limit = {
+		# 		PREV = { has_tech = camelry }
+		# 	}
+		# 	set_technology = {  popup = no }
+		# }
 		###MTG_naval###
 		if = {
 			limit = {
