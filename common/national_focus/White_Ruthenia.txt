@@ -2442,7 +2442,7 @@ focus_tree = {
 			if = {
 				limit = { has_dlc = "La Resistance" }
 				if = {
-					limit = { has_tech = armored_car1 }
+					limit = { has_tech = tech_armored_cars }
 					add_tech_bonus = {
 						name = WHR_Cavalry_Motorization
 						bonus = 1
@@ -2451,7 +2451,7 @@ focus_tree = {
 					}
 				}
 				else = {
-					set_technology = { armored_car1 = 1 }
+					set_technology = { tech_armored_cars = 1 }
 				}
 			}
 			add_tech_bonus = {

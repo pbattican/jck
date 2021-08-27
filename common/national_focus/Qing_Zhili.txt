@@ -1226,7 +1226,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus QIE_motorized_armor"
 			if = {
 				limit = {
-					NOT = { has_tech = basic_light_tank }
+					NOT = { has_tech = light_tank_1936 }
 				}
 				add_tech_bonus = {
 					name = QIE_motorized_armor

@@ -3789,7 +3789,7 @@ focus_tree = {
 				}
 				JAP = {
 					if = {
-						limit = { has_tech = advanced_light_tank }
+						limit = { has_tech = light_tank_1940 }
 						create_production_license = {
 							target = ANQ
 							cost_factor = 0
@@ -3799,7 +3799,7 @@ focus_tree = {
 						}
 					}
 					else_if = {
-						limit = { has_tech = improved_light_tank }
+						limit = { has_tech = light_tank_1938 }
 						create_production_license = {
 							target = ANQ
 							cost_factor = 0
