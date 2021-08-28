@@ -1,7 +1,7 @@
 ﻿capital = 842
 OOB = "HON"
 set_convoys = 10
-set_research_slots = 2
+set_research_slots = 3
 
 HON_start_naval_variant = yes 
 

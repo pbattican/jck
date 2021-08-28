@@ -1,6 +1,6 @@
 ﻿capital = 1083
 OOB = "KUM"
-set_research_slots = 1
+set_research_slots = 2
 complete_national_focus = KUM_nasir_reign
 
 set_variable = { var = KUM_turkic_influence value = 50 }

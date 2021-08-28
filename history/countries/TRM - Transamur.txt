@@ -74,7 +74,7 @@ country_event = { id = tram.80 days = 365 random_days = 180 }
 
 set_stability = 0.5
 set_war_support = 0.55
-set_research_slots = 3
+set_research_slots = 4
 set_convoys = 30
 
 add_to_array = { RUS_integration_array = DKB }

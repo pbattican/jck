@@ -94,7 +94,7 @@ country_event = { id = mexico.36 days = 540 random_days = 540 } # Mexican Anarch
 
 add_opinion_modifier = { target = NIC modifier = NIC_revolutionary_allies }
 
-set_research_slots = 3
+set_research_slots = 4
 
 set_war_support = 0.1
 

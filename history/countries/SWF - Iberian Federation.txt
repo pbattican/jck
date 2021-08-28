@@ -1,5 +1,5 @@
 ﻿capital = 165
-set_research_slots = 3
+set_research_slots = 4
 set_cosmetic_tag = CNT_FAI
 
 SPA_start_naval_variant = yes

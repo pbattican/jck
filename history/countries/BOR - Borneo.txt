@@ -2,7 +2,7 @@
 
 HOL_start_naval_variant = yes
 
-set_research_slots = 2
+set_research_slots = 3
 
 ### Starting Technologies ###, clone of Holland
 set_technology = {

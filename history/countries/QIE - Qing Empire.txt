@@ -110,7 +110,7 @@ add_equipment_to_stockpile = {
 	producer = GER
 }
 
-set_research_slots = 3
+set_research_slots = 4
 set_convoys = 70
 
 add_offsite_building = {

@@ -2,7 +2,7 @@
 OOB = "VEN"
 set_naval_oob= "VEN_naval"
 set_convoys = 30
-set_research_slots = 3
+set_research_slots = 4
 
 VEN_start_naval_variant = yes
 

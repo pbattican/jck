@@ -5,7 +5,7 @@ set_naval_oob= "SIC_naval"
 
 SIC_start_naval_variant = yes
 
-set_research_slots = 3
+set_research_slots = 4
 
 ### Starting Technologies ###
 set_technology = {

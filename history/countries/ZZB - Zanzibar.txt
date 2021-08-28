@@ -1,5 +1,5 @@
 ﻿capital = 905
-set_research_slots = 2
+set_research_slots = 3
 
 MAF_BREAKAWAY_start_naval_variant = yes
 

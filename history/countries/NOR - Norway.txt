@@ -94,7 +94,7 @@ if = {
 country_event = { id = norway.1 days = 1 }
 country_event = { id = norway.6 days = 21 }
 
-set_research_slots = 3
+set_research_slots = 4
 set_convoys = 500 # Biggest Merchant Marines in the World - copied from Vanilla
 
 set_war_support = 0.10

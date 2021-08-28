@@ -13,7 +13,7 @@ add_ideas = {
 	volunteer_only
 }
 set_country_flag = YUN_sinicization_for_yall
-set_research_slots = 2
+set_research_slots = 3
 set_technology = {
 	### Tanks ###
 	light_tank_1934 = 1

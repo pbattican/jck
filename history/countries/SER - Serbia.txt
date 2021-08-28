@@ -1,6 +1,6 @@
 ﻿capital = 107
 
-set_research_slots = 3
+set_research_slots = 4
 
 oob = "SER"
 

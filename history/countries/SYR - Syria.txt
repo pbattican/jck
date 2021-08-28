@@ -1,6 +1,6 @@
 ﻿capital = 554
 
-set_research_slots = 2
+set_research_slots = 3
 set_technology = {
 	### MOD ###
 	### INF ###

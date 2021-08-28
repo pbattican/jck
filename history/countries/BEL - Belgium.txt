@@ -4,7 +4,7 @@ set_naval_oob= "BEL_naval"
 
 BEL_start_naval_variant = yes
 
-set_research_slots = 3
+set_research_slots = 4
 
 set_stability = 0.40
 set_war_support = 0.20

@@ -1,7 +1,7 @@
 ﻿capital = 315
 OOB = "CUB"
 set_naval_oob= "CUB_naval"
-set_research_slots = 3
+set_research_slots = 4
 
 CUB_start_naval_variant = yes
 

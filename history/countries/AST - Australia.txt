@@ -113,7 +113,7 @@ add_ideas = {
 	AST_anzac_spirit_1
 }
 
-set_research_slots = 3
+set_research_slots = 4
 country_event = { id = austral.1 days = 1 } # Intro event
 country_event = { id = austral.9 days = 12 } # Australasia Day
 country_event = { id = austral.6 days = 15 } # Victoria forest fires

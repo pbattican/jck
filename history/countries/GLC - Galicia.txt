@@ -9,7 +9,7 @@ set_technology = {
 	light_tank_1934 = 1
 }
 
-set_research_slots = 3
+set_research_slots = 4
 set_convoys = 30
 
 

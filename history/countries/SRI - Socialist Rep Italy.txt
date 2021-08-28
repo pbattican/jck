@@ -3,7 +3,7 @@
 oob = "SRI"
 set_naval_oob= "SRI_naval"
 
-set_research_slots = 3
+set_research_slots = 4
 
 add_ideas = {
 	SRI_Antonio_Gramsci_hog_syn

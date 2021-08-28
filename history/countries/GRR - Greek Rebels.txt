@@ -2,7 +2,7 @@
 
 GRE_start_naval_variant = yes
 
-set_research_slots = 3
+set_research_slots = 4
 
 set_convoys = 0
 set_stability = 0.50

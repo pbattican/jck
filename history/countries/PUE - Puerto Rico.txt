@@ -1,5 +1,5 @@
 ﻿capital = 686
-set_research_slots = 2
+set_research_slots = 3
 set_convoys = 5
 
 USA_lite_start_naval_variant = yes

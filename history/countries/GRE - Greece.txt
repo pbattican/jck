@@ -5,7 +5,7 @@ set_naval_oob= "GRE_naval"
 
 GRE_start_naval_variant = yes
 
-set_research_slots = 3
+set_research_slots = 4
 
 set_technology = {
 	### Tanks ###

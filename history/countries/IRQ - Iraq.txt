@@ -22,7 +22,7 @@ set_technology = {
 	### Naval ###	
 }
 
-set_research_slots = 2
+set_research_slots = 3
 
 set_politics = {
 	ruling_party = authoritarian_democrat

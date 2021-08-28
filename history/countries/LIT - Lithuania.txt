@@ -1,7 +1,7 @@
 ﻿capital = 96
 oob = "LIT"
 set_convoys = 10
-set_research_slots = 3
+set_research_slots = 4
 
 LIT_start_naval_variant = yes
 

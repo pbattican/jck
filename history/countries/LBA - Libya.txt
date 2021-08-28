@@ -1,6 +1,6 @@
 ﻿capital = 451
 oob = "LBA"
-set_research_slots = 1
+set_research_slots = 2
 set_convoys = 20
 
 set_technology = {

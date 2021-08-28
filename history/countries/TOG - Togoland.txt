@@ -1,6 +1,6 @@
 ﻿capital = 877
 
-set_research_slots = 2
+set_research_slots = 3
 set_politics = {
 	ruling_party = market_liberal
 	last_election = "1888.6.15"

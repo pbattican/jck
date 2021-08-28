@@ -1,6 +1,6 @@
 ﻿capital = 302
 OOB = "BOL"
-set_research_slots = 2
+set_research_slots = 3
 
 add_ideas = {
 	BOL_Hugo_Ballivian_Rojas_hog_pau

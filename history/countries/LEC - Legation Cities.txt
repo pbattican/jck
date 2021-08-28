@@ -21,7 +21,7 @@ set_technology = {
 
 }
 
-set_research_slots = 3
+set_research_slots = 4
 set_convoys = 247
 set_stability = 0.57
 set_war_support = 0.10

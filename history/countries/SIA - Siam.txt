@@ -94,7 +94,7 @@ if = {
 set_stability = 0.55
 set_war_support = 0.60
 
-set_research_slots = 3
+set_research_slots = 4
 set_convoys = 50
 
 	### Royal Siamese Arsernal 1936 Estimate ###

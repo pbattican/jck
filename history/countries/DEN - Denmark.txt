@@ -31,7 +31,7 @@ country_event = { id = den.93 days = 2790 random_days = 20 }
 
 DEN_start_naval_variant = yes
 
-set_research_slots = 3
+set_research_slots = 4
 set_technology = {
 	### Tanks ###
 	light_tank_1934 = 1

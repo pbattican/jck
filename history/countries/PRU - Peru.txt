@@ -2,7 +2,7 @@
 OOB = "PRU"
 set_naval_oob= "PRU_naval"
 set_convoys = 30
-set_research_slots = 3
+set_research_slots = 4
 
 PRU_start_naval_variant = yes
 

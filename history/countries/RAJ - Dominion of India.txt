@@ -91,7 +91,7 @@ add_ideas = {
 	RAJ_backwards_economy_1
 }
 
-set_research_slots = 3
+set_research_slots = 4
 
 set_war_support = 0.3
 

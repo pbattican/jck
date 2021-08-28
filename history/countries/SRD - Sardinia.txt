@@ -3,7 +3,7 @@
 oob = "SRD"
 set_naval_oob= "SRD_naval"
 
-set_research_slots = 3
+set_research_slots = 4
 
 SRD_start_naval_variant = yes
 

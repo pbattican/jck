@@ -1,5 +1,5 @@
 ﻿capital = 827
-set_research_slots = 3
+set_research_slots = 4
 set_technology = {
 	### Tanks ###
 	light_tank_1934 = 1

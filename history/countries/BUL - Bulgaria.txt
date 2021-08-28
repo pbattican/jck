@@ -85,7 +85,7 @@ country_event = { id = bulgariaflavour.13 days = 778 }
 country_event = { id = bulgariaflavour.14 days = 702 }
 country_event = { id = bulgariaflavour.14 days = 1300 random_days = 100 }
 
-set_research_slots = 3
+set_research_slots = 4
 set_convoys = 40
 set_country_flag = BUL_liberal_government
 

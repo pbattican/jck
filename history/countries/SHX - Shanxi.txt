@@ -1,6 +1,6 @@
 ﻿capital = 1072
 OOB = "SHX"
-set_research_slots = 2
+set_research_slots = 3
 complete_national_focus = SHX_Yan_In_Power
 
 set_technology = {
@@ -21,7 +21,7 @@ add_offsite_building = {
 }
 
 
-set_research_slots = 2
+set_research_slots = 3
 add_ideas = {
 	SHX_neutrality
 	SHX_power_struggle

@@ -1,7 +1,7 @@
 ﻿capital = 327
 OOB = "PHI"
 set_convoys = 20
-set_research_slots = 2
+set_research_slots = 3
 
 USA_lite_start_naval_variant = yes
 

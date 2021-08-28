@@ -2,7 +2,7 @@
 oob = "SZC"
 set_stability = 0.1
 set_war_support = 0.3
-set_research_slots = 2
+set_research_slots = 3
 
 ### Starting Technologies ###
 set_technology = {

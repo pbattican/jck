@@ -2,7 +2,7 @@
 set_convoys = 60
 set_stability = 0
 set_war_support = 0
-set_research_slots = 4
+set_research_slots = 5
 
 oob = "RUS"
 set_naval_oob = "RUS_naval"

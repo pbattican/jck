@@ -73,7 +73,7 @@ if = {
 set_stability = 0.53
 set_war_support = 0.35
 
-set_research_slots = 3
+set_research_slots = 4
 set_convoys = 50
 
 set_variable = { var = CAF_socialist_anger value = 34 }

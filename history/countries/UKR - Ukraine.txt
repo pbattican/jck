@@ -80,7 +80,7 @@ if = {
 	}
 }
 
-set_research_slots = 3
+set_research_slots = 4
 
 country_event = { id = ukraine.1 days = 2 }
 country_event = { id = ukraine.76 days = 40 }

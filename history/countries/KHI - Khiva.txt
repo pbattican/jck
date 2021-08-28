@@ -1,5 +1,5 @@
 ﻿capital = 861
-set_research_slots = 2
+set_research_slots = 3
 set_war_support = 0.2
 oob = "KHI"
 

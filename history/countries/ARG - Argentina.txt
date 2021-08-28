@@ -5,7 +5,7 @@ set_convoys = 40
 
 ARG_start_naval_variant = yes
 
-set_research_slots = 3
+set_research_slots = 4
 set_technology = {
 	### Tanks ###
 	light_tank_1934 = 1

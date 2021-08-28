@@ -1,6 +1,6 @@
 ﻿capital = 990
 oob = "AZR"
-set_research_slots = 3
+set_research_slots = 4
 set_war_support = 0.2
 
 set_technology = {

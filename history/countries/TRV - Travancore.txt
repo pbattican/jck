@@ -14,7 +14,7 @@ set_technology = {
 	fighter_1934 = 1
 }
 
-set_research_slots = 2
+set_research_slots = 3
 set_convoys = 30
 
 

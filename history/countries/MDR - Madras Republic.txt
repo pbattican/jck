@@ -2,7 +2,7 @@
 
 OOB = "MDR"
 
-set_research_slots = 3
+set_research_slots = 4
 set_convoys = 40
 
 set_technology = {

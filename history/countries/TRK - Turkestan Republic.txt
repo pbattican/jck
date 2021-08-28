@@ -1,5 +1,5 @@
 ﻿capital = 407
-set_research_slots = 2
+set_research_slots = 3
 oob = "TRK"
 
 set_technology = {

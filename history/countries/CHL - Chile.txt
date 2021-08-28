@@ -84,7 +84,7 @@ set_autonomy = {
 }
 
 set_convoys = 30
-set_research_slots = 3
+set_research_slots = 4
 
 add_ideas = {
 	limited_conscription

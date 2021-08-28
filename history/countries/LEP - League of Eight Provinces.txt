@@ -1,6 +1,6 @@
 ﻿capital = 613
 OOB = "LEP"
-set_research_slots = 2
+set_research_slots = 3
 set_war_support = 0.30
 
 CHYN_minor_start_naval_variant = yes

@@ -1,7 +1,7 @@
 ﻿capital = 9
 oob = "CZE"
 set_stability = 0.60
-set_research_slots = 3
+set_research_slots = 4
 set_cosmetic_tag = CZE_habsburg
 
 set_technology = {

@@ -2,7 +2,7 @@
 
 OOB = "ARM"
 
-set_research_slots = 2
+set_research_slots = 3
 set_technology = {
 	### INF ###
 	infantry_weapons = 1

@@ -192,7 +192,7 @@ set_variable = { SPA_strength = 0 }
 set_country_flag = { flag = USA_liberal_democratic_power value = 5 }
 set_country_flag = { flag = USA_conservative_democratic_power value = 5 }
 
-set_research_slots = 4
+set_research_slots = 5
 set_convoys = 100
 set_global_flag = monroe_doctrine
 set_stability = 0.00

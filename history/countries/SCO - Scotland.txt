@@ -1,5 +1,5 @@
 ﻿capital = 121
-set_research_slots = 3
+set_research_slots = 4
 
 set_politics = {
 	ruling_party = social_democrat

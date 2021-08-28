@@ -1,5 +1,5 @@
 ﻿capital = 122
-set_research_slots = 2
+set_research_slots = 3
 
 ENG_start_naval_variant = yes
 

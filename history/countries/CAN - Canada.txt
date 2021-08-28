@@ -111,7 +111,7 @@ if = {
 	}
 }
 
-set_research_slots = 4
+set_research_slots = 5
 
 create_faction = Entente
 add_to_faction = NFA

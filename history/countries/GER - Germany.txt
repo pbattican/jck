@@ -137,7 +137,7 @@ give_guarantee = AZR
 add_to_array = { AZR.guarantor_array = GER }
 add_to_array = { GEO.guarantor_array = GER }
 
-set_research_slots = 4
+set_research_slots = 5
 set_convoys = 400
 set_stability = 0.6
 set_global_flag = GER_has_oil

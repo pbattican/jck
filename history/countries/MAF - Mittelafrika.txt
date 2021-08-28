@@ -135,7 +135,7 @@ country_event = { id = literature.14 days = 1250 random_days = 200 } #Auf den Ma
 country_event = { id = mittel.180 days = 1461 } #Budget 1940
 country_event = { id = mittel.129 days = 1250 random_days = 150 } #Death of Warahui
 
-set_research_slots = 3
+set_research_slots = 4
 set_convoys = 50
 set_stability = 0.55
 set_war_support = 0.10

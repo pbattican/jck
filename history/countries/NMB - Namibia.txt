@@ -1,5 +1,5 @@
 ﻿capital = 541
-set_research_slots = 2
+set_research_slots = 3
 
 GER_start_naval_variant = yes
 

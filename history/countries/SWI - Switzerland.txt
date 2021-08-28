@@ -18,7 +18,7 @@ set_technology = {
 }
 
 set_stability = 0.6
-set_research_slots = 3
+set_research_slots = 4
 
 add_ideas = {
 	SWI_Albert_Meyer_hog_mli

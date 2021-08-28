@@ -1,5 +1,5 @@
 ﻿capital = 176
-set_research_slots = 3
+set_research_slots = 4
 
 SPA_start_naval_variant = yes
 

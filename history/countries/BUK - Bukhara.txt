@@ -1,5 +1,5 @@
 ﻿capital = 405
-set_research_slots = 2
+set_research_slots = 3
 oob = "BUK"
 
 set_technology = {
