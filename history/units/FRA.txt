@@ -368,17 +368,17 @@ units = {
 
 air_wings = {
 	17 = {
-		fighter_equipment_0 = {
+		fighter_1934 = {
 			owner = "FRA"
 			amount = 192
 		}
-		tac_bomber_equipment_0 = {
+		tactical_bomber_1934 = {
 			owner = "FRA"
 			amount = 60
 		}
 	}
 	18 = {
-		fighter_equipment_0 = {
+		fighter_1934 = {
 			owner = "FRA"
 			amount = 96
 		}
@@ -391,15 +391,15 @@ air_wings = {
 		}
 	}
 	21 = {
-		fighter_equipment_0 = {
+		fighter_1934 = {
 			owner = "FRA"
 			amount = 96
 		}
-		tac_bomber_equipment_0 = {
+		tactical_bomber_1934 = {
 			owner = "FRA"
 			amount = 90
 		}
-		tac_bomber_equipment_0 = {
+		tactical_bomber_1934 = {
 			owner = "FRA"
 			amount = 24
 		}
@@ -440,7 +440,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = fighter_equipment_0
+			type = fighter_1934
 		}
 		requested_factories = 2
 		progress = 0.29
@@ -464,7 +464,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = tac_bomber_equipment_0
+			type = tactical_bomber_1934
 		}
 		requested_factories = 2
 		progress = 0.48

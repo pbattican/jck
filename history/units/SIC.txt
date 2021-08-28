@@ -186,7 +186,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = fighter_equipment_0
+			type = fighter_1934
 		}
 		requested_factories = 2
 		progress = 0.59

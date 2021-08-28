@@ -318,13 +318,13 @@ units = {
 ### GEA Air Force ###
 air_wings = {
 	286 = {
-		fighter_equipment_0 = { # Saigon tactical airforce
+		fighter_1934 = { # Saigon tactical airforce
 			owner = "GEA"
 			amount = 20
 		}
 	}
 	336 = {
-		fighter_equipment_0 = { # Singapur naval airforce
+		fighter_1934 = { # Singapur naval airforce
 			owner = "GEA"
 			amount = 20
 		}
@@ -332,7 +332,7 @@ air_wings = {
 			owner = "GEA"
 			amount = 50
 		}
-		tac_bomber_equipment_0 = {
+		tactical_bomber_1934 = {
 			owner = "GEA"
 			amount = 20
 		}
@@ -342,13 +342,13 @@ air_wings = {
 
 instant_effect = {
 	add_equipment_to_stockpile = {
-		type = cv_nav_bomber_equipment_1
+		type = cv_naval_bomber_1936
 		amount = 50
 		producer = GEA
 	}
 
 	add_equipment_to_stockpile = {
-		type = cv_fighter_equipment_0
+		type = cv_fighter_1934
 		amount = 50
 		producer = GEA
 	}
@@ -374,7 +374,7 @@ instant_effect = {
 
 	add_equipment_production = {
 		equipment = {
-			type = cv_nav_bomber_equipment_1
+			type = cv_naval_bomber_1936
 			creator = "GEA"
 		}
 		requested_factories = 1

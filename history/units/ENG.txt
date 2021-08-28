@@ -203,25 +203,25 @@ units = {
 air_wings = {
 	### RAF Fighter Command ###
 	129 = {
-		fighter_equipment_0 = {
+		fighter_1934 = {
 			owner = "ENG"
 			amount = 216
 		}
 	}
 	130 = {
-		fighter_equipment_0 = {
+		fighter_1934 = {
 			owner = "ENG"
 			amount = 144
 		}
 	}
 	127 = {
-		fighter_equipment_0 = {
+		fighter_1934 = {
 			owner = "ENG"
 			amount = 96
 		}
 	}
 	131 = {
-		fighter_equipment_0 = {
+		fighter_1934 = {
 			owner = "ENG"
 			amount = 72
 		}
@@ -229,31 +229,31 @@ air_wings = {
 
 	### RAF Bomber Command ###
 	125 = {
-		CAS_equipment_1 = {
+		CAS_1937 = {
 			owner = "ENG"
 			amount = 64
 		}
 	}
 	125 = {
-		tac_bomber_equipment_0 = {
+		tactical_bomber_1934 = {
 			owner = "ENG"
 			amount = 48
 		}
 	}
 	126 = {
-		tac_bomber_equipment_0 = {
+		tactical_bomber_1934 = {
 			owner = "ENG"
 			amount = 64
 		}
 	}
 	130 = {
-		tac_bomber_equipment_0 = {
+		tactical_bomber_1934 = {
 			owner = "ENG"
 			amount = 80
 		}
 	}
 	128 = {
-		CAS_equipment_1 = {
+		CAS_1937 = {
 			owner = "ENG"
 			amount = 64
 		}
@@ -413,7 +413,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = fighter_equipment_0
+			type = fighter_1934
 		}
 		requested_factories = 3
 		progress = 0.29
@@ -429,7 +429,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = tac_bomber_equipment_0
+			type = tactical_bomber_1934
 		}
 		requested_factories = 1
 		progress = 0.48

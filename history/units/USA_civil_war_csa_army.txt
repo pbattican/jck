@@ -163,7 +163,7 @@ units = {# Army
 
 air_wings = {# Air Force
 	395 = {
-		fighter_equipment_0 = {
+		fighter_1934 = {
 			owner = CSA
 			amount = 50
 		}

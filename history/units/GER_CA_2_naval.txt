@@ -8,8 +8,8 @@ units = {
 			location = 6389 ###Change to proper province number
 			ship = { name = "SMS Bülow" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = GER version_name = "Weser Class" } }
 				air_wings = {
-					cv_fighter_equipment_0 = { owner = "GER" amount = 16 }
-					cv_nav_bomber_equipment_1 = { owner = "GER" amount = 4 }
+					cv_fighter_1934 = { owner = "GER" amount = 16 }
+					cv_naval_bomber_1936 = { owner = "GER" amount = 4 }
 				}
 			}
 		}

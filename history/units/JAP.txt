@@ -670,22 +670,22 @@ air_wings = {
 	# 1 Hikodan -- Tokyo
 	282 = {
 		# 1 Hiko Rentai -- Kawasaki Ki-10
-		fighter_equipment_0 = {
+		fighter_1934 = {
 			owner = "JAP"
 			amount = 72
 		}
 		# 16 Hiko Rentai -- Kawasaki Ki-10
-		fighter_equipment_0 = {
+		fighter_1934 = {
 			owner = "JAP"
 			amount = 72
 		}
 		# 6 Hiko Rentai -- Mitsubishi Ki-2
-		CAS_equipment_1 =  {
+		CAS_1937 =  {
 			owner = "JAP"
 			amount = 54
 		}
 		# 9 Hiko Rentai -- Mitsubishi Ki-1
-		tac_bomber_equipment_0 =  {
+		tactical_bomber_1934 =  {
 			owner = "JAP"
 			amount = 54
 		}
@@ -694,12 +694,12 @@ air_wings = {
 	# 2 Hikodan -- Dalian
 	716 = {
 		# 3 Hiko Rentai -- Kawasaki Ki-10
-		fighter_equipment_0 = {
+		fighter_1934 = {
 			owner = "JAP"
 			amount = 72
 		}
 		# 5 Hiko Rentai -- Kawasaki Ki-3
-		CAS_equipment_1 =  {
+		CAS_1937 =  {
 			owner = "JAP"
 			amount = 54
 		}
@@ -708,7 +708,7 @@ air_wings = {
 	# 3 Hikodan -- Taiwan
 	524 = {
 		# 10 Hiko Rentai -- Kawasaki Ki-3
-		CAS_equipment_1 =  {
+		CAS_1937 =  {
 			owner = "JAP"
 			amount = 54
 		}
@@ -719,12 +719,12 @@ air_wings = {
 	# 1 Rengo Kokutai -- Taiwan
 	524 = {
 		# Kizarazu Kokutai -- Aichi D1A2
-		cv_CAS_equipment_1 = {
+		cv_CAS_1937 = {
 			owner = "JAP"
 			amount = 60
 		}
 		# Kanoya Kokutai -- Aichi D1A2
-		cv_CAS_equipment_1 = {
+		cv_CAS_1937 = {
 			owner = "JAP"
 			amount = 60
 		}
@@ -733,12 +733,12 @@ air_wings = {
 	# 2 Rengo Kokutai -- Taiwan
 	524 = {
 		# 12 Kokutai -- Nakajima A4N1
-		cv_fighter_equipment_0 = {
+		cv_fighter_1934 = {
 			owner = "JAP"
 			amount = 72
 		}
 		# 13 Kokutai -- Mitsubishi B2M2
-		cv_nav_bomber_equipment_1 = {
+		cv_naval_bomber_1936 = {
 			owner = "JAP"
 			amount = 48
 		}
@@ -788,7 +788,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = CAS_equipment_1
+			type = CAS_1937
 		}
 		requested_factories = 1
 		progress = 0.42
@@ -796,7 +796,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = tac_bomber_equipment_1
+			type = tactical_bomber_1937
 		}
 		requested_factories = 1
 		progress = 0.48

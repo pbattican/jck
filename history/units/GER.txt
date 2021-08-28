@@ -664,21 +664,21 @@ units = {
 
 air_wings = {
 	5 = { #Konigsberg
-		fighter_equipment_0 =  {
+		fighter_1934 =  {
 			owner = "GER"
 			amount = 40
 		}
 	}
 	64 = { #Berlin
-		fighter_equipment_0 =  {
+		fighter_1934 =  {
 			owner = "GER"
 			amount = 80
 		}
-		tac_bomber_equipment_0 = {
+		tactical_bomber_1934 = {
 			owner = "GER"
 			amount = 80
 		}
-		tac_bomber_equipment_0 = {
+		tactical_bomber_1934 = {
 			owner = "GER"
 			amount = 40
 		}
@@ -688,35 +688,35 @@ air_wings = {
 		}
 	}
 	66 = { #Breslau
-		tac_bomber_equipment_0 = {
+		tactical_bomber_1934 = {
 			owner = "GER"
 			amount = 120
 		}
-		CAS_equipment_1 =  {
+		CAS_1937 =  {
 			owner = "GER"
 			amount = 80
 		}
 	}
 	51 = { #Essen
-		fighter_equipment_0 =  {
+		fighter_1934 =  {
 			owner = "GER"
 			amount = 120
 		}
-		tac_bomber_equipment_1 = {
+		tactical_bomber_1937 = {
 			owner = "GER"
 			amount = 80
 		}
-		tac_bomber_equipment_0 = {
+		tactical_bomber_1934 = {
 			owner = "GER"
 			amount = 80
 		}
 	}
 	52 = { #Munich
-		fighter_equipment_0 =  {
+		fighter_1934 =  {
 			owner = "GER"
 			amount = 40
 		}
-		tac_bomber_equipment_0 = {
+		tactical_bomber_1934 = {
 			owner = "GER"
 			amount = 80
 		}
@@ -780,7 +780,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = CAS_equipment_1
+			type = CAS_1937
 		}
 		requested_factories = 2
 		progress = 0.42
@@ -788,7 +788,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = tac_bomber_equipment_1
+			type = tactical_bomber_1937
 		}
 		requested_factories = 2
 		progress = 0.48

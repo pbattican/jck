@@ -34,18 +34,18 @@ units = {
 			# II Aircraft Squadron / II. Fleugzeuggeschwader
 			ship = { name = "SMS Main" definition = carrier equipment = { ship_hull_carrier_conversion_ca = { amount = 1 owner = GER version_name = "Main Class" } }
 				air_wings = {
-					cv_fighter_equipment_0 = { owner = "GER" amount = 16 }
+					cv_fighter_1934 = { owner = "GER" amount = 16 }
 				}
 			}
 			ship = { name = "SMS Rhein" definition = carrier equipment = { ship_hull_carrier_conversion_ca = { amount = 1 owner = GER version_name = "Main Class" } }
 				air_wings = {
-					cv_fighter_equipment_0 = { owner = "GER" amount = 16 }
+					cv_fighter_1934 = { owner = "GER" amount = 16 }
 				}
 			}
 			ship = { name = "SMS Elbe" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = GER version_name = "Weser Class" } }
 				air_wings = {
-					cv_fighter_equipment_0 = { owner = "GER" amount = 16 }
-					cv_nav_bomber_equipment_1 = { owner = "GER" amount = 4 }
+					cv_fighter_1934 = { owner = "GER" amount = 16 }
+					cv_naval_bomber_1936 = { owner = "GER" amount = 4 }
 				}
 			}
 
@@ -138,8 +138,8 @@ units = {
 
 			ship = { name = "SMS Weser" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = GER version_name = "Weser Class" } }
 				air_wings = {
-					cv_fighter_equipment_0 = { owner = "GER" amount = 16 }
-					cv_nav_bomber_equipment_1 = { owner = "GER" amount = 4 }
+					cv_fighter_1934 = { owner = "GER" amount = 16 }
+					cv_naval_bomber_1936 = { owner = "GER" amount = 4 }
 				}
 			}
 
