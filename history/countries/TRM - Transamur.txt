@@ -16,6 +16,7 @@ set_technology = {
 	tech_recon = 1
 	tech_engineers = 1
 	marines = 1
+	special_equipment = 1
 	artillery1 = 1
 
 	#### AIR ####

@@ -620,7 +620,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = gw_tank_equipment
+			type = light_tank_equipment_1934
 		}
 		requested_factories = 2
 		progress = 0.59

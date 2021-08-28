@@ -18,6 +18,7 @@ set_technology = {
 	tech_engineers = 1
 	motorised_infantry = 1
 	marines = 1
+	special_equipment = 1
 	artillery1 = 1
 	interwar_antiair = 1
 

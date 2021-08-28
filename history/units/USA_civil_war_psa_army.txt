@@ -139,7 +139,7 @@ air_wings = {
 			owner = PSA
 			amount = 150
 		}
-		cas_equipment_1 = {
+		CAS_equipment_1937 = {
 			owner = PSA
 			amount = 50
 		}

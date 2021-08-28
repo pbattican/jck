@@ -27,7 +27,7 @@ division_template = {
 		armored_car = { x = 2 y = 1 }
 	}
 	support = {
-		armored_car_recon = { x = 0 y = 0 }
+		recon_ac = { x = 0 y = 0 }
 	}
 }
 

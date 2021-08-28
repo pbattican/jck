@@ -170,7 +170,7 @@ air_wings = {
 			owner = USA
 			amount = 150
 		}
-		cas_equipment_1 = {
+		CAS_equipment_1937 = {
 			owner = USA
 			amount = 50
 		}

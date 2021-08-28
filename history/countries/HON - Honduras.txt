@@ -12,6 +12,7 @@ set_technology = {
 	### Infantry ###
 	infantry_weapons = 1
 	tech_mountaineers = 1
+	special_equipment = 1
 	artillery1 = 1
 
 	### Air ###

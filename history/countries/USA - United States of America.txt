@@ -24,6 +24,7 @@ set_technology = {
 	artillery1 = 1
 	marines = 1
 	tech_mountaineers = 1
+	special_equipment = 1
 
 	### Air ###
 	fighter_1934 = 1

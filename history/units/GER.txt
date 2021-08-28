@@ -756,7 +756,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = fighter_equipment_1
+			type = fighter_equipment_1934
 		}
 		requested_factories = 4
 		progress = 0.29
@@ -772,7 +772,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = light_tank_equipment_1
+			type = light_tank_equipment_1936
 		}
 		requested_factories = 2
 		progress = 0.59

@@ -3,6 +3,7 @@
 set_technology = {
 	infantry_weapons = 1
 	tech_mountaineers = 1
+	special_equipment = 1
 }
 
 set_research_slots = 1

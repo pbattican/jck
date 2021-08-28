@@ -170,7 +170,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = light_tank_destroyer_equipment_1
+			type = light_tank_destroyer_equipment_1938
 			creator = "BEL"
 		}
 		requested_factories = 1

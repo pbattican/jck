@@ -17,6 +17,7 @@ set_technology = {
 
 	### Naval ###
 	marines = 1
+	special_equipment = 1
 
 }
 

@@ -32,7 +32,9 @@ set_technology = {
 	tech_recon = 1
 	tech_engineers = 1
 	tech_mountaineers = 1
+	special_equipment = 1
 	marines = 1
+	paratroopers = 1
 	artillery1 = 1
 	interwar_antiair = 1
 	### Air ###
