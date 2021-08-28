@@ -1,0 +1,64 @@
+﻿###OOB File for DEN.txt
+units = {
+	fleet = {
+		name = "Den Danske Flåde"
+		naval_base = 6287
+		task_force = {
+			name = "Den Danske Flåde"
+			location = 6287
+			ship = { name = "KDM Dragen" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = DEN version_name = "Dragen Class" } } }
+			ship = { name = "KDM Glenten" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = DEN version_name = "Dragen Class" } } }
+			ship = { name = "KDM Høgen" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = DEN version_name = "Dragen Class" } } }
+			ship = { name = "KDM Hvalen" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = DEN version_name = "Dragen Class" } } }
+			ship = { name = "KDM Laxen" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = DEN version_name = "Dragen Class" } } }
+			ship = { name = "KDM Ørnen" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = DEN version_name = "Dragen Class" } } }
+			ship = { name = "KDM Delfinen" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DEN version_name = "Hvalrossen Class" } } }
+			ship = { name = "KDM Hvalrossen" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DEN version_name = "Hvalrossen Class" } } }
+			ship = { name = "KDM Sværdfisken" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DEN version_name = "Hvalrossen Class" } } }
+			ship = { name = "KDM Flyvefisken" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DEN version_name = "Søridderen Class" } } }
+			ship = { name = "KDM Søridderen" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DEN version_name = "Søridderen Class" } } }
+			ship = { name = "KDM Søulven" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DEN version_name = "Søridderen Class" } } }
+			ship = { name = "KDM Spækhuggeren" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DEN version_name = "Søridderen Class" } } }
+			ship = { name = "KDM Tumleren" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DEN version_name = "Søridderen Class" } } }
+			ship = { name = "KDM Vindhunden" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DEN version_name = "Søridderen Class" } } }
+			ship = { name = "KDM Herluf Trolle" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DEN version_name = "Herluf Trolle Class" } } }
+			ship = { name = "KDM Olfert Fischer" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DEN version_name = "Herluf Trolle Class" } } }
+			ship = { name = "KDM Peder Skram" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DEN version_name = "Herluf Trolle Class" } } }
+			ship = { name = "KDM Gorm" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = DEN version_name = "Nassau/Helgoland Class" } } }
+			ship = { name = "KDM Niels Iuel" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DEN version_name = "Niels Iuel Class" } } }
+			ship = { name = "KDM Tordenskiold" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = DEN version_name = "Nassau/Helgoland Class" } } }
+		}
+	}
+	fleet = {
+		name = "Dansk Ubådsflåde"
+		naval_base = 3325
+		task_force = {
+			name = "Dansk Ubådsflåde"
+			location = 3325
+			ship = { name = "KDM Ægir" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DEN version_name = "Ægir Class" } } }
+			ship = { name = "KDM Galathea" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DEN version_name = "Ægir Class" } } }
+			ship = { name = "KDM Neptun" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DEN version_name = "Ægir Class" } } }
+			ship = { name = "KDM Ran" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DEN version_name = "Ægir Class" } } }
+			ship = { name = "KDM Triton" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DEN version_name = "Ægir Class" } } }
+			ship = { name = "KDM Bellona" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DEN version_name = "Rota/ Daphne Class" } } }
+			ship = { name = "KDM Daphne" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DEN version_name = "Rota/ Daphne Class" } } }
+			ship = { name = "KDM Dryaden" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DEN version_name = "Rota/ Daphne Class" } } }
+			ship = { name = "KDM Flora" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DEN version_name = "Rota/ Daphne Class" } } }
+			ship = { name = "KDM Rota" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DEN version_name = "Rota/ Daphne Class" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_1
+			creator = "DEN"
+			version_name = "Rota/ Daphne Class"
+		}
+		name = "KDM Havmanden"
+		requested_factories = 4
+		progress = 0.55
+		amount = 6
+	}
+}
