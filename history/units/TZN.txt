@@ -126,7 +126,7 @@ units = {
 
 air_wings = {
 	965 = {
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = "TZN"
 			amount = 20
 		}

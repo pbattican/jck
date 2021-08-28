@@ -8,8 +8,8 @@ units = {
 			location = 7381 ###Change to proper province number
 			ship = { name = "HrMs Gouden Leeuw" definition = carrier equipment = { ship_hull_carrier_conversion_ca = { amount = 1 owner = DEI version_name = "Gouden Leeuw Class" } }
 				air_wings = {
-					cv_fighter_equipment_0 = { owner = "DEI" amount = 16 }
-					cv_nav_bomber_equipment_1 = { owner = "DEI" amount = 4 }
+					cv_fighter_equipment_1934 = { owner = "DEI" amount = 16 }
+					cv_nav_bomber_equipment_1936 = { owner = "DEI" amount = 4 }
 				}
 			}
 			ship = { name = "HrMs Mercurius" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = DEI version_name = "Willem van Oranje Class" } } }

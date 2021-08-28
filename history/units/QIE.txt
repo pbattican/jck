@@ -54,7 +54,7 @@ division_template = {
 	}
 	support = {
 		artillery = { x = 0 y = 0 }
-		light_tank_recon = { x = 0 y = 1 }
+		light_armor_recon = { x = 0 y = 1 }
 	}
 	priority = 2
 }
@@ -258,11 +258,11 @@ units = {
 air_wings = {
 
 	608 = {
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = "QIE"
 			amount = 50
 		}
-		tac_bomber_equipment_0 = {
+		tac_bomber_equipment_1934 = {
 			owner = "QIE"
 			amount = 25
 		}

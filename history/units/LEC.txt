@@ -40,7 +40,7 @@ units = {
 
 air_wings = {
 	743 = {
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = "LEC"
 			amount = 50
 		}

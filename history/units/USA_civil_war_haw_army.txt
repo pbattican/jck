@@ -35,15 +35,15 @@ units = {# Army
 
 air_wings = {# Air Force
 	629 = {
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = USA
 			amount = 25
 		}
-		tac_bomber_equipment_0 = {
+		tac_bomber_equipment_1934 = {
 			owner = USA
 			amount = 25
 		}
-		nav_bomber_equipment_1 = {
+		nav_bomber_equipment_1936 = {
 			owner = USA
 			amount = 25
 		}

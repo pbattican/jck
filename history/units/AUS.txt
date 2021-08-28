@@ -312,13 +312,13 @@ units = {
 ########
 air_wings = {
 	4 = {
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = "AUS"
 			amount = 50
 		}
 	}
 	736 = {
-		nav_bomber_equipment_1 = {
+		nav_bomber_equipment_1936 = {
 			owner = "AUS"
 			amount = 50
 		}
@@ -352,7 +352,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = fighter_equipment_0
+			type = fighter_equipment_1934
 		}
 		requested_factories = 1
 		progress = 0.29
@@ -368,7 +368,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = nav_bomber_equipment_1
+			type = nav_bomber_equipment_1936
 		}
 		requested_factories = 1
 		progress = 0.88

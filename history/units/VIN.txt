@@ -57,7 +57,7 @@ units = {
 ### VIN Air Force ###
 air_wings = {
 	671 = {
-		tac_bomber_equipment_0 = {
+		tac_bomber_equipment_1934 = {
 			owner = "GER"
 			amount = 10
 		}

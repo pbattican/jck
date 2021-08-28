@@ -114,12 +114,12 @@ division_template = {
 	name = "Compagnie Méhariste"
 	division_names_group = NFA_CAV_01
 	regiments = {
-		camelry = { x = 0 y = 0 }
-		camelry = { x = 0 y = 1 }
-		camelry = { x = 0 y = 2 }
-		camelry = { x = 1 y = 0 }
-		camelry = { x = 1 y = 1 }
-		camelry = { x = 1 y = 2 }
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
 	}
 	support = {
 		military_police = { x = 0 y = 0 }
@@ -265,11 +265,11 @@ units = {
 
 air_wings = {
 	459 = {
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = "NFA"
 			amount = 50
 		}
-		tac_bomber_equipment_1 = {
+		tac_bomber_equipment_1937 = {
 			owner = "NFA"
 			amount = 25
 		}
@@ -333,7 +333,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = fighter_equipment_0
+			type = fighter_equipment_1934
 		}
 		requested_factories = 1
 		progress = 0.29
@@ -341,7 +341,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = tac_bomber_equipment_1
+			type = tac_bomber_equipment_1937
 		}
 		requested_factories = 1
 		progress = 0.48
@@ -349,7 +349,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = nav_bomber_equipment_1
+			type = nav_bomber_equipment_1936
 		}
 		requested_factories = 1
 		progress = 0.88

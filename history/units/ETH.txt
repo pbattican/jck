@@ -142,7 +142,7 @@ units = {
 
 air_wings = {
 	271 = {
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = "ETH"
 			amount = 25
 		}

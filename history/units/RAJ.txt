@@ -80,15 +80,15 @@ division_template = {
 	name = "Camelry Corps"
 	division_names_group = RAJ_CAV_02
 	regiments = {
-		camelry = { x = 0 y = 0 }
-		camelry = { x = 0 y = 1 }
-		camelry = { x = 0 y = 2 }
-		camelry = { x = 1 y = 0 }
-		camelry = { x = 1 y = 1 }
-		camelry = { x = 1 y = 2 }
-		camelry = { x = 2 y = 0 }
-		camelry = { x = 2 y = 1 }
-		camelry = { x = 2 y = 2 }
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
 	}
 }
 division_template = {

@@ -160,7 +160,7 @@ units = {
 
 air_wings = {
 	159 = {
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = "ITA"
 			amount = 50
 		}
@@ -186,7 +186,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = fighter_equipment_0
+			type = fighter_equipment_1934
 		}
 		requested_factories = 1
 		progress = 0.29

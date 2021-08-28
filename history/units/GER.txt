@@ -84,7 +84,7 @@ division_template = {
 		infantry = { x = 2 y = 2 }
 	}
 	support = {
-		light_tank_recon = { x = 0 y = 0 }
+		light_armor_recon = { x = 0 y = 0 }
 	}
 }
 
@@ -664,21 +664,21 @@ units = {
 
 air_wings = {
 	5 = { #Konigsberg
-		fighter_equipment_0 =  {
+		fighter_equipment_1934 =  {
 			owner = "GER"
 			amount = 40
 		}
 	}
 	64 = { #Berlin
-		fighter_equipment_0 =  {
+		fighter_equipment_1934 =  {
 			owner = "GER"
 			amount = 80
 		}
-		tac_bomber_equipment_0 = {
+		tac_bomber_equipment_1934 = {
 			owner = "GER"
 			amount = 80
 		}
-		tac_bomber_equipment_0 = {
+		tac_bomber_equipment_1934 = {
 			owner = "GER"
 			amount = 40
 		}
@@ -688,41 +688,41 @@ air_wings = {
 		}
 	}
 	66 = { #Breslau
-		tac_bomber_equipment_0 = {
+		tac_bomber_equipment_1934 = {
 			owner = "GER"
 			amount = 120
 		}
-		CAS_equipment_1 =  {
+		CAS_equipment_1937 =  {
 			owner = "GER"
 			amount = 80
 		}
 	}
 	51 = { #Essen
-		fighter_equipment_0 =  {
+		fighter_equipment_1934 =  {
 			owner = "GER"
 			amount = 120
 		}
-		tac_bomber_equipment_1 = {
+		tac_bomber_equipment_1937 = {
 			owner = "GER"
 			amount = 80
 		}
-		tac_bomber_equipment_0 = {
+		tac_bomber_equipment_1934 = {
 			owner = "GER"
 			amount = 80
 		}
 	}
 	52 = { #Munich
-		fighter_equipment_0 =  {
+		fighter_equipment_1934 =  {
 			owner = "GER"
 			amount = 40
 		}
-		tac_bomber_equipment_0 = {
+		tac_bomber_equipment_1934 = {
 			owner = "GER"
 			amount = 80
 		}
 	}
 	58 = { #Kiel
-		nav_bomber_equipment_1 =  {
+		nav_bomber_equipment_1936 =  {
 			owner = "GER"
 			amount = 72
 		}
@@ -780,7 +780,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = CAS_equipment_1
+			type = CAS_equipment_1937
 		}
 		requested_factories = 2
 		progress = 0.42
@@ -788,7 +788,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = tac_bomber_equipment_1
+			type = tac_bomber_equipment_1937
 		}
 		requested_factories = 2
 		progress = 0.48
@@ -796,7 +796,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = nav_bomber_equipment_1
+			type = nav_bomber_equipment_1936
 		}
 		requested_factories = 1
 		progress = 0.88

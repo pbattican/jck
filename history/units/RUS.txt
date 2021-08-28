@@ -536,49 +536,49 @@ units = {
 ### Air Wings
 air_wings = {
 	219 = { #Moscow
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = "RUS"
 			amount = 60
 		}
-		tac_bomber_equipment_0 = {
+		tac_bomber_equipment_1934 = {
 			owner = "RUS"
 			amount = 40
 		}
 	}
 	195 = { #Petrograd
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = "RUS"
 			amount = 60
 		}
-		tac_bomber_equipment_0 = {
+		tac_bomber_equipment_1934 = {
 			owner = "RUS"
 			amount = 40
 		}
 	}
 	657 = { #Blagoveshchensk
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = "RUS"
 			amount = 60
 		}
-		tac_bomber_equipment_0 = {
+		tac_bomber_equipment_1934 = {
 			owner = "USA"
 			amount = 40
 		}
 	}
 	217 = { #Tsaritsyn
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = "RUS"
 			amount = 60
 		}
 	}
 	563 = { #Chita
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = "RUS"
 			amount = 60
 		}
 	}
 	222 = {
-		tac_bomber_equipment_0 = {
+		tac_bomber_equipment_1934 = {
 			owner = "RUS"
 			amount = 40
 		}
@@ -612,7 +612,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = fighter_equipment_0
+			type = fighter_equipment_1934
 		}
 		requested_factories = 1
 		progress = 0.29
@@ -628,7 +628,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = tac_bomber_equipment_0
+			type = tac_bomber_equipment_1934
 		}
 		requested_factories = 1
 		progress = 0.48

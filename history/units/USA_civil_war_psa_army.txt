@@ -135,7 +135,7 @@ units = {# Army
 }
 air_wings = {
 	797 = {
-		fighter_equipment_0 = {
+		fighter_equipment_1934 = {
 			owner = PSA
 			amount = 150
 		}
@@ -143,11 +143,11 @@ air_wings = {
 			owner = PSA
 			amount = 50
 		}
-		tac_bomber_equipment_0 = {
+		tac_bomber_equipment_1934 = {
 			owner = PSA
 			amount = 25
 		}
-		nav_bomber_equipment_1 = {
+		nav_bomber_equipment_1936 = {
 			owner = PSA
 			amount = 25
 		}
