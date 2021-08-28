@@ -56,7 +56,7 @@ instant_effect = {
 air_wings = {
 
 	313 = {
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = "GUA"
 			amount = 10
 		}

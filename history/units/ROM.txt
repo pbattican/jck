@@ -240,11 +240,11 @@ units = {
 air_wings = {
 
 	46 = {
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = "ROM"
 			amount = 50
 		}
-		tactical_bomber_1934 = {
+		tac_bomber_equipment_0 = {
 			owner = "ROM"
 			amount = 25
 		}

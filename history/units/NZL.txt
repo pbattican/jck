@@ -98,7 +98,7 @@ units = {
 
 air_wings = {
 	284 = {
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = "NZL"
 			amount = 25
 		}

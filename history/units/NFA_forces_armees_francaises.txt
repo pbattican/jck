@@ -82,7 +82,7 @@ units = {
 
 air_wings = {
 	21 = {
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = "NFA"
 			amount = 25
 		}

@@ -166,7 +166,7 @@ units = {
 
 air_wings = {
 	362 = {
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = USA
 			amount = 150
 		}
@@ -174,7 +174,7 @@ air_wings = {
 			owner = USA
 			amount = 50
 		}
-		tactical_bomber_1934 = {
+		tac_bomber_equipment_0 = {
 			owner = USA
 			amount = 25
 		}
@@ -184,11 +184,11 @@ air_wings = {
 		}
 	}
 	685 = {
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = USA
 			amount = 25
 		}
-		tactical_bomber_1934 = {
+		tac_bomber_equipment_0 = {
 			owner = USA
 			amount = 25
 		}
@@ -218,7 +218,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = fighter_1934
+			type = fighter_equipment_0
 		}
 		requested_factories = 1
 		progress = 0.39
@@ -226,7 +226,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = CAS_1937
+			type = CAS_equipment_1
 		}
 		requested_factories = 1
 		progress = 0.89
@@ -234,7 +234,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = tactical_bomber_1934
+			type = tac_bomber_equipment_0
 		}
 		requested_factories = 2
 		progress = 0.11

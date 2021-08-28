@@ -32,27 +32,27 @@ air_wings = {
 
 	278 = {
 
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = "USA"
 			amount = 93
 		}
 
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = "GER"
 			amount = 56
 		}
 
-		tactical_bomber_1934 = {
+		tac_bomber_equipment_0 = {
 			owner = "ITA"
 			amount = 4
 		}
 
-		tactical_bomber_1934 = {
+		tac_bomber_equipment_0 = {
 			owner = "USA"
 			amount = 67
 		}
 
-		tactical_bomber_1934 = {
+		tac_bomber_equipment_0 = {
 			owner = "GER"
 			amount = 38
 		}
@@ -70,7 +70,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = fighter_1934
+			type = fighter_equipment_0
 		}
 		requested_factories = 2
 		progress = 0.39

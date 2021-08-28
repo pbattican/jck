@@ -162,7 +162,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = fighter_1934
+			type = fighter_equipment_0
 			creator = "SWI"
 		}
 		requested_factories = 1
@@ -173,11 +173,11 @@ instant_effect = {
 
 air_wings = {
 	3 = {
-		tactical_bomber_1934 = {
+		tac_bomber_equipment_0 = {
 			owner = "SWI"
 			amount = 25
 		}
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = "SWI"
 			amount = 20
 		}

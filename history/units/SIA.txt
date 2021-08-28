@@ -284,15 +284,15 @@ units = {
 ### Royal Siamese Air Forces Command ###
 air_wings = {
 	289 = {
-		fighter_1934 = { # Fighter Type-5 Prajadhipok
+		fighter_equipment_0 = { # Fighter Type-5 Prajadhipok
 			owner = "SIA"
 			amount = 20
 		}
-		fighter_1934 = { # Fighter Type-5 Prajadhipok
+		fighter_equipment_0 = { # Fighter Type-5 Prajadhipok
 			owner = "SIA"
 			amount = 20
 		}
-		tactical_bomber_1934 = { # Bomber Type-2 Boripatr
+		tac_bomber_equipment_0 = { # Bomber Type-2 Boripatr
 			owner = "SIA"
 			amount = 25
 		}

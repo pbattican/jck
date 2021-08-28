@@ -151,7 +151,7 @@ units = {
 
 air_wings = {
 	112 = {
-		tactical_bomber_1934 = {
+		tac_bomber_equipment_0 = {
 			owner = "POR"
 			amount = 25
 		}

@@ -60,7 +60,7 @@ units = {
 air_wings = {
 
 	315 = {
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = CUB
 			amount = 5
 		}

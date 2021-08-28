@@ -209,23 +209,23 @@ units = {# Army
 
 air_wings = {
 	371 = {
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = TEX
 			amount = 100
 		}
-		tactical_bomber_1934 = {
+		tac_bomber_equipment_0 = {
 			owner = TEX
 			amount = 50
 		}
 	}
 	375 = {
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = TEX
 			amount = 75
 		}
 	}
 	367 = {
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = TEX
 			amount = 30
 		}

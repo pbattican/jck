@@ -8,8 +8,8 @@ units = {
 			location = 12299 ###Change to proper province number
 			ship = { name = "SMS Malaya" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = GEA version_name = "Weser Class" } }
 				air_wings = {
-					cv_fighter_1934 = { owner = "GEA" amount = 16 }
-					cv_naval_bomber_1936 = { owner = "GEA" amount = 4 }
+					cv_fighter_equipment_0 = { owner = "GEA" amount = 16 }
+					cv_nav_bomber_equipment_1 = { owner = "GEA" amount = 4 }
 				}
 			}
 		}

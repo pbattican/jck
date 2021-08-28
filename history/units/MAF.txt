@@ -181,19 +181,19 @@ units = {
 
 air_wings = {
 	541 = {
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = "MAF"
 			amount = 20
 		}
 	}
 	274 = {
-		fighter_1934 = {
+		fighter_equipment_0 = {
 			owner = "MAF"
 			amount = 20
 		}
 	}
 	965 = {
-		tactical_bomber_1934 = {
+		tac_bomber_equipment_0 = {
 			owner = "MAF"
 			amount = 30
 		}
@@ -251,7 +251,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = CAS_1937
+			type = CAS_equipment_1
 		}
 		requested_factories = 2
 		progress = 0.42
@@ -259,7 +259,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = tactical_bomber_1937
+			type = tac_bomber_equipment_1
 		}
 		requested_factories = 1
 		progress = 0.48
