@@ -206,9 +206,9 @@
  guided_missile_equipment_3_short:0 "Guided Missile III"
  guided_missile_equipment_3_desc:0 "Best unmanned flying bomb"
 
- gw_tank_equipment:0 "Weltkrieg-era Tank"
- gw_tank_equipment_short:0 "Weltkrieg-era Tank"
- gw_tank_equipment_desc:0 "Tanks in the Weltkrieg were developed separately and simultaneously by the United Kingdom and France as a means to break the deadlock of trench warfare on the Western Front. The British prefer to call them "tanks", a name adopted during the early stages of their development as a security measure to conceal their purpose, while the German counterpart, "Panzer", stuck in many German-influenced nations. Early tanks were armed with machineguns and small cannons, moved slowly, and were armoured only enough to stop small arms fire."
+ light_tank_equipment_1934:0 "Weltkrieg-era Tank"
+ light_tank_equipment_1934_short:0 "Weltkrieg-era Tank"
+ light_tank_equipment_1934_desc:0 "Tanks in the Weltkrieg were developed separately and simultaneously by the United Kingdom and France as a means to break the deadlock of trench warfare on the Western Front. The British prefer to call them "tanks", a name adopted during the early stages of their development as a security measure to conceal their purpose, while the German counterpart, "Panzer", stuck in many German-influenced nations. Early tanks were armed with machineguns and small cannons, moved slowly, and were armoured only enough to stop small arms fire."
 
  light_tank_equipment:0 "Light Tank"
  light_tank_equipment_desc:0 "Light Tanks are small, agile tanks which are able to both scout and fight lightly armoured opponents."
@@ -603,8 +603,8 @@
  ALG_infantry_equipment_0_short:0 "Lebel Mle M93"
  ALG_support_weapons:0 "Darne M1919 & Stokes mortar"
 
- ALG_gw_tank_equipment:0 "Renault FT"
- ALG_gw_tank_equipment_short:0 "FT"
+ ALG_light_tank_equipment_1934:0 "Renault FT"
+ ALG_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### Alash Autonomy ###
@@ -616,8 +616,8 @@
  ALO_infantry_equipment_1:0 "Vintovka Mosina 1891 obr.1891/1930"
  ALO_infantry_equipment_1_short:0 "Mosina 1891/1930"
 
- ALO_gw_tank_equipment:0 "Reno-Putilov"
- ALO_gw_tank_equipment_short:0 "Reno-Putilov"
+ ALO_light_tank_equipment_1934:0 "Reno-Putilov"
+ ALO_light_tank_equipment_1934_short:0 "Reno-Putilov"
 
 ###
 ### Grao Para (AMA) ###
@@ -765,8 +765,8 @@
  ARG_gw_armored_car_equipment_short:0 "Bash Armoured Car"
 
 #Tanks
- ARG_gw_tank_equipment:0 "Renault FT"
- ARG_gw_tank_equipment_short:0 "FT"
+ ARG_light_tank_equipment_1934:0 "Renault FT"
+ ARG_light_tank_equipment_1934_short:0 "FT"
 
  ARG_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  ARG_light_tank_equipment_1_short:0 "A4 'Reliant'"
@@ -908,8 +908,8 @@
 #Tanks
  AST_amphibious_tank_equipment_1:0 "Vickers Amphibious"
 
- AST_gw_tank_equipment:0 "Mark V"
- AST_gw_tank_equipment_short:0 "Mark V"
+ AST_light_tank_equipment_1934:0 "Mark V"
+ AST_light_tank_equipment_1934_short:0 "Mark V"
  AST_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  AST_light_tank_equipment_1_short:0 "A4 'Reliant'"
  AST_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. It was given the rather ironic nickname 'Reliant' for its simultaneous reliability in harsh terrain and tendency to breakdown randomly in seemingly innocuous situations."
@@ -1024,8 +1024,8 @@
 #Tanks
  ASY_amphibious_tank_equipment_1:0 "Vickers Amphibious"
 
- ASY_gw_tank_equipment:0 "Mark V"
- ASY_gw_tank_equipment_short:0 "Mark V"
+ ASY_light_tank_equipment_1934:0 "Mark V"
+ ASY_light_tank_equipment_1934_short:0 "Mark V"
  ASY_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  ASY_light_tank_equipment_1_short:0 "A4 'Reliant'"
  ASY_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. It was given the rather ironic nickname 'Reliant' for its simultaneous reliability in harsh terrain and tendency to breakdown randomly in seemingly innocuous situations."
@@ -1161,9 +1161,9 @@
  #AUS_rocket_artillery_equipment_2_desc:0 ""
 
 #Tanks
- AUS_gw_tank_equipment:0 "Burstyn Motorgeschütze"
- AUS_gw_tank_equipment_short:0 "Burstyn MtG"
- #AUS_gw_tank_equipment_desc:0 ""
+ AUS_light_tank_equipment_1934:0 "Burstyn Motorgeschütze"
+ AUS_light_tank_equipment_1934_short:0 "Burstyn MtG"
+ #AUS_light_tank_equipment_1934_desc:0 ""
  AUS_light_tank_equipment_1:0 "Škoda Kavalleriepanzer M.35"
  AUS_light_tank_equipment_1_short:0 "KPz M.35"
  AUS_light_tank_equipment_1_desc:0 "In 1933, the K.u.K. Army realised that its incoherent tank fleet consisting of older foreign tank designs and domestic tankettes is rapidly losing combat effectiveness against new syndicalist and German designs. As a stop-gap measure, it decided to adopt the new Škoda Š-II export tank. The modern design was equipped with a two-man turret with 37mm gun and pneumatic gearbox and running gears, which was the tanks biggest problem due to its complexity and low reliability."
@@ -1400,8 +1400,8 @@
  BAT_rocket_artillery_equipment_2_desc:0 "The 21-cm Raketenwerfer 42 is a five-barreled multiple rocket launcher mounted on the towed carriage derived from that of the 3,7 cm Pa.K. 36 anti-tank gun. The launchers are organised into batteries of six with three batteries per battalion. Intended to provide the fire support and settle smokescreens, the R.W. 42 are mainly used as rocket artillery and almost don't participate in chemical warfare."
 
 #Tanks
- BAT_gw_tank_equipment:0 "$GER_gw_tank_equipment$"
- BAT_gw_tank_equipment_short:0 "$GER_gw_tank_equipment_short$"
+ BAT_light_tank_equipment_1934:0 "$GER_light_tank_equipment_1934$"
+ BAT_light_tank_equipment_1934_short:0 "$GER_light_tank_equipment_1934_short$"
  BAT_light_tank_equipment_1:0 "$GER_light_tank_equipment_1$"
  BAT_light_tank_equipment_1_short:0 "$GER_light_tank_equipment_1_short$"
  BAT_light_tank_equipment_2:0 "$GER_light_tank_equipment_2$"
@@ -1619,8 +1619,8 @@
  BAY_rocket_artillery_equipment_2_desc:0 "The 21-cm Raketenwerfer 42 is a five-barreled multiple rocket launcher mounted on the towed carriage derived from that of the 3,7 cm Pa.K. 36 anti-tank gun. The launchers are organised into batteries of six with three batteries per battalion. Intended to provide the fire support and settle smokescreens, the R.W. 42 are mainly used as rocket artillery and almost don't participate in chemical warfare."
 
 #Tanks
- BAY_gw_tank_equipment:0 "$GER_gw_tank_equipment$"
- BAY_gw_tank_equipment_short:0 "$GER_gw_tank_equipment_short$"
+ BAY_light_tank_equipment_1934:0 "$GER_light_tank_equipment_1934$"
+ BAY_light_tank_equipment_1934_short:0 "$GER_light_tank_equipment_1934_short$"
  BAY_light_tank_equipment_1:0 "$GER_light_tank_equipment_1$"
  BAY_light_tank_equipment_1_short:0 "$GER_light_tank_equipment_1_short$"
  BAY_light_tank_equipment_2:0 "$GER_light_tank_equipment_2$"
@@ -1803,8 +1803,8 @@
  BEL_anti_air_equipment_1_short:0 "2-cm Fla.K. 36"
 
 #Tanks
- BEL_gw_tank_equipment:0 "Renault FT"
- BEL_gw_tank_equipment_short:0 "FT"
+ BEL_light_tank_equipment_1934:0 "Renault FT"
+ BEL_light_tank_equipment_1934_short:0 "FT"
 
  BEL_light_tank_equipment_1:0 "CLR T15"
  BEL_light_tank_equipment_1_short:0 "T15"
@@ -1915,8 +1915,8 @@
  VOL_infantry_equipment_0_short:0 "Lebel Mle M93"
  VOL_support_weapons:0 "Darne M1919 & Stokes mortar"
 
- VOL_gw_tank_equipment:0 "Renault FT"
- VOL_gw_tank_equipment_short:0 "FT"
+ VOL_light_tank_equipment_1934:0 "Renault FT"
+ VOL_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### Bharatiya Commune ###
@@ -2050,9 +2050,9 @@
  #BOS_anti_air_equipment_1_desc:0 ""
 
 #Tanks
- BOS_gw_tank_equipment:0 "Burstyn samohodno topništvo"
- BOS_gw_tank_equipment_short:0 "Burstyn-ST"
- #BOS_gw_tank_equipment_desc:0 ""
+ BOS_light_tank_equipment_1934:0 "Burstyn samohodno topništvo"
+ BOS_light_tank_equipment_1934_short:0 "Burstyn-ST"
+ #BOS_light_tank_equipment_1934_desc:0 ""
  BOS_light_tank_equipment_1:0 "Škoda konjički oklop M.35"
  BOS_light_tank_equipment_1_short:0 "KO M.35"
  #BOS_light_tank_equipment_1_short_desc:0 ""
@@ -2139,9 +2139,9 @@
  BRA_infantry_at2_desc:0 "The Model 44 Rocket Launcher, like many Brazilian weapons of its time, is a rather uninspired copy of european equipment used in the Second Weltkrieg, later produced and used by Brazil itself. Based mostly on the German  'Panzerschreck', the weapon shares most specifications with it, including it's its 8,8-centimetre rockets and the massive smoke trail left by firing."
 
 
- BRA_gw_tank_equipment:0 "Ford M1921"
- BRA_gw_tank_equipment_short:0 "M1921"
- BRA_gw_tank_equipment_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921. Brazil adopted this American FT as its first tank."
+ BRA_light_tank_equipment_1934:0 "Ford M1921"
+ BRA_light_tank_equipment_1934_short:0 "M1921"
+ BRA_light_tank_equipment_1934_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921. Brazil adopted this American FT as its first tank."
 
  BRA_artillery_equipment_1:0 "Obuseiro Rheinmetall de 10,5 cm"
  BRA_artillery_equipment_1_desc:0 "After a series of military missions from and to Germany, Brazil's government started to import foreign artillery from that nation. These were Rheinmetall models were relatively modern for their time, but the nation had a very limited capacity for mass production of these at home. These guns were a significant upgrade from previous models used by Germany especially when it comes to hitting moving targets."
@@ -2257,9 +2257,9 @@
  BUL_gw_armored_car_equipment:0 "Leichter Panzerspähwagen, Sonderkraftfahrzeug 222"
  BUL_gw_armored_car_equipment_short:0 "Sd.Kfz. 222"
 
- BUL_gw_tank_equipment:0 "Renault FT"
- BUL_gw_tank_equipment_short:0 "FT"
- BUL_gw_tank_equipment_desc:0 "Bulgaria captured several Renault FT tanks during the great war and soon after the war began domestic production of unlicensed copies of the FT."
+ BUL_light_tank_equipment_1934:0 "Renault FT"
+ BUL_light_tank_equipment_1934_short:0 "FT"
+ BUL_light_tank_equipment_1934_desc:0 "Bulgaria captured several Renault FT tanks during the great war and soon after the war began domestic production of unlicensed copies of the FT."
  BUL_light_tank_equipment_1:0 "Škoda Kavalleriepanzer M.35"
  BUL_light_tank_equipment_1_short:0 "KPz M.35"
  BUL_light_tank_equipment_1_desc:0 "In 1933, the K.u.K. Army realised that its incoherent tank fleet consisting of older foreign tank designs and domestic tankettes is rapidly losing combat effectiveness against new syndicalist and German designs. As a stop-gap measure, it decided to adopt the new Škoda Š-II export tank. The modern design was equipped with a two-man turret with 37mm gun and pneumatic gearbox and running gears, which was the tanks biggest problem due to its complexity and low reliability."
@@ -2363,8 +2363,8 @@
 
  CAF_amphibious_tank_equipment_1:0 "Vickers Amphibious"
 
- CAF_gw_tank_equipment:0 "Mark V"
- CAF_gw_tank_equipment_short:0 "Mark V"
+ CAF_light_tank_equipment_1934:0 "Mark V"
+ CAF_light_tank_equipment_1934_short:0 "Mark V"
  CAF_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  CAF_light_tank_equipment_1_short:0 "A4 'Reliant'"
  CAF_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. It was given the rather ironic nickname 'Reliant' for its simultaneous reliability in harsh terrain and tendency to breakdown randomly in seemingly innocuous situations."
@@ -2490,9 +2490,9 @@
  PSA_rocket_artillery_equipment_2_short:0 "M16"
 
 #Tanks
- PSA_gw_tank_equipment:0 "Light Tank, Model 1921"
- PSA_gw_tank_equipment_short:0 "M1921"
- PSA_gw_tank_equipment_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921."
+ PSA_light_tank_equipment_1934:0 "Light Tank, Model 1921"
+ PSA_light_tank_equipment_1934_short:0 "M1921"
+ PSA_light_tank_equipment_1934_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921."
 
  PSA_light_tank_equipment_1:0 "Light Tank, Model 2, Mae West"
  PSA_light_tank_equipment_1_short:0 "M2 'Mae West'"
@@ -2642,8 +2642,8 @@
 #Tanks
  CAN_amphibious_tank_equipment_1:0 "Vickers Amphibious"
 
- CAN_gw_tank_equipment:0 "Mark V"
- CAN_gw_tank_equipment_short:0 "Mark V"
+ CAN_light_tank_equipment_1934:0 "Mark V"
+ CAN_light_tank_equipment_1934_short:0 "Mark V"
  CAN_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  CAN_light_tank_equipment_1_short:0 "A4 'Reliant'"
  CAN_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. It was given the rather ironic nickname 'Reliant' for its simultaneous reliability in harsh terrain and tendency to breakdown randomly in seemingly innocuous situations."
@@ -2686,8 +2686,8 @@
  SPR_infantry_equipment_3:0 "Fabrique Nationale Model 1943"
  SPR_infantry_equipment_3_short:0 "FN-43"
 
- SPR_gw_tank_equipment:0 "Renault FT"
- SPR_gw_tank_equipment_short:0 "FT"
+ SPR_light_tank_equipment_1934:0 "Renault FT"
+ SPR_light_tank_equipment_1934_short:0 "FT"
  SPR_light_tank_equipment_1:0 "Tipo 1933"
  SPR_light_tank_equipment_1_short:0 "T-33"
  SPR_light_tank_equipment_1_desc:0 "The Type 1933 is the culmination of a long series of designs by the Trubia company based loosely upon the Renault FT. While the company's earlier 1925 model was field tested by the Spanish army, the 1933 was the first domestically designed tank to be formally adopted by the Spanish military."
@@ -2832,9 +2832,9 @@
  CHI_mechanized_equipment_2:0 "Renault UE2"
  CHI_mechanized_equipment_2_short:0 "Renault UE2"
 
- CHI_gw_tank_equipment:0 "Renault FT"
- CHI_gw_tank_equipment_short:0 "FT"
- CHI_gw_tank_equipment_desc:0 "After the defeat of France, a large number of French-made Renault FT's flowed into the international arms market and transferred to China, becoming the most common tank in the Beiyang period.\n\nIn May 1927, in the final stages of the Northern Expedition, NRA commander Zhang Fakui managed to capture four opposing Renault FTs. Although this small victory did not turn the tide of the battle, these four small tanks became the ancestors of the NRA's current armoured forces."
+ CHI_light_tank_equipment_1934:0 "Renault FT"
+ CHI_light_tank_equipment_1934_short:0 "FT"
+ CHI_light_tank_equipment_1934_desc:0 "After the defeat of France, a large number of French-made Renault FT's flowed into the international arms market and transferred to China, becoming the most common tank in the Beiyang period.\n\nIn May 1927, in the final stages of the Northern Expedition, NRA commander Zhang Fakui managed to capture four opposing Renault FTs. Although this small victory did not turn the tide of the battle, these four small tanks became the ancestors of the NRA's current armoured forces."
  CHI_light_tank_equipment_1:0 "Renault AMR 33"
  CHI_light_tank_equipment_1_short:0 "AMR 33"
  CHI_light_tank_equipment_1_desc:0 "At the request of the Central Committee of the Kuomintang in exile in France, France produced a small batch of light armoured vehicles suitable for the mountainous terrain of China for the NRA exile group in France. It is worth noting that, in order to strengthen the firepower, the main gun of this batch of tanks specially provided for the Kuomintang is not a heavy machine gun, but a 25mm rapid-fire gun."
@@ -2901,8 +2901,8 @@
  SWF_infantry_equipment_3:0 "MAS Modèle 1940/42"
  SWF_infantry_equipment_3_short:0 "MAS-40/42"
 
- SWF_gw_tank_equipment:0 "Renault FT"
- SWF_gw_tank_equipment_short:0 "FT"
+ SWF_light_tank_equipment_1934:0 "Renault FT"
+ SWF_light_tank_equipment_1934_short:0 "FT"
  SWF_light_tank_equipment_1:0 "Tipo 1933"
  SWF_light_tank_equipment_1_short:0 "T-33"
  SWF_light_tank_equipment_1_desc:0 "The Type 1933 is the culmination of a long series of designs by the Trubia company based loosely upon the Renault FT. While the company's earlier 1925 model was field tested by the Spanish army, the 1933 was the first domestically designed tank to be formally adopted by the Spanish military."
@@ -3076,9 +3076,9 @@
  #CRO_anti_air_equipment_1_desc:0 ""
 
 #Tanks
- CRO_gw_tank_equipment:0 "Burstyn samohodno topništvo"
- CRO_gw_tank_equipment_short:0 "Burstyn-ST"
- #CRO_gw_tank_equipment_desc:0 ""
+ CRO_light_tank_equipment_1934:0 "Burstyn samohodno topništvo"
+ CRO_light_tank_equipment_1934_short:0 "Burstyn-ST"
+ #CRO_light_tank_equipment_1934_desc:0 ""
  CRO_light_tank_equipment_1:0 "Škoda konjički oklop M.35"
  CRO_light_tank_equipment_1_short:0 "KO M.35"
  #CRO_light_tank_equipment_1_short_desc:0 ""
@@ -3277,9 +3277,9 @@
 
 #Tanks
  #Ford M1921:
- CSA_gw_tank_equipment:0 "Rock Island Arsenal, Light Tank, Model 1921"
- CSA_gw_tank_equipment_short:0 "RIA-L1921"
- CSA_gw_tank_equipment_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921."
+ CSA_light_tank_equipment_1934:0 "Rock Island Arsenal, Light Tank, Model 1921"
+ CSA_light_tank_equipment_1934_short:0 "RIA-L1921"
+ CSA_light_tank_equipment_1934_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921."
 
  CSA_light_tank_equipment_1:0 "Rock Island Arsenal, Light Tank, Model 2"
  CSA_light_tank_equipment_1_short:0 "RIA-L2"
@@ -3336,9 +3336,9 @@
  CUB_infantry_equipment_3_short:0 "Cristóbal Carbine"
  CUB_infantry_equipment_3_desc:0 "While Hungarian arms designer Pál Király's heavy submachine guns were adopted by the Dual Monarchy, they nonetheless fell short of Király's own expectations. The Cristóbal is a development of those SMGs redesigned around a new intermediate calibre cartride. While it was ultimately rejected by the Dual Monarchy, the Dominican Republic, where Király had once considered immigrating, proved more receptive, adopting the gun as the 'Cristóbal' Carbine after the city of San Cristóbal. Cuba licensed production soon after its Dominican introduction."
 
- CUB_gw_tank_equipment:0 "Ford M1921"
- CUB_gw_tank_equipment_short:0 "M1921"
- CUB_gw_tank_equipment_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921. Cuba adopted this American FT as its first tank."
+ CUB_light_tank_equipment_1934:0 "Ford M1921"
+ CUB_light_tank_equipment_1934_short:0 "M1921"
+ CUB_light_tank_equipment_1934_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921. Cuba adopted this American FT as its first tank."
 
  CUB_artillery_equipment_1:0 "75 mm Gun M1897"
  CUB_artillery_equipment_1_short:0 "75 mm Gun M1897"
@@ -3529,9 +3529,9 @@
  CZE_anti_air_equipment_3_short:0 "KPL vz. 39"
  #CZE_anti_air_equipment_1_desc:0 ""
 
- CZE_gw_tank_equipment:0 "Burstyn Samohybného Děla"
- CZE_gw_tank_equipment_short:0 "Burstyn SD"
- #CZE_gw_tank_equipment_desc:0 ""
+ CZE_light_tank_equipment_1934:0 "Burstyn Samohybného Děla"
+ CZE_light_tank_equipment_1934_short:0 "Burstyn SD"
+ #CZE_light_tank_equipment_1934_desc:0 ""
  CZE_light_tank_equipment_1:0 "Škoda jízdní pancíř vzor 35"
  CZE_light_tank_equipment_1_short:0 "JP vz. 35"
  #CZE_light_tank_equipment_1_short_desc:0 ""
@@ -3710,8 +3710,8 @@
  DDR_rocket_artillery_equipment_2_desc:0 "The 21-cm Raketenwerfer 42 is a five-barreled multiple rocket launcher mounted on the towed carriage derived from that of the 3,7 cm Pa.K. 36 anti-tank gun. The launchers are organised into batteries of six with three batteries per battalion. Intended to provide the fire support and settle smokescreens, the R.W. 42 are mainly used as rocket artillery and almost don't participate in chemical warfare."
 
 #Tanks
- DDR_gw_tank_equipment:0 "$GER_gw_tank_equipment$"
- DDR_gw_tank_equipment_short:0 "$GER_gw_tank_equipment_short$"
+ DDR_light_tank_equipment_1934:0 "$GER_light_tank_equipment_1934$"
+ DDR_light_tank_equipment_1934_short:0 "$GER_light_tank_equipment_1934_short$"
  DDR_light_tank_equipment_1:0 "$GER_light_tank_equipment_1$"
  DDR_light_tank_equipment_1_short:0 "$GER_light_tank_equipment_1_short$"
  DDR_light_tank_equipment_2:0 "$GER_light_tank_equipment_2$"
@@ -3890,8 +3890,8 @@
 
  RAJ_amphibious_tank_equipment_1:0 "Vickers Amphibious"
 
- RAJ_gw_tank_equipment:0 "Mark V"
- RAJ_gw_tank_equipment_short:0 "Mark V"
+ RAJ_light_tank_equipment_1934:0 "Mark V"
+ RAJ_light_tank_equipment_1934_short:0 "Mark V"
  RAJ_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  RAJ_light_tank_equipment_1_short:0 "A4 'Reliant'"
  RAJ_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. It was given the rather ironic nickname 'Reliant' for its simultaneous reliability in harsh terrain and tendency to breakdown randomly in seemingly innocuous situations."
@@ -3973,9 +3973,9 @@
  DEI_mechanized_equipment_3:0 "Pantserwagen M.44"
  DEI_mechanized_equipment_3_short:0 "Psw. M.44"
 
- DEI_gw_tank_equipment:0 "Carden Loyd Mk.VI"
- DEI_gw_tank_equipment_short:0 "V-CL Mk.VI"
- DEI_gw_tank_equipment_desc:0 "The Royal Dutch Army had only a handful of either obsolete or worn-out armoured cars, twelve excellent DAF M39 six-wheeled armoured trucks, and five Carden Loyd Mark VI tankettes, named Lynx, Poema, Jaguar, Panter, and Luipaard."
+ DEI_light_tank_equipment_1934:0 "Carden Loyd Mk.VI"
+ DEI_light_tank_equipment_1934_short:0 "V-CL Mk.VI"
+ DEI_light_tank_equipment_1934_desc:0 "The Royal Dutch Army had only a handful of either obsolete or worn-out armoured cars, twelve excellent DAF M39 six-wheeled armoured trucks, and five Carden Loyd Mark VI tankettes, named Lynx, Poema, Jaguar, Panter, and Luipaard."
  DEI_light_tank_equipment_1:0 "DAF M39 Pantserwagen"
  DEI_light_tank_equipment_1_short:0 "DAF M39"
  DEI_light_tank_equipment_1_desc:0 "For its time the DAF M39 was a modern design with an all-welded monocoque construction of the hull and extensive use of sloped armour. The turret, fitted with a relatively powerful 37 mm cannon, was produced in Sweden by Landsverk. The type was lightly armoured and relatively fast, with a good cross-country capability."
@@ -4137,8 +4137,8 @@
  EGY_rocket_artillery_equipment_2_short:0 "R.W. 42"
 
 #Tanks
- EGY_gw_tank_equipment:0 "Mark V"
- EGY_gw_tank_equipment_short:0 "Mark V"
+ EGY_light_tank_equipment_1934:0 "Mark V"
+ EGY_light_tank_equipment_1934_short:0 "Mark V"
 
 ###
 ### El Salvador ###
@@ -4247,8 +4247,8 @@
 
 #Tanks
 
- ENG_gw_tank_equipment:0 "Mark V"
- ENG_gw_tank_equipment_short:0 "Mark V"
+ ENG_light_tank_equipment_1934:0 "Mark V"
+ ENG_light_tank_equipment_1934_short:0 "Mark V"
  ENG_light_tank_equipment_1:0 "Pilot Tank Mk.I"
  ENG_light_tank_equipment_1_short:0 "Pilot Mk.I"
  ENG_light_tank_equipment_2:0 "Pilot Tank Mk.III"
@@ -4386,8 +4386,8 @@
  EST_rocket_artillery_equipment_2_short:0 "Donauwörth-Arsenal M42"
 
  #Oberschlesien: 
- EST_gw_tank_equipment:0 "Mudel 1919 Kergetank"
- EST_gw_tank_equipment_short:0 "M19"
+ EST_light_tank_equipment_1934:0 "Mudel 1919 Kergetank"
+ EST_light_tank_equipment_1934_short:0 "M19"
  #Pz 1D:
  EST_light_tank_equipment_1:0 "Mudel 1932 Kergetank"
  EST_light_tank_equipment_1_short:0 "M32"
@@ -4624,8 +4624,8 @@
  FIN_anti_tank_equipment_1:0 "37mm Panssarintorjuntakanuuna Malli 36"
  FIN_anti_tank_equipment_1_short:0 "37 Pstk/36"
 
- FIN_gw_tank_equipment:0 "Renault FT"
- FIN_gw_tank_equipment_short:0 "FT"
+ FIN_light_tank_equipment_1934:0 "Renault FT"
+ FIN_light_tank_equipment_1934_short:0 "FT"
  FIN_light_tank_equipment_1:0 "Vickers Mark E Type B"
  FIN_light_tank_equipment_1_short:0 "Mk.E Type B"
  FIN_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. The Finnish adopted the turreted variant of the tank armed with a licence-produced Bofors 37mm cannon in 1935."
@@ -4751,8 +4751,8 @@
 
 #Tanks
 
- FNG_gw_tank_equipment:0 "Renault FT"
- FNG_gw_tank_equipment_short:0 "FT"
+ FNG_light_tank_equipment_1934:0 "Renault FT"
+ FNG_light_tank_equipment_1934_short:0 "FT"
  FNG_light_tank_equipment_1:0 "Type 94 Tankette"
  FNG_light_tank_equipment_1_short:0 "Type 94"
  FNG_light_tank_equipment_2:0 "Type 95 Ha-Go"
@@ -4830,8 +4830,8 @@
  FOP_support_weapons:0 "Hotchkiss M.1914(Chilean Model)" 
  FOP_support_weapons2:0 "Fabrique Nationale FN GP35" 
  FOP_support_weapons3:0 "Hotchkiss 26/37, Brandt Mle 35/38"
- FOP_gw_tank_equipment:0 "Renault FT"
- FOP_gw_tank_equipment_short:0 "FT"
+ FOP_light_tank_equipment_1934:0 "Renault FT"
+ FOP_light_tank_equipment_1934_short:0 "FT"
  FOP_light_tank_equipment_1:0 "Brandt H35"
  FOP_light_tank_equipment_1_short:0 "H35"
  FOP_light_tank_equipment_2:0 "FCM 36"
@@ -4934,8 +4934,8 @@
 
 #Tanks
 
- FRA_gw_tank_equipment:0 "Renault FT"
- FRA_gw_tank_equipment_short:0 "FT"
+ FRA_light_tank_equipment_1934:0 "Renault FT"
+ FRA_light_tank_equipment_1934_short:0 "FT"
  FRA_light_tank_equipment_1:0 "Brandt H35"
  FRA_light_tank_equipment_1_short:0 "H35"
  FRA_light_tank_equipment_2:0 "FCM 36"
@@ -5073,8 +5073,8 @@
 
 #Tanks
 
- FRP_gw_tank_equipment:0 "Renault FT"
- FRP_gw_tank_equipment_short:0 "FT"
+ FRP_light_tank_equipment_1934:0 "Renault FT"
+ FRP_light_tank_equipment_1934_short:0 "FT"
  FRP_light_tank_equipment_1:0 "Brandt H35"
  FRP_light_tank_equipment_1_short:0 "H35"
  FRP_light_tank_equipment_2:0 "FCM 36"
@@ -5252,9 +5252,9 @@
  GAL_anti_air_equipment_3_short:0 "Armata plot. wz. 39"
  #GAL_anti_air_equipment_1_desc:0 ""
 
- GAL_gw_tank_equipment:0 "Burstyn Działo Samobieżne"
- GAL_gw_tank_equipment_short:0 "Burstyn-DS"
- #GAL_gw_tank_equipment_desc:0 ""
+ GAL_light_tank_equipment_1934:0 "Burstyn Działo Samobieżne"
+ GAL_light_tank_equipment_1934_short:0 "Burstyn-DS"
+ #GAL_light_tank_equipment_1934_desc:0 ""
  GAL_light_tank_equipment_1:0 "Škoda Pancerz Kawalerii wzór 35"
  GAL_light_tank_equipment_1_short:0 "PK wz. 35"
  #GAL_light_tank_equipment_1_short_desc:0 ""
@@ -5368,8 +5368,8 @@
 
 #Tanks
 
- GBP_gw_tank_equipment:0 "Mark V"
- GBP_gw_tank_equipment_short:0 "Mark V"
+ GBP_light_tank_equipment_1934:0 "Mark V"
+ GBP_light_tank_equipment_1934_short:0 "Mark V"
  GBP_light_tank_equipment_1:0 "Pilot Tank Mk.I"
  GBP_light_tank_equipment_1_short:0 "Pilot Mk.I"
  GBP_light_tank_equipment_2:0 "Pilot Tank Mk.III"
@@ -5484,8 +5484,8 @@
 #Tanks
  GBR_amphibious_tank_equipment_1:0 "Vickers Amphibious"
 
- GBR_gw_tank_equipment:0 "Mark V"
- GBR_gw_tank_equipment_short:0 "Mark V"
+ GBR_light_tank_equipment_1934:0 "Mark V"
+ GBR_light_tank_equipment_1934_short:0 "Mark V"
  GBR_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  GBR_light_tank_equipment_1_short:0 "A4 'Reliant'"
  GBR_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. It was given the rather ironic nickname 'Reliant' for its simultaneous reliability in harsh terrain and tendency to breakdown randomly in seemingly innocuous situations."
@@ -5616,8 +5616,8 @@
  GEA_rocket_artillery_equipment_2:0 "21-cm Raketenwerfer Modell 42"
 
 #Tanks
- GEA_gw_tank_equipment:0 "$GER_gw_tank_equipment$"
- GEA_gw_tank_equipment_short:0 "$GER_gw_tank_equipment_short$"
+ GEA_light_tank_equipment_1934:0 "$GER_light_tank_equipment_1934$"
+ GEA_light_tank_equipment_1934_short:0 "$GER_light_tank_equipment_1934_short$"
  GEA_light_tank_equipment_1:0 "$GER_light_tank_equipment_1$"
  GEA_light_tank_equipment_1_short:0 "$GER_light_tank_equipment_1_short$"
  GEA_light_tank_equipment_2:0 "$GER_light_tank_equipment_2$"
@@ -5785,8 +5785,8 @@
 
 
 #Tanks
- GEO_gw_tank_equipment:0 "Javshansatanko Sabrdzolo Mankana modeli 1919"
- GEO_gw_tank_equipment_short:0 "JSM 19"
+ GEO_light_tank_equipment_1934:0 "Javshansatanko Sabrdzolo Mankana modeli 1919"
+ GEO_light_tank_equipment_1934_short:0 "JSM 19"
  GEO_light_tank_equipment_1:0 "Sheteviti Javshanmankana modeli 1932"
  GEO_light_tank_equipment_1_short:0 "ShJ 32"
  GEO_light_tank_equipment_2:0 "Sheteviti Javshanmankana modeli 1936"
@@ -5977,8 +5977,8 @@
 
 #Tanks
  #Oberschlesien:
- GER_gw_tank_equipment:0 "Sturmpanzerwagen II"
- GER_gw_tank_equipment_short:0 "St.Pzw. II"
+ GER_light_tank_equipment_1934:0 "Sturmpanzerwagen II"
+ GER_light_tank_equipment_1934_short:0 "St.Pzw. II"
  #Pz 1D:
  GER_light_tank_equipment_1:0 "Spähpanzer II/verbesserter"
  GER_light_tank_equipment_1_short:0 "Sp.Pz. II/vbs."
@@ -6146,8 +6146,8 @@
  GNA_infantry_equipment_0_short:0 "Lebel Mle M93"
  GNA_support_weapons:0 "Darne M1919 & Stokes mortar"
 
- GNA_gw_tank_equipment:0 "Renault FT"
- GNA_gw_tank_equipment_short:0 "FT"
+ GNA_light_tank_equipment_1934:0 "Renault FT"
+ GNA_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### Greece ###
@@ -6347,8 +6347,8 @@
  GRU_rocket_artillery_equipment_2_desc:0 "The 21-cm Raketenwerfer 42 is a five-barreled multiple rocket launcher mounted on the towed carriage derived from that of the 3,7 cm Pa.K. 36 anti-tank gun. The launchers are organised into batteries of six with three batteries per battalion. Intended to provide the fire support and settle smokescreens, the R.W. 42 are mainly used as rocket artillery and almost don't participate in chemical warfare."
 
 #Tanks
- GRU_gw_tank_equipment:0 "$GER_gw_tank_equipment$"
- GRU_gw_tank_equipment_short:0 "$GER_gw_tank_equipment_short$"
+ GRU_light_tank_equipment_1934:0 "$GER_light_tank_equipment_1934$"
+ GRU_light_tank_equipment_1934_short:0 "$GER_light_tank_equipment_1934_short$"
  GRU_light_tank_equipment_1:0 "$GER_light_tank_equipment_1$"
  GRU_light_tank_equipment_1_short:0 "$GER_light_tank_equipment_1_short$"
  GRU_light_tank_equipment_2:0 "$GER_light_tank_equipment_2$"
@@ -6542,8 +6542,8 @@
 
  GUY_amphibious_tank_equipment_1:0 "Vickers Amphibious"
 
- GUY_gw_tank_equipment:0 "Mark V"
- GUY_gw_tank_equipment_short:0 "Mark V"
+ GUY_light_tank_equipment_1934:0 "Mark V"
+ GUY_light_tank_equipment_1934_short:0 "Mark V"
  GUY_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  GUY_light_tank_equipment_1_short:0 "A4 'Reliant'"
  GUY_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. It was given the rather ironic nickname 'Reliant' for its simultaneous reliability in harsh terrain and tendency to breakdown randomly in seemingly innocuous situations."
@@ -6628,9 +6628,9 @@
  GXC_mechanized_equipment_1:0 "Vickers Carrier"
  GXC_mechanized_equipment_1_short:0 "Vickers Carrier"
 
- GXC_gw_tank_equipment:0 "Carden Loyd Mk.VI"
- GXC_gw_tank_equipment_short:0 "V-CL Mk.VI"
- GXC_gw_tank_equipment_desc:0 "The disaster in the British Empire is an opportunity for Liangguang. The British Empire, which drastically reduced its military expenditures, had to sell large quantities of second-hand heavy weapons and equipment from the former Hong Kong Garrison to the Liangguang Clique under financial difficulties. \n\nIn 1929, Chen Jiongming ordered a batch of Carden Loyd Tanks to be purchased from Hong Kong to arm the Guangdong army. However, due to Chen Jiongming's insufficient knowledge of modern tanks, these tanks were almost never officially put into combat. The only record of combat that can be confirmed is the suppression Kuomintang guerrillas in the guerrilla zone in Haifeng-Lufeng area."
+ GXC_light_tank_equipment_1934:0 "Carden Loyd Mk.VI"
+ GXC_light_tank_equipment_1934_short:0 "V-CL Mk.VI"
+ GXC_light_tank_equipment_1934_desc:0 "The disaster in the British Empire is an opportunity for Liangguang. The British Empire, which drastically reduced its military expenditures, had to sell large quantities of second-hand heavy weapons and equipment from the former Hong Kong Garrison to the Liangguang Clique under financial difficulties. \n\nIn 1929, Chen Jiongming ordered a batch of Carden Loyd Tanks to be purchased from Hong Kong to arm the Guangdong army. However, due to Chen Jiongming's insufficient knowledge of modern tanks, these tanks were almost never officially put into combat. The only record of combat that can be confirmed is the suppression Kuomintang guerrillas in the guerrilla zone in Haifeng-Lufeng area."
  GXC_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  GXC_light_tank_equipment_1_short:0 "A4 'Reliant'"
  GXC_light_tank_equipment_1_desc:0 "The disaster in the British Empire is an opportunity for Liangguang. The British Empire, which drastically reduced its military expenditures, had to sell large quantities of second-hand heavy weapons and equipment from the former Hong Kong Garrison to the Liangguang Clique under financial difficulties. \n\nIn 1934, the Merchant Corps of Liangguang purchased 20 Vickers Mark E from Vickers through Jardine Matheson & Co., forming the first armoured force of Liangguang."
@@ -6713,9 +6713,9 @@
  HAW_anti_air_equipment_2:0 "40 mm M1"
 
 #Tanks
- HAW_gw_tank_equipment:0 "Ford M1921"
- HAW_gw_tank_equipment_short:0 "M1921"
- HAW_gw_tank_equipment_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921."
+ HAW_light_tank_equipment_1934:0 "Ford M1921"
+ HAW_light_tank_equipment_1934_short:0 "M1921"
+ HAW_light_tank_equipment_1934_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921."
 
  HAW_light_tank_equipment_1:0 "M2"
  HAW_light_tank_equipment_1_short:0 "M2"
@@ -6818,9 +6818,9 @@
  HOL_mechanized_equipment_3:0 "Pantserwagen M.44"
  HOL_mechanized_equipment_3_short:0 "Psw. M.44"
 
- HOL_gw_tank_equipment:0 "Carden Loyd Mk.VI"
- HOL_gw_tank_equipment_short:0 "V-CL Mk.VI"
- HOL_gw_tank_equipment_desc:0 "The Royal Dutch Army had only a handful of either obsolete or worn-out armoured cars, twelve excellent DAF M39 six-wheeled armoured trucks, and five Carden Loyd Mark VI tankettes, named Lynx, Poema, Jaguar, Panter, and Luipaard."
+ HOL_light_tank_equipment_1934:0 "Carden Loyd Mk.VI"
+ HOL_light_tank_equipment_1934_short:0 "V-CL Mk.VI"
+ HOL_light_tank_equipment_1934_desc:0 "The Royal Dutch Army had only a handful of either obsolete or worn-out armoured cars, twelve excellent DAF M39 six-wheeled armoured trucks, and five Carden Loyd Mark VI tankettes, named Lynx, Poema, Jaguar, Panter, and Luipaard."
  HOL_light_tank_equipment_1:0 "DAF M39 Pantserwagen"
  HOL_light_tank_equipment_1_short:0 "DAF M39"
  HOL_light_tank_equipment_1_desc:0 "For its time the DAF M39 was a modern design with an all-welded monocoque construction of the hull and extensive use of sloped armour. The turret, fitted with a relatively powerful 37 mm cannon, was produced in Sweden by Landsverk. The type was lightly armoured and relatively fast, with a good cross-country capability."
@@ -6998,9 +6998,9 @@
  #HUN_anti_air_equipment_1_desc:0 ""
 
 #Tanks
- HUN_gw_tank_equipment:0 "Burstyn önjáró lövege"
- HUN_gw_tank_equipment_short:0 "Burstyn-ÖL"
- #HUN_gw_tank_equipment_desc:0 ""
+ HUN_light_tank_equipment_1934:0 "Burstyn önjáró lövege"
+ HUN_light_tank_equipment_1934_short:0 "Burstyn-ÖL"
+ #HUN_light_tank_equipment_1934_desc:0 ""
  HUN_light_tank_equipment_1:0 "35M Škoda lovaspáncélos"
  HUN_light_tank_equipment_1_short:0 "35M LP"
  #HUN_light_tank_equipment_1_short_desc:0 ""
@@ -7131,8 +7131,8 @@
 
 #Tanks
 
- INC_gw_tank_equipment:0 "Renault FT"
- INC_gw_tank_equipment_short:0 "FT"
+ INC_light_tank_equipment_1934:0 "Renault FT"
+ INC_light_tank_equipment_1934_short:0 "FT"
  INC_light_tank_equipment_1:0 "Hotchkiss H35"
  INC_light_tank_equipment_1_short:0 "H35"
  INC_light_tank_equipment_2:0 "FCM 36"
@@ -7274,8 +7274,8 @@
 
 #Tanks
 
- IRE_gw_tank_equipment:0 "$GER_gw_tank_equipment$"
- IRE_gw_tank_equipment_short:0 "$GER_gw_tank_equipment_short$"
+ IRE_light_tank_equipment_1934:0 "$GER_light_tank_equipment_1934$"
+ IRE_light_tank_equipment_1934_short:0 "$GER_light_tank_equipment_1934_short$"
 
  IRE_light_tank_equipment_1:0 "Škoda vz. 35"
  IRE_light_tank_equipment_1_short:0 "vz. 35"
@@ -7435,8 +7435,8 @@
 
 #Tanks
 
- ITA_gw_tank_equipment:0 "Fiat 3000"
- ITA_gw_tank_equipment_short:0 "Fiat 3000"
+ ITA_light_tank_equipment_1934:0 "Fiat 3000"
+ ITA_light_tank_equipment_1934_short:0 "Fiat 3000"
  ITA_light_tank_equipment_1:0 "L3"
  ITA_light_tank_equipment_1_short:0 "L3"
  ITA_light_tank_equipment_2:0 "L6"
@@ -7558,8 +7558,8 @@
 
  JAM_amphibious_tank_equipment_1:0 "Vickers Amphibious"
 
- JAM_gw_tank_equipment:0 "Mark V"
- JAM_gw_tank_equipment_short:0 "Mark V"
+ JAM_light_tank_equipment_1934:0 "Mark V"
+ JAM_light_tank_equipment_1934_short:0 "Mark V"
  JAM_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  JAM_light_tank_equipment_1_short:0 "A4 'Reliant'"
  JAM_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. It was given the rather ironic nickname 'Reliant' for its simultaneous reliability in harsh terrain and tendency to breakdown randomly in seemingly innocuous situations."
@@ -7704,8 +7704,8 @@
 
 #Tanks
 
- JAP_gw_tank_equipment:0 "Ko-Gata Sensha"
- JAP_gw_tank_equipment_short:0 "Ko-Gata"
+ JAP_light_tank_equipment_1934:0 "Ko-Gata Sensha"
+ JAP_light_tank_equipment_1934_short:0 "Ko-Gata"
  JAP_light_tank_equipment_1:0 "Type 94 Tankette"
  JAP_light_tank_equipment_1_short:0 "Type 94"
  JAP_light_tank_equipment_2:0 "Type 95 Ha-Go"
@@ -8067,8 +8067,8 @@
  LAT_rocket_artillery_equipment_2_short:0 "42. 210-mm lielgabals"
 
  #Oberschlesien:
- LAT_gw_tank_equipment:0 "1919 g. modelis armijas bruņumašīna 'Oberschlesien'"
- LAT_gw_tank_equipment_short:0 "19. Oberschlesien"
+ LAT_light_tank_equipment_1934:0 "1919 g. modelis armijas bruņumašīna 'Oberschlesien'"
+ LAT_light_tank_equipment_1934_short:0 "19. Oberschlesien"
  #Pz 1D:
  LAT_light_tank_equipment_1:0 "1932 g. modelis armijas gaismas tanks 'Kleinpanzer 1b'"
  LAT_light_tank_equipment_1_short:0 "32. Kleinpanzer 1b"
@@ -8393,8 +8393,8 @@ LIT_rocket_artillery_equipment_2_short:0 "210 mm 42 pabuklas"
 
 
 #Oberschlesien:
-LIT_gw_tank_equipment:0 "1919 m. modelio lengvasis tankas 'Oberschlesien'"
-LIT_gw_tank_equipment_short:0 "Oberschlesien"
+LIT_light_tank_equipment_1934:0 "1919 m. modelio lengvasis tankas 'Oberschlesien'"
+LIT_light_tank_equipment_1934_short:0 "Oberschlesien"
 #Pz 1D:
 LIT_light_tank_equipment_1:0 "1932 m. modelio lengvasis tankas 'Kleinpanzer 1b'"
 LIT_light_tank_equipment_1_short:0 "Kleinpanzer 1b"
@@ -8800,8 +8800,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  MAF_rocket_artillery_equipment_2_desc:0 "The 21-cm Raketenwerfer 42 is a five-barreled multiple rocket launcher mounted on the towed carriage derived from that of the 3,7 cm Pa.K. 36 anti-tank gun. The launchers are organised into batteries of six with three batteries per battalion. Intended to provide the fire support and settle smokescreens, the R.W. 42 are mainly used as rocket artillery and almost don't participate in chemical warfare."
 
 #Tanks
- MAF_gw_tank_equipment:0 "$GER_gw_tank_equipment$"
- MAF_gw_tank_equipment_short:0 "$GER_gw_tank_equipment_short$"
+ MAF_light_tank_equipment_1934:0 "$GER_light_tank_equipment_1934$"
+ MAF_light_tank_equipment_1934_short:0 "$GER_light_tank_equipment_1934_short$"
  MAF_light_tank_equipment_1:0 "$GER_light_tank_equipment_1$"
  MAF_light_tank_equipment_1_short:0 "$GER_light_tank_equipment_1_short$"
  MAF_light_tank_equipment_2:0 "$GER_light_tank_equipment_2$"
@@ -8923,8 +8923,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  MLI_infantry_equipment_0_short:0 "Lebel Mle M93"
  MLI_support_weapons:0 "Darne M1919 & Stokes mortar"
 
- MLI_gw_tank_equipment:0 "Renault FT"
- MLI_gw_tank_equipment_short:0 "FT"
+ MLI_light_tank_equipment_1934:0 "Renault FT"
+ MLI_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### Mexico ###
@@ -8946,8 +8946,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  MEX_support_weapons2:0 "Mendoza C-1934 & Brandt Mle Mle 27/31"
  MEX_support_weapons3:0 "Hotchkiss 26/37 & M1 mortar"
 
- MEX_gw_tank_equipment:0 "Renault FT"
- MEX_gw_tank_equipment_short:0 "FT"
+ MEX_light_tank_equipment_1934:0 "Renault FT"
+ MEX_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### Nyasaland ###
@@ -9019,9 +9019,9 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  LEP_mechanized_equipment_2_short:0 "Haoxu 251"
  LEP_mechanized_equipment_2_desc:0 "The Sd.Kfz. 251 half-track was an armoured fighting vehicle designed and first built by the Hanomag company during the Second Weltkrieg, based on their earlier Sd.Kfz. 11 vehicle."
 
- LEP_gw_tank_equipment:0 "Renault FT"
- LEP_gw_tank_equipment_short:0 "FT"
- LEP_gw_tank_equipment_desc:0 "After the defeat of France, a large number of French-made Renault FT flowed into the international arms market and made their way to China, becoming the most common tank in the Beiyang period.\n\nThe Zhili clique, who saw the superiority of the Fengtian army's tanks in the Second Zhili-Fengtian War, smuggled some Renault FT tanks from the international arms market after the Qing government's restoration."
+ LEP_light_tank_equipment_1934:0 "Renault FT"
+ LEP_light_tank_equipment_1934_short:0 "FT"
+ LEP_light_tank_equipment_1934_desc:0 "After the defeat of France, a large number of French-made Renault FT flowed into the international arms market and made their way to China, becoming the most common tank in the Beiyang period.\n\nThe Zhili clique, who saw the superiority of the Fengtian army's tanks in the Second Zhili-Fengtian War, smuggled some Renault FT tanks from the international arms market after the Qing government's restoration."
  LEP_light_tank_equipment_1:0 "Fiat L3"
  LEP_light_tank_equipment_1_short:0 "L3"
  LEP_light_tank_equipment_1_desc:0 "Unwilling to send his son to Germany to study, as he feared this arrangement might turn his son, Qi Hongmai, into a 'hostage', Qi Xieyuan sent him to the Republic of Italy's Accademia Militare di Milano instead. It was through the connections his son forged there that Qi Xieyuan was able to purchase a batch of Italian tanks for his army, and at lower rates than the Germans offered for their own Spähpanzer IIs."
@@ -9074,8 +9074,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  MRT_infantry_equipment_0_short:0 "Lebel Mle M93"
  MRT_support_weapons:0 "Darne M1919 & Stokes mortar"
 
- MRT_gw_tank_equipment:0 "Renault FT"
- MRT_gw_tank_equipment_short:0 "FT"
+ MRT_light_tank_equipment_1934:0 "Renault FT"
+ MRT_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### Mysore ###
@@ -9239,8 +9239,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 #Tanks
  NEE_amphibious_tank_equipment_1:0 "Vickers Amphibious"
 
- NEE_gw_tank_equipment:0 "Mark V"
- NEE_gw_tank_equipment_short:0 "Mark V"
+ NEE_light_tank_equipment_1934:0 "Mark V"
+ NEE_light_tank_equipment_1934_short:0 "Mark V"
  NEE_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  NEE_light_tank_equipment_1_short:0 "A4 'Reliant'"
  NEE_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. It was given the rather ironic nickname 'Reliant' for its simultaneous reliability in harsh terrain and tendency to breakdown randomly in seemingly innocuous situations."
@@ -9286,8 +9286,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  NGR_infantry_equipment_0_short:0 "Lebel Mle M93"
  NGR_support_weapons:0 "Darne M1919 & Stokes mortar"
 
- NGR_gw_tank_equipment:0 "Renault FT"
- NGR_gw_tank_equipment_short:0 "FT"
+ NGR_light_tank_equipment_1934:0 "Renault FT"
+ NGR_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### French Republic ###
@@ -9429,9 +9429,9 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 #Tanks
 
  #FT-31:
- NFA_gw_tank_equipment:0 "Char d'Assaut Renault FT Modèle 1917 Modifié 29"
- NFA_gw_tank_equipment_short:0 "FT-29"
- NFA_gw_tank_equipment_desc:0 "The FT was the first production tank to have its armament within a fully rotating turret and was revolutionary in terms of tank designs, later copied by other countries. Renault's design, developed in 1917, was technically far more advanced than the other two French tanks of the Weltkrieg. The French army, after retreat to Algeria, modified remaining tanks with the Hotchkiss Mle 26 machine gun in 1929, but in general, many of the FTs were sold to other countries to support the French budget."
+ NFA_light_tank_equipment_1934:0 "Char d'Assaut Renault FT Modèle 1917 Modifié 29"
+ NFA_light_tank_equipment_1934_short:0 "FT-29"
+ NFA_light_tank_equipment_1934_desc:0 "The FT was the first production tank to have its armament within a fully rotating turret and was revolutionary in terms of tank designs, later copied by other countries. Renault's design, developed in 1917, was technically far more advanced than the other two French tanks of the Weltkrieg. The French army, after retreat to Algeria, modified remaining tanks with the Hotchkiss Mle 26 machine gun in 1929, but in general, many of the FTs were sold to other countries to support the French budget."
 
  #D1:
  NFA_light_tank_equipment_1:0 "Char de Manœuvre Renault Modèle 1930"
@@ -9611,8 +9611,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  NGF_rocket_artillery_equipment_2_desc:0 "The 21-cm Raketenwerfer 42 is a five-barreled multiple rocket launcher mounted on the towed carriage derived from that of the 3,7 cm Pa.K. 36 anti-tank gun. The launchers are organised into batteries of six with three batteries per battalion. Intended to provide the fire support and settle smokescreens, the R.W. 42 are mainly used as rocket artillery and almost don't participate in chemical warfare."
 
 #Tanks
- NGF_gw_tank_equipment:0 "$GER_gw_tank_equipment$"
- NGF_gw_tank_equipment_short:0 "$GER_gw_tank_equipment_short$"
+ NGF_light_tank_equipment_1934:0 "$GER_light_tank_equipment_1934$"
+ NGF_light_tank_equipment_1934_short:0 "$GER_light_tank_equipment_1934_short$"
  NGF_light_tank_equipment_1:0 "$GER_light_tank_equipment_1$"
  NGF_light_tank_equipment_1_short:0 "$GER_light_tank_equipment_1_short$"
  NGF_light_tank_equipment_2:0 "$GER_light_tank_equipment_2$"
@@ -9743,8 +9743,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  NIC_infantry_equipment_3_short:0 "MAS-40/42"
  NIC_infantry_equipment_3_desc:0 "The MAS-40/42 is the latest in a series of Communard semi-automatic rifles. Unlike its predecessors, however, the MAS-40/42 was found to be exceptionally reliable in French military testing. The original five round internal magazine, however, was deemed insufficient and a new variant of the MAS-40/42, the 40/42, was developed featuring a detachable ten round box magazine. A small number of MAS-40/42 rifles were smuggled into Nicaragua along with production tooling specifications."
 
- NIC_gw_tank_equipment:0 "Renault FT"
- NIC_gw_tank_equipment_short:0 "FT"
+ NIC_light_tank_equipment_1934:0 "Renault FT"
+ NIC_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### Norway ###
@@ -9859,8 +9859,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 
  NZL_amphibious_tank_equipment_1:0 "Vickers Amphibious"
 
- NZL_gw_tank_equipment:0 "Mark V"
- NZL_gw_tank_equipment_short:0 "Mark V"
+ NZL_light_tank_equipment_1934:0 "Mark V"
+ NZL_light_tank_equipment_1934_short:0 "Mark V"
  NZL_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  NZL_light_tank_equipment_1_short:0 "A4 'Reliant'"
  NZL_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. It was given the rather ironic nickname 'Reliant' for its simultaneous reliability in harsh terrain and tendency to breakdown randomly in seemingly innocuous situations."
@@ -10033,9 +10033,9 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 #Tanks
 
  #MK V:
- OTT_gw_tank_equipment:0 "Zırhlı V"
- OTT_gw_tank_equipment_short:0 "Z-V"
- OTT_gw_tank_equipment_desc:0 "During the Weltkrieg, Ottoman army captured Mark V and FT tanks then refitted them into service, dubbing them 'Zırhlı V' and 'MT-17'. After British forces surrendered, Ottoman Empire received a large number of Mark V as spoils of war. The Z-V tank was a main tank in the Ottoman armoured corps. Though more advanced tanks replace the Z-Vs eventually, army still consider these for training its tank crews."
+ OTT_light_tank_equipment_1934:0 "Zırhlı V"
+ OTT_light_tank_equipment_1934_short:0 "Z-V"
+ OTT_light_tank_equipment_1934_desc:0 "During the Weltkrieg, Ottoman army captured Mark V and FT tanks then refitted them into service, dubbing them 'Zırhlı V' and 'MT-17'. After British forces surrendered, Ottoman Empire received a large number of Mark V as spoils of war. The Z-V tank was a main tank in the Ottoman armoured corps. Though more advanced tanks replace the Z-Vs eventually, army still consider these for training its tank crews."
  OTT_light_tank_equipment_1:0 "Muharebe Tankı Kalıp 1352"
  OTT_light_tank_equipment_1_short:0 "MT-52 'Sekban'"
  OTT_light_tank_equipment_1_desc:0 "MT-52 Sekban project is the first attempt to reorganise and reform the Ottoman Armoured Corps that was included in Harb-i Yıldırım military reforms. To this end, the Ottoman Empire bought a license for the German Spähpanzer II and designed a production line that Ottoman factories could handle. The initial plan was to have the MT-52 to replace old Z-Vs, however field tests showed that the MT-52 did not match the level of German production. Nevertheless, the quality of the new tank was accepted as good enough."
@@ -10274,9 +10274,9 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 #Tanks
 
  #MK V:
- PAL_gw_tank_equipment:0 "Zırhlı V"
- PAL_gw_tank_equipment_short:0 "Z-V"
- PAL_gw_tank_equipment_desc:0 "During the Weltkrieg, Ottoman army captured Mark V and FT tanks then refitted them into service, dubbing them 'Zırhlı V' and 'MT-17'. After British forces surrendered, Ottoman Empire received a large number of Mark V as spoils of war. The Z-V tank was a main tank in the Ottoman armoured corps. Though more advanced tanks replace the Z-Vs eventually, army still consider these for training its tank crews."
+ PAL_light_tank_equipment_1934:0 "Zırhlı V"
+ PAL_light_tank_equipment_1934_short:0 "Z-V"
+ PAL_light_tank_equipment_1934_desc:0 "During the Weltkrieg, Ottoman army captured Mark V and FT tanks then refitted them into service, dubbing them 'Zırhlı V' and 'MT-17'. After British forces surrendered, Ottoman Empire received a large number of Mark V as spoils of war. The Z-V tank was a main tank in the Ottoman armoured corps. Though more advanced tanks replace the Z-Vs eventually, army still consider these for training its tank crews."
  PAL_light_tank_equipment_1:0 "Muharebe Tankı Kalıp 1352"
  PAL_light_tank_equipment_1_short:0 "MT-52 'Sekban'"
  PAL_light_tank_equipment_1_desc:0 "MT-52 Sekban project is the first attempt to reorganise and reform the Ottoman Armoured Corps that was included in Harb-i Yıldırım military reforms. To this end, the Ottoman Empire bought a license for the German Spähpanzer II and designed a production line that Ottoman factories could handle. The initial plan was to have the MT-52 to replace old Z-Vs, however field tests showed that the MT-52 did not match the level of German production. Nevertheless, the quality of the new tank was accepted as good enough."
@@ -10568,8 +10568,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 
 #Tank
 
- POL_gw_tank_equipment:0 "Renault FT"
- POL_gw_tank_equipment_short:0 "Renault FT"
+ POL_light_tank_equipment_1934:0 "Renault FT"
+ POL_light_tank_equipment_1934_short:0 "Renault FT"
  POL_light_tank_equipment_1:0 "TKS"
  POL_light_tank_equipment_1_short:0 "TKS"
  POL_light_tank_destroyer_equipment_1:0 "TKS-NKM/20 mm"
@@ -10742,9 +10742,9 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  QIE_mechanized_equipment_2_short:0 "Haoxu 251"
  QIE_mechanized_equipment_2_desc:0 "The Sd.Kfz. 251 half-track was an armoured fighting vehicle designed and first built by the Hanomag company during the Second Weltkrieg, based on their earlier Sd.Kfz. 11 vehicle."
 
- QIE_gw_tank_equipment:0 "Renault FT"
- QIE_gw_tank_equipment_short:0 "FT"
- QIE_gw_tank_equipment_desc:0 "After the defeat of France, a large number of French-made Renault FT flowed into the international arms market and made their way to China, becoming the most common tank in the Beiyang period.\n\nThe Zhili clique, who witnessed the superiority of the Fengtian army's tanks in the Second Zhili-Fengtian War, smuggled some Renault FTs from the international arms market after the Qing government's restoration. In the Fourth Zhifeng War, these vehicles fought the first tank battle in Chinese history against opposing Fengtian Army Renault FTs. Although these tanks are still in service today, they are generally considered obsolete."
+ QIE_light_tank_equipment_1934:0 "Renault FT"
+ QIE_light_tank_equipment_1934_short:0 "FT"
+ QIE_light_tank_equipment_1934_desc:0 "After the defeat of France, a large number of French-made Renault FT flowed into the international arms market and made their way to China, becoming the most common tank in the Beiyang period.\n\nThe Zhili clique, who witnessed the superiority of the Fengtian army's tanks in the Second Zhili-Fengtian War, smuggled some Renault FTs from the international arms market after the Qing government's restoration. In the Fourth Zhifeng War, these vehicles fought the first tank battle in Chinese history against opposing Fengtian Army Renault FTs. Although these tanks are still in service today, they are generally considered obsolete."
  #Pz 1D:
  QIE_light_tank_equipment_1:0 "Spähpanzer II/verbesserter"
  QIE_light_tank_equipment_1_short:0 "Sp.Pz. II Kelubo"
@@ -10922,8 +10922,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  ROM_armored_car_at_equipment:0 "Autoblindat Model 1941 47mm"
  ROM_armored_car_at_equipment_short:0 "Autoblindat Model 1941 47mm"
 
- ROM_gw_tank_equipment:0 "Renault FT"
- ROM_gw_tank_equipment_short:0 "FT"
+ ROM_light_tank_equipment_1934:0 "Renault FT"
+ ROM_light_tank_equipment_1934_short:0 "FT"
  ROM_light_tank_equipment_1:0 "R-1"
  ROM_light_tank_equipment_1_short:0 "R-1"
  ROM_light_tank_equipment_2:0 "R-2"
@@ -11073,8 +11073,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 
 #Tanks
 
- RUS_gw_tank_equipment:0 "Putilov T-19"
- RUS_gw_tank_equipment_short:0 "T-19"
+ RUS_light_tank_equipment_1934:0 "Putilov T-19"
+ RUS_light_tank_equipment_1934_short:0 "T-19"
 
  RUS_light_tank_equipment_1:0 "Obukhov T-26"
  RUS_light_tank_equipment_1_short:0 "T-26"
@@ -11162,8 +11162,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 #Tanks
  SAF_amphibious_tank_equipment_1:0 "Vickers Amphibious"
 
- SAF_gw_tank_equipment:0 "Mark V"
- SAF_gw_tank_equipment_short:0 "Mark V"
+ SAF_light_tank_equipment_1934:0 "Mark V"
+ SAF_light_tank_equipment_1934_short:0 "Mark V"
  SAF_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  SAF_light_tank_equipment_1_short:0 "A4 'Reliant'"
  SAF_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. It was given the rather ironic nickname 'Reliant' for its simultaneous reliability in harsh terrain and tendency to breakdown randomly in seemingly innocuous situations."
@@ -11381,8 +11381,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 
 #Tanks
 
- SCA_gw_tank_equipment:0 "Stridsvagn m/21-29"
- SCA_gw_tank_equipment_short:0 "Strv m/21-29"
+ SCA_light_tank_equipment_1934:0 "Stridsvagn m/21-29"
+ SCA_light_tank_equipment_1934_short:0 "Strv m/21-29"
 
  SCA_light_tank_equipment_1:0 "Landsverk L-60"
  SCA_light_tank_equipment_1_short:0 "L-60"
@@ -11485,8 +11485,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 
 #Tanks
 
- SCO_gw_tank_equipment:0 "Mark V"
- SCO_gw_tank_equipment_short:0 "Mark V"
+ SCO_light_tank_equipment_1934:0 "Mark V"
+ SCO_light_tank_equipment_1934_short:0 "Mark V"
  SCO_light_tank_equipment_1:0 "Pilot Tank Mk.I"
  SCO_light_tank_equipment_1_short:0 "Pilot Mk.I"
  SCO_light_tank_equipment_2:0 "Pilot Tank Mk.III"
@@ -11523,8 +11523,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  SEN_infantry_equipment_0_short:0 "Lebel Mle M93"
  SEN_support_weapons:0 "Darne M1919 & Stokes mortar"
 
- SEN_gw_tank_equipment:0 "Renault FT"
- SEN_gw_tank_equipment_short:0 "FT"
+ SEN_light_tank_equipment_1934:0 "Renault FT"
+ SEN_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### Serbia ###
@@ -11569,8 +11569,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  SER_armored_car_at_equipment_short:0 "KSP-76"
 
 #Tanks
- SER_gw_tank_equipment:0 "Renault M27"
- SER_gw_tank_equipment_short:0 "M27"
+ SER_light_tank_equipment_1934:0 "Renault M27"
+ SER_light_tank_equipment_1934_short:0 "M27"
 
  SER_medium_tank_equipment_2:0 "Vozilo A"
  SER_medium_tank_equipment_2_short:0 "Vozilo A"
@@ -11613,8 +11613,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 #Tanks
  SFR_amphibious_tank_equipment_1:0 "Vickers Amphibious"
 
- SFR_gw_tank_equipment:0 "Mark V"
- SFR_gw_tank_equipment_short:0 "Mark V"
+ SFR_light_tank_equipment_1934:0 "Mark V"
+ SFR_light_tank_equipment_1934_short:0 "Mark V"
  SFR_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  SFR_light_tank_equipment_1_short:0 "A4 'Reliant'"
  SFR_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. It was given the rather ironic nickname 'Reliant' for its simultaneous reliability in harsh terrain and tendency to breakdown randomly in seemingly innocuous situations."
@@ -11948,8 +11948,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  SIE_infantry_equipment_0_short:0 "Lebel Mle M93"
  SIE_support_weapons:0 "Darne M1919 & Stokes mortar"
 
- SIE_gw_tank_equipment:0 "Renault FT"
- SIE_gw_tank_equipment_short:0 "FT"
+ SIE_light_tank_equipment_1934:0 "Renault FT"
+ SIE_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### SIK - Sinkiang Clique ###
@@ -12057,9 +12057,9 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  #SLV_anti_air_equipment_1_desc:0 ""
 
 #Tanks
- SLV_gw_tank_equipment:0 "Burstyn samohodno topništvo"
- SLV_gw_tank_equipment_short:0 "Burstyn-ST"
- #SLV_gw_tank_equipment_desc:0 ""
+ SLV_light_tank_equipment_1934:0 "Burstyn samohodno topništvo"
+ SLV_light_tank_equipment_1934_short:0 "Burstyn-ST"
+ #SLV_light_tank_equipment_1934_desc:0 ""
  SLV_light_tank_equipment_1:0 "Škoda konjički oklop M.35"
  SLV_light_tank_equipment_1_short:0 "KO M.35"
  #SLV_light_tank_equipment_1_short_desc:0 ""
@@ -12218,8 +12218,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 
 #Tanks
 
- SOV_gw_tank_equipment:0 "Putilov T-19"
- SOV_gw_tank_equipment_short:0 "T-19"
+ SOV_light_tank_equipment_1934:0 "Putilov T-19"
+ SOV_light_tank_equipment_1934_short:0 "T-19"
 
  SOV_light_tank_equipment_1:0 "Obukhov T-26"
  SOV_light_tank_equipment_1_short:0 "T-26"
@@ -12327,8 +12327,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  SPA_infantry_equipment_3:0 "Fabrique Nationale Modelo 1943"
  SPA_infantry_equipment_3_short:0 "FN-43"
 
- SPA_gw_tank_equipment:0 "Renault FT"
- SPA_gw_tank_equipment_short:0 "FT"
+ SPA_light_tank_equipment_1934:0 "Renault FT"
+ SPA_light_tank_equipment_1934_short:0 "FT"
  SPA_light_tank_equipment_1:0 "Tipo 1933"
  SPA_light_tank_equipment_1_short:0 "T-33"
  SPA_light_tank_equipment_1_desc:0 "The Type 1933 is the culmination of a long series of designs by the Trubia company based loosely upon the Renault FT. While the company's earlier 1925 model was field tested by the Spanish army, the 1933 was the first domestically designed tank to be formally adopted by the Spanish military."
@@ -12414,8 +12414,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  SRD_armored_car_equipment_2_short:0 "AMC-60-H20"
 
 #Tank
- SRD_gw_tank_equipment:0 "Renault FT"
- SRD_gw_tank_equipment_short:0 "FT"
+ SRD_light_tank_equipment_1934:0 "Renault FT"
+ SRD_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### Socialist Republic of Italy ###
@@ -12509,8 +12509,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 
 #Tanks
 
- SRI_gw_tank_equipment:0 "Fiat 3000"
- SRI_gw_tank_equipment_short:0 "Fiat 3000"
+ SRI_light_tank_equipment_1934:0 "Fiat 3000"
+ SRI_light_tank_equipment_1934_short:0 "Fiat 3000"
  SRI_light_tank_equipment_1:0 "L3"
  SRI_light_tank_equipment_1_short:0 "L3"
  SRI_light_tank_equipment_2:0 "L6"
@@ -12616,9 +12616,9 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  SUR_mechanized_equipment_3:0 "Pantserwagen M.44"
  SUR_mechanized_equipment_3_short:0 "Psw. M.44"
 
- SUR_gw_tank_equipment:0 "Carden Loyd Mk.VI"
- SUR_gw_tank_equipment_short:0 "V-CL Mk.VI"
- SUR_gw_tank_equipment_desc:0 "The Royal Dutch Army had only a handful of either obsolete or worn-out armoured cars, twelve excellent DAF M39 six-wheeled armoured trucks, and five Carden Loyd Mark VI tankettes, named Lynx, Poema, Jaguar, Panter, and Luipaard."
+ SUR_light_tank_equipment_1934:0 "Carden Loyd Mk.VI"
+ SUR_light_tank_equipment_1934_short:0 "V-CL Mk.VI"
+ SUR_light_tank_equipment_1934_desc:0 "The Royal Dutch Army had only a handful of either obsolete or worn-out armoured cars, twelve excellent DAF M39 six-wheeled armoured trucks, and five Carden Loyd Mark VI tankettes, named Lynx, Poema, Jaguar, Panter, and Luipaard."
  SUR_light_tank_equipment_1:0 "DAF M39 Pantserwagen"
  SUR_light_tank_equipment_1_short:0 "DAF M39"
  SUR_light_tank_equipment_1_desc:0 "For its time the DAF M39 was a modern design with an all-welded monocoque construction of the hull and extensive use of sloped armour. The turret, fitted with a relatively powerful 37 mm cannon, was produced in Sweden by Landsverk. The type was lightly armoured and relatively fast, with a good cross-country capability."
@@ -12709,9 +12709,9 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  SLO_anti_air_equipment_3_short:0 "KPL vz. 39"
  #SLO_anti_air_equipment_1_desc:0 ""
 
- SLO_gw_tank_equipment:0 "Burstyn Samohybného Děla"
- SLO_gw_tank_equipment_short:0 "Burstyn SD"
- #SLO_gw_tank_equipment_desc:0 ""
+ SLO_light_tank_equipment_1934:0 "Burstyn Samohybného Děla"
+ SLO_light_tank_equipment_1934_short:0 "Burstyn SD"
+ #SLO_light_tank_equipment_1934_desc:0 ""
  SLO_light_tank_equipment_1:0 "Škoda jízdní pancíř vzor 35"
  SLO_light_tank_equipment_1_short:0 "JP vz. 35"
  #SLO_light_tank_equipment_1_short_desc:0 ""
@@ -12848,8 +12848,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 
 #Tanks
 
- SWE_gw_tank_equipment:0 "Stridsvagn m/21-29"
- SWE_gw_tank_equipment_short:0 "Strv m/21-29"
+ SWE_light_tank_equipment_1934:0 "Stridsvagn m/21-29"
+ SWE_light_tank_equipment_1934_short:0 "Strv m/21-29"
 
  SWE_light_tank_equipment_1:0 "Landsverk L-60"
  SWE_light_tank_equipment_1_short:0 "L-60"
@@ -12901,8 +12901,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  SWI_gw_armored_car_equipment:0 "Landsverk L180"
  SWI_gw_armored_car_equipment_short:0 "L180"
 
- SWI_gw_tank_equipment:0 "Renault FT"
- SWI_gw_tank_equipment_short:0 "FT"
+ SWI_light_tank_equipment_1934:0 "Renault FT"
+ SWI_light_tank_equipment_1934_short:0 "FT"
 
  SWI_light_tank_equipment_1:0 "Landsverk L-60"
  SWI_light_tank_equipment_1_short:0 "L-60"
@@ -13176,9 +13176,9 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  TEX_rocket_artillery_equipment_2_short:0 "M1943 Rocket Launcher"
 
 #Tanks
- TEX_gw_tank_equipment:0 "Light Tank, Model 1921"
- TEX_gw_tank_equipment_short:0 "M1921 Light"
- TEX_gw_tank_equipment_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921."
+ TEX_light_tank_equipment_1934:0 "Light Tank, Model 1921"
+ TEX_light_tank_equipment_1934_short:0 "M1921 Light"
+ TEX_light_tank_equipment_1934_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921."
 
  TEX_light_tank_equipment_1:0 "Light Tank, Model 1935"
  TEX_light_tank_equipment_1_short:0 "M1935 Light"
@@ -13337,8 +13337,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 
  TRI_amphibious_tank_equipment_1:0 "Vickers Amphibious"
 
- TRI_gw_tank_equipment:0 "Mark V"
- TRI_gw_tank_equipment_short:0 "Mark V"
+ TRI_light_tank_equipment_1934:0 "Mark V"
+ TRI_light_tank_equipment_1934_short:0 "Mark V"
  TRI_light_tank_equipment_1:0 "Vickers A4 'Reliant'"
  TRI_light_tank_equipment_1_short:0 "A4 'Reliant'"
  TRI_light_tank_equipment_1_desc:0 "The Vickers Mark E entered limited service with the Canadian Army in 1932 with the designation 'A4' as a stopgap tankette while more advanced light tanks were developed. It was given the rather ironic nickname 'Reliant' for its simultaneous reliability in harsh terrain and tendency to breakdown randomly in seemingly innocuous situations."
@@ -13377,8 +13377,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  TRM_infantry_equipment_1:0 "Arisaka Type 99"
  TRM_infantry_equipment_1_short:0 "Type 99"
 
- TRM_gw_tank_equipment:0 "Renault FT"
- TRM_gw_tank_equipment_short:0 "FT"
+ TRM_light_tank_equipment_1934:0 "Renault FT"
+ TRM_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### Transylvania ###
@@ -13464,9 +13464,9 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  #TRS_rocket_artillery_equipment_2_desc:0 ""
 
 #Tanks
- TRS_gw_tank_equipment:0 "Burstyn Motorgeschütze"
- TRS_gw_tank_equipment_short:0 "Burstyn MtG"
- #TRS_gw_tank_equipment_desc:0 ""
+ TRS_light_tank_equipment_1934:0 "Burstyn Motorgeschütze"
+ TRS_light_tank_equipment_1934_short:0 "Burstyn MtG"
+ #TRS_light_tank_equipment_1934_desc:0 ""
  TRS_light_tank_equipment_1:0 "Škoda Kavalleriepanzer M.35"
  TRS_light_tank_equipment_1_short:0 "KPz M.35"
  #TRS_light_tank_equipment_1_short_desc:0 ""
@@ -13531,8 +13531,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  TUN_infantry_equipment_0_short:0 "Lebel Mle M93"
  TUN_support_weapons:0 "Darne M1919 & Stokes mortar"
 
- TUN_gw_tank_equipment:0 "Renault FT"
- TUN_gw_tank_equipment_short:0 "FT"
+ TUN_light_tank_equipment_1934:0 "Renault FT"
+ TUN_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### Tuscany ###
@@ -13676,9 +13676,9 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 #Tanks
 
  #MK V:
- TUR_gw_tank_equipment:0 "Zırhlı V"
- TUR_gw_tank_equipment_short:0 "Z-V"
- TUR_gw_tank_equipment_desc:0 "During the Weltkrieg, Ottoman army captured Mark V and FT tanks then refitted them into service, dubbing them 'Zırhlı V' and 'MT-17'. After British forces surrendered, Ottoman Empire received a large number of Mark V as spoils of war. The Z-V tank was a main tank in the Ottoman armoured corps. Though more advanced tanks replace the Z-Vs eventually, army still consider these for training its tank crews."
+ TUR_light_tank_equipment_1934:0 "Zırhlı V"
+ TUR_light_tank_equipment_1934_short:0 "Z-V"
+ TUR_light_tank_equipment_1934_desc:0 "During the Weltkrieg, Ottoman army captured Mark V and FT tanks then refitted them into service, dubbing them 'Zırhlı V' and 'MT-17'. After British forces surrendered, Ottoman Empire received a large number of Mark V as spoils of war. The Z-V tank was a main tank in the Ottoman armoured corps. Though more advanced tanks replace the Z-Vs eventually, army still consider these for training its tank crews."
  TUR_light_tank_equipment_1:0 "Muharebe Tankı Kalıp 1352"
  TUR_light_tank_equipment_1_short:0 "MT-52 'Sekban'"
  TUR_light_tank_equipment_1_desc:0 "MT-52 Sekban project is the first attempt to reorganise and reform the Ottoman Armoured Corps that was included in Harb-i Yıldırım military reforms. To this end, the Ottoman Empire bought a license for the German Spähpanzer II and designed a production line that Ottoman factories could handle. The initial plan was to have the MT-52 to replace old Z-Vs, however field tests showed that the MT-52 did not match the level of German production. Nevertheless, the quality of the new tank was accepted as good enough."
@@ -13870,8 +13870,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  UKR_rocket_artillery_equipment_2_desc:0 "The 21-cm Raketenwerfer 42 is a five-barreled multiple rocket launcher mounted on the towed carriage derived from that of the 3,7 cm Pa.K. 36 anti-tank gun. The launchers are organised into batteries of six with three batteries per battalion. Intended to provide the fire support and settle smokescreens, the R.W. 42 are mainly used as rocket artillery and almost don't participate in chemical warfare."
 
 #Tanks
- UKR_gw_tank_equipment:0 "Sturmpanzerwagen II"
- UKR_gw_tank_equipment_short:0 "St.Pzw. II"
+ UKR_light_tank_equipment_1934:0 "Sturmpanzerwagen II"
+ UKR_light_tank_equipment_1934_short:0 "St.Pzw. II"
  UKR_light_tank_equipment_1:0 "Panz 1934"
  UKR_light_tank_equipment_1_short:0 "P-34"
  UKR_light_tank_equipment_1_desc:0 "With German domination came adaptation of the Ukrainian language, with the term 'Panz', shortened from the German term 'Panzer', eventually solidifying as the Ukrainian word for 'tank'.\n\nThe Panz model of 1934 was the first domestically designed Ukrainian tank accepted into service. It borrowed heavily from the Canadian Vickers Mark E as well as interwar German designs, and sported a 20mm cannon besigned by the Italian Breda company. The vehicle received mixed feedback from soldiers in the field for its inadequate main armament and moderately failure-prone transmission."
@@ -14086,9 +14086,9 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  USA_rocket_artillery_equipment_2_short:0 "M20 Rocket Launcher"
 
 #Tanks
- USA_gw_tank_equipment:0 "Light Tank, Model 1921"
- USA_gw_tank_equipment_short:0 "M1921"
- USA_gw_tank_equipment_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921."
+ USA_light_tank_equipment_1934:0 "Light Tank, Model 1921"
+ USA_light_tank_equipment_1934_short:0 "M1921"
+ USA_light_tank_equipment_1934_desc:0 "Without any tanks by the time of France's capitulation in the Weltkrieg, the United States scrambled to develop a stopgap vehicle in the face of the rapidly changing international order. What was ultimately adopted was a Ford-designed near copy of the French FT tank designated the Model of 1921."
 
  USA_light_tank_equipment_1:0 "Light Tank, Model 2"
  USA_light_tank_equipment_1_short:0 "M2"
@@ -14185,8 +14185,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  CHA_infantry_equipment_0_short:0 "Lebel Mle M93"
  CHA_support_weapons:0 "Darne M1919 & Stokes mortar"
 
- CHA_gw_tank_equipment:0 "Renault FT"
- CHA_gw_tank_equipment_short:0 "FT"
+ CHA_light_tank_equipment_1934:0 "Renault FT"
+ CHA_light_tank_equipment_1934_short:0 "FT"
 
 ###
 ### Wales ###
@@ -14262,8 +14262,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
 
 #Tanks
 
- WLS_gw_tank_equipment:0 "Mark V"
- WLS_gw_tank_equipment_short:0 "Mark V"
+ WLS_light_tank_equipment_1934:0 "Mark V"
+ WLS_light_tank_equipment_1934_short:0 "Mark V"
  WLS_light_tank_equipment_1:0 "Pilot Tank Mk.I"
  WLS_light_tank_equipment_1_short:0 "Pilot Mk.I"
  WLS_light_tank_equipment_2:0 "Pilot Tank Mk.III"
@@ -14408,8 +14408,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  RHI_rocket_artillery_equipment_2_desc:0 "The 21-cm Raketenwerfer 42 is a five-barreled multiple rocket launcher mounted on the towed carriage derived from that of the 3,7 cm Pa.K. 36 anti-tank gun. The launchers are organised into batteries of six with three batteries per battalion. Intended to provide the fire support and settle smokescreens, the R.W. 42 are mainly used as rocket artillery and almost don't participate in chemical warfare."
 
 #Tanks
- RHI_gw_tank_equipment:0 "$GER_gw_tank_equipment$"
- RHI_gw_tank_equipment_short:0 "$GER_gw_tank_equipment_short$"
+ RHI_light_tank_equipment_1934:0 "$GER_light_tank_equipment_1934$"
+ RHI_light_tank_equipment_1934_short:0 "$GER_light_tank_equipment_1934_short$"
  RHI_light_tank_equipment_1:0 "$GER_light_tank_equipment_1$"
  RHI_light_tank_equipment_1_short:0 "$GER_light_tank_equipment_1_short$"
  RHI_light_tank_equipment_2:0 "$GER_light_tank_equipment_2$"
@@ -14611,8 +14611,8 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  WHR_rocket_artillery_equipment_2_short:0 "RPU-42"
 
  #Oberschlesien:
- WHR_gw_tank_equipment:0 "Liohki Tank uz.1919"
- WHR_gw_tank_equipment_short:0 "LT-19"
+ WHR_light_tank_equipment_1934:0 "Liohki Tank uz.1919"
+ WHR_light_tank_equipment_1934_short:0 "LT-19"
  #Pz 1D:
  WHR_light_tank_equipment_1:0 "Liohki Tank uz.1932"
  WHR_light_tank_equipment_1_short:0 "LT-32"
@@ -14859,9 +14859,9 @@ LIT_amphibious_tank_equipment_2_short:0 "Panzerfahre 5"
  YUN_motorized_equipment_1_short:0 "Ziyuan"
  YUN_motorized_equipment_1_desc:0 "After the outbreak of the American Civil War, many American engineers went into exile to escape the war. The Yunnan Machinery Bureau in Kunming seized the opportunity and recruited a group of engineers from the former US Stuart Motor Company. With the assistance of these engineers and the financial support of the Yunnan clique, the car named 'Ziyuan'(Resources) was officially put into production and entered military service."
 
- YUN_gw_tank_equipment:0 "Renault FT"
- YUN_gw_tank_equipment_short:0 "FT"
- YUN_gw_tank_equipment_desc:0 "After the defeat of France, a large number of French-made Renault FT flowed into the international arms market and transferred to China, becoming the most common tank in the Beiyang period. \n\nIn May 1927, in the final stage of the Northern Expedition, NRA commander Zhang Fakui commanded the troops to conduct a superb counterattack and seized four Renault FTs. Although this small victory did not turn the tide of the battle, these four small tanks became the ancestors of the NRA armoured forces."
+ YUN_light_tank_equipment_1934:0 "Renault FT"
+ YUN_light_tank_equipment_1934_short:0 "FT"
+ YUN_light_tank_equipment_1934_desc:0 "After the defeat of France, a large number of French-made Renault FT flowed into the international arms market and transferred to China, becoming the most common tank in the Beiyang period. \n\nIn May 1927, in the final stage of the Northern Expedition, NRA commander Zhang Fakui commanded the troops to conduct a superb counterattack and seized four Renault FTs. Although this small victory did not turn the tide of the battle, these four small tanks became the ancestors of the NRA armoured forces."
  YUN_light_tank_equipment_1:0 "Renault AMR 33"
  YUN_light_tank_equipment_1_short:0 "AMR 33"
  YUN_light_tank_equipment_1_desc:0 "At the request of the Central Committee of the Kuomintang in exile in France, France produced a small batch of light armoured vehicles suitable for the mountainous terrain of China for the exiled NRA'. In order to increase the vehicle's firepower, the main gun of this special batch of tanks is not a heavy machine gun, but a 25mm rapid-fire gun.\n\nSome exiles who sympathised with the Right-Kuomintang handed over the drawings of the tank to its Headquarters in Yunnan. After smuggling a batch of parts from German Indochina, the Yunnan Clique also assembled a small batch of such tanks."
