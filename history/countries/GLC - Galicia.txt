@@ -7,6 +7,9 @@ set_technology = {
 	fighter_1934 = 1
 	### Tanks ###
 	light_tank_1934 = 1
+
+	############## economy ################
+	starting_industry = 1
 }
 
 set_research_slots = 4

@@ -18,6 +18,9 @@ set_technology = {
 	tech_support = 1
 	tech_engineers = 1
 	tech_military_police = 1
+
+	############## economy ################
+	starting_industry = 1
 }
 
 ### Navy - MtG ###

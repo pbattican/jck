@@ -12,6 +12,9 @@ set_technology = {
 
 	### Air ###
 	fighter_1934 = 1
+
+	############## economy ################
+	starting_industry = 1
 }
 
 set_war_support = 0.32

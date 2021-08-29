@@ -7,6 +7,9 @@ set_technology = {
 	tech_support = 1
 	### Air ###
 	fighter_1934 = 1
+
+	############## economy ################
+	starting_industry = 1
 }
 
 ### Navy - MtG ###

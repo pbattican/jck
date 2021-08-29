@@ -20,6 +20,8 @@ set_technology = {
 	marines = 1
 	special_equipment = 1
 
+	############## economy ################
+	starting_industry = 1
 }
 
 set_research_slots = 4

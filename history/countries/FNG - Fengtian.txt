@@ -21,6 +21,9 @@ set_technology = {
 	#### AIR ####
 	fighter_1934 = 1
 	tactical_bomber_1934 = 1
+
+	############## economy ################
+	starting_industry = 1
 }
 
 ### Offsite Factories ###

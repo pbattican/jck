@@ -43,6 +43,9 @@ set_technology = {
 	tactical_bomber_1937 = 1
 	strategic_bomber_1937 = 1
 	CAS_1937 = 1
+
+	############## economy ################
+	starting_industry = 1
 }
 
 ### Navy - MtG ###

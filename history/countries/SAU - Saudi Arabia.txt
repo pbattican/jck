@@ -12,6 +12,9 @@ set_technology = {
 	
 	### Air ###
 	fighter_1934 = 1
+
+	############## economy ################
+	starting_industry = 1
 }
 
 country_event = { id = saud.1 hours = 2 } #Intro event

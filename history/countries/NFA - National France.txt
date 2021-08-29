@@ -46,6 +46,8 @@ set_technology = {
 
 	### Camels ###
 	
+	############## economy ################
+	starting_industry = 1
 }
 
 if = {

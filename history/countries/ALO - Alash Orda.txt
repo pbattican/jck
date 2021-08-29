@@ -13,6 +13,9 @@ set_technology = {
 	gw_pack_artillery = 1
 	### Air ###
 	fighter_1934 = 1
+	
+	############## economy ################
+	starting_industry = 1
 }
 
 set_war_support = 0.15

@@ -28,6 +28,9 @@ set_technology = {
 	gw_pack_artillery = 1
 	### Air ###
 	fighter_1934 = 1
+
+	############## economy ################
+	starting_industry = 1
 }
 
 country_event = { id = yun.1 days = 1 }

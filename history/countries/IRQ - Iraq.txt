@@ -21,6 +21,9 @@ set_technology = {
 	### Land Doctrine ###
 	trench_warfare = 1
 	### Naval ###	
+
+	############## economy ################
+	starting_industry = 1
 }
 
 set_research_slots = 3

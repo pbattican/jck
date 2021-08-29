@@ -44,6 +44,9 @@ set_technology = {
 	cv_CAS_1937 = 1
 	heavy_fighter_1936 = 1
 
+	############## economy ################
+	starting_industry = 1
+
 }
 if = {
 	limit = {

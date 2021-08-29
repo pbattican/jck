@@ -18,6 +18,9 @@ set_technology = {
 	tech_recon = 1
 	### Air ###
 	fighter_1934 = 1
+
+	############## economy ################
+	starting_industry = 1
 }
 
 

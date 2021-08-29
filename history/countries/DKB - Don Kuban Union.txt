@@ -11,6 +11,9 @@ set_technology = {
 	fighter_1934 = 1
 	artillery1 = 1
 	gw_pack_artillery = 1
+
+	############## economy ################
+	starting_industry = 1
 }
 
 ### Navy - MtG ###
