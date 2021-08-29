@@ -35,8 +35,10 @@ set_technology = {
 	special_equipment = 1
 	marines = 1
 	paratroopers = 1
-	artillery1 = 1
+	################## artillery ###############
+	artillery1 = 1 
 	gw_pack_artillery = 1
+	heavy_artillery1 = 1
 	interwar_antiair = 1
 	### Air ###
 	fighter_1934 = 1
