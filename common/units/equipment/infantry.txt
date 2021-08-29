@@ -59,7 +59,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 1
 		
-		build_cost_ic = 1.4
+		build_cost_ic = 0.56
 	}
 ##### Regular infantry ~1936
 	infantry_equipment_1 = {
@@ -85,7 +85,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 1
 		
-		build_cost_ic = 1.7
+		build_cost_ic = 0.68
 	}
 ##### Improved weapons  ~1939
 	infantry_equipment_2 = {
@@ -111,7 +111,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 1
 		
-		build_cost_ic = 1.9
+		build_cost_ic = 0.76
 	}
 ##### Advanced weapons  ~1942
 	infantry_equipment_3 = {
@@ -137,7 +137,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 1
 		
-		build_cost_ic = 2.1
+		build_cost_ic = 0.84
 	}
 	#1946
 	infantry_equipment_4 = { 
@@ -163,7 +163,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 1
 		
-		build_cost_ic = 2.3
+		build_cost_ic = 0.92
 	}
 ## Radio Equipment ##
 	radio_equipment = {
@@ -252,7 +252,7 @@ equipments = {
 		reliability = 0.8
 		maximum_speed = 4
 		lend_lease_cost = 1
-		build_cost_ic = 1.0
+		build_cost_ic = 0.34
 		resources = {
 		  steel = 2
 		}
