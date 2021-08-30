@@ -15,3 +15,7 @@ NDefines.NCountry.INTERPOLATED_FRONT_STEPS_SHORT = 1
 --- Peace treaty behavior
 NDefines.NDiplomacy.MP_NUM_WINNERS_FOR_PEACE_PAUSE = 2
 NDefines.NDiplomacy.MP_NUM_LOSERS_FOR_PEACE_PAUSE = 0
+
+--- Navy
+NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 0								-- Vanilla is 1000
+NDefines.NNavy.NAVAL_MINES_NAVAL_SUPREMACY_FACTOR = 0						-- Vanilla is 1.0
