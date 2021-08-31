@@ -1314,7 +1314,7 @@ ideas = {
 						NOT = {
 							has_idea = USA_league_of_america_2
 						}
-					}					#== swap_ideas
+						}					#== swap_ideas
 					country_event = ustates.259
 				}
 			}

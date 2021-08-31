@@ -6,7 +6,7 @@ country_event = {
 	desc = ger_mie.0.d
 	picture = GFX_report_event_CHI_warlords
 
-	is_triggered_only = yes 
+	is_triggered_only = yes
 
 	option = {
 		name = ger_mie.0.a
