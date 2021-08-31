@@ -203,7 +203,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = {
 					805
-				}				#Oran
+					}				#Oran
 				limit = {
 					is_on_continent = africa
 					is_valid_state_for_development = yes
@@ -218,7 +218,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = {
 					459
-				}				#Algiers
+					}				#Algiers
 				limit = {
 					is_on_continent = africa
 					is_valid_state_for_development = yes
@@ -233,7 +233,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = {
 					460
-				}				#Constantine
+					}				#Constantine
 				limit = {
 					is_on_continent = africa
 					is_valid_state_for_development = yes
@@ -248,7 +248,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = {
 					865
-				}				#Aurès
+					}				#Aurès
 				limit = {
 					is_on_continent = africa
 					is_valid_state_for_development = yes
@@ -3380,7 +3380,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = {
 					459
-				}				#Algiers
+					}				#Algiers
 				limit = {
 					is_on_continent = africa
 					is_valid_state_for_development = yes
@@ -3396,7 +3396,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = {
 					1
-				}				#Corsica
+					}				#Corsica
 				limit = {
 					is_on_continent = europe
 					is_valid_state_for_development = yes
@@ -3725,7 +3725,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = {
 					805
-				}				#Oran
+					}				#Oran
 				limit = {
 					is_coastal = yes
 					is_on_continent = africa
@@ -4525,7 +4525,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = {
 					513
-				}				#Oran
+					}				#Oran
 				limit = {
 					is_on_continent = africa
 					is_valid_state_for_development = yes
@@ -4540,7 +4540,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = {
 					556
-				}				#Oran
+					}				#Oran
 				limit = {
 					is_on_continent = africa
 					is_valid_state_for_development = yes
@@ -4555,7 +4555,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = {
 					557
-				}				#Oran
+					}				#Oran
 				limit = {
 					is_on_continent = africa
 					is_valid_state_for_development = yes
@@ -4978,19 +4978,19 @@ focus_tree = {
 				#Flavour events post reconquest
 				country_event = {
 					id = nfa.529
-				}				#Looping event checking for if the flavour can fire
+					}				#Looping event checking for if the flavour can fire
 				country_event = {
 					id = nfa.527
 					days = 45
-				}				#Religious Liberty, doesn't need a specific state
+					}				#Religious Liberty, doesn't need a specific state
 				country_event = {
 					id = nfa.528
 					days = 650
-				}				#The Damocles, doesn't need a specific state
+					}				#The Damocles, doesn't need a specific state
 				country_event = {
 					id = nfa.545
 					days = 800
-				}				#OSS 117, doesn't need a specific state
+					}				#OSS 117, doesn't need a specific state
 				if = {
 					limit = {
 						has_country_flag = NFA_AF_victorious
@@ -4998,7 +4998,7 @@ focus_tree = {
 					country_event = {
 						id = nfa.538
 						days = 420
-					}					#A Latin Union? - AF event
+						}					#A Latin Union? - AF event
 				}
 				#News event
 				if = {
@@ -6238,7 +6238,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				prioritize = {
 					459
-				}				#Algiers
+					}				#Algiers
 				limit = {
 					is_on_continent = africa
 					is_valid_state_for_development = yes
@@ -6256,7 +6256,7 @@ focus_tree = {
 					1
 					21
 					20
-				}				#Corsica, Marseille, Lyon
+					}				#Corsica, Marseille, Lyon
 				limit = {
 					is_on_continent = europe
 					is_valid_state_for_development = yes
@@ -6329,7 +6329,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_dlc = "La Resistance"
-				}				#Only give the DLC features to DLC owners
+					}				#Only give the DLC features to DLC owners
 				if = {
 					limit = {
 						has_intelligence_agency = no
@@ -6706,7 +6706,7 @@ focus_tree = {
 				country_event = {
 					id = nfa.196
 					days = 1
-				}				#Should we work with the French business?
+					}				#Should we work with the French business?
 			}
 			custom_effect_tooltip = nfa_franco_german_business_tt
 		}
@@ -6737,7 +6737,7 @@ focus_tree = {
 					id = nfa.199
 					days = 1
 				}
-			}			#Invitation to the congress of Verdun
+				}			#Invitation to the congress of Verdun
 			custom_effect_tooltip = nfa_verdun_congress_tt
 		}
 	}
@@ -7333,7 +7333,7 @@ focus_tree = {
 				country_event = {
 					id = nfa.216
 				}
-			}			#Ask ENT for naval doctrine boosts
+				}			#Ask ENT for naval doctrine boosts
 		}
 	}
 	#########################
@@ -8017,7 +8017,7 @@ focus_tree = {
 				country_event = {
 					id = nfa.221
 					days = 20
-				}				#Cracks in the Concentration
+					}				#Cracks in the Concentration
 			}
 			if = {
 				limit = {
@@ -8026,7 +8026,7 @@ focus_tree = {
 				country_event = {
 					id = nfa.222
 					days = 28
-				}				#Skip directly to the elections
+					}				#Skip directly to the elections
 			}
 		}
 		completion_reward = {
@@ -8076,7 +8076,7 @@ focus_tree = {
 			country_event = {
 				id = nfa.223
 				days = 25
-			}			#Fallout of the Coup
+				}			#Fallout of the Coup
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NATFRA_Colonel_Coup"
@@ -8128,11 +8128,11 @@ focus_tree = {
 				country_event = {
 					id = nfa.231
 					days = 8
-				}				#Bonjour, Daladier
+					}				#Bonjour, Daladier
 				country_event = {
 					id = nfa.234
 					days = 1460
-				}				#Legislative Reelections
+					}				#Legislative Reelections
 			}
 		}
 	}
@@ -8169,11 +8169,11 @@ focus_tree = {
 				country_event = {
 					id = nfa.232
 					days = 8
-				}				#Bonjour, Flandin
+					}				#Bonjour, Flandin
 				country_event = {
 					id = nfa.233
 					days = 1278
-				}				#Decide to stay United or split
+					}				#Decide to stay United or split
 			}
 		}
 	}
@@ -8781,7 +8781,7 @@ focus_tree = {
 				country_event = {
 					id = nfa.224
 					days = 5
-				}				#Presidential Nomination
+					}				#Presidential Nomination
 			}
 		}
 		search_filters = {
@@ -8806,7 +8806,7 @@ focus_tree = {
 				country_event = {
 					id = nfa.230
 					days = 2
-				}				#DLR Sham Election
+					}				#DLR Sham Election
 			}
 			else = {
 				add_popularity = {
@@ -8821,7 +8821,7 @@ focus_tree = {
 					country_event = {
 						id = nfa.229
 						days = 2
-					}					#Presidential Election
+						}					#Presidential Election
 				}
 			}
 		}
@@ -9993,7 +9993,7 @@ focus_tree = {
 				country_event = {
 					id = nfa.536
 					days = 35
-				}				#Native Aristocracy
+					}				#Native Aristocracy
 			}
 		}
 	}

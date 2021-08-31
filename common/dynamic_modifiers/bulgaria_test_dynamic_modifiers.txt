@@ -3,6 +3,6 @@ BUL_subjugate_locals = {
 	remove_trigger = {
 		NOT = { is_controlled_by = BUL }
 	}
-	
+
 	compliance_gain = 0.15
 }
