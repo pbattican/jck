@@ -1175,7 +1175,8 @@ technologies = {
 		}
 		
 		dependencies = {
-			assembly_line_production = 1
+			#assembly_line_production = 1
+			advanced_machine_tools = 1
 		}
 		on_research_complete = {
 			hidden_effect = {
