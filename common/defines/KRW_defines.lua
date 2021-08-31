@@ -17,5 +17,5 @@ NDefines.NDiplomacy.MP_NUM_WINNERS_FOR_PEACE_PAUSE = 2
 NDefines.NDiplomacy.MP_NUM_LOSERS_FOR_PEACE_PAUSE = 0
 
 --- Navy
-NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 0								-- Vanilla is 1000
+NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 1.000							-- Vanilla is 1000
 NDefines.NNavy.NAVAL_MINES_NAVAL_SUPREMACY_FACTOR = 0						-- Vanilla is 1.0
