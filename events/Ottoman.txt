@@ -35,19 +35,16 @@ country_event = { #cheat event for the AI (democratic path)
 	option = {
 		### Add Turkish Nationalist votes in favour
 		custom_effect_tooltip = 30_nat_tur_sup_tt
-		add_to_variable = {
-			nat_tur_sup_deputies = 30
-		}
+		add_to_variable = { nat_tur_sup_deputies = 30 }
+
 		### Add Arab Nationalist votes in favour
 		custom_effect_tooltip = 30_nat_ara_sup_tt
-		add_to_variable = {
-			nat_ara_sup_deputies = 30
-		}
+		add_to_variable = { nat_ara_sup_deputies = 30 }
+
 		### Add Conservative votes in favour
 		custom_effect_tooltip = 30_con_sup_tt
-		add_to_variable = {
-			con_sup_deputies = 30
-		}
+		add_to_variable = { con_sup_deputies = 30 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -1557,9 +1554,7 @@ country_event = {	#Ban on Political Parties
 		complete_national_focus = OTT_Single_Party_Dictatorship
 		remove_all_ministers = yes
 		if = {
-			limit = {
-				has_country_flag = Mustafa_Kemal_Pasa_dead
-			}
+			limit = { has_country_flag = Mustafa_Kemal_Pasa_dead }
 			add_ideas = {
 				TUR_Mustafa_Ismet_Pasa_hog_ade
 				TUR_Mehmed_Suekrue_Pasa_for_ade
@@ -2331,17 +2326,11 @@ country_event = {	#Sublime Committee for Constitution
 
 	desc = {
 		text = ottkem.12.d.kemal
-		trigger = {
-			has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade
-		}
+		trigger = { has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade }
 	}
 	desc = {
 		text = ottkem.12.d.ismet
-		trigger = {
-			NOT = {
-				has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade
-			}
-		}
+		trigger = { NOT = { has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade } }
 	}
 
 	fire_only_once = yes
@@ -3033,17 +3022,11 @@ country_event = {	#The New Constitution is Declared!
 		name = ottkem.26.a
 		add_political_power = 75
 		if = {
-			limit = {
-				check_variable = {
-					plur > auth
-				}
-			}
+			limit = { check_variable = { plur > auth } }
 			add_ideas = ott_pluralist_constitution
 			remove_all_ministers = yes
 			if = {
-				limit = {
-					has_country_flag = Mustafa_Kemal_Pasa_dead
-				}
+				limit = { has_country_flag = Mustafa_Kemal_Pasa_dead }
 				add_ideas = {
 					TUR_Mustafa_Ismet_Pasa_hog_ade
 					TUR_Tevfik_Ruestue_Bey_for_ade
@@ -3509,15 +3492,10 @@ country_event = {	#The Palace Raid
 
 	option = {
 		name = ottkem.43.a
-		effect_tooltip = {
-			kill_country_leader = yes
-		}
+		effect_tooltip = { kill_country_leader = yes }
 		OTT_create_ahmed = yes
 		hidden_effect = {
-			country_event = {
-				id = ottkem.44
-				hours = 4
-			}
+			country_event = { id = ottkem.44 hours = 4 }
 		}
 	}
 }
@@ -3631,15 +3609,10 @@ country_event = {	#Osman Fuad Crowned Sultan!
 	option = {
 		name = ottkem.49.a
 		add_stability = 0.15
-		effect_tooltip = {
-			retire_country_leader = yes
-		}
+		effect_tooltip = { retire_country_leader = yes }
 		OTT_create_osman = yes
 		hidden_effect = {
-			country_event = {
-				id = ottkem.50
-				days = 7
-			}
+			country_event = { id = ottkem.50 days = 7 }
 		}
 	}
 }
@@ -3706,12 +3679,8 @@ country_event = {	#Death of Kemal
 		set_country_flag = Mustafa_Kemal_Pasa_dead
 		add_ideas = TUR_Mustafa_Ismet_Pasa_hog_ade
 		if = {
-			limit = {
-				has_idea = TUR_Mustafa_Ismet_Pasa_for_ade
-			}
-			hidden_effect = {
-				remove_ideas_with_trait = foreign_minister
-			}
+			limit = { has_idea = TUR_Mustafa_Ismet_Pasa_for_ade }
+			hidden_effect = { remove_ideas_with_trait = foreign_minister }
 			add_ideas = TUR_Mehmed_Suekrue_Pasa_for_ade
 		}
 		if = {
@@ -3727,8 +3696,8 @@ country_event = {	#Elections of [GetYear]
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottkem.53 FROM = [From.GetName]" }
 	title = ottkem.53.t
 	desc = ottkem.53.d
-
 	picture = GFX_OTT_Parliament_Kemal
+
 	trigger = {
 		has_government = authoritarian_democrat
 	}
@@ -3739,13 +3708,9 @@ country_event = {	#Elections of [GetYear]
 		name = ottkem.53.a
 		remove_all_ministers = yes
 		if = {
-			limit = {
-				has_idea = ott_pluralist_constitution
-			}
+			limit = { has_idea = ott_pluralist_constitution }
 			if = {
-				limit = {
-					has_country_flag = Mustafa_Kemal_Pasa_dead
-				}
+				limit = { has_country_flag = Mustafa_Kemal_Pasa_dead }
 				add_ideas = {
 					TUR_Mustafa_Ismet_Pasa_hog_ade
 					TUR_Mehmed_Suekrue_Pasa_for_ade
@@ -3764,9 +3729,7 @@ country_event = {	#Elections of [GetYear]
 		}
 		else = {
 			if = {
-				limit = {
-					has_country_flag = Mustafa_Kemal_Pasa_dead
-				}
+				limit = { has_country_flag = Mustafa_Kemal_Pasa_dead }
 				add_ideas = {
 					TUR_Mustafa_Ismet_Pasa_hog_ade
 					TUR_Tevfik_Ruestue_Bey_for_ade
@@ -3792,7 +3755,6 @@ country_event = {	#The Grand Vizier speaks
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottkem.60 FROM = [From.GetName]" }
 	title = ottkem.60.t
 	desc = ottkem.60.d
-
 	picture = GFX_OTT_Parliament_Kemal
 
 	fire_only_once = yes
@@ -3892,9 +3854,7 @@ country_event = {	#Incorporation of Thrace
 	trigger = {
 		owns_state = 184
 		owns_state = 1089
-		NOT = {
-			has_war_with = BUL
-		}
+		NOT = { has_war_with = BUL }
 		has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade
 	}
 
@@ -4891,9 +4851,8 @@ country_event = {	#Education issues in Southern Iraq
 			}
 			### Return Arab Nationalist votes to opposition
 			custom_effect_tooltip = 10_nat_ara_opp_tt
-			subtract_from_variable = {
-				nat_ara_sup_deputies = 10
-			}
+			subtract_from_variable = { nat_ara_sup_deputies = 10 }
+
 			### Calculate coalition strength
 			OTT_calc_coalition_strength = yes
 		}
@@ -5067,8 +5026,8 @@ country_event = {	#Selim I Airport Opened
 # 		name = ottfla.6.a
 # 	}
 # }
-country_event = {
-	#General Nuri Paşa's Mausoleum
+
+country_event = {	#General Nuri Paşa's Mausoleum
 	id = ottfla.7
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfla.7 FROM = [From.GetName]" }
 	title = ottfla.7.t
@@ -5374,24 +5333,23 @@ country_event = {	#Death of Abdülmecid II
 
 	option = {
 		name = ottfla.21.a
-		effect_tooltip = {
-			kill_country_leader = yes
-		}
+		effect_tooltip = { kill_country_leader = yes }
 		OTT_create_ahmed = yes
 	}
 }
 
-country_event = {
-	#Fahrettin Pasha becomes Governor of Jerusalem
+country_event = {	#Fahrettin Pasha becomes Governor of Jerusalem
 	id = ottfla.22
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ottfla.22 FROM = [From.GetName]"
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfla.22 FROM = [From.GetName]" }
 	title = ottfla.22.t
 	desc = ottfla.22.d
+
 	picture = GFX_OTT_Military_Academy
+
 	is_triggered_only = yes
+
 	fire_only_once = yes
+
 	option = {
 		name = ottfla.22.a
 		set_country_flag = OTT_Fahrettin_Governor
@@ -5399,7 +5357,6 @@ country_event = {
 		unlock_decision_tooltip = OTT_SYR_Hunt_Down_Insurgents
 		unlock_decision_tooltip = OTT_SYR_Ensure_Demographic_Balance
 	}
-
 }
 #################
 # REVOLT EVENTS #
@@ -5586,21 +5543,16 @@ country_event = {	#Idris returns to the throne
 		}
 		hidden_effect = { LBA = { clear_all_relations = yes } }
 		if = {
-			limit = {
-				has_idea = ott_parliament_idea
-			}
+			limit = { has_idea = ott_parliament_idea }
 			### Return Arab Nationalist votes to opposition
 			custom_effect_tooltip = 10_nat_ara_opp_tt
-			subtract_from_variable = {
-				nat_ara_sup_deputies = 10
-			}
+			subtract_from_variable = { nat_ara_sup_deputies = 10 }
+
 			### Calculate coalition strength
 			OTT_calc_coalition_strength = yes
 		}
 		else = {
-			set_temp_variable = {
-				ideology_change_var = -0.02
-			}
+			set_temp_variable = { ideology_change_var = -0.02 }
 			change_ruling_party_popularity = yes
 		}
 		LBA = {
@@ -5707,9 +5659,8 @@ country_event = {	#Trouble in Dubai
 		else = {
 			### Add Turkish Nationalist votes in favour
 			custom_effect_tooltip = 10_nat_tur_sup_tt
-			add_to_variable = {
-				nat_tur_sup_deputies = 10
-			}
+			add_to_variable = { nat_tur_sup_deputies = 10 }
+
 			### Calculate coalition strength
 			OTT_calc_coalition_strength = yes
 		}
@@ -5965,19 +5916,14 @@ country_event = {	#The Syrian League of National Action
 
 	option = {
 		name = ottsep.27.a
-		set_temp_variable = {
-			ideology_change_var = -0.03
-		}
+		set_temp_variable = { ideology_change_var = -0.03 }
 		change_ruling_party_popularity = yes
 		if = {
-			limit = {
-				has_idea = ott_parliament_idea
-			}
+			limit = { has_idea = ott_parliament_idea }
 			### Return Arab Nationalist votes to opposition
 			custom_effect_tooltip = 10_nat_ara_opp_tt
-			subtract_from_variable = {
-				nat_ara_sup_deputies = 10
-			}
+			subtract_from_variable = { nat_ara_sup_deputies = 10 }
+
 			### Calculate coalition strength
 			OTT_calc_coalition_strength = yes
 		}
@@ -6551,9 +6497,10 @@ country_event = { #FROM Refuses
 # 		}
 # 	}
 # }
+
+
 # Deterence
-country_event = {
-	#Balkan Military Accords - Ottoman Event
+country_event = {	#Balkan Military Accords - Ottoman Event
 	id = ottfor.13
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.13 FROM = [From.GetName]" }
 	title = ottfor.13.t
@@ -6788,9 +6735,7 @@ country_event = {	#Istanbul Pact - Invite
 			}
 			modifier = {
 				add = 100
-				FROM = {
-					tag = MOR
-				}
+				FROM = { tag = MOR }
 				OR = {
 					has_game_rule = {
 						rule = MOR_foreign_policy
@@ -6825,8 +6770,7 @@ country_event = {	#Istanbul Pact - Refusal
 }
 
 ### Sarajevo Accords
-country_event = {
-	#A Tale of Two
+country_event = {	#A Tale of Two
 	id = ottfor.20
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.20 FROM = [From.GetName]" }
 	title = ottfor.20.t
@@ -7362,16 +7306,9 @@ country_event = {	#Saudis encroach on the al-Buraimi Oasis
 			}
 		}
 		add_war_support = -0.10
-		OMA = {
-			country_event = {
-				id = ottfor.35
-				days = 3
-			}
-		}
+		OMA = { country_event = { id = ottfor.35 days = 3 } }
 		custom_effect_tooltip = if_they_accept_tt
-		effect_tooltip = {
-			give_guarantee = OMA
-		}
+		effect_tooltip = { give_guarantee = OMA }
 	}
 	option = {
 		name = ottfor.34.b
@@ -7393,57 +7330,41 @@ country_event = {	#Saudis encroach on the al-Buraimi Oasis
 		}
 		save_event_target_as = OTT_abandoned_oman
 		hidden_effect = {
-			OMA = {
-				country_event = {
-					id = ottfor.35
-					days = 3
-				}
-			}
+			OMA = { country_event = { id = ottfor.35 days = 3 } }
 		}
 	}
 }
 
 country_event = {	#Ottomans offer 'protection' from the Saudi threat
 	id = ottfor.35
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ottfor.35 FROM = [From.GetName]"
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.35 FROM = [From.GetName]" }
+
 	title = {
 		text = ottfor.35.t.ottomans
-		trigger = {
-			NOT = {
-				has_event_target = OTT_abandoned_oman
-			}
-		}
+		trigger = { NOT = { has_event_target = OTT_abandoned_oman } }
 	}
 	title = {
 		text = ottfor.35.t.no_ottomans
-		trigger = {
-			has_event_target = OTT_abandoned_oman
-		}
+		trigger = { has_event_target = OTT_abandoned_oman }
 	}
+
 	desc = {
 		text = ottfor.35.d.ottomans
-		trigger = {
-			NOT = {
-				has_event_target = OTT_abandoned_oman
-			}
-		}
+		trigger = { NOT = { has_event_target = OTT_abandoned_oman } }
 	}
 	desc = {
 		text = ottfor.35.d.no_ottomans
-		trigger = {
-			has_event_target = OTT_abandoned_oman
-		}
+		trigger = { has_event_target = OTT_abandoned_oman }
 	}
+
 	picture = GFX_OTT_Dolmabahce
+
 	is_triggered_only = yes
+
 	option = {
 		name = ottfor.35.a
 		trigger = {
-			NOT = {
-				has_event_target = OTT_abandoned_oman
-			}
+			NOT = { has_event_target = OTT_abandoned_oman }
 		}
 		ai_chance = {
 			base = 25
@@ -7457,27 +7378,21 @@ country_event = {	#Ottomans offer 'protection' from the Saudi threat
 		}
 		OTT = {
 			give_guarantee = OMA
-			country_event = {
-				id = ottfor.36
-				days = 2
-			}
+			country_event = { id = ottfor.36 days = 2 }
 			save_event_target_as = OMA_guarantor
 		}
 		SAU = {
-			hidden_effect = {
-				activate_mission = SAU_OMA_Whitepeace
-			}
+			hidden_effect = { activate_mission = SAU_OMA_Whitepeace }
 			country_event = ottfor.410
 		}
 		activate_mission = OMA_SAU_Whitepeace
 	}
+
 	option = {
 		name = ottfor.35.b
 		trigger = {
 			country_exists = RAJ
-			NOT = {
-				has_war_with = RAJ
-			}
+			NOT = { has_war_with = RAJ }
 			RAJ = {
 				is_subject = no
 				is_in_faction_with = ENT
@@ -7495,23 +7410,13 @@ country_event = {	#Ottomans offer 'protection' from the Saudi threat
 		}
 		RAJ = { country_event = { id = ottfor.38 days = 2 } }
 	}
+
 	option = {
 		name = ottfor.35.c
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		if = {
-			limit = {
-				NOT = {
-					has_event_target = OTT_abandoned_oman
-				}
-			}
-			OTT = {
-				country_event = {
-					id = ottfor.37
-					days = 2
-				}
-			}
+			limit = { NOT = { has_event_target = OTT_abandoned_oman } }
+			OTT = { country_event = { id = ottfor.37 days = 2 } }
 		}
 	}
 }
@@ -7522,6 +7427,7 @@ country_event = {	#Oman accepts our offer
 	title = ottfor.36.t
 	desc = ottfor.36.d
 	picture = GFX_report_event_JAP_battleship_kongo
+
 	is_triggered_only = yes
 
 	option = {
@@ -7534,6 +7440,7 @@ country_event = {	#Oman refuses our offer
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.37 FROM = [From.GetName]" }
 	title = ottfor.37.t
 	desc = ottfor.37.d
+
 	is_triggered_only = yes
 
 	option = {
@@ -7547,6 +7454,7 @@ country_event = {	#Oman requests our assistance
 	title = ottfor.38.t
 	desc = ottfor.38.d
 	picture = GFX_OTT_Basra_Port
+
 	is_triggered_only = yes
 
 	option = {
@@ -7566,9 +7474,7 @@ country_event = {	#Oman requests our assistance
 			amount = -5000
 		}
 		give_guarantee = OMA
-		OMA = {
-			country_event = ottfor.39
-		}
+		OMA = { country_event = ottfor.39 }
 	}
 	option = {
 		name = ottfor.38.b
@@ -7582,9 +7488,7 @@ country_event = {	#Oman requests our assistance
 				}
 			}
 		}
-		OMA = {
-			country_event = ottfor.40
-		}
+		OMA = { country_event = ottfor.40 }
 	}
 }
 
@@ -7594,6 +7498,7 @@ country_event = {	#The Raj comes to our aid
 	title = ottfor.39.t
 	desc = ottfor.39.d
 	picture = GFX_report_event_RAJ_raj
+
 	is_triggered_only = yes
 
 	option = {
@@ -7604,13 +7509,9 @@ country_event = {	#The Raj comes to our aid
 			amount = 5000
 			producer = RAJ
 		}
-		FROM = {
-			save_event_target_as = OMA_guarantor
-		}
+		FROM = { save_event_target_as = OMA_guarantor }
 		SAU = {
-			hidden_effect = {
-				activate_mission = SAU_OMA_Whitepeace
-			}
+			hidden_effect = { activate_mission = SAU_OMA_Whitepeace }
 			country_event = ottfor.410
 		}
 		activate_mission = OMA_SAU_Whitepeace
@@ -7621,28 +7522,22 @@ country_event = {	#The Raj refrains from intervening
 	id = ottfor.40
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.40 FROM = [From.GetName]" }
 	title = ottfor.40.t
+
 	desc = {
 		text = ottfor.40.d.ottomans
-		trigger = {
-			NOT = {
-				has_event_target = OTT_abandoned_oman
-			}
-		}
+		trigger = { NOT = { has_event_target = OTT_abandoned_oman } }
 	}
 	desc = {
 		text = ottfor.40.d.no_ottomans
-		trigger = {
-			has_event_target = OTT_abandoned_oman
-		}
+		trigger = { has_event_target = OTT_abandoned_oman }
 	}
+
 	is_triggered_only = yes
 
 	option = {
 		name = ottfor.40.a
 		trigger = {
-			NOT = {
-				has_event_target = OTT_abandoned_oman
-			}
+			NOT = { has_event_target = OTT_abandoned_oman }
 		}
 		ai_chance = {
 			base = 100
@@ -7650,16 +7545,11 @@ country_event = {	#The Raj refrains from intervening
 		add_war_support = -0.1
 		OTT = {
 			give_guarantee = OMA
-			country_event = {
-				id = ottfor.36
-				days = 2
-			}
+			country_event = { id = ottfor.36 days = 2 }
 			save_event_target_as = OMA_guarantor
 		}
 		SAU = {
-			hidden_effect = {
-				activate_mission = SAU_OMA_Whitepeace
-			}
+			hidden_effect = { activate_mission = SAU_OMA_Whitepeace }
 			country_event = ottfor.410
 		}
 		activate_mission = OMA_SAU_Whitepeace
@@ -7688,34 +7578,22 @@ country_event = {	#Fall of the Imamate
 	}
 	desc = {
 		text = ottfor.41.d.RAJ
-		trigger = {
-			NOT = {
-				tag = OTT
-			}
-		}
+		trigger = { NOT = { tag = OTT } }
 	}
 
 	picture = GFX_OTT_Oil1
+
 	is_triggered_only = yes
+
 	option = {
 		name = ottfor.41.a
 		trigger = { tag = OTT }
 		ai_chance = {
 			base = 100
 		}
-		SAU = {
-			country_event = {
-				id = ottfor.411
-				days = 4
-			}
-		}
+		SAU = { country_event = { id = ottfor.411 days = 4 } }
 		hidden_effect = {
-			YEM = {
-				country_event = {
-					id = ottfor.415
-					days = 2
-				}
-			}
+			YEM = { country_event = { id = ottfor.415 days = 2 } }
 		}
 	}
 
@@ -7725,19 +7603,9 @@ country_event = {	#Fall of the Imamate
 		ai_chance = {
 			base = 100
 		}
-		SAU = {
-			country_event = {
-				id = ottfor.411
-				days = 4
-			}
-		}
+		SAU = { country_event = { id = ottfor.411 days = 4 } }
 		hidden_effect = {
-			YEM = {
-				country_event = {
-					id = ottfor.415
-					days = 2
-				}
-			}
+			YEM = { country_event = { id = ottfor.415 days = 2 } }
 		}
 	}
 	option = {
@@ -7750,100 +7618,81 @@ country_event = {	#Fall of the Imamate
 			relation = guarantee
 			active = no
 		}
-		OMA = {
-			country_event = ottfor.413
-		}
-		SAU = {
-			country_event = ottfor.414
-		}
+		OMA = { country_event = ottfor.413 }
+		SAU = { country_event = ottfor.414 }
 		hidden_effect = {
-			YEM = {
-				country_event = {
-					id = ottfor.415
-					days = 2
-				}
-			}
+			YEM = { country_event = { id = ottfor.415 days = 2 } }
 		}
 	}
 }
 
-country_event = {
-	#FROM Protects Muscat
+country_event = { #FROM Protects Muscat
 	id = ottfor.410
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ottfor.410 FROM = [From.GetName]"
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.410 FROM = [From.GetName]" }
 	title = ottfor.410.t
 	desc = ottfor.410.d
 	picture = GFX_OTT_Mecid_on_da_horse
+
 	is_triggered_only = yes
+
 	trigger = {
 		has_war_with = OMA
 		can_declare_war_on = FROM
 	}
+
 	option = {
 		name = ottfor.410.a
-		effect_tooltip = {
-			activate_mission = SAU_OMA_Whitepeace
-		}
+		effect_tooltip = { activate_mission = SAU_OMA_Whitepeace }
 	}
 }
 
-country_event = {
-	#FROM Intervenes
+country_event = { #FROM Intervenes
 	id = ottfor.411
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ottfor.411 FROM = [From.GetName]"
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.411 FROM = [From.GetName]" }
 	title = ottfor.411.t
 	desc = ottfor.411.d
 	picture = GFX_OTT_Civil_War_Jabal
+
 	is_triggered_only = yes
+
 	trigger = {
 		has_war_with = OMA
 		can_declare_war_on = FROM
 	}
+
 	option = {
 		name = ottfor.411.a
 		ai_chance = {
 			base = 100
 		}
-		transfer_state = 859		#Oman
-		OMA = {
-			white_peace_with_ROOT = yes
-		}
-		remove_state_claim = 294		#Muscat
+		transfer_state = 859 #Oman
+		OMA = { white_peace_with_ROOT = yes }
+		remove_state_claim = 294 #Muscat
 	}
+
 	option = {
 		name = ottfor.411.b
 		ai_chance = {
 			base = 0
 		}
-		FROM = {
-			country_event = {
-				id = ottfor.412
-				days = 1
-			}
-		}
+		FROM = { country_event = { id = ottfor.412 days = 1 } }
 	}
 }
 
-country_event = {
-	#Ibn Saud Refuses to Back Down
+country_event = { #Ibn Saud Refuses to Back Down
 	id = ottfor.412
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ottfor.412 FROM = [From.GetName]"
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.412 FROM = [From.GetName]" }
 	title = ottfor.412.t
 	desc = ottfor.412.d
 	picture = GFX_OTT_Civil_War_Jabal
+
 	is_triggered_only = yes
+
 	trigger = {
 		can_declare_war_on = FROM
-		FROM = {
-			has_war_with = OMA
-		}
+		FROM = { has_war_with = OMA }
 	}
+
 	option = {
 		name = ottfor.412.a
 		ai_chance = {
@@ -7854,6 +7703,7 @@ country_event = {
 			type = annex_everything
 		}
 	}
+
 	option = {
 		name = ottfor.412.b
 		ai_chance = {
@@ -7864,32 +7714,21 @@ country_event = {
 			relation = guarantee
 			active = no
 		}
-		OMA = {
-			country_event = ottfor.413
-		}
-		SAU = {
-			country_event = ottfor.414
-		}
+		OMA = { country_event = ottfor.413 }
+		SAU = { country_event = ottfor.414 }
 		hidden_effect = {
-			YEM = {
-				country_event = {
-					id = ottfor.415
-					days = 2
-				}
-			}
+			YEM = { country_event = { id = ottfor.415 days = 2 } }
 		}
 	}
 }
 
-country_event = {
-	#FROM Abandons Us!
+country_event = { #FROM Abandons Us!
 	id = ottfor.413
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ottfor.413 FROM = [From.GetName]"
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.413 FROM = [From.GetName]" }
 	title = ottfor.413.t
 	desc = ottfor.413.d
 	picture = GFX_OTT_Troops_Istanbul
+
 	is_triggered_only = yes
 
 	option = {
@@ -7902,64 +7741,56 @@ country_event = {
 	}
 }
 
-country_event = {
-	#FROM Abandons Muscat
+country_event = { #FROM Abandons Muscat
 	id = ottfor.414
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ottfor.414 FROM = [From.GetName]"
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.414 FROM = [From.GetName]" }
 	title = ottfor.414.t
 	desc = ottfor.414.d
 	picture = GFX_OTT_Troops_Istanbul
+
 	is_triggered_only = yes
+
 	option = {
 		name = ottfor.414.a
 	}
 }
 
-country_event = {
-	#Dhofar is Vulnerable
+country_event = { #Dhofar is Vulnerable
 	id = ottfor.415
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ottfor.415 FROM = [From.GetName]"
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.415 FROM = [From.GetName]" }
 	title = ottfor.415.t
 	desc = ottfor.415.d
 	picture = GFX_OTT_Gendarmerie
+
 	trigger = {
 		can_declare_war_on = OMA
-		OMA = {
-			owns_state = 1024
-		}
-		#Dhofar
+		OMA = { owns_state = 1024 } #Dhofar
 	}
+
 	is_triggered_only = yes
+
 	option = {
 		name = ottfor.415.a
-		add_state_core = 1024		#Dhofar
+		add_state_core = 1024 #Dhofar
 		transfer_state = 1024
-		OMA = {
-			country_event = ottfor.416
-		}
+		OMA = { country_event = ottfor.416 }
 	}
+
 	option = {
 		name = ottfor.415.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 	}
 }
 
-country_event = {
-	#Yemen Seizes Dhofar!
+country_event = { #Yemen Seizes Dhofar!
 	id = ottfor.416
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ottfor.416 FROM = [From.GetName]"
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.416 FROM = [From.GetName]" }
 	title = ottfor.416.t
 	desc = ottfor.416.d
 	picture = GFX_report_event_EGY_egyptian_troops
+
 	is_triggered_only = yes
+
 	option = {
 		name = ottfor.416.a
 		add_opinion_modifier = {
@@ -7967,63 +7798,49 @@ country_event = {
 			modifier = KR_outraged
 		}
 	}
+
 	option = {
 		name = ottfor.416.a
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		declare_war_on = {
 			target = FROM
 			type = take_state_focus
-			generator = {
-				1024
-			}
+			generator = { 1024 }
 		}
 	}
 }
 
-country_event = {
-	#FROM Reinforcements Arrive in Muscat
+country_event = { #FROM Reinforcements Arrive in Muscat
 	id = ottfor.42
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ottfor.42 FROM = [From.GetName]"
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.42 FROM = [From.GetName]" }
 	title = ottfor.42.t
+
 	desc = {
 		text = ottfor.42.d.OTT
-		trigger = {
-			tag = OTT
-		}
+		trigger = { tag = OTT }
 	}
 	desc = {
 		text = ottfor.42.d.RAJ
-		trigger = {
-			NOT = {
-				tag = OTT
-			}
-		}
+		trigger = { NOT = { tag = OTT } }
 	}
+
 	picture = GFX_OTT_Sultan_Speech
+
 	is_triggered_only = yes
 
 	option = {
 		name = ottfor.42.a
-		FROM = {
-			get_current_government_type = yes
-		}
+		FROM = { get_current_government_type = yes }
 		set_autonomy = {
 			target = FROM
 			autonomy_state = kr_nominal_puppet
 		}
-		FROM = {
-			restore_previous_government_type = yes
-		}
+		FROM = { restore_previous_government_type = yes }
 	}
 }
 
 ### Mt Ararat Rebellion
-country_event = {
-	#The Ararat Debacle
+country_event = {	#The Ararat Debacle
 	id = ottfor.43
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.43 FROM = [From.GetName]" }
 	title = ottfor.43.t
@@ -9386,9 +9203,7 @@ country_event = { #Clear RUS AI factors once Germany is dead or ten years have p
 
 	option = {
 		clr_country_flag = RUS_OTT_AI_strategies
-		AZR = {
-			remove_ideas = OTT_russo_ottoman_convention
-		}
+		AZR = { remove_ideas = OTT_russo_ottoman_convention }
 		if = {
 			limit = { has_guaranteed = OTT }
 			diplomatic_relation = {
@@ -9589,9 +9404,7 @@ country_event = {	#The Russo-Ottoman Convention
 		}
 		add_ideas = OTT_russo_ottoman_convention
 		if = {
-			limit = {
-				is_in_faction = yes
-			}
+			limit = { is_in_faction = yes }
 			leave_faction = yes
 		}
 		OTT = {
@@ -9624,14 +9437,10 @@ country_event = {	#The Russo-Ottoman Convention
 			limit = {
 				GER = {
 					is_faction_leader = yes
-					NOT = {
-						has_war_with = ROOT
-					}
+					NOT = { has_war_with = ROOT }
 				}
 			}
-			GER = {
-				add_to_faction = AZR
-			}
+			GER = { add_to_faction = AZR }
 		}
 	}
 }
@@ -10366,12 +10175,9 @@ country_event = {	#Turkish Nationalists leave the DF
 		name = ottlib.5.a
 		### Return Turkish Nationalist votes to opposition
 		custom_effect_tooltip = 20_nat_tur_opp_tt
-		add_to_variable = {
-			nat_tur_deputies = 20
-		}
-		subtract_from_variable = {
-			odf_deputies = 20
-		}
+		add_to_variable = { nat_tur_deputies = 20 }
+		subtract_from_variable = { odf_deputies = 20 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -10398,12 +10204,9 @@ country_event = {	#Corruption Scandal rocks the HIF
 		name = ottlib.6.a
 		### Return Liberal votes to opposition
 		custom_effect_tooltip = 15_ind_opp_tt
-		add_to_variable = {
-			ind_deputies = 15
-		}
-		subtract_from_variable = {
-			hif_deputies = 15
-		}
+		add_to_variable = { ind_deputies = 15 }
+		subtract_from_variable = { hif_deputies = 15 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -10438,14 +10241,11 @@ country_event = {	#The Abandoned Properties Laws
 		}
 		### Return Turkish Nationalist votes to opposition
 		custom_effect_tooltip = 30_nat_tur_opp_tt
-		subtract_from_variable = {
-			nat_tur_sup_deputies = 30
-		}
+		subtract_from_variable = { nat_tur_sup_deputies = 30 }
+
 		### Return Independent votes to coalition
 		custom_effect_tooltip = 15_ind_sup_tt
-		add_to_variable = {
-			ind_sup_deputies = 15
-		}
+		add_to_variable = { ind_sup_deputies = 15 }
 
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
@@ -10461,12 +10261,9 @@ country_event = {	#The Abandoned Properties Laws
 		}
 		### Return Liberal votes to opposition
 		custom_effect_tooltip = 15_ind_opp_tt
-		add_to_variable = {
-			ind_deputies = 15
-		}
-		subtract_from_variable = {
-			hif_deputies = 15
-		}
+		add_to_variable = { ind_deputies = 15 }
+		subtract_from_variable = { hif_deputies = 15 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -10494,12 +10291,9 @@ country_event = {	#Conflict in Ainteb
 		}
 		### Return Liberal votes to opposition
 		custom_effect_tooltip = 15_ind_opp_tt
-		add_to_variable = {
-			ind_deputies = 15
-		}
-		subtract_from_variable = {
-			hif_deputies = 15
-		}
+		add_to_variable = { ind_deputies = 15 }
+		subtract_from_variable = { hif_deputies = 15 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -10521,9 +10315,8 @@ country_event = {	#Conflict in Ainteb
 		}
 		### Return Turkish Nationalist votes to opposition
 		custom_effect_tooltip = 30_nat_tur_opp_tt
-		subtract_from_variable = {
-			nat_tur_sup_deputies = 30
-		}
+		subtract_from_variable = { nat_tur_sup_deputies = 30 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -10563,69 +10356,86 @@ country_event = {	#Talk with Kazim
 # 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.10 FROM = [From.GetName]" }
 # 	title = ottlib.10.t
 # 	desc = ottlib.10.d
+
 # 	picture = GFX_OTT_Arab_Protest_Indoors
+
 # 	trigger = {
 # 		OR = {
 # 			has_government = market_liberal
 # 			has_government = social_liberal
 # 		}
 # 	}
+
 # 	is_triggered_only = yes
+
 # 	option = {
 # 		name = ottlib.10.a
 # 		### Return Arab Nationalist votes to opposition
 # 		custom_effect_tooltip = 30_nat_ara_opp_tt
 # 		subtract_from_variable = { nat_ara_sup_deputies = 30 }
+
 # 		### Calculate coalition strength
 # 		OTT_calc_coalition_strength = yes
 # 	}
 # }
+
 # country_event = {	#Conservative Deputies withdraw support
 # 	id = ottlib.11
 # 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.11 FROM = [From.GetName]" }
 # 	title = ottlib.11.t
 # 	desc = ottlib.11.d
+
 # 	picture = GFX_OTT_Sheikh_Islam
+
 # 	trigger = {
 # 		OR = {
 # 			has_government = market_liberal
 # 			has_government = social_liberal
 # 		}
 # 	}
+
 # 	is_triggered_only = yes
+
 # 	option = {
 # 		name = ottlib.11.a
 # 		### Return Conservative votes to opposition
 # 		custom_effect_tooltip = 30_con_opp_tt
 # 		subtract_from_variable = { con_sup_deputies = 30 }
+
 # 		### Calculate coalition strength
 # 		OTT_calc_coalition_strength = yes
 # 	}
 # }
+
 # country_event = {	#Turkish Deputies withdraw support
 # 	id = ottlib.12
 # 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.12 FROM = [From.GetName]" }
 # 	title = ottlib.12.t
 # 	desc = ottlib.12.d
+
 # 	picture = GFX_OTT_Discussion_Celal
+
 # 	trigger = {
 # 		OR = {
 # 			has_government = market_liberal
 # 			has_government = social_liberal
 # 		}
 # 	}
+
 # 	is_triggered_only = yes
+
 # 	option = {
 # 		name = ottlib.12.a
 # 		### Return Turkish Nationalist votes to opposition
 # 		custom_effect_tooltip = 30_nat_tur_opp_tt
 # 		subtract_from_variable = { nat_tur_sup_deputies = 30 }
+
 # 		### Calculate coalition strength
 # 		OTT_calc_coalition_strength = yes
 # 	}
 # }
-country_event = {
-	#Early Elections
+
+country_event = {	#Early Elections
 	id = ottlib.13
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.13 FROM = [From.GetName]" }
 	title = ottlib.13.t
@@ -10792,9 +10602,8 @@ country_event = {	#Formation of Military Cliques
 		}
 		### Return Arab Nationalist votes to opposition
 		custom_effect_tooltip = 30_nat_ara_opp_tt
-		subtract_from_variable = {
-			nat_ara_sup_deputies = 30
-		}
+		subtract_from_variable = { nat_ara_sup_deputies = 30 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -10828,24 +10637,20 @@ country_event = {	#Trouble on the Euphrates
 		add_political_power = -60
 		### Return Liberal votes to opposition
 		custom_effect_tooltip = 15_ind_opp_tt
-		subtract_from_variable = {
-			ind_sup_deputies = 15
-		}
+		subtract_from_variable = { ind_sup_deputies = 15 }
+
 		### Return Conservative votes to opposition
 		custom_effect_tooltip = 30_con_opp_tt
-		subtract_from_variable = {
-			con_sup_deputies = 30
-		}
+		subtract_from_variable = { con_sup_deputies = 30 }
+
 		### Return Arab Nationalist votes to opposition
 		custom_effect_tooltip = 10_nat_ara_opp_tt
-		subtract_from_variable = {
-			nat_ara_sup_deputies = 10
-		}
+		subtract_from_variable = { nat_ara_sup_deputies = 10 }
+
 		### Return Turkish Nationalist votes to opposition
 		custom_effect_tooltip = 10_nat_tur_opp_tt
-		subtract_from_variable = {
-			nat_tur_sup_deputies = 10
-		}
+		subtract_from_variable = { nat_tur_sup_deputies = 10 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -10888,9 +10693,8 @@ country_event = {	#Trouble on the Euphrates
 
 		### Add Turkish Nationalist votes in favour
 		custom_effect_tooltip = 30_nat_tur_sup_tt
-		add_to_variable = {
-			nat_tur_sup_deputies = 30
-		}
+		add_to_variable = { nat_tur_sup_deputies = 30 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -10934,24 +10738,20 @@ country_event = {	#Trouble on the Euphrates
 
 		### Add Liberal votes to coalition
 		custom_effect_tooltip = 15_ind_sup_tt
-		add_to_variable = {
-			ind_sup_deputies = 15
-		}
+		add_to_variable = { ind_sup_deputies = 15 }
+
 		### Return Conservative votes to opposition
 		custom_effect_tooltip = 30_con_opp_tt
-		subtract_from_variable = {
-			con_sup_deputies = 30
-		}
+		subtract_from_variable = { con_sup_deputies = 30 }
+
 		### Return Arab Nationalist votes to opposition
 		custom_effect_tooltip = 10_nat_ara_opp_tt
-		subtract_from_variable = {
-			nat_ara_sup_deputies = 10
-		}
+		subtract_from_variable = { nat_ara_sup_deputies = 10 }
+
 		### Return Turkish Nationalist votes to opposition
 		custom_effect_tooltip = 10_nat_tur_opp_tt
-		subtract_from_variable = {
-			nat_tur_sup_deputies = 10
-		}
+		subtract_from_variable = { nat_tur_sup_deputies = 10 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -11241,14 +11041,12 @@ country_event = {	#Reform of the Ottoman Gendarmerie
 
 		### Return Turkish Nationalist votes to opposition
 		custom_effect_tooltip = 30_nat_tur_opp_tt
-		subtract_from_variable = {
-			nat_tur_sup_deputies = 30
-		}
+		subtract_from_variable = { nat_tur_sup_deputies = 30 }
+
 		### Add Arab Nationalist votes in favour
 		custom_effect_tooltip = 60_nat_ara_sup_tt
-		add_to_variable = {
-			nat_ara_sup_deputies = 60
-		}
+		add_to_variable = { nat_ara_sup_deputies = 60 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 
@@ -11351,14 +11149,12 @@ country_event = {	#Elections for the Provincial Assembly
 		}
 		### Return Conservative votes to opposition
 		custom_effect_tooltip = 30_con_opp_tt
-		subtract_from_variable = {
-			con_sup_deputies = 30
-		}
+		subtract_from_variable = { con_sup_deputies = 30 }
+
 		### Return Liberal votes to opposition
 		custom_effect_tooltip = 15_ind_opp_tt
-		subtract_from_variable = {
-			ind_sup_deputies = 15
-		}
+		subtract_from_variable = { ind_sup_deputies = 15 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -11461,9 +11257,8 @@ country_event = {	#The Iraqi Question
 		add_political_power = -75
 		### Add Arab Nationalist votes in favour
 		custom_effect_tooltip = 40_nat_ara_sup_tt
-		add_to_variable = {
-			nat_ara_sup_deputies = 40
-		}
+		add_to_variable = { nat_ara_sup_deputies = 40 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -11499,9 +11294,8 @@ country_event = {	#Trouble in Basra
 		}
 		### Add Arab Nationalist votes in favour
 		custom_effect_tooltip = 60_nat_ara_opp_tt
-		subtract_from_variable = {
-			nat_ara_sup_deputies = 60
-		}
+		subtract_from_variable = { nat_ara_sup_deputies = 60 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -11540,9 +11334,8 @@ country_event = {	#Revision of the Ottoman Civil Code
 		}
 		### Add Conservative votes in favour
 		custom_effect_tooltip = 60_con_sup_tt
-		add_to_variable = {
-			con_sup_deputies = 60
-		}
+		add_to_variable = { con_sup_deputies = 60 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -11669,9 +11462,8 @@ country_event = {	#The TPC Affair
 
 		### Return Turkish nationalist votes to opposition
 		custom_effect_tooltip = 30_nat_tur_opp_tt
-		subtract_from_variable = {
-			nat_tur_sup_deputies = 30
-		}
+		subtract_from_variable = { nat_tur_sup_deputies = 30 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -11715,14 +11507,12 @@ country_event = {	#Organisation of the Armed Forces
 
 		### Return Turkish nationalist votes to opposition
 		custom_effect_tooltip = 60_nat_tur_opp_tt
-		subtract_from_variable = {
-			nat_tur_sup_deputies = 60
-		}
+		subtract_from_variable = { nat_tur_sup_deputies = 60 }
+
 		### Add Arab Nationalist votes in favour
 		custom_effect_tooltip = 60_nat_ara_sup_tt
-		add_to_variable = {
-			nat_ara_sup_deputies = 60
-		}
+		add_to_variable = { nat_ara_sup_deputies = 60 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 
@@ -11787,14 +11577,12 @@ country_event = {	#Arabs demand more representation in the Armed Forces
 		}
 		### Return Turkish nationalist votes to opposition
 		custom_effect_tooltip = 30_nat_tur_opp_tt
-		subtract_from_variable = {
-			nat_tur_sup_deputies = 30
-		}
+		subtract_from_variable = { nat_tur_sup_deputies = 30 }
+
 		### Add Arab Nationalist votes in favour
 		custom_effect_tooltip = 30_nat_ara_sup_tt
-		add_to_variable = {
-			nat_ara_sup_deputies = 30
-		}
+		add_to_variable = { nat_ara_sup_deputies = 30 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -11871,19 +11659,16 @@ country_event = {	#Expansion of the Vilayet reforms
 
 		### Add Liberal votes to coalition
 		custom_effect_tooltip = 15_ind_sup_tt
-		add_to_variable = {
-			ind_sup_deputies = 15
-		}
+		add_to_variable = { ind_sup_deputies = 15 }
+
 		### Return Turkish nationalist votes to opposition
 		custom_effect_tooltip = 30_nat_tur_opp_tt
-		subtract_from_variable = {
-			nat_tur_sup_deputies = 30
-		}
+		subtract_from_variable = { nat_tur_sup_deputies = 30 }
+
 		### Return Conservative votes to opposition
 		custom_effect_tooltip = 50_con_opp_tt
-		subtract_from_variable = {
-			con_sup_deputies = 50
-		}
+		subtract_from_variable = { con_sup_deputies = 50 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -11941,9 +11726,8 @@ country_event = {	#The question of the Millets
 
 		### Add Turkish Nationalist votes in favour
 		custom_effect_tooltip = 60_nat_tur_sup_tt
-		add_to_variable = {
-			nat_tur_sup_deputies = 60
-		}
+		add_to_variable = { nat_tur_sup_deputies = 60 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -12084,9 +11868,7 @@ country_event = {	#Osman Fuad marches on Constantinople
 			}
 		}
 		if = {
-			limit = {
-				has_idea = TUR_Mustafa_Fevzi_Pasa_cos_pau
-			}
+			limit = { has_idea = TUR_Mustafa_Fevzi_Pasa_cos_pau }
 			remove_ideas = TUR_Mustafa_Fevzi_Pasa_cos_pau
 		}
 		set_country_flag = Mustafa_Fevzi_Pasa_dead
@@ -12139,11 +11921,13 @@ country_event = {	#Restoration of the HIF cabinet
 			var = nat_tur_deputies
 			value = 80
 		}
+
 		clamp_variable = {
 			var = odf_deputies
 			min = 0
 			max = 500
 		}
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -12281,9 +12065,8 @@ country_event = {	#Protests in Konya and Mosul
 
 		### Return Conservative votes to opposition
 		custom_effect_tooltip = 30_con_opp_tt
-		subtract_from_variable = {
-			con_sup_deputies = 30
-		}
+		subtract_from_variable = { con_sup_deputies = 30 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -12312,9 +12095,8 @@ country_event = {	#Turkish nationalists open their offensive
 		decrease_ruling_party_popularity_by_10 = yes
 		### Return Conservative votes to opposition
 		custom_effect_tooltip = 30_con_opp_tt
-		subtract_from_variable = {
-			con_sup_deputies = 30
-		}
+		subtract_from_variable = { con_sup_deputies = 30 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -12340,9 +12122,8 @@ country_event = {	#Conservatives issue an Ultimatum
 		decrease_ruling_party_popularity_by_5 = yes
 		### Return Conservative votes to opposition
 		custom_effect_tooltip = 30_con_opp_tt
-		subtract_from_variable = {
-			con_sup_deputies = 30
-		}
+		subtract_from_variable = { con_sup_deputies = 30 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 
@@ -12382,15 +12163,10 @@ country_event = {	#[OTT.GetLeader] sacks Prince Sabahattin
 		}
 		complete_national_focus = OTT_Grand_Vizier_Arslan
 		hidden_effect = {
-			country_event = {
-				id = ottars.1
-				days = 10
-			}
+			country_event = { id = ottars.1 days = 10 }
 		}
-		set_variable = {
-			var = con_sup_deputies
-			value = 105
-		}
+		set_variable = { var = con_sup_deputies value = 105 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -12530,14 +12306,12 @@ country_event = {	#Federal Education Reform
 		}
 		### Return Conservative votes to opposition
 		custom_effect_tooltip = 30_con_opp_tt
-		subtract_from_variable = {
-			con_sup_deputies = 30
-		}
+		subtract_from_variable = { con_sup_deputies = 30 }
+
 		### Add Turkish Nationalist votes in favour
 		custom_effect_tooltip = 10_nat_tur_sup_tt
-		add_to_variable = {
-			nat_tur_sup_deputies = 10
-		}
+		add_to_variable = { nat_tur_sup_deputies = 10 }
+
 		### Calculate coalition strength
 		OTT_calc_coalition_strength = yes
 	}
@@ -12844,9 +12618,7 @@ country_event = {	#Death of [OTT.GetLeader]
 
 	option = {
 		name = ottars.12.a
-		effect_tooltip = {
-			kill_country_leader = yes
-		}
+		effect_tooltip = { kill_country_leader = yes }
 		OTT_create_ahmed = yes
 	}
 }
