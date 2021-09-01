@@ -1,7 +1,6 @@
 # KR Weekly Tournament Submod Changes
 
 ### Optimization
-
 - Set LAG_DAYS_FOR_LOWER_SPEED = 100
 - Set LAG_DAYS_FOR_PAUSE = 60
 - Combat log only shows the last 6 months instead of 12.
@@ -24,7 +23,7 @@
 - Last Stand nerfed to -0.04 org damage and -0.25 strength damage.
 - Force Attack nerfed to -0.4 org damage and -0.25 strength damage.
 
-### Decisions
+### Decisions & Country changes
 
 #### Austria
 - Austria allowed to join the RP if date is > 1939.1.1 OR Germany is at war with CoF.
