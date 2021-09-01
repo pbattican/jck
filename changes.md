@@ -55,7 +55,6 @@
 #### Japan
 - Decisions to add production cost buffs to Japan's air and navy once the Military focus tree has been started. -10% Cost reduction on combat aircraft and all ships
 
-
 #### Ottomans
 - Will not invite Azerbaijan into their faction
 
