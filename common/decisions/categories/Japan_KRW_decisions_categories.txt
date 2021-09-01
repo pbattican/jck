@@ -1,7 +1,7 @@
-RUS_foreign_affairs = {
+JAP_industrial_effort = {
 	icon = GFX_decision_category_military_operation
 
 	allowed = {
-		original_tag = RUS
+		original_tag = JAP
 	}
 }

@@ -150,7 +150,6 @@ ideas = {
 			picture = ENG_the_war_to_end_all_wars
 		}
 		USA_civil_war_depression_idea = {
-			#Civil War Depression
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea USA_civil_war_depression_idea"
 			}
@@ -159,6 +158,18 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.15
 				industrial_capacity_factory = -0.15
 				production_speed_buildings_factor = -0.15
+			}
+		}
+		USA_civil_war_depression_idea_2 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea USA_civil_war_depression_idea_2"
+			}
+			name = USA_civil_war_depression_idea
+			picture = SPA_recovering_from_the_civil_war
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
 			}
 		}
 		USA_native_code_talkers_idea = {
@@ -283,18 +294,6 @@ ideas = {
 				training_time_factor = -0.1
 			}
 		}
-		USA_economic_recovery_idea = {
-			#Civil War Recovery
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea USA_economic_recovery_idea"
-			}
-			picture = SPA_recovering_from_the_civil_war
-			modifier = {
-				production_factory_max_efficiency_factor = -0.05
-				industrial_capacity_factory = -0.05
-				production_speed_buildings_factor = -0.05
-			}
-		}
 		amcviwar_ready_to_surrender = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea amcviwar_ready_to_surrender"
@@ -313,7 +312,7 @@ ideas = {
 			}
 			picture = generic_morale_bonus
 		}
-		### Fair Deal Ideas ###	
+		### Fair Deal Ideas ###
 		USA_recovering_economy_idea = {
 			#Recovering Economy
 			on_add = {
@@ -1314,7 +1313,8 @@ ideas = {
 						NOT = {
 							has_idea = USA_league_of_america_2
 						}
-					}					#== swap_ideas
+					}
+					#== swap_ideas
 					country_event = ustates.259
 				}
 			}
@@ -3493,7 +3493,6 @@ ideas = {
 				armor = 0.1
 			}
 		}
-		# KRW - Remove Ford designer
 		kr_general_motors = {
 			#General Motors
 			on_add = {
