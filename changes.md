@@ -23,30 +23,12 @@ Incorporates the KRW Submod changes with some minor tweaks
 ### Optimization
 - Set LAG_DAYS_FOR_LOWER_SPEED = 100
 - Set LAG_DAYS_FOR_PAUSE = 60
-<<<<<<< HEAD
 
-||||||| bf5a36b4
-
-- Useless tags such as haiti, dominican republic and bhutan are removed to speed up game (only those three have been removed so far)
-- The sub-colonies that spawn out of Mittelafrika are disabled to speed up the game
-
-=======
-- Combat log only shows the last 6 months instead of 12.
-- Game speed in seconds adjustments.
-- Interpolated front steps to 1.
-
->>>>>>> krw_submod_master
 #### Detropat Additions
 - Set CAPITAL_ICON_CUTOFF = 800
 - Set DRAW_MAP_OBJECTS_CUTOFF = 250
 - Set MAP_BUILDINDS_SHRINK_DISTANCE = 100
 - Set COMBAT_LOG_MAX_MONTHS = 6
-
-<<<<<<< HEAD
-### Abilities
-
-- Last Stand nerfed to -0.75 org damage and 0.4 cp per battalion
-- Force Attack nerfed to -0.75 org damage and 0.4 cp per battalion
 
 ### Demobilization
 
@@ -56,12 +38,7 @@ Incorporates the KRW Submod changes with some minor tweaks
 ### Diplomatic Actions
 
 - Lend Lease send / receive is disabled for Ottomans, Scandinavia, Sweden when not in the RP, and Venezuela
-||||||| bf5a36b4
-### Abilities
 
-- Last Stand nerfed to -0.75 org damage and 0.5 strength damage
-- Force Attack nerfed to -0.75 org damage
-=======
 ### General
 - Maximum numbers of winners in MP in peace conference is set to two. This reduces the peace conferences against AI only.
 - Allowing Intermarium mechanic to be functional for the Reichspakt. Germany can decide between player led nations who is the leader.
@@ -71,9 +48,7 @@ Incorporates the KRW Submod changes with some minor tweaks
 - Tank and plane KR conversion nerfed to only allow variants.
 - Last Stand nerfed to -0.04 org damage and -0.25 strength damage.
 - Force Attack nerfed to -0.4 org damage and -0.25 strength damage.
->>>>>>> krw_submod_master
 
-<<<<<<< HEAD
 ### Equipment Changes
 
 - No conversion tanks / planes
@@ -84,59 +59,20 @@ Incorporates the KRW Submod changes with some minor tweaks
 #### ACW Nations
 
 - You will not be able to use `focus on the X` decsions if they are not a player before July 1st 1938
-||||||| bf5a36b4
-### Decisions
-=======
-### Decisions & Country changes
->>>>>>> krw_submod_master
 
 #### Austria
-<<<<<<< HEAD
-
-- Austria allowed to join the RP if date is > 1939.1.1 OR Germany is at war with
-CoF
-- Austria allowed to join the Kaiser Wilhelm society once Austria has joined the
-RP
-
-#### Bhutan
-
-- Does not start its countries event path which locks their focus tree
-||||||| bf5a36b4
-
-- Austria allowed to join the RP if date is > 1939.1.1 OR Germany is at war with
-CoF
-- Austria allowed to join the Kaiser Wilhelm society once Austria has joined the RP
-=======
 - Austria allowed to join the RP if date is > 1939.1.1 OR Germany is at war with CoF.
 - Austria allowed to join the Kaiser Wilhelm society once Austria has joined the RP.
 - - Austria will not seperatly peace out with the Co-Pro.
->>>>>>> krw_submod_master
 
 #### Brazil
-<<<<<<< HEAD
 
 - Given Uruguay as a core
-||||||| bf5a36b4
-
-- Brazil allowed to join the Entente if date is > 1937.1.1 OR Germany is at war with CoF AND Brazil does not have a socialist government ( SocDem is allowed )
-- Brazil allowed to join Entente research group if in Canada's faction
-=======
-- Brazil allowed to join the Entente if date is > 1937.1.1 OR Germany is at war with CoF AND Brazil does not have a socialist government ( SocDem is allowed )
-- Brazil allowed to join Entente research group if in Canada's faction
->>>>>>> krw_submod_master
 
 #### Bulgaria
-<<<<<<< HEAD
 
 - Decision to join the RP once Germany is at war with FRA. 
-||||||| bf5a36b4
-
-compliance gain
-- Decision to subdue the Romanians if all Romanian cores are controlled
-which adds 0.15 compliance gain
-=======
 - Given a Heavy tank designer.
->>>>>>> krw_submod_master
 
 #### Canada
 - Decision to remove Portugal from the Entente
