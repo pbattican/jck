@@ -1,2 +1,5 @@
 ### VisualStudioCode ###
 .vscode/*
+
+### Github
+.github/*

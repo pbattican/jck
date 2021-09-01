@@ -24,7 +24,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_New_Administration
-		icon = GFX_goal_government_icon
+		icon = GFX_goal_generic_parliament2
 		allow_branch = {
 			NOT = { tag = GEX }
 		}
@@ -50,7 +50,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Sovereign_State
-		icon = GFX_goal_skull_treaty
+		icon = GFX_focus_generic_oppression
 		available = {
 			has_completed_focus = MAF_1938_Budget
 			has_government = national_populist
@@ -85,7 +85,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Proving_Grounds
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_secret_weapon
 		available = {
 			has_government = national_populist
 			hidden_trigger = { NOT = { has_cosmetic_tag = MAF_germany_in_exile } }
@@ -259,7 +259,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Annex_British_Colonies
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_skull_treaty
 		available = {
 			has_government = national_populist
 			hidden_trigger = { NOT = { has_cosmetic_tag = MAF_germany_in_exile } }
@@ -355,7 +355,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_African_Landtag
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_generic_parliament
 		available = {
 			has_completed_focus = MAF_1938_Budget
 			NOT = { has_government = national_populist }
@@ -383,7 +383,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Autonomous_Kingdoms
-		icon = GFX_focus_rom_handle_king
+		icon = GFX_goal_LIB_whiter_pale
 		available = {
 			NOT = { has_government = national_populist }
 			has_war = no
@@ -484,7 +484,10 @@ focus_tree = {
 			effect_tooltip = {
 				add_popularity = { ideology = market_liberal popularity = -1 }
 			}
-
+			hidden_effect = {
+				set_political_party = { ideology = market_liberal popularity = 0 }
+				871 = { add_core_of = ZAM }
+			}
 			custom_effect_tooltip = tooltip_white_line
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
@@ -492,7 +495,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_African_Studies
-		icon = GFX_goal_generic_scientific_exchange
+		icon = GFX_goal_KTG_Bookstack
 		available = {
 			NOT = { has_government = national_populist }
 			hidden_trigger = { NOT = { has_cosmetic_tag = MAF_germany_in_exile } }
@@ -559,7 +562,7 @@ focus_tree = {
 			hidden_trigger = { NOT = { has_cosmetic_tag = MAF_germany_in_exile } }
 		}
 		relative_position_id = MAF_New_Administration
-		x = -9
+		x = -8
 		y = 1
 		ai_will_do = {
 			factor = 70
@@ -591,7 +594,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Port_Renovation
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_naval_base
 		available = {
 			OR = {
 				has_government = paternal_autocrat
@@ -605,7 +608,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Army_Reforms
 		}
-		x = -5
+		x = -6
 		y = 2
 		relative_position_id = MAF_Four_Year_Plan
 		ai_will_do = {
@@ -645,7 +648,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Sailing_With_Marine
-		icon = GFX_goal_generic_coastal_navy
+		icon = GFX_goal_generic_sea_focused_navy2
 		available = {
 			OR = {
 				has_government = paternal_autocrat
@@ -657,7 +660,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Port_Renovation
 		}
-		x = -6
+		x = -7
 		y = 3
 		relative_position_id = MAF_Four_Year_Plan
 		ai_will_do = {
@@ -679,7 +682,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Acquire_New_Blueprints
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_goal_generic_design_equipment_standards
 		available = {
 			country_exists = GER
 			OR = {
@@ -691,7 +694,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Port_Renovation
 		}
-		x = -4
+		x = -5
 		y = 3
 		relative_position_id = MAF_Four_Year_Plan
 		ai_will_do = {
@@ -729,7 +732,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Sailing_With_Marine
 		}
-		x = -5
+		x = -6
 		y = 4
 		relative_position_id = MAF_Four_Year_Plan
 		ai_will_do = {
@@ -771,7 +774,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Four_Year_Plan
 		}
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = MAF_Four_Year_Plan
 		ai_will_do = {
@@ -806,8 +809,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_African_War_Industries
 		}
-		x = -1
-		y = 4
+		x = -3
+		y = 3
 		relative_position_id = MAF_Four_Year_Plan
 		ai_will_do = {
 			factor = 70
@@ -844,7 +847,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Army_Reforms
 		}
-		x = -2
+		x = -4
 		y = 2
 		relative_position_id = MAF_Four_Year_Plan
 		ai_will_do = {
@@ -883,8 +886,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Heavy_Equipment
 		}
-		x = -2
-		y = 3
+		x = -4
+		y = 4
 		relative_position_id = MAF_Four_Year_Plan
 		ai_will_do = {
 			factor = 70
@@ -898,7 +901,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Strategic_Export
-		icon = GFX_all_resource
+		icon = GFX_goal_generic_coal_mining
 		available = {
 			OR = {
 				has_government = paternal_autocrat
@@ -912,7 +915,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_African_Breadbasket
 		}
-		x = 4
+		x = 2
 		y = 2
 		relative_position_id = MAF_Four_Year_Plan
 		ai_will_do = {
@@ -934,7 +937,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_African_Breadbasket
-		icon = GFX_focus_AUS_agriculture
+		icon = GFX_goal_generic_food_processing
 		available = {
 			OR = {
 				has_government = paternal_autocrat
@@ -1014,8 +1017,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_War_Economy
 		}
-		x = 0
-		y = 3
+		x = -2
+		y = 2
 		relative_position_id = MAF_Four_Year_Plan
 		ai_will_do = {
 			factor = 70
@@ -1073,8 +1076,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Four_Year_Plan
 		}
-		x = 0
-		y = 2
+		x = -1
+		y = 1
 		relative_position_id = MAF_Four_Year_Plan
 		ai_will_do = {
 			factor = 70
@@ -1153,7 +1156,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_African_Breadbasket
 		}
-		x = 2
+		x = 0
 		y = 2
 		relative_position_id = MAF_Four_Year_Plan
 		ai_will_do = {
@@ -1181,7 +1184,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_New_Administration
 		}
-		x = 7
+		x = 8
 		y = 1
 		relative_position_id = MAF_New_Administration
 		ai_will_do = {
@@ -1260,7 +1263,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Bezirk
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_goal_generic_trial
 		available = {
 			NOT = {
 				has_government = paternal_autocrat
@@ -1385,7 +1388,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Cottage_Industries
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_economic_control
 		available = {
 			NOT = {
 				has_government = paternal_autocrat
@@ -1443,7 +1446,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_African_Army
-		icon = GFX_goal_national_mobilization
+		icon = GFX_goal_UKR_contact_diaspora
 		available = {
 			NOT = {
 				has_government = paternal_autocrat
@@ -1454,7 +1457,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Back_To_Basics
 		}
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = MAF_Back_To_Basics
 		ai_will_do = {
@@ -1521,7 +1524,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_African_Army
 		}
-		x = -2
+		x = -3
 		y = 3
 		relative_position_id = MAF_Back_To_Basics
 		ai_will_do = {
@@ -1557,7 +1560,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Improve_Logistics
 		}
-		x = 1
+		x = 2
 		y = 4
 		relative_position_id = MAF_Back_To_Basics
 		ai_will_do = {
@@ -1573,7 +1576,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Electronic_Project
-		icon = GFX_goal_generic_radar
+		icon = GFX_goal_machine
 		available = {
 			NOT = {
 				has_government = paternal_autocrat
@@ -1655,7 +1658,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Naval_Aerial_Observation
-		icon = GFX_goal_generic_air_naval_bomber2_new
+		icon = GFX_goal_DOM_Recon
 		available = {
 			NOT = {
 				has_government = paternal_autocrat
@@ -2100,7 +2103,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_afrikakorps3_1"
 			swap_ideas = {
 				remove_idea = MAF_askari2
-				add_idea = MAF_askari4
+				add_idea = MAF_askari3
 			}
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -2124,7 +2127,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_afrikakorps3_2"
 			swap_ideas = {
 				remove_idea = MAF_askari2
-				add_idea = MAF_askari3
+				add_idea = MAF_askari4
 			}
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -2398,7 +2401,7 @@ focus_tree = {
 		id = MAF_Deal_With_Europeans
 		icon = GFX_goal_generic_dangerous_deal
 		x = 32
-		y = 0
+		y = 1
 		offset = {
 			x = -12
 			trigger = { tag = GEX }
@@ -2429,7 +2432,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = MAF_Disarm_Anglos
 		}
-		x = -4
+		x = -3
 		y = 1
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2446,7 +2449,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Intergrate_Anglos
-		icon = GFX_goal_british_monarchy
+		icon = GFX_GBR_westerminster_dec
 		available = {
 			NOT = { has_completed_focus = MAF_Restore_British_Selfrule }
 			country_exists = ENT
@@ -2455,7 +2458,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Support_Anglos
 		}
-		x = -4
+		x = -3
 		y = 2
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2488,7 +2491,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Canadian_Volunteers
-		icon = GFX_goal_canada
+		icon = GFX_goal_CAN_lets_go_canada
 		available = {
 			country_exists = ENT
 			NOT = {
@@ -2500,7 +2503,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Intergrate_Anglos
 		}
-		x = -4
+		x = -3
 		y = 3
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2527,7 +2530,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = MAF_Support_Anglos
 		}
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2546,7 +2549,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Remove_Brit_Service
-		icon = GFX_goal_skull_fortification
+		icon = GFX_GBR_five_eyes
 		available = {
 			NOT = { has_completed_focus = MAF_Restore_British_Selfrule }
 		}
@@ -2554,7 +2557,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Disarm_Anglos
 		}
-		x = -2
+		x = -1
 		y = 2
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2571,7 +2574,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_German_Education_Brits
-		icon = GFX_focus_AST_never_gallipoli
+		icon = GFX_goal_KTG_Educate_natives
 		available = {
 			NOT = { has_completed_focus = MAF_Restore_British_Selfrule }
 		}
@@ -2579,7 +2582,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Remove_Brit_Service
 		}
-		x = -2
+		x = -1
 		y = 3
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2598,7 +2601,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Deal_With_British
-		icon = GFX_focus_generic_commonwealth_build_infantry
+		icon = GFX_focus_chi_british_cooperation
 		available = {
 			NOT = { has_completed_focus = MAF_Restore_British_Selfrule }
 		}
@@ -2607,7 +2610,7 @@ focus_tree = {
 			focus = MAF_Canadian_Volunteers
 			focus = MAF_German_Education_Brits
 		}
-		x = -3
+		x = -2
 		y = 4
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2634,7 +2637,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = MAF_Block_FW_Investment
 		}
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2651,7 +2654,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Grant_Cons_FW
-		icon = GFX_focus_generic_concessions
+		icon = GFX_goal_generic_coal_mining
 		available = {
 			country_exists = BEL
 			NOT = { has_war_with = BEL }
@@ -2660,7 +2663,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Attract_Belgian_Investment
 		}
-		x = 2
+		x = 1
 		y = 2
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2678,7 +2681,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Intergrate_FW
-		icon = GFX_goal_tripartite_pact
+		icon = GFX_goal_KTG_Belgian_Officers2
 		available = {
 			country_exists = BEL
 			NOT = { has_war_with = BEL }
@@ -2687,7 +2690,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Grant_Cons_FW
 		}
-		x = 2
+		x = 1
 		y = 3
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2709,7 +2712,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = MAF_Attract_Belgian_Investment
 		}
-		x = 4
+		x = 3
 		y = 1
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2727,11 +2730,11 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Seize_FW_Industries
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_Yellow_Union
 		prerequisite = {
 			focus = MAF_Block_FW_Investment
 		}
-		x = 4
+		x = 3
 		y = 2
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2767,11 +2770,11 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Expel_Alien_Nationals
-		icon = GFX_goal_step_on_skull
+		icon = GFX_goal_BEL_Belgian_Rearmement2
 		prerequisite = {
 			focus = MAF_Seize_FW_Industries
 		}
-		x = 4
+		x = 3
 		y = 3
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2796,7 +2799,7 @@ focus_tree = {
 			focus = MAF_Intergrate_FW
 			focus = MAF_Expel_Alien_Nationals
 		}
-		x = 3
+		x = 2
 		y = 4
 		relative_position_id = MAF_Deal_With_Europeans
 		ai_will_do = {
@@ -2816,8 +2819,8 @@ focus_tree = {
 	focus = {
 		id = MAF_Black_Monday
 		icon = GFX_goal_bankruptcy
-		x = 8
-		y = 7
+		x = 10
+		y = 8
 		available = { always = no }
 		cost = 0
 		completion_reward = {
@@ -2828,7 +2831,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Float_Mark
-		icon = GFX_goal_generic_price_controls
+		icon = GFX_goal_generic_banking_legislation
 		prerequisite = {
 			focus = MAF_Black_Monday
 		}
@@ -2837,7 +2840,7 @@ focus_tree = {
 				has_completed_focus = MAF_1937_Budget
 			}
 		}
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
@@ -2877,7 +2880,7 @@ focus_tree = {
 				has_completed_focus = MAF_1937_Budget
 			}
 		}
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
@@ -2915,7 +2918,7 @@ focus_tree = {
 			focus = MAF_Black_Monday
 		}
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = MAF_Black_Monday
 		cost = 0
 		completion_reward = {
@@ -2932,7 +2935,7 @@ focus_tree = {
 			focus = MAF_1937_Budget
 		}
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = MAF_Black_Monday
 		cost = 0
 		completion_reward = {
@@ -2948,7 +2951,7 @@ focus_tree = {
 			focus = MAF_1938_Budget
 		}
 		x = 2
-		y = 4
+		y = 3
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
 			factor = 40
@@ -2970,7 +2973,7 @@ focus_tree = {
 			focus = MAF_1938_Budget
 		}
 		x = 0
-		y = 4
+		y = 3
 		relative_position_id = MAF_Black_Monday
 		cost = 0
 		completion_reward = {
@@ -2987,7 +2990,7 @@ focus_tree = {
 			focus = MAF_1939_Budget
 		}
 		x = 0
-		y = 5
+		y = 4
 		relative_position_id = MAF_Black_Monday
 		cost = 0
 		completion_reward = {
@@ -3008,8 +3011,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_1937_Budget
 		}
-		x = -2
-		y = 3
+		x = -6
+		y = 2
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
 			factor = 40
@@ -3066,8 +3069,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Cape_Cairo
 		}
-		x = -2
-		y = 4
+		x = -6
+		y = 3
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
 			factor = 40
@@ -3108,12 +3111,12 @@ focus_tree = {
 			has_manpower > 10000
 			NOT = {
 				has_war_with = var:275.owner #Transvaal owner, normally SAF
-				has_war_with = var:551.owner #Khartoum owner, normally EGY
+				has_war_with = var:551.owner #Kassala-Sennar owner, normally EGY
 			}
 			969 = { is_owned_and_controlled_by_ROOT_or_ally = yes } #Rift Valley
 		}
-		x = -2
-		y = 5
+		x = -6
+		y = 4
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
 			factor = 40
@@ -3124,7 +3127,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Kampala_Khartoum"
 			add_manpower = -10000
 			var:275.owner = { country_event = mittel.105 } #Transvaal owner, normally SAF
-			var:551.owner = { country_event = mittel.106 } #Khartoum owner, normally EGY
+			var:551.owner = { country_event = mittel.106 } #Kassala-Sennar owner, normally EGY
 			add_ideas = MAF_CtC_Rail
 			969 = { #Rift Valley
 				add_extra_state_shared_building_slots = 2
@@ -3151,11 +3154,11 @@ focus_tree = {
 			has_manpower > 10000
 			NOT = {
 				has_war_with = var:271.owner #Addis Ababa owner, normally ETH
-				has_war_with = var:1011.owner #Sennar owner, normally EGY
+				has_war_with = var:551.owner #Kassala-Sennar owner, normally EGY
 			}
 		}
-		x = -2
-		y = 6
+		x = -6
+		y = 5
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
 			factor = 40
@@ -3166,7 +3169,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Connect_Addis"
 			add_manpower = -10000
 			var:271.owner = { country_event = mittel.107 } #Addis Ababa owner, normally ETH
-			var:1011.owner = { country_event = mittel.10701 } #Sennar owner, normally EGY
+			var:551.owner = { country_event = mittel.10701 } #Kassala-Sennar owner, normally EGY
 			swap_ideas = {
 				remove_idea = MAF_CtC_Rail
 				add_idea = MAF_Expanded_CtC_Rail
@@ -3180,8 +3183,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_1937_Budget
 		}
-		x = 4
-		y = 3
+		x = 5
+		y = 2
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
 			factor = 35
@@ -3209,8 +3212,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_1938_Budget
 		}
-		x = 4
-		y = 4
+		x = 6
+		y = 3
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
 			factor = 35
@@ -3264,8 +3267,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_1939_Budget
 		}
-		x = 4
-		y = 5
+		x = 6
+		y = 4
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
 			factor = 35
@@ -3294,8 +3297,8 @@ focus_tree = {
 			focus = MAF_1938_Budget
 		}
 		available = { has_war = yes }
-		x = 8
-		y = 4
+		x = 4
+		y = 3
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
 			factor = 35
@@ -3343,8 +3346,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_1937_Budget
 		}
-		x = 6
-		y = 3
+		x = -3
+		y = 2
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
 			factor = 35
@@ -3379,8 +3382,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_1938_Budget
 		}
-		x = 6
-		y = 4
+		x = -3
+		y = 3
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
 			factor = 35
@@ -3413,8 +3416,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Improved_Resource_Extraction
 		}
-		x = 6
-		y = 5
+		x = -3
+		y = 4
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
 			factor = 35
@@ -3448,8 +3451,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Post_War_Budget
 		}
-		x = 6
-		y = 6
+		x = -3
+		y = 5
 		relative_position_id = MAF_Black_Monday
 		ai_will_do = {
 			factor = 35
@@ -3479,7 +3482,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Military_Reforms
-		icon = GFX_goal_national_arsenal
+		icon = GFX_goal_generic_army_command_power
 		x = 23
 		y = 8
 		offset = {
@@ -3513,7 +3516,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Military_Reforms
 		}
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
@@ -3543,7 +3546,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Undefeated_Army
 		}
-		x = -2
+		x = -1
 		y = 2
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
@@ -3569,11 +3572,11 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Sturdy_Trucks
-		icon = GFX_goal_generic_army_motorized
+		icon = GFX_goal_generic_armored_cars
 		prerequisite = {
 			focus = MAF_Undefeated_Army
 		}
-		x = -4
+		x = -3
 		y = 2
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
@@ -3603,7 +3606,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Sturdy_Trucks
 		}
-		x = -3
+		x = -2
 		y = 3
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
@@ -3629,11 +3632,11 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Modern_Support_Divs
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_support_equipment
 		prerequisite = {
 			focus = MAF_Modern_Tactics
 		}
-		x = -2
+		x = -1
 		y = 4
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
@@ -3659,11 +3662,11 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Light_Infantry
-		icon = GFX_focus_RAJ_indian_gurkhas
+		icon = GFX_goal_generic_mountain_warfare
 		prerequisite = {
 			focus = MAF_Modern_Tactics
 		}
-		x = -4
+		x = -3
 		y = 4
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
@@ -3696,7 +3699,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Light_Infantry
 		}
-		x = -3
+		x = -2
 		y = 5
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
@@ -3724,7 +3727,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Military_Reforms
 		}
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
@@ -3756,7 +3759,7 @@ focus_tree = {
 			focus = MAF_Establish_Airforce
 		}
 		mutually_exclusive = { focus = MAF_Merc_Pilots}
-		x = 5
+		x = 3
 		y = 2
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
@@ -3785,7 +3788,7 @@ focus_tree = {
 			focus = MAF_Establish_Airforce
 		}
 		mutually_exclusive = { focus = MAF_African_Pilots}
-		x = 3
+		x = 1
 		y = 2
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
@@ -3806,12 +3809,12 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Bomber_Aircraft
-		icon = GFX_goal_generic_air_bomber_new
+		icon = GFX_goal_generic_air_tactical_bomber_new
 		prerequisite = {
 			focus = MAF_Establish_Airforce
 		}
-		x = 1
-		y = 2
+		x = 2
+		y = 3
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
 			factor = 20
@@ -3842,8 +3845,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Bomber_Aircraft
 		}
-		x = 2
-		y = 3
+		x = 3
+		y = 4
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
 			factor = 20
@@ -3887,8 +3890,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Bomber_Aircraft
 		}
-		x = 0
-		y = 3
+		x = 1
+		y = 4
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
 			factor = 20
@@ -3940,8 +3943,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MAF_Afrikan_Air_Industry
 		}
-		x = 1
-		y = 4
+		x = 2
+		y = 5
 		relative_position_id = MAF_Military_Reforms
 		ai_will_do = {
 			factor = 10

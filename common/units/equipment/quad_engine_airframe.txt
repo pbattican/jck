@@ -2,7 +2,6 @@ equipments = {
 	
 	strat_bomber_equipment = {
 		year = 1933
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_strat_bomber_equipment			
@@ -44,7 +43,6 @@ equipments = {
 	
 	jet_strat_bomber_equipment = {
 		year = 1933
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_strat_bomber_equipment			
@@ -134,6 +132,7 @@ equipments = {
 		fuel_consumption = 1.23
 		build_cost_ic = 114
 	}
+
 	# Improved strat_bomber
 	strat_bomber_equipment_1939 = {
 		year = 1939
@@ -175,6 +174,7 @@ equipments = {
 		}
 	
 	}
+
 	# Advanced strat_bomber
 	strat_bomber_equipment_1941 = {
 		year = 1941
@@ -342,6 +342,7 @@ equipments = {
 
 	transport_plane_equipment_1 = {
 		year = 1933
+
 		archetype = transport_plane_equipment
 		priority = 130
 		
@@ -352,3 +353,4 @@ equipments = {
 		supply_consumption = 0.18
 	}	
 }
+

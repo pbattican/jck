@@ -810,9 +810,11 @@ equipments = {
 		
 		build_cost_ic = 22
 	}
+
 	# 1939
 	medium_tank_destroyer_equipment_1939= {
 		year = 1939
+
 		archetype = medium_tank_destroyer_equipment
 		family = medium_tank_equipment_1939
 		priority = 80
@@ -868,9 +870,11 @@ equipments = {
 		
 		build_cost_ic = 24	
 	}
+
 	# 1941
 	medium_tank_destroyer_equipment_1941 = {
 		year = 1941
+
 		archetype = medium_tank_destroyer_equipment
 		parent = medium_tank_destroyer_equipment_1939
 		family = medium_tank_equipment_1941
@@ -927,9 +931,11 @@ equipments = {
 		
 		build_cost_ic = 26	
 	}
+
 	# 1943
 	medium_tank_destroyer_equipment_1943 = {
 		year = 1943
+
 		archetype = medium_tank_destroyer_equipment
 		parent = medium_tank_destroyer_equipment_1941
 		family = medium_tank_equipment_1943
@@ -1018,6 +1024,7 @@ equipments = {
 
 	medium_tank_aa_equipment_1939 = {   # 1939
 		year = 1939
+
 		archetype = medium_tank_aa_equipment
 		family = medium_tank_equipment_1939
 		priority = 70
@@ -1079,6 +1086,7 @@ equipments = {
 	}
 	medium_tank_aa_equipment_1941 = {   # 1941
 		year = 1941
+
 		archetype = medium_tank_aa_equipment
 		parent = medium_tank_aa_equipment_1939
 		family = medium_tank_equipment_1941
@@ -1141,6 +1149,7 @@ equipments = {
 	}
 	medium_tank_aa_equipment_1943 = {   # 1943
 		year = 1943
+
 		archetype = medium_tank_aa_equipment
 		parent = medium_tank_aa_equipment_1941
 		family = medium_tank_equipment_1943
@@ -1200,3 +1209,4 @@ equipments = {
 		build_cost_ic = 34
 	}			
 }
+

@@ -463,6 +463,7 @@ equipments = {
 	
 	light_tank_artillery_equipment_1941 = {
 		year = 1941
+
 		archetype = light_tank_artillery_equipment
 		parent = light_tank_artillery_equipment_1938
 		family = light_tank_equipment_1941
@@ -632,6 +633,7 @@ equipments = {
 	}
 	light_tank_destroyer_equipment_1941 = {
 		year = 1941
+
 		archetype = light_tank_destroyer_equipment
 		parent = light_tank_destroyer_equipment_1938
 		family = light_tank_equipment_1941
@@ -802,6 +804,7 @@ equipments = {
 	
 	light_tank_aa_equipment_1941 = {
 		year = 1941
+
 		archetype = light_tank_aa_equipment
 		parent = light_tank_aa_equipment_1938
 		family = light_tank_equipment_1941
@@ -888,3 +891,4 @@ equipments = {
 	}
 	
 }
+

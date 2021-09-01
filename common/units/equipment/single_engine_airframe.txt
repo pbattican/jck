@@ -3,7 +3,6 @@ equipments = {
 
 	fighter_equipment = {
 		year = 1933
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
@@ -47,7 +46,6 @@ equipments = {
 
 	cv_fighter_equipment = {
 		year = 1933
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_fighter_equipment
@@ -135,7 +133,6 @@ equipments = {
 
 	cv_CAS_equipment = {
 		year = 1933
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_CAS_equipment			
@@ -178,9 +175,9 @@ equipments = {
 		fuel_consumption = 0.39
 		manpower = 20
 	}
+
 	nav_bomber_equipment = {
 		year = 1933
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_heavy_fighter_equipment		
@@ -219,9 +216,9 @@ equipments = {
 		fuel_consumption = 0.42
 		manpower = 20
 	}
+
 	cv_nav_bomber_equipment = {
 		year = 1933
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_heavy_fighter_equipment
@@ -298,6 +295,7 @@ equipments = {
 			aluminium = 3
 			tungsten = 2		
 		}
+
 		manpower = 40
 		fuel_consumption = 0.63
 	}
@@ -476,6 +474,8 @@ equipments = {
 		}
 		fuel_consumption = 0.19
 	}
+
+
 	# Basic Jet Fighter
 	jet_fighter_equipment_1945 = {   #### Uneven Lurch of stats bc jets
 		archetype = jet_fighter_equipment
@@ -489,6 +489,7 @@ equipments = {
 		build_cost_ic = 66
 		fuel_consumption = 0.51
 	}
+
 	# Improved Jet Fighter
 	jet_fighter_equipment_1947 = {  
 		archetype = jet_fighter_equipment
@@ -1039,7 +1040,6 @@ equipments = {
 	# ROCKET INTERCEPTORS ###############
 	rocket_interceptor_equipment = {
 		year = 1936
-
 		is_archetype = yes
 		is_convertable = yes
 		can_license = no
@@ -1143,7 +1143,6 @@ equipments = {
 	# ROCKET INTERCEPTORS ###############
 	suicide_craft_equipment = {
 		year = 1936
-
 		is_archetype = yes
 		is_convertable = no
 		can_license = no
@@ -1193,3 +1192,4 @@ equipments = {
 	}
 	
 }
+

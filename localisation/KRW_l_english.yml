@@ -7,6 +7,7 @@
  CAN_remove_POR:0 "Remove Portugal from the Entente"
  CAN_remove_SRD:0 "Remove Sardinia from the Entente"
  CAN_integrate_icelands_defences:0 "Integrate Iceland and its defenses"
+ CAN_integrate_cape_verde:0 "Integrate Cape Verde"
 
  FNG_foreign_affairs:0 "Fengtian Foreign Affairs"
  FNG_join_cp_tech:0 "Join the Co-Pro Technology Group"

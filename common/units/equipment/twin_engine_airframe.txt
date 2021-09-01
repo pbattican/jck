@@ -2,7 +2,6 @@ equipments = {
     
 	heavy_fighter_equipment = {
 		year = 1933
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_strat_bomber_equipment			
@@ -85,7 +84,6 @@ equipments = {
 	}
     tac_bomber_equipment = {
 		year = 1933
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_strat_bomber_equipment		
@@ -281,6 +279,7 @@ equipments = {
 		build_cost_ic = 81
 		fuel_consumption = 0.57
 	}
+
 	# Improved tac_bomber
 	tac_bomber_equipment_1939 = {
 		archetype = tac_bomber_equipment
@@ -320,6 +319,7 @@ equipments = {
 		}
 		fuel_consumption = 0.6
 	}
+
 	# Advanced tac_bomber
 	tac_bomber_equipment_1941 = {
 		archetype = tac_bomber_equipment
@@ -453,9 +453,9 @@ equipments = {
 		air_ground_attack = 35.5
 		naval_strike_attack = 26
 	}
+
 	scout_plane_equipment = {
 		year = 1933
-
 		is_archetype = yes
 		is_convertable = yes
 		picture = archetype_strat_bomber_equipment			
@@ -531,3 +531,4 @@ equipments = {
 		naval_strike_targetting = 0
 	}
 }
+

@@ -90,6 +90,7 @@ equipments = {
 		}
 		fuel_consumption = 2.2
 	}
+
 	heavy_tank_artillery_equipment = {
 		is_archetype = yes
 		is_buildable = no
@@ -136,6 +137,7 @@ equipments = {
 		}	
         fuel_consumption = 2.2		
 	}
+
 	heavy_tank_destroyer_equipment = {
 		is_archetype = yes
 		is_buildable = no
@@ -587,7 +589,6 @@ equipments = {
 		can_convert_from = {
 			heavy_tank_equipment_1943			
 		}
-
 		#Misc Abilities
 		maximum_speed = 6.5
 		reliability = 0.69
@@ -1012,3 +1013,4 @@ equipments = {
 	}
    
 }
+

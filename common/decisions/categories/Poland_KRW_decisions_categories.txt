@@ -1,7 +1,7 @@
-PRF_foreign_affairs = {
+POL_air_effort = {
 	icon = GFX_decision_category_military_operation
 
 	allowed = {
-		original_tag = PRF
+		original_tag = POL
 	}
 }
