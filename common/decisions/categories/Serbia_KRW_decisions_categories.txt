@@ -1,7 +1,7 @@
-JAP_industrial_effort = {
+SER_foreign_policy = {
 	icon = GFX_decision_category_military_operation
 
 	allowed = {
-		original_tag = JAP
+		original_tag = SER
 	}
 }

@@ -11,6 +11,7 @@ state = {
 			}
 		}
 		add_core_of = CAF
+		add_claim_by = GUA
 		victory_points = {
 			2077 1
 		}

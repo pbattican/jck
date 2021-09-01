@@ -17,12 +17,8 @@ MIE_decisions = {
 		}
 	}
 	visible = {
-		is_in_faction_with = MIE
-		is_in_faction_with = GER
-		### This is disabled on purpose to allow the mechanic being playable
-		###OR = {
-		###	RUS = { is_faction_leader = yes }
-		###	SOV = { has_completed_focus = SOV_Spreading_The_Revolution }
-		###}
+		has_global_flag = MIE_intermarium_formed
+		has_country_flag = MIE_member
 	}
 }
+

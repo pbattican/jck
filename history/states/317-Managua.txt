@@ -28,3 +28,4 @@ state = {
 	manpower = 533679
 	state_category = two
 }
+
