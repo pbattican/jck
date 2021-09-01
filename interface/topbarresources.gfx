@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 spriteTypes = {
 
 	spriteType = {
@@ -7,3 +8,12 @@ spriteTypes = {
 
 
 }
+||||||| bf5a36b4
+=======
+spriteTypes = {
+	spriteType = {
+		name = "GFX_button_transparent2"
+		texturefile = "gfx/interface/button_transparent2.dds"
+	}
+}
+>>>>>>> krw_submod_master

@@ -121,9 +121,10 @@ ideas = {
 			}
 			picture = ENG_the_war_to_end_all_wars
 		}
-
-		USA_civil_war_depression_idea = { #Civil War Depression
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_civil_war_depression_idea" }
+		USA_civil_war_depression_idea = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea USA_civil_war_depression_idea"
+			}
 			picture = SPA_recovering_from_the_civil_war
 			modifier = {
 				production_factory_max_efficiency_factor = -0.15
@@ -131,7 +132,18 @@ ideas = {
 				production_speed_buildings_factor = -0.15
 			}
 		}
-
+		USA_civil_war_depression_idea_2 = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea USA_civil_war_depression_idea_2"
+			}
+			name = USA_civil_war_depression_idea
+			picture = SPA_recovering_from_the_civil_war
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
 		USA_native_code_talkers_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_native_code_talkers_idea" }
 			available = {
@@ -231,15 +243,6 @@ ideas = {
 				training_time_factor = -0.1
 			}
 		}
-		USA_economic_recovery_idea = { #Civil War Recovery
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_economic_recovery_idea" }
-			picture = SPA_recovering_from_the_civil_war
-			modifier = {
-				production_factory_max_efficiency_factor = -0.05
-				industrial_capacity_factory = -0.05
-				production_speed_buildings_factor = -0.05
-			}
-		}
 		amcviwar_ready_to_surrender = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea amcviwar_ready_to_surrender" }
 			available = {
@@ -254,9 +257,12 @@ ideas = {
 			}
 			picture = generic_morale_bonus
 		}
-		### Fair Deal Ideas ###	
-		USA_recovering_economy_idea = { #Recovering Economy
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_recovering_economy_idea" }
+		### Fair Deal Ideas ###
+		USA_recovering_economy_idea = {
+			#Recovering Economy
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea USA_recovering_economy_idea"
+			}
 			picture = can_wartime_prices_and_trade_board
 			modifier = {
 				production_factory_max_efficiency_factor = -0.10
@@ -1075,7 +1081,12 @@ ideas = {
 			on_remove = {
 				log = "[GetDateText]: [Root.GetName]: remove idea USA_league_of_america_1"
 				if = {
-					limit = { NOT = { has_idea = USA_league_of_america_2 } } #== swap_ideas
+					limit = {
+						NOT = {
+							has_idea = USA_league_of_america_2
+						}
+					}
+					#== swap_ideas
 					country_event = ustates.259
 				}
 			}

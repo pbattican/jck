@@ -114,8 +114,12 @@ country_event = {
 			MAF = { country_event = capt.2 }
 		}
 		else = {
-			MAF = { change_tag_from = ROOT }
-			hidden_effect = { country_event = capt.21 }
+			MAF = {
+				change_tag_from = ROOT
+			}
+			hidden_effect = {
+				country_event = capt.21
+			}
 		}
 	}
 	option = {
@@ -160,9 +164,13 @@ country_event = {
 	}
 
 	option = {
-		name = capt.2.b #Welcome the exiled government and give in to their demands
-		custom_effect_tooltip = MAF_player_becomes_GEX
-		country_event = capt.4
+		name = capt.2.b		#Welcome the exiled government and give in to their demands
+		effect_tooltip = {
+			set_cosmetic_tag = MAF_germany_in_exile
+		}
+		GER = {
+			country_event = capt.4
+		}
 	}
 }
 
@@ -197,8 +205,12 @@ country_event = {
 
 	option = {
 		name = capt.4.a
-		MAF = { change_tag_from = ROOT }
-		hidden_effect = { country_event = capt.21 }
+		MAF = {
+			change_tag_from = ROOT
+		}
+		hidden_effect = {
+			country_event = capt.21
+		}
 	}
 }
 
@@ -631,11 +643,9 @@ country_event = {
 								tag = INS
 							}
 						}
-						# START OF: Dedicated KRW peace handling
 						AND = {
 							tag = AUS
 						}
-						# END OF: Dedicated KRW peace handling
 						is_actual_neighbor_of_ROOT_or_ally = yes
 						any_owned_state = {
 							is_coastal = yes
