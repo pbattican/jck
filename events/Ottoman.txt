@@ -6696,12 +6696,7 @@ country_event = {	#Istanbul Pact - Invite
 			modifier = {
 				tag = AZR
 				factor = 0
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					tag = MOR
-				}
+				FROM = { tag = MOR }
 				OR = {
 					has_game_rule = {
 						rule = MOR_foreign_policy
