@@ -69,6 +69,7 @@ technology_categories = {
 	marine_tech
 	mountaineers_tech
 	construction_tech
+	excavation_tech
 	submarine_doctrine
 	air_equipment
 	cat_mobile_warfare
