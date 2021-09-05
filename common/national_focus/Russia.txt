@@ -3865,7 +3865,8 @@ focus_tree = {
 				name = RUS_Armour_Modernisation
 				bonus = 1
 				uses = 1
-				category = armor
+				category = cat_light_armor
+				category = cat_medium_armor
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
