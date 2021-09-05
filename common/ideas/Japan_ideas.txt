@@ -2208,7 +2208,7 @@ ideas = {
 				}
 			}
 			traits = {
-				cruiser_producer_offense_1
+				small_ship_producer_offense_1
 			}
 			research_bonus = {
 				naval_equipment = 0.1
