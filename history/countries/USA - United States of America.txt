@@ -437,7 +437,7 @@ create_field_marshal = {# Douglas MacArthur
 	attack_skill = 3
 	defense_skill = 2
 	planning_skill = 3
-	logistics_skill = 1
+	logistics_skill = 2
 	id = 56
 }
 create_field_marshal = {# Malin Craig
@@ -451,7 +451,7 @@ create_field_marshal = {# Malin Craig
 	}
 	skill = 3
 	attack_skill = 1
-	defense_skill = 1
+	defense_skill = 2
 	planning_skill = 3
 	logistics_skill = 4
 	id = 932
@@ -467,7 +467,7 @@ create_field_marshal = {# George Marshall
 		organizer
 	}
 	skill = 3
-	attack_skill = 2
+	attack_skill = 3
 	defense_skill = 2
 	planning_skill = 3
 	logistics_skill = 2
@@ -488,7 +488,7 @@ create_corps_commander = {# Henry H. Arnold
 	attack_skill = 3
 	defense_skill = 2
 	planning_skill = 2
-	logistics_skill = 2
+	logistics_skill = 3
 	id = 58
 }
 create_corps_commander = {# Clarence Huebner
@@ -501,7 +501,7 @@ create_corps_commander = {# Clarence Huebner
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
-	planning_skill = 2
+	planning_skill = 1
 	logistics_skill = 1
 	id = 952
 }
@@ -515,7 +515,7 @@ create_corps_commander = {# Edward H. Brooks
 	}
 	skill = 1
 
-	attack_skill = 2
+	attack_skill = 1
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 1
@@ -534,7 +534,7 @@ create_corps_commander = {# Geoffrey Keyes
 	attack_skill = 1
 	defense_skill = 1
 	planning_skill = 1
-	logistics_skill = 2
+	logistics_skill = 1
 	id = 954
 }
 create_corps_commander = {# Jonathan M. Wainwright
@@ -567,7 +567,7 @@ create_corps_commander = {# Joseph Stilwell
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 1
-	id = 956 #I dunno but I feel someone in China will thank me for this
+	id = 956
 }
 create_corps_commander = {# Leonard Gerow
 	name = "Leonard Gerow"
@@ -576,7 +576,7 @@ create_corps_commander = {# Leonard Gerow
 	traits = { armor_officer }
 	skill = 2
 	attack_skill = 2
-	defense_skill = 1
+	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 2
 	id = 957
@@ -586,7 +586,6 @@ create_corps_commander = {# Lesley McNair
 	desc = "USA_LESLIE_MCNAIR_ARMY_DESC"
 	portrait_path = "gfx/leaders/USA/Portrait_USA_Lesley_McNair_KR.png"
 	traits = {
-		old_guard
 		career_officer
 		artillery_officer
 	}
@@ -595,7 +594,7 @@ create_corps_commander = {# Lesley McNair
 	attack_skill = 1
 	defense_skill = 1
 	planning_skill = 3
-	logistics_skill = 1
+	logistics_skill = 2
 	id = 958
 }
 create_corps_commander = {# Lloyd Fredendall
@@ -609,10 +608,10 @@ create_corps_commander = {# Lloyd Fredendall
 	}
 	skill = 1
 
-	attack_skill = 2
+	attack_skill = 1
 	defense_skill = 1
 	planning_skill = 1
-	logistics_skill = 2
+	logistics_skill = 1
 	id = 959
 }
 create_corps_commander = {# Lucian Truscott
@@ -629,7 +628,7 @@ create_corps_commander = {# Lucian Truscott
 	attack_skill = 2
 	defense_skill = 2
 	planning_skill = 1
-	logistics_skill = 1
+	logistics_skill = 2
 	id = 934
 }
 create_corps_commander = {# Walter Krueger
@@ -645,7 +644,7 @@ create_corps_commander = {# Walter Krueger
 
 	attack_skill = 2
 	defense_skill = 2
-	planning_skill = 1
+	planning_skill = 2
 	logistics_skill = 1
 	id = 961
 }
@@ -692,10 +691,10 @@ create_corps_commander = {# Dwight D. Eisenhower
 		armor_officer
 	}
 	skill = 2
-	attack_skill = 2
+	attack_skill = 1
 	defense_skill = 2
 	planning_skill = 2
-	logistics_skill = 3
+	logistics_skill = 2
 	id = 950
 }
 
@@ -706,7 +705,7 @@ create_corps_commander = {# Daniel Van Voorhis
 	traits = {commando}
 	skill = 2
 	attack_skill = 2
-	defense_skill = 2
+	defense_skill = 1
 	planning_skill = 2
 	logistics_skill = 2
 	id = 647
@@ -737,7 +736,7 @@ create_corps_commander = {# James Garesche Ord
 		panzer_leader
 	}
 	skill = 1
-	attack_skill = 2
+	attack_skill = 1
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 1
@@ -754,7 +753,7 @@ create_corps_commander = {# Edwin F. Harding
 	}
 	skill = 3
 	attack_skill = 3
-	defense_skill = 1
+	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 3
 	id = 965
@@ -771,7 +770,7 @@ create_corps_commander = {# Smedley Butler
 	}
 	skill = 3
 	attack_skill = 2
-	defense_skill = 1
+	defense_skill = 2
 	planning_skill = 3
 	logistics_skill = 3
 	id = 60
@@ -799,8 +798,8 @@ create_corps_commander = {# George Van Horn Moseley
 	skill = 2
 	attack_skill = 1
 	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
 	id = 59
 }
 create_corps_commander = {# George S. Patton Jr.
@@ -837,12 +836,12 @@ create_corps_commander = {# Fox Conner
 }
 create_corps_commander = {# John Lesesne DeWitt
 	name = "John L. DeWitt"
+	desc = "USA_JOHN_DEWITT_ARMY_DESC"
 	portrait_path = "gfx/leaders/PSA/Portrait_PSA_John_Lesesne_DeWitt.png"
 	traits = {
 		inflexible_strategist
 		trait_cautious
 	}
-	desc = "USA_JOHN_DEWITT_ARMY_DESC"
 	skill = 3
 	attack_skill = 2
 	defense_skill = 3
@@ -1055,3 +1054,4 @@ if = {
 		nationalities = { CSA USA TEX PSA NEE }
 	}
 }
+

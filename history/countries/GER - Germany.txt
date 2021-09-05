@@ -34,7 +34,6 @@ set_technology = {
 	tech_mountaineers = 1
 	special_equipment = 1
 	marines = 1
-	paratroopers = 1
 	################## artillery ###############
 	artillery1 = 1 
 	gw_pack_artillery = 1
@@ -55,7 +54,6 @@ set_technology = {
 	############## economy ################
 	starting_industry = 1
 }
-
 if = {
 	limit = {
 		has_dlc = "La Resistance"
@@ -66,6 +64,7 @@ if = {
 }
 
 ### Navy - MtG ###
+
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
@@ -85,6 +84,7 @@ if = {
 		ship_hull_super_heavy = 1
 		cruiser_submarines = 1
 		panzerschiffe = 1
+
 		## Modules##
 		basic_torpedo = 1
 		basic_battery = 1
@@ -100,12 +100,14 @@ if = {
 		basic_depth_charges = 1
 		submarine_mine_laying = 1
 		pre_dreadnoughts = 1
+
 		### Transport ###
 		mtg_transport = 1
 	}
 }
 
 ### Navy - Non MtG ###
+
 if = {
 	limit = {
 		NOT = {
@@ -127,6 +129,7 @@ if = {
 		heavy_battleship = 1
 		early_carrier = 1
 		basic_carrier = 1
+
 		### Transport ###
 		transport = 1
 	}
@@ -135,7 +138,7 @@ if = {
 POL = { give_military_access = GER }
 GEO = { give_military_access = GER }
 AZR = { give_military_access = GER }
-OTT = { give_military_access = GER }
+TUR = { give_military_access = GER }
 ETH = { give_military_access = GER }
 
 give_guarantee = GEO
@@ -146,12 +149,10 @@ add_to_array = { GEO.guarantor_array = GER }
 set_research_slots = 5
 set_convoys = 400
 set_stability = 0.6
+
 set_global_flag = GER_has_oil
 
-add_opinion_modifier = {
-	target = MAF
-	modifier = colonial_master
-}
+diplomatic_relation = { country = AUS relation = non_aggression_pact }
 
 add_opinion_modifier = { target = MAF modifier = colonial_master }
 add_opinion_modifier = { target = GEA modifier = colonial_master }
@@ -187,6 +188,7 @@ add_to_faction = UKR
 add_to_faction = MOR
 add_to_faction = MAF
 add_to_faction = GEA
+
 # Mitteleuropa
 every_country = {
 	limit = {
@@ -233,7 +235,7 @@ country_event = { id = gerdom.41 days = 1354 } #Otto Wels dies
 country_event = { id = gerdom.63 days = 1374 } #Johann von Bernstorff dies
 country_event = { id = gerdom.4700 days = 1981 } #Death of Wilhelm II
 country_event = { id = gerdom.64 days = 2908 } #Ludwig von Reuter dies
-country_event = { id = gerdom.65 days = 3566 } #Reichskanzler Vogel dies
+country_event = { id = gerdom.49 days = 3566 } #Reichskanzler Vogel dies
 country_event = { id = gerdom.65 days = 3665 } #Wilhelm Souchon dies
 country_event = { id = gerdom.66 days = 4408 } #Georg Bruchmüller dies
 MAF = {
@@ -242,45 +244,12 @@ MAF = {
 }
 
 # End WK2 AI boosts
-country_event = {
-	id = ai_events.302
-	days = 2558
-}
-
-FRA = {
-	country_event = {
-		id = ai_events.302
-		days = 2558
-	}
-}
-
-ENG = {
-	country_event = {
-		id = ai_events.302
-		days = 2558
-	}
-}
-
-RUS = {
-	country_event = {
-		id = ai_events.302
-		days = 2558
-	}
-}
-
-SOV = {
-	country_event = {
-		id = ai_events.302
-		days = 2558
-	}
-}
-
-AUS = {
-	country_event = {
-		id = ai_events.302
-		days = 2558
-	}
-}
+country_event = { id = ai_events.302 days = 2558 }
+FRA = { country_event = { id = ai_events.302 days = 2558 } }
+ENG = { country_event = { id = ai_events.302 days = 2558 } }
+RUS = { country_event = { id = ai_events.302 days = 2558 } }
+SOV = { country_event = { id = ai_events.302 days = 2558 } }
+AUS = { country_event = { id = ai_events.302 days = 2558 } }
 
 create_country_leader = {
 	name = "Heinrich Claß"
@@ -362,10 +331,7 @@ create_field_marshal = {
 	name = "Gerd von Rundstedt"
 	desc = "POLITICS_GERD_VON_RUNDSTEDT_DESC"
 	picture = "Portrait_Germany_Gerd_von_Rundstedt_kr.png"
-	traits = {
-		defensive_doctrine
-		offensive_doctrine
-	}
+	traits = { defensive_doctrine offensive_doctrine }
 	skill = 4
 	attack_skill = 2
 	defense_skill = 3
@@ -377,13 +343,7 @@ create_field_marshal = {
 	name = "Rupprecht von Bayern"
 	desc = "POLITICS_RUPPRECHT_VON_BAYERN_DESC"
 	picture = "Portrait_Germany_Rupprecht_Bayern_kr.png"
-	traits = {
-		trait_cautious
-		inflexible_strategist
-		defensive_doctrine
-		organizer
-		thorough_planner
-	}
+	traits = { trait_cautious inflexible_strategist defensive_doctrine organizer thorough_planner }
 	skill = 4
 	attack_skill = 2
 	defense_skill = 4

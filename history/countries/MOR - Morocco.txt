@@ -218,3 +218,4 @@ create_navy_leader = {
 	maneuvering_skill = 1
 	coordination_skill = 1
 }
+

@@ -86,7 +86,7 @@ add_ideas = {
 	SQI_dogmeat_general
 	SQI_honored_master
 	SQI_flight_north
-	
+
 	partial_economic_mobilisation
 
 	SQI_Chu_Yupu_hog_pau
@@ -95,24 +95,24 @@ add_ideas = {
 	SQI_Wang_Xugao_sec_pau
 }
 
-country_event = { 
-	id = shandong.1 
-	days = 1 
+country_event = {
+	id = shandong.1
+	days = 1
 }
 
-country_event = { 
+country_event = {
 	id = shandong.435 #Zonchang's death
 	days = 4018
 	random = 4320
 }
 
-country_event = { 
+country_event = {
 	id = shandong.436 #Tianran's death
 	days = 4018
 	random = 4320
 }
 
-country_event = { 
+country_event = {
 	id = shandong.437 #Zheyuan's death
 	days = 4018
 	random = 4320
@@ -181,7 +181,7 @@ create_field_marshal = {
 	logistics_skill = 1
 
 	id = 1305
-	
+
 }
 
 create_field_marshal = {
@@ -197,7 +197,7 @@ create_field_marshal = {
 	defense_skill = 1
 	planning_skill = 2
 	logistics_skill = 3
-	
+
 	id = 1190
 }
 
@@ -215,7 +215,7 @@ create_field_marshal = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 3
-	
+
 	id = 1191
 }
 ### Corps Commanders ###
@@ -233,7 +233,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
-	
+
 	id = 1192
 }
 
@@ -249,7 +249,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 2
-	
+
 	id = 1193
 }
 
@@ -266,7 +266,7 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 2
-	
+
 	id = 1194
 }
 
@@ -283,7 +283,7 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 2
-	
+
 	id = 1195
 }
 
@@ -301,7 +301,7 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 2
-	
+
 	id = 1196
 }
 
@@ -319,7 +319,7 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 3
 	logistics_skill = 2
-	
+
 	id = 1197
 }
 
@@ -407,7 +407,7 @@ create_corps_commander = {
 	defense_skill = 3
 	planning_skill = 2
 	logistics_skill = 3
-	
+
 	id = 1306
 }
 
@@ -445,3 +445,4 @@ create_navy_leader = {
 
 	id = 1303
 }
+

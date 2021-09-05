@@ -54,11 +54,6 @@ add_ideas = {
 country_lock_all_division_template = yes
 add_offsite_building = {
 	type = arms_factory
-	level = 2
-}
-
-add_offsite_building = {
-	type = industrial_complex
 	level = 1
 }
 
@@ -423,3 +418,4 @@ random_unit_leader = {
 	limit = { has_id = 1139 }
 	save_global_event_target_as = SZC_Pan_Wenhua
 }
+

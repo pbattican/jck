@@ -184,3 +184,4 @@ random_unit_leader = {
 	limit = { has_id = 28004 }
 	save_global_event_target_as = GAL_Wladyslaw_Sikorski
 }
+
