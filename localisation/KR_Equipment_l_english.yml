@@ -261,9 +261,9 @@
 
  medium_tank_equipment:0 "Medium Tank"
  medium_tank_equipment_desc:0 "Medium Tanks are reasonably agile multi-purpose tanks which are able to take on many roles such as scouts, support, or even front-line tanks."
- medium_tank_equipment_1:0 "Medium Tank I"
- medium_tank_equipment_1_short:0 "M. Tank I"
- medium_tank_equipment_1_desc:0 "Medium Tanks are reasonably agile multi-purpose tanks which are able to take on many roles such as scouts, support, or even front-line tanks."
+ medium_tank_equipment_1939:0 "Medium Tank I"
+ medium_tank_equipment_1939_short:0 "M. Tank I"
+ medium_tank_equipment_1939_desc:0 "Medium Tanks are reasonably agile multi-purpose tanks which are able to take on many roles such as scouts, support, or even front-line tanks."
  medium_tank_equipment_2:0 "Medium Tank II"
  medium_tank_equipment_2_short:0 "M. Tank II"
  medium_tank_equipment_2_desc:0 "Medium Tanks are reasonably agile multi-purpose tanks which are able to take on many roles such as scouts, support, or even front-line tanks."
@@ -387,9 +387,9 @@
 
  modern_tank_equipment:1 "Modern Tank"
  modern_tank_equipment_desc:0 "Modern Tanks are agile multi-purpose tanks which are able to take on many roles such as scouts, support, or even front-line tanks."
- modern_tank_equipment_1:1 "Modern Tank"
- modern_tank_equipment_1_short:1 "Mod. Tank"
- modern_tank_equipment_1_desc:0 "Modern Tanks are agile multi-purpose tanks which are able to take on many roles such as scouts, support, or even front-line tanks."
+ medium_tank_equipment_1945:1 "Modern Tank"
+ medium_tank_equipment_1945_short:1 "Mod. Tank"
+ medium_tank_equipment_1945_desc:0 "Modern Tanks are agile multi-purpose tanks which are able to take on many roles such as scouts, support, or even front-line tanks."
 
  modern_tank_artillery_equipment:0 "Modern SP Artillery"
  modern_tank_artillery_equipment_desc:0 "Modern self-propelled artillery vehicles may superficially resemble tanks, but they are generally lightly armoured, too lightly to survive in direct-fire combat. However, they protect their crews against shrapnel and small arms."
@@ -775,8 +775,8 @@
  ARG_light_tank_equipment_2_short:0 "KPz M.38"
  ARG_light_tank_equipment_2_desc:0 "Even as the first KPz M.35 were coming off the production line, the Austrian army was already looking for new cavalry tank. In the following design competition multiple domestic and foreign designs were considered, but in the end, the army chose one of the TNH models from ČKD. Just as with the M.35, TNHP had a two-man turret and an improved 37mm gun, but the M.38 improved on the M.35's armour, engine and possessed much simpler and reliable running gears. While due to Black-Monday, the first units wouldn't enter service until 1938, the Argentine army would secure the right to produce the design domestically that same year."
 
- ARG_medium_tank_equipment_2:0 "Nahuel D.L. 43"
- ARG_medium_tank_equipment_2_short:0 "Nahuel"
+ ARG_medium_tank_equipment_1941:0 "Nahuel D.L. 43"
+ ARG_medium_tank_equipment_1941_short:0 "Nahuel"
 
 ###
 ### Anqing Clique ###
@@ -925,12 +925,12 @@
  AST_light_tank_equipment_3:0 "Vickers A18 'Valentine'"
  AST_light_tank_equipment_3_short:0 "A18 'Valentine'"
 
- AST_medium_tank_equipment_1:0 "Montreal Locomotive Works A15 'Ram'"
- AST_medium_tank_equipment_1_short:0 "A15 'Ram'"
- AST_medium_tank_equipment_2:0 "Montreal Locomotive Works A27 'Grizzly'"
- AST_medium_tank_equipment_2_short:0 "A27 'Grizzly'"
- AST_medium_tank_equipment_3:0 "Chullora A34 'Thunderbolt'"
- AST_medium_tank_equipment_3_short:0 "A34 'Thunderbolt'"
+ AST_medium_tank_equipment_1939:0 "Montreal Locomotive Works A15 'Ram'"
+ AST_medium_tank_equipment_1939_short:0 "A15 'Ram'"
+ AST_medium_tank_equipment_1941:0 "Montreal Locomotive Works A27 'Grizzly'"
+ AST_medium_tank_equipment_1941_short:0 "A27 'Grizzly'"
+ AST_medium_tank_equipment_1943:0 "Chullora A34 'Thunderbolt'"
+ AST_medium_tank_equipment_1943_short:0 "A34 'Thunderbolt'"
 
  AST_heavy_tank_equipment_1934:0 "Vickers A1 'Independent'"
  AST_heavy_tank_equipment_1934_short:0 "A1 'Independent'"
@@ -942,8 +942,8 @@
  AST_super_heavy_tank_equipment_1934:0 "Massey-Harris A39 'Tortoise'"
  AST_super_heavy_tank_equipment_1934_short:0 "A39 'Tortoise'"
 
- AST_modern_tank_equipment_1:0 "Leyland A44 'Brock'"
- AST_modern_tank_equipment_1_short:0 "A44 'Brock'"
+ AST_medium_tank_equipment_1945:0 "Leyland A44 'Brock'"
+ AST_medium_tank_equipment_1945_short:0 "A44 'Brock'"
 
 ###
 ### Assyria ###
@@ -1041,12 +1041,12 @@
  ASY_light_tank_equipment_3:0 "Vickers A18 'Valentine'"
  ASY_light_tank_equipment_3_short:0 "A18 'Valentine'"
 
- ASY_medium_tank_equipment_1:0 "Montreal Locomotive Works A15 'Ram'"
- ASY_medium_tank_equipment_1_short:0 "A15 'Ram'"
- ASY_medium_tank_equipment_2:0 "Montreal Locomotive Works A27 'Grizzly'"
- ASY_medium_tank_equipment_2_short:0 "A27 'Grizzly'"
- ASY_medium_tank_equipment_3:0 "Chullora A34 'Thunderbolt'"
- ASY_medium_tank_equipment_3_short:0 "A34 'Thunderbolt'"
+ ASY_medium_tank_equipment_1939:0 "Montreal Locomotive Works A15 'Ram'"
+ ASY_medium_tank_equipment_1939_short:0 "A15 'Ram'"
+ ASY_medium_tank_equipment_1941:0 "Montreal Locomotive Works A27 'Grizzly'"
+ ASY_medium_tank_equipment_1941_short:0 "A27 'Grizzly'"
+ ASY_medium_tank_equipment_1943:0 "Chullora A34 'Thunderbolt'"
+ ASY_medium_tank_equipment_1943_short:0 "A34 'Thunderbolt'"
 
  ASY_heavy_tank_equipment_1934:0 "Vickers A1 'Independent'"
  ASY_heavy_tank_equipment_1934_short:0 "A1 'Independent'"
@@ -1058,8 +1058,8 @@
  ASY_super_heavy_tank_equipment_1934:0 "Massey-Harris A39 'Tortoise'"
  ASY_super_heavy_tank_equipment_1934_short:0 "A39 'Tortoise'"
 
- ASY_modern_tank_equipment_1:0 "Leyland A44 'Brock'"
- ASY_modern_tank_equipment_1_short:0 "A44 'Brock'"
+ ASY_medium_tank_equipment_1945:0 "Leyland A44 'Brock'"
+ ASY_medium_tank_equipment_1945_short:0 "A44 'Brock'"
 
 ###
 ### Austria ###
@@ -1181,15 +1181,15 @@
  AUS_light_tank_equipment_3_short:0 "SpPz M.42"
  AUS_light_tank_equipment_3_desc:0 "While the heavier M.40 replaced M.38 in the main combat role, there was still a need for a smaller and lighter tracked reconnaissance vehicle. To keep track with the quick pace of war development, ČKD completely redesigned the upper part of the TNHP design. The new reconnaissance tank had improved tracks, sloped frontal armour and new turret housing the commander, gunner and the brand new autoloading 57mm gun developed by Škoda."
 
- AUS_medium_tank_equipment_1:0 "Škoda-MÁVAG Kavalleriepanzer M.40"
- AUS_medium_tank_equipment_1_short:0 "KPz M.40"
- AUS_medium_tank_equipment_1_desc:0 "Experience from Second American civil war, China and Spain would lead the K.u.K. army command to order a new tank with larger 3 man turret, a 75mm gun and further resilient frontal armour. The final project design was a joint venture of the Czech Škoda providing hull and the Hungarian MAVÁG building the turret and gun."
- AUS_medium_tank_equipment_2:0 "Škoda-MÁVAG Kavalleriepanzer M.40/42"
- AUS_medium_tank_equipment_2_short:0 "KPz M.42"
- AUS_medium_tank_equipment_2_desc:0 "While at the start of the war the armament and armour of M.40 were more than sufficient, the introduction of infantry held AT weapons using shaped charges and the increasing armour thickness of enemy tanks marked the M.40 as nearly obsolete by the end of 1941. In response, Škoda's engineers drew up a new design with a similar base but possessing an entirely new engine, armoured side skirts and stronger frontal armour. MAVÁG would provide a completely new turret while also improving crew space and the field of vision within the vehicle altogether with long barrel 75 mm gun."
- AUS_medium_tank_equipment_3:0 "MTK Kavalleriepanzer M.44"
- AUS_medium_tank_equipment_3_short:0 "KPz M.44"
- AUS_medium_tank_equipment_3_desc:0 "Heavily influenced by German Kriegsengel and Russian Obukhov tanks, the M.44 was MTK response to the army's need for replacement of the quickly ageing M.40/42 tanks. The design included sloped frontal and side armour, ČKD's improved suspension prototype, Austro-Daimler's V12 engine and a license-built 80mm Bofors gun which made use of Škoda's new autoloading mechanism, already used on the 57mm gun of the SpPz M.42 and the 75mm gun of later variants of KPz M.40/42."
+ AUS_medium_tank_equipment_1939:0 "Škoda-MÁVAG Kavalleriepanzer M.40"
+ AUS_medium_tank_equipment_1939_short:0 "KPz M.40"
+ AUS_medium_tank_equipment_1939_desc:0 "Experience from Second American civil war, China and Spain would lead the K.u.K. army command to order a new tank with larger 3 man turret, a 75mm gun and further resilient frontal armour. The final project design was a joint venture of the Czech Škoda providing hull and the Hungarian MAVÁG building the turret and gun."
+ AUS_medium_tank_equipment_1941:0 "Škoda-MÁVAG Kavalleriepanzer M.40/42"
+ AUS_medium_tank_equipment_1941_short:0 "KPz M.42"
+ AUS_medium_tank_equipment_1941_desc:0 "While at the start of the war the armament and armour of M.40 were more than sufficient, the introduction of infantry held AT weapons using shaped charges and the increasing armour thickness of enemy tanks marked the M.40 as nearly obsolete by the end of 1941. In response, Škoda's engineers drew up a new design with a similar base but possessing an entirely new engine, armoured side skirts and stronger frontal armour. MAVÁG would provide a completely new turret while also improving crew space and the field of vision within the vehicle altogether with long barrel 75 mm gun."
+ AUS_medium_tank_equipment_1943:0 "MTK Kavalleriepanzer M.44"
+ AUS_medium_tank_equipment_1943_short:0 "KPz M.44"
+ AUS_medium_tank_equipment_1943_desc:0 "Heavily influenced by German Kriegsengel and Russian Obukhov tanks, the M.44 was MTK response to the army's need for replacement of the quickly ageing M.40/42 tanks. The design included sloped frontal and side armour, ČKD's improved suspension prototype, Austro-Daimler's V12 engine and a license-built 80mm Bofors gun which made use of Škoda's new autoloading mechanism, already used on the 57mm gun of the SpPz M.42 and the 75mm gun of later variants of KPz M.40/42."
 
  AUS_heavy_tank_equipment_1934:0 "Škoda Infanteriepanzer M.36"
  AUS_heavy_tank_equipment_1934_short:0 "IPz M.36"
@@ -1205,9 +1205,9 @@
  AUS_super_heavy_tank_equipment_1934_short:0 "Franzl"
  AUS_super_heavy_tank_equipment_1934_desc:0 "With the war raging across Europe, the Military Technical Committee worried about the necessity of a breakthrough tank capable of taking on heavy fortifications in Italy or France. A monstrous design by Austro-Daimler's Ferdinand von Porsche and Skoda engineers was proposed, ironically gaining the diminutive nickname of "Franzl"."
 
- AUS_modern_tank_equipment_1:0 "ČKD-Škoda Universalpanzer M.50"
- AUS_modern_tank_equipment_1_short:0 "UPz M.50"
- AUS_modern_tank_equipment_1_desc:0 "The TVP hull was first designed by ČKD as a competitor to MTK's M.44 tank during the design competition for the contract to replace the ageing fleet of M.40/42s, where it would be rejected due to its larger dimensions. However, as the war progressed, army high command would issue a directive mandating the adoption of Škoda's new autoloading 105mm gun by lighter tanks in response to the heavily armoured series Russian T-120 and French M4 tanks and, as a result of its previously unfortunate size, only the TVP hull was sufficiently large enough for the role."
+ AUS_medium_tank_equipment_1945:0 "ČKD-Škoda Universalpanzer M.50"
+ AUS_medium_tank_equipment_1945_short:0 "UPz M.50"
+ AUS_medium_tank_equipment_1945_desc:0 "The TVP hull was first designed by ČKD as a competitor to MTK's M.44 tank during the design competition for the contract to replace the ageing fleet of M.40/42s, where it would be rejected due to its larger dimensions. However, as the war progressed, army high command would issue a directive mandating the adoption of Škoda's new autoloading 105mm gun by lighter tanks in response to the heavily armoured series Russian T-120 and French M4 tanks and, as a result of its previously unfortunate size, only the TVP hull was sufficiently large enough for the role."
 
  AUS_amphibious_tank_equipment_1:0 "ČKD F-IV-H"
  AUS_amphibious_tank_equipment_1_short:0 "F-IV-H"
@@ -1434,12 +1434,12 @@
  BAT_light_tank_aa_equipment_3:0 "$GER_light_tank_aa_equipment_3$"
  BAT_light_tank_aa_equipment_3_short:0 "$GER_light_tank_aa_equipment_3_short$"
 
- BAT_medium_tank_equipment_1:0 "$GER_medium_tank_equipment_1$"
- BAT_medium_tank_equipment_1_short:0 "$GER_medium_tank_equipment_1_short$"
- BAT_medium_tank_equipment_2:0 "$GER_medium_tank_equipment_2$"
- BAT_medium_tank_equipment_2_short:0 "$GER_medium_tank_equipment_2_short$"
- BAT_medium_tank_equipment_3:0 "$GER_medium_tank_equipment_3$"
- BAT_medium_tank_equipment_3_short:0 "$GER_medium_tank_equipment_3_short$"
+ BAT_medium_tank_equipment_1939:0 "$GER_medium_tank_equipment_1939$"
+ BAT_medium_tank_equipment_1939_short:0 "$GER_medium_tank_equipment_1939_short$"
+ BAT_medium_tank_equipment_1941:0 "$GER_medium_tank_equipment_1941$"
+ BAT_medium_tank_equipment_1941_short:0 "$GER_medium_tank_equipment_1941_short$"
+ BAT_medium_tank_equipment_1943:0 "$GER_medium_tank_equipment_1943$"
+ BAT_medium_tank_equipment_1943_short:0 "$GER_medium_tank_equipment_1943_short$"
  BAT_medium_tank_artillery_equipment_1:0 "$GER_medium_tank_artillery_equipment_1$"
  BAT_medium_tank_artillery_equipment_1_short:0 "$GER_medium_tank_artillery_equipment_1_short$"
  BAT_medium_tank_artillery_equipment_2:0 "$GER_medium_tank_artillery_equipment_2$"
@@ -1493,8 +1493,8 @@
  BAT_super_heavy_tank_aa_equipment_1:0 "$GER_super_heavy_tank_aa_equipment_1$"
  BAT_super_heavy_tank_aa_equipment_1_short:0 "$GER_super_heavy_tank_aa_equipment_1_short$"
 
- BAT_modern_tank_equipment_1:0 "$GER_modern_tank_equipment_1$"
- BAT_modern_tank_equipment_1_short:0 "$GER_modern_tank_equipment_1_short$"
+ BAT_medium_tank_equipment_1945:0 "$GER_medium_tank_equipment_1945$"
+ BAT_medium_tank_equipment_1945_short:0 "$GER_medium_tank_equipment_1945_short$"
  BAT_modern_tank_artillery_equipment_1:0 "$GER_modern_tank_artillery_equipment_1$"
  BAT_modern_tank_artillery_equipment_1_short:0 "$GER_modern_tank_artillery_equipment_1_short$"
  BAT_modern_tank_destroyer_equipment_1:0 "$GER_modern_tank_destroyer_equipment_1$"
@@ -1653,12 +1653,12 @@
  BAY_light_tank_aa_equipment_3:0 "$GER_light_tank_aa_equipment_3$"
  BAY_light_tank_aa_equipment_3_short:0 "$GER_light_tank_aa_equipment_3_short$"
 
- BAY_medium_tank_equipment_1:0 "$GER_medium_tank_equipment_1$"
- BAY_medium_tank_equipment_1_short:0 "$GER_medium_tank_equipment_1_short$"
- BAY_medium_tank_equipment_2:0 "$GER_medium_tank_equipment_2$"
- BAY_medium_tank_equipment_2_short:0 "$GER_medium_tank_equipment_2_short$"
- BAY_medium_tank_equipment_3:0 "$GER_medium_tank_equipment_3$"
- BAY_medium_tank_equipment_3_short:0 "$GER_medium_tank_equipment_3_short$"
+ BAY_medium_tank_equipment_1939:0 "$GER_medium_tank_equipment_1939$"
+ BAY_medium_tank_equipment_1939_short:0 "$GER_medium_tank_equipment_1939_short$"
+ BAY_medium_tank_equipment_1941:0 "$GER_medium_tank_equipment_1941$"
+ BAY_medium_tank_equipment_1941_short:0 "$GER_medium_tank_equipment_1941_short$"
+ BAY_medium_tank_equipment_1943:0 "$GER_medium_tank_equipment_1943$"
+ BAY_medium_tank_equipment_1943_short:0 "$GER_medium_tank_equipment_1943_short$"
  BAY_medium_tank_artillery_equipment_1:0 "$GER_medium_tank_artillery_equipment_1$"
  BAY_medium_tank_artillery_equipment_1_short:0 "$GER_medium_tank_artillery_equipment_1_short$"
  BAY_medium_tank_artillery_equipment_2:0 "$GER_medium_tank_artillery_equipment_2$"
@@ -1712,8 +1712,8 @@
  BAY_super_heavy_tank_aa_equipment_1:0 "$GER_super_heavy_tank_aa_equipment_1$"
  BAY_super_heavy_tank_aa_equipment_1_short:0 "$GER_super_heavy_tank_aa_equipment_1_short$"
 
- BAY_modern_tank_equipment_1:0 "$GER_modern_tank_equipment_1$"
- BAY_modern_tank_equipment_1_short:0 "$GER_modern_tank_equipment_1_short$"
+ BAY_medium_tank_equipment_1945:0 "$GER_medium_tank_equipment_1945$"
+ BAY_medium_tank_equipment_1945_short:0 "$GER_medium_tank_equipment_1945_short$"
  BAY_modern_tank_artillery_equipment_1:0 "$GER_modern_tank_artillery_equipment_1$"
  BAY_modern_tank_artillery_equipment_1_short:0 "$GER_modern_tank_artillery_equipment_1_short$"
  BAY_modern_tank_destroyer_equipment_1:0 "$GER_modern_tank_destroyer_equipment_1$"
@@ -1840,12 +1840,12 @@
  BEL_light_tank_aa_equipment_3:0 "$GER_light_tank_aa_equipment_3$"
  BEL_light_tank_aa_equipment_3_short:0 "$GER_light_tank_aa_equipment_3_short$"
 
- BEL_medium_tank_equipment_1:0 "$GER_medium_tank_equipment_1$"
- BEL_medium_tank_equipment_1_short:0 "$GER_medium_tank_equipment_1_short$"
- BEL_medium_tank_equipment_2:0 "$GER_medium_tank_equipment_2$"
- BEL_medium_tank_equipment_2_short:0 "$GER_medium_tank_equipment_2_short$"
- BEL_medium_tank_equipment_3:0 "$GER_medium_tank_equipment_3$"
- BEL_medium_tank_equipment_3_short:0 "$GER_medium_tank_equipment_3_short$"
+ BEL_medium_tank_equipment_1939:0 "$GER_medium_tank_equipment_1939$"
+ BEL_medium_tank_equipment_1939_short:0 "$GER_medium_tank_equipment_1939_short$"
+ BEL_medium_tank_equipment_1941:0 "$GER_medium_tank_equipment_1941$"
+ BEL_medium_tank_equipment_1941_short:0 "$GER_medium_tank_equipment_1941_short$"
+ BEL_medium_tank_equipment_1943:0 "$GER_medium_tank_equipment_1943$"
+ BEL_medium_tank_equipment_1943_short:0 "$GER_medium_tank_equipment_1943_short$"
  BEL_medium_tank_artillery_equipment_1:0 "$GER_medium_tank_artillery_equipment_1$"
  BEL_medium_tank_artillery_equipment_1_short:0 "$GER_medium_tank_artillery_equipment_1_short$"
  BEL_medium_tank_artillery_equipment_2:0 "$GER_medium_tank_artillery_equipment_2$"
@@ -1899,8 +1899,8 @@
  BEL_super_heavy_tank_aa_equipment_1:0 "$GER_super_heavy_tank_aa_equipment_1$"
  BEL_super_heavy_tank_aa_equipment_1_short:0 "$GER_super_heavy_tank_aa_equipment_1_short$"
 
- BEL_modern_tank_equipment_1:0 "$GER_modern_tank_equipment_1$"
- BEL_modern_tank_equipment_1_short:0 "$GER_modern_tank_equipment_1_short$"
+ BEL_medium_tank_equipment_1945:0 "$GER_medium_tank_equipment_1945$"
+ BEL_medium_tank_equipment_1945_short:0 "$GER_medium_tank_equipment_1945_short$"
  BEL_modern_tank_artillery_equipment_1:0 "$GER_modern_tank_artillery_equipment_1$"
  BEL_modern_tank_artillery_equipment_1_short:0 "$GER_modern_tank_artillery_equipment_1_short$"
  BEL_modern_tank_destroyer_equipment_1:0 "$GER_modern_tank_destroyer_equipment_1$"
@@ -2058,15 +2058,15 @@
  BOS_light_tank_equipment_3_short:0 "IO M.42"
  #BOS_light_tank_equipment_3_desc: ""
 
- BOS_medium_tank_equipment_1:0 "Škoda-MÁVAG konjički oklop M.40"
- BOS_medium_tank_equipment_1_short:0 "KO M.40"
- #BOS_medium_tank_equipment_1_desc:0 ""
- BOS_medium_tank_equipment_2:0 "Škoda-MÁVAG konjički oklop M.40/42"
- BOS_medium_tank_equipment_2_short:0 "KO M.42"
- #BOS_medium_tank_equipment_2_desc:0 ""
- BOS_medium_tank_equipment_3:0 "MTK konjički oklop M.44"
- BOS_medium_tank_equipment_3_short:0 "KO M.44"
- #BOS_medium_tank_equipment_3_desc:0 ""
+ BOS_medium_tank_equipment_1939:0 "Škoda-MÁVAG konjički oklop M.40"
+ BOS_medium_tank_equipment_1939_short:0 "KO M.40"
+ #BOS_medium_tank_equipment_1939_desc:0 ""
+ BOS_medium_tank_equipment_1941:0 "Škoda-MÁVAG konjički oklop M.40/42"
+ BOS_medium_tank_equipment_1941_short:0 "KO M.42"
+ #BOS_medium_tank_equipment_1941_desc:0 ""
+ BOS_medium_tank_equipment_1943:0 "MTK konjički oklop M.44"
+ BOS_medium_tank_equipment_1943_short:0 "KO M.44"
+ #BOS_medium_tank_equipment_1943_desc:0 ""
 
  BOS_heavy_tank_equipment_1934:0 "Škoda pješadijski oklop M.36"
  BOS_heavy_tank_equipment_1934_short:0 "PO M.36"
@@ -2082,9 +2082,9 @@
  BOS_super_heavy_tank_equipment_1934_short:0 "Franjo"
  #BOS_super_heavy_tank_equipment_1934_desc:0 ""
 
- BOS_modern_tank_equipment_1:0 "Škoda univerzalni oklop M.50"
- BOS_modern_tank_equipment_1_short:0 "UO M.50"
- #BOS_modern_tank_equipment_1_desc:0 ""
+ BOS_medium_tank_equipment_1945:0 "Škoda univerzalni oklop M.50"
+ BOS_medium_tank_equipment_1945_short:0 "UO M.50"
+ #BOS_medium_tank_equipment_1945_desc:0 ""
 
  BOS_amphibious_tank_equipment_1:0 "ČKD F-IV-H"
  BOS_amphibious_tank_equipment_1_short:0 "F-IV-H"
@@ -2384,12 +2384,12 @@
  CAF_light_tank_equipment_3:0 "Vickers A18 'Valentine'"
  CAF_light_tank_equipment_3_short:0 "A18 'Valentine'"
 
- CAF_medium_tank_equipment_1:0 "Montreal Locomotive Works A15 'Ram'"
- CAF_medium_tank_equipment_1_short:0 "A15 'Ram'"
- CAF_medium_tank_equipment_2:0 "Montreal Locomotive Works A27 'Grizzly'"
- CAF_medium_tank_equipment_2_short:0 "A27 'Grizzly'"
- CAF_medium_tank_equipment_3:0 "Chullora A34 'Thunderbolt'"
- CAF_medium_tank_equipment_3_short:0 "A34 'Thunderbolt'"
+ CAF_medium_tank_equipment_1939:0 "Montreal Locomotive Works A15 'Ram'"
+ CAF_medium_tank_equipment_1939_short:0 "A15 'Ram'"
+ CAF_medium_tank_equipment_1941:0 "Montreal Locomotive Works A27 'Grizzly'"
+ CAF_medium_tank_equipment_1941_short:0 "A27 'Grizzly'"
+ CAF_medium_tank_equipment_1943:0 "Chullora A34 'Thunderbolt'"
+ CAF_medium_tank_equipment_1943_short:0 "A34 'Thunderbolt'"
 
  CAF_heavy_tank_equipment_1934:0 "Vickers A1 'Independent'"
  CAF_heavy_tank_equipment_1934_short:0 "A1 'Independent'"
@@ -2401,8 +2401,8 @@
  CAF_super_heavy_tank_equipment_1934:0 "Massey-Harris A39 'Tortoise'"
  CAF_super_heavy_tank_equipment_1934_short:0 "A39 'Tortoise'"
 
- CAF_modern_tank_equipment_1:0 "Leyland A44 'Brock'"
- CAF_modern_tank_equipment_1_short:0 "A44 'Brock'"
+ CAF_medium_tank_equipment_1945:0 "Leyland A44 'Brock'"
+ CAF_medium_tank_equipment_1945_short:0 "A44 'Brock'"
 
 ###
 ### Pacific States ###
@@ -2514,12 +2514,12 @@
  PSA_light_tank_equipment_3:0 "Light Tank, Model 5, White"
  PSA_light_tank_equipment_3_short:0 "M5 'White'"
 
- PSA_medium_tank_equipment_1:0 "Medium Tank, Model 3, Grant"
- PSA_medium_tank_equipment_1_short:0 "M3 'Grant'"
- PSA_medium_tank_equipment_2:0 "Medium Tank, Model 4, Sherman"
- PSA_medium_tank_equipment_2_short:0 "M4 'Sherman'"
- PSA_medium_tank_equipment_3:0 "Medium Tank, Model 20, Doolittle"
- PSA_medium_tank_equipment_3_short:0 "M20 'Doolittle'"
+ PSA_medium_tank_equipment_1939:0 "Medium Tank, Model 3, Grant"
+ PSA_medium_tank_equipment_1939_short:0 "M3 'Grant'"
+ PSA_medium_tank_equipment_1941:0 "Medium Tank, Model 4, Sherman"
+ PSA_medium_tank_equipment_1941_short:0 "M4 'Sherman'"
+ PSA_medium_tank_equipment_1943:0 "Medium Tank, Model 20, Doolittle"
+ PSA_medium_tank_equipment_1943_short:0 "M20 'Doolittle'"
 
  #delete eventually when we get a new icon:
  PSA_heavy_tank_equipment_1934:0 "Medium Tank, Model 1, Bulldog"
@@ -2535,8 +2535,8 @@
  PSA_super_heavy_tank_equipment_1934:0 "Heavy Tank, Model 5, Washington"
  PSA_super_heavy_tank_equipment_1934_short:0 "M5 'Washington'"
 
- PSA_modern_tank_equipment_1:0 "Medium Tank, Model 9, DeWitt"
- PSA_modern_tank_equipment_1_short:0 "M46 'DeWitt'"
+ PSA_medium_tank_equipment_1945:0 "Medium Tank, Model 9, DeWitt"
+ PSA_medium_tank_equipment_1945_short:0 "M46 'DeWitt'"
 
 ###
 ### Cambodia ###
@@ -2665,12 +2665,12 @@
  CAN_light_tank_equipment_3:0 "Vickers A18 'Valentine'"
  CAN_light_tank_equipment_3_short:0 "A18 'Valentine'"
 
- CAN_medium_tank_equipment_1:0 "Montreal Locomotive Works A15 'Ram'"
- CAN_medium_tank_equipment_1_short:0 "A15 'Ram'"
- CAN_medium_tank_equipment_2:0 "Montreal Locomotive Works A27 'Grizzly'"
- CAN_medium_tank_equipment_2_short:0 "A27 'Grizzly'"
- CAN_medium_tank_equipment_3:0 "Chullora A34 'Thunderbolt'"
- CAN_medium_tank_equipment_3_short:0 "A34 'Thunderbolt'"
+ CAN_medium_tank_equipment_1939:0 "Montreal Locomotive Works A15 'Ram'"
+ CAN_medium_tank_equipment_1939_short:0 "A15 'Ram'"
+ CAN_medium_tank_equipment_1941:0 "Montreal Locomotive Works A27 'Grizzly'"
+ CAN_medium_tank_equipment_1941_short:0 "A27 'Grizzly'"
+ CAN_medium_tank_equipment_1943:0 "Chullora A34 'Thunderbolt'"
+ CAN_medium_tank_equipment_1943_short:0 "A34 'Thunderbolt'"
 
  CAN_heavy_tank_equipment_1934:0 "Vickers A1 'Independent'"
  CAN_heavy_tank_equipment_1934_short:0 "A1 'Independent'"
@@ -2682,8 +2682,8 @@
  CAN_super_heavy_tank_equipment_1934:0 "Massey-Harris A39 'Tortoise'"
  CAN_super_heavy_tank_equipment_1934_short:0 "A39 'Tortoise'"
 
- CAN_modern_tank_equipment_1:0 "Leyland A44 'Brock'"
- CAN_modern_tank_equipment_1_short:0 "A44 'Brock'"
+ CAN_medium_tank_equipment_1945:0 "Leyland A44 'Brock'"
+ CAN_medium_tank_equipment_1945_short:0 "A44 'Brock'"
 
 ###
 ### Carlist Spain ###
@@ -2855,8 +2855,8 @@
  CHI_light_tank_equipment_2_short:0 "AMR 35"
  CHI_light_tank_equipment_2_desc:0 "In the late 1930s, the Kuomintang Central Committee once again proposed to France to purchase a batch of 'more powerful' tanks. Along with this batch, which arrived in China over tens of thousands of kilometres of sea routes, were their design drawings, which enabled the Kuomintang to start manufacturing tanks locally."
 
- CHI_modern_tank_equipment_1:0 "Type 59"
- CHI_modern_tank_equipment_1_short:0 "Type 59"
+ CHI_medium_tank_equipment_1945:0 "Type 59"
+ CHI_medium_tank_equipment_1945_short:0 "Type 59"
 
 #Aircraft
 
@@ -2924,12 +2924,12 @@
  SWF_light_tank_equipment_3:0 "Tipo 1935/40"
  SWF_light_tank_equipment_3_short:0 "T-40"
 
- SWF_medium_tank_equipment_1:0 "Lorraine AMC 35"
- SWF_medium_tank_equipment_1_short:0 "AMC 35"
- SWF_medium_tank_equipment_2:0 "SOMUA S35"
- SWF_medium_tank_equipment_2_short:0 "S35"
- SWF_medium_tank_equipment_3:0 "Renault G2"
- SWF_medium_tank_equipment_3_short:0 "G2"
+ SWF_medium_tank_equipment_1939:0 "Lorraine AMC 35"
+ SWF_medium_tank_equipment_1939_short:0 "AMC 35"
+ SWF_medium_tank_equipment_1941:0 "SOMUA S35"
+ SWF_medium_tank_equipment_1941_short:0 "S35"
+ SWF_medium_tank_equipment_1943:0 "Renault G2"
+ SWF_medium_tank_equipment_1943_short:0 "G2"
 
  SWF_heavy_tank_equipment_1934:0 "Lorraine B1"
  SWF_heavy_tank_equipment_1934_short:0 "B1"
@@ -2941,8 +2941,8 @@
  SWF_super_heavy_tank_equipment_1934:0 "Colossus"
  SWF_super_heavy_tank_equipment_1934_short:0 "Colossus"
 
- SWF_modern_tank_equipment_1:0 "Universal Tank Mk.I"
- SWF_modern_tank_equipment_1_short:0 "Universal Mk.I"
+ SWF_medium_tank_equipment_1945:0 "Universal Tank Mk.I"
+ SWF_medium_tank_equipment_1945_short:0 "Universal Mk.I"
 
 ###
 ### Kongo (COG) ###
@@ -3102,15 +3102,15 @@
  CRO_light_tank_equipment_3_short:0 "IO M.42"
  #CRO_light_tank_equipment_3_desc: ""
 
- CRO_medium_tank_equipment_1:0 "Škoda-MÁVAG konjički oklop M.40"
- CRO_medium_tank_equipment_1_short:0 "KO M.40"
- #CRO_medium_tank_equipment_1_desc:0 ""
- CRO_medium_tank_equipment_2:0 "Škoda-MÁVAG konjički oklop M.40/42"
- CRO_medium_tank_equipment_2_short:0 "KO M.42"
- #CRO_medium_tank_equipment_2_desc:0 ""
- CRO_medium_tank_equipment_3:0 "MTK konjički oklop M.44"
- CRO_medium_tank_equipment_3_short:0 "KO M.44"
- #CRO_medium_tank_equipment_3_desc:0 ""
+ CRO_medium_tank_equipment_1939:0 "Škoda-MÁVAG konjički oklop M.40"
+ CRO_medium_tank_equipment_1939_short:0 "KO M.40"
+ #CRO_medium_tank_equipment_1939_desc:0 ""
+ CRO_medium_tank_equipment_1941:0 "Škoda-MÁVAG konjički oklop M.40/42"
+ CRO_medium_tank_equipment_1941_short:0 "KO M.42"
+ #CRO_medium_tank_equipment_1941_desc:0 ""
+ CRO_medium_tank_equipment_1943:0 "MTK konjički oklop M.44"
+ CRO_medium_tank_equipment_1943_short:0 "KO M.44"
+ #CRO_medium_tank_equipment_1943_desc:0 ""
 
  CRO_heavy_tank_equipment_1934:0 "Škoda pješadijski oklop M.36"
  CRO_heavy_tank_equipment_1934_short:0 "PO M.36"
@@ -3126,9 +3126,9 @@
  CRO_super_heavy_tank_equipment_1934_short:0 "Franjo"
  #CRO_super_heavy_tank_equipment_1934_desc:0 ""
 
- CRO_modern_tank_equipment_1:0 "Škoda univerzalni oklop M.50"
- CRO_modern_tank_equipment_1_short:0 "UO M.50"
- #CRO_modern_tank_equipment_1_desc:0 ""
+ CRO_medium_tank_equipment_1945:0 "Škoda univerzalni oklop M.50"
+ CRO_medium_tank_equipment_1945_short:0 "UO M.50"
+ #CRO_medium_tank_equipment_1945_desc:0 ""
 
  CRO_amphibious_tank_equipment_1:0 "ČKD F-IV-H"
  CRO_amphibious_tank_equipment_1_short:0 "F-IV-H"
@@ -3304,15 +3304,15 @@
  CSA_light_tank_equipment_3_short:0 "CA-L5"
  CSA_light_tank_equipment_3_desc:0 "Essentially a scaled-down version of the ill-fated M8 tank, the L5 was the first Combined Syndicates produced light tank not based upon the pre-war M2. Armed with a new high-velocity French-designed 75mm gun, the L5 garnered a powerful reputation among its operators and foes alike."
 
- CSA_medium_tank_equipment_1:0 "Continental Army, Medium Tank, Model 4"
- CSA_medium_tank_equipment_1_short:0 "CA-M4"
- CSA_medium_tank_equipment_1_desc:0 "The CSA's initial efforts to develop a medium tank fell apart amidst fierce inter-union rivalries. With help from Socialist nations abroad however, the Combined Syndicates eventually managed to develop what is in essence a scaled-up L2 tank. While not an exceptional vehicle, the M4 would serve admirably in a variety of roles."
- CSA_medium_tank_equipment_2:0 "Continental Army, Medium Tank, Model 5"
- CSA_medium_tank_equipment_2_short:0 "CA-M5"
- CSA_medium_tank_equipment_2_desc:0 "Heavily inspired by both French designs and the Union State's 'Hood' tank, the M5 would serve as the backbone of Syndicates armoured divisions for much of the American Civil War. Fast and possessing thick frontal armour, the M5 proved a tough nut for its adversaries to crack."
- CSA_medium_tank_equipment_3:0 "Continental Army, Medium Tank, Model 9"
- CSA_medium_tank_equipment_3_short:0 "CA-M9"
- CSA_medium_tank_equipment_3_desc:0 "After the plant responsible for development of the CSA's proposed M8 medium tank fell to Federal forces, the design was taken overly directly by the Central Design Bureau of the Combined Syndicates armed forces and refined. Like its Federal counterpart, the M9 mounts a 90mm main cannon."
+ CSA_medium_tank_equipment_1939:0 "Continental Army, Medium Tank, Model 4"
+ CSA_medium_tank_equipment_1939_short:0 "CA-M4"
+ CSA_medium_tank_equipment_1939_desc:0 "The CSA's initial efforts to develop a medium tank fell apart amidst fierce inter-union rivalries. With help from Socialist nations abroad however, the Combined Syndicates eventually managed to develop what is in essence a scaled-up L2 tank. While not an exceptional vehicle, the M4 would serve admirably in a variety of roles."
+ CSA_medium_tank_equipment_1941:0 "Continental Army, Medium Tank, Model 5"
+ CSA_medium_tank_equipment_1941_short:0 "CA-M5"
+ CSA_medium_tank_equipment_1941_desc:0 "Heavily inspired by both French designs and the Union State's 'Hood' tank, the M5 would serve as the backbone of Syndicates armoured divisions for much of the American Civil War. Fast and possessing thick frontal armour, the M5 proved a tough nut for its adversaries to crack."
+ CSA_medium_tank_equipment_1943:0 "Continental Army, Medium Tank, Model 9"
+ CSA_medium_tank_equipment_1943_short:0 "CA-M9"
+ CSA_medium_tank_equipment_1943_desc:0 "After the plant responsible for development of the CSA's proposed M8 medium tank fell to Federal forces, the design was taken overly directly by the Central Design Bureau of the Combined Syndicates armed forces and refined. Like its Federal counterpart, the M9 mounts a 90mm main cannon."
 
  CSA_heavy_tank_equipment_1934:0 "Continental Army, Heavy Tank, Model 1"
  CSA_heavy_tank_equipment_1934_short:0 "CA-H1"
@@ -3328,9 +3328,9 @@
  CSA_super_heavy_tank_equipment_1934_short:0 "CA-H5"
  CSA_super_heavy_tank_equipment_1934_desc:0 "While the H2 heavy tank excelled in its role, its armament and armour were found to be insufficient, especially for urban environments. To accommodate a larger engine, new 105mm gun, and thicker plating, the chassis was lengthened and a new turret designed. The up-armouring done to the vehicle was substantial, and while capable of withstanding direct hits from large-calibre guns, the H5 was quite sluggish."
 
- CSA_modern_tank_equipment_1:0 "Continental Army, Medium Tank, Model 12"
- CSA_modern_tank_equipment_1_short:0 "CA-M12"
- CSA_modern_tank_equipment_1_desc:0 "Originally a development upon the M9 medium tank, due to the radical changes made, the M12 was eventually reclassified as an entirely new type of tank capable of filling the role of a both a medium and heavy tank. The pride of the Syndicates, the M12 leaves only the destroyed remnants of its enemies in its wake."
+ CSA_medium_tank_equipment_1945:0 "Continental Army, Medium Tank, Model 12"
+ CSA_medium_tank_equipment_1945_short:0 "CA-M12"
+ CSA_medium_tank_equipment_1945_desc:0 "Originally a development upon the M9 medium tank, due to the radical changes made, the M12 was eventually reclassified as an entirely new type of tank capable of filling the role of a both a medium and heavy tank. The pride of the Syndicates, the M12 leaves only the destroyed remnants of its enemies in its wake."
 
 ###
 ### Cuba ###
@@ -3555,15 +3555,15 @@
  CZE_light_tank_equipment_3_short:0 "PNP vz. 42"
  #CZE_light_tank_equipment_3_desc: ""
 
- CZE_medium_tank_equipment_1:0 "Škoda-MÁVAG jízdní pancíř vzor 40"
- CZE_medium_tank_equipment_1_short:0 "JP vz. 40"
- #CZE_medium_tank_equipment_1_desc:0 ""
- CZE_medium_tank_equipment_2:0 "Škoda-MÁVAG jízdní pancíř vzor 40/42"
- CZE_medium_tank_equipment_2_short:0 "JP vz. 42"
- #CZE_medium_tank_equipment_2_desc:0 ""
- CZE_medium_tank_equipment_3:0 "MTK jízdní pancíř vzor 44"
- CZE_medium_tank_equipment_3_short:0 "JP vz. 44"
- #CZE_medium_tank_equipment_3_desc:0 ""
+ CZE_medium_tank_equipment_1939:0 "Škoda-MÁVAG jízdní pancíř vzor 40"
+ CZE_medium_tank_equipment_1939_short:0 "JP vz. 40"
+ #CZE_medium_tank_equipment_1939_desc:0 ""
+ CZE_medium_tank_equipment_1941:0 "Škoda-MÁVAG jízdní pancíř vzor 40/42"
+ CZE_medium_tank_equipment_1941_short:0 "JP vz. 42"
+ #CZE_medium_tank_equipment_1941_desc:0 ""
+ CZE_medium_tank_equipment_1943:0 "MTK jízdní pancíř vzor 44"
+ CZE_medium_tank_equipment_1943_short:0 "JP vz. 44"
+ #CZE_medium_tank_equipment_1943_desc:0 ""
 
  CZE_heavy_tank_equipment_1934:0 "Škoda pěchotní pancíř vzor 36"
  CZE_heavy_tank_equipment_1934_short:0 "PP vz. 36"
@@ -3579,9 +3579,9 @@
  CZE_super_heavy_tank_equipment_1934_short:0 "František"
  #CZE_super_heavy_tank_equipment_1934_desc:0 ""
 
- CZE_modern_tank_equipment_1:0 "Škoda všeobecný pancíř vzor 50"
- CZE_modern_tank_equipment_1_short:0 "VP vz. 50"
- #CZE_modern_tank_equipment_1_desc:0 ""
+ CZE_medium_tank_equipment_1945:0 "Škoda všeobecný pancíř vzor 50"
+ CZE_medium_tank_equipment_1945_short:0 "VP vz. 50"
+ #CZE_medium_tank_equipment_1945_desc:0 ""
 
  CZE_amphibious_tank_equipment_1:0 "ČKD F-IV-H"
  CZE_amphibious_tank_equipment_1_short:0 "F-IV-H"
@@ -3750,12 +3750,12 @@
  DDR_light_tank_aa_equipment_3:0 "$GER_light_tank_aa_equipment_3$"
  DDR_light_tank_aa_equipment_3_short:0 "$GER_light_tank_aa_equipment_3_short$"
 
- DDR_medium_tank_equipment_1:0 "$GER_medium_tank_equipment_1$"
- DDR_medium_tank_equipment_1_short:0 "$GER_medium_tank_equipment_1_short$"
- DDR_medium_tank_equipment_2:0 "$GER_medium_tank_equipment_2$"
- DDR_medium_tank_equipment_2_short:0 "$GER_medium_tank_equipment_2_short$"
- DDR_medium_tank_equipment_3:0 "$GER_medium_tank_equipment_3$"
- DDR_medium_tank_equipment_3_short:0 "$GER_medium_tank_equipment_3_short$"
+ DDR_medium_tank_equipment_1939:0 "$GER_medium_tank_equipment_1939$"
+ DDR_medium_tank_equipment_1939_short:0 "$GER_medium_tank_equipment_1939_short$"
+ DDR_medium_tank_equipment_1941:0 "$GER_medium_tank_equipment_1941$"
+ DDR_medium_tank_equipment_1941_short:0 "$GER_medium_tank_equipment_1941_short$"
+ DDR_medium_tank_equipment_1943:0 "$GER_medium_tank_equipment_1943$"
+ DDR_medium_tank_equipment_1943_short:0 "$GER_medium_tank_equipment_1943_short$"
  DDR_medium_tank_artillery_equipment_1:0 "$GER_medium_tank_artillery_equipment_1$"
  DDR_medium_tank_artillery_equipment_1_short:0 "$GER_medium_tank_artillery_equipment_1_short$"
  DDR_medium_tank_artillery_equipment_2:0 "$GER_medium_tank_artillery_equipment_2$"
@@ -3809,8 +3809,8 @@
  DDR_super_heavy_tank_aa_equipment_1:0 "$GER_super_heavy_tank_aa_equipment_1$"
  DDR_super_heavy_tank_aa_equipment_1_short:0 "$GER_super_heavy_tank_aa_equipment_1_short$"
 
- DDR_modern_tank_equipment_1:0 "$GER_modern_tank_equipment_1$"
- DDR_modern_tank_equipment_1_short:0 "$GER_modern_tank_equipment_1_short$"
+ DDR_medium_tank_equipment_1945:0 "$GER_medium_tank_equipment_1945$"
+ DDR_medium_tank_equipment_1945_short:0 "$GER_medium_tank_equipment_1945_short$"
  DDR_modern_tank_artillery_equipment_1:0 "$GER_modern_tank_artillery_equipment_1$"
  DDR_modern_tank_artillery_equipment_1_short:0 "$GER_modern_tank_artillery_equipment_1_short$"
  DDR_modern_tank_destroyer_equipment_1:0 "$GER_modern_tank_destroyer_equipment_1$"
@@ -3931,12 +3931,12 @@
  RAJ_light_tank_equipment_3:0 "Vickers A18 'Valentine'"
  RAJ_light_tank_equipment_3_short:0 "A18 'Valentine'"
 
- RAJ_medium_tank_equipment_1:0 "Montreal Locomotive Works A15 'Ram'"
- RAJ_medium_tank_equipment_1_short:0 "A15 'Ram'"
- RAJ_medium_tank_equipment_2:0 "Montreal Locomotive Works A27 'Grizzly'"
- RAJ_medium_tank_equipment_2_short:0 "A27 'Grizzly'"
- RAJ_medium_tank_equipment_3:0 "Chullora A34 'Thunderbolt'"
- RAJ_medium_tank_equipment_3_short:0 "A34 'Thunderbolt'"
+ RAJ_medium_tank_equipment_1939:0 "Montreal Locomotive Works A15 'Ram'"
+ RAJ_medium_tank_equipment_1939_short:0 "A15 'Ram'"
+ RAJ_medium_tank_equipment_1941:0 "Montreal Locomotive Works A27 'Grizzly'"
+ RAJ_medium_tank_equipment_1941_short:0 "A27 'Grizzly'"
+ RAJ_medium_tank_equipment_1943:0 "Chullora A34 'Thunderbolt'"
+ RAJ_medium_tank_equipment_1943_short:0 "A34 'Thunderbolt'"
 
  RAJ_heavy_tank_equipment_1934:0 "Vickers A1 'Independent'"
  RAJ_heavy_tank_equipment_1934_short:0 "A1 'Independent'"
@@ -3948,8 +3948,8 @@
  RAJ_super_heavy_tank_equipment_1934:0 "Massey-Harris A39 'Tortoise'"
  RAJ_super_heavy_tank_equipment_1934_short:0 "A39 'Tortoise'"
 
- RAJ_modern_tank_equipment_1:0 "Leyland A44 'Brock'"
- RAJ_modern_tank_equipment_1_short:0 "A44 'Brock'"
+ RAJ_medium_tank_equipment_1945:0 "Leyland A44 'Brock'"
+ RAJ_medium_tank_equipment_1945_short:0 "A44 'Brock'"
 
 ###
 ### Dutch East Indies ###
@@ -4287,12 +4287,12 @@
  ENG_light_tank_equipment_3:0 "Pilot Tank Mk.V"
  ENG_light_tank_equipment_3_short:0 "Pilot Mk.V"
 
- ENG_medium_tank_equipment_1:0 "Medium Tank Mk.VI"
- ENG_medium_tank_equipment_1_short:0 "Medium Mk.VI"
- ENG_medium_tank_equipment_2:0 "Medium Tank Mk.VIII"
- ENG_medium_tank_equipment_2_short:0 "Medium Mk.VIII"
- ENG_medium_tank_equipment_3:0 "Medium Tank Mk.XI"
- ENG_medium_tank_equipment_3_short:0 "Medium Mk.XI"
+ ENG_medium_tank_equipment_1939:0 "Medium Tank Mk.VI"
+ ENG_medium_tank_equipment_1939_short:0 "Medium Mk.VI"
+ ENG_medium_tank_equipment_1941:0 "Medium Tank Mk.VIII"
+ ENG_medium_tank_equipment_1941_short:0 "Medium Mk.VIII"
+ ENG_medium_tank_equipment_1943:0 "Medium Tank Mk.XI"
+ ENG_medium_tank_equipment_1943_short:0 "Medium Mk.XI"
 
  ENG_heavy_tank_equipment_1934:0 "Heavy Tank Mk.I"
  ENG_heavy_tank_equipment_1934_short:0 "Heavy Mk.I"
@@ -4304,8 +4304,8 @@
  ENG_super_heavy_tank_equipment_1934:0 "Colossus"
  ENG_super_heavy_tank_equipment_1934_short:0 "Colossus"
 
- ENG_modern_tank_equipment_1:0 "Universal Tank Mk.I"
- ENG_modern_tank_equipment_1_short:0 "Universal Mk.I"
+ ENG_medium_tank_equipment_1945:0 "Universal Tank Mk.I"
+ ENG_medium_tank_equipment_1945_short:0 "Universal Mk.I"
 
 ###
 ### Eritrea ###
@@ -4457,14 +4457,14 @@
  EST_light_tank_aa_equipment_3_short:0 "20mm M41"
 
  #PZ 3:
- EST_medium_tank_equipment_1:0 "Mudel 1936 Keskmine Tank"
- EST_medium_tank_equipment_1_short:0 "M36"
+ EST_medium_tank_equipment_1939:0 "Mudel 1936 Keskmine Tank"
+ EST_medium_tank_equipment_1939_short:0 "M36"
  #PZ 4 H/L:
- EST_medium_tank_equipment_2:0 "Mudel 1939 Keskmine Tank"
- EST_medium_tank_equipment_2_short:0 "M39"
+ EST_medium_tank_equipment_1941:0 "Mudel 1939 Keskmine Tank"
+ EST_medium_tank_equipment_1941_short:0 "M39"
  #Panther:
- EST_medium_tank_equipment_3:0 "Mudel 1942 Keskmine Tank"
- EST_medium_tank_equipment_3_short:0 "M42"
+ EST_medium_tank_equipment_1943:0 "Mudel 1942 Keskmine Tank"
+ EST_medium_tank_equipment_1943_short:0 "M42"
  #Heuschrecke:
  EST_medium_tank_artillery_equipment_1:0 "Mudel 1936 105mm Liikursuurtükk"
  EST_medium_tank_artillery_equipment_1_short:0 "105mm M36"
@@ -4544,8 +4544,8 @@
  EST_super_heavy_tank_aa_equipment_1_short:0 "128mm M43"
 
  #E50:
- EST_modern_tank_equipment_1:0 "Mudel 1945 Keskmine Tank"
- EST_modern_tank_equipment_1_short:0 "M45"
+ EST_medium_tank_equipment_1945:0 "Mudel 1945 Keskmine Tank"
+ EST_medium_tank_equipment_1945_short:0 "M45"
  #fake:
  EST_modern_tank_artillery_equipment_1:0 "Mudel 1945 150mm Liikursuurtükk"
  EST_modern_tank_artillery_equipment_1_short:0 "150mm M45"
@@ -4668,12 +4668,12 @@
  FIN_light_tank_destroyer_equipment_2_desc:0 "The Sisu BT-42 is a Finnish BT-10 fitted with a new turret designed to house a late-model Canadian 4.5-inch howitzer."
  FIN_light_tank_equipment_3:0 "$GER_light_tank_equipment_3$"
  FIN_light_tank_equipment_3_short:0 "$GER_light_tank_equipment_3_short$"
- FIN_medium_tank_equipment_1:0 "$GER_medium_tank_equipment_1$"
- FIN_medium_tank_equipment_1_short:0 "$GER_medium_tank_equipment_1_short$"
- FIN_medium_tank_equipment_2:0 "$GER_medium_tank_equipment_2$"
- FIN_medium_tank_equipment_2_short:0 "$GER_medium_tank_equipment_2_short$"
- FIN_medium_tank_equipment_3:0 "$GER_medium_tank_equipment_3$"
- FIN_medium_tank_equipment_3_short:0 "$GER_medium_tank_equipment_3_short$"
+ FIN_medium_tank_equipment_1939:0 "$GER_medium_tank_equipment_1939$"
+ FIN_medium_tank_equipment_1939_short:0 "$GER_medium_tank_equipment_1939_short$"
+ FIN_medium_tank_equipment_1941:0 "$GER_medium_tank_equipment_1941$"
+ FIN_medium_tank_equipment_1941_short:0 "$GER_medium_tank_equipment_1941_short$"
+ FIN_medium_tank_equipment_1943:0 "$GER_medium_tank_equipment_1943$"
+ FIN_medium_tank_equipment_1943_short:0 "$GER_medium_tank_equipment_1943_short$"
  FIN_heavy_tank_equipment_1934:0 "$GER_heavy_tank_equipment_1934$"
  FIN_heavy_tank_equipment_1934_short:0 "$GER_heavy_tank_equipment_1934_short$"
  FIN_heavy_tank_equipment_1941:0 "$GER_heavy_tank_equipment_1941$"
@@ -4683,9 +4683,9 @@
  FIN_super_heavy_tank_equipment_1934:0 "Putilov T-107"
  FIN_super_heavy_tank_equipment_1934_short:0 "T-107"
  FIN_super_heavy_tank_equipment_1934_desc:0 "After the success of its T-75 design, the Putilov company began work on a series of new single-turret heavy tanks. One such design was the massive T-107. The plans for the vehicle were eventually stolen by German agents in Russia and the project was reoriented. The Germans built one test vehicle to assess Russian armoured capabilities and after satisfactory testing, the vehicle eventually found its way to Finland. The Finns rushed new T-107s into production almost immediately."
- FIN_modern_tank_equipment_1:0 "E-50 Standardpanzer"
- FIN_modern_tank_equipment_1_short:0 "E-50"
- FIN_modern_tank_equipment_1_desc:0 "The Entwicklung 'Standardpanzer' series was designed from the very beginning around modularity. The tanks of this series are meant not only to dominate the battlefield with their cutting edge armaments, but to do so efficiently."
+ FIN_medium_tank_equipment_1945:0 "E-50 Standardpanzer"
+ FIN_medium_tank_equipment_1945_short:0 "E-50"
+ FIN_medium_tank_equipment_1945_desc:0 "The Entwicklung 'Standardpanzer' series was designed from the very beginning around modularity. The tanks of this series are meant not only to dominate the battlefield with their cutting edge armaments, but to do so efficiently."
 
 ###
 ### Flanders ###
@@ -4800,26 +4800,26 @@
  FNG_light_tank_artillery_equipment_3_short:0 "Type 5 Ku-Se"
  FNG_light_tank_aa_equipment_3:0 "Type 98 Ta-Se"
  FNG_light_tank_aa_equipment_3_short:0 "Ta-Se"
- FNG_medium_tank_equipment_1:0 "Type 97 Chi-Ha"
- FNG_medium_tank_equipment_1_short:0 "Chi-Ha"
+ FNG_medium_tank_equipment_1939:0 "Type 97 Chi-Ha"
+ FNG_medium_tank_equipment_1939_short:0 "Chi-Ha"
  FNG_medium_tank_destroyer_equipment_1:0 "Type 1 Ho-Ni I"
  FNG_medium_tank_destroyer_equipment_1_short:0 "Ho-Ni I"
  FNG_medium_tank_artillery_equipment_1:0 "Type 2 Ho-I"
  FNG_medium_tank_artillery_equipment_1_short:0 "Ho-I"
- FNG_medium_tank_equipment_2:0 "Type 3 Chi-Nu"
- FNG_medium_tank_equipment_2_short:0 "Chi-Nu"
+ FNG_medium_tank_equipment_1941:0 "Type 3 Chi-Nu"
+ FNG_medium_tank_equipment_1941_short:0 "Chi-Nu"
  FNG_medium_tank_destroyer_equipment_2:0 "Type 3 Ho-Ni III"
  FNG_medium_tank_destroyer_equipment_2_short:0 "Ho-Ni III"
  FNG_medium_tank_artillery_equipment_2:0 "Type 4 Ho-Ro"
  FNG_medium_tank_artillery_equipment_2_short:0 "Ho-Ro"
- FNG_medium_tank_equipment_3:0 "Type 5 Chi-Ri"
- FNG_medium_tank_equipment_3_short:0 "Chi-Ri"
+ FNG_medium_tank_equipment_1943:0 "Type 5 Chi-Ri"
+ FNG_medium_tank_equipment_1943_short:0 "Chi-Ri"
  FNG_medium_tank_destroyer_equipment_3:0 "Type 5 Na-To"
  FNG_medium_tank_destroyer_equipment_3_short:0 "Na-To"
  FNG_medium_tank_artillery_equipment_3:0 "Type 4 Ha-To"
  FNG_medium_tank_artillery_equipment_3_short:0 "Ha-To"
- FNG_modern_tank_equipment_1:0 "Type 61"
- FNG_modern_tank_equipment_1_short:0 "Type 61"
+ FNG_medium_tank_equipment_1945:0 "Type 61"
+ FNG_medium_tank_equipment_1945_short:0 "Type 61"
  FNG_heavy_tank_equipment_1934:0 "Type 95 Heavy Tank"
  FNG_heavy_tank_equipment_1934_short:0 "Type 95"
  FNG_heavy_tank_destroyer_equipment_1:0 "Type 3 Ka-To"
@@ -4868,8 +4868,8 @@
  FOP_light_tank_equipment_2:0 "FCM 36"
  FOP_light_tank_equipment_2_short:0 "FCM 36"
 
- FOP_medium_tank_equipment_2:0 "Nahuel D.L. 43"
- FOP_medium_tank_equipment_2_short:0 "Nahuel"
+ FOP_medium_tank_equipment_1941:0 "Nahuel D.L. 43"
+ FOP_medium_tank_equipment_1941_short:0 "Nahuel"
 
 ###
 ### Commune of France ###
@@ -4980,16 +4980,16 @@
  FRA_light_tank_aa_equipment_3:0 "AMX DCA Canon de 40mm"
  FRA_light_tank_aa_equipment_3_short:0 "AMX DCA 40"
 
- FRA_medium_tank_equipment_1:1 "Lorraine AMC 35"
- FRA_medium_tank_equipment_1_short:1 "AMC 35"
+ FRA_medium_tank_equipment_1939:1 "Lorraine AMC 35"
+ FRA_medium_tank_equipment_1939_short:1 "AMC 35"
  FRA_medium_tank_artillery_equipment_1:0 "Lorraine V39"
  FRA_medium_tank_artillery_equipment_1_short:0 "Lorraine V39"
- FRA_medium_tank_equipment_2:1 "SOMUA S35"
- FRA_medium_tank_equipment_2_short:1 "S35"
+ FRA_medium_tank_equipment_1941:1 "SOMUA S35"
+ FRA_medium_tank_equipment_1941_short:1 "S35"
  FRA_medium_tank_artillery_equipment_2:0 "AMX 13 105 AM"
  FRA_medium_tank_artillery_equipment_2_short:0 "105 AM"
- FRA_medium_tank_equipment_3:1 "Lorraine 42"
- FRA_medium_tank_equipment_3_short:1 "Lorraine 42"
+ FRA_medium_tank_equipment_1943:1 "Lorraine 42"
+ FRA_medium_tank_equipment_1943_short:1 "Lorraine 42"
  FRA_medium_tank_destroyer_equipment_3:0 "Canon D’Assaut Lorraine de 100mm"
  FRA_medium_tank_destroyer_equipment_3_short:0 "CA Lorraine 100"
 
@@ -5011,8 +5011,8 @@
  FRA_super_heavy_tank_aa_equipment_1:0 "FCM-F1 bis"
  FRA_super_heavy_tank_aa_equipment_1_short:0 "FCM-F1 bis"
 
- FRA_modern_tank_equipment_1:0 "SOMUA 50t"
- FRA_modern_tank_equipment_1_short:0 "SOMUA 50t"
+ FRA_medium_tank_equipment_1945:0 "SOMUA 50t"
+ FRA_medium_tank_equipment_1945_short:0 "SOMUA 50t"
  FRA_modern_tank_destroyer_equipment_1:0 "AMX Chasseur de Char"
  FRA_modern_tank_destroyer_equipment_1_short:0 "AMX CDC"
  FRA_modern_tank_artillery_equipment_1:0 "Lorraine 155"
@@ -5119,16 +5119,16 @@
  FRP_light_tank_aa_equipment_3:0 "AMX DCA Canon de 40mm"
  FRP_light_tank_aa_equipment_3_short:0 "AMX DCA 40"
 
- FRP_medium_tank_equipment_1:1 "Lorraine AMC 35"
- FRP_medium_tank_equipment_1_short:1 "AMC 35"
+ FRP_medium_tank_equipment_1939:1 "Lorraine AMC 35"
+ FRP_medium_tank_equipment_1939_short:1 "AMC 35"
  FRP_medium_tank_artillery_equipment_1:0 "Lorraine V39"
  FRP_medium_tank_artillery_equipment_1_short:0 "Lorraine V39"
- FRP_medium_tank_equipment_2:1 "SOMUA S35"
- FRP_medium_tank_equipment_2_short:1 "S35"
+ FRP_medium_tank_equipment_1941:1 "SOMUA S35"
+ FRP_medium_tank_equipment_1941_short:1 "S35"
  FRP_medium_tank_artillery_equipment_2:0 "AMX 13 105 AM"
  FRP_medium_tank_artillery_equipment_2_short:0 "105 AM"
- FRP_medium_tank_equipment_3:1 "Lorraine 42"
- FRP_medium_tank_equipment_3_short:1 "Lorraine 42"
+ FRP_medium_tank_equipment_1943:1 "Lorraine 42"
+ FRP_medium_tank_equipment_1943_short:1 "Lorraine 42"
  FRP_medium_tank_destroyer_equipment_3:0 "Canon D’Assaut Lorraine de 100mm"
  FRP_medium_tank_destroyer_equipment_3_short:0 "CA Lorraine 100"
 
@@ -5150,8 +5150,8 @@
  FRP_super_heavy_tank_aa_equipment_1:0 "FCM-F1 bis"
  FRP_super_heavy_tank_aa_equipment_1_short:0 "FCM-F1 bis"
 
- FRP_modern_tank_equipment_1:0 "SOMUA 50t"
- FRP_modern_tank_equipment_1_short:0 "SOMUA 50t"
+ FRP_medium_tank_equipment_1945:0 "SOMUA 50t"
+ FRP_medium_tank_equipment_1945_short:0 "SOMUA 50t"
  FRP_modern_tank_destroyer_equipment_1:0 "AMX Chasseur de Char"
  FRP_modern_tank_destroyer_equipment_1_short:0 "AMX CDC"
  FRP_modern_tank_artillery_equipment_1:0 "Lorraine 155"
@@ -5296,15 +5296,15 @@
  GAL_light_tank_equipment_3_short:0 "PR wz. 42"
  #GAL_light_tank_equipment_3_desc: ""
 
- GAL_medium_tank_equipment_1:0 "Škoda-MÁVAG Pancerz Kawalerii wzór 40"
- GAL_medium_tank_equipment_1_short:0 "PK wz. 40"
- #GAL_medium_tank_equipment_1_desc:0 ""
- GAL_medium_tank_equipment_2:0 "Škoda-MÁVAG Pancerz Kawalerii wzór 40/42"
- GAL_medium_tank_equipment_2_short:0 "PK wz. 42"
- #GAL_medium_tank_equipment_2_desc:0 ""
- GAL_medium_tank_equipment_3:0 "MTK Pancerz Kawalerii wzór 44"
- GAL_medium_tank_equipment_3_short:0 "PK wz. 44"
- #GAL_medium_tank_equipment_3_desc:0 ""
+ GAL_medium_tank_equipment_1939:0 "Škoda-MÁVAG Pancerz Kawalerii wzór 40"
+ GAL_medium_tank_equipment_1939_short:0 "PK wz. 40"
+ #GAL_medium_tank_equipment_1939_desc:0 ""
+ GAL_medium_tank_equipment_1941:0 "Škoda-MÁVAG Pancerz Kawalerii wzór 40/42"
+ GAL_medium_tank_equipment_1941_short:0 "PK wz. 42"
+ #GAL_medium_tank_equipment_1941_desc:0 ""
+ GAL_medium_tank_equipment_1943:0 "MTK Pancerz Kawalerii wzór 44"
+ GAL_medium_tank_equipment_1943_short:0 "PK wz. 44"
+ #GAL_medium_tank_equipment_1943_desc:0 ""
 
  GAL_heavy_tank_equipment_1934:0 "Škoda Pancerz Piechoty wzór 36"
  GAL_heavy_tank_equipment_1934_short:0 "PP wz. 36"
@@ -5320,9 +5320,9 @@
  GAL_super_heavy_tank_equipment_1934_short:0 "Franciszek"
  #GAL_super_heavy_tank_equipment_1934_desc:0 ""
 
- GAL_modern_tank_equipment_1:0 "Škoda Pancerz Podstawowy wzór 50"
- GAL_modern_tank_equipment_1_short:0 "PP wz. 50"
- #GAL_modern_tank_equipment_1_desc:0 ""
+ GAL_medium_tank_equipment_1945:0 "Škoda Pancerz Podstawowy wzór 50"
+ GAL_medium_tank_equipment_1945_short:0 "PP wz. 50"
+ #GAL_medium_tank_equipment_1945_desc:0 ""
 
  GAL_amphibious_tank_equipment_1:0 "ČKD F-IV-H"
  GAL_amphibious_tank_equipment_1_short:0 "F-IV-H"
@@ -5408,12 +5408,12 @@
  GBP_light_tank_equipment_3:0 "Pilot Tank Mk.V"
  GBP_light_tank_equipment_3_short:0 "Pilot Mk.V"
 
- GBP_medium_tank_equipment_1:0 "Medium Tank Mk.VI"
- GBP_medium_tank_equipment_1_short:0 "Medium Mk.VI"
- GBP_medium_tank_equipment_2:0 "Medium Tank Mk.VIII"
- GBP_medium_tank_equipment_2_short:0 "Medium Mk.VIII"
- GBP_medium_tank_equipment_3:0 "Medium Tank Mk.XI"
- GBP_medium_tank_equipment_3_short:0 "Medium Mk.XI"
+ GBP_medium_tank_equipment_1939:0 "Medium Tank Mk.VI"
+ GBP_medium_tank_equipment_1939_short:0 "Medium Mk.VI"
+ GBP_medium_tank_equipment_1941:0 "Medium Tank Mk.VIII"
+ GBP_medium_tank_equipment_1941_short:0 "Medium Mk.VIII"
+ GBP_medium_tank_equipment_1943:0 "Medium Tank Mk.XI"
+ GBP_medium_tank_equipment_1943_short:0 "Medium Mk.XI"
 
  GBP_heavy_tank_equipment_1934:0 "Heavy Tank Mk.I"
  GBP_heavy_tank_equipment_1934_short:0 "Heavy Mk.I"
@@ -5425,8 +5425,8 @@
  GBP_super_heavy_tank_equipment_1934:0 "Colossus"
  GBP_super_heavy_tank_equipment_1934_short:0 "Colossus"
 
- GBP_modern_tank_equipment_1:0 "Universal Tank Mk.I"
- GBP_modern_tank_equipment_1_short:0 "Universal Mk.I"
+ GBP_medium_tank_equipment_1945:0 "Universal Tank Mk.I"
+ GBP_medium_tank_equipment_1945_short:0 "Universal Mk.I"
 
 ###
 ### Great Britian ###
@@ -5530,12 +5530,12 @@
  GBR_light_tank_equipment_3:0 "Vickers A18 'Valentine'"
  GBR_light_tank_equipment_3_short:0 "A18 'Valentine'"
 
- GBR_medium_tank_equipment_1:0 "Montreal Locomotive Works A15 'Ram'"
- GBR_medium_tank_equipment_1_short:0 "A15 'Ram'"
- GBR_medium_tank_equipment_2:0 "Montreal Locomotive Works A27 'Grizzly'"
- GBR_medium_tank_equipment_2_short:0 "A27 'Grizzly'"
- GBR_medium_tank_equipment_3:0 "Chullora A34 'Thunderbolt'"
- GBR_medium_tank_equipment_3_short:0 "A34 'Thunderbolt'"
+ GBR_medium_tank_equipment_1939:0 "Montreal Locomotive Works A15 'Ram'"
+ GBR_medium_tank_equipment_1939_short:0 "A15 'Ram'"
+ GBR_medium_tank_equipment_1941:0 "Montreal Locomotive Works A27 'Grizzly'"
+ GBR_medium_tank_equipment_1941_short:0 "A27 'Grizzly'"
+ GBR_medium_tank_equipment_1943:0 "Chullora A34 'Thunderbolt'"
+ GBR_medium_tank_equipment_1943_short:0 "A34 'Thunderbolt'"
 
  GBR_heavy_tank_equipment_1934:0 "Vickers A1 'Independent'"
  GBR_heavy_tank_equipment_1934_short:0 "A1 'Independent'"
@@ -5547,8 +5547,8 @@
  GBR_super_heavy_tank_equipment_1934:0 "Massey-Harris A39 'Tortoise'"
  GBR_super_heavy_tank_equipment_1934_short:0 "A39 'Tortoise'"
 
- GBR_modern_tank_equipment_1:0 "Leyland A44 'Brock'"
- GBR_modern_tank_equipment_1_short:0 "A44 'Brock'"
+ GBR_medium_tank_equipment_1945:0 "Leyland A44 'Brock'"
+ GBR_medium_tank_equipment_1945_short:0 "A44 'Brock'"
 
 ###
 ### GEA - German East Asia ###
@@ -5679,12 +5679,12 @@
  GEA_light_tank_aa_equipment_3:0 "$GER_light_tank_aa_equipment_3$"
  GEA_light_tank_aa_equipment_3_short:0 "$GER_light_tank_aa_equipment_3_short$"
 
- GEA_medium_tank_equipment_1:0 "$GER_medium_tank_equipment_1$"
- GEA_medium_tank_equipment_1_short:0 "$GER_medium_tank_equipment_1_short$"
- GEA_medium_tank_equipment_2:0 "$GER_medium_tank_equipment_2$"
- GEA_medium_tank_equipment_2_short:0 "$GER_medium_tank_equipment_2_short$"
- GEA_medium_tank_equipment_3:0 "$GER_medium_tank_equipment_3$"
- GEA_medium_tank_equipment_3_short:0 "$GER_medium_tank_equipment_3_short$"
+ GEA_medium_tank_equipment_1939:0 "$GER_medium_tank_equipment_1939$"
+ GEA_medium_tank_equipment_1939_short:0 "$GER_medium_tank_equipment_1939_short$"
+ GEA_medium_tank_equipment_1941:0 "$GER_medium_tank_equipment_1941$"
+ GEA_medium_tank_equipment_1941_short:0 "$GER_medium_tank_equipment_1941_short$"
+ GEA_medium_tank_equipment_1943:0 "$GER_medium_tank_equipment_1943$"
+ GEA_medium_tank_equipment_1943_short:0 "$GER_medium_tank_equipment_1943_short$"
  GEA_medium_tank_artillery_equipment_1:0 "$GER_medium_tank_artillery_equipment_1$"
  GEA_medium_tank_artillery_equipment_1_short:0 "$GER_medium_tank_artillery_equipment_1_short$"
  GEA_medium_tank_artillery_equipment_2:0 "$GER_medium_tank_artillery_equipment_2$"
@@ -5738,8 +5738,8 @@
  GEA_super_heavy_tank_aa_equipment_1:0 "$GER_super_heavy_tank_aa_equipment_1$"
  GEA_super_heavy_tank_aa_equipment_1_short:0 "$GER_super_heavy_tank_aa_equipment_1_short$"
 
- GEA_modern_tank_equipment_1:0 "$GER_modern_tank_equipment_1$"
- GEA_modern_tank_equipment_1_short:0 "$GER_modern_tank_equipment_1_short$"
+ GEA_medium_tank_equipment_1945:0 "$GER_medium_tank_equipment_1945$"
+ GEA_medium_tank_equipment_1945_short:0 "$GER_medium_tank_equipment_1945_short$"
  GEA_modern_tank_artillery_equipment_1:0 "$GER_modern_tank_artillery_equipment_1$"
  GEA_modern_tank_artillery_equipment_1_short:0 "$GER_modern_tank_artillery_equipment_1_short$"
  GEA_modern_tank_destroyer_equipment_1:0 "$GER_modern_tank_destroyer_equipment_1$"
@@ -5830,12 +5830,12 @@
  GEO_light_tank_equipment_3:0 "Sheteviti Javshanmankana modeli 1941"
  GEO_light_tank_equipment_3_short:0 "ShJ 41"
 
- GEO_medium_tank_equipment_1:0 "Sashualo Javshanmankana modeli 1936"
- GEO_medium_tank_equipment_1_short:0 "SJ 36"
- GEO_medium_tank_equipment_2:0 "Sashualo Javshanmankana modeli 1939"
- GEO_medium_tank_equipment_2_short:0 "SJ 39"
- GEO_medium_tank_equipment_3:0 "Sashualo Javshanmankana modeli 1942"
- GEO_medium_tank_equipment_3_short:0 "SJ 42"
+ GEO_medium_tank_equipment_1939:0 "Sashualo Javshanmankana modeli 1936"
+ GEO_medium_tank_equipment_1939_short:0 "SJ 36"
+ GEO_medium_tank_equipment_1941:0 "Sashualo Javshanmankana modeli 1939"
+ GEO_medium_tank_equipment_1941_short:0 "SJ 39"
+ GEO_medium_tank_equipment_1943:0 "Sashualo Javshanmankana modeli 1942"
+ GEO_medium_tank_equipment_1943_short:0 "SJ 42"
 
  GEO_heavy_tank_equipment_1934:0 "Mdzime Javshanmankana modeli 1935"
  GEO_heavy_tank_equipment_1934_short:0 "MJ 35"
@@ -5845,8 +5845,8 @@
  GEO_heavy_tank_equipment_1943_short:0 "MJ 43"
 
 
- GEO_modern_tank_equipment_1:0 "Standartuli Avzi modeli 1945"
- GEO_modern_tank_equipment_1_short:0 "SA 45"
+ GEO_medium_tank_equipment_1945:0 "Standartuli Avzi modeli 1945"
+ GEO_medium_tank_equipment_1945_short:0 "SA 45"
 
 ###
 ### German Empire ###
@@ -6053,14 +6053,14 @@
  GER_light_tank_aa_equipment_3_short:0 "4x2-cm Fla.K.Pz. III"
 
  #PZ 4A:
- GER_medium_tank_equipment_1:0 "Sturmpanzerkampfwagen IV"
- GER_medium_tank_equipment_1_short:0 "St.Pz.Kpfw. IV"
+ GER_medium_tank_equipment_1939:0 "Sturmpanzerkampfwagen IV"
+ GER_medium_tank_equipment_1939_short:0 "St.Pz.Kpfw. IV"
  #PZ 4 H/L:
- GER_medium_tank_equipment_2:0 "Sturmpanzerkampfwagen IV/verbesserter"
- GER_medium_tank_equipment_2_short:0 "St.Pz.Kpfw. IV/vbs."
+ GER_medium_tank_equipment_1941:0 "Sturmpanzerkampfwagen IV/verbesserter"
+ GER_medium_tank_equipment_1941_short:0 "St.Pz.Kpfw. IV/vbs."
  #Panther:
- GER_medium_tank_equipment_3:0 "Sturmpanzerkampfwagen VI"
- GER_medium_tank_equipment_3_short:0 "St.Pz.Kpfw. VI"
+ GER_medium_tank_equipment_1943:0 "Sturmpanzerkampfwagen VI"
+ GER_medium_tank_equipment_1943_short:0 "St.Pz.Kpfw. VI"
  #Heuschrecke:
  GER_medium_tank_artillery_equipment_1:0 "Waffenträger IV mit 10,5-cm le.F.H. 33 L/28"
  GER_medium_tank_artillery_equipment_1_short:0 "W.T. IV"
@@ -6140,8 +6140,8 @@
  GER_super_heavy_tank_aa_equipment_1_short:0 "K.Fla.K.Pz. VIII"
 
  #E50:
- GER_modern_tank_equipment_1:0 "Kampfpanzer 1"
- GER_modern_tank_equipment_1_short:0 "KPz-1"
+ GER_medium_tank_equipment_1945:0 "Kampfpanzer 1"
+ GER_medium_tank_equipment_1945_short:0 "KPz-1"
  #fake:
  GER_modern_tank_artillery_equipment_1:0 "Panzerhaubitze 1 mit 15cm sFH 48"
  GER_modern_tank_artillery_equipment_1_short:0 "PzH-1"
@@ -6410,12 +6410,12 @@
  GRU_light_tank_aa_equipment_3:0 "$GER_light_tank_aa_equipment_3$"
  GRU_light_tank_aa_equipment_3_short:0 "$GER_light_tank_aa_equipment_3_short$"
 
- GRU_medium_tank_equipment_1:0 "$GER_medium_tank_equipment_1$"
- GRU_medium_tank_equipment_1_short:0 "$GER_medium_tank_equipment_1_short$"
- GRU_medium_tank_equipment_2:0 "$GER_medium_tank_equipment_2$"
- GRU_medium_tank_equipment_2_short:0 "$GER_medium_tank_equipment_2_short$"
- GRU_medium_tank_equipment_3:0 "$GER_medium_tank_equipment_3$"
- GRU_medium_tank_equipment_3_short:0 "$GER_medium_tank_equipment_3_short$"
+ GRU_medium_tank_equipment_1939:0 "$GER_medium_tank_equipment_1939$"
+ GRU_medium_tank_equipment_1939_short:0 "$GER_medium_tank_equipment_1939_short$"
+ GRU_medium_tank_equipment_1941:0 "$GER_medium_tank_equipment_1941$"
+ GRU_medium_tank_equipment_1941_short:0 "$GER_medium_tank_equipment_1941_short$"
+ GRU_medium_tank_equipment_1943:0 "$GER_medium_tank_equipment_1943$"
+ GRU_medium_tank_equipment_1943_short:0 "$GER_medium_tank_equipment_1943_short$"
  GRU_medium_tank_artillery_equipment_1:0 "$GER_medium_tank_artillery_equipment_1$"
  GRU_medium_tank_artillery_equipment_1_short:0 "$GER_medium_tank_artillery_equipment_1_short$"
  GRU_medium_tank_artillery_equipment_2:0 "$GER_medium_tank_artillery_equipment_2$"
@@ -6469,8 +6469,8 @@
  GRU_super_heavy_tank_aa_equipment_1:0 "$GER_super_heavy_tank_aa_equipment_1$"
  GRU_super_heavy_tank_aa_equipment_1_short:0 "$GER_super_heavy_tank_aa_equipment_1_short$"
 
- GRU_modern_tank_equipment_1:0 "$GER_modern_tank_equipment_1$"
- GRU_modern_tank_equipment_1_short:0 "$GER_modern_tank_equipment_1_short$"
+ GRU_medium_tank_equipment_1945:0 "$GER_medium_tank_equipment_1945$"
+ GRU_medium_tank_equipment_1945_short:0 "$GER_medium_tank_equipment_1945_short$"
  GRU_modern_tank_artillery_equipment_1:0 "$GER_modern_tank_artillery_equipment_1$"
  GRU_modern_tank_artillery_equipment_1_short:0 "$GER_modern_tank_artillery_equipment_1_short$"
  GRU_modern_tank_destroyer_equipment_1:0 "$GER_modern_tank_destroyer_equipment_1$"
@@ -6615,12 +6615,12 @@
  GUY_light_tank_equipment_3:0 "Vickers A18 'Valentine'"
  GUY_light_tank_equipment_3_short:0 "A18 'Valentine'"
 
- GUY_medium_tank_equipment_1:0 "Montreal Locomotive Works A15 'Ram'"
- GUY_medium_tank_equipment_1_short:0 "A15 'Ram'"
- GUY_medium_tank_equipment_2:0 "Montreal Locomotive Works A27 'Grizzly'"
- GUY_medium_tank_equipment_2_short:0 "A27 'Grizzly'"
- GUY_medium_tank_equipment_3:0 "Chullora A34 'Thunderbolt'"
- GUY_medium_tank_equipment_3_short:0 "A34 'Thunderbolt'"
+ GUY_medium_tank_equipment_1939:0 "Montreal Locomotive Works A15 'Ram'"
+ GUY_medium_tank_equipment_1939_short:0 "A15 'Ram'"
+ GUY_medium_tank_equipment_1941:0 "Montreal Locomotive Works A27 'Grizzly'"
+ GUY_medium_tank_equipment_1941_short:0 "A27 'Grizzly'"
+ GUY_medium_tank_equipment_1943:0 "Chullora A34 'Thunderbolt'"
+ GUY_medium_tank_equipment_1943_short:0 "A34 'Thunderbolt'"
 
  GUY_heavy_tank_equipment_1934:0 "Vickers A1 'Independent'"
  GUY_heavy_tank_equipment_1934_short:0 "A1 'Independent'"
@@ -6632,8 +6632,8 @@
  GUY_super_heavy_tank_equipment_1934:0 "Massey-Harris A39 'Tortoise'"
  GUY_super_heavy_tank_equipment_1934_short:0 "A39 'Tortoise'"
 
- GUY_modern_tank_equipment_1:0 "Leyland A44 'Brock'"
- GUY_modern_tank_equipment_1_short:0 "A44 'Brock'"
+ GUY_medium_tank_equipment_1945:0 "Leyland A44 'Brock'"
+ GUY_medium_tank_equipment_1945_short:0 "A44 'Brock'"
 
 ###
 ### Liangguang Clique ###
@@ -6895,20 +6895,20 @@
  HOL_light_tank_equipment_2_short:0 "PVT-2"
  HOL_light_tank_equipment_3:0 "Pantservoertuig 5"
  HOL_light_tank_equipment_3_short:0 "PVT-5"
- HOL_medium_tank_equipment_1:0 "Gevechtstank 3"
- HOL_medium_tank_equipment_1_short:0 "GVT-3"
- HOL_medium_tank_equipment_2:0 "Gevechtstank 4"
- HOL_medium_tank_equipment_2_short:0 "GVT-4"
- HOL_medium_tank_equipment_3:0 "Gevechtstank 6"
- HOL_medium_tank_equipment_3_short:0 "GVT-6"
+ HOL_medium_tank_equipment_1939:0 "Gevechtstank 3"
+ HOL_medium_tank_equipment_1939_short:0 "GVT-3"
+ HOL_medium_tank_equipment_1941:0 "Gevechtstank 4"
+ HOL_medium_tank_equipment_1941_short:0 "GVT-4"
+ HOL_medium_tank_equipment_1943:0 "Gevechtstank 6"
+ HOL_medium_tank_equipment_1943_short:0 "GVT-6"
  HOL_heavy_tank_equipment_1934:0 "Zware Tank I"
  HOL_heavy_tank_equipment_1934_short:0 "ZT-I"
  HOL_heavy_tank_equipment_1941:0 "Zware Tank II"
  HOL_heavy_tank_equipment_1941_short:0 "ZT-II"
  HOL_heavy_tank_equipment_1943:0 "Zware Tank III"
  HOL_heavy_tank_equipment_1943_short:0 "ZT-III"
- HOL_modern_tank_equipment_1:0 "Gevechtstank 8"
- HOL_modern_tank_equipment_1_short:0 "GVT-8"
+ HOL_medium_tank_equipment_1945:0 "Gevechtstank 8"
+ HOL_medium_tank_equipment_1945_short:0 "GVT-8"
  HOL_light_tank_destroyer_equipment_1:0 "Tankjager 1"
  HOL_light_tank_destroyer_equipment_1_short:0 "TJ-1"
  HOL_light_tank_destroyer_equipment_2:0 "Tankjager 2"
@@ -7074,15 +7074,15 @@
  HUN_light_tank_equipment_3_short:0 "42M FP"
  #HUN_light_tank_equipment_3_desc: ""
 
- HUN_medium_tank_equipment_1:0 "40M Škoda-MÁVAG lovaspáncélos"
- HUN_medium_tank_equipment_1_short:0 "40M LP"
- #HUN_medium_tank_equipment_1_desc:0 ""
- HUN_medium_tank_equipment_2:0 "40/42M Škoda-MÁVAG lovaspáncélos"
- HUN_medium_tank_equipment_2_short:0 "42M LP"
- #HUN_medium_tank_equipment_2_desc:0 ""
- HUN_medium_tank_equipment_3:0 "44M MTK lovaspáncélos"
- HUN_medium_tank_equipment_3_short:0 "44M LP"
- #HUN_medium_tank_equipment_3_desc:0 ""
+ HUN_medium_tank_equipment_1939:0 "40M Škoda-MÁVAG lovaspáncélos"
+ HUN_medium_tank_equipment_1939_short:0 "40M LP"
+ #HUN_medium_tank_equipment_1939_desc:0 ""
+ HUN_medium_tank_equipment_1941:0 "40/42M Škoda-MÁVAG lovaspáncélos"
+ HUN_medium_tank_equipment_1941_short:0 "42M LP"
+ #HUN_medium_tank_equipment_1941_desc:0 ""
+ HUN_medium_tank_equipment_1943:0 "44M MTK lovaspáncélos"
+ HUN_medium_tank_equipment_1943_short:0 "44M LP"
+ #HUN_medium_tank_equipment_1943_desc:0 ""
 
  HUN_heavy_tank_equipment_1934:0 "Škoda gyalogsági páncélos M.36"
  HUN_heavy_tank_equipment_1934_short:0 "36M GP"
@@ -7098,9 +7098,9 @@
  HUN_super_heavy_tank_equipment_1934_short:0 "Ferenc"
  #HUN_super_heavy_tank_equipment_1934_desc:0 ""
 
- HUN_modern_tank_equipment_1:0 "50M Škoda általános páncélos"
- HUN_modern_tank_equipment_1_short:0 "50M AP"
- #HUN_modern_tank_equipment_1_desc:0 ""
+ HUN_medium_tank_equipment_1945:0 "50M Škoda általános páncélos"
+ HUN_medium_tank_equipment_1945_short:0 "50M AP"
+ #HUN_medium_tank_equipment_1945_desc:0 ""
 
  HUN_amphibious_tank_equipment_1:0 "ČKD F-IV-H"
  HUN_amphibious_tank_equipment_1_short:0 "F-IV-H"
@@ -7205,14 +7205,14 @@
  INC_light_tank_artillery_equipment_3:0 "Canon de 155 mm Mle F3 Automoteur"
  INC_light_tank_artillery_equipment_3_short:0 "F3 155 mm"
 
- INC_medium_tank_equipment_1:1 "Renault AMC 35"
- INC_medium_tank_equipment_1_short:1 "AMC 35"
+ INC_medium_tank_equipment_1939:1 "Renault AMC 35"
+ INC_medium_tank_equipment_1939_short:1 "AMC 35"
  INC_medium_tank_artillery_equipment_1:0 "ARL V39"
  INC_medium_tank_artillery_equipment_1_short:0 "ARL V39"
- INC_medium_tank_equipment_2:1 "SOMUA S35"
- INC_medium_tank_equipment_2_short:1 "S35"
- INC_medium_tank_equipment_3:1 "SARL 42"
- INC_medium_tank_equipment_3_short:1 "SARL 42"
+ INC_medium_tank_equipment_1941:1 "SOMUA S35"
+ INC_medium_tank_equipment_1941_short:1 "S35"
+ INC_medium_tank_equipment_1943:1 "SARL 42"
+ INC_medium_tank_equipment_1943_short:1 "SARL 42"
 
  INC_heavy_tank_equipment_1934:0 "Renault B1"
  INC_heavy_tank_equipment_1934_short:0 "B1"
@@ -7225,8 +7225,8 @@
 
  INC_super_heavy_tank_equipment_1934:0 "FCM-F1"
  INC_super_heavy_tank_equipment_1934_short:0 "FCM-F1"
- INC_modern_tank_equipment_1:0 "AMX 50t"
- INC_modern_tank_equipment_1_short:0 "AMX 50t"
+ INC_medium_tank_equipment_1945:0 "AMX 50t"
+ INC_medium_tank_equipment_1945_short:0 "AMX 50t"
 
 ###
 ### Insulindia ###
@@ -7511,12 +7511,12 @@
  ITA_light_tank_destroyer_equipment_2:0 "Semovente 47/32"
  ITA_light_tank_destroyer_equipment_2_short:0 "Semovente 47/32"
 
- ITA_medium_tank_equipment_1:0 "Fiat M11/39"
- ITA_medium_tank_equipment_1_short:1 "M11/39"
- ITA_medium_tank_equipment_2:0 "M16 Sahariano"
- ITA_medium_tank_equipment_2_short:0 "M16"
- ITA_medium_tank_equipment_3:0 "M20/43"
- ITA_medium_tank_equipment_3_short:0 "M20/43"
+ ITA_medium_tank_equipment_1939:0 "Fiat M11/39"
+ ITA_medium_tank_equipment_1939_short:1 "M11/39"
+ ITA_medium_tank_equipment_1941:0 "M16 Sahariano"
+ ITA_medium_tank_equipment_1941_short:0 "M16"
+ ITA_medium_tank_equipment_1943:0 "M20/43"
+ ITA_medium_tank_equipment_1943_short:0 "M20/43"
  ITA_medium_tank_artillery_equipment_2:0 "Semovente M41 75/18"
  ITA_medium_tank_artillery_equipment_2_short:0 "Semovente M 41 75/18"
  ITA_medium_tank_artillery_equipment_3:0 "Semovente M42L 105/25"
@@ -7539,8 +7539,8 @@
 
  ITA_super_heavy_tank_equipment_1934:0 "Il Duce"
  ITA_super_heavy_tank_equipment_1934_short:0 "Il Duce"
- ITA_modern_tank_equipment_1:0 "M31/45"
- ITA_modern_tank_equipment_1_short:0 "M31/45"
+ ITA_medium_tank_equipment_1945:0 "M31/45"
+ ITA_medium_tank_equipment_1945_short:0 "M31/45"
 
 ###
 ### Jamaica ###
@@ -7662,12 +7662,12 @@
  JAM_light_tank_equipment_3:0 "Vickers A18 'Valentine'"
  JAM_light_tank_equipment_3_short:0 "A18 'Valentine'"
 
- JAM_medium_tank_equipment_1:0 "Montreal Locomotive Works A15 'Ram'"
- JAM_medium_tank_equipment_1_short:0 "A15 'Ram'"
- JAM_medium_tank_equipment_2:0 "Montreal Locomotive Works A27 'Grizzly'"
- JAM_medium_tank_equipment_2_short:0 "A27 'Grizzly'"
- JAM_medium_tank_equipment_3:0 "Chullora A34 'Thunderbolt'"
- JAM_medium_tank_equipment_3_short:0 "A34 'Thunderbolt'"
+ JAM_medium_tank_equipment_1939:0 "Montreal Locomotive Works A15 'Ram'"
+ JAM_medium_tank_equipment_1939_short:0 "A15 'Ram'"
+ JAM_medium_tank_equipment_1941:0 "Montreal Locomotive Works A27 'Grizzly'"
+ JAM_medium_tank_equipment_1941_short:0 "A27 'Grizzly'"
+ JAM_medium_tank_equipment_1943:0 "Chullora A34 'Thunderbolt'"
+ JAM_medium_tank_equipment_1943_short:0 "A34 'Thunderbolt'"
 
  JAM_heavy_tank_equipment_1934:0 "Vickers A1 'Independent'"
  JAM_heavy_tank_equipment_1934_short:0 "A1 'Independent'"
@@ -7679,8 +7679,8 @@
  JAM_super_heavy_tank_equipment_1934:0 "Massey-Harris A39 'Tortoise'"
  JAM_super_heavy_tank_equipment_1934_short:0 "A39 'Tortoise'"
 
- JAM_modern_tank_equipment_1:0 "Leyland A44 'Brock'"
- JAM_modern_tank_equipment_1_short:0 "A44 'Brock'"
+ JAM_medium_tank_equipment_1945:0 "Leyland A44 'Brock'"
+ JAM_medium_tank_equipment_1945_short:0 "A44 'Brock'"
 
 ###
 ### Japan ###
@@ -7816,26 +7816,26 @@
  JAP_light_tank_artillery_equipment_3_short:0 "Type 5 Ku-Se"
  JAP_light_tank_aa_equipment_3:0 "Type 98 Ta-Se"
  JAP_light_tank_aa_equipment_3_short:0 "Ta-Se"
- JAP_medium_tank_equipment_1:0 "Type 97 Chi-Ha"
- JAP_medium_tank_equipment_1_short:0 "Chi-Ha"
+ JAP_medium_tank_equipment_1939:0 "Type 97 Chi-Ha"
+ JAP_medium_tank_equipment_1939_short:0 "Chi-Ha"
  JAP_medium_tank_destroyer_equipment_1:0 "Type 1 Ho-Ni I"
  JAP_medium_tank_destroyer_equipment_1_short:0 "Ho-Ni I"
  JAP_medium_tank_artillery_equipment_1:0 "Type 2 Ho-I"
  JAP_medium_tank_artillery_equipment_1_short:0 "Ho-I"
- JAP_medium_tank_equipment_2:0 "Type 3 Chi-Nu"
- JAP_medium_tank_equipment_2_short:0 "Chi-Nu"
+ JAP_medium_tank_equipment_1941:0 "Type 3 Chi-Nu"
+ JAP_medium_tank_equipment_1941_short:0 "Chi-Nu"
  JAP_medium_tank_destroyer_equipment_2:0 "Type 3 Ho-Ni III"
  JAP_medium_tank_destroyer_equipment_2_short:0 "Ho-Ni III"
  JAP_medium_tank_artillery_equipment_2:0 "Type 4 Ho-Ro"
  JAP_medium_tank_artillery_equipment_2_short:0 "Ho-Ro"
- JAP_medium_tank_equipment_3:0 "Type 5 Chi-Ri"
- JAP_medium_tank_equipment_3_short:0 "Chi-Ri"
+ JAP_medium_tank_equipment_1943:0 "Type 5 Chi-Ri"
+ JAP_medium_tank_equipment_1943_short:0 "Chi-Ri"
  JAP_medium_tank_destroyer_equipment_3:0 "Type 5 Na-To"
  JAP_medium_tank_destroyer_equipment_3_short:0 "Na-To"
  JAP_medium_tank_artillery_equipment_3:0 "Type 4 Ha-To"
  JAP_medium_tank_artillery_equipment_3_short:0 "Ha-To"
- JAP_modern_tank_equipment_1:0 "Type 61"
- JAP_modern_tank_equipment_1_short:0 "Type 61"
+ JAP_medium_tank_equipment_1945:0 "Type 61"
+ JAP_medium_tank_equipment_1945_short:0 "Type 61"
  JAP_heavy_tank_equipment_1934:0 "Type 95 Heavy Tank"
  JAP_heavy_tank_equipment_1934_short:0 "Type 95"
  JAP_heavy_tank_destroyer_equipment_1:0 "Type 3 Ka-To"
@@ -8201,14 +8201,14 @@
  LAT_light_tank_aa_equipment_3_short:0 "41. 20-mm zenītartilērijas"
 
  #PZ 2 with T-34 tower:
- LAT_medium_tank_equipment_1:0 "1936. g. modeļa armijas tanks ''Vairogs 1'"
- LAT_medium_tank_equipment_1_short:0 "36. 'Vairogs 1"
+ LAT_medium_tank_equipment_1939:0 "1936. g. modeļa armijas tanks ''Vairogs 1'"
+ LAT_medium_tank_equipment_1939_short:0 "36. 'Vairogs 1"
  #PZ 4 H/L:
- LAT_medium_tank_equipment_2:0 "1939. g. modeļa armijas tanks 'KW'"
- LAT_medium_tank_equipment_2_short:0 "39. KW"
+ LAT_medium_tank_equipment_1941:0 "1939. g. modeļa armijas tanks 'KW'"
+ LAT_medium_tank_equipment_1941_short:0 "39. KW"
  #Panther:
- LAT_medium_tank_equipment_3:0 "1942. g. modeļa armijas tanks 'VK 30'"
- LAT_medium_tank_equipment_3_short:0 "42. VK 30"
+ LAT_medium_tank_equipment_1943:0 "1942. g. modeļa armijas tanks 'VK 30'"
+ LAT_medium_tank_equipment_1943_short:0 "42. VK 30"
  #Heuschrecke:
  LAT_medium_tank_artillery_equipment_1:0 "1936. g. modeļa 105-mm pašpiedziņas lielgabals"
  LAT_medium_tank_artillery_equipment_1_short:0 "36. 105-mm lielgabals"
@@ -8288,8 +8288,8 @@
  LAT_super_heavy_tank_aa_equipment_1_short:0 "128-mm 43 ZS 'E 100'"
 
  #E50:
- LAT_modern_tank_equipment_1:0 "1945. g. modeļa armijas tanks 'E 50'"
- LAT_modern_tank_equipment_1_short:0 "E 50"
+ LAT_medium_tank_equipment_1945:0 "1945. g. modeļa armijas tanks 'E 50'"
+ LAT_medium_tank_equipment_1945_short:0 "E 50"
  #fake:
  LAT_modern_tank_artillery_equipment_1:0 "1945. g. modeļa 150-mm pašpiedziņas haubice"
  LAT_modern_tank_artillery_equipment_1_short:0 "45. 150-mm haubice"
@@ -8528,14 +8528,14 @@
 
 
  #PZ 3:
- LIT_medium_tank_equipment_1:0 "1936 m. modelio vidutinis tankas 'ZW'"
- LIT_medium_tank_equipment_1_short:0 "ZW"
+ LIT_medium_tank_equipment_1939:0 "1936 m. modelio vidutinis tankas 'ZW'"
+ LIT_medium_tank_equipment_1939_short:0 "ZW"
  #PZ 4 H/L:
- LIT_medium_tank_equipment_2:0 "1939 m. modelio vidutinis tankas 'KW'"
- LIT_medium_tank_equipment_2_short:0 "KW"
+ LIT_medium_tank_equipment_1941:0 "1939 m. modelio vidutinis tankas 'KW'"
+ LIT_medium_tank_equipment_1941_short:0 "KW"
  #Panther:
- LIT_medium_tank_equipment_3:0 "1942 m. modelio vidutinis tankas 'VK 30'"
- LIT_medium_tank_equipment_3_short:0 "VK 30"
+ LIT_medium_tank_equipment_1943:0 "1942 m. modelio vidutinis tankas 'VK 30'"
+ LIT_medium_tank_equipment_1943_short:0 "VK 30"
  #Heuschrecke:
  LIT_medium_tank_artillery_equipment_1:0 "1936 m. modelio 105 mm šturmo savaeige"
  LIT_medium_tank_artillery_equipment_1_short:0 "105 mm 36 savaeige"
@@ -8618,8 +8618,8 @@
 
 
  #E50:
- LIT_modern_tank_equipment_1:0 "1945 m. modelio kovinis tankas 'E 50'"
- LIT_modern_tank_equipment_1_short:0 "E 50"
+ LIT_medium_tank_equipment_1945:0 "1945 m. modelio kovinis tankas 'E 50'"
+ LIT_medium_tank_equipment_1945_short:0 "E 50"
  #fake:
  LIT_modern_tank_artillery_equipment_1:0 "1945 m. modelio 150 mm šturmo savaeige"
  LIT_modern_tank_artillery_equipment_1_short:0 "150 mm 45 savaeige"
@@ -8921,12 +8921,12 @@
  MAF_light_tank_aa_equipment_3:0 "$GER_light_tank_aa_equipment_3$"
  MAF_light_tank_aa_equipment_3_short:0 "$GER_light_tank_aa_equipment_3_short$"
 
- MAF_medium_tank_equipment_1:0 "$GER_medium_tank_equipment_1$"
- MAF_medium_tank_equipment_1_short:0 "$GER_medium_tank_equipment_1_short$"
- MAF_medium_tank_equipment_2:0 "$GER_medium_tank_equipment_2$"
- MAF_medium_tank_equipment_2_short:0 "$GER_medium_tank_equipment_2_short$"
- MAF_medium_tank_equipment_3:0 "$GER_medium_tank_equipment_3$"
- MAF_medium_tank_equipment_3_short:0 "$GER_medium_tank_equipment_3_short$"
+ MAF_medium_tank_equipment_1939:0 "$GER_medium_tank_equipment_1939$"
+ MAF_medium_tank_equipment_1939_short:0 "$GER_medium_tank_equipment_1939_short$"
+ MAF_medium_tank_equipment_1941:0 "$GER_medium_tank_equipment_1941$"
+ MAF_medium_tank_equipment_1941_short:0 "$GER_medium_tank_equipment_1941_short$"
+ MAF_medium_tank_equipment_1943:0 "$GER_medium_tank_equipment_1943$"
+ MAF_medium_tank_equipment_1943_short:0 "$GER_medium_tank_equipment_1943_short$"
  MAF_medium_tank_artillery_equipment_1:0 "$GER_medium_tank_artillery_equipment_1$"
  MAF_medium_tank_artillery_equipment_1_short:0 "$GER_medium_tank_artillery_equipment_1_short$"
  MAF_medium_tank_artillery_equipment_2:0 "$GER_medium_tank_artillery_equipment_2$"
@@ -8980,8 +8980,8 @@
  MAF_super_heavy_tank_aa_equipment_1:0 "$GER_super_heavy_tank_aa_equipment_1$"
  MAF_super_heavy_tank_aa_equipment_1_short:0 "$GER_super_heavy_tank_aa_equipment_1_short$"
 
- MAF_modern_tank_equipment_1:0 "$GER_modern_tank_equipment_1$"
- MAF_modern_tank_equipment_1_short:0 "$GER_modern_tank_equipment_1_short$"
+ MAF_medium_tank_equipment_1945:0 "$GER_medium_tank_equipment_1945$"
+ MAF_medium_tank_equipment_1945_short:0 "$GER_medium_tank_equipment_1945_short$"
  MAF_modern_tank_artillery_equipment_1:0 "$GER_modern_tank_artillery_equipment_1$"
  MAF_modern_tank_artillery_equipment_1_short:0 "$GER_modern_tank_artillery_equipment_1_short$"
  MAF_modern_tank_destroyer_equipment_1:0 "$GER_modern_tank_destroyer_equipment_1$"
@@ -9343,12 +9343,12 @@
  NEE_light_tank_equipment_3:0 "Vickers A18 'Valentine'"
  NEE_light_tank_equipment_3_short:0 "A18 'Valentine'"
 
- NEE_medium_tank_equipment_1:0 "Montreal Locomotive Works A15 'Ram'"
- NEE_medium_tank_equipment_1_short:0 "A15 'Ram'"
- NEE_medium_tank_equipment_2:0 "Montreal Locomotive Works A27 'Grizzly'"
- NEE_medium_tank_equipment_2_short:0 "A27 'Grizzly'"
- NEE_medium_tank_equipment_3:0 "Chullora A34 'Thunderbolt'"
- NEE_medium_tank_equipment_3_short:0 "A34 'Thunderbolt'"
+ NEE_medium_tank_equipment_1939:0 "Montreal Locomotive Works A15 'Ram'"
+ NEE_medium_tank_equipment_1939_short:0 "A15 'Ram'"
+ NEE_medium_tank_equipment_1941:0 "Montreal Locomotive Works A27 'Grizzly'"
+ NEE_medium_tank_equipment_1941_short:0 "A27 'Grizzly'"
+ NEE_medium_tank_equipment_1943:0 "Chullora A34 'Thunderbolt'"
+ NEE_medium_tank_equipment_1943_short:0 "A34 'Thunderbolt'"
 
  NEE_heavy_tank_equipment_1934:0 "Vickers A1 'Independent'"
  NEE_heavy_tank_equipment_1934_short:0 "A1 'Independent'"
@@ -9360,8 +9360,8 @@
  NEE_super_heavy_tank_equipment_1934:0 "Massey-Harris A39 'Tortoise'"
  NEE_super_heavy_tank_equipment_1934_short:0 "A39 'Tortoise'"
 
- NEE_modern_tank_equipment_1:0 "Leyland A44 'Brock'"
- NEE_modern_tank_equipment_1_short:0 "A44 'Brock'"
+ NEE_medium_tank_equipment_1945:0 "Leyland A44 'Brock'"
+ NEE_medium_tank_equipment_1945_short:0 "A44 'Brock'"
 
 ###
 ### Nepal ###
@@ -9541,17 +9541,17 @@
  NFA_light_tank_equipment_3_desc:0 "The Char Léger de Combat Citroën is a light tank created by the request of the French Army for a lightly armoured heavy combat vehicle. The CLC-C has an oscillating turret with a cupola for the gunner, located along the turret centreline. The turret itself is offset to the left, in order to make room for a driver's compartment in the hull, and is armed with a magazine 90-mm cannon on the right side. Of the significant drawbacks of the new tank, it can be noted that the breech is located outside the turret, which means that the gunner can reload it only by venturing outside of the tank."
 
  #AMX-Tracteur B:
- NFA_medium_tank_equipment_1:0 "Char de Bataille Peugeot Modèle 1939"
- NFA_medium_tank_equipment_1_short:0 "CBP-39"
- NFA_medium_tank_equipment_1_desc:0 "The Char de Bataille Peugeot Modèle 1939 is an upgraded compound of the CMER-35 and the CRP-37S. Developed by Peugeot in preparation for the return to France, the CBP-39 is armed with two guns: a 75mm gun in hull and a 47mm one in the tower, and have a variety of tactical goals on the battlefield. However, the CBP-39 does not have a special niche, and it is mainly used to fill holes in the tactical and strategic plans of the French command."
+ NFA_medium_tank_equipment_1939:0 "Char de Bataille Peugeot Modèle 1939"
+ NFA_medium_tank_equipment_1939_short:0 "CBP-39"
+ NFA_medium_tank_equipment_1939_desc:0 "The Char de Bataille Peugeot Modèle 1939 is an upgraded compound of the CMER-35 and the CRP-37S. Developed by Peugeot in preparation for the return to France, the CBP-39 is armed with two guns: a 75mm gun in hull and a 47mm one in the tower, and have a variety of tactical goals on the battlefield. However, the CBP-39 does not have a special niche, and it is mainly used to fill holes in the tactical and strategic plans of the French command."
  #G1R:
- NFA_medium_tank_equipment_2:0 "Char de Combat Général-1 Renault"
- NFA_medium_tank_equipment_2_short:0 "CdC G1-R"
- NFA_medium_tank_equipment_2_desc:0 "The CdC G1-R is a 20-ton replacing for the CMER-35. The CdC G1-R is one of the most advanced French tanks, providing good armament and mobility and suitable for multiple roles. Armed with 75mm and 47mm guns, the tank was not in line with the original French army standards, but after several changes in the specifications, the CdC G1-R was adopted in service. Considering as multi-role tank, the CdC G1-R have several innovative parts such as a gun stabilisation and semi-automatic loading systems and an optical rangefinder."
+ NFA_medium_tank_equipment_1941:0 "Char de Combat Général-1 Renault"
+ NFA_medium_tank_equipment_1941_short:0 "CdC G1-R"
+ NFA_medium_tank_equipment_1941_desc:0 "The CdC G1-R is a 20-ton replacing for the CMER-35. The CdC G1-R is one of the most advanced French tanks, providing good armament and mobility and suitable for multiple roles. Armed with 75mm and 47mm guns, the tank was not in line with the original French army standards, but after several changes in the specifications, the CdC G1-R was adopted in service. Considering as multi-role tank, the CdC G1-R have several innovative parts such as a gun stabilisation and semi-automatic loading systems and an optical rangefinder."
  #AMX CdC:
- NFA_medium_tank_equipment_3:0 "Char de Combat Général-2 Peugeot"
- NFA_medium_tank_equipment_3_short:0 "CdC G2-P"
- NFA_medium_tank_equipment_3_desc:0 "The CdC G2-P is a next-generation tank, designed to replace the CdC G1-R. The powerful engine and low weight provide the new vehicle with excellent mobility, and the 90-mm gun with mechanised ammunition rack gives a good rate of fire. However, significant size with rather weak armour, as well as a very complex and expensive design, are the main disadvantages of the new tank."
+ NFA_medium_tank_equipment_1943:0 "Char de Combat Général-2 Peugeot"
+ NFA_medium_tank_equipment_1943_short:0 "CdC G2-P"
+ NFA_medium_tank_equipment_1943_desc:0 "The CdC G2-P is a next-generation tank, designed to replace the CdC G1-R. The powerful engine and low weight provide the new vehicle with excellent mobility, and the 90-mm gun with mechanised ammunition rack gives a good rate of fire. However, significant size with rather weak armour, as well as a very complex and expensive design, are the main disadvantages of the new tank."
 
  #Char Lourd AMX 37:
  NFA_heavy_tank_equipment_1934:0 "Char de Rupture Peugeot Modèle 1937 tourelle S"
@@ -9572,9 +9572,9 @@
  NFA_super_heavy_tank_equipment_1934_desc:0 "The Char Forteresse Peugeot Modèle 1943 is an extremely heavy and long tank with 120mm armour, 8 crew members, and the ability to cross trenches up to 7 metres wide. The development of the CFP-43, equipped with a 105mm main cannon and a 47mm secondary cannon, was extremely challenging, with constantly changing requirements. Initially adopted in 1941, the final version was introduced in 1943, and entered service as it was necessary to break through even larger enemy fortifications than other tanks can."
 
  #AMX 30:
- NFA_modern_tank_equipment_1:0 "Char de Combat Général-3"
- NFA_modern_tank_equipment_1_short:0 "CdC G3"
- NFA_modern_tank_equipment_1_desc:0 "As part of the discussion on the standardisation of French tanks and the replacement of the CdC G2-P and CdC G1-R tanks, the Char de Combat Général-3 design was proposed. Conceived as an assault tank that can be transferred by rail, the CdC G3 suffers from many faults such as weak armour and low reliability, despite good 105mm main gun and having a speed of 50 km/h."
+ NFA_medium_tank_equipment_1945:0 "Char de Combat Général-3"
+ NFA_medium_tank_equipment_1945_short:0 "CdC G3"
+ NFA_medium_tank_equipment_1945_desc:0 "As part of the discussion on the standardisation of French tanks and the replacement of the CdC G2-P and CdC G1-R tanks, the Char de Combat Général-3 design was proposed. Conceived as an assault tank that can be transferred by rail, the CdC G3 suffers from many faults such as weak armour and low reliability, despite good 105mm main gun and having a speed of 50 km/h."
 
  #Very Modified SCHNEIDER-LAURENT (note: shitty tech):
  NFA_amphibious_tank_equipment_1:0 "Char Léger Amphibie Schneider-Citroën"
@@ -9732,12 +9732,12 @@
  NGF_light_tank_aa_equipment_3:0 "$GER_light_tank_aa_equipment_3$"
  NGF_light_tank_aa_equipment_3_short:0 "$GER_light_tank_aa_equipment_3_short$"
 
- NGF_medium_tank_equipment_1:0 "$GER_medium_tank_equipment_1$"
- NGF_medium_tank_equipment_1_short:0 "$GER_medium_tank_equipment_1_short$"
- NGF_medium_tank_equipment_2:0 "$GER_medium_tank_equipment_2$"
- NGF_medium_tank_equipment_2_short:0 "$GER_medium_tank_equipment_2_short$"
- NGF_medium_tank_equipment_3:0 "$GER_medium_tank_equipment_3$"
- NGF_medium_tank_equipment_3_short:0 "$GER_medium_tank_equipment_3_short$"
+ NGF_medium_tank_equipment_1939:0 "$GER_medium_tank_equipment_1939$"
+ NGF_medium_tank_equipment_1939_short:0 "$GER_medium_tank_equipment_1939_short$"
+ NGF_medium_tank_equipment_1941:0 "$GER_medium_tank_equipment_1941$"
+ NGF_medium_tank_equipment_1941_short:0 "$GER_medium_tank_equipment_1941_short$"
+ NGF_medium_tank_equipment_1943:0 "$GER_medium_tank_equipment_1943$"
+ NGF_medium_tank_equipment_1943_short:0 "$GER_medium_tank_equipment_1943_short$"
  NGF_medium_tank_artillery_equipment_1:0 "$GER_medium_tank_artillery_equipment_1$"
  NGF_medium_tank_artillery_equipment_1_short:0 "$GER_medium_tank_artillery_equipment_1_short$"
  NGF_medium_tank_artillery_equipment_2:0 "$GER_medium_tank_artillery_equipment_2$"
@@ -9791,8 +9791,8 @@
  NGF_super_heavy_tank_aa_equipment_1:0 "$GER_super_heavy_tank_aa_equipment_1$"
  NGF_super_heavy_tank_aa_equipment_1_short:0 "$GER_super_heavy_tank_aa_equipment_1_short$"
 
- NGF_modern_tank_equipment_1:0 "$GER_modern_tank_equipment_1$"
- NGF_modern_tank_equipment_1_short:0 "$GER_modern_tank_equipment_1_short$"
+ NGF_medium_tank_equipment_1945:0 "$GER_medium_tank_equipment_1945$"
+ NGF_medium_tank_equipment_1945_short:0 "$GER_medium_tank_equipment_1945_short$"
  NGF_modern_tank_artillery_equipment_1:0 "$GER_modern_tank_artillery_equipment_1$"
  NGF_modern_tank_artillery_equipment_1_short:0 "$GER_modern_tank_artillery_equipment_1_short$"
  NGF_modern_tank_destroyer_equipment_1:0 "$GER_modern_tank_destroyer_equipment_1$"
@@ -9994,12 +9994,12 @@
  NZL_light_tank_equipment_3:0 "Vickers A18 'Valentine'"
  NZL_light_tank_equipment_3_short:0 "A18 'Valentine'"
 
- NZL_medium_tank_equipment_1:0 "Montreal Locomotive Works A15 'Ram'"
- NZL_medium_tank_equipment_1_short:0 "A15 'Ram'"
- NZL_medium_tank_equipment_2:0 "Montreal Locomotive Works A27 'Grizzly'"
- NZL_medium_tank_equipment_2_short:0 "A27 'Grizzly'"
- NZL_medium_tank_equipment_3:0 "Chullora A34 'Thunderbolt'"
- NZL_medium_tank_equipment_3_short:0 "A34 'Thunderbolt'"
+ NZL_medium_tank_equipment_1939:0 "Montreal Locomotive Works A15 'Ram'"
+ NZL_medium_tank_equipment_1939_short:0 "A15 'Ram'"
+ NZL_medium_tank_equipment_1941:0 "Montreal Locomotive Works A27 'Grizzly'"
+ NZL_medium_tank_equipment_1941_short:0 "A27 'Grizzly'"
+ NZL_medium_tank_equipment_1943:0 "Chullora A34 'Thunderbolt'"
+ NZL_medium_tank_equipment_1943_short:0 "A34 'Thunderbolt'"
 
  NZL_heavy_tank_equipment_1934:0 "Vickers A1 'Independent'"
  NZL_heavy_tank_equipment_1934_short:0 "A1 'Independent'"
@@ -10011,8 +10011,8 @@
  NZL_super_heavy_tank_equipment_1934:0 "Massey-Harris A39 'Tortoise'"
  NZL_super_heavy_tank_equipment_1934_short:0 "A39 'Tortoise'"
 
- NZL_modern_tank_equipment_1:0 "Leyland A44 'Brock'"
- NZL_modern_tank_equipment_1_short:0 "A44 'Brock'"
+ NZL_medium_tank_equipment_1945:0 "Leyland A44 'Brock'"
+ NZL_medium_tank_equipment_1945_short:0 "A44 'Brock'"
 
 ###
 ### Oman ###
@@ -10189,15 +10189,15 @@
  TUR_light_tank_aa_equipment_3:0 "I. Hafif Motorlu Uçaksavar"
  TUR_light_tank_aa_equipment_3_short:0 "I.HMUS 'Tuva'"
 
- TUR_medium_tank_equipment_1:0 "I. Zırhlı Muharebe Vasıtası"
- TUR_medium_tank_equipment_1_short:0 "I.ZMV 'Uygur'"
- TUR_medium_tank_equipment_1_desc:0 "The I. Zırhlı Muharebe Vasıtası (First Armoured Battle Vehicle) 'Uygur' is a tank developed on the basis of the German Sturmpanzerkampfwagen IV along with the MT line. It have a thicker hull and also have improved cannon and armour design compared with the MT-55. I. ZMV have many variants thanks to the fact that its chassis is easily upgradeable, as demanded by Commissioner Ömer Fahrettin Pasha who wanted its design and parts to be simple and easily interchangeable."
- TUR_medium_tank_equipment_2:0 "II. Zırhlı Muharebe Vasıtası"
- TUR_medium_tank_equipment_2_short:0 "II.ZMV 'Kuman'"
- TUR_medium_tank_equipment_2_desc:0 "The II. ZMV 'Kuman' medium tank is an updated version of I. ZMV. It's designed to withstand the harshest conditions while retaining a decent combat efficiency. It have 7.7 cm ÇVT main armament and M1358 coaxial MGs. Experimental sloped armour and armoured skirts were also introduced in an attempt to counter incoming enemy AT rounds."
- TUR_medium_tank_equipment_3:0 "III. Zırhlı Muharebe Vasıtası"
- TUR_medium_tank_equipment_3_short:0 "III.ZMV 'Altay'"
- TUR_medium_tank_equipment_3_desc:0 "Altay is the common name of a medium tank developed by Ottoman Empire during Second Weltkrieg and late stages of Second Arab Revolt. It's intended to standardise tank production, and as a replacement for the I. ZMV and II. ZMV. While have a too complex design to replace them on battlefields, the Altay tank quickly found a niche in combat tactics of the Ottoman Military. The Germans dubbed the Altay Tank 'Clausewitz Pasha' because its design was heavily influenced by the German Panzerkampfwagen V von Clausewitz."
+ TUR_medium_tank_equipment_1939:0 "I. Zırhlı Muharebe Vasıtası"
+ TUR_medium_tank_equipment_1939_short:0 "I.ZMV 'Uygur'"
+ TUR_medium_tank_equipment_1939_desc:0 "The I. Zırhlı Muharebe Vasıtası (First Armoured Battle Vehicle) 'Uygur' is a tank developed on the basis of the German Sturmpanzerkampfwagen IV along with the MT line. It have a thicker hull and also have improved cannon and armour design compared with the MT-55. I. ZMV have many variants thanks to the fact that its chassis is easily upgradeable, as demanded by Commissioner Ömer Fahrettin Pasha who wanted its design and parts to be simple and easily interchangeable."
+ TUR_medium_tank_equipment_1941:0 "II. Zırhlı Muharebe Vasıtası"
+ TUR_medium_tank_equipment_1941_short:0 "II.ZMV 'Kuman'"
+ TUR_medium_tank_equipment_1941_desc:0 "The II. ZMV 'Kuman' medium tank is an updated version of I. ZMV. It's designed to withstand the harshest conditions while retaining a decent combat efficiency. It have 7.7 cm ÇVT main armament and M1358 coaxial MGs. Experimental sloped armour and armoured skirts were also introduced in an attempt to counter incoming enemy AT rounds."
+ TUR_medium_tank_equipment_1943:0 "III. Zırhlı Muharebe Vasıtası"
+ TUR_medium_tank_equipment_1943_short:0 "III.ZMV 'Altay'"
+ TUR_medium_tank_equipment_1943_desc:0 "Altay is the common name of a medium tank developed by Ottoman Empire during Second Weltkrieg and late stages of Second Arab Revolt. It's intended to standardise tank production, and as a replacement for the I. ZMV and II. ZMV. While have a too complex design to replace them on battlefields, the Altay tank quickly found a niche in combat tactics of the Ottoman Military. The Germans dubbed the Altay Tank 'Clausewitz Pasha' because its design was heavily influenced by the German Panzerkampfwagen V von Clausewitz."
  TUR_medium_tank_artillery_equipment_1:0 "I. Kendinden Tahrikli Top"
  TUR_medium_tank_artillery_equipment_1_short:0 "I.KTT 'Cihadiye'"
  TUR_medium_tank_artillery_equipment_1_desc:0 "I. Kendinden Tahrikli Top 'Cihadiye' is a self propelled medium artillery 125mm cannon mounted on a I. ZMV's chassis, I. ZKMT SPG packs respectable firepower while still being quite mobile."
@@ -10256,8 +10256,8 @@
  TUR_super_heavy_tank_destroyer_equipment_1_short:0 "I.AAMZS 'Tepegöz'"
  TUR_super_heavy_tank_aa_equipment_1:0 "I. Aşırı Ağır Motorlu Uçaksavar"
  TUR_super_heavy_tank_aa_equipment_1_short:0 "I.AAMUS 'Kumay'"
- TUR_modern_tank_equipment_1:0 "IV. Zırhlı Muharebe Vasıtası"
- TUR_modern_tank_equipment_1_short:0 "IV.ZMV 'Altınorda'"
+ TUR_medium_tank_equipment_1945:0 "IV. Zırhlı Muharebe Vasıtası"
+ TUR_medium_tank_equipment_1945_short:0 "IV.ZMV 'Altınorda'"
  TUR_modern_tank_artillery_equipment_1:0 "IV. Kendinden Tahrikli Top"
  TUR_modern_tank_artillery_equipment_1_short:0 "IV.KTT 'Altınsapan'"
  TUR_modern_tank_destroyer_equipment_1:0 "IV. Zırhlı Motorlu Zırhsavar"
@@ -10430,15 +10430,15 @@
  PAL_light_tank_aa_equipment_3:0 "I. Hafif Motorlu Uçaksavar"
  PAL_light_tank_aa_equipment_3_short:0 "I.HMUS 'Tuva'"
 
- PAL_medium_tank_equipment_1:0 "I. Zırhlı Muharebe Vasıtası"
- PAL_medium_tank_equipment_1_short:0 "I.ZMV 'Uygur'"
- PAL_medium_tank_equipment_1_desc:0 "The I. Zırhlı Muharebe Vasıtası (First Armoured Battle Vehicle) 'Uygur' is a tank developed on the basis of the German Sturmpanzerkampfwagen IV along with the MT line. It have a thicker hull and also have improved cannon and armour design compared with the MT-55. I. ZMV have many variants thanks to the fact that its chassis is easily upgradeable, as demanded by Commissioner Ömer Fahrettin Pasha who wanted its design and parts to be simple and easily interchangeable."
- PAL_medium_tank_equipment_2:0 "II. Zırhlı Muharebe Vasıtası"
- PAL_medium_tank_equipment_2_short:0 "II.ZMV 'Kuman'"
- PAL_medium_tank_equipment_2_desc:0 "The II. ZMV 'Kuman' medium tank is an updated version of I. ZMV. It's designed to withstand the harshest conditions while retaining a decent combat efficiency. It have 7.7 cm ÇVT main armament and M1358 coaxial MGs. Experimental sloped armour and armoured skirts were also introduced in an attempt to counter incoming enemy AT rounds."
- PAL_medium_tank_equipment_3:0 "III. Zırhlı Muharebe Vasıtası"
- PAL_medium_tank_equipment_3_short:0 "III.ZMV 'Altay'"
- PAL_medium_tank_equipment_3_desc:0 "Altay is the common name of a medium tank developed by Ottoman Empire during Second Weltkrieg and late stages of Second Arab Revolt. It's intended to standardise tank production, and as a replacement for the I. ZMV and II. ZMV. While have a too complex design to replace them on battlefields, the Altay tank quickly found a niche in combat tactics of the Ottoman Military. The Germans dubbed the Altay Tank 'Clausewitz Pasha' because its design was heavily influenced by the German Panzerkampfwagen V von Clausewitz."
+ PAL_medium_tank_equipment_1939:0 "I. Zırhlı Muharebe Vasıtası"
+ PAL_medium_tank_equipment_1939_short:0 "I.ZMV 'Uygur'"
+ PAL_medium_tank_equipment_1939_desc:0 "The I. Zırhlı Muharebe Vasıtası (First Armoured Battle Vehicle) 'Uygur' is a tank developed on the basis of the German Sturmpanzerkampfwagen IV along with the MT line. It have a thicker hull and also have improved cannon and armour design compared with the MT-55. I. ZMV have many variants thanks to the fact that its chassis is easily upgradeable, as demanded by Commissioner Ömer Fahrettin Pasha who wanted its design and parts to be simple and easily interchangeable."
+ PAL_medium_tank_equipment_1941:0 "II. Zırhlı Muharebe Vasıtası"
+ PAL_medium_tank_equipment_1941_short:0 "II.ZMV 'Kuman'"
+ PAL_medium_tank_equipment_1941_desc:0 "The II. ZMV 'Kuman' medium tank is an updated version of I. ZMV. It's designed to withstand the harshest conditions while retaining a decent combat efficiency. It have 7.7 cm ÇVT main armament and M1358 coaxial MGs. Experimental sloped armour and armoured skirts were also introduced in an attempt to counter incoming enemy AT rounds."
+ PAL_medium_tank_equipment_1943:0 "III. Zırhlı Muharebe Vasıtası"
+ PAL_medium_tank_equipment_1943_short:0 "III.ZMV 'Altay'"
+ PAL_medium_tank_equipment_1943_desc:0 "Altay is the common name of a medium tank developed by Ottoman Empire during Second Weltkrieg and late stages of Second Arab Revolt. It's intended to standardise tank production, and as a replacement for the I. ZMV and II. ZMV. While have a too complex design to replace them on battlefields, the Altay tank quickly found a niche in combat tactics of the Ottoman Military. The Germans dubbed the Altay Tank 'Clausewitz Pasha' because its design was heavily influenced by the German Panzerkampfwagen V von Clausewitz."
  PAL_medium_tank_artillery_equipment_1:0 "I. Kendinden Tahrikli Top"
  PAL_medium_tank_artillery_equipment_1_short:0 "I.KTT 'Cihadiye'"
  PAL_medium_tank_artillery_equipment_1_desc:0 "I. Kendinden Tahrikli Top 'Cihadiye' is a self propelled medium artillery 125mm cannon mounted on a I. ZMV's chassis, I. ZKMT SPG packs respectable firepower while still being quite mobile."
@@ -10497,8 +10497,8 @@
  PAL_super_heavy_tank_destroyer_equipment_1_short:0 "I.AAMZS 'Tepegöz'"
  PAL_super_heavy_tank_aa_equipment_1:0 "I. Aşırı Ağır Motorlu Uçaksavar"
  PAL_super_heavy_tank_aa_equipment_1_short:0 "I.AAMUS 'Kumay'"
- PAL_modern_tank_equipment_1:0 "IV. Zırhlı Muharebe Vasıtası"
- PAL_modern_tank_equipment_1_short:0 "IV.ZMV 'Altınorda'"
+ PAL_medium_tank_equipment_1945:0 "IV. Zırhlı Muharebe Vasıtası"
+ PAL_medium_tank_equipment_1945_short:0 "IV.ZMV 'Altınorda'"
  PAL_modern_tank_artillery_equipment_1:0 "IV. Kendinden Tahrikli Top"
  PAL_modern_tank_artillery_equipment_1_short:0 "IV.KTT 'Altınsapan'"
  PAL_modern_tank_destroyer_equipment_1:0 "IV. Zırhlı Motorlu Zırhsavar"
@@ -10708,12 +10708,12 @@
  POL_light_tank_equipment_3:0 "9TP Chart"
  POL_light_tank_equipment_3_short:0 "9TP"
 
- POL_medium_tank_equipment_1:0 "10TP"
- POL_medium_tank_equipment_1_short:0 "10TP"
- POL_medium_tank_equipment_2:0 "14TP"
- POL_medium_tank_equipment_2_short:0 "14TP"
- POL_medium_tank_equipment_3:0 "41TP Husarz"
- POL_medium_tank_equipment_3_short:0 "Husarz"
+ POL_medium_tank_equipment_1939:0 "10TP"
+ POL_medium_tank_equipment_1939_short:0 "10TP"
+ POL_medium_tank_equipment_1941:0 "14TP"
+ POL_medium_tank_equipment_1941_short:0 "14TP"
+ POL_medium_tank_equipment_1943:0 "41TP Husarz"
+ POL_medium_tank_equipment_1943_short:0 "Husarz"
 
  POL_heavy_tank_equipment_1934:0 "25TP"
  POL_heavy_tank_equipment_1934_short:0 "25TP"
@@ -10724,8 +10724,8 @@
 
  POL_super_heavy_tank_equipment_1934:0 "220TP Lem"
  POL_super_heavy_tank_equipment_1934_short:0 "220TP"
- POL_modern_tank_equipment_1:0 "57TP Ułan"
- POL_modern_tank_equipment_1_short:0 "Ułan"
+ POL_medium_tank_equipment_1945:0 "57TP Ułan"
+ POL_medium_tank_equipment_1945_short:0 "Ułan"
 
  POL_amphibious_tank_equipment_1:0 "PZInż.130"
  POL_amphibious_tank_equipment_1_short:0 "PZInż.130"
@@ -11063,22 +11063,22 @@
  ROM_light_tank_destroyer_equipment_3_short:0 "TACAM T-60"
  ROM_light_tank_artillery_equipment_3:0 "Maresal M-00"
  ROM_light_tank_artillery_equipment_3_short:0 "Maresal M-00"
- ROM_medium_tank_equipment_1:1 "T-38"
- ROM_medium_tank_equipment_1_short:0 "T-38"
+ ROM_medium_tank_equipment_1939:1 "T-38"
+ ROM_medium_tank_equipment_1939_short:0 "T-38"
  ROM_medium_tank_destroyer_equipment_1:1 "TACAM T-38"
  ROM_medium_tank_destroyer_equipment_1_short:0 "TACAM T-38"
  ROM_medium_tank_artillery_equipment_1:1 "Maresal M-03"
  ROM_medium_tank_artillery_equipment_1_short:0 "Maresal M-03"
  ROM_medium_tank_aa_equipment_1:1 "Maresal 4x20mm TA"
  ROM_medium_tank_aa_equipment_1_short:0 "Maresal 4x20mm TA"
- ROM_medium_tank_equipment_2:0 "T-4"
- ROM_medium_tank_equipment_2_short:0 "T-4"
+ ROM_medium_tank_equipment_1941:0 "T-4"
+ ROM_medium_tank_equipment_1941_short:0 "T-4"
  ROM_medium_tank_destroyer_equipment_2:1 "Maresal M-05"
  ROM_medium_tank_destroyer_equipment_2_short:0 "Maresal M-05"
  ROM_medium_tank_aa_equipment_2:1 "Maresal 37mm TA"
  ROM_medium_tank_aa_equipment_2_short:0 "Maresal 37mm TA"
- ROM_medium_tank_equipment_3:0 "T-5"
- ROM_medium_tank_equipment_3_short:0 "T-5"
+ ROM_medium_tank_equipment_1943:0 "T-5"
+ ROM_medium_tank_equipment_1943_short:0 "T-5"
  ROM_medium_tank_destroyer_equipment_3:1 "Maresal M-06"
  ROM_medium_tank_destroyer_equipment_3_short:0 "Maresal M-06"
  ROM_heavy_tank_equipment_1934:0 "Škoda-III-6"
@@ -11089,8 +11089,8 @@
  ROM_heavy_tank_equipment_1943_short:0 "T-6-2"
  ROM_heavy_tank_aa_equipment_3:0 "Maresal 2x37mm TA"
  ROM_heavy_tank_aa_equipment_3_short:0 "Maresal 2x37mm TA"
- ROM_modern_tank_equipment_1:1 "TR-580"
- ROM_modern_tank_equipment_1_short:1 "TR-580"
+ ROM_medium_tank_equipment_1945:1 "TR-580"
+ ROM_medium_tank_equipment_1945_short:1 "TR-580"
  ROM_super_heavy_tank_equipment_1934:0 "T-8"
  ROM_super_heavy_tank_equipment_1934_short:0 "T-8"
 
@@ -11210,12 +11210,12 @@
  RUS_light_tank_equipment_3:0 "AMO BT-20"
  RUS_light_tank_equipment_3_short:0 "BT-20"
 
- RUS_medium_tank_equipment_1:0 "Putilov T-28"
- RUS_medium_tank_equipment_1_short:0 "T-28"
- RUS_medium_tank_equipment_2:0 "Obukhov T-43"
- RUS_medium_tank_equipment_2_short:0 "T-43"
- RUS_medium_tank_equipment_3:0 "Obukhov T-43-2"
- RUS_medium_tank_equipment_3_short:0 "T-43-2"
+ RUS_medium_tank_equipment_1939:0 "Putilov T-28"
+ RUS_medium_tank_equipment_1939_short:0 "T-28"
+ RUS_medium_tank_equipment_1941:0 "Obukhov T-43"
+ RUS_medium_tank_equipment_1941_short:0 "T-43"
+ RUS_medium_tank_equipment_1943:0 "Obukhov T-43-2"
+ RUS_medium_tank_equipment_1943_short:0 "T-43-2"
 
  RUS_heavy_tank_equipment_1934:0 "Putilov T-76"
  RUS_heavy_tank_equipment_1934_short:0 "T-76"
@@ -11224,8 +11224,8 @@
  RUS_heavy_tank_equipment_1943:0 "ChTZ T-120"
  RUS_heavy_tank_equipment_1943_short:0 "T-120"
 
- RUS_modern_tank_equipment_1:0 "Obukhov T-45"
- RUS_modern_tank_equipment_1_short:0 "T-45"
+ RUS_medium_tank_equipment_1945:0 "Obukhov T-45"
+ RUS_medium_tank_equipment_1945_short:0 "T-45"
 
  RUS_super_heavy_tank_equipment_1934:0 "Putilov T-107"
  RUS_super_heavy_tank_equipment_1934_short:0 "T-107"
@@ -11330,12 +11330,12 @@
  SAF_light_tank_equipment_3:0 "Vickers A18 'Valentine'"
  SAF_light_tank_equipment_3_short:0 "A18 'Valentine'"
 
- SAF_medium_tank_equipment_1:0 "Montreal Locomotive Works A15 'Ram'"
- SAF_medium_tank_equipment_1_short:0 "A15 'Ram'"
- SAF_medium_tank_equipment_2:0 "Montreal Locomotive Works A27 'Grizzly'"
- SAF_medium_tank_equipment_2_short:0 "A27 'Grizzly'"
- SAF_medium_tank_equipment_3:0 "Chullora A34 'Thunderbolt'"
- SAF_medium_tank_equipment_3_short:0 "A34 'Thunderbolt'"
+ SAF_medium_tank_equipment_1939:0 "Montreal Locomotive Works A15 'Ram'"
+ SAF_medium_tank_equipment_1939_short:0 "A15 'Ram'"
+ SAF_medium_tank_equipment_1941:0 "Montreal Locomotive Works A27 'Grizzly'"
+ SAF_medium_tank_equipment_1941_short:0 "A27 'Grizzly'"
+ SAF_medium_tank_equipment_1943:0 "Chullora A34 'Thunderbolt'"
+ SAF_medium_tank_equipment_1943_short:0 "A34 'Thunderbolt'"
 
  SAF_heavy_tank_equipment_1934:0 "Vickers A1 'Independent'"
  SAF_heavy_tank_equipment_1934_short:0 "A1 'Independent'"
@@ -11347,8 +11347,8 @@
  SAF_super_heavy_tank_equipment_1934:0 "Massey-Harris A39 'Tortoise'"
  SAF_super_heavy_tank_equipment_1934_short:0 "A39 'Tortoise'"
 
- SAF_modern_tank_equipment_1:0 "Leyland A44 'Brock'"
- SAF_modern_tank_equipment_1_short:0 "A44 'Brock'"
+ SAF_medium_tank_equipment_1945:0 "Leyland A44 'Brock'"
+ SAF_medium_tank_equipment_1945_short:0 "A44 'Brock'"
 
 #Artillery
 
@@ -11549,12 +11549,12 @@
  SCA_light_tank_equipment_3:0 "Landsverk Terro"
  SCA_light_tank_equipment_3_short:0 "Terro"
 
- SCA_medium_tank_equipment_1:0 "Stridsvagn m/42"
- SCA_medium_tank_equipment_1_short:0 "Strv m/42"
- SCA_medium_tank_equipment_2:0 "Landsverk Pricken"
- SCA_medium_tank_equipment_2_short:0 "Pricken"
- SCA_medium_tank_equipment_3:0 "Landsverk Leo"
- SCA_medium_tank_equipment_3_short:0 "Leo"
+ SCA_medium_tank_equipment_1939:0 "Stridsvagn m/42"
+ SCA_medium_tank_equipment_1939_short:0 "Strv m/42"
+ SCA_medium_tank_equipment_1941:0 "Landsverk Pricken"
+ SCA_medium_tank_equipment_1941_short:0 "Pricken"
+ SCA_medium_tank_equipment_1943:0 "Landsverk Leo"
+ SCA_medium_tank_equipment_1943_short:0 "Leo"
 
  SCA_heavy_tank_equipment_1934:0 "Tungstridsvagnar m/34"
  SCA_heavy_tank_equipment_1934_short:0 "Tstrv m/34"
@@ -11566,8 +11566,8 @@
  SCA_super_heavy_tank_equipment_1934:0 "Tungstridsvagnar m/44"
  SCA_super_heavy_tank_equipment_1934_short:0 "Tstrv m/44"
 
- SCA_modern_tank_equipment_1:0 "Stridsvagn 81"
- SCA_modern_tank_equipment_1_short:0 "Strv 81"
+ SCA_medium_tank_equipment_1945:0 "Stridsvagn 81"
+ SCA_medium_tank_equipment_1945_short:0 "Strv 81"
 
 ###
 ### Scotland ###
@@ -11652,12 +11652,12 @@
  SCO_light_tank_equipment_3:0 "Pilot Tank Mk.V"
  SCO_light_tank_equipment_3_short:0 "Pilot Mk.V"
 
- SCO_medium_tank_equipment_1:0 "Medium Tank Mk.VI"
- SCO_medium_tank_equipment_1_short:0 "Medium Mk.VI"
- SCO_medium_tank_equipment_2:0 "Medium Tank Mk.VIII"
- SCO_medium_tank_equipment_2_short:0 "Medium Mk.VIII"
- SCO_medium_tank_equipment_3:0 "Medium Tank Mk.XI"
- SCO_medium_tank_equipment_3_short:0 "Medium Mk.XI"
+ SCO_medium_tank_equipment_1939:0 "Medium Tank Mk.VI"
+ SCO_medium_tank_equipment_1939_short:0 "Medium Mk.VI"
+ SCO_medium_tank_equipment_1941:0 "Medium Tank Mk.VIII"
+ SCO_medium_tank_equipment_1941_short:0 "Medium Mk.VIII"
+ SCO_medium_tank_equipment_1943:0 "Medium Tank Mk.XI"
+ SCO_medium_tank_equipment_1943_short:0 "Medium Mk.XI"
 
  SCO_heavy_tank_equipment_1934:0 "Heavy Tank Mk.I"
  SCO_heavy_tank_equipment_1934_short:0 "Heavy Mk.I"
@@ -11669,8 +11669,8 @@
  SCO_super_heavy_tank_equipment_1934:0 "Colossus"
  SCO_super_heavy_tank_equipment_1934_short:0 "Colossus"
 
- SCO_modern_tank_equipment_1:0 "Universal Tank Mk.I"
- SCO_modern_tank_equipment_1_short:0 "Universal Mk.I"
+ SCO_medium_tank_equipment_1945:0 "Universal Tank Mk.I"
+ SCO_medium_tank_equipment_1945_short:0 "Universal Mk.I"
 
 ###
 ### Senegambia ###
@@ -11730,13 +11730,13 @@
  SER_light_tank_equipment_1934:0 "Renault M27"
  SER_light_tank_equipment_1934_short:0 "M27"
 
- SER_medium_tank_equipment_2:0 "Vozilo A"
- SER_medium_tank_equipment_2_short:0 "Vozilo A"
- SER_medium_tank_equipment_3:0 "M320"
- SER_medium_tank_equipment_3_short:0 "M320"
+ SER_medium_tank_equipment_1941:0 "Vozilo A"
+ SER_medium_tank_equipment_1941_short:0 "Vozilo A"
+ SER_medium_tank_equipment_1943:0 "M320"
+ SER_medium_tank_equipment_1943_short:0 "M320"
 
- SER_modern_tank_equipment_1:0 "T-55"
- SER_modern_tank_equipment_1_short:0 "T-55"
+ SER_medium_tank_equipment_1945:0 "T-55"
+ SER_medium_tank_equipment_1945_short:0 "T-55"
 
  SER_artillery_equipment_1:0 "8cm M.05/08"
  SER_artillery_equipment_1_short:0 "8cm M.05/08"
@@ -11781,12 +11781,12 @@
  SFR_light_tank_equipment_3:0 "Vickers A18 'Valentine'"
  SFR_light_tank_equipment_3_short:0 "A18 'Valentine'"
 
- SFR_medium_tank_equipment_1:0 "Montreal Locomotive Works A15 'Ram'"
- SFR_medium_tank_equipment_1_short:0 "A15 'Ram'"
- SFR_medium_tank_equipment_2:0 "Montreal Locomotive Works A27 'Grizzly'"
- SFR_medium_tank_equipment_2_short:0 "A27 'Grizzly'"
- SFR_medium_tank_equipment_3:0 "Chullora A34 'Thunderbolt'"
- SFR_medium_tank_equipment_3_short:0 "A34 'Thunderbolt'"
+ SFR_medium_tank_equipment_1939:0 "Montreal Locomotive Works A15 'Ram'"
+ SFR_medium_tank_equipment_1939_short:0 "A15 'Ram'"
+ SFR_medium_tank_equipment_1941:0 "Montreal Locomotive Works A27 'Grizzly'"
+ SFR_medium_tank_equipment_1941_short:0 "A27 'Grizzly'"
+ SFR_medium_tank_equipment_1943:0 "Chullora A34 'Thunderbolt'"
+ SFR_medium_tank_equipment_1943_short:0 "A34 'Thunderbolt'"
 
  SFR_heavy_tank_equipment_1934:0 "Vickers A1 'Independent'"
  SFR_heavy_tank_equipment_1934_short:0 "A1 'Independent'"
@@ -11798,8 +11798,8 @@
  SFR_super_heavy_tank_equipment_1934:0 "Massey-Harris A39 'Tortoise'"
  SFR_super_heavy_tank_equipment_1934_short:0 "A39 'Tortoise'"
 
- SFR_modern_tank_equipment_1:0 "Leyland A44 'Brock'"
- SFR_modern_tank_equipment_1_short:0 "A44 'Brock'"
+ SFR_medium_tank_equipment_1945:0 "Leyland A44 'Brock'"
+ SFR_medium_tank_equipment_1945_short:0 "A44 'Brock'"
 
 #Artillery
 
@@ -11996,15 +11996,15 @@
  SIA_light_tank_destroyer_equipment_3:0 "Chaiseri Tank Destroyer Type 83TH 'Sangkorn'"
  SIA_light_tank_destroyer_equipment_3_short:0 "Sangkorn"
 
- SIA_medium_tank_equipment_1:0 "Chaiseri Medium Tank Type 258 'U-Thong'"
- SIA_medium_tank_equipment_1_short:0 "U-Thong"
- SIA_medium_tank_equipment_1_desc:0 "Chaiseri's first attempt in developing medium tank. Its prototype suffers a lot in Jungle and Swamp environment of Southeast Asia but it was deemed good enough by the Ministry of Defence who quickly rushed the production line to counter heavier German tanks."
- SIA_medium_tank_equipment_2:0 "Chaiseri Medium Tank Type 260 'Naresuan'"
- SIA_medium_tank_equipment_2_short:0 "Naresuan"
- SIA_medium_tank_equipment_2_desc:0 "One of the most successful Siamese tank of the war. The tank itself was design specifically for Southeast Asia weather and terrain with high reliability and low maintenance."
- SIA_medium_tank_equipment_3:0 "Chaiseri Medium Tank Type 260/112 'Taksin'"
- SIA_medium_tank_equipment_3_short:0 "Taksin"
- SIA_medium_tank_equipment_3_desc:0 "The TH-260/112 was a TH-260 variant with 112mm low-velocity howitzer, improved engine and thicker tank hull."
+ SIA_medium_tank_equipment_1939:0 "Chaiseri Medium Tank Type 258 'U-Thong'"
+ SIA_medium_tank_equipment_1939_short:0 "U-Thong"
+ SIA_medium_tank_equipment_1939_desc:0 "Chaiseri's first attempt in developing medium tank. Its prototype suffers a lot in Jungle and Swamp environment of Southeast Asia but it was deemed good enough by the Ministry of Defence who quickly rushed the production line to counter heavier German tanks."
+ SIA_medium_tank_equipment_1941:0 "Chaiseri Medium Tank Type 260 'Naresuan'"
+ SIA_medium_tank_equipment_1941_short:0 "Naresuan"
+ SIA_medium_tank_equipment_1941_desc:0 "One of the most successful Siamese tank of the war. The tank itself was design specifically for Southeast Asia weather and terrain with high reliability and low maintenance."
+ SIA_medium_tank_equipment_1943:0 "Chaiseri Medium Tank Type 260/112 'Taksin'"
+ SIA_medium_tank_equipment_1943_short:0 "Taksin"
+ SIA_medium_tank_equipment_1943_desc:0 "The TH-260/112 was a TH-260 variant with 112mm low-velocity howitzer, improved engine and thicker tank hull."
  SIA_medium_tank_aa_equipment_1:0 "Chaiseri SPAAG Type 258 'Intchada'"
  SIA_medium_tank_aa_equipment_1_short:0 "Intchada"
  SIA_medium_tank_aa_equipment_2:0 "Chaiseri SPAAG Type 260 'Chatuphak'"
@@ -12059,8 +12059,8 @@
  SIA_super_heavy_tank_destroyer_equipment_1:0 "Chaiseri Heavy Tank Destroyer Type 311 'Watcharin'"
  SIA_super_heavy_tank_destroyer_equipment_1_short:0 "Watcharin"
 
- SIA_modern_tank_equipment_1:0 "Chaiseri TH-401 MBT 'Avatarn'"
- SIA_modern_tank_equipment_1_short:0 "Avatarn"
+ SIA_medium_tank_equipment_1945:0 "Chaiseri TH-401 MBT 'Avatarn'"
+ SIA_medium_tank_equipment_1945_short:0 "Avatarn"
  SIA_modern_tank_aa_equipment_1:0 "Chaiseri TH-401 SPAAG 'Amarin'"
  SIA_modern_tank_aa_equipment_1_short:0 "Amarin"
  SIA_modern_tank_artillery_equipment_1:0 "Chaiseri TH-401 SPG 'Amornrart'"
@@ -12228,15 +12228,15 @@
  SLV_light_tank_equipment_3_short:0 "IO M.42"
  #SLV_light_tank_equipment_3_desc: ""
 
- SLV_medium_tank_equipment_1:0 "Škoda-MÁVAG konjički oklop M.40"
- SLV_medium_tank_equipment_1_short:0 "KO M.40"
- #SLV_medium_tank_equipment_1_desc:0 ""
- SLV_medium_tank_equipment_2:0 "Škoda-MÁVAG konjički oklop M.40/42"
- SLV_medium_tank_equipment_2_short:0 "KO M.42"
- #SLV_medium_tank_equipment_2_desc:0 ""
- SLV_medium_tank_equipment_3:0 "MTK konjički oklop M.44"
- SLV_medium_tank_equipment_3_short:0 "KO M.44"
- #SLV_medium_tank_equipment_3_desc:0 ""
+ SLV_medium_tank_equipment_1939:0 "Škoda-MÁVAG konjički oklop M.40"
+ SLV_medium_tank_equipment_1939_short:0 "KO M.40"
+ #SLV_medium_tank_equipment_1939_desc:0 ""
+ SLV_medium_tank_equipment_1941:0 "Škoda-MÁVAG konjički oklop M.40/42"
+ SLV_medium_tank_equipment_1941_short:0 "KO M.42"
+ #SLV_medium_tank_equipment_1941_desc:0 ""
+ SLV_medium_tank_equipment_1943:0 "MTK konjički oklop M.44"
+ SLV_medium_tank_equipment_1943_short:0 "KO M.44"
+ #SLV_medium_tank_equipment_1943_desc:0 ""
 
  SLV_heavy_tank_equipment_1934:0 "Škoda pješadijski oklop M.36"
  SLV_heavy_tank_equipment_1934_short:0 "PO M.36"
@@ -12252,9 +12252,9 @@
  SLV_super_heavy_tank_equipment_1934_short:0 "Franjo"
  #SLV_super_heavy_tank_equipment_1934_desc:0 ""
 
- SLV_modern_tank_equipment_1:0 "Škoda univerzalni oklop M.50"
- SLV_modern_tank_equipment_1_short:0 "UO M.50"
- #SLV_modern_tank_equipment_1_desc:0 ""
+ SLV_medium_tank_equipment_1945:0 "Škoda univerzalni oklop M.50"
+ SLV_medium_tank_equipment_1945_short:0 "UO M.50"
+ #SLV_medium_tank_equipment_1945_desc:0 ""
 
  SLV_amphibious_tank_equipment_1:0 "ČKD F-IV-H"
  SLV_amphibious_tank_equipment_1_short:0 "F-IV-H"
@@ -12386,12 +12386,12 @@
  SOV_light_tank_equipment_3:0 "AMO BT-20"
  SOV_light_tank_equipment_3_short:0 "BT-20"
 
- SOV_medium_tank_equipment_1:0 "Putilov T-28"
- SOV_medium_tank_equipment_1_short:0 "T-28"
- SOV_medium_tank_equipment_2:0 "Obukhov T-43"
- SOV_medium_tank_equipment_2_short:0 "T-43"
- SOV_medium_tank_equipment_3:0 "Obukhov T-43-2"
- SOV_medium_tank_equipment_3_short:0 "T-43-2"
+ SOV_medium_tank_equipment_1939:0 "Putilov T-28"
+ SOV_medium_tank_equipment_1939_short:0 "T-28"
+ SOV_medium_tank_equipment_1941:0 "Obukhov T-43"
+ SOV_medium_tank_equipment_1941_short:0 "T-43"
+ SOV_medium_tank_equipment_1943:0 "Obukhov T-43-2"
+ SOV_medium_tank_equipment_1943_short:0 "T-43-2"
 
  SOV_heavy_tank_equipment_1934:0 "Putilov T-76"
  SOV_heavy_tank_equipment_1934_short:0 "T-76"
@@ -12400,8 +12400,8 @@
  SOV_heavy_tank_equipment_1943:0 "ChTZ T-120"
  SOV_heavy_tank_equipment_1943_short:0 "T-120"
 
- SOV_modern_tank_equipment_1:0 "Obukhov T-45"
- SOV_modern_tank_equipment_1_short:0 "T-45"
+ SOV_medium_tank_equipment_1945:0 "Obukhov T-45"
+ SOV_medium_tank_equipment_1945_short:0 "T-45"
 
  SOV_super_heavy_tank_equipment_1934:0 "Putilov T-107"
  SOV_super_heavy_tank_equipment_1934_short:0 "T-107"
@@ -12680,12 +12680,12 @@
  SRI_light_tank_destroyer_equipment_2:0 "Semovente 47/32"
  SRI_light_tank_destroyer_equipment_2_short:0 "Semovente 47/32"
 
- SRI_medium_tank_equipment_1:0 "Fiat M11/39"
- SRI_medium_tank_equipment_1_short:1 "M11/39"
- SRI_medium_tank_equipment_2:0 "M16 Sahariano"
- SRI_medium_tank_equipment_2_short:0 "M16"
- SRI_medium_tank_equipment_3:0 "M20/43"
- SRI_medium_tank_equipment_3_short:0 "M20/43"
+ SRI_medium_tank_equipment_1939:0 "Fiat M11/39"
+ SRI_medium_tank_equipment_1939_short:1 "M11/39"
+ SRI_medium_tank_equipment_1941:0 "M16 Sahariano"
+ SRI_medium_tank_equipment_1941_short:0 "M16"
+ SRI_medium_tank_equipment_1943:0 "M20/43"
+ SRI_medium_tank_equipment_1943_short:0 "M20/43"
  SRI_medium_tank_artillery_equipment_2:0 "Semovente M41 75/18"
  SRI_medium_tank_artillery_equipment_2_short:0 "Semovente M 41 75/18"
  SRI_medium_tank_artillery_equipment_3:0 "Semovente M42L 105/25"
@@ -12708,8 +12708,8 @@
 
  SRI_super_heavy_tank_equipment_1934:0 "Il Duce"
  SRI_super_heavy_tank_equipment_1934_short:0 "Il Duce"
- SRI_modern_tank_equipment_1:0 "M31/45"
- SRI_modern_tank_equipment_1_short:0 "M31/45"
+ SRI_medium_tank_equipment_1945:0 "M31/45"
+ SRI_medium_tank_equipment_1945_short:0 "M31/45"
 
 ###
 ### Sudan ###
@@ -12880,15 +12880,15 @@
  SLO_light_tank_equipment_3_short:0 "PNP vz. 42"
  #SLO_light_tank_equipment_3_desc: ""
 
- SLO_medium_tank_equipment_1:0 "Škoda-MÁVAG jízdní pancíř vzor 40"
- SLO_medium_tank_equipment_1_short:0 "JP vz. 40"
- #SLO_medium_tank_equipment_1_desc:0 ""
- SLO_medium_tank_equipment_2:0 "Škoda-MÁVAG jízdní pancíř vzor 40/42"
- SLO_medium_tank_equipment_2_short:0 "JP vz. 42"
- #SLO_medium_tank_equipment_2_desc:0 ""
- SLO_medium_tank_equipment_3:0 "MTK jízdní pancíř vzor 44"
- SLO_medium_tank_equipment_3_short:0 "JP vz. 44"
- #SLO_medium_tank_equipment_3_desc:0 ""
+ SLO_medium_tank_equipment_1939:0 "Škoda-MÁVAG jízdní pancíř vzor 40"
+ SLO_medium_tank_equipment_1939_short:0 "JP vz. 40"
+ #SLO_medium_tank_equipment_1939_desc:0 ""
+ SLO_medium_tank_equipment_1941:0 "Škoda-MÁVAG jízdní pancíř vzor 40/42"
+ SLO_medium_tank_equipment_1941_short:0 "JP vz. 42"
+ #SLO_medium_tank_equipment_1941_desc:0 ""
+ SLO_medium_tank_equipment_1943:0 "MTK jízdní pancíř vzor 44"
+ SLO_medium_tank_equipment_1943_short:0 "JP vz. 44"
+ #SLO_medium_tank_equipment_1943_desc:0 ""
 
  SLO_heavy_tank_equipment_1934:0 "Škoda pěchotní pancíř vzor 36"
  SLO_heavy_tank_equipment_1934_short:0 "PP vz. 36"
@@ -12904,9 +12904,9 @@
  SLO_super_heavy_tank_equipment_1934_short:0 "František"
  #SLO_super_heavy_tank_equipment_1934_desc:0 ""
 
- SLO_modern_tank_equipment_1:0 "Škoda všeobecný pancíř vzor 50"
- SLO_modern_tank_equipment_1_short:0 "VP vz. 50"
- #SLO_modern_tank_equipment_1_desc:0 ""
+ SLO_medium_tank_equipment_1945:0 "Škoda všeobecný pancíř vzor 50"
+ SLO_medium_tank_equipment_1945_short:0 "VP vz. 50"
+ #SLO_medium_tank_equipment_1945_desc:0 ""
 
  SLO_amphibious_tank_equipment_1:0 "ČKD F-IV-H"
  SLO_amphibious_tank_equipment_1_short:0 "F-IV-H"
@@ -13016,12 +13016,12 @@
  SWE_light_tank_equipment_3:0 "Landsverk Terro"
  SWE_light_tank_equipment_3_short:0 "Terro"
 
- SWE_medium_tank_equipment_1:0 "Stridsvagn m/42"
- SWE_medium_tank_equipment_1_short:0 "Strv m/42"
- SWE_medium_tank_equipment_2:0 "Landsverk Pricken"
- SWE_medium_tank_equipment_2_short:0 "Pricken"
- SWE_medium_tank_equipment_3:0 "Landsverk Leo"
- SWE_medium_tank_equipment_3_short:0 "Leo"
+ SWE_medium_tank_equipment_1939:0 "Stridsvagn m/42"
+ SWE_medium_tank_equipment_1939_short:0 "Strv m/42"
+ SWE_medium_tank_equipment_1941:0 "Landsverk Pricken"
+ SWE_medium_tank_equipment_1941_short:0 "Pricken"
+ SWE_medium_tank_equipment_1943:0 "Landsverk Leo"
+ SWE_medium_tank_equipment_1943_short:0 "Leo"
 
  SWE_heavy_tank_equipment_1934:0 "Tungstridsvagnar m/34"
  SWE_heavy_tank_equipment_1934_short:0 "Tstrv m/34"
@@ -13033,8 +13033,8 @@
  SWE_super_heavy_tank_equipment_1934:0 "Tungstridsvagnar m/44"
  SWE_super_heavy_tank_equipment_1934_short:0 "Tstrv m/44"
 
- SWE_modern_tank_equipment_1:0 "Stridsvagn 81"
- SWE_modern_tank_equipment_1_short:0 "Strv 81"
+ SWE_medium_tank_equipment_1945:0 "Stridsvagn 81"
+ SWE_medium_tank_equipment_1945_short:0 "Strv 81"
 
 ###
 ### Switzerland ###
@@ -13348,16 +13348,16 @@
  TEX_light_tank_equipment_3_short:0 "M1941 Light"
  TEX_light_tank_equipment_3_desc:0 "Designed around the revised three inch gun introduced with the M1940 tank, the M1941 was built from the ground up for speed and agility. While problems with the tank's cutting-edge engine delayed the project, the M1941 would eventually become the standard light tank of the Union State."
 
- TEX_medium_tank_equipment_1:0 "Medium Tank, Model 1939"
- TEX_medium_tank_equipment_1_short:0 "M1939 Medium"
- TEX_medium_tank_equipment_1_desc:0 "American efforts to develop a modern medium tank on the basis of an enlarged variant of the M2 tank were fractured with the civil war. While the Union State struggled to develop the ,1940 tank, it reverse engineered captured Federal M3 tanks as a stopgap."
+ TEX_medium_tank_equipment_1939:0 "Medium Tank, Model 1939"
+ TEX_medium_tank_equipment_1939_short:0 "M1939 Medium"
+ TEX_medium_tank_equipment_1939_desc:0 "American efforts to develop a modern medium tank on the basis of an enlarged variant of the M2 tank were fractured with the civil war. While the Union State struggled to develop the ,1940 tank, it reverse engineered captured Federal M3 tanks as a stopgap."
  #Sherman:
- TEX_medium_tank_equipment_2:0 "Medium Tank, Model 1940"
- TEX_medium_tank_equipment_2_short:0 "M1940 Medium"
- TEX_medium_tank_equipment_2_desc:0 "The M1940 was a monumentous effort for the Union State's fledgling armed forces. While not particularly agile or heavily armoured, the M4 excelled in a variety of roles and its new three inch main gun proved exceptional both against infantry and armour."
- TEX_medium_tank_equipment_3:0 "Medium Tank, Model 1940A6"
- TEX_medium_tank_equipment_3_short:0 "M1940A6 Medium"
- TEX_medium_tank_equipment_3_desc:0 "The product of a series of improvements upon the M1940 tank, the M1940A6 came into being with the adaptation of a new 105mm anti-tank gun to the M1940 platform. While the gun proved more than capable of defeating even the most heavily armoured vehicles during the American Civil War, it likewise was difficult to operate for M1940A6 crews, dampening its effectiveness."
+ TEX_medium_tank_equipment_1941:0 "Medium Tank, Model 1940"
+ TEX_medium_tank_equipment_1941_short:0 "M1940 Medium"
+ TEX_medium_tank_equipment_1941_desc:0 "The M1940 was a monumentous effort for the Union State's fledgling armed forces. While not particularly agile or heavily armoured, the M4 excelled in a variety of roles and its new three inch main gun proved exceptional both against infantry and armour."
+ TEX_medium_tank_equipment_1943:0 "Medium Tank, Model 1940A6"
+ TEX_medium_tank_equipment_1943_short:0 "M1940A6 Medium"
+ TEX_medium_tank_equipment_1943_desc:0 "The product of a series of improvements upon the M1940 tank, the M1940A6 came into being with the adaptation of a new 105mm anti-tank gun to the M1940 platform. While the gun proved more than capable of defeating even the most heavily armoured vehicles during the American Civil War, it likewise was difficult to operate for M1940A6 crews, dampening its effectiveness."
 
  TEX_heavy_tank_equipment_1934:0 "Heavy Tank, Model 1937"
  TEX_heavy_tank_equipment_1934_short:0 "M1937 Heavy"
@@ -13372,9 +13372,9 @@
  TEX_super_heavy_tank_equipment_1934_short:0 "M1943 Heavy"
  TEX_super_heavy_tank_equipment_1934_desc:0 "Heavy fixed fortifications proved difficult for other Union State armoured vehicles to overcome. The M105-2 was built specifically for the destruction of fortifications and armour capable of withstanding direct hits from large stationary guns. While slow, the vehicle's 105mm cannon proved adequete against structures and soft targets alike."
 
- TEX_modern_tank_equipment_1:0 "Medium Tank, Model 1946"
- TEX_modern_tank_equipment_1_short:0 "M1946 Medium"
- TEX_modern_tank_equipment_1_desc:0 "Designed as a small heavy tank able to fit in automobile and railway tunnels, the M1946 gradually came to fill a variety of roles. Fast and equipped with a massive 120mm gun, the M1946 lacks only in protection compared to heavier vehicles of the same era."
+ TEX_medium_tank_equipment_1945:0 "Medium Tank, Model 1946"
+ TEX_medium_tank_equipment_1945_short:0 "M1946 Medium"
+ TEX_medium_tank_equipment_1945_desc:0 "Designed as a small heavy tank able to fit in automobile and railway tunnels, the M1946 gradually came to fill a variety of roles. Fast and equipped with a massive 120mm gun, the M1946 lacks only in protection compared to heavier vehicles of the same era."
 
 ###
 ### Tibet ###
@@ -13536,12 +13536,12 @@
  TRI_light_tank_equipment_3:0 "Vickers A18 'Valentine'"
  TRI_light_tank_equipment_3_short:0 "A18 'Valentine'"
 
- TRI_medium_tank_equipment_1:0 "Montreal Locomotive Works A15 'Ram'"
- TRI_medium_tank_equipment_1_short:0 "A15 'Ram'"
- TRI_medium_tank_equipment_2:0 "Montreal Locomotive Works A27 'Grizzly'"
- TRI_medium_tank_equipment_2_short:0 "A27 'Grizzly'"
- TRI_medium_tank_equipment_3:0 "Chullora A34 'Thunderbolt'"
- TRI_medium_tank_equipment_3_short:0 "A34 'Thunderbolt'"
+ TRI_medium_tank_equipment_1939:0 "Montreal Locomotive Works A15 'Ram'"
+ TRI_medium_tank_equipment_1939_short:0 "A15 'Ram'"
+ TRI_medium_tank_equipment_1941:0 "Montreal Locomotive Works A27 'Grizzly'"
+ TRI_medium_tank_equipment_1941_short:0 "A27 'Grizzly'"
+ TRI_medium_tank_equipment_1943:0 "Chullora A34 'Thunderbolt'"
+ TRI_medium_tank_equipment_1943_short:0 "A34 'Thunderbolt'"
 
  TRI_heavy_tank_equipment_1934:0 "Vickers A1 'Independent'"
  TRI_heavy_tank_equipment_1934_short:0 "A1 'Independent'"
@@ -13553,8 +13553,8 @@
  TRI_super_heavy_tank_equipment_1934:0 "Massey-Harris A39 'Tortoise'"
  TRI_super_heavy_tank_equipment_1934_short:0 "A39 'Tortoise'"
 
- TRI_modern_tank_equipment_1:0 "Leyland A44 'Brock'"
- TRI_modern_tank_equipment_1_short:0 "A44 'Brock'"
+ TRI_medium_tank_equipment_1945:0 "Leyland A44 'Brock'"
+ TRI_medium_tank_equipment_1945_short:0 "A44 'Brock'"
 
 ###
 ### Transamur ###
@@ -13666,15 +13666,15 @@
  TRS_light_tank_equipment_3_short:0 "SpPz M.42"
  #TRS_light_tank_equipment_3_desc: ""
 
- TRS_medium_tank_equipment_1:0 "Škoda-MÁVAG Kavalleriepanzer M.40"
- TRS_medium_tank_equipment_1_short:0 "KPz M.40"
- #TRS_medium_tank_equipment_1_desc:0 ""
- TRS_medium_tank_equipment_2:0 "Škoda-MÁVAG Kavalleriepanzer M.40/42"
- TRS_medium_tank_equipment_2_short:0 "KPz M.42"
- #TRS_medium_tank_equipment_2_desc:0 ""
- TRS_medium_tank_equipment_3:0 "MTK Kavalleriepanzer M.44"
- TRS_medium_tank_equipment_3_short:0 "KPz M.44"
- #TRS_medium_tank_equipment_3_desc:0 ""
+ TRS_medium_tank_equipment_1939:0 "Škoda-MÁVAG Kavalleriepanzer M.40"
+ TRS_medium_tank_equipment_1939_short:0 "KPz M.40"
+ #TRS_medium_tank_equipment_1939_desc:0 ""
+ TRS_medium_tank_equipment_1941:0 "Škoda-MÁVAG Kavalleriepanzer M.40/42"
+ TRS_medium_tank_equipment_1941_short:0 "KPz M.42"
+ #TRS_medium_tank_equipment_1941_desc:0 ""
+ TRS_medium_tank_equipment_1943:0 "MTK Kavalleriepanzer M.44"
+ TRS_medium_tank_equipment_1943_short:0 "KPz M.44"
+ #TRS_medium_tank_equipment_1943_desc:0 ""
 
  TRS_heavy_tank_equipment_1934:0 "Škoda Infanteriepanzer M.36"
  TRS_heavy_tank_equipment_1934_short:0 "IPz M.36"
@@ -13690,9 +13690,9 @@
  TRS_super_heavy_tank_equipment_1934_short:0 "Franzl"
  #TRS_super_heavy_tank_equipment_1934_desc:0 ""
 
- TRS_modern_tank_equipment_1:0 "Škoda Universalpanzer M.50"
- TRS_modern_tank_equipment_1_short:0 "UPz M.50"
- #TRS_modern_tank_equipment_1_desc:0 ""
+ TRS_medium_tank_equipment_1945:0 "Škoda Universalpanzer M.50"
+ TRS_medium_tank_equipment_1945_short:0 "UPz M.50"
+ #TRS_medium_tank_equipment_1945_desc:0 ""
 
  TRS_amphibious_tank_equipment_1:0 "ČKD F-IV-H"
  TRS_amphibious_tank_equipment_1_short:0 "F-IV-H"
@@ -13829,15 +13829,15 @@
  UKR_light_tank_equipment_3_short:0 "SP-II Stanyslaviv"
  UKR_light_tank_equipment_3_desc:0 "With the Russian fast-tank concept so essential to that country's rearmament program and with new heavier vehicles entering development, the Ukrainian army began development of an agile new light tank of its own. The Shvydkokhidnyj Panz II, as the vehicle would be designated in Ukrainian service, was able to fill a variety of roles on the battlefield due to its remarkable speed and handling. The name 'Stanyslaviv' was affixed to the vehicle in a display of irredentism, rare under Hapsburg rule of Ukraine, over Austrian-held Galicia."
 
- UKR_medium_tank_equipment_1:0 "Panz IV Kyiv"
- UKR_medium_tank_equipment_1_short:0 "P-IV Kyiv"
- #UKR_medium_tank_equipment_1_desc:0 ""
- UKR_medium_tank_equipment_2:0 "Panz-VII Knyaz"
- UKR_medium_tank_equipment_2_short:0 "P-VII Knyaz"
- #UKR_medium_tank_equipment_2_desc:0 ""
- UKR_medium_tank_equipment_3:0 "Panz IX Kit"
- UKR_medium_tank_equipment_3_short:0 "P-IX Kit"
- #UKR_medium_tank_equipment_3_desc:0 ""
+ UKR_medium_tank_equipment_1939:0 "Panz IV Kyiv"
+ UKR_medium_tank_equipment_1939_short:0 "P-IV Kyiv"
+ #UKR_medium_tank_equipment_1939_desc:0 ""
+ UKR_medium_tank_equipment_1941:0 "Panz-VII Knyaz"
+ UKR_medium_tank_equipment_1941_short:0 "P-VII Knyaz"
+ #UKR_medium_tank_equipment_1941_desc:0 ""
+ UKR_medium_tank_equipment_1943:0 "Panz IX Kit"
+ UKR_medium_tank_equipment_1943_short:0 "P-IX Kit"
+ #UKR_medium_tank_equipment_1943_desc:0 ""
 
  UKR_heavy_tank_equipment_1934:0 "Kaiserlichepanzer 1933"
  UKR_heavy_tank_equipment_1934_short:0 "KP-33"
@@ -13852,9 +13852,9 @@
  UKR_super_heavy_tank_equipment_1934:0 "Panz VIII Cherepakha"
  UKR_super_heavy_tank_equipment_1934_short:0 "P-VIII Cherepakha"
  #UKR_super_heavy_tank_equipment_1934_desc:0 ""
- UKR_modern_tank_equipment_1:0 "Modulnyj Panz I Horlytsia"
- UKR_modern_tank_equipment_1_short:0 "MP-I Horlytsia"
- #UKR_modern_tank_equipment_1_desc:0 ""
+ UKR_medium_tank_equipment_1945:0 "Modulnyj Panz I Horlytsia"
+ UKR_medium_tank_equipment_1945_short:0 "MP-I Horlytsia"
+ #UKR_medium_tank_equipment_1945_desc:0 ""
 
 ###
 ### Ulster ###
@@ -14047,15 +14047,15 @@
  USA_light_tank_equipment_3_short:0 "M24"
  USA_light_tank_equipment_3_desc:0 "While inspired by the M3, the M24 is an entirely new design developed with special consideration for performance in rough terrain."
 
- USA_medium_tank_equipment_1:0 "Medium Tank, Model 3"
- USA_medium_tank_equipment_1_short:0 "M3"
- USA_medium_tank_equipment_1_desc:0 "While American efforts to develop a modern medium tank on the basis of an enlarged variant of the M2 fractured with the onset of the civil war, the Federal government, motivated by the war, brought such plans quickly to fruition thereafter. The resulting M3 tank was the first entirely domestically designed medium tank in service with any faction of the American Civil War."
- USA_medium_tank_equipment_2:0 "Medium Tank, Model 10"
- USA_medium_tank_equipment_2_short:0 "M10"
- USA_medium_tank_equipment_2_desc:0 "Originally designed as a tank destroyer on the basis of the M3, the M10 went through multiple revisions, with improvements to protection and a fully enclosed turret, and was redesignated as a medium tank."
- USA_medium_tank_equipment_3:0 "Medium Tank, Model 25"
- USA_medium_tank_equipment_3_short:0 "M25"
- USA_medium_tank_equipment_3_desc:0 "Designed around the 90mm M3 anti-aircraft gun, the M25's turret is uniquely shaped. Despite its substantial armament however, the M25 proved nimble in American service and improved patterns of its 90mm gun would become the basis for a long line of future American tank guns."
+ USA_medium_tank_equipment_1939:0 "Medium Tank, Model 3"
+ USA_medium_tank_equipment_1939_short:0 "M3"
+ USA_medium_tank_equipment_1939_desc:0 "While American efforts to develop a modern medium tank on the basis of an enlarged variant of the M2 fractured with the onset of the civil war, the Federal government, motivated by the war, brought such plans quickly to fruition thereafter. The resulting M3 tank was the first entirely domestically designed medium tank in service with any faction of the American Civil War."
+ USA_medium_tank_equipment_1941:0 "Medium Tank, Model 10"
+ USA_medium_tank_equipment_1941_short:0 "M10"
+ USA_medium_tank_equipment_1941_desc:0 "Originally designed as a tank destroyer on the basis of the M3, the M10 went through multiple revisions, with improvements to protection and a fully enclosed turret, and was redesignated as a medium tank."
+ USA_medium_tank_equipment_1943:0 "Medium Tank, Model 25"
+ USA_medium_tank_equipment_1943_short:0 "M25"
+ USA_medium_tank_equipment_1943_desc:0 "Designed around the 90mm M3 anti-aircraft gun, the M25's turret is uniquely shaped. Despite its substantial armament however, the M25 proved nimble in American service and improved patterns of its 90mm gun would become the basis for a long line of future American tank guns."
 
  #delete eventually when we get a new icon:
  USA_heavy_tank_equipment_1934:0 "Medium Tank, Model 1"
@@ -14071,9 +14071,9 @@
  USA_super_heavy_tank_equipment_1934_short:0 "M28"
  USA_super_heavy_tank_equipment_1934_desc:0 "The M28 Super Heavy Tank was designed around an experimental 105mm gun equipped with a cutting edge autoloader system. With armour up to slightly over twelve inches thick in the front, the M28 was quite slow, but able to with reliably resist even relatively powerful anti-tank cannons."
 
- USA_modern_tank_equipment_1:0 "Medium Tank, Model 46"
- USA_modern_tank_equipment_1_short:0 "M46"
- USA_modern_tank_equipment_1_desc:0 "A slightly smaller derivative of the M26 tank, the M46 addressed many of that vehicles reliability issues. Agile, heavily armoured, and equipped with an ultra-high velocity 105mm gun, the M46 was the king of the battlefield."
+ USA_medium_tank_equipment_1945:0 "Medium Tank, Model 46"
+ USA_medium_tank_equipment_1945_short:0 "M46"
+ USA_medium_tank_equipment_1945_desc:0 "A slightly smaller derivative of the M26 tank, the M46 addressed many of that vehicles reliability issues. Agile, heavily armoured, and equipped with an ultra-high velocity 105mm gun, the M46 was the king of the battlefield."
 
 ###
 ### Vietnam ###
@@ -14218,12 +14218,12 @@
  WLS_light_tank_equipment_3:0 "Pilot Tank Mk.V"
  WLS_light_tank_equipment_3_short:0 "Pilot Mk.V"
 
- WLS_medium_tank_equipment_1:0 "Medium Tank Mk.VI"
- WLS_medium_tank_equipment_1_short:0 "Medium Mk.VI"
- WLS_medium_tank_equipment_2:0 "Medium Tank Mk.VIII"
- WLS_medium_tank_equipment_2_short:0 "Medium Mk.VIII"
- WLS_medium_tank_equipment_3:0 "Medium Tank Mk.XI"
- WLS_medium_tank_equipment_3_short:0 "Medium Mk.XI"
+ WLS_medium_tank_equipment_1939:0 "Medium Tank Mk.VI"
+ WLS_medium_tank_equipment_1939_short:0 "Medium Mk.VI"
+ WLS_medium_tank_equipment_1941:0 "Medium Tank Mk.VIII"
+ WLS_medium_tank_equipment_1941_short:0 "Medium Mk.VIII"
+ WLS_medium_tank_equipment_1943:0 "Medium Tank Mk.XI"
+ WLS_medium_tank_equipment_1943_short:0 "Medium Mk.XI"
 
  WLS_heavy_tank_equipment_1934:0 "Heavy Tank Mk.I"
  WLS_heavy_tank_equipment_1934_short:0 "Heavy Mk.I"
@@ -14235,8 +14235,8 @@
  WLS_super_heavy_tank_equipment_1934:0 "Colossus"
  WLS_super_heavy_tank_equipment_1934_short:0 "Colossus"
 
- WLS_modern_tank_equipment_1:0 "Universal Tank Mk.I"
- WLS_modern_tank_equipment_1_short:0 "Universal Mk.I"
+ WLS_medium_tank_equipment_1945:0 "Universal Tank Mk.I"
+ WLS_medium_tank_equipment_1945_short:0 "Universal Mk.I"
 
 ###
 ### West Germany ###
@@ -14382,12 +14382,12 @@
  RHI_light_tank_aa_equipment_3:0 "$GER_light_tank_aa_equipment_3$"
  RHI_light_tank_aa_equipment_3_short:0 "$GER_light_tank_aa_equipment_3_short$"
 
- RHI_medium_tank_equipment_1:0 "$GER_medium_tank_equipment_1$"
- RHI_medium_tank_equipment_1_short:0 "$GER_medium_tank_equipment_1_short$"
- RHI_medium_tank_equipment_2:0 "$GER_medium_tank_equipment_2$"
- RHI_medium_tank_equipment_2_short:0 "$GER_medium_tank_equipment_2_short$"
- RHI_medium_tank_equipment_3:0 "$GER_medium_tank_equipment_3$"
- RHI_medium_tank_equipment_3_short:0 "$GER_medium_tank_equipment_3_short$"
+ RHI_medium_tank_equipment_1939:0 "$GER_medium_tank_equipment_1939$"
+ RHI_medium_tank_equipment_1939_short:0 "$GER_medium_tank_equipment_1939_short$"
+ RHI_medium_tank_equipment_1941:0 "$GER_medium_tank_equipment_1941$"
+ RHI_medium_tank_equipment_1941_short:0 "$GER_medium_tank_equipment_1941_short$"
+ RHI_medium_tank_equipment_1943:0 "$GER_medium_tank_equipment_1943$"
+ RHI_medium_tank_equipment_1943_short:0 "$GER_medium_tank_equipment_1943_short$"
  RHI_medium_tank_artillery_equipment_1:0 "$GER_medium_tank_artillery_equipment_1$"
  RHI_medium_tank_artillery_equipment_1_short:0 "$GER_medium_tank_artillery_equipment_1_short$"
  RHI_medium_tank_artillery_equipment_2:0 "$GER_medium_tank_artillery_equipment_2$"
@@ -14441,8 +14441,8 @@
  RHI_super_heavy_tank_aa_equipment_1:0 "$GER_super_heavy_tank_aa_equipment_1$"
  RHI_super_heavy_tank_aa_equipment_1_short:0 "$GER_super_heavy_tank_aa_equipment_1_short$"
 
- RHI_modern_tank_equipment_1:0 "$GER_modern_tank_equipment_1$"
- RHI_modern_tank_equipment_1_short:0 "$GER_modern_tank_equipment_1_short$"
+ RHI_medium_tank_equipment_1945:0 "$GER_medium_tank_equipment_1945$"
+ RHI_medium_tank_equipment_1945_short:0 "$GER_medium_tank_equipment_1945_short$"
  RHI_modern_tank_artillery_equipment_1:0 "$GER_modern_tank_artillery_equipment_1$"
  RHI_modern_tank_artillery_equipment_1_short:0 "$GER_modern_tank_artillery_equipment_1_short$"
  RHI_modern_tank_destroyer_equipment_1:0 "$GER_modern_tank_destroyer_equipment_1$"
@@ -14598,14 +14598,14 @@
  WHR_light_tank_aa_equipment_3_short:0 "ZSU-41"
 
  #PZ 3:
- WHR_medium_tank_equipment_1:0 "Siaredni Tank uz.1936"
- WHR_medium_tank_equipment_1_short:0 "ST-36"
+ WHR_medium_tank_equipment_1939:0 "Siaredni Tank uz.1936"
+ WHR_medium_tank_equipment_1939_short:0 "ST-36"
  #PZ 4 H/L:
- WHR_medium_tank_equipment_2:0 "Siaredni Tank uz.1939"
- WHR_medium_tank_equipment_2_short:0 "ST-39"
+ WHR_medium_tank_equipment_1941:0 "Siaredni Tank uz.1939"
+ WHR_medium_tank_equipment_1941_short:0 "ST-39"
  #Panther:
- WHR_medium_tank_equipment_3:0 "Siaredni Tank uz.1942"
- WHR_medium_tank_equipment_3_short:0 "ST-42"
+ WHR_medium_tank_equipment_1943:0 "Siaredni Tank uz.1942"
+ WHR_medium_tank_equipment_1943_short:0 "ST-42"
  #Heuschrecke:
  WHR_medium_tank_artillery_equipment_1:0 "105-mm Samachodnaja Ustanouka uz.1936"
  WHR_medium_tank_artillery_equipment_1_short:0 "SU-36"
@@ -14685,8 +14685,8 @@
  WHR_super_heavy_tank_aa_equipment_1_short:0 "CZSU-128"
 
  #E50:
- WHR_modern_tank_equipment_1:0 "Šturmavoj Tank uz.1945"
- WHR_modern_tank_equipment_1_short:0 "ŠT-45"
+ WHR_medium_tank_equipment_1945:0 "Šturmavoj Tank uz.1945"
+ WHR_medium_tank_equipment_1945_short:0 "ŠT-45"
  #fake:
  WHR_modern_tank_artillery_equipment_1:0 "150-mm Šturmavaja Samachodnaja Ustanouka uz.1945"
  WHR_modern_tank_artillery_equipment_1_short:0 "ŠSU-45"
