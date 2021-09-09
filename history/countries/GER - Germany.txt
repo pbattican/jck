@@ -1,25 +1,33 @@
 ﻿capital = 64
+
 oob = "GER"
-set_naval_oob = "GER_naval"
+set_naval_oob= "GER_naval"
+
 add_ideas = {
 	GER_victors_of_wwi
 	GER_quenched_militarism
 	GER_imperial_pride
+
 	limited_conscription
-	GER_Franz_von_Papen_hog_ade
+
+	GER_Franz_von_Papen_hog_sco
 	GER_Friedrich_Werner_von_der_Schulenburg_for_ade
-	GER_Hjalmar_Schacht_eco_ade
+	GER_Hjalmar_Schacht_eco_mli
 	GER_Johann_von_Bernstorff_sec_ade
+
 	GER_August_Von_Mackensen_carm_pau
 	GER_Hans_von_Seeckt_cos_pau
 }
 
 GER_start_naval_variant = yes
+
 ### Starting Technologies ###
+
 set_technology = {
 	### General ###
 	electronic_mechanical_engineering = 1
 	fuel_silos = 1
+
 	### Tanks ###
 	light_tank_1934 = 1
 	light_tank_1936 = 1
