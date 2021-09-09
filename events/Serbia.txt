@@ -3503,7 +3503,7 @@ country_event = { #Fighter-Bombers or Bombers
 		name = serbia.52.a
 		if = {
 			limit = {
-				RUS = { has_tech = early_bomber }
+				RUS = { has_tech = tactical_bomber_1934 }
 			}
 			add_equipment_to_stockpile = {
 				type = tac_bomber_equipment
@@ -3522,7 +3522,7 @@ country_event = { #Fighter-Bombers or Bombers
 		name = serbia.52.b
 		if = {
 			limit = {
-				FRA = { has_tech = CAS1 }
+				FRA = { has_tech = CAS_1937 }
 			}
 			add_equipment_to_stockpile = {
 				type = CAS_equipment

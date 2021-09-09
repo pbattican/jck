@@ -4134,7 +4134,7 @@ focus_tree = {
 				name = HAI_fighter_bonus
 				uses = 1
 				bonus = 0.75
-				technology = early_fighter
+				technology = fighter_1934
 			}
 		}
 		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
@@ -4206,7 +4206,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = HAI_haitian_civil_war
 			}
-			has_tech = early_fighter
+			has_tech = fighter_1934
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HAI_fighter_purchases"

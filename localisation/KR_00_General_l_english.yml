@@ -644,7 +644,7 @@
  #support_tech_research:0 "Support Tech Research Time" already defined in Research loc file
  cat_strategic_destruction:0 "Strategic Destruction Tech"
  marine_tech_research:0 "Marines Tech Research Time"
- early_fighter:0 "Interwar Fighter"
+ fighter_1934:0 "Interwar Fighter"
  interwar_antiair:0 "Early Anti-Air"
  signal_company_tech:0 "Signal Company"
  maintenance_company_tech:0 "Maintenance Company"

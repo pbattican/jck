@@ -3534,8 +3534,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TEX_top_of_the_line_artillery"
 			if = {
-				limit = { NOT = { has_tech = interwar_artillery } }
-				set_technology = { interwar_artillery = 1 }
+				limit = { NOT = { has_tech = pack_artillery1 } }
+				set_technology = { pack_artillery1 = 1 }
 			}
 			else_if = {
 				limit = { NOT = { has_tech = artillery1 } }
