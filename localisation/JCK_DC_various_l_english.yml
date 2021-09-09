@@ -3,6 +3,9 @@
   infantry_equipment_4:0 "Infantry Kit 1946"
   infantry_equipment_4_short:0 "Infantry Kit 46"
   infantry_equipment_4_desc:0 "Personal and crew served weapons for infantry as well as the various other bits of kit a soldier needs. Further modernized to include improved personal Assault Rifles and anti-tank rockets."
+  infantry_at4:0 "Rocket Propelled Grenade System II"
+  infantry_at4_short:0 "Rocket Propelled Grenade System II"
+  infantry_at4_desc:0 "The introduction of Rocket propelled anti-tank systems will greatly increase our infantry anti-tank capability."
 
   ################ Generic Horse Equipment 
   horse_equipment:0 "Horse Equipment"
@@ -45,3 +48,24 @@
   pack_artillery2_desc:0 "Improved alloys and materials allow the use of more advanced ammunition types in our small artillery pieces."
   pack_artillery3:0 "Pack Artillery Carriage Gun Barrel Upgrade"
   pack_artillery3_desc:0 "Improved alloys and materials allow the use of more advanced ammunition types in our small artillery pieces."
+
+  ######## Pack Artillery - Equipment / Tech
+  pack_artillery_equipment_1:0 "Pack Artillery I"
+  pack_artillery_equipment_1_short:0 "Pack Artillery"
+  pack_artillery_equipment_1_desc:0 "Pack guns are artillery pieces designed for use in mountain warfare and areas where usual wheeled transport is not possible. They are similar to infantry support guns, and are generally capable of being broken down into smaller loads."
+  pack_artillery_equipment_2:0 "Pack Artillery II"
+  pack_artillery_equipment_2_short:0 "Improved Pack Artillery"
+  pack_artillery_equipment_2_desc:0 "Pack guns are artillery pieces designed for use in mountain warfare and areas where usual wheeled transport is not possible. They are similar to infantry support guns, and are generally capable of being broken down into smaller loads."
+
+  ##################### Heavy Artillery
+  heavy_artillery_equipment:0 "Heavy Artillery"
+  heavy_artillery_equipment_short:0 "Heavy Artillery"
+  heavy_artillery_equipment_desc:0 "New heavier designs, taking advantage of new hydraulic recoil devices and longer barrels."
+  heavy_artillery_equipment_1:0 "Heavy Artillery I"
+  heavy_artillery_equipment_1_desc:0 "Heavy artillery capable of being broken down for transport, making it possible to bring artillery support to areas previously difficult to teach."
+  heavy_artillery_equipment_2:0 "Heavy Artillery II"
+  heavy_artillery_equipment_2_desc:0 "New heavier designs, taking advantage of new hydraulic recoil devices and longer barrels."
+  heavy_artillery_equipment_3:0 "Heavy Artillery III"
+  heavy_artillery_equipment_3_desc:0 "New heavier designs, taking advantage of new hydraulic recoil devices and longer barrels."
+  heavy_artillery_equipment_4:0 "Heavy Artillery IV"
+  heavy_artillery_equipment_4_desc:0 "New heavier designs, taking advantage of new hydraulic recoil devices and longer barrels."
