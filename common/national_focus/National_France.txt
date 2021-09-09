@@ -2647,11 +2647,8 @@ focus_tree = {
 				name = NATFRA_Rain_of_Shells
 				bonus = 0.5
 				uses = 2
-				technology = gw_artillery
-				technology = artillery1
-				technology = artillery4
-				technology = rocket_artillery
-				technology = rocket_artillery4
+				category = cat_line_artillery
+				category = cat_towed_rockets
 			}
 			hidden_effect = {
 				swap_ideas = {

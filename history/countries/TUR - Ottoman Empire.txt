@@ -7,6 +7,9 @@ set_research_slots = 4
 
 OTT_start_naval_variant = yes
 
+set_cosmetic_tag = OTT
+save_global_event_target_as = KR_ottomans
+
 set_technology = {
 	### Tanks ###
 	light_tank_1934 = 1
@@ -278,8 +281,15 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Hasan Âli Yücel"
+	picture = "gfx/leaders/TUR/Portrait_TUR_Hasan_Ali.png"
+	expire = "1965.1.1"
+	ideology = social_democrat_subtype
+}
+
+create_country_leader = {
 	name = "Abdülmecid II"
-	picture = "Portrait_OTT_Abdulmecid_II.png"
+	picture = "gfx/leaders/TUR/Portrait_TUR_Abdulmecid_II.png"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
 	traits = {

@@ -36,6 +36,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 		ai_will_do = {
@@ -62,6 +63,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 		
@@ -91,6 +93,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 		
@@ -116,6 +119,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 		
@@ -152,6 +156,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 		ai_will_do = {
@@ -180,6 +185,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 		
@@ -211,6 +217,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 		ai_will_do = {
@@ -245,6 +252,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		ai_will_do = {
 			factor = 20
@@ -271,6 +279,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 		ai_will_do = {
@@ -302,6 +311,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 		ai_will_do = {
@@ -329,6 +339,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 	   
@@ -369,6 +380,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 		ai_will_do = {
@@ -410,6 +422,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 		ai_will_do = {
@@ -437,6 +450,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 		ai_will_do = {
@@ -459,6 +473,7 @@ technologies = {
 		
 		categories = {
 			artillery
+			cat_line_artillery
 		}
 		
 		ai_will_do = {
@@ -497,6 +512,7 @@ technologies = {
 		categories = {
 			rocketry
 			artillery
+			cat_towed_rockets
 		}
 	}
 	motorized_rocket_unit = {
@@ -550,6 +566,7 @@ technologies = {
 		
 		categories = {
 			rocketry
+			cat_towed_rockets
 		}
 	}
 	rocket_artillery3 = {
@@ -582,6 +599,7 @@ technologies = {
 		
 		categories = {
 			rocketry
+			cat_towed_rockets
 		}
 	}
 	rocket_artillery4 = {
@@ -604,6 +622,7 @@ technologies = {
 		categories = {
 			rocketry
 			artillery
+			cat_towed_rockets
 		}
 	}
 	###### Anti-tank

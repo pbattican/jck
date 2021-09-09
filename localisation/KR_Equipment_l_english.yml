@@ -516,6 +516,7 @@
  armored_car_at_equipment_desc:0 "Our light mechanised units will come into contact with enemy tank forces at some point. Developing a special anti-tank variant would give them a fighting chance."
 
 ### New tech categories
+ cat_towed_rockets:0 "Towed Rocket Artillery"
  cat_towed_rockets_research:0 "Towed Rocket Artillery Research Speed"
 
 ##################################
@@ -616,8 +617,8 @@
  ALO_infantry_equipment_1:0 "Vintovka Mosina 1891 obr.1891/1930"
  ALO_infantry_equipment_1_short:0 "Mosina 1891/1930"
 
- ALO_gw_tank_equipment:0 "Reno-Putilov"
- ALO_gw_tank_equipment_short:0 "Reno-Putilov"
+ ALO_light_tank_equipment_1934:0 "Reno-Putilov"
+ ALO_light_tank_equipment_1934_short:0 "Reno-Putilov"
 
 ###
 ### Grão Pará (AMA) ###
@@ -8160,8 +8161,8 @@
  LAT_rocket_artillery_equipment_2_short:0 "42. 210-mm lielgabals"
 
  #Oberschlesien:
- LAT_gw_tank_equipment:0 "1919. g. modeļa armijas bruņumašīna 'Oberschlesien'"
- LAT_gw_tank_equipment_short:0 "19. Oberschlesien"
+ LAT_light_tank_equipment_1934:0 "1919. g. modeļa armijas bruņumašīna 'Oberschlesien'"
+ LAT_light_tank_equipment_1934_short:0 "19. Oberschlesien"
  #Pz 1D:
  LAT_light_tank_equipment_1:0 "1932. g. modeļa vieglais tanks 'Kleinpanzer 1b'"
  LAT_light_tank_equipment_1_short:0 "32. Kleinpanzer 1b"
@@ -8486,8 +8487,8 @@
 
 
  #Oberschlesien:
- LIT_gw_tank_equipment:0 "1919 m. modelio lengvasis tankas 'Oberschlesien'"
- LIT_gw_tank_equipment_short:0 "Oberschlesien"
+ LIT_light_tank_equipment_1934:0 "1919 m. modelio lengvasis tankas 'Oberschlesien'"
+ LIT_light_tank_equipment_1934_short:0 "Oberschlesien"
  #Pz 1D:
  LIT_light_tank_equipment_1:0 "1932 m. modelio lengvasis tankas 'Kleinpanzer 1b'"
  LIT_light_tank_equipment_1_short:0 "Kleinpanzer 1b"
@@ -10157,9 +10158,9 @@
 #Tanks
 
  #MK V:
- TUR_gw_tank_equipment:0 "Zırhlı V"
- TUR_gw_tank_equipment_short:0 "Z-V"
- TUR_gw_tank_equipment_desc:0 "During the Weltkrieg, Ottoman army captured Mark V and FT tanks then refitted them into service, dubbing them 'Zırhlı V' and 'MT-17'. After British forces surrendered, Ottoman Empire received a large number of Mark V as spoils of war. The Z-V tank was a main tank in the Ottoman armoured corps. Though more advanced tanks replace the Z-Vs eventually, army still consider these for training its tank crews."
+ TUR_light_tank_equipment_1934:0 "Zırhlı V"
+ TUR_light_tank_equipment_1934_short:0 "Z-V"
+ TUR_light_tank_equipment_1934_desc:0 "During the Weltkrieg, Ottoman army captured Mark V and FT tanks then refitted them into service, dubbing them 'Zırhlı V' and 'MT-17'. After British forces surrendered, Ottoman Empire received a large number of Mark V as spoils of war. The Z-V tank was a main tank in the Ottoman armoured corps. Though more advanced tanks replace the Z-Vs eventually, army still consider these for training its tank crews."
  TUR_light_tank_equipment_1:0 "Muharebe Tankı Kalıp 1352"
  TUR_light_tank_equipment_1_short:0 "MT-52 'Sekban'"
  TUR_light_tank_equipment_1_desc:0 "MT-52 Sekban project is the first attempt to reorganise and reform the Ottoman Armoured Corps that was included in Harb-i Yıldırım military reforms. To this end, the Ottoman Empire bought a license for the German Spähpanzer II and designed a production line that Ottoman factories could handle. The initial plan was to have the MT-52 to replace old Z-Vs, however field tests showed that the MT-52 did not match the level of German production. Nevertheless, the quality of the new tank was accepted as good enough."
