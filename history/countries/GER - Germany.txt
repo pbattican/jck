@@ -42,6 +42,7 @@ set_technology = {
 	tech_mountaineers = 1
 	special_equipment = 1
 	marines = 1
+	paratroopers = 1
 	################## artillery ###############
 	artillery1 = 1 
 	gw_pack_artillery = 1
