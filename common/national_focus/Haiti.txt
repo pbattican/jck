@@ -4215,7 +4215,7 @@ focus_tree = {
 					has_completed_focus = HAI_mission_to_ottawa
 				}
 				add_equipment_to_stockpile = {
-					type = fighter_equipment_0
+					type = fighter_equipment_1934
 					amount = 25
 					producer = CAN
 				}
@@ -4225,14 +4225,14 @@ focus_tree = {
 					has_completed_focus = HAI_mission_to_france
 				}
 				add_equipment_to_stockpile = {
-					type = fighter_equipment_0
+					type = fighter_equipment_1934
 					amount = 25
 					producer = FRA
 				}
 			}
 			else = {
 				add_equipment_to_stockpile = {
-					type = fighter_equipment_0
+					type = fighter_equipment_1934
 					amount = 25
 					producer = GER
 				}

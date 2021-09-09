@@ -809,8 +809,8 @@
  ANQ_motorized_equipment_1_desc:0 "Following the Qing restoration, Benz AG and the Qing government established several automobile factories in China as joint ventures; the most famous being the Zhongyuan Automobile Plants located in Shanghai and Nanjing. Thousands of Type Zhongyuan trucks were produced in these two areas, which entered service in various armies loyal to the Zhili clique. \n\nNotaby, the Zhongyuan is not named after the ancient Chinese place name Zhongyuan (the area surrounding the empire's core), but instead after the painted logo on the front of the truck's cab; a huge Chinese character 'Zhong' enclosed in a circle."
 
 #Aircraft
- ANQ_fighter_equipment_0:0 "Jinan Type Suzhou"
- ANQ_fighter_equipment_0_short:0 "Suzhou"
+ ANQ_fighter_equipment_1934:0 "Jinan Type Suzhou"
+ ANQ_fighter_equipment_1934_short:0 "Suzhou"
 
 
 ###
@@ -2859,8 +2859,8 @@
 
 #Aircraft
 
- CHI_fighter_equipment_0:0 "CAMCO Type Suzhou"
- CHI_fighter_equipment_0_short:0 "Suzhou"
+ CHI_fighter_equipment_1934:0 "CAMCO Type Suzhou"
+ CHI_fighter_equipment_1934_short:0 "Suzhou"
  CHI_fighter_equipment_1:0 "Zhu XP-0"
  CHI_fighter_equipment_1_short:0 "XP-0"
  CHI_fighter_equipment_2:0 "CAMCO XP-1"
@@ -13156,8 +13156,8 @@
  SZC_motorized_equipment_1:0 "GMC 1931"
  SZC_motorized_equipment_1_short:0 "GMC 1931"
 
- SZC_fighter_equipment_0:0 "Junkers K-53"
- SZC_fighter_equipment_0_short:0 "K-53"
+ SZC_fighter_equipment_1934:0 "Junkers K-53"
+ SZC_fighter_equipment_1934_short:0 "K-53"
 
  SZC_tac_bomber_equipment_0:0 "Fairchild KR-34CA"
  SZC_tac_bomber_equipment_0_short:0 "KR-34CA"
@@ -14812,8 +14812,8 @@
  YUN_light_tank_equipment_1_short:0 "AMR 33"
  YUN_light_tank_equipment_1_desc:0 "At the request of the Central Committee of the Kuomintang in exile in France, France produced a small batch of light armoured vehicles suitable for the mountainous terrain of China for the exiled NRA'. In order to increase the vehicle's firepower, the main gun of this special batch of tanks is not a heavy machine gun, but a 25mm rapid-fire gun.\n\nSome exiles who sympathised with the Right-Kuomintang handed over the drawings of the tank to its Headquarters in Yunnan. After smuggling a batch of parts from German Indochina, the Yunnan Clique also assembled a small batch of such tanks."
 
- YUN_fighter_equipment_0:0 "Potez Po.25"
- YUN_fighter_equipment_0_short:0 "Po.25"
+ YUN_fighter_equipment_1934:0 "Potez Po.25"
+ YUN_fighter_equipment_1934_short:0 "Po.25"
 
  YUN_tac_bomber_equipment_0:0 "Breguet Br.14"
  YUN_tac_bomber_equipment_0_short:0 "Br.14"

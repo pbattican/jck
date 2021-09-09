@@ -3467,7 +3467,7 @@ country_event = { #Weltkrieg Aeroplanes Replacement
 			NOT = { has_war_with = RUS }
 		}
 		add_equipment_to_stockpile = {
-			type = fighter_equipment_1
+			type = fighter_equipment_1936
 			amount = 75
 			producer = RUS
 		}
@@ -3479,7 +3479,7 @@ country_event = { #Weltkrieg Aeroplanes Replacement
 			NOT = { has_war_with = FRA }
 		}
 		add_equipment_to_stockpile = {
-			type = fighter_equipment_1
+			type = fighter_equipment_1936
 			amount = 40
 			producer = FRA
 		}

@@ -859,7 +859,7 @@ JAP_influence_china = {
 					create_production_license = {
 						target = FROM
 						equipment = {
-							type = fighter_equipment_2
+							type = fighter_equipment_1940
 						}
 						cost_factor = -0.5
 					}
@@ -870,7 +870,7 @@ JAP_influence_china = {
 					create_production_license = {
 						target = FROM
 						equipment = {
-							type = fighter_equipment_1
+							type = fighter_equipment_1936
 						}
 						cost_factor = -0.5
 					}

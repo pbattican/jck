@@ -3043,7 +3043,7 @@ country_event = { #Providing plane licenses
 				create_production_license = {
 					target = ROOT
 					equipment = {
-						type = fighter_equipment_2
+						type = fighter_equipment_1940
 					}
 					cost_factor = -0.5
 				}
@@ -3054,7 +3054,7 @@ country_event = { #Providing plane licenses
 				create_production_license = {
 					target = ROOT
 					equipment = {
-						type = fighter_equipment_1
+						type = fighter_equipment_1936
 					}
 					cost_factor = -0.5
 				}
