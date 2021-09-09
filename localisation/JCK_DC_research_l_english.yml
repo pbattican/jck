@@ -1,0 +1,47 @@
+﻿l_english:
+  ############### Infantry Equipment
+  infantry_equipment_4:0 "Infantry Kit 1946"
+  infantry_equipment_4_short:0 "Infantry Kit 46"
+  infantry_equipment_4_desc:0 "Personal and crew served weapons for infantry as well as the various other bits of kit a soldier needs. Further modernized to include improved personal Assault Rifles and anti-tank rockets."
+
+  ################ Generic Horse Equipment 
+  horse_equipment:0 "Horse Equipment"
+  horse_equipment_short:0 "Horses & Field Equip."
+  horse_equipment_desc:0 "Age old mobile transport for troops and supplies along with logistic kits required by the troops."
+  horse_equipment_0:0 "Horse Equipment"
+  horse_equipment_0_short:0 "Horses & Field Equip."
+  horse_equipment_0_desc:0 "Age old mobile transport for troops and supplies along with logistic kits required by the troops."
+
+  ################ Field Equipment
+  field_equipment_2:0 "Standardised Field Equipment"
+  field_equipment_2_short:0 "Standardised Field Equipment"
+  field_equipment_2_desc:0 "Standardising on new up to date uniforms, helmets, boots and kit required by the troops simplifies logistics, production, and makes easier to gather feedback which can be used to improve our equipment further."
+  field_equipment_3:0 "Improved Field Equipment"
+  field_equipment_3_short:0 "Improved Field Equipment"
+  field_equipment_3_desc:0 "Our experiences in current conflicts have provided us with the means to indroduce a wide range of small improvements for our equipment, and certain new pieces, which makes our troops life in the field easier, and more able to withstand harsh weathers."
+  field_equipment_4:0 "Advanced Field Equipment"
+  field_equipment_4_short:0 "Advanced Field Equipment"
+  field_equipment_4_desc:0 "Adapting the certain field equipment and uniforms utilized by our special forces for the entire army with simplifications required by the prolonging war will allow us to introduce the next generation of field equipment."
+  field_equipment_5:0 "Modern Field Equipment"
+  field_equipment_5_short:0 "Modern Field Equipment"
+  field_equipment_5_desc:0 "With implementing innovations made by our enemies to our field kit, we are able to equip our soldiers with the best uniforms, boots, kit and personal equipment possible." 
+
+  tech_dig_1:0 "Entrenchment tools I"
+  tech_dig_1_desc:0 "By providing our soldiers with better tools and explosives we can create better defences without the construction of pillboxes and bunkers."
+  tech_dig_2:0 "Entrenchment tools II"
+  tech_dig_2_desc:0 "By providing our soldiers with better tools and explosives we can create better defences without the construction of pillboxes and bunkers."
+  tech_dig_3:0 "Entrenchment tools III"
+  tech_dig_3_desc:0 "By providing our soldiers with better tools and explosives we can create better defences without the construction of pillboxes and bunkers."
+  tech_dig_4:0 "Entrenchment tools IV"
+  tech_dig_4_desc:0 "By providing our soldiers with better tools and explosives we can create better defences without the construction of pillboxes and bunkers."
+
+  ############### Pack Artillery
+  pack_artillery_equipment_desc:0 "Light artillery and mortars, they provide less firepower compared to heavier designs but they perform better in harsh terrains and can be parachuted."
+  pack_artillery_equipment:0 "Pack Artillery"
+  gw_pack_artillery:0 "Pack Artillery I"
+  pack_artillery1:0 "Pack Artillery Carriage Upgrade"
+  pack_artillery1_desc:0 "Upgraded carriage designs allow more rapid deployment of small artillery pieces."
+  pack_artillery2:0 "Pack Artillery Carriage Gun Barrel Upgrade"
+  pack_artillery2_desc:0 "Improved alloys and materials allow the use of more advanced ammunition types in our small artillery pieces."
+  pack_artillery3:0 "Pack Artillery Carriage Gun Barrel Upgrade"
+  pack_artillery3_desc:0 "Improved alloys and materials allow the use of more advanced ammunition types in our small artillery pieces."
