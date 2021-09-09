@@ -1207,7 +1207,7 @@ SER_konspiracija_decisions = {
 					}
 				}
 			}
-			has_tech = gw_artillery
+			has_tech = gw_pack_artillery
 		}
 
 		visible = {
@@ -1420,7 +1420,7 @@ SER_konspiracija_decisions = {
 					}
 				}
 			}
-			has_tech = gwtank
+			has_tech = light_tank_1934
 		}
 
 		ai_will_do = {
@@ -1526,7 +1526,7 @@ SER_konspiracija_decisions = {
 					}
 				}
 			}
-			has_tech = early_fighter
+			has_tech = fighter_1934
 		}
 
 		ai_will_do = {
