@@ -147,7 +147,7 @@ antitank_generic = {
 			rocket_artillery_brigade
 			engineer
 			anti_tank
-			anti_air
+			anti_air_brigade
 			mot_recon
 			armored_car_recon
 			light_tank_recon
@@ -263,7 +263,7 @@ antitank_generic = {
 			rocket_artillery_brigade
 			engineer
 			anti_tank
-			anti_air
+			anti_air_brigade
 			mot_recon
 			armored_car_recon
 			light_tank_recon
@@ -316,7 +316,7 @@ antitank_generic = {
 #signal_company
 #maintenance_company
 #anti_tank_brigade
-#anti_air
+#anti_air_brigade
 #artillery
 #rocket_artillery
 #field_hospital

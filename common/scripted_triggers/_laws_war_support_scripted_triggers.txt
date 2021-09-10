@@ -195,7 +195,7 @@ has_excessive_army_size = {
 	multiply_temp_variable = { num_batt = 0.5 }
 	add_to_temp_variable = { total_manpower_need = num_batt }
 
-	set_temp_variable = { num_batt = num_battalions_with_type@anti_air }
+	set_temp_variable = { num_batt = num_battalions_with_type@anti_air_brigade }
 	multiply_temp_variable = { num_batt = 0.3 }
 	add_to_temp_variable = { total_manpower_need = num_batt }
 
@@ -203,7 +203,7 @@ has_excessive_army_size = {
 	multiply_temp_variable = { num_batt = 0.5 }
 	add_to_temp_variable = { total_manpower_need = num_batt }
 
-	set_temp_variable = { num_batt = num_battalions_with_type@anti_air_mot }
+	set_temp_variable = { num_batt = num_battalions_with_type@mot_anti_air_brigade }
 	multiply_temp_variable = { num_batt = 0.5 }
 	add_to_temp_variable = { total_manpower_need = num_batt }
 

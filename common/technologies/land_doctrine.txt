@@ -144,7 +144,7 @@ technologies = {
 	    dependencies = {
 			vehicle_radio = 1 
 		}
-		anti_air_mot = {
+		mot_anti_air_brigade = {
 			maximum_speed = 0.1
 		}
 		anti_tank_brigade_mot = {

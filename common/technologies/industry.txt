@@ -1117,19 +1117,19 @@ technologies = {
 				horse_equipment = -1
 			}
 		}
-		anti_air = {
+		anti_air_brigade = {
 			need = {
 				anti_air_equipment = -1
 				horse_equipment = -1
 			}
 		}
-		anti_air_mot = {
+		mot_anti_air_brigade = {
 			need = {
 				anti_air_equipment = -1
 				motorized_equipment = -1
 			}
 		}
-		anti_air_company = {
+		anti_air = {
 			need = {
 				anti_air_equipment = -1
 				horse_equipment = -1
@@ -1521,19 +1521,19 @@ technologies = {
 				horse_equipment = -1
 			}
 		}
-		anti_air = {
+		anti_air_brigade = {
 			need = {
 				anti_air_equipment = -1
 				horse_equipment = -1
 			}
 		}
-		anti_air_mot = {
+		mot_anti_air_brigade = {
 			need = {
 				anti_air_equipment = -1
 				motorized_equipment = -1
 			}
 		}
-		anti_air_company = {
+		anti_air = {
 			need = {
 				anti_air_equipment = -1
 				horse_equipment = -1
@@ -1910,19 +1910,19 @@ technologies = {
 				horse_equipment = -1
 			}
 		}
-		anti_air = {
+		anti_air_brigade = {
 			need = {
 			    anti_air_equipment = -1
 				horse_equipment = -1
 			}
 		}
-		anti_air_mot = {
+		mot_anti_air_brigade = {
 			need = {
 			    anti_air_equipment = -1
 				motorized_equipment = -1
 			}
 		}
-		anti_air_company = {
+		anti_air = {
 			need = {
 			    anti_air_equipment = -1
 				horse_equipment = -1
@@ -2299,19 +2299,19 @@ technologies = {
 				horse_equipment = 1
 			}
 		}
-		anti_air = {
+		anti_air_brigade = {
 			need = {
 				anti_air_equipment = 1
 				horse_equipment = 1
 			}
 		}
-		anti_air_mot = {
+		mot_anti_air_brigade = {
 			need = {
 				anti_air_equipment = 1
 				motorized_equipment = 1
 			}
 		}
-		anti_air_company = {
+		anti_air = {
 			need = {
 				anti_air_equipment = 1
 				horse_equipment = 1
@@ -2708,19 +2708,19 @@ technologies = {
 				horse_equipment = 1
 			}
 		}
-		anti_air = {
+		anti_air_brigade = {
 			need = {
 				anti_air_equipment = 1
 				horse_equipment = 1
 			}
 		}
-		anti_air_mot = {
+		mot_anti_air_brigade = {
 			need = {
 				anti_air_equipment = 1
 				motorized_equipment = 1
 			}
 		}
-		anti_air_company = {
+		anti_air = {
 			need = {
 				anti_air_equipment = 1
 				horse_equipment = 1
@@ -3099,19 +3099,19 @@ technologies = {
 				horse_equipment = 1
 			}
 		}
-		anti_air = {
+		anti_air_brigade = {
 			need = {
 			    anti_air_equipment = 1
 				horse_equipment = 1
 			}
 		}
-		anti_air_mot = {
+		mot_anti_air_brigade = {
 			need = {
 			    anti_air_equipment = 1
 				motorized_equipment = 1
 			}
 		}
-		anti_air_company = {
+		anti_air = {
 			need = {
 			    anti_air_equipment = 1
 				horse_equipment = 1

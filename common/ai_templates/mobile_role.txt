@@ -126,7 +126,7 @@ mobile_generic = {
 			motorized
 			engineer
 			anti_tank
-			anti_air
+			anti_air_brigade
 			maintenance_company
 			logistics_company
 		}
@@ -250,7 +250,7 @@ mobile_generic = {
 			mot_anti_tank_brigade
 			engineer
 			anti_tank
-			anti_air
+			anti_air_brigade
 			maintenance_company
 			logistics_company
 		}
@@ -362,7 +362,7 @@ mobile_generic = {
 			mechanized
 			engineer
 			anti_tank
-			anti_air
+			anti_air_brigade
 			maintenance_company
 			logistics_company
 		}
