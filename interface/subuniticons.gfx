@@ -266,10 +266,7 @@ spriteTypes = {
 	spriteType = { name = "GFX_div_templ_62_large"										textureFile = "gfx/interface/counters/division_templates_large/custom_template_062.dds" }	
 	spriteType = { name = "GFX_div_templ_63_large"										textureFile = "gfx/interface/counters/division_templates_large/custom_template_063.dds" }	
 	spriteType = { name = "GFX_div_templ_64_large"										textureFile = "gfx/interface/counters/division_templates_large/custom_template_064.dds" }	
-	spriteType = { name = "GFX_div_templ_65_large"										textureFile = "gfx/interface/counters/divisions_large/MPU.145.large.GarrisonBlack.NoEchelon.dds" noOfFrames = 2 }
-	spriteType = { name = "GFX_div_templ_66_large"								textureFile = "gfx/interface/counters/divisions_large/unit_truck_garrison_ss.dds" noOfFrames = 2 }	
-	spriteType = { name = "GFX_div_templ_67_large" 			textureFile = "gfx/interface/counters/divisions_large/MPU.150.large.InfantryBlack.NoEchelon.dds" noOfFrames = 2 }
-	spriteType = { name = "GFX_div_templ_68_large" 			textureFile = "gfx/interface/counters/divisions_large/unit_truck_infantry_ss.dds" noOfFrames = 2 }	
+
 	spriteType = { name = "GFX_div_templ_69_large" 			textureFile = "gfx/interface/counters/divisions_large/unit_ss_at_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_div_templ_70_large" 			textureFile = "gfx/interface/counters/divisions_large/unit_ss_anti_air_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_div_templ_71_large" 			textureFile = "gfx/interface/counters/divisions_large/unit_ss_anti_air_motorized_icon.dds" noOfFrames = 2 }
@@ -520,10 +517,7 @@ spriteType = {		name = "GFX_div_templ_249_large"		textureFile = "gfx/mpu/div_des
 	spriteType = { name = "GFX_div_templ_62_small"										textureFile = "gfx/interface/counters/division_templates_large/custom_template_062.dds" }
 	spriteType = { name = "GFX_div_templ_63_small"										textureFile = "gfx/interface/counters/division_templates_large/custom_template_063.dds" }
 	spriteType = { name = "GFX_div_templ_64_small"										textureFile = "gfx/interface/counters/division_templates_large/custom_template_064.dds" }
-	spriteType = { name = "GFX_div_templ_65_small"										textureFile = "gfx/interface/counters/divisions_large/MPU.145.large.GarrisonBlack.NoEchelon.dds" noOfFrames = 2 }
-	spriteType = { name = "GFX_div_templ_66_small"								textureFile = "gfx/interface/counters/divisions_large/unit_truck_garrison_ss.dds" noOfFrames = 2 }	
-	spriteType = { name = "GFX_div_templ_67_small" 			textureFile = "gfx/interface/counters/divisions_large/MPU.150.large.InfantryBlack.NoEchelon.dds" noOfFrames = 2 }
-	spriteType = { name = "GFX_div_templ_68_small" 			textureFile = "gfx/interface/counters/divisions_large/unit_truck_infantry_ss.dds" noOfFrames = 2 }	
+
 	spriteType = { name = "GFX_div_templ_69_small" 			textureFile = "gfx/interface/counters/divisions_large/unit_ss_at_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_div_templ_70_small" 			textureFile = "gfx/interface/counters/divisions_large/unit_ss_anti_air_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_div_templ_71_small" 			textureFile = "gfx/interface/counters/divisions_large/unit_ss_anti_air_motorized_icon.dds" noOfFrames = 2 }
