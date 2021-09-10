@@ -12,7 +12,7 @@ NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
 
 --- Game
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 6 --12
-NDefines.NGame.GAME_SPEED_SECONDS = { 0.5, 0.3, 0.195, 0.075, 0.0 }
+NDefines.NGame.GAME_SPEED_SECONDS = { 0.5, 0.3, 0.19, 0.075, 0.0 }
 
 --- Military ---
 
@@ -45,6 +45,9 @@ NDefines.NNavy.SUBMARINE_ESCAPE_RATIOS = { -- subs will escape battle in convoy 
                                             1.0,   -- I am death incarnate!
                                         }
 NDefines.NNavy.NAVAL_MINES_DECAY_AT_PEACE_TIME = 2		-- How fast mines are decaying in peace time. Planting mines in peace time may be exploitable, so it's blocked atm. That's why after war we should decay them too.
+NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 1.000							-- Vanilla is 1000
+NDefines.NNavy.NAVAL_MINES_NAVAL_SUPREMACY_FACTOR = 0						-- Vanilla is 1.0
+
 NDefines.NNavy.BASE_SPOTTING_FROM_RADAR = 10	            -- base spotting percentage that comes from full radar coverage
 
 --- Country
