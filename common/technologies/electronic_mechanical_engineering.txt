@@ -102,7 +102,7 @@ technologies = {
 			   radio_equipment = 2
 		    }
 		}
-		recon_ac = { 
+		armored_car_recon = { 
 			recon = 1 
 			defense = 0.1
 			breakthrough = 0.1
@@ -110,7 +110,7 @@ technologies = {
 			   radio_equipment = 2
 		    }
 		}
-		light_armor_recon = { 
+		light_tank_recon = { 
 			recon = 1 
 			defense = 0.1
 			breakthrough = 0.1

@@ -847,13 +847,13 @@ technologies = {
 				support_equipment = -1
 			}
 		}
-		recon_ac = {
+		armored_car_recon = {
 			need = {
 			   	armored_cars_equipment = -1
 				support_equipment = -1
 			}
 		}
-		light_armor_recon  = {
+		light_tank_recon  = {
 			need = {
 			   	light_tank_equipment = -1
 				support_equipment = -1
@@ -1258,12 +1258,12 @@ technologies = {
 			   	infantry_equipment = -2
 			}
 		}
-		recon_ac = {
+		armored_car_recon = {
 			need = {
 			   	armored_cars_equipment = -1
 			}
 		}
-		light_armor_recon  = {
+		light_tank_recon  = {
 			need = {
 			   	light_tank_equipment = -1
 			}
@@ -1644,12 +1644,12 @@ technologies = {
 				horse_equipment = -1
 			}
 		}
-		recon_ac = {
+		armored_car_recon = {
 			need = {
 				support_equipment = -1
 			}
 		}
-		light_armor_recon  = {
+		light_tank_recon  = {
 			need = {
 				support_equipment = -1
 			}
@@ -2029,13 +2029,13 @@ technologies = {
 				support_equipment = 1
 			}
 		}
-		recon_ac = {
+		armored_car_recon = {
 			need = {
 			   	armored_cars_equipment = 1
 				support_equipment = 1
 			}
 		}
-		light_armor_recon  = {
+		light_tank_recon  = {
 			need = {
 			   	light_tank_equipment = 1
 				support_equipment = 1
@@ -2445,12 +2445,12 @@ technologies = {
 			   	infantry_equipment = 2
 			}
 		}
-		recon_ac = {
+		armored_car_recon = {
 			need = {
 			   	armored_cars_equipment = 1
 			}
 		}
-		light_armor_recon  = {
+		light_tank_recon  = {
 			need = {
 			   	light_tank_equipment = 1
 			}
@@ -2833,12 +2833,12 @@ technologies = {
 				horse_equipment = 1
 			}
 		}
-		recon_ac = {
+		armored_car_recon = {
 			need = {
 				support_equipment = 1
 			}
 		}
-		light_armor_recon  = {
+		light_tank_recon  = {
 			need = {
 				support_equipment = 1
 			}

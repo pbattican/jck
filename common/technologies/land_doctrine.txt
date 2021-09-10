@@ -1272,13 +1272,13 @@ technologies = {
 		recon = {  
 			recon = 1
 		}
-		recon_ac = { 
+		armored_car_recon = { 
 			recon = 1 
 		}
 		mot_recon = { 
 			recon = 1 
 		}
-		light_armor_recon = { 
+		light_tank_recon = { 
 			recon = 1
 		}
 		path = {
@@ -2039,13 +2039,13 @@ technologies = {
 		recon = {  
 			recon = 1
 		}
-		recon_ac = { 
+		armored_car_recon = { 
 			recon = 1 
 		}
 		mot_recon = { 
 			recon = 1 
 		}
-		light_armor_recon = { 
+		light_tank_recon = { 
 			recon = 1
 		}
 		xp_research_type = army

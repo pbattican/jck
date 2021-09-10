@@ -84,7 +84,7 @@ division_template = {
 		infantry = { x = 2 y = 2 }
 	}
 	support = {
-		light_armor_recon = { x = 0 y = 0 }
+		light_tank_recon = { x = 0 y = 0 }
 	}
 }
 

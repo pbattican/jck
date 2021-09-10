@@ -163,7 +163,7 @@ technologies = {
 	tech_armored_cars = {
 
 		enable_subunits = {
-			recon_ac
+			armored_car_recon
 			
 			
 			armored_car
@@ -210,10 +210,10 @@ technologies = {
 		recon = {
 			recon = 0.5
 		}			
-		recon_ac = {
+		armored_car_recon = {
 			recon = 0.5
 		}
-		light_armor_recon = {
+		light_tank_recon = {
 			recon = 0.5
 		}
 		mot_recon = {
@@ -251,10 +251,10 @@ technologies = {
 		recon = {
 			recon = 0.5
 		}			
-		recon_ac = {
+		armored_car_recon = {
 			recon = 0.5
 		}
-		light_armor_recon = {
+		light_tank_recon = {
 			recon = 0.5
 		}
 		mot_recon = {
@@ -291,10 +291,10 @@ technologies = {
 		recon = {
 			recon = 0.5
 		}			
-		recon_ac = {
+		armored_car_recon = {
 			recon = 0.5
 		}
-		light_armor_recon = {
+		light_tank_recon = {
 			recon = 0.5
 		}
 		mot_recon = {
@@ -326,10 +326,10 @@ technologies = {
 		recon = {
 			recon = 0.5
 		}			
-		recon_ac = {
+		armored_car_recon = {
 			recon = 0.5
 		}
-		light_armor_recon = {
+		light_tank_recon = {
 			recon = 0.5
 		}
 		mot_recon = {
@@ -352,7 +352,7 @@ technologies = {
 	light_tank_1934 = { 
 		enable_subunits = {
 			light_armor
-			light_armor_recon
+			light_tank_recon
 		}
 
 		enable_equipments = {

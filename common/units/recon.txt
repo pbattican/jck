@@ -164,7 +164,7 @@ sub_units = {
 		
 		same_support_type = recon # blocks adding other recon types to template
 	}
-	recon_ac = {
+	armored_car_recon = {
 		sprite = motorized
 		map_icon_category = armored
 		priority = 0
@@ -238,7 +238,7 @@ sub_units = {
 		}
 		same_support_type = recon # blocks adding other recon types to template
 	}
-	light_armor_recon = {
+	light_tank_recon = {
 		sprite = light_armor
 		map_icon_category = armored
 		priority = 0

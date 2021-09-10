@@ -297,10 +297,10 @@ technologies = {
 			recon = 1
 		}
 			
-		recon_ac = {
+		armored_car_recon = {
 			recon = 1
 		}
-		light_armor_recon = {
+		light_tank_recon = {
 			recon = 1
 			initiative = 0.05
 		}
@@ -334,10 +334,10 @@ technologies = {
 			recon = 1
 		}
 		
-		recon_ac = {
+		armored_car_recon = {
 			recon = 1
 		}
-		light_armor_recon = {
+		light_tank_recon = {
 			recon = 1
 			initiative = 0.05
 		}
@@ -369,10 +369,10 @@ technologies = {
 		recon = {
 			recon = 1
 		}		
-		recon_ac = {
+		armored_car_recon = {
 			recon = 1
 		}
-		light_armor_recon = {
+		light_tank_recon = {
 			recon = 1
 			initiative = 0.05
 		}
