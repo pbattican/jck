@@ -2864,17 +2864,17 @@
  CHI_fighter_equipment_1934_short:0 "Suzhou"
  CHI_fighter_equipment_1:0 "Zhu XP-0"
  CHI_fighter_equipment_1_short:0 "XP-0"
- CHI_fighter_equipment_2:0 "CAMCO XP-1"
- CHI_fighter_equipment_2_short:0 "XP-1"
- CHI_fighter_equipment_3:0 "CAMCO XP-2"
- CHI_fighter_equipment_3_short:0 "XP-2"
+ CHI_fighter_equipment_1940:0 "CAMCO XP-1"
+ CHI_fighter_equipment_1940_short:0 "XP-1"
+ CHI_fighter_equipment_1944:0 "CAMCO XP-2"
+ CHI_fighter_equipment_1944_short:0 "XP-2"
  CHI_jet_fighter_equipment_1:0 "CAMCO XP-1001"
  CHI_jet_fighter_equipment_1_short:0 "XP-1001"
 
  CHI_tac_bomber_equipment_0:0 "CAMCO Type Zhaowa-1"
- CHI_tac_bomber_equipment_0_short:0 "Zhaowa-1"
- CHI_tac_bomber_equipment_1:0 "CAMCO XB-3"
- CHI_tac_bomber_equipment_1_short:0 "XB-3"
+ CHI_tac_bomber_equipment_1934_short:0 "Zhaowa-1"
+ CHI_tac_bomber_equipment_1937:0 "CAMCO XB-3"
+ CHI_tac_bomber_equipment_1937_short:0 "XB-3"
 
  CHI_nav_bomber_equipment_1:0 "Shanghai Ninghai-2"
  CHI_nav_bomber_equipment_1_short:0 "Ninghai-2"
@@ -13161,7 +13161,7 @@
  SZC_fighter_equipment_1934_short:0 "K-53"
 
  SZC_tac_bomber_equipment_0:0 "Fairchild KR-34CA"
- SZC_tac_bomber_equipment_0_short:0 "KR-34CA"
+ SZC_tac_bomber_equipment_1934_short:0 "KR-34CA"
 
 ###
 ### Kumul Khanate ###
@@ -14817,7 +14817,7 @@
  YUN_fighter_equipment_1934_short:0 "Po.25"
 
  YUN_tac_bomber_equipment_0:0 "Breguet Br.14"
- YUN_tac_bomber_equipment_0_short:0 "Br.14"
+ YUN_tac_bomber_equipment_1934_short:0 "Br.14"
 
 ###
 ### Zambia ###
