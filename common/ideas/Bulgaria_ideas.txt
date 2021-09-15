@@ -1,15 +1,15 @@
 ############
 # Bulgaria #
 ############
+
 ideas = {
-	##############
-	# Country Ideas
-	##############
+
+##############
+# Country Ideas
+##############
 	country = {
 		BUL_waning_hegemony = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_waning_hegemony"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_waning_hegemony"}
 			picture = bul_third_bulgarian_state
 			cancel = {
 				is_subject = yes
@@ -20,9 +20,7 @@ ideas = {
 			}
 		}
 		BUL_waning_hegemony_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_waning_hegemony_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_waning_hegemony_2"}
 			name = BUL_waning_hegemony
 			picture = bul_third_bulgarian_state
 			cancel = {
@@ -34,9 +32,7 @@ ideas = {
 			}
 		}
 		BUL_military_league = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_military_league"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_military_league"}
 			picture = bul_zveno
 			modifier = {
 				conscription_factor = 0.05
@@ -44,29 +40,23 @@ ideas = {
 			}
 		}
 		BUL_military_league_curtailed = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_military_league_curtailed"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_military_league_curtailed"}
 			picture = advisors_bulgaria
 			modifier = {
 				conscription_factor = 0.05
 			}
 		}
 		BUL_military_league_curtailed_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_military_league_curtailed_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_military_league_curtailed_2"}
 			name = BUL_military_league_curtailed
 			picture = advisors_bulgaria
 			modifier = {
-				conscription_factor = 0.1
-				army_morale_factor = 0.1
+				conscription_factor = 0.10
+				army_morale_factor = 0.10
 			}
 		}
 		BUL_military_league_curtailed_3 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_military_league_curtailed_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_military_league_curtailed_2"}
 			name = BUL_military_league_curtailed
 			picture = advisors_bulgaria
 			modifier = {
@@ -75,9 +65,7 @@ ideas = {
 			}
 		}
 		BUL_military_league_empowered = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_military_league_empowered"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_military_league_empowered"}
 			picture = advisors_bulgaria
 			modifier = {
 				conscription_factor = 0.1
@@ -86,9 +74,7 @@ ideas = {
 			}
 		}
 		BUL_boris_crown_prince = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_boris_crown_prince"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_boris_crown_prince"}
 			available = {
 				has_country_leader = {
 					ruling_only = yes
@@ -104,9 +90,7 @@ ideas = {
 			}
 		}
 		BUL_boris_crown_prince_bad = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_boris_crown_prince_bad"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_boris_crown_prince_bad"}
 			available = {
 				has_country_leader = {
 					ruling_only = yes
@@ -119,13 +103,11 @@ ideas = {
 			name = BUL_boris_crown_prince
 			picture = bul_tsar_boris_negative
 			modifier = {
-				stability_factor = -0.1
+				stability_factor = -0.10
 			}
 		}
 		BUL_state_protection_act = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_state_protection_act"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_state_protection_act"}
 			picture = bul_prussia_of_the_balkans
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
@@ -134,9 +116,7 @@ ideas = {
 			}
 		}
 		BUL_state_protection_act_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_state_protection_act"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_state_protection_act"}
 			name = BUL_state_protection_act
 			picture = bul_prussia_of_the_balkans
 			modifier = {
@@ -145,9 +125,7 @@ ideas = {
 			}
 		}
 		BUL_national_catastrophe = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_national_catastrophe"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_national_catastrophe"}
 			picture = bul_second_national_catastrophe
 			modifier = {
 				conscription_factor = -0.3
@@ -159,9 +137,7 @@ ideas = {
 			}
 		}
 		BUL_national_catastrophe_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_national_catastrophe_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_national_catastrophe_2"}
 			name = BUL_national_catastrophe
 			picture = bul_second_national_catastrophe
 			modifier = {
@@ -174,9 +150,7 @@ ideas = {
 			}
 		}
 		BUL_national_catastrophe_3 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_national_catastrophe_3"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_national_catastrophe_3"}
 			name = BUL_national_catastrophe
 			picture = bul_second_national_catastrophe
 			modifier = {
@@ -189,9 +163,7 @@ ideas = {
 			}
 		}
 		BUL_national_catastrophe_4 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_national_catastrophe_4"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_national_catastrophe_4"}
 			name = BUL_national_catastrophe
 			picture = bul_second_national_catastrophe
 			modifier = {
@@ -203,9 +175,7 @@ ideas = {
 			}
 		}
 		BUL_national_catastrophe_5 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_national_catastrophe_5"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_national_catastrophe_5"}
 			name = BUL_national_catastrophe
 			picture = bul_second_national_catastrophe
 			modifier = {
@@ -216,11 +186,10 @@ ideas = {
 				mobilization_speed = -0.1
 			}
 		}
+
 		#Political game ideas
 		BUL_angry_military = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_angry_military_idea"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_angry_military_idea"}
 			picture = tfv_can_conscription_crisis
 			modifier = {
 				political_power_factor = -0.1
@@ -231,9 +200,7 @@ ideas = {
 			}
 		}
 		BUL_ailing_economy_idea = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_ailing_economy_idea"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_ailing_economy_idea"}
 			name = BUL_black_monday_idea
 			picture = great_depression
 			modifier = {
@@ -242,11 +209,8 @@ ideas = {
 				stability_factor = -0.1
 			}
 		}
-		BUL_black_monday_idea_01 = {
-			# if worsened by failing to merge the banks
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_black_monday_idea_01"
-			}
+		BUL_black_monday_idea_01 = { # if worsened by failing to merge the banks
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_black_monday_idea_01"}
 			name = BUL_black_monday_idea
 			picture = usa_great_depression_3
 			on_remove = {
@@ -268,9 +232,7 @@ ideas = {
 			}
 		}
 		BUL_black_monday_idea = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_black_monday_idea"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_black_monday_idea"}
 			picture = usa_great_depression_2
 			on_remove = {
 				if = {
@@ -291,9 +253,7 @@ ideas = {
 			}
 		}
 		BUL_black_monday_idea2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_black_monday_idea2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_black_monday_idea2"}
 			name = BUL_black_monday_idea
 			picture = usa_great_depression_2
 			on_remove = {
@@ -315,9 +275,7 @@ ideas = {
 			}
 		}
 		BUL_black_monday_idea3 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_black_monday_idea3"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_black_monday_idea3"}
 			name = BUL_black_monday_idea
 			picture = great_depression
 			on_remove = {
@@ -338,9 +296,7 @@ ideas = {
 			}
 		}
 		BUL_black_monday_idea4 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_black_monday_idea4"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_black_monday_idea4"}
 			name = BUL_black_monday_idea
 			picture = great_depression
 			modifier = {
@@ -349,9 +305,7 @@ ideas = {
 			}
 		}
 		BUL_btb_dominance = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_btb_dominance"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_btb_dominance"}
 			picture = HOL_welfare_state
 			modifier = {
 				consumer_goods_factor = 0.06
@@ -360,9 +314,7 @@ ideas = {
 			}
 		}
 		BUL_vast_resistance = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_vast_resistance"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_vast_resistance"}
 			picture = generic_destruction
 			modifier = {
 				political_power_factor = -0.25
@@ -371,9 +323,7 @@ ideas = {
 			}
 		}
 		BUL_agrarian_strike = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_agrarian_strike"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_agrarian_strike"}
 			picture = DEI_abandoned_ethical_policy
 			modifier = {
 				political_power_factor = -0.15
@@ -382,11 +332,10 @@ ideas = {
 				industrial_capacity_factory = -0.2
 			}
 		}
+
 		#Diplomacy ideas
 		BUL_taming_the_powderkeg_idea = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_taming_the_powderkeg_idea"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_taming_the_powderkeg_idea"}
 			picture = generic_manpower_bonus
 			modifier = {
 				training_time_army_factor = -0.1
@@ -394,9 +343,7 @@ ideas = {
 			}
 		}
 		BUL_ottoman_trade = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_ottoman_trade"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_ottoman_trade"}
 			picture = generic_trade
 			cancel = {
 				has_war_with = OTT
@@ -410,9 +357,7 @@ ideas = {
 			}
 		}
 		BUL_ottoman_trade_OTT = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_ottoman_trade"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_ottoman_trade"}
 			picture = generic_trade
 			name = BUL_ottoman_trade
 			cancel = {
@@ -427,9 +372,7 @@ ideas = {
 			}
 		}
 		BUL_war_reparations_fund_idea = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_war_reparations_fund_idea"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_war_reparations_fund_idea"}
 			picture = LEC_medium_reserves
 			modifier = {
 				consumer_goods_factor = -0.05
@@ -437,9 +380,7 @@ ideas = {
 			}
 		}
 		BUL_war_reparations_fund_idea_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_war_reparations_fund_idea_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_war_reparations_fund_idea_2"}
 			name = BUL_war_reparations_fund_idea
 			picture = LEC_high_reserves
 			modifier = {
@@ -449,9 +390,7 @@ ideas = {
 			}
 		}
 		BUL_danube_mouth_commission_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_danube_mouth_commission_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_danube_mouth_commission_1"}
 			name = BUL_danube_mouth_commission
 			picture = liberty_ships_focus
 			available = {
@@ -465,9 +404,7 @@ ideas = {
 			}
 		}
 		BUL_danube_mouth_commission_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_danube_mouth_commission_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_danube_mouth_commission_2"}
 			name = BUL_danube_mouth_commission
 			picture = liberty_ships_focus
 			available = {
@@ -481,9 +418,7 @@ ideas = {
 			}
 		}
 		BUL_ROM_mission = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_ROM_mission"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_ROM_mission"}
 			picture = advisors_bulgaria
 			modifier = {
 				army_org_factor = 0.1
@@ -492,9 +427,7 @@ ideas = {
 			}
 		}
 		BUL_the_dream_of_yugoslavia = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_the_dream_of_yugoslavia"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_the_dream_of_yugoslavia"}
 			picture = YUG_local_militias
 			modifier = {
 				unit_limit_bonus = 8
@@ -516,9 +449,7 @@ ideas = {
 			}
 		}
 		BUL_austria_war_preparations_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_austria_war_preparations"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_austria_war_preparations"}
 			name = BUL_austria_war_preparations
 			picture = generic_war_preparation
 			cancel = {
@@ -533,9 +464,7 @@ ideas = {
 			}
 		}
 		BUL_austria_war_preparations_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_austria_war_preparations"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_austria_war_preparations"}
 			name = BUL_austria_war_preparations
 			picture = generic_war_preparation
 			cancel = {
@@ -550,9 +479,7 @@ ideas = {
 			}
 		}
 		BUL_austria_war_preparations_10 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_austria_war_preparations"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_austria_war_preparations"}
 			name = BUL_austria_war_preparations
 			picture = generic_war_preparation
 			cancel = {
@@ -572,9 +499,7 @@ ideas = {
 			}
 		}
 		BUL_austria_war_preparations_20 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_austria_war_preparations"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_austria_war_preparations"}
 			name = BUL_austria_war_preparations
 			picture = generic_war_preparation
 			cancel = {
@@ -594,9 +519,7 @@ ideas = {
 			}
 		}
 		BUL_austria_war_preparations_11 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_austria_war_preparations"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_austria_war_preparations"}
 			name = BUL_austria_war_preparations
 			picture = generic_war_preparation
 			cancel = {
@@ -616,9 +539,7 @@ ideas = {
 			}
 		}
 		BUL_austria_war_preparations_21 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_austria_war_preparations"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_austria_war_preparations"}
 			name = BUL_austria_war_preparations
 			picture = generic_war_preparation
 			cancel = {
@@ -638,9 +559,7 @@ ideas = {
 			}
 		}
 		BUL_imperfect_union_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_imperfect_union_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_imperfect_union_1"}
 			picture = bul_the_fate_of_the_balkans
 			name = BUL_imperfect_union
 			modifier = {
@@ -651,9 +570,7 @@ ideas = {
 			}
 		}
 		BUL_imperfect_union_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_imperfect_union_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_imperfect_union_2"}
 			picture = bul_the_fate_of_the_balkans
 			name = BUL_imperfect_union
 			modifier = {
@@ -664,9 +581,7 @@ ideas = {
 			}
 		}
 		BUL_imperfect_union_3 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_imperfect_union_3"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_imperfect_union_3"}
 			picture = bul_the_fate_of_the_balkans
 			name = BUL_imperfect_union
 			modifier = {
@@ -677,9 +592,7 @@ ideas = {
 			}
 		}
 		BUL_imperfect_union_4 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_imperfect_union_4"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_imperfect_union_4"}
 			picture = bul_the_fate_of_the_balkans
 			name = BUL_imperfect_union
 			modifier = {
@@ -689,11 +602,10 @@ ideas = {
 				industrial_capacity_factory = -0.1
 			}
 		}
+
 		#Military ideas
 		BUL_wartime_directorates = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_wartime_directorates"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_wartime_directorates"}
 			picture = backward_industry
 			modifier = {
 				industrial_capacity_factory = 0.1
@@ -701,9 +613,7 @@ ideas = {
 			}
 		}
 		BUL_emergency_conscription_idea = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_emergency_conscription_idea"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_emergency_conscription_idea"}
 			name = BUL_emergency_conscription
 			picture = chi_army_corruption2
 			modifier = {
@@ -711,9 +621,7 @@ ideas = {
 			}
 		}
 		BUL_military_credit = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_military_credit"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_military_credit"}
 			picture = generic_license_production
 			available = {
 				has_war = no
@@ -724,9 +632,7 @@ ideas = {
 			}
 		}
 		BUL_decisive_artillery_doctrine = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_decisive_artillery_doctrine"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_decisive_artillery_doctrine"}
 			picture = generic_artillery_regiments
 			modifier = {
 				army_attack_factor = 0.1
@@ -737,9 +643,7 @@ ideas = {
 			}
 		}
 		BUL_decisive_artillery_doctrine_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_decisive_artillery_doctrine_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_decisive_artillery_doctrine_2"}
 			name = BUL_decisive_artillery_doctrine
 			picture = generic_artillery_regiments
 			modifier = {
@@ -761,9 +665,7 @@ ideas = {
 			}
 		}
 		BUL_equipment_standards_idea = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_equipment_standards_idea"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_equipment_standards_idea"}
 			name = BUL_equipment_standards
 			picture = ast_volunteer_defence_corps
 			equipment_bonus = {
@@ -773,11 +675,10 @@ ideas = {
 				}
 			}
 		}
+
 		#Economy ideas
 		BUL_modernization_drive = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_modernization_drive"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_modernization_drive"}
 			picture = bul_national_industry
 			modifier = {
 				production_speed_buildings_factor = 0.1
@@ -787,9 +688,7 @@ ideas = {
 			}
 		}
 		BUL_modernization_drive_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_modernization_drive_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_modernization_drive_2"}
 			name = BUL_modernization_drive
 			picture = bul_national_industry
 			modifier = {
@@ -802,9 +701,7 @@ ideas = {
 			}
 		}
 		BUL_tourism = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_tourism"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_tourism"}
 			picture = NOR_passport_union_idea
 			modifier = {
 				monthly_population = 0.05
@@ -812,9 +709,7 @@ ideas = {
 			}
 		}
 		BUL_tourism_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_tourism_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_tourism_2"}
 			picture = NOR_passport_union_idea
 			name = BUL_tourism
 			modifier = {
@@ -823,9 +718,7 @@ ideas = {
 			}
 		}
 		BUL_agrarian_revolution = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_agrarian_revolution"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_agrarian_revolution"}
 			picture = RUS_land_reforms
 			modifier = {
 				monthly_population = 0.1
@@ -833,9 +726,7 @@ ideas = {
 			}
 		}
 		BUL_agrarian_revolution_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_agrarian_revolution_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_agrarian_revolution_2"}
 			picture = RUS_land_reforms
 			name = BUL_agrarian_revolution
 			modifier = {
@@ -845,19 +736,16 @@ ideas = {
 			}
 		}
 		BUL_belgium_of_the_balkans = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_belgium_of_the_balkans"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_belgium_of_the_balkans"}
 			picture = bul_national_industry
 			modifier = {
 				production_factory_max_efficiency_factor = 0.2
 			}
 		}
+
 		#Royal ideas
 		BUL_disciplined_state_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_disciplined_state_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_disciplined_state_1"}
 			name = BUL_disciplined_state
 			picture = CAN_exile_government
 			modifier = {
@@ -865,9 +753,7 @@ ideas = {
 			}
 		}
 		BUL_disciplined_state_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_disciplined_state_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_disciplined_state_2"}
 			name = BUL_disciplined_state
 			picture = CAN_exile_government
 			modifier = {
@@ -876,9 +762,7 @@ ideas = {
 			}
 		}
 		BUL_disciplined_state_3 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_disciplined_state_3"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_disciplined_state_3"}
 			name = BUL_disciplined_state
 			picture = CAN_exile_government
 			modifier = {
@@ -888,22 +772,18 @@ ideas = {
 			}
 		}
 		BUL_disciplined_state_4 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_disciplined_state_4"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_disciplined_state_4"}
 			name = BUL_disciplined_state
 			picture = CAN_exile_government
 			modifier = {
 				stability_factor = 0.1
 				political_power_factor = 0.1
 				conscription = 0.02
-				production_factory_efficiency_gain_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.10
 			}
 		}
 		BUL_women_suffrage = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_women_suffrage"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_women_suffrage"}
 			picture = UoB_women_soldiers
 			modifier = {
 				conscription_factor = 0.02
@@ -911,9 +791,7 @@ ideas = {
 			}
 		}
 		BUL_cult_of_tsar_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_cult_of_tsar_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_cult_of_tsar_1"}
 			name = BUL_cult_of_tsar
 			picture = bul_tsar_boris_positive
 			modifier = {
@@ -921,9 +799,7 @@ ideas = {
 			}
 		}
 		BUL_cult_of_tsar_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_cult_of_tsar_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_cult_of_tsar_1"}
 			name = BUL_cult_of_tsar
 			picture = bul_tsar_boris_positive
 			modifier = {
@@ -933,9 +809,7 @@ ideas = {
 			}
 		}
 		BUL_state_corporatism_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_state_corporatism_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_state_corporatism_1"}
 			name = BUL_state_corporatism_idea
 			picture = state_economy
 			modifier = {
@@ -943,9 +817,7 @@ ideas = {
 			}
 		}
 		BUL_state_corporatism_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_state_corporatism_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_state_corporatism_2"}
 			name = BUL_state_corporatism_idea
 			picture = state_economy
 			modifier = {
@@ -953,11 +825,10 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 			}
 		}
+
 		#Zveno ideas
 		BUL_ministry_of_national_economy_idea = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_ministry_of_national_economy_idea"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_ministry_of_national_economy_idea"}
 			picture = man_five_year_plan_industry
 			modifier = {
 				conscription_factor = -0.1
@@ -966,9 +837,7 @@ ideas = {
 			}
 		}
 		BUL_ministry_of_national_economy_idea_vel = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_ministry_of_national_economy_idea_vel"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_ministry_of_national_economy_idea_vel"}
 			picture = tur_etatism
 			name = BUL_ministry_of_national_economy_idea
 			modifier = {
@@ -978,9 +847,7 @@ ideas = {
 			}
 		}
 		BUL_ministry_of_national_economy_idea_zla = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_ministry_of_national_economy_idea_zla"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_ministry_of_national_economy_idea_zla"}
 			picture = man_five_year_plan_industry
 			name = BUL_ministry_of_national_economy_idea
 			modifier = {
@@ -989,18 +856,14 @@ ideas = {
 			}
 		}
 		BUL_general_directorate_of_renewal_idea = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_general_directorate_of_renewal_idea"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_general_directorate_of_renewal_idea"}
 			picture = bul_bulgarian_irredentism
 			modifier = {
 				training_time_army_factor = -0.1
 			}
 		}
 		BUL_general_directorate_of_renewal_idea_vel = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_general_directorate_of_renewal_idea_vel"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_general_directorate_of_renewal_idea_vel"}
 			name = BUL_general_directorate_of_renewal_idea
 			picture = bul_bulgarian_irredentism
 			modifier = {
@@ -1009,9 +872,7 @@ ideas = {
 			}
 		}
 		BUL_general_directorate_of_renewal_idea_zla = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_general_directorate_of_renewal_idea_zla"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_general_directorate_of_renewal_idea_zla"}
 			name = BUL_general_directorate_of_renewal_idea
 			picture = bul_bulgarian_irredentism
 			modifier = {
@@ -1020,9 +881,7 @@ ideas = {
 			}
 		}
 		BUL_general_directorate_of_renewal_idea_zla_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_general_directorate_of_renewal_idea_zla_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_general_directorate_of_renewal_idea_zla_2"}
 			name = BUL_general_directorate_of_renewal_idea
 			picture = bul_bulgarian_irredentism
 			modifier = {
@@ -1032,9 +891,7 @@ ideas = {
 			}
 		}
 		BUL_zveno_centralisation_idea = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_zveno_centralisation_idea"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_zveno_centralisation_idea"}
 			picture = bul_prussia_of_the_balkans
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
@@ -1042,9 +899,7 @@ ideas = {
 			}
 		}
 		BUL_yellow_unions_vel = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_yellow_unions_vel"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_yellow_unions_vel"}
 			name = BUL_yellow_unions
 			picture = HOL_banned_unions
 			modifier = {
@@ -1052,9 +907,7 @@ ideas = {
 			}
 		}
 		BUL_yellow_unions_zla = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_yellow_unions_zla"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_yellow_unions_zla"}
 			name = BUL_yellow_unions
 			picture = HOL_banned_unions
 			modifier = {
@@ -1063,9 +916,7 @@ ideas = {
 			}
 		}
 		BUL_zveno_corporatism = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_zveno_corporatism"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_zveno_corporatism"}
 			picture = IRE_heavy_industry
 			modifier = {
 				stability_factor = -0.15
@@ -1074,9 +925,7 @@ ideas = {
 			}
 		}
 		BUL_new_welded_state_vel = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_new_welded_state_vel"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_new_welded_state_vel"}
 			name = BUL_new_welded_state
 			picture = FRA_scw_intervention_nationalists_focus
 			modifier = {
@@ -1084,9 +933,7 @@ ideas = {
 			}
 		}
 		BUL_new_welded_state_vel_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_new_welded_state_vel_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_new_welded_state_vel_2"}
 			name = BUL_new_welded_state
 			picture = FRA_scw_intervention_nationalists_focus
 			modifier = {
@@ -1096,9 +943,7 @@ ideas = {
 			}
 		}
 		BUL_new_welded_state_zla = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_new_welded_state_zla"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_new_welded_state_zla"}
 			name = BUL_new_welded_state
 			picture = FRA_scw_intervention_nationalists_focus
 			modifier = {
@@ -1106,9 +951,7 @@ ideas = {
 			}
 		}
 		BUL_new_welded_state_zla_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_new_welded_state_zla_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_new_welded_state_zla_2"}
 			name = BUL_new_welded_state
 			picture = FRA_scw_intervention_nationalists_focus
 			modifier = {
@@ -1116,11 +959,10 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 		}
+
 		#Constitutionalist ideas
 		BUL_tarnovo_constitution_idea = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_tarnovo_constitution_idea"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_tarnovo_constitution_idea"}
 			picture = generic_constitutional_guarantees
 			modifier = {
 				political_power_factor = 0.15
@@ -1128,9 +970,7 @@ ideas = {
 			}
 		}
 		BUL_tarnovo_constitution_idea_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_tarnovo_constitution_idea_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_tarnovo_constitution_idea_2"}
 			name = BUL_tarnovo_constitution_idea
 			picture = generic_constitutional_guarantees
 			modifier = {
@@ -1138,9 +978,7 @@ ideas = {
 			}
 		}
 		BUL_agrarian_society_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_agrarian_society_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_agrarian_society_1"}
 			name = BUL_agrarian_society
 			picture = generic_agrarian_reform
 			modifier = {
@@ -1149,9 +987,7 @@ ideas = {
 			}
 		}
 		BUL_agrarian_society_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_agrarian_society_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_agrarian_society_2"}
 			name = BUL_agrarian_society
 			picture = generic_agrarian_reform
 			modifier = {
@@ -1162,9 +998,7 @@ ideas = {
 			}
 		}
 		BUL_economic_progress_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_economic_progress_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_economic_progress_1"}
 			name = BUL_economic_progress
 			picture = generic_economic_increase
 			modifier = {
@@ -1173,9 +1007,7 @@ ideas = {
 			}
 		}
 		BUL_economic_progress_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_economic_progress_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_economic_progress_2"}
 			name = BUL_economic_progress
 			picture = generic_economic_increase
 			modifier = {
@@ -1185,9 +1017,7 @@ ideas = {
 			}
 		}
 		BUL_economic_consolidation_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_economic_consolidation_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_economic_consolidation_1"}
 			name = BUL_economic_consolidation
 			picture = tur_etatism
 			modifier = {
@@ -1196,9 +1026,7 @@ ideas = {
 			}
 		}
 		BUL_economic_consolidation_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_economic_consolidation_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_economic_consolidation_2"}
 			name = BUL_economic_consolidation
 			picture = tur_etatism
 			modifier = {
@@ -1208,18 +1036,14 @@ ideas = {
 			}
 		}
 		BUL_liberal_nationalism = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_liberal_nationalism"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_liberal_nationalism"}
 			picture = generic_reserve_divisions
 			modifier = {
 				conscription = 0.02
 			}
 		}
 		BUL_territorial_autonomies = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_territorial_autonomies"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_territorial_autonomies"}
 			picture = bul_prussia_of_the_balkans
 			modifier = {
 				conscription_factor = -0.07
@@ -1228,9 +1052,7 @@ ideas = {
 			}
 		}
 		BUL_natper_autonomy = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_natper_autonomy"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_natper_autonomy"}
 			picture = prc_low_popular_support2
 			modifier = {
 				conscription_factor = -0.12
@@ -1240,20 +1062,17 @@ ideas = {
 			}
 		}
 		BUL_peace_with_muslims = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_peace_with_muslims"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_peace_with_muslims"}
 			picture = raj_marginalized_muslim_community_happy
 			modifier = {
 				stability_factor = 0.05
 				production_factory_max_efficiency_factor = 0.1
 			}
 		}
+
 		#Natpop ideas
 		BUL_royalist_resistance = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance"}
 			picture = ast_abandon_the_westminster_system
 			available = {
 				is_subject = no
@@ -1263,9 +1082,7 @@ ideas = {
 			}
 		}
 		BUL_legionary_revolution = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_revolution"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_revolution"}
 			picture = bul_ratniks
 			modifier = {
 				conscription = 0.02
@@ -1273,9 +1090,7 @@ ideas = {
 			}
 		}
 		BUL_legionary_revolution_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_revolution_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_revolution_2"}
 			picture = bul_ratniks
 			name = BUL_legionary_revolution
 			modifier = {
@@ -1285,9 +1100,7 @@ ideas = {
 			}
 		}
 		BUL_legionary_revolution_3 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_revolution_3"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_revolution_3"}
 			picture = bul_ratniks
 			name = BUL_legionary_revolution
 			modifier = {
@@ -1297,9 +1110,7 @@ ideas = {
 			}
 		}
 		BUL_legionary_economics = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics"}
 			picture = bul_nationalized_industry
 			modifier = {
 				production_speed_arms_factory_factor = 0.1
@@ -1307,9 +1118,7 @@ ideas = {
 			}
 		}
 		BUL_legionary_economics_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_2"}
 			picture = bul_nationalized_industry
 			name = BUL_legionary_economics
 			modifier = {
@@ -1319,9 +1128,7 @@ ideas = {
 			}
 		}
 		BUL_legionary_economics_3 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_legionary_economics_3"}
 			picture = bul_nationalized_industry
 			name = BUL_legionary_economics
 			modifier = {
@@ -1331,11 +1138,10 @@ ideas = {
 				resistance_target = -0.05
 			}
 		}
+
 		#FF ideas
 		BUL_royalist_resistance_worse = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance_worse"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance_worse" }
 			name = BUL_royalist_resistance_worse
 			picture = LIT_crown_1
 			available = {
@@ -1347,10 +1153,9 @@ ideas = {
 				consumer_goods_factor = 0.1
 			}
 		}
+
 		BUL_royalist_resistance_worse_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance_worse_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_royalist_resistance_worse_2" }
 			name = BUL_royalist_resistance_worse
 			picture = LIT_crown_1
 			modifier = {
@@ -1368,10 +1173,9 @@ ideas = {
 				}
 			}
 		}
+
 		BUL_socialist_offensive_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_socialist_offensive"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_socialist_offensive" }
 			name = BUL_socialist_offensive
 			picture = socialist_science_focus
 			modifier = {
@@ -1380,10 +1184,9 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
+
 		BUL_socialist_offensive_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_socialist_offensive_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_socialist_offensive_2" }
 			name = BUL_socialist_offensive
 			picture = socialist_science_focus
 			modifier = {
@@ -1397,10 +1200,9 @@ ideas = {
 				defensive_war_stability_factor = 0.2
 			}
 		}
+
 		BUL_socialist_offensive_3 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_socialist_offensive_3"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_socialist_offensive_3" }
 			name = BUL_socialist_offensive
 			picture = socialist_science_focus
 			modifier = {
@@ -1413,10 +1215,9 @@ ideas = {
 				defensive_war_stability_factor = 0.2
 			}
 		}
+
 		BUL_ds_established = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_ds_established"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_ds_established" }
 			picture = nkvd_2
 			modifier = {
 				resistance_damage_to_garrison = -0.2
@@ -1424,10 +1225,9 @@ ideas = {
 				encryption = 1
 			}
 		}
+
 		BUL_industrial_transformation_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_industrial_transformation"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_industrial_transformation" }
 			name = BUL_industrial_transformation
 			picture = man_five_year_plan_industry
 			modifier = {
@@ -1438,10 +1238,9 @@ ideas = {
 				industry = 0.1
 			}
 		}
+
 		BUL_industrial_transformation_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_industrial_transformation_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_industrial_transformation_2" }
 			name = BUL_industrial_transformation
 			picture = man_five_year_plan_industry
 			modifier = {
@@ -1455,10 +1254,9 @@ ideas = {
 				industry = 0.1
 			}
 		}
+
 		BUL_industrial_transformation_3 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_industrial_transformation_3"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_industrial_transformation_3" }
 			name = BUL_industrial_transformation
 			picture = eng_spirit_of_the_industrial_revolution
 			modifier = {
@@ -1472,10 +1270,9 @@ ideas = {
 				industry = 0.1
 			}
 		}
+
 		BUL_build_for_fatherland = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_build_for_fatherland"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_build_for_fatherland" }
 			picture = UK_economy_syn_idea
 			modifier = {
 				political_power_gain = -0.25
@@ -1489,20 +1286,18 @@ ideas = {
 				}
 			}
 		}
+
 		BUL_mass_housing = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_mass_housing"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_mass_housing" }
 			picture = generic_production_bonus
 			modifier = {
 				conscription_factor = 0.03
 				industrial_capacity_factory = 0.1
 			}
 		}
+
 		BUL_communard_revolution_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_communard_revolution_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_communard_revolution_1" }
 			name = BUL_communard_revolution
 			picture = generic_syndicalism_drift_bonus
 			modifier = {
@@ -1512,10 +1307,9 @@ ideas = {
 				totalist_drift = 0.05
 			}
 		}
+
 		BUL_communard_revolution_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_communard_revolution_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_communard_revolution_2" }
 			name = BUL_communard_revolution
 			picture = generic_syndicalist_medal
 			modifier = {
@@ -1528,10 +1322,9 @@ ideas = {
 				army_org_factor = -0.05
 			}
 		}
+
 		BUL_communard_revolution_3 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_communard_revolution_3"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_communard_revolution_3" }
 			name = BUL_communard_revolution
 			picture = generic_syndicalist_medal
 			modifier = {
@@ -1544,10 +1337,9 @@ ideas = {
 				conscription = 0.02
 			}
 		}
+
 		BUL_spirit_of_solidarity_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_spirit_of_solidarity_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_spirit_of_solidarity_1" }
 			name = BUL_spirit_of_solidarity
 			picture = UK_politics_syn_idea
 			modifier = {
@@ -1555,10 +1347,9 @@ ideas = {
 				industrial_capacity_factory = 0.1
 			}
 		}
+
 		BUL_spirit_of_solidarity_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_spirit_of_solidarity_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_spirit_of_solidarity_2" }
 			name = BUL_spirit_of_solidarity
 			picture = UK_politics_syn_idea
 			modifier = {
@@ -1567,10 +1358,9 @@ ideas = {
 				supply_consumption_factor = -0.1
 			}
 		}
+
 		BUL_bearing_the_torch = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_bearing_the_torch"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_bearing_the_torch" }
 			picture = FRA_communard_spirit
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
@@ -1578,10 +1368,9 @@ ideas = {
 				army_morale_factor = 0.05
 			}
 		}
+
 		BUL_consolidation_of_power_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_consolidation_of_power_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_consolidation_of_power_1" }
 			name = BUL_consolidation_of_power
 			picture = generic_intel_bonus
 			modifier = {
@@ -1589,10 +1378,9 @@ ideas = {
 				authoritarian_democrat_drift = 0.05
 			}
 		}
+
 		BUL_consolidation_of_power_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_consolidation_of_power_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_consolidation_of_power_2" }
 			name = BUL_consolidation_of_power
 			picture = generic_intel_bonus
 			modifier = {
@@ -1600,10 +1388,9 @@ ideas = {
 				compliance_growth_on_our_occupied_states = -0.25
 			}
 		}
+
 		BUL_peasant_state_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_peasant_state_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_peasant_state_1" }
 			name = BUL_peasant_state
 			picture = generic_agrarian_society
 			modifier = {
@@ -1612,10 +1399,9 @@ ideas = {
 				consumer_goods_factor = 0.02
 			}
 		}
+
 		BUL_peasant_state_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_peasant_state_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_peasant_state_2" }
 			name = BUL_peasant_state
 			picture = generic_agrarian_society
 			modifier = {
@@ -1625,10 +1411,9 @@ ideas = {
 				supply_consumption_factor = -0.05
 			}
 		}
+
 		BUL_peasant_state_3 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_peasant_state_3"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_peasant_state_3" }
 			name = BUL_peasant_state
 			picture = generic_agrarian_society
 			modifier = {
@@ -1639,45 +1424,41 @@ ideas = {
 				production_speed_infrastructure_factor = 0.15
 			}
 		}
+
 		BUL_fighting_for_motherland_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_fighting_for_motherland_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_fighting_for_motherland_1" }
 			name = BUL_fighting_for_motherland
 			picture = CAN_darkest_hour
 			modifier = {
 				army_core_attack_factor = 0.1
 			}
 		}
+
 		BUL_fighting_for_motherland_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_fighting_for_motherland_2"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_fighting_for_motherland_2" }
 			name = BUL_fighting_for_motherland
 			picture = CAN_darkest_hour
 			modifier = {
 				army_core_attack_factor = 0.1
-				training_time_factor = -0.2
+				training_time_factor = 	-0.2
 				conscription = 0.02
 			}
 		}
+
 		#Chetnik idea
 		CHT_uprising = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea CHT_uprising"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CHT_uprising"}
 			picture = LBA_Senussi_Order
 			modifier = {
 				conscription_factor = 0.1
-				army_core_defence_factor = 0.3
+				army_core_defence_factor = 0.30
 				army_morale_factor = 0.15
 			}
 		}
+
 		#Secret ideas
 		BUL_fourth_rome_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_fourth_rome_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_fourth_rome_1"}
 			name = BUL_fourth_rome
 			picture = gre_venerate_the_ancient_hellenes
 			modifier = {
@@ -1686,9 +1467,7 @@ ideas = {
 			}
 		}
 		BUL_fourth_rome_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_fourth_rome_1"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_fourth_rome_1"}
 			name = BUL_fourth_rome
 			picture = gre_venerate_the_ancient_hellenes
 			modifier = {
@@ -1698,9 +1477,7 @@ ideas = {
 			}
 		}
 		BUL_patriarchate_idea = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_patriarchate"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_patriarchate"}
 			picture = FRA_national_resistance_council
 			modifier = {
 				stability_weekly = 0.005
@@ -1708,35 +1485,28 @@ ideas = {
 			}
 		}
 		BUL_balkan_union_starting = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_balkan_union_starting"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_balkan_union_starting"}
 			name = BUL_balkan_union
 			modifier = {
+
 			}
 		}
 		BUL_balkan_union_investment = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_balkan_union_starting"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_balkan_union_starting"}
 			name = BUL_balkan_union
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
 			}
 		}
 		BUL_balkan_union_trade = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_balkan_union_starting"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_balkan_union_starting"}
 			name = BUL_balkan_union
 			modifier = {
 				trade_opinion_factor = 0.3
 			}
 		}
 		BUL_balkan_union_economic = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_balkan_union_starting"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_balkan_union_starting"}
 			name = BUL_balkan_union
 			modifier = {
 				consumer_goods_factor = -0.05
@@ -1744,24 +1514,18 @@ ideas = {
 			}
 		}
 		BUL_balkan_union_travel = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_balkan_union_starting"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_balkan_union_starting"}
 			name = BUL_balkan_union
 			modifier = {
 				research_speed_factor = 0.06
 			}
 		}
 		BUL_defender_of_balkans = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_defender_of_balkans"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_defender_of_balkans"}
 			picture = bul_bulgarian_irredentism
 			cancel = {
 				NOT = {
-					has_dynamic_modifier = {
-						modifier = BUL_balkan_union
-					}
+					has_dynamic_modifier = { modifier = BUL_balkan_union }
 				}
 			}
 			modifier = {
@@ -1770,16 +1534,12 @@ ideas = {
 			}
 		}
 		BUL_defender_of_balkans_oth = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_defender_of_balkans_oth"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_defender_of_balkans_oth"}
 			picture = advisors_bulgaria
 			cancel = {
 				OR = {
 					NOT = {
-						has_dynamic_modifier = {
-							modifier = BUL_balkan_union
-						}
+						has_dynamic_modifier = { modifier = BUL_balkan_union }
 					}
 					NOT = {
 						is_in_faction_with = BUL
@@ -1792,26 +1552,19 @@ ideas = {
 			}
 		}
 		BUL_balkans_peace = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_balkans_peace"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_balkans_peace"}
 			picture = generic_desertion
 			cancel = {
 				NOT = {
-					has_dynamic_modifier = {
-						modifier = BUL_balkan_union
-					}
+					has_dynamic_modifier = { modifier = BUL_balkan_union }
 				}
 			}
 			modifier = {
 				stability_factor = 0.2
 			}
 		}
-		BUL_OTT_Alliance_Balkan_War = {
-			#given to OTT at 4th Balkan war, allows them to send BUL extra volunteers
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_OTT_Alliance_Balkan_War"
-			}
+		BUL_OTT_Alliance_Balkan_War = { #given to OTT at 4th Balkan war, allows them to send BUL extra volunteers
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_OTT_Alliance_Balkan_War"}
 			picture = advisors_bulgaria
 			name = BUL_OTT_Aliiance
 			cancel = {
@@ -1821,36 +1574,30 @@ ideas = {
 				send_volunteer_size = 3
 			}
 		}
-		BUL_OTT_Alliance_Cairo_War = {
-			#given to BUL at start of OTT's war against the Cairo pact, allows them to send OTT extra volunteers
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_OTT_Alliance_Cairo_War"
-			}
+		BUL_OTT_Alliance_Cairo_War = { #given to BUL at start of OTT's war against the Cairo pact, allows them to send OTT extra volunteers
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_OTT_Alliance_Cairo_War"}
 			picture = advisors_ottoman
 			name = BUL_OTT_Aliiance
 			cancel = {
-				OTT_cairo_pact_defeated = yes				#will also get removed if OTT loses via CP.1
+				OTT_cairo_pact_defeated = yes #will also get removed if OTT loses via CP.1
 			}
 			modifier = {
 				send_volunteer_size = 3
 			}
 		}
+
 		#Old ideas
 		BUL_old_guard_training = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_old_guard_training"
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_old_guard_training"}
 			picture = UK_military_loyal_idea
 			modifier = {
 				experience_gain_army_factor = 0.15
 				training_time_army_factor = -0.15
-				army_core_defence_factor = 0.1
+				army_core_defence_factor = 0.10
 			}
 		}
-		BUL_secret_rearmament = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_secret_rearmament"
-			}
+		BUL_secret_rearmament_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BUL_secret_rearmament_idea"}
 			picture = HUN_secret_rearmament
 			research_bonus = {
 				infantry_weapons = 0.05
@@ -1863,9 +1610,7 @@ ideas = {
 			}
 		}
 		BUL_AUS_military_cooperation = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation"
-			}
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BUL_AUS_military_cooperation"}
 			picture = advisors_austria
 			available = {
 				is_in_faction_with = AUS
@@ -1879,21 +1624,18 @@ ideas = {
 			}
 		}
 	}
-	##############
-	# Companies
-	##############
-	#### General ####
+
+##############
+# Companies
+##############
+
+#### General ####
 	industrial_concern = {
+
 		su_kliment_ohridski = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea su_kliment_ohridski"
-			}
-			allowed = {
-				original_tag = BUL
-			}
-			traits = {
-				electronics_manufacturer
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea su_kliment_ohridski"}
+			allowed = { original_tag = BUL }
+			traits = { electronics_manufacturer }
 			modifier = {
 				production_speed_radar_station_factor = 0.1
 			}
@@ -1902,16 +1644,11 @@ ideas = {
 				industry = 0.1
 			}
 		}
+
 		petrol_ad = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea petrol_ad"
-			}
-			allowed = {
-				original_tag = BUL
-			}
-			traits = {
-				chemical_producer
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea petrol_ad"}
+			allowed = { original_tag = BUL }
+			traits = { chemical_producer }
 			modifier = {
 				production_speed_synthetic_refinery_factor = 0.1
 			}
@@ -1921,41 +1658,36 @@ ideas = {
 			}
 		}
 	}
-	#### Weapons Manufacturer ####
+
+#### Weapons Manufacturer ####
 	weapons_manufacturer = {
 		designer = yes
+
 		darzhavna_voenna_fabrika = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea darzhavna_voenna_fabrika"
-			}
-			allowed = {
-				original_tag = BUL
-			}
-			traits = {
-				infantry_equipment_producer_offense_1
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea darzhavna_voenna_fabrika"}
+			allowed = { original_tag = BUL }
+			traits = { infantry_equipment_producer_offense_1 }
 			research_bonus = {
 				infantry_weapons = 0.1
 			}
 		}
+
 		vmz_sopot = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea vmz_sopot"
-			}
-			allowed = {
-				original_tag = BUL
-			}
-			traits = {
-				artillery_producer_offense_1
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea vmz_sopot"}
+			allowed = { original_tag = BUL }
+			traits = { artillery_producer_offense_1 }
 			research_bonus = {
 				artillery = 0.1
 			}
 		}
+
 	}
-	#### Heavy Equipment Manufacturer ####
+
+#### Heavy Equipment Manufacturer ####
 	tank_manufacturer = {
 		designer = yes
+
+
 		bdz = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea bdz"
@@ -1971,36 +1703,30 @@ ideas = {
 			}
 		}
 	}
-	#### Air and Naval Manufacturer ####
+
+#### Air and Naval Manufacturer ####
 	aircraft_manufacturer = {
 		designer = yes
+
 		darzhavna_aeroplanna_rabotilnitsa = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea darzhavna_aeroplanna_rabotilnitsa"
-			}
-			allowed = {
-				original_tag = BUL
-			}
-			traits = {
-				fighter_producer_defense_1
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea darzhavna_aeroplanna_rabotilnitsa"}
+			allowed = { original_tag = BUL }
+			traits = { fighter_producer_defense_1 }
 			research_bonus = {
 				air_equipment = 0.1
 			}
 		}
+
 		kaproni_bulgarski = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea kaproni_bulgarski"
-			}
-			allowed = {
-				original_tag = BUL
-			}
-			traits = {
-				bomber_producer_offense_1
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kaproni_bulgarski"}
+			allowed = { original_tag = BUL }
+			traits = { bomber_producer_offense_1 }
 			research_bonus = {
 				air_equipment = 0.1
 			}
 		}
+
 	}
+
 }
+
