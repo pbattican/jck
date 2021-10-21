@@ -2968,7 +2968,6 @@ news_event = {
 		name = gerfla.3.a
 		hidden_effect = {
 			random_list = {
-				seed = random
 				50 = {
 					GER = {
 						news_event = {
