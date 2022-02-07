@@ -75,7 +75,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Sovereign_State"
 			custom_effect_tooltip = MAF_SovState
@@ -99,7 +99,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 70
 		}
-		cost = 5
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Proving_Grounds"
 			add_stability = -0.05
@@ -188,7 +188,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Establish_Lion_Society"
 			country_event = { id = mittel.68 days = 30 }
@@ -332,7 +332,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Vizekonig"
 			custom_effect_tooltip = MAF_autonomy_warning
@@ -373,7 +373,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 60
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_African_Landtag"
 			add_ideas = MAF_Landtag
@@ -453,7 +453,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 60
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Restore_British_Selfrule"
 			if = {
@@ -512,7 +512,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 70
 		}
-		cost = 5
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_African_Studies"
 			add_research_slot = 1
@@ -539,7 +539,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 60
 		}
-		cost = 10
+		cost = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Hold_Elections"
 			add_political_power = 150
@@ -571,7 +571,7 @@ focus_tree = {
 				has_country_flag = DKAEB_focuses
 			}
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Four_Year_Plan"
 			increase_ruling_party_popularity_by_5 = yes
@@ -643,7 +643,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -670,9 +670,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Sailing_With_Marine"
 			add_political_power = -40
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = MAF_Sailing_With_Marine
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
 			}
@@ -783,9 +783,9 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Army_Reforms"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = MAF_Army_Reforms
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -824,11 +824,11 @@ focus_tree = {
 				uses = 1
 				category = cat_strategic_bomber
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = MAF_Long_Range_Airforce
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
-				category = cat_strategic_destruction
+				category = air_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1190,13 +1190,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 70
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Back_To_Basics"
 			army_experience = 50
 			increase_ruling_party_popularity_by_5 = yes
 		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
 
 	focus = {
@@ -1221,11 +1221,10 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Royal_Tours"
-			#set_country_flag = MAF_Royal_Tours #seems to be only used in the old MTTH triggers for the event Chain, so I disabled it for now- if you find this caused an issue, re-enable it
 			country_event = { id = mittel.95 days = 30 }
 			hidden_effect = {
 				country_event = { id = mittel.96 days = 90 random_days = 270 }
-				country_event = { id = mittel.97 days = 182 random_days = 365  }
+				country_event = { id = mittel.97 days = 182 random_days = 365 }
 				GER = {
 					country_event = { id = mittel.98 days = 225 random_days = 450 }
 				}
@@ -1466,9 +1465,9 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_African_Army"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = MAF_African_Army
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -1631,13 +1630,9 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Konigsburg_Gunners"
-			create_corps_commander = {
-				name = "Richard Wenig"
-				picture = "Portrait_Mittelafrika_Richard_Wenig.png"
-				traits = {
-					trait_reckless
-					naval_invader
-				}
+			add_corps_commander_role = {
+				character = MAF_Richard_Wenig
+				traits = { trait_reckless naval_invader }
 				skill = 2
 				attack_skill = 3
 				defense_skill = 1
@@ -1964,26 +1959,26 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
-					infrastructure < 9
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
 					prefer_home_area_states_unless_filled_infrastructure = yes
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
-					infrastructure < 9
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
 					prefer_home_area_states_unless_filled_infrastructure = yes
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2356,7 +2351,7 @@ focus_tree = {
 		}
 
 		select_effect = {
-			log = "[GetDateText]: [Root.GetName]: Select Focus MAF_New_Administration"
+			log = "[GetDateText]: [Root.GetName]: Select Focus MAF_business"
 			leave_faction = yes
 			every_enemy_country = {
 				limit = {
@@ -2410,7 +2405,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Deal_With_Europeans"
 			add_stability = 0.05
@@ -2439,7 +2434,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Support_Anglos"
 			add_popularity = { ideology = market_liberal popularity = 0.05 }
@@ -2465,17 +2460,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Intergrate_Anglos"
 			add_popularity = { ideology = market_liberal popularity = 0.1 }
-			create_corps_commander = {
-				name = "Rea Leakey"
-				portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Rea_Leakey.png"
-				traits = {
-					trait_cautious
-					panzer_leader
-				}
+			add_corps_commander_role = {
+				character = MAF_Rea_Leakey
+				traits = { trait_cautious panzer_leader }
 				skill = 3
 				attack_skill = 2
 				defense_skill = 4
@@ -2510,7 +2501,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Canadian_Volunteers"
 			add_popularity = { ideology = market_liberal popularity = 0.05 }
@@ -2537,7 +2528,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Disarm_Anglos"
 			add_popularity = { ideology = market_liberal popularity = -0.05 }
@@ -2545,7 +2536,7 @@ focus_tree = {
 			add_manpower = -5000
 			army_experience = -5
 		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -2564,7 +2555,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Remove_Brit_Service"
 			add_popularity = { ideology = market_liberal popularity = -0.1 }
@@ -2589,7 +2580,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_German_Education_Brits"
 			add_popularity = { ideology = market_liberal popularity = -0.15 }
@@ -2617,7 +2608,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Deal_With_British"
 			remove_ideas = MAF_British_Settlers
@@ -2644,7 +2635,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Attract_Belgian_Investment"
 			add_popularity = { ideology = social_liberal popularity = 0.05 }
@@ -2670,7 +2661,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Grant_Cons_FW"
 			add_popularity = { ideology = social_liberal popularity = 0.1 }
@@ -2697,7 +2688,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Intergrate_FW"
 			add_popularity = { ideology = social_liberal popularity = 0.1 }
@@ -2719,7 +2710,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Block_FW_Investment"
 			add_popularity = { ideology = social_liberal popularity = -0.05 }
@@ -2741,7 +2732,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Seize_FW_Industries"
 			add_popularity = { ideology = social_liberal popularity = -0.1 }
@@ -2781,7 +2772,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Expel_Alien_Nationals"
 			add_popularity = { ideology = social_liberal popularity = -0.15 }
@@ -2808,7 +2799,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Deal_With_Belgians"
 			remove_ideas = MAF_Belgian_Investors
@@ -3028,7 +3019,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -3036,7 +3027,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3044,7 +3035,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3052,7 +3043,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3086,7 +3077,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -3094,7 +3085,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3136,7 +3127,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -3510,7 +3501,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Military_Reforms"
 			army_experience = 30
 		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
 
 	focus = {
@@ -3623,9 +3614,9 @@ focus_tree = {
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Modern_Tactics"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = MAF_Modern_Tactics
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -3960,9 +3951,9 @@ focus_tree = {
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_endurance_training"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = MAF_endurance_training
-				bonus = 2
+				cost_reduction = 0.75
 				uses = 1
 				category = air_doctrine
 			}
