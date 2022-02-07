@@ -12,7 +12,7 @@ NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
 
 --- Game ---
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 4 --12
-NDefines.NGame.GAME_SPEED_SECONDS = { 600, 600, 0.195, 0.15, 0.07 }
+NDefines.NGame.GAME_SPEED_SECONDS = { 600, 600, 0.195, 0.15, 0.0 }
 
 --- Military ---
 
