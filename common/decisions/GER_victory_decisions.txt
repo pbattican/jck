@@ -79,7 +79,7 @@ GER_victory_decisions = {
 		days_remove = 30
 		remove_effect = {
 			news_event = {
-				id = krw.victory.0
+				id = jck.victory.0
 				days = 1
 			}
 		}

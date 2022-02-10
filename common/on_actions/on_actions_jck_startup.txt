@@ -1,0 +1,67 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			GER = {
+				if = {
+					limit = {
+						LIT = {
+							is_ai = yes
+						}
+					}
+					annex_country = {
+						target = LIT
+						transfer_troops = yes
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							is_ai = yes
+						}
+					}
+					annex_country = {
+						target = POL
+						transfer_troops = yes
+					}
+				}
+				if = {
+					limit = {
+						BEL = {
+							is_ai = yes
+						}
+					}
+					annex_country = {
+						target = BEL
+						transfer_troops = yes
+					}
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_core_of = POL
+							is_core_of = BEL
+							is_core_of = LIT
+						}
+					}
+					add_resistance_target = {
+						amount = -50
+						occupier = GER
+					}
+				}
+			}
+			UKR = {
+				annex_country = {
+					target = WHR
+					transfer_troops = yes
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = WHR
+						has_resistance = yes
+					}
+					add_compliance = 50
+				}
+			}
+		}
+	}
+}

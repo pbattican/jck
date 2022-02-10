@@ -3,7 +3,6 @@
  AUS_join_Reichspakt:0 "Join the Reichspakt"
  AUS_join_RP_tech:0 "Join the Reichspakt Technology Group"
 
- CAN_exploit_resources:0 "Canada Special Decisions"
  CAN_remove_POR:0 "Remove Portugal from the Entente"
  CAN_remove_SRD:0 "Remove Sardinia from the Entente"
  CAN_integrate_icelands_defences:0 "Integrate Iceland and its defenses"
@@ -61,9 +60,9 @@
  KRW_ABILITY_FORCE_ATTACK_DESC:0 "Your armies will get a defensive bonus at the expense of some disadvantages.\n§BKRW Edit: Org. damage is now 0.75, instead of 1.0§"
 
  ### Welcome event
- krw.intro.0.t:0 "Welcome to Kaiserreich Weekly!"
- krw.intro.0.d:0 "\n\n\n\n\n\n\n\n\n\nWelcome and thank you for playing at Kaiserreich Weekly!"
- krw.intro.0.a:0 "Let's get started!"
+ jck.intro.0.t:0 "Welcome to Kaiserreich Weekly!"
+ jck.intro.0.d:0 "\n\n\n\n\n\n\n\n\n\nWelcome and thank you for playing at Kaiserreich Weekly!"
+ jck.intro.0.a:0 "Let's get started!"
 
  ### JCK 
  FRA_irredentism_idea:0 "French Irredentism"
@@ -81,9 +80,9 @@
  NFA_annex_SRD:0 "Annex Sardinia"
 
  ### Victory event
- krw.victory.0.t:0 "[ROOT.GetFactionName] Wins!"
- krw.victory.0.d:0 "The [ROOT.GetFactionName] has completed their objectives!"
- krw.victory.0.a:0 "GG! Well Played!"
+ jck.victory.0.t:0 "[ROOT.GetFactionName] Wins!"
+ jck.victory.0.d:0 "The [ROOT.GetFactionName] has completed their objectives!"
+ jck.victory.0.a:0 "GG! Well Played!"
 
 ### Victory Decisions
 CAN_victory_decisions:0 "Entente Victory"
