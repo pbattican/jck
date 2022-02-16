@@ -1,6 +1,6 @@
 ------------------------------------------ Game ------------------------------------------
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 --12
-NDefines.NGame.GAME_SPEED_SECONDS = { 2, 0.5, 0.195, 0.15, 0.75 }
+NDefines.NGame.GAME_SPEED_SECONDS = { 2, 0.5, 0.195, 0.15, 0.1 }
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 72
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 60
 
