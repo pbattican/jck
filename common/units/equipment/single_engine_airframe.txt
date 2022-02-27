@@ -368,6 +368,9 @@ equipments = {
 		priority = 10
 
 		is_convertable = yes
+		can_convert_from = {
+			fighter_equipment_0
+		}
 		air_range = 700
 		maximum_speed = 500
 		air_agility = 50
@@ -395,6 +398,11 @@ equipments = {
 		priority = 10
 
 		is_convertable = yes
+		can_convert_from = {
+			fighter_equipment_0
+			fighter_equipment_1
+		}
+
 		air_range = 1000
 		maximum_speed = 650
 		air_agility = 65
@@ -422,6 +430,12 @@ equipments = {
 		priority = 10
 
 		is_convertable = yes
+		can_convert_from = {
+			fighter_equipment_0
+			fighter_equipment_1
+			fighter_equipment_2
+		}
+
 		air_range = 1200
 		maximum_speed = 720
 		air_agility = 80
@@ -466,6 +480,10 @@ equipments = {
 		priority = 20
 
 		is_convertable = yes
+		can_convert_from = {
+			jet_fighter_equipment_1
+		}
+
 		air_range = 2200
 		maximum_speed = 1100
 		air_agility = 72
@@ -489,6 +507,10 @@ equipments = {
 		priority = 30
 
 		is_convertable = yes
+		can_convert_from = {
+			fighter_equipment_0
+		}
+
 		air_range = 456
 		maximum_speed = 297 #CV planes have less speed than their land based counterparts
 		air_agility = 45
@@ -510,6 +532,10 @@ equipments = {
 		priority = 30
 
 		is_convertable = yes
+		can_convert_from = {
+			cv_fighter_equipment_0
+		}
+
 		air_range = 560
 		maximum_speed =	450
 		air_agility = 50
@@ -536,6 +562,10 @@ equipments = {
 		priority = 30
 
 		is_convertable = yes
+		can_convert_from = {
+			cv_fighter_equipment_1
+		}
+
 		air_range = 800
 		maximum_speed =	585
 		air_agility = 65
@@ -545,7 +575,7 @@ equipments = {
 		build_cost_ic = 30.4 # cv_version costs 20% more of base archetype
 		resources = {
 			#oil = 2
-			aluminium = 2
+			aluminium = 3
 			rubber = 1
 		}
 		naval_strike_attack = 6
@@ -559,6 +589,12 @@ equipments = {
 		parent = cv_fighter_equipment_2
 		carrier_capable = yes
 		priority = 30
+
+		can_convert_from = {
+			cv_fighter_equipment_1
+			cv_fighter_equipment_2
+		}
+
 		air_range = 960
 		maximum_speed =	648
 		air_agility = 80
@@ -588,7 +624,7 @@ equipments = {
 		air_agility = 35
 		air_attack = 6
 		air_defence = 14
-		air_ground_attack = 10
+		air_ground_attack = 8
 
 		naval_strike_attack = 3
 		naval_strike_targetting = 10
@@ -605,6 +641,10 @@ equipments = {
 		priority = 40
 
 		is_convertable = yes
+		can_convert_from = {
+			CAS_equipment_1
+		}
+
 		air_range = 1000
 		maximum_speed = 450
 		air_agility = 39
@@ -632,6 +672,11 @@ equipments = {
 		priority = 40
 
 		is_convertable = yes
+		can_convert_from = {
+			CAS_equipment_1
+			CAS_equipment_2
+		}
+
 		air_range = 1200
 		maximum_speed = 550
 		air_agility = 44
@@ -680,6 +725,10 @@ equipments = {
 		priority = 50
 
 		is_convertable = yes
+		can_convert_from = {
+			cv_CAS_equipment_1
+		}
+
 		air_range = 640
 		maximum_speed =	405
 		air_agility = 39
@@ -707,6 +756,10 @@ equipments = {
 		priority = 50
 
 		is_convertable = yes
+		can_convert_from = {
+			cv_CAS_equipment_1
+			cv_CAS_equipment_2
+		}
 		air_range = 800
 		maximum_speed =	495
 		air_agility = 44
@@ -749,6 +802,10 @@ equipments = {
 		priority = 60
 
 		is_convertable = yes
+		can_convert_from = {
+			nav_bomber_equipment_1
+		}
+
 		air_range = 930
 		maximum_speed = 300
 		air_agility = 35
@@ -774,6 +831,11 @@ equipments = {
 		priority = 60
 
 		is_convertable = yes
+		can_convert_from = {
+			nav_bomber_equipment_1
+			nav_bomber_equipment_2
+		}
+
 		air_range = 1100
 		maximum_speed = 400
 		air_agility = 40
@@ -817,6 +879,10 @@ equipments = {
 		priority = 70
 
 		is_convertable = yes
+		can_convert_from = {
+			cv_nav_bomber_equipment_1
+		}
+
 		air_range = 744
 		maximum_speed =	270
 		air_agility = 35
@@ -841,6 +907,11 @@ equipments = {
 		priority = 70
 
 		is_convertable = yes
+		can_convert_from = {
+			cv_nav_bomber_equipment_1
+			cv_nav_bomber_equipment_2
+		}
+
 		air_range = 880
 		maximum_speed =	360
 		air_agility = 40
@@ -929,6 +1000,10 @@ equipments = {
 		priority = 80
 
 		is_convertable = yes
+		can_convert_from = {
+			rocket_interceptor_equipment_1
+		}
+
 		air_range = 300
 		maximum_speed = 1100
 		air_agility = 36
@@ -952,6 +1027,10 @@ equipments = {
 		priority = 80
 
 		is_convertable = yes
+		can_convert_from = {
+			rocket_interceptor_equipment_2
+		}
+
 		air_range = 500
 		maximum_speed = 1150
 		air_agility = 60
@@ -987,6 +1066,9 @@ equipments = {
 		manpower = 15
 
 		interface_category = interface_category_air
+
+		upgrades = {
+		}
 
 		build_cost_ic = 14
 		resources = {
