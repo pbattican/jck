@@ -50,11 +50,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 4
-				tag = ENG
-			}
 		}
 
 		categories = {
@@ -87,17 +82,9 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 4
-				OR = {
-					tag = ENG
-					tag = JAP
-				}
-			}
-			modifier = {
-				has_war = yes
 				factor = 2
+				has_war = yes
 			}
 		}
 
@@ -132,15 +119,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 4
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -169,15 +147,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 4
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -201,11 +170,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 8
-
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
 		}
 
 		categories = {
@@ -251,11 +215,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 4
-
-			modifier = {
-				factor = 2
-				has_war_with = GER
-			}
 			modifier = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
@@ -296,11 +255,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 4
-
-			modifier = {
-				factor = 2
-				has_war_with = GER
-			}
 			modifier = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
@@ -340,11 +294,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 2
-
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
 			modifier = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
@@ -381,11 +330,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 2
-
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
 			modifier = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
@@ -421,11 +365,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 2
-
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
 			modifier = {
 				factor = 2
 				anti_submarine_strategy_required_trigger = yes
@@ -562,15 +501,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 4
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -610,15 +540,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 4
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -652,15 +573,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-				factor = 4
-			}
 		}
 
 		categories = {
@@ -689,14 +601,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 2
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -728,15 +632,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 2
-
-			modifier = {
-				factor = 3.5
-				OR = {
-					tag = GER
-					tag = JAP
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -777,15 +672,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 3
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -826,15 +712,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 3
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -869,15 +746,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 3
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -928,22 +796,13 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 2
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
+				factor = 0
+				is_major = no
 			}
 			modifier = {
 				is_major = yes
 				factor = 2
-			}
-			modifier = {
-				is_major = no
-				factor = 0
 			}
 		}
 
@@ -981,22 +840,13 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 2
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
+				factor = 0
+				is_major = no
 			}
 			modifier = {
 				is_major = yes
 				factor = 2
-			}
-			modifier = {
-				is_major = no
-				factor = 0
 			}
 		}
 
@@ -1021,12 +871,7 @@ technologies = {
 		start_year = 1936
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 25
-				tag = JAP
-			}
+			factor = 0   # SHBB is banned for AI
 		}
 
 		categories = {
@@ -1060,15 +905,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 5
-				tag = USA
-			}
-			modifier = {
-				is_major = no
-				factor = 0
-			}
 		}
 
 		categories = {
@@ -1097,16 +933,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 5
-				tag = USA
-
-			}
-			modifier = {
-				is_major = no
-				factor = 0
-			}
 		}
 
 		categories = {
@@ -1146,15 +972,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 2
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -1191,17 +1008,9 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 4
-				OR = {
-					tag = ENG
-					tag = USA
-				}
-			}
-			modifier = {
-				has_tech = improved_ship_hull_heavy
 				factor = 2
+				has_tech = improved_ship_hull_heavy
 			}
 		}
 
@@ -1219,7 +1028,7 @@ technologies = {
 #  # #  # #  # #  #  #  #   #  #   #
  ##  #  # #  # #  # ### ### #  # ##
 
-early_ship_hull_carrier = {
+	early_ship_hull_carrier = {
 
 		enable_equipments = {
 			ship_hull_carrier_conversion_bb
@@ -1248,15 +1057,6 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -1289,15 +1089,6 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -1330,15 +1121,6 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -1366,15 +1148,6 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 8
-				OR = {
-					tag = ENG
-					tag = JAP
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -1426,22 +1199,15 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 2
 			modifier = {
-				OR = {
-					tag = JAP
-					tag = USA
-					tag = GER
-				}
-				factor = 5
-			}
-			modifier = {
-				has_war = yes
 				factor = 3
+				has_war = yes
 			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_torpedo
 		}
 	}
 
@@ -1486,27 +1252,12 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 2
-			modifier = {
-				OR = {
-					tag = JAP
-					tag = USA
-					tag = GER
-				}
-				factor = 5
-			}
-			modifier = {
-				has_war = yes
-				factor = 3
-			}
-			modifier = {
-				tag = JAP #Japan wants torpedoes EXTRA HARD
-				factor = 2
-			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_torpedo
 		}
 	}
 
@@ -1538,22 +1289,15 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 2
 			modifier = {
-				OR = {
-					tag = JAP
-					tag = USA
-					tag = GER
-				}
-				factor = 5
-			}
-			modifier = {
-				has_war = yes
 				factor = 3
+				has_war = yes
 			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_torpedo
 		}
 	}
 
@@ -1577,19 +1321,12 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 2
-			modifier = {
-				OR = {
-					tag = JAP
-					tag = USA
-					tag = GER
-				}
-				factor = 5
-			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_torpedo
 		}
 	}
 	improved_ship_torpedo_launcher = {
@@ -1621,15 +1358,12 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 2
-			modifier = {
-				tag = JAP
-				factor = 5
-			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_torpedo
 		}
 	}
 	advanced_ship_torpedo_launcher = {
@@ -1660,15 +1394,12 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 2
-			modifier = {
-				tag = JAP
-				factor = 5
-			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_torpedo
 		}
 	}
 	modern_ship_torpedo_launcher = {
@@ -1693,15 +1424,12 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 2
-			modifier = {
-				tag = JAP
-				factor = 5
-			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_torpedo
 		}
 	}
 
@@ -1732,14 +1460,6 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -1777,14 +1497,6 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -1824,14 +1536,6 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -1861,14 +1565,6 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = USA
-				}
-			}
 		}
 
 		categories = {
@@ -1900,21 +1596,6 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = HOL
-				}
-			}
-			modifier = {
-				not = {
-					has_war_with = ENG
-					has_War_with = USA
-				}
-				factor = 0.5
-			}
 		}
 
 		categories = {
@@ -1952,14 +1633,6 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 7
-				OR = {
-					tag = GER
-					tag = HOL
-				}
-			}
 		}
 
 		categories = {
@@ -2019,18 +1692,19 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				factor = 500
 				OR = {
 					has_tech = early_ship_hull_light
 					has_tech = early_ship_hull_cruiser
 					has_tech = early_ship_hull_heavy
 				}
-				factor = 500
 			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 
@@ -2068,14 +1742,15 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_tech = basic_ship_hull_light
 				factor = 20
+				has_tech = basic_ship_hull_light
 			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 	improved_light_battery = {
@@ -2107,14 +1782,15 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_tech = improved_ship_hull_light
 				factor = 20
+				has_tech = improved_ship_hull_light
 			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 	advanced_light_battery = {
@@ -2140,14 +1816,15 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_tech = advanced_ship_hull_light
 				factor = 20
+				has_tech = advanced_ship_hull_light
 			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 
@@ -2198,14 +1875,15 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_war = yes
 				factor = 10
+				has_war = yes
 			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 	improved_light_shell = {
@@ -2250,14 +1928,15 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_war = yes
 				factor = 10
+				has_war = yes
 			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 
@@ -2296,14 +1975,15 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_tech = improved_ship_hull_cruiser
 				factor = 5
+				has_tech = improved_ship_hull_cruiser
 			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 	improved_medium_battery = {
@@ -2334,14 +2014,15 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_tech = advanced_ship_hull_cruiser
 				factor = 5
+				has_tech = advanced_ship_hull_cruiser
 			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 	advanced_medium_battery = {
@@ -2371,6 +2052,7 @@ early_ship_hull_carrier = {
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 	basic_medium_shell = {
@@ -2404,13 +2086,14 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_war = yes
 				factor = 7
+				has_war = yes
 			}
 		}
 
 		categories = {
 			naval_equipment
+			cat_gunnery
 		}
 	}
 	improved_medium_shell = {
@@ -2441,13 +2124,14 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_war = yes
 				factor = 7
+				has_war = yes
 			}
 		}
 
 		categories = {
 			naval_equipment
+			cat_gunnery
 		}
 	}
 
@@ -2484,21 +2168,15 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				has_tech = basic_ship_hull_heavy
 				factor = 20
-			}
-			modifier = {
-				OR = {
-					tag = GER
-					tag = JAP
-				}
-				factor = 2
+				has_tech = basic_ship_hull_heavy
 			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 	improved_heavy_battery = {
@@ -2526,23 +2204,13 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_tech = improved_ship_hull_heavy
-				factor = 20
-			}
-			modifier = {
-				OR = {
-					tag = GER
-					tag = JAP
-				}
-				factor = 2
-			}
+			factor = 0 	# Disabled for AI. Enable when improved/advanced heavy guns stop crippling ship speed or they are buffed
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 	advanced_heavy_battery = {
@@ -2565,23 +2233,13 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_tech = advanced_ship_hull_heavy
-				factor = 20
-			}
-			modifier = {
-				OR = {
-					tag = GER
-					tag = JAP
-				}
-				factor = 2
-			}
+			factor = 0
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 	basic_heavy_shell = {
@@ -2615,15 +2273,16 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				factor = 5
 				is_major = yes
 				has_war = yes
-				factor = 5
 			}
 
 		}
 
 		categories = {
 			naval_equipment
+			cat_gunnery
 		}
 	}
 	improved_heavy_shell = {
@@ -2653,14 +2312,15 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				factor = 5
 				is_major = yes
 				has_war = yes
-				factor = 5
 			}
 		}
 
 		categories = {
 			naval_equipment
+			cat_gunnery
 		}
 	}
 
@@ -2691,17 +2351,18 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				factor = 5
 				OR = {
 					has_tech = early_ship_hull_cruiser
 					has_tech = early_ship_hull_heavy
 				}
-				factor = 5
 			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 	improved_secondary_battery = {
@@ -2731,17 +2392,18 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				factor = 5
 				OR = {
 					has_tech = basic_ship_hull_cruiser
 					has_tech = basic_ship_hull_heavy
 				}
-				factor = 5
 			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 	dp_secondary_battery = {
@@ -2766,19 +2428,12 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 2
-			modifier = {
-				OR = {
-					tag = ENG
-					tag = USA
-					tag = JAP
-				}
-				factor = 20
-			}
 		}
 
 		categories = {
 			naval_equipment
 			ship_modules_tech
+			cat_gunnery
 		}
 	}
 
@@ -2809,17 +2464,8 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
-				is_historical_focus_on = yes
-				tag = JAP
-				factor = 0.25
-			}
-			modifier = {
-				tag = USA
-				factor = 3
-			}
-			modifier = {
-				has_war = yes
 				factor = 2
+				has_war = yes
 			}
 		}
 
@@ -2849,17 +2495,8 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
-				is_historical_focus_on = yes
-				tag = JAP
-				factor = 0.25
-			}
-			modifier = {
-				tag = USA
-				factor = 3
-			}
-			modifier = {
-				has_war = yes
 				factor = 2
+				has_war = yes
 			}
 		}
 
@@ -2885,17 +2522,8 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
-				is_historical_focus_on = yes
-				tag = JAP
-				factor = 0.25
-			}
-			modifier = {
-				tag = USA
-				factor = 3
-			}
-			modifier = {
-				has_war = yes
 				factor = 2
+				has_war = yes
 			}
 		}
 
@@ -2939,12 +2567,8 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
-				has_war = yes
 				factor = 2
-			}
-			modifier = {
-				tag = JAP
-				factor = 5
+				has_war = yes
 			}
 		}
 
@@ -2984,12 +2608,8 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
-				has_war = yes
 				factor = 2
-			}
-			modifier = {
-				tag = JAP
-				factor = 5
+				has_war = yes
 			}
 		}
 
@@ -3033,12 +2653,8 @@ early_ship_hull_carrier = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
-				has_war = yes
 				factor = 2
-			}
-			modifier = {
-				tag = JAP
-				factor = 5
+				has_war = yes
 			}
 		}
 
@@ -3089,24 +2705,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 6
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-			modifier = {
-				is_major = no
-				factor = 2
-			}
+			factor = 0	# Mines are banned for AI - both performance reason and AI using minelayers/minesweepers as screens
 		}
 
 		categories = {
@@ -3137,16 +2736,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 6
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -3173,16 +2763,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1.5
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 6
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -3218,24 +2799,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 6
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-			modifier = {
-				is_major = no
-				factor = 2
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -3259,16 +2823,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-					tag = SOV
-				}
-				factor = 5
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -3301,14 +2856,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = USA
-					tag = ENG
-				}
-				factor = 5
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -3340,15 +2888,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					tag = GER
-					tag = USA
-					tag = ENG
-				}
-				factor = 7
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -3376,11 +2916,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				tag = USA
-				factor = 3
-			}
+			factor = 0
 		}
 
 		categories = {
@@ -3410,7 +2946,7 @@ early_ship_hull_carrier = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 
 		categories = {
@@ -3420,7 +2956,7 @@ early_ship_hull_carrier = {
 		}
 	}
 
-	mtg_transport = { #WHEN BALANCING - ALSO FIX REGULAR NAVAL TREE
+	mtg_transport = {#WHEN BALANCING - ALSO FIX REGULAR NAVAL TREE
 
 		transport_capacity = -0.5
 		naval_invasion_capacity = 10
@@ -3440,29 +2976,44 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 0.5
-				has_war = no
+				factor = 1.5
+				date > 1937.1.1
 			}
-
+			modifier = {
+				factor = 1.5
+				date > 1938.1.1
+			}
 			modifier = {
 				factor = 2
-				tag = USA
+				date > 1939.1.1
 			}
 			modifier = {
-				has_war_with = JAP
-				factor = 2
+				factor = 20
+				tag = ENT
+				OR = {
+					NOT = { country_exists = GBR }
+					country_exists = FRA
+				}
 			}
-
 			modifier = {
 				factor = 3
-				tag = JAP
+				tag = CAN
+				has_war_with = ENG
 			}
-
 			modifier = {
-				factor = 2
-				tag = ENG
+				factor = 3
+				tag = NFA
+				has_war_with = FRA
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = JAP
+					tag = GBR
+					tag = ENG
+					tag = SRD
+				}
 			}
 		}
 
@@ -3499,48 +3050,44 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
-				factor = 0.5
-				has_war = no
+				factor = 1.5
+				date > 1937.1.1
 			}
-
+			modifier = {
+				factor = 1.5
+				date > 1938.1.1
+			}
 			modifier = {
 				factor = 2
-				tag = USA
+				date > 1939.1.1
 			}
 			modifier = {
-				has_war_with = JAP
-				factor = 2
-			}
-			modifier = {
-				factor = 50
-				tag = JAP
+				factor = 20
+				tag = ENT
 				OR = {
-					has_war_with = USA
-					CHI = {
-						OR = {
-							has_capitulated = yes
-							exists = no
-		                    is_subject_of = JAP
-						}
-					}
+					NOT = { country_exists = GBR }
+					country_exists = FRA
 				}
 			}
-
 			modifier = {
-				factor = 2
-				tag = ENG
+				factor = 3
+				tag = CAN
+				has_war_with = ENG
 			}
-
+			modifier = {
+				factor = 3
+				tag = NFA
+				has_war_with = FRA
+			}
 			modifier = {
 				factor = 10
 				OR = {
+					tag = JAP
+					tag = GBR
 					tag = ENG
-					tag = USA
+					tag = SRD
 				}
-				has_war_with = GER
-				GER = { has_war_with = SOV }
 			}
 		}
 
@@ -3565,28 +3112,44 @@ early_ship_hull_carrier = {
 
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
-				factor = 0.5
-				has_war = no
+				factor = 1.5
+				date > 1937.1.1
 			}
-
 			modifier = {
-				factor = 2
-				tag = USA
+				factor = 1.5
+				date > 1938.1.1
 			}
 			modifier = {
 				factor = 2
-				has_war_with = JAP
+				date > 1939.1.1
+			}
+			modifier = {
+				factor = 20
+				tag = ENT
+				OR = {
+					NOT = { country_exists = GBR }
+					country_exists = FRA
+				}
 			}
 			modifier = {
 				factor = 3
-				tag = JAP
+				tag = CAN
+				has_war_with = ENG
 			}
-
 			modifier = {
-				factor = 2
-				tag = ENG
+				factor = 3
+				tag = NFA
+				has_war_with = FRA
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					tag = JAP
+					tag = GBR
+					tag = ENG
+					tag = SRD
+				}
 			}
 		}
 
