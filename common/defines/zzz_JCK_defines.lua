@@ -1,7 +1,7 @@
 ------------------------------------------ Game ------------------------------------------
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 --12
 NDefines.NGame.GAME_SPEED_SECONDS = { 2, 0.5, 0.195, 0.15, 0.1 }
-NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 72
+NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 60
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 60
 
 ------------------------------------------ Graphics ------------------------------------------
@@ -32,10 +32,13 @@ NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 1000
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 1000
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 1000
 -- Reduce Div XP cost for NSB
-NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 12 -- vanilla = 20
-NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 3 -- vanilla = 5
-NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 6 -- vanilla = 10
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 8 -- vanilla = 20
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 2 -- vanilla = 5
+NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 4 -- vanilla = 10
 NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false -- allows leaders to grind without malus if they gain traits
+
+NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.02, 0.15, 0.225, 0.35, 0.5, 0.7, 0.925, 1.15 } --vanilla={0.1, 0.3, 0.75, 0.9}
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.107 --vanilla=0.25
 
 ------------------------------------------ Air ------------------------------------------
 NDefines.NAir.AIR_WING_MAX_SIZE = 1600 --- convenience so you can split wings down to 200 easily
@@ -79,9 +82,10 @@ NDefines.NNavy.RESOURCE_LENDLEASE_PRIORITY = 5  -- vanilla = 3; Default convoy p
 
 ------------------------------------------ Country ------------------------------------------
 NDefines.NCountry.MAX_HEROES_BEING_KILLED_WAR_SUPPORT_IMPACT = -0.4
-NDefines.NCountry.INTERPOLATED_FRONT_STEPS_SHORT = 1    -- Performance optimization - The amount of steps for interpolated fronts. Non-AI countries got full interpolated fronts, the rest has optimized version of it.
-NDefines.NCountry.EVENT_PROCESS_OFFSET = 40
+NDefines.NCountry.INTERPOLATED_FRONT_STEPS_SHORT = 1    -- supposedly a performance optimization - The amount of steps for interpolated fronts. Non-AI countries got full interpolated fronts, the rest has optimized version of it.
+NDefines.NCountry.EVENT_PROCESS_OFFSET = 40 -- supposedly a performance optimization - vanilla = 20
 NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.00007	    -- vanilla = 0.0005
+NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 40	--vanilla=24
 
 ------------------------------------------ Focus ------------------------------------------
 -- Slightly easier to macro and not waste focus points
