@@ -91,3 +91,6 @@ NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0;
 
 ------------------------------------------ Resistance ------------------------------------------
 NDefines.NResistance.GARRISON_LOG_MAX_MONTHS = 1
+
+------------------------------------------ Building ------------------------------------------
+NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.125						-- Vanilla is 0.2
