@@ -16,6 +16,9 @@ NDefines.NDiplomacy.MP_NUM_LOSERS_FOR_PEACE_PAUSE = 0
 
 ------------------------------------------ Production ------------------------------------------
 NDefines.NProduction.EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.005 	--vanilla = 0.01
+NDefines.NProduction.LICENSE_EQUIPMENT_TECH_SPEED_PER_YEAR = 0	--vanilla=-0.05
+NDefines.NProduction.LICENSE_EQUIPMENT_SPEED_NOT_FACTION = 0	--vanilla=-0.1
+NDefines.NProduction.LICENSE_EQUIPMENT_UPGRADE_XP_FACTOR = 1	--vanilla=2
 
 ------------------------------------------ Military ------------------------------------------
 NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 3.5 -- More XP gain per day of combat. Base is 3
