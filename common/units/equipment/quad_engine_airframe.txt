@@ -37,7 +37,8 @@ equipments = {
 
 		#Space taken in convoy
 		lend_lease_cost = 12
-		build_cost_ic = 70
+
+		build_cost_ic = 60
 		resources = {
 			#oil = 1
 			aluminium = 3
@@ -82,7 +83,8 @@ equipments = {
 		# Air vs Navy - high damage / low hit chance / hard to hurt
 		naval_strike_attack = 1.5
 		naval_strike_targetting = 0.6
-		build_cost_ic = 90
+
+		build_cost_ic = 80
 		resources = {
 			aluminium = 3
 			tungsten = 3
@@ -102,11 +104,9 @@ equipments = {
 		priority = 140
 
 		air_range = 2500
-		#maximum_speed = 400
-		maximum_speed = 300
+		maximum_speed = 400
 		air_agility = 5
-		#air_attack = 50
-		air_attack = 40
+		air_attack = 50
 		air_defence = 25
 		air_bombing = 30
 
@@ -123,20 +123,18 @@ equipments = {
 		priority = 140
 
 		is_convertable = yes
-		#can_convert_from = {
-		#strat_bomber_equipment_1
-		#}
-		#air_range = 3500
-		air_range = 3250
-		#maximum_speed = 450
-		maximum_speed = 375
+		can_convert_from = {
+			strat_bomber_equipment_1
+		}
+
+		air_range = 3500
+		maximum_speed = 450
 		air_agility = 7
-		#air_attack = 100
-		air_attack = 55
+		air_attack = 100
 		air_defence = 35
-		#air_bombing = 45
-		air_bombing = 35
-		build_cost_ic = 75
+		air_bombing = 45
+
+		build_cost_ic = 62
 		resources = {
 			#oil = 1
 			aluminium = 4
@@ -153,23 +151,19 @@ equipments = {
 		priority = 140
 
 		is_convertable = yes
-		#can_convert_from = {
-		#strat_bomber_equipment_1
-		#strat_bomber_equipment_2
-		#}
-		# air_range = 5000
-		# maximum_speed = 500
-		# air_agility = 10
-		# air_attack = 150
-		# air_defence = 50
-		# air_bombing = 60
-		air_range = 4000
-		maximum_speed = 450
+		can_convert_from = {
+			strat_bomber_equipment_1
+			strat_bomber_equipment_2
+		}
+
+		air_range = 5000
+		maximum_speed = 500
 		air_agility = 10
-		air_attack = 70
+		air_attack = 150
 		air_defence = 50
-		air_bombing = 42
-		build_cost_ic = 82
+		air_bombing = 60
+
+		build_cost_ic = 64
 		resources = {
 			#oil = 1
 			aluminium = 5

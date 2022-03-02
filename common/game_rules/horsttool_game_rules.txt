@@ -1,0 +1,82 @@
+#### Host Tool rules - from Lennard
+
+horst_host_country = {
+	name = "Select Host"
+	group = "Host Rules"
+	icon = "GFX_volunteers"
+	default = {
+		name = GER
+		text = "Germany"
+		desc = ""
+	}
+	option = {
+		name = ITA
+		text = "Italy"
+		desc = ""
+	}
+	option = {
+		name = ROM
+		text = "Romania"
+		desc = ""
+	}
+	option = {
+		name = HUN
+		text = "Hungary"
+		desc = ""
+	}
+	option = {
+		name = BUL
+		text = "Bulgaria"
+		desc = ""
+	}
+	option = {
+		name = FIN
+		text = "Finland"
+		desc = ""
+	}
+	option = {
+		name = ENG
+		text = "Great Britain"
+		desc = ""
+	}
+	option = {
+		name = USA
+		text = "USA"
+		desc = ""
+	}
+	option = {
+		name = CAN
+		text = "Canada"
+		desc = ""
+	}
+	option = {
+		name = SAF
+		text = "South Africa"
+		desc = ""
+	}
+	option = {
+		name = AST
+		text = "Australia"
+		desc = ""
+	}
+	option = {
+		name = JAP
+		text = "Japan"
+		desc = ""
+	}
+	option = {
+		name = FRA
+		text = "France"
+		desc = ""
+	}
+	option = {
+		name = BRA
+		text = "Brazil"
+		desc = ""
+	}
+	option = {
+		name = MEX
+		text = "Mexico"
+		desc = ""
+	}
+}

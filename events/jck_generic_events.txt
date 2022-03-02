@@ -1,0 +1,15 @@
+add_namespace = jck.victory
+news_event = {
+	id = jck.victory.0
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event jck.victory.0"
+	}
+	title = jck.victory.0.t
+	desc = jck.victory.0.d
+	picture = GFX_idea_OTT_Horrors_of_the_Weltkrieg
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = jck.victory.0.a
+	}
+}

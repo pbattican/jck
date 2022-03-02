@@ -76,7 +76,7 @@ FRA_victory_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision FRA_third_int_victory"
 			news_event = {
-				id = krw.victory.0
+				id = jck.victory.0
 				days = 1
 			}
 		}

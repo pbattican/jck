@@ -1,0 +1,12 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_advanced_sonar_medium"
+		texturefile = "gfx/interface/technologies/advanced_sonar.png"
+	}
+
+	spriteType = {
+		name = "GFX_SMI_ship_sonar_3"
+		textureFile = "gfx/interface/equipmentdesigner/naval/modules/icons/sonar_icn_3.png"
+	}
+}
+	

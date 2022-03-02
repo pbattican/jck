@@ -4,7 +4,7 @@
 ###########################
 
 focus_tree = {
-	id = mittleafrikan_focus
+	id = mittelafrikan_focus
 
 	country = {
 		factor = 0
@@ -18,18 +18,24 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 900 }
 
-	##########################
-	### New Administration ###
-	##########################
+##########################
+### New Administration ###
+##########################
 
 	focus = {
 		id = MAF_New_Administration
 		icon = GFX_goal_generic_parliament2
 		allow_branch = {
-			NOT = { tag = GEX }
+			NOT = {
+				tag = GEX
+				tag = SWA
+			}
 		}
 		available = {
-			NOT = { tag = GEX }
+			NOT = {
+				tag = GEX
+				tag = SWA
+			}
 		}
 		x = 15
 		y = 0
@@ -75,7 +81,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Sovereign_State"
 			custom_effect_tooltip = MAF_SovState
@@ -99,7 +105,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 70
 		}
-		cost = 5
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Proving_Grounds"
 			add_stability = -0.05
@@ -188,7 +194,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Establish_Lion_Society"
 			country_event = { id = mittel.68 days = 30 }
@@ -332,7 +338,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Vizekonig"
 			custom_effect_tooltip = MAF_autonomy_warning
@@ -373,7 +379,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 60
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_African_Landtag"
 			add_ideas = MAF_Landtag
@@ -453,7 +459,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 60
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Restore_British_Selfrule"
 			if = {
@@ -512,7 +518,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 70
 		}
-		cost = 5
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_African_Studies"
 			add_research_slot = 1
@@ -539,7 +545,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 60
 		}
-		cost = 10
+		cost = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Hold_Elections"
 			add_political_power = 150
@@ -571,7 +577,7 @@ focus_tree = {
 				has_country_flag = DKAEB_focuses
 			}
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Four_Year_Plan"
 			increase_ruling_party_popularity_by_5 = yes
@@ -643,7 +649,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -670,9 +676,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Sailing_With_Marine"
 			add_political_power = -40
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = MAF_Sailing_With_Marine
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
 			}
@@ -783,9 +789,9 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Army_Reforms"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = MAF_Army_Reforms
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -824,11 +830,11 @@ focus_tree = {
 				uses = 1
 				category = cat_strategic_bomber
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = MAF_Long_Range_Airforce
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
-				category = cat_strategic_destruction
+				category = air_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1117,7 +1123,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Protect_Animals
-		icon = GFX_goal_MAF_elephant
+		icon = GFX_goal_MAF_protect_endangered_species
 		available = {
 			OR = {
 				has_government = paternal_autocrat
@@ -1173,7 +1179,7 @@ focus_tree = {
 
 	focus = {
 		id = MAF_Back_To_Basics
-		icon = GFX_goal_ideology_authoritarian_democrat
+		icon = GFX_goal_MAF_basics
 		available = {
 			NOT = {
 				has_government = paternal_autocrat
@@ -1190,13 +1196,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 70
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Back_To_Basics"
 			army_experience = 50
 			increase_ruling_party_popularity_by_5 = yes
 		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
 
 	focus = {
@@ -1221,11 +1227,10 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Royal_Tours"
-			#set_country_flag = MAF_Royal_Tours #seems to be only used in the old MTTH triggers for the event Chain, so I disabled it for now- if you find this caused an issue, re-enable it
 			country_event = { id = mittel.95 days = 30 }
 			hidden_effect = {
 				country_event = { id = mittel.96 days = 90 random_days = 270 }
-				country_event = { id = mittel.97 days = 182 random_days = 365  }
+				country_event = { id = mittel.97 days = 182 random_days = 365 }
 				GER = {
 					country_event = { id = mittel.98 days = 225 random_days = 450 }
 				}
@@ -1466,9 +1471,9 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_African_Army"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = MAF_African_Army
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -1631,13 +1636,9 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Konigsburg_Gunners"
-			create_corps_commander = {
-				name = "Richard Wenig"
-				picture = "Portrait_Mittelafrika_Richard_Wenig.png"
-				traits = {
-					trait_reckless
-					naval_invader
-				}
+			add_corps_commander_role = {
+				character = MAF_Richard_Wenig
+				traits = { trait_reckless naval_invader }
 				skill = 2
 				attack_skill = 3
 				defense_skill = 1
@@ -1753,9 +1754,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
 	}
 
-	########################
-	### Germany in Exile ###
-	########################
+########################
+### Germany in Exile ###
+########################
 
 	focus = {
 		id = MAF_darkest_hour
@@ -1964,26 +1965,26 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
-					infrastructure < 9
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
 					prefer_home_area_states_unless_filled_infrastructure = yes
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
-					infrastructure < 9
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
 					prefer_home_area_states_unless_filled_infrastructure = yes
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2356,7 +2357,7 @@ focus_tree = {
 		}
 
 		select_effect = {
-			log = "[GetDateText]: [Root.GetName]: Select Focus MAF_New_Administration"
+			log = "[GetDateText]: [Root.GetName]: Select Focus MAF_business"
 			leave_faction = yes
 			every_enemy_country = {
 				limit = {
@@ -2394,15 +2395,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
-	###############################
-	### Deal with the Europeans ###
-	###############################
+###############################
+### Deal with the Europeans ###
+###############################
 
 	focus = {
 		id = MAF_Deal_With_Europeans
 		icon = GFX_goal_generic_dangerous_deal
 		x = 32
 		y = 1
+
+		allow_branch = { NOT = { tag = SWA } }
+
 		offset = {
 			x = -12
 			trigger = { tag = GEX }
@@ -2410,7 +2414,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Deal_With_Europeans"
 			add_stability = 0.05
@@ -2439,7 +2443,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Support_Anglos"
 			add_popularity = { ideology = market_liberal popularity = 0.05 }
@@ -2465,17 +2469,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Intergrate_Anglos"
 			add_popularity = { ideology = market_liberal popularity = 0.1 }
-			create_corps_commander = {
-				name = "Rea Leakey"
-				portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Rea_Leakey.png"
-				traits = {
-					trait_cautious
-					panzer_leader
-				}
+			add_corps_commander_role = {
+				character = MAF_Rea_Leakey
+				traits = { trait_cautious panzer_leader }
 				skill = 3
 				attack_skill = 2
 				defense_skill = 4
@@ -2510,7 +2510,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Canadian_Volunteers"
 			add_popularity = { ideology = market_liberal popularity = 0.05 }
@@ -2537,7 +2537,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Disarm_Anglos"
 			add_popularity = { ideology = market_liberal popularity = -0.05 }
@@ -2545,7 +2545,7 @@ focus_tree = {
 			add_manpower = -5000
 			army_experience = -5
 		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 	}
 
 	focus = {
@@ -2564,7 +2564,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Remove_Brit_Service"
 			add_popularity = { ideology = market_liberal popularity = -0.1 }
@@ -2589,7 +2589,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_German_Education_Brits"
 			add_popularity = { ideology = market_liberal popularity = -0.15 }
@@ -2617,7 +2617,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Deal_With_British"
 			remove_ideas = MAF_British_Settlers
@@ -2644,7 +2644,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Attract_Belgian_Investment"
 			add_popularity = { ideology = social_liberal popularity = 0.05 }
@@ -2670,7 +2670,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Grant_Cons_FW"
 			add_popularity = { ideology = social_liberal popularity = 0.1 }
@@ -2697,7 +2697,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Intergrate_FW"
 			add_popularity = { ideology = social_liberal popularity = 0.1 }
@@ -2719,7 +2719,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Block_FW_Investment"
 			add_popularity = { ideology = social_liberal popularity = -0.05 }
@@ -2741,7 +2741,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Seize_FW_Industries"
 			add_popularity = { ideology = social_liberal popularity = -0.1 }
@@ -2781,7 +2781,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Expel_Alien_Nationals"
 			add_popularity = { ideology = social_liberal popularity = -0.15 }
@@ -2808,22 +2808,23 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Deal_With_Belgians"
 			remove_ideas = MAF_Belgian_Investors
 		}
 	}
 
-	####################
-	### Black Monday ###
-	####################
+####################
+### Black Monday ###
+####################
 
 	focus = {
 		id = MAF_Black_Monday
 		icon = GFX_goal_bankruptcy
 		x = 10
 		y = 8
+		allow_branch = { NOT = { tag = SWA } }
 		available = { always = no }
 		cost = 0
 		completion_reward = {
@@ -2948,8 +2949,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MAF_University_Kinshala
-		icon = GFX_focus_research
+		id = MAF_University_Kinshasa
+		icon = GFX_goal_MAF_university
 		prerequisite = {
 			focus = MAF_1938_Budget
 		}
@@ -2959,9 +2960,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 40
 		}
-		cost = 10
+		cost = 8
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus MAF_University_Kinshala"
+			log = "[GetDateText]: [Root.GetName]: Focus MAF_University_Kinshasa"
 			add_research_slot = 1
 			add_popularity = { ideology = social_liberal popularity = 0.05 }
 		}
@@ -3020,7 +3021,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 40
 		}
-		cost = 10
+		cost = 8
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Cape_Cairo"
@@ -3028,7 +3029,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -3036,7 +3037,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3044,7 +3045,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3052,7 +3053,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3078,7 +3079,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 40
 		}
-		cost = 10
+		cost = 8
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Tanzania_Uganda"
@@ -3086,7 +3087,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -3094,7 +3095,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3124,7 +3125,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 40
 		}
-		cost = 10
+		cost = 8
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Kampala_Khartoum"
@@ -3136,7 +3137,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -3166,7 +3167,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 40
 		}
-		cost = 10
+		cost = 8
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Connect_Addis"
@@ -3192,7 +3193,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 35
 		}
-		cost = 10
+		cost = 6
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Industrial_Development"
@@ -3221,7 +3222,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 35
 		}
-		cost = 10
+		cost = 8
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Light_Industrial_Development"
@@ -3276,7 +3277,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 35
 		}
-		cost = 10
+		cost = 6
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Continue_Industrial_Research"
@@ -3306,7 +3307,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 35
 		}
-		cost = 10
+		cost = 8
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_War_Industries"
@@ -3355,7 +3356,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 35
 		}
-		cost = 10
+		cost = 8
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Resource_Extraction"
@@ -3391,7 +3392,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 35
 		}
-		cost = 10
+		cost = 8
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Improved_Resource_Extraction"
@@ -3425,7 +3426,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 35
 		}
-		cost = 10
+		cost = 8
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Superior_Resource_Extraction"
@@ -3460,7 +3461,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 35
 		}
-		cost = 10
+		cost = 8
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Resource_Refinement"
@@ -3479,15 +3480,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	}
 
-	########################
-	### Military Reforms ###
-	########################
+########################
+### Military Reforms ###
+########################
 
 	focus = {
 		id = MAF_Military_Reforms
 		icon = GFX_goal_generic_army_command_power
 		x = 23
 		y = 8
+		allow_branch = { NOT = { tag = SWA } }
 		offset = {
 			x = -1
 			y = -2
@@ -3504,13 +3506,13 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Military_Reforms"
 			army_experience = 30
 		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
 
 	focus = {
@@ -3529,7 +3531,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Undefeated_Army"
@@ -3559,7 +3561,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Modern_Artillery"
@@ -3589,7 +3591,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Sturdy_Trucks"
@@ -3619,13 +3621,13 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Modern_Tactics"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = MAF_Modern_Tactics
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -3649,7 +3651,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Modern_Support_Divs"
@@ -3679,7 +3681,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Light_Infantry"
@@ -3712,7 +3714,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_White_Graveyard"
@@ -3740,7 +3742,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Establish_Airforce"
@@ -3772,7 +3774,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_African_Pilots"
@@ -3801,7 +3803,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Merc_Pilots"
@@ -3826,7 +3828,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Bomber_Aircraft"
@@ -3858,7 +3860,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Airfields"
@@ -3903,7 +3905,7 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Afrikan_Air_Industry"
@@ -3956,13 +3958,13 @@ focus_tree = {
 				has_war = yes
 			}
 		}
-		cost = 10
+		cost = 4
 		continue_if_invalid = yes
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_endurance_training"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = MAF_endurance_training
-				bonus = 2
+				cost_reduction = 0.75
 				uses = 1
 				category = air_doctrine
 			}
@@ -3970,5 +3972,1339 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
 	}
 
+###########################
+# Südwest Focus Tree
+###########################
+# By Beelzebub and Zankoas
+###########################
+
+  ###########################
+  # Beginning of the Civil War Focuses
+  ###########################
+
+	focus = {
+		id = NMB_german_support
+		icon = GFX_goal_COS_German_Bailout
+
+		x = 3
+		y = 0
+		cost = 1
+
+		available_if_capitulated = yes
+
+		allow_branch = {
+			tag = SWA
+			has_war_with = NMB
+		}
+
+		available = {
+			has_war_with = NMB
+			country_exists = GER
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_german_support"
+			GER = { country_event = nmb.1 }
+		}
+	}
+
+	focus = {
+		id = NMB_german_support_2
+		icon = GFX_goal_mittel_arms_trade
+
+		prerequisite = { focus = NMB_german_support }
+		relative_position_id = NMB_german_support
+
+		x = 0
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		available = {
+			has_country_flag = NMB_GER_volunteers
+			has_war = yes
+			country_exists = GER
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_german_support_2"
+			GER = { country_event = nmb.4 }
+		}
+	}
+
+	focus = {
+		id = NMB_fortify_windhoek
+		icon = GFX_goal_generic_barricades
+
+		prerequisite = { focus = NMB_german_support_2 }
+		relative_position_id = NMB_german_support
+
+		x = 0
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		available = {
+			has_country_flag = NMB_GER_volunteers_2
+			has_war_with = NMB
+			controls_state = 541
+			country_exists = GER
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_fortify_windhoek"
+			GER = { country_event = nmb.7 }
+		}
+	}
+
+	focus = {
+		id = NMB_colonial_spirit
+		icon = GFX_goal_agrarian_soldiers
+
+		prerequisite = { focus = NMB_fortify_windhoek }
+		relative_position_id = NMB_german_support
+
+		x = 0
+		y = 3
+		cost = 5
+
+		available_if_capitulated = yes
+
+		available = {
+			has_country_flag = NMB_GER_fortification
+			has_war_with = NMB
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_colonial_spirit"
+			add_ideas = NMB_idea_colonial_spirit
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = NMB_increase_conscription
+		icon = GFX_goal_army_guy_2
+
+		prerequisite = { focus = NMB_german_support }
+		relative_position_id = NMB_german_support
+
+		x = -2
+		y = 1
+		cost = 5
+
+		available_if_capitulated = yes
+
+		available = { has_war_with = NMB }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_increase_conscription"
+			add_ideas = NMB_idea_increase_conscription1
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = NMB_force_conscription
+		icon = GFX_focus_SOV_penal_battalions
+
+		prerequisite = { focus = NMB_increase_conscription }
+		relative_position_id = NMB_german_support
+
+		x = -2
+		y = 2
+		cost = 5
+
+		available_if_capitulated = yes
+
+		available = { has_war_with = NMB }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_force_conscription"
+			add_war_support = -0.05
+			swap_ideas = {
+				add_idea = NMB_idea_increase_conscription2
+				remove_idea = NMB_idea_increase_conscription1
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = NMB_behind_lines
+		icon = GFX_focus_prc_infiltration
+
+		prerequisite = { focus = NMB_german_support }
+		relative_position_id = NMB_german_support
+
+		x = 2
+		y = 1
+		cost = 1
+
+		available_if_capitulated = yes
+
+		available = {
+			has_country_flag = NMB_GER_volunteers
+			has_war_with = NMB
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_behind_lines"
+			country_event = nmb.11
+		}
+	}
+
+	focus = {
+		id = NMB_launch_assault
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+
+		prerequisite = { focus = NMB_behind_lines }
+		relative_position_id = NMB_german_support
+
+		x = 2
+		y = 2
+		cost = 1
+
+		available_if_capitulated = yes
+
+		available = {
+			has_country_flag = NMB_assault_ready
+			has_war_with = NMB
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_launch_assault"
+			custom_effect_tooltip = NMB_assault_tooltip
+			hidden_effect = {
+				load_oob = NMB_assault
+				NMB = { country_event = nmb.14 }
+			}
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+
+
+  ###########################
+  # Industrial Focuses
+  ###########################
+
+	focus = {
+		id = NMB_recover_civil_war
+		icon = GFX_goal_generic_destruction_civil_war
+
+		x = 21
+		y = 1
+		cost = 5
+
+		allow_branch = { tag = SWA }
+
+		available = {
+			has_idea = NMB_civil_war_industry
+			owns_state = 964
+			has_completed_focus = NMB_german_rule
+			is_subject_of = GER
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_recover_civil_war"
+			swap_ideas = {
+				add_idea = NMB_lack_industrialisation
+				remove_idea = NMB_civil_war_industry
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = NMB_industrial_crisis
+		icon = GFX_goal_generic_phone_crisis
+		relative_position_id = NMB_recover_civil_war
+
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = NMB_recover_civil_war }
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_industrial_crisis"
+			add_political_power = 100
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = NMB_work_people
+		icon = GFX_goal_workers_for_business
+		relative_position_id = NMB_recover_civil_war
+
+		x = 3
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = NMB_recover_civil_war }
+		available = { is_subject_of = GER }
+
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_work_people"
+			add_ideas = NMB_repair_cooperation
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = NMB_promote_OMEG
+		icon = GFX_goal_MAF_Cape_Cairo
+		relative_position_id = NMB_recover_civil_war
+
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = NMB_recover_civil_war }
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_promote_OMEG"
+			964 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			541 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = NMB_OMEG_recovery
+		icon = GFX_goal_constitutional_guarantees
+		relative_position_id = NMB_recover_civil_war
+
+		x = -1
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = NMB_industrial_crisis }
+		prerequisite = { focus = NMB_promote_OMEG }
+
+		mutually_exclusive = {
+			focus = NMB_german_recovery
+			focus = NMB_native_cooperation
+		}
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_OMEG_recovery"
+			add_ideas = NMB_OMEG_influence
+			add_popularity = { ideology = market_liberal popularity = 0.03 }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = NMB_mineral_processing
+		icon = GFX_goal_generic_coal_mining
+		relative_position_id = NMB_recover_civil_war
+
+		x = -1
+		y = 3
+		cost = 5
+
+		prerequisite = { focus = NMB_OMEG_recovery }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_mineral_processing"
+			swap_ideas = {
+				add_idea = NMB_OMEG_influence_2
+				remove_idea = NMB_OMEG_influence
+			}
+			add_popularity = { ideology = market_liberal popularity = 0.05 }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = NMB_german_recovery
+		icon = GFX_goal_German_Investements
+		relative_position_id = NMB_recover_civil_war
+
+		x = 1
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = NMB_industrial_crisis }
+
+		mutually_exclusive = {
+			focus = NMB_OMEG_recovery
+			focus = NMB_native_cooperation
+		}
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_german_recovery"
+			add_ideas = NMB_german_exports
+			add_popularity = { ideology = social_conservative popularity = 0.02 }
+			add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = NMB_german_industrial_project
+		icon = GFX_goal_generic_german_construction
+		relative_position_id = NMB_recover_civil_war
+
+		x = 1
+		y = 3
+		cost = 5
+
+		prerequisite = { focus = NMB_german_recovery }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_german_industrial_project"
+			add_offsite_building = { type = industrial_complex level = 1}
+			add_popularity = { ideology = social_conservative popularity = 0.02 }
+			add_popularity = { ideology = paternal_autocrat popularity = 0.01 }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = NMB_native_cooperation
+		icon = GFX_goal_LIB_whiter_pale
+		relative_position_id = NMB_recover_civil_war
+
+		x = 3
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = NMB_industrial_crisis }
+		prerequisite = { focus = NMB_work_people }
+
+		mutually_exclusive = {
+			focus = NMB_german_recovery
+			focus = NMB_OMEG_recovery
+		}
+
+		available = { is_subject_of = GER }
+
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_native_cooperation"
+			add_ideas = NMB_native_work
+			add_popularity = { ideology = social_democrat popularity = 0.02 }
+			add_popularity = { ideology = social_liberal popularity = 0.01 }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = NMB_cultural_integration
+		icon = GFX_goal_POR_burden_empire
+		relative_position_id = NMB_recover_civil_war
+
+		x = 3
+		y = 3
+		cost = 5
+
+		prerequisite = { focus = NMB_native_cooperation }
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_cultural_integration"
+			add_ideas = NMB_cultural_cooperation
+			add_popularity = { ideology = social_democrat popularity = 0.03 }
+			add_popularity = { ideology = social_liberal popularity = 0.02 }
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = NMB_recovery_effort
+		icon = GFX_goal_production
+		relative_position_id = NMB_recover_civil_war
+
+		x = 1
+		y = 4
+		cost = 5
+
+		prerequisite = {
+			focus = NMB_cultural_integration
+			focus = NMB_german_industrial_project
+			focus = NMB_mineral_processing
+		}
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_recovery_effort"
+			swap_ideas = {
+				add_idea = NMB_recovery_effort_idea
+				remove_idea = NMB_lack_industrialisation
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = NMB_revived
+		icon = GFX_goal_generic_financial_markets
+		relative_position_id = NMB_recover_civil_war
+
+		x = 1
+		y = 5
+		cost = 8
+
+		prerequisite = { focus = NMB_recovery_effort }
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_revived"
+			remove_ideas = NMB_recovery_effort_idea
+			964 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = NMB_economy_ready
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = NMB_search_oil
+		icon = GFX_goal_basic_oil
+		relative_position_id = NMB_recover_civil_war
+
+		x = -3
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = NMB_promote_OMEG }
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_search_oil"
+			country_event = { id = nmb.22 days = 1 }
+		}
+	}
+
+	focus = {
+		id = NMB_strike_oil
+		icon = GFX_goal_further_oil
+		relative_position_id = NMB_recover_civil_war
+
+		x = -3
+		y = 3
+		cost = 7
+
+		available = {
+			owns_state = 964
+			has_country_flag = NMB_oil_struck
+			is_subject_of = GER
+		}
+
+		prerequisite = { focus = NMB_search_oil }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_strike_oil"
+			add_resource = {
+				type = oil
+				amount = 6
+				state = 964
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+  ###########################
+  # Integration & Campaign Focuses
+  ###########################
+
+	focus = {
+		id = NMB_integrate_vin
+		icon = GFX_SIA_jungletraining
+
+		x = 3
+		y = 1
+		cost = 5
+
+		allow_branch = {
+			tag = SWA
+			NOT = { has_war_with = NMB }
+		}
+
+		available = {
+			owns_state = 964
+			NOT = { 964 = { is_core_of = SWA } }
+			has_completed_focus = NMB_german_rule
+		}
+
+		bypass = { 964 = { is_core_of = SWA } }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_integrate_vin"
+			add_political_power = 50
+			hidden_effect = { country_event = { id = nmb.17 days = 9 } }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = NMB_preparing_barotseland
+		icon = GFX_goal_generic_army_training
+		relative_position_id = NMB_integrate_vin
+
+		x = -2
+		y = 1
+		cost = 7
+
+		prerequisite = { focus = NMB_integrate_vin }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_preparing_barotseland"
+			custom_effect_tooltip = NMB_BRT_preparation_tooltip
+		}
+	}
+
+	focus = {
+		id = NMB_german_campaign_involvement
+		icon = GFX_goal_COS_German_Bailout
+		relative_position_id = NMB_integrate_vin
+
+		x = 2
+		y = 1
+		cost = 7
+
+		prerequisite = { focus = NMB_integrate_vin }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_german_campaign_involvement"
+			custom_effect_tooltip = NMB_BRT_german_tooltip
+		}
+	}
+
+	focus = {
+		id = NMB_begin_campaign
+		icon = GFX_goal_national_mobilization
+		relative_position_id = NMB_integrate_vin
+
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = NMB_integrate_vin }
+
+		bypass = { owns_state = 958 }
+
+		available = {
+			can_declare_war_on = 958.owner
+			has_completed_focus = NMB_campaign_ready
+			is_subject_of = GER
+		}
+
+		will_lead_to_war_with = BRT
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				var:958.owner = { is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				var:958.owner = { overlord_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				var:958.owner = { faction_leader_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+			modifier = {
+				factor = 0
+				var:958.owner = { guarantor_is_stronger_than_ROOT_and_not_vulnerable = yes }
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_begin_campaign"
+			declare_war_on = {
+				target = 958.owner
+				type = annex_everything
+			}
+			if = {
+				limit = { has_completed_focus = NMB_german_campaign_involvement }
+				GER = { country_event = nmb.26 }
+			}
+			if = {
+				limit = { has_completed_focus = NMB_preparing_barotseland }
+				add_timed_idea = { idea = NMB_preperation_bonus days = 60 }
+			}
+			hidden_effect = { country_event = { id = nmb.29 days = 25 } }
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = NMB_calm_barotseland
+		icon = GFX_focus_generic_oppression
+		relative_position_id = NMB_integrate_vin
+
+		x = 0
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = NMB_begin_campaign }
+
+		available = {
+			owns_state = 958
+			is_subject_of = GER
+			has_idea = NMB_barotseland_resistance
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_calm_barotseland"
+			remove_ideas = NMB_barotseland_resistance
+			add_popularity = { ideology = national_populist popularity = -0.05 }
+		}
+	}
+
+	focus = {
+		id = NMB_coring_process
+		icon = GFX_focus_generic_authoritarian_government
+		relative_position_id = NMB_integrate_vin
+
+		x = -1
+		y = 3
+		cost = 5
+
+		prerequisite = { focus = NMB_calm_barotseland }
+
+		available = {
+			owns_state = 958
+			is_subject_of = GER
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_coring_process"
+			add_state_core = 958
+		}
+	}
+
+	focus = {
+		id = NMB_BRT_railway_expansion
+		icon = GFX_goal_generic_railroad
+		relative_position_id = NMB_integrate_vin
+
+		x = 1
+		y = 3
+		cost = 5
+
+		prerequisite = { focus = NMB_calm_barotseland }
+
+		available = {
+			owns_state = 958
+			owns_state = 964
+			owns_state = 541
+			is_subject_of = GER
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_BRT_railway_expansion"
+			958 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			964 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			541 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = NMB_retake_africa
+		icon = GFX_DAH_No_German
+		relative_position_id = NMB_integrate_vin
+
+		x = 0
+		y = 4
+		cost = 5
+
+		prerequisite = { focus = NMB_coring_process }
+		prerequisite = { focus = NMB_BRT_railway_expansion }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_retake_africa"
+			custom_effect_tooltip = NMB_retake_africa_tt
+			for_each_scope_loop = {
+				array = global.MAF_collapse_tags
+				SWA = { activate_targeted_decision = { target = PREV decision = NMB_invade_target }}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+  ###########################
+  # Political Focuses
+  ###########################
+
+	focus = {
+		id = NMB_german_rule
+		icon = GFX_goal_GER_colonial_administration
+
+		x = 12
+		y = 0
+		cost = 5
+
+		allow_branch = { tag = SWA }
+
+		available_if_capitulated = yes
+
+		available = {
+			NOT = { country_exists = NMB }
+			owns_state = 964
+			country_exists = GER
+			OR = {
+				is_subject = no
+				is_subject_of = GER
+			}
+		}
+
+		bypass = { NOT = { country_exists = GER } }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_german_rule"
+			effect_tooltip = { GER = { puppet = SWA } }
+			GER = { country_event = nmb.15 }
+			if = {
+				limit = { has_idea = NMB_idea_increase_conscription1 }
+				remove_ideas = NMB_idea_increase_conscription1
+			}
+			if = {
+				limit = { has_idea = NMB_idea_increase_conscription2 }
+				remove_ideas = NMB_idea_increase_conscription2
+			}
+			if = {
+				limit = { has_idea = NMB_idea_colonial_spirit }
+				remove_ideas = NMB_idea_colonial_spirit
+			}
+			add_ideas = NMB_idea_german_military
+			add_ideas = NMB_civil_war_industry
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = NMB_statthalter
+		icon = GFX_goal_Desert_Officers_2
+		relative_position_id = NMB_german_rule
+
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = NMB_german_rule }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_statthalter"
+			country_event = { id = nmb.16 days = 1 }
+		}
+	}
+
+	focus = {
+		id = NMB_mittelafrika_claim
+		icon = GFX_goal_our_continent
+		relative_position_id = NMB_german_rule
+
+		x = 0
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = NMB_statthalter }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_mittelafrika_claim"
+			add_war_support = 0.05
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+	focus = {
+		id = NMB_journey_scientists
+		icon = GFX_goal_generic_scientific_exchange
+		relative_position_id = NMB_german_rule
+
+		x = 0
+		y = 3
+		cost = 7
+
+		prerequisite = { focus = NMB_mittelafrika_claim }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_journey_scientists"
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = NMB_naval_expansion
+		icon = GFX_goal_generic_naval_industry
+		relative_position_id = NMB_german_rule
+
+		x = -3
+		y = 3
+		cost = 5
+
+		prerequisite = { focus = NMB_mittelafrika_claim }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_naval_expansion"
+			if = {
+				limit = {	541 = { is_controlled_by = ROOT }	}
+				541 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = NMB_naval_expansion
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = NMB_old_MAF_ships
+		icon = GFX_goal_generic_naval_destroyer2
+		relative_position_id = NMB_german_rule
+
+		x = -4
+		y = 4
+		cost = 5
+
+		prerequisite = { focus = NMB_naval_expansion }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_old_MAF_ships"
+			add_tech_bonus = {
+				name = NMB_old_MAF_ships
+				bonus = 1
+				uses = 1
+				category = naval_equipment
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = NMB_german_naval_support
+		icon = GFX_goal_Kaiserliche_Marine
+		relative_position_id = NMB_german_rule
+
+		x = -4
+		y = 6
+		cost = 7
+
+		prerequisite = { focus = NMB_old_MAF_ships }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_german_naval_support"
+			add_doctrine_cost_reduction = {
+				name = NMB_german_naval_support
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			add_offsite_building = { type = dockyard level = 1 }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = NMB_admiral_collection
+		icon = GFX_goal_navy_hat_ships
+		relative_position_id = NMB_german_rule
+
+		x = -2
+		y = 4
+		cost = 5
+
+		prerequisite = { focus = NMB_naval_expansion }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_admiral_collection"
+			MAF = { show_unit_leaders_tooltip = MAF_Max_von_Looff }
+			hidden_effect = { MAF = { MAF_Max_von_Looff = { set_nationality = ROOT } } }
+		}
+	}
+
+	focus = {
+		id = NMB_naval_airforce
+		icon = GFX_focus_SOV_flying_clubs
+		relative_position_id = NMB_german_rule
+
+		x = -2
+		y = 5
+		cost = 5
+
+		prerequisite = { focus = NMB_admiral_collection }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_naval_airforce"
+			add_tech_bonus = {
+				name = NMB_naval_airforce
+				bonus = 1
+				uses = 1
+				category = naval_air
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = NMB_first_namibian_marines
+		icon = GFX_goal_generic_marines2
+		relative_position_id = NMB_german_rule
+
+		x = -2
+		y = 6
+		cost = 5
+
+		prerequisite = { focus = NMB_naval_airforce }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_first_namibian_marines"
+			add_tech_bonus = {
+				name = NMB_first_namibian_marines
+				bonus = 1
+				uses = 1
+				category = marine_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = NMB_coastal_reclamation
+		icon = GFX_goal_authority
+		relative_position_id = NMB_german_rule
+
+		x = -3
+		y = 7
+		cost = 7
+
+		prerequisite = { focus = NMB_first_namibian_marines }
+		prerequisite = { focus = NMB_german_naval_support }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_coastal_reclamation"
+			hidden_effect = { load_oob = NMB_marines }
+			custom_effect_tooltip = NMB_coastal_reclamation_tooltip
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = NMB_land_expansion
+		icon = GFX_focus_generic_little_entente
+		relative_position_id = NMB_german_rule
+
+		x = 3
+		y = 3
+		cost = 7
+
+		prerequisite = { focus = NMB_mittelafrika_claim }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_land_expansion"
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_doctrine_cost_reduction = {
+				name = NMB_land_expansion
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = NMB_native_policy
+		icon = GFX_goal_no_compromises
+		relative_position_id = NMB_german_rule
+
+		x = 3
+		y = 4
+		cost = 5
+
+		prerequisite = { focus = NMB_land_expansion }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_native_policy"
+			add_war_support = 0.05
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
+
+	focus = {
+		id = NMB_native_recruitment
+		icon = GFX_goal_rights_for_service
+		relative_position_id = NMB_german_rule
+
+		x = 1
+		y = 5
+		cost = 5
+
+		prerequisite = { focus = NMB_native_policy }
+
+		mutually_exclusive = {
+			focus = NMB_askari_cooperation
+			focus = NMB_german_force
+		}
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_native_recruitment"
+			swap_ideas = {
+				add_idea = NMB_idea_native_recruitment
+				remove_idea = NMB_idea_german_military
+			}
+			add_stability = -0.05
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = NMB_put_native_work
+		icon = GFX_focus_CZE_german_puppet
+		relative_position_id = NMB_german_rule
+
+		x = 1
+		y = 6
+		cost = 5
+
+		prerequisite = { focus = NMB_native_recruitment }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_put_native_work"
+			swap_ideas = {
+				add_idea = NMB_idea_native_recruitment_2
+				remove_idea = NMB_idea_native_recruitment
+			}
+			add_war_support = -0.05
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = NMB_askari_cooperation
+		icon = GFX_goal_MAF_African_Armies
+		relative_position_id = NMB_german_rule
+
+		x = 3
+		y = 5
+		cost = 5
+
+		prerequisite = { focus = NMB_native_policy }
+
+		mutually_exclusive = {
+			focus = NMB_native_recruitment
+			focus = NMB_german_force
+		}
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_askari_cooperation"
+			swap_ideas = {
+				add_idea = NMB_idea_askari_cooperation
+				remove_idea = NMB_idea_german_military
+			}
+			add_war_support = 0.05
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = NMB_askari_resistance
+		icon = DAH_Amazons
+		relative_position_id = NMB_german_rule
+
+		x = 3
+		y = 6
+		cost = 5
+
+		prerequisite = { focus = NMB_askari_cooperation }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_askari_resistance"
+			swap_ideas = {
+				add_idea = NMB_idea_askari_suppression
+				remove_idea = NMB_idea_askari_cooperation
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESISTANCE }
+	}
+
+	focus = {
+		id = NMB_german_force
+		icon = GFX_goal_Sturmtruppen
+		relative_position_id = NMB_german_rule
+
+		x = 5
+		y = 5
+		cost = 5
+
+		prerequisite = { focus = NMB_native_policy }
+
+		mutually_exclusive = {
+			focus = NMB_native_recruitment
+			focus = NMB_askari_cooperation
+		}
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_german_force"
+			swap_ideas = {
+				add_idea = NMB_idea_true_german_military
+				remove_idea = NMB_idea_german_military
+			}
+			add_stability = 0.05
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = NMB_loyalty_empire
+		icon = GFX_goal_German_Staff
+		relative_position_id = NMB_german_rule
+
+		x = 5
+		y = 6
+		cost = 5
+
+		prerequisite = { focus = NMB_german_force }
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_loyalty_empire"
+			swap_ideas = {
+				add_idea = NMB_idea_true_german_military_2
+				remove_idea = NMB_idea_true_german_military
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = NMB_campaign_ready
+		icon = GFX_goal_generic_territory_or_war
+		relative_position_id = NMB_german_rule
+
+		x = 3
+		y = 7
+		cost = 3
+
+		prerequisite = {
+			focus = NMB_loyalty_empire
+			focus = NMB_askari_resistance
+			focus = NMB_put_native_work
+		}
+
+		available = { is_subject_of = GER }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NMB_campaign_ready"
+			custom_effect_tooltip = NMB_land_campaign_ready
+			add_war_support = 0.05
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
 }
 

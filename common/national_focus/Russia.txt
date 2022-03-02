@@ -344,9 +344,7 @@ focus_tree = {
 				custom_effect_tooltip = RUS_Imperial_Glory_kirill_tooltip
 				hidden_effect = {
 					if = {
-						limit = {
-							NOT = { has_country_flag = Kirill_Romanov_dead }
-						}
+						limit = { has_event_target = RUS_kirill_romanov_target }
 						country_event = russia.12
 					}
 					else = {
@@ -624,7 +622,10 @@ focus_tree = {
 		id = RUS_Empower_The_Senate
 		icon = GFX_focus_generic_self_management
 		available = {
-			RUS_dmitriy_romanov_in_power = yes
+			OR = {
+				RUS_dmitriy_romanov_in_power = yes
+				RUS_trubetskoy_in_power = yes
+			}
 		}
 		prerequisite = {
 			focus = RUS_The_Republic_Survives
@@ -641,6 +642,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Empower_The_Senate"
+			log = "KR_Event_Logging;RUS REPUBLIC DMITRIY;[GetDateText];[ROOT.GetName];[FROM.GetName]"
 			custom_effect_tooltip = RUS_Empower_The_Senate_tooltip
 			add_ideas = RUS_new_senate_1
 			hidden_effect = {
@@ -795,7 +797,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_NAVY_BONUS}
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
 	}
 
 	focus = {
@@ -827,6 +829,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Empower_The_Duma"
+			log = "KR_Event_Logging;RUS REPUBLIC;[GetDateText];[ROOT.GetName];[FROM.GetName]"
 			custom_effect_tooltip = RUS_Empower_The_Duma_tooltip
 			add_ideas = RUS_empowered_duma_1
 			hidden_effect = {
@@ -1200,7 +1203,7 @@ focus_tree = {
 			army_experience = 50
 			add_ideas = RUS_legacy_of_the_whites_1
 		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_ARMY_XP }
 	}
 
 	focus = {
@@ -1271,7 +1274,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_ARMY_XP }
 	}
 
 	focus = {
@@ -1325,7 +1328,7 @@ focus_tree = {
 			RUS_savinkov_is_hog = yes
 		}
 		select_effect = {
-			log = "[GetDateText]: [Root.GetName]: Select Focus RUS_Political_Stabilisation"
+			log = "[GetDateText]: [Root.GetName]: Select Focus RUS_Establish_The_VES"
 			RUS_reduce_black_monday = yes
 		}
 
@@ -1339,8 +1342,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Establish_The_VES"
+			add_political_power = 75
+			add_stability = 0.05
+			add_war_support = 0.05
 			add_ideas = RUS_supreme_economic_council_1
-			add_stability = 0.02
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	}
@@ -1391,6 +1396,7 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = tooltip_white_line
 			572 = {
 				if = {
 					limit = { has_state_flag = RUS_developed_tractor_plants }
@@ -1415,7 +1421,6 @@ focus_tree = {
 					}
 				}
 			}
-			add_stability = 0.01
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	}
@@ -1466,7 +1471,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_stability = 0.03
+			custom_effect_tooltip = tooltip_white_line
 			activate_targeted_decision = { target = 263 decision = RUS_Develop_Civilian_Industry_In_State } #Novgorod
 			activate_targeted_decision = { target = 209 decision = RUS_Develop_Civilian_Industry_In_State } #Pskov
 			activate_targeted_decision = { target = 651 decision = RUS_Develop_Civilian_Industry_In_State } #Ufa
@@ -1522,16 +1527,35 @@ focus_tree = {
 					}
 				}
 			}
-			add_political_power = -100
-			every_owned_state = {
-				limit = {
-					infrastructure > 0
-					infrastructure < 4
-					impassable = no
-				}
+			custom_effect_tooltip = tooltip_white_line
+			# Petrograd - Murmansk
+			build_railway = {
+				start_province = 3151
+				target_province = 3134
+			}
+			# Petrograd - Velikiye Luki
+			build_railway = {
+				start_province = 3151
+				target_province = 11234
+			}
+			# Moscow - Velikiye Luki
+			build_railway = {
+				start_province = 3358
+				target_province = 11234
+			}
+			# Tsaritsyn - Astrakhan
+			build_railway = {
+				start_province = 11408
+				target_province = 9753
+			}
+
+			#Supply Hub in Kandalaksha
+			213 = {
+				add_victory_points = { province = 6181 value = 1 }
 				add_building_construction = {
-					type = infrastructure
+					type = supply_node
 					level = 1
+					province = 6181
 					instant_build = yes
 				}
 			}
@@ -1561,7 +1585,7 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			add_stability = 0.02
+			custom_effect_tooltip = tooltip_white_line
 			activate_targeted_decision = { target = 653 decision = RUS_Develop_Military_Industry_In_State } #Yekaterinburg
 			activate_targeted_decision = { target = 571 decision = RUS_Develop_Military_Industry_In_State } #Omsk
 			activate_targeted_decision = { target = 566 decision = RUS_Develop_Military_Industry_In_State } #Irkutsk
@@ -1610,7 +1634,6 @@ focus_tree = {
 					add_idea = RUS_supreme_economic_council_9
 				}
 			}
-			add_stability = 0.04
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
 	}
@@ -1642,16 +1665,12 @@ focus_tree = {
 					RUS_dmitriy_romanov_in_power = yes
 					RUS_trubetskoy_in_power = yes
 					RUS_milyukov_in_power = yes
-					AND = {
-						is_subject = yes
-						has_authoritarian_government = yes
-					}
 				}
 			}
 			RUS_savinkov_is_hog = no
 		}
 		select_effect = {
-			log = "[GetDateText]: [Root.GetName]: Select Focus RUS_Restore_The_Monarchy"
+			log = "[GetDateText]: [Root.GetName]: Select Focus RUS_Reinstitute_The_Zemstva"
 			RUS_reduce_black_monday = yes
 		}
 
@@ -1666,7 +1685,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Reinstitute_The_Zemstva"
-			add_stability = 0.05
 			add_ideas = RUS_new_zemstva_1
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -1688,7 +1706,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Funding_Frenzy"
+			add_stability = 0.1
+			add_war_support = 0.1
 			RUS_reduce_black_monday = yes
+			custom_effect_tooltip = tooltip_white_line
 			unlock_decision_tooltip = RUS_Invest_In_The_Northern_Zemstva
 			unlock_decision_tooltip = RUS_Invest_In_The_Southern_Zemstva
 			unlock_decision_tooltip = RUS_Invest_In_The_Eastern_Zemstva
@@ -1715,7 +1736,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Local_Development"
 			RUS_reduce_black_monday = yes
 			custom_effect_tooltip = RUS_Local_Development_tooltip
-			add_stability = 0.06
 			if = { #has investment bank
 				limit = { has_idea = RUS_new_zemstva_6 }
 				swap_ideas = {
@@ -1800,7 +1820,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_War_Preparations_Programme"
 			custom_effect_tooltip = RUS_War_Preparations_Programme_tooltip
 			RUS_reduce_black_monday = yes
-			add_war_support = 0.05
 			if = { #has research initiatives
 				limit = { has_idea = RUS_new_zemstva_3 }
 				swap_ideas = {
@@ -1850,7 +1869,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_National_Investment_Bank"
 			RUS_reduce_black_monday = yes
 			custom_effect_tooltip = RUS_National_Investment_Bank_tooltip
-			add_stability = 0.04
 			if = { #has local development
 				limit = { has_idea = RUS_new_zemstva_2 }
 				swap_ideas = {
@@ -1906,17 +1924,10 @@ focus_tree = {
 				limit = { country_exists = SOV }
 				NOT = { country_exists = SOV }
 			}
-			OR = {
-				RUS_kornilov_in_power = yes
-				RUS_denikin_in_power = yes
-				RUS_dmitriy_romanov_in_power = yes
-				RUS_trubetskoy_in_power = yes
-				RUS_chernov_in_power = yes
-			}
 			RUS_savinkov_is_hog = no
 		}
 		select_effect = {
-			log = "[GetDateText]: [Root.GetName]: Select Focus RUS_A_Constitutional_Monarchy"
+			log = "[GetDateText]: [Root.GetName]: Select Focus RUS_Bureaucratic_Overhaul"
 			RUS_reduce_black_monday = yes
 		}
 
@@ -1931,7 +1942,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Bureaucratic_Overhaul"
-			add_stability = 0.06
+			add_political_power = 100
+			add_stability = 0.1
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -1954,7 +1966,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_MinProm"
 			RUS_reduce_black_monday = yes
 			add_ideas = RUS_minprom_1
-			add_stability = 0.04
+			custom_effect_tooltip = tooltip_white_line
 			activate_targeted_decision = { target = 566 decision = RUS_Develop_Civilian_Industry_In_State } #Irkutsk
 			activate_targeted_decision = { target = 217 decision = RUS_Develop_Civilian_Industry_In_State } #Tsaritsyn
 			activate_targeted_decision = { target = 252 decision = RUS_Develop_Civilian_Industry_In_State } #Nizhny Novgorod
@@ -2020,7 +2032,6 @@ focus_tree = {
 					add_idea = RUS_minprom_2
 				}
 			}
-			add_stability = 0.05
 			activate_targeted_decision = { target = 220 decision = RUS_Develop_Military_Industry_In_State } #Kursk
 			activate_targeted_decision = { target = 653 decision = RUS_Develop_Military_Industry_In_State } #Yekaterinburg
 			activate_targeted_decision = { target = 398 decision = RUS_Develop_Military_Industry_In_State } #Perm
@@ -2073,7 +2084,6 @@ focus_tree = {
 					add_idea = RUS_minprom_4
 				}
 			}
-			add_stability = 0.05
 			activate_targeted_decision = { target = 572 decision = RUS_Develop_Civilian_Industry_In_State } #Chelyabinsk
 			activate_targeted_decision = { target = 571 decision = RUS_Develop_Civilian_Industry_In_State } #Omsk
 			activate_targeted_decision = { target = 249 decision = RUS_Develop_Civilian_Industry_In_State } #Kazan
@@ -2187,7 +2197,14 @@ focus_tree = {
 					add_idea = RUS_minprom_5
 				}
 			}
-			add_stability = 0.04
+			add_tech_bonus = {
+				name = RUS_National_Administration_School
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+				category = industry
+				category = electronics
+			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH}
 	}
@@ -2212,15 +2229,11 @@ focus_tree = {
 			OR = {
 				RUS_chernov_in_power = yes
 				RUS_tsereteli_in_power = yes
-				AND = {
-					is_subject = yes
-					has_elected_government = yes
-				}
 			}
 			RUS_savinkov_is_hog = no
 		}
 		select_effect = {
-			log = "[GetDateText]: [Root.GetName]: Select Focus RUS_New_Constitution"
+			log = "[GetDateText]: [Root.GetName]: Select Focus RUS_Cooperative_Capitalism"
 			RUS_reduce_black_monday = yes
 		}
 
@@ -2236,7 +2249,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Cooperative_Capitalism"
 			add_ideas = RUS_cooperative_capitalism_1
-			add_stability = 0.1
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	}
@@ -2258,7 +2270,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_New_Industrial_Programme"
 			RUS_reduce_black_monday = yes
-			add_stability = 0.08
+			add_political_power = 50
+			custom_effect_tooltip = tooltip_white_line
 			activate_targeted_decision = { target = 220 decision = RUS_Develop_Civilian_Industry_In_State } #Kursk
 			activate_targeted_decision = { target = 248 decision = RUS_Develop_Civilian_Industry_In_State } #Yaroslavl
 			activate_targeted_decision = { target = 209 decision = RUS_Develop_Civilian_Industry_In_State } #Pskov
@@ -2284,7 +2297,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Industry_In_The_Urals"
 			RUS_reduce_black_monday = yes
-			add_stability = 0.05
+			add_political_power = 50
+			custom_effect_tooltip = tooltip_white_line
 			activate_targeted_decision = { target = 653 decision = RUS_Develop_Civilian_Industry_In_State } #Yekaterinburg
 			activate_targeted_decision = { target = 572 decision = RUS_Develop_Civilian_Industry_In_State } #Chelyabinsk
 			activate_targeted_decision = { target = 651 decision = RUS_Develop_Civilian_Industry_In_State } #Ufa
@@ -2310,7 +2324,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_The_Wealth_Of_Siberia"
 			RUS_reduce_black_monday = yes
-			add_stability = 0.05
+			add_political_power = 50
+			custom_effect_tooltip = tooltip_white_line
 			activate_targeted_decision = { target = 571 decision = RUS_Develop_Civilian_Industry_In_State } #Omsk
 			activate_targeted_decision = { target = 570 decision = RUS_Develop_Civilian_Industry_In_State } #Novo-Nikolayevsk
 			activate_targeted_decision = { target = 568 decision = RUS_Develop_Civilian_Industry_In_State } #Krasnoyarsk
@@ -2339,7 +2354,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Education_Campaigns"
 			RUS_reduce_black_monday = yes
-			add_stability = 0.06
+			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { has_idea = RUS_cooperative_capitalism_2 }
 				swap_ideas = {
@@ -2537,69 +2552,29 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Expand_The_Transsiberian"
-			561 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
+			if = {
+				limit = { owns_state = 408 }
+				build_railway = {
 					level = 2
-					instant_build = yes
+					start_province = 6380
+					target_province = 957
 				}
 			}
-			563 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
+			else = {
+				build_railway = {
 					level = 2
-					instant_build = yes
+					start_province = 6380
+					target_province = 12189
 				}
 			}
-			564 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
+			every_owned_state = {
+				tooltip = RUS_all_states_with_less_than_three_infra
+				limit = {
+					is_siberia = yes
+					is_controlled_by = ROOT
+					infrastructure < 3
 				}
-			}
-			566 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			567 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			568 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			569 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			657 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+				add_building_construction = { type = infrastructure level = 1 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2623,7 +2598,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Army_Modernisation"
 			army_experience = 50
 		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
 
 	focus = {
@@ -3022,9 +2997,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_VVSR"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = RUS_VVSR
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -3291,9 +3266,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Wing_Formations"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = RUS_Wing_Formations
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -3426,9 +3401,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_High_Command_Reforms"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = RUS_High_Command_Reforms
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -3455,18 +3430,14 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2000
-			modifier = {
-				factor = 0
-				already_has_other_doctrine_GBP = yes
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Extensive_Planning"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = RUS_Extensive_Planning
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
-				category = cat_grand_battle_plan
+				category = land_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3673,18 +3644,14 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2500
-			modifier = {
-				factor = 0
-				already_has_other_doctrine_SF = yes
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Overwhelming_Firepower"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = RUS_Overwhelming_Firepower
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
-				category = cat_superior_firepower
+				category = land_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3729,7 +3696,7 @@ focus_tree = {
 			army_experience = 30
 			add_ideas = RUS_commander_initiative
 		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_ARMY_XP }
 	}
 
 	focus = {
@@ -3792,21 +3759,17 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2500
 			modifier = {
-				factor = 0
-				already_has_other_doctrine_MW = yes
-			}
-			modifier = {
 				factor = 4
 				has_government = national_populist
 			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Spearhead_Doctrine"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = RUS_Spearhead_Doctrine
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
-				category = cat_mobile_warfare
+				category = land_doctrine
 			}
 			add_ai_strategy = {
 				type = role_ratio
@@ -3975,18 +3938,14 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2000
-			modifier = {
-				factor = 0
-				already_has_other_doctrine_MA = yes
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_War_Of_Numbers"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = RUS_War_Of_Numbers
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
-				category = cat_mass_assault
+				category = land_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4249,7 +4208,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Navy_Modernisation"
 			navy_experience = 50
 		}
-		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+		search_filters = { FOCUS_FILTER_NAVY_XP }
 	}
 
 	focus = {
@@ -4269,21 +4228,18 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
-			modifier = {
-				factor = 0
-				already_has_other_doctrine_FIB = yes
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Floating_Fortresses"
-			add_tech_bonus = {
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
 				name = RUS_Floating_Fortresses
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
-				category = cat_fleet_in_being
+				category = naval_doctrine
 			}
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -4303,21 +4259,24 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-			modifier = {
-				factor = 0
-				already_has_other_doctrine_BS = yes
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Death_From_Above"
+			air_experience = 25
 			add_tech_bonus = {
 				name = RUS_Death_From_Above
 				bonus = 1
 				uses = 1
-				category = cat_base_strike
+				category = naval_bomber
+			}
+			add_doctrine_cost_reduction = {
+				name = RUS_Death_From_Above
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
 			}
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -4337,18 +4296,20 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 3
-			modifier = {
-				factor = 0
-				already_has_other_doctrine_TI = yes
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_War_Under_The_Sea"
 			add_tech_bonus = {
+				name = RUS_The_Invisible_Navy
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+			}
+			add_doctrine_cost_reduction = {
 				name = RUS_War_Under_The_Sea
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
-				category = cat_trade_interdiction
+				category = naval_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4665,9 +4626,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_New_Tactics_For_New_Ships"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = RUS_Naval_Infantry
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -4694,9 +4655,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_New_Tactics_For_New_Ships_MTG"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = RUS_Naval_Infantry
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -4778,7 +4739,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -4837,7 +4798,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -4937,7 +4898,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -5293,6 +5254,16 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Secure_Central_Asia"
 			add_state_claim = 418 #Ashkhabad
 			if = {
+				limit = {
+					OR = {
+						NOT = { country_exists = MON }
+						MON = { NOT = { has_government = paternal_autocrat } }
+						MON = { has_completed_focus = MON_we_dont_need_russia }
+					}
+				}
+				add_state_claim = 329 #Tuva
+			}
+			if = {
 				limit = { has_subject = ALO }
 				every_state = {
 					limit = { is_core_of = ALO }
@@ -5380,7 +5351,7 @@ focus_tree = {
 		will_lead_to_war_with = DKB
 
 		select_effect = {
-			log = "[GetDateText]: [Root.GetName]: Select Focus RUS_Devoted_Subjects"
+			log = "[GetDateText]: [Root.GetName]: Select Focus RUS_Crisis_On_The_Don"
 			country_event = { id = rusfor.16 days = 3 }
 			DKB = {
 				country_event = { id = rusfor.2 days = 8 }
@@ -5626,7 +5597,7 @@ focus_tree = {
 		will_lead_to_war_with = AZR
 
 		select_effect = {
-			log = "[GetDateText]: [Root.GetName]: Select Focus RUS_Imperial_Benevolence"
+			log = "[GetDateText]: [Root.GetName]: Select Focus RUS_Crush_The_German_Hegemony"
 			set_country_flag = { flag = imminent_war days = 60 value = 1 }
 			if = {
 				limit = {
@@ -5765,6 +5736,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Enemy_In_The_East"
 			add_state_claim = 537 #Sakhalin
+			add_state_claim = 555 #Kurils
 			if = {
 				limit = {
 					NOT = { owns_state = 408 } #Vladivostok
