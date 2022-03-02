@@ -1,6 +1,6 @@
 name: CWTools CI
 
-on: [pull_request, push]
+on: [pull_request]
 
 jobs:
   cwtools_job:
