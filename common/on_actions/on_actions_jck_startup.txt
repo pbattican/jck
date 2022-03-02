@@ -4,28 +4,6 @@ on_actions = {
 			GER = {
 				if = {
 					limit = {
-						LIT = {
-							is_ai = yes
-						}
-					}
-					annex_country = {
-						target = LIT
-						transfer_troops = yes
-					}
-				}
-				if = {
-					limit = {
-						POL = {
-							is_ai = yes
-						}
-					}
-					annex_country = {
-						target = POL
-						transfer_troops = yes
-					}
-				}
-				if = {
-					limit = {
 						BEL = {
 							is_ai = yes
 						}
