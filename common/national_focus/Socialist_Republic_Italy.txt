@@ -1207,24 +1207,14 @@ focus_tree = {
 		id = SRI_risorgimento
 		icon = GFX_ITA_unification
 		cost = 6
-		available = {
-			if = {
-				limit = { is_ai = no }
-				has_completed_focus = SRI_military_build_up
-				OR = {
-					has_completed_focus = SRI_cement_congres_authority
-					has_completed_focus = SRI_cement_chairmans_power
-				}
+		available = { # jck mod change
+			OR = {
+				has_completed_focus = SRI_reform_the_guards
+				has_completed_focus = SRI_disolve_the_guards
 			}
-			else = {
-				OR = {
-					has_completed_focus = SRI_reform_the_guards
-					has_completed_focus = SRI_disolve_the_guards
-				}
-				OR = {
-					has_completed_focus = SRI_workers_self_management
-					has_completed_focus = SRI_rouse_the_people
-				}
+			OR = {
+				has_completed_focus = SRI_workers_self_management
+				has_completed_focus = SRI_rouse_the_people
 			}
 		}
 		x = 24
