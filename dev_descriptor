@@ -10,4 +10,4 @@ dependencies={
 }
 name="JCK-dev"
 picture="JCK.jpg"
-supported_version="1.10.*"
+supported_version="1.11.*"
