@@ -8,7 +8,7 @@ equipments = {
 		}
 
 		is_archetype = yes
-		is_convertable = yes
+		is_convertable = no
 		picture = archetype_strat_bomber_equipment
 		is_buildable = no
 		type = { tactical_bomber }
@@ -58,7 +58,7 @@ equipments = {
 		}
 
 		is_archetype = yes
-		is_convertable = yes
+		is_convertable = no
 		picture = archetype_strat_bomber_equipment
 		is_buildable = no
 		type = { tactical_bomber }
@@ -105,7 +105,7 @@ equipments = {
 		}
 
 		is_archetype = yes
-		is_convertable = yes
+		is_convertable = no
 		picture = archetype_strat_bomber_equipment
 		is_buildable = no
 		type = { fighter interceptor }
@@ -173,10 +173,8 @@ equipments = {
 		parent = tac_bomber_equipment_0
 		priority = 110
 
-		is_convertable = yes
-		can_convert_from = {
-			tac_bomber_equipment_0
-		}
+		is_convertable = no
+
 
 		air_range = 2400
 		maximum_speed = 430
@@ -204,10 +202,7 @@ equipments = {
 		parent = tac_bomber_equipment_1
 		priority = 110
 
-		is_convertable = yes
-		can_convert_from = {
-			tac_bomber_equipment_1
-		}
+		is_convertable = no
 
 		air_range = 2500
 		maximum_speed = 440
@@ -235,11 +230,8 @@ equipments = {
 		parent = tac_bomber_equipment_2
 		priority = 110
 
-		is_convertable = yes
-		can_convert_from = {
-			tac_bomber_equipment_1
-			tac_bomber_equipment_2
-		}
+		is_convertable = no
+
 
 		air_range = 3000
 		maximum_speed = 480
@@ -275,7 +267,7 @@ equipments = {
 		air_ground_attack = 15
 
 		# build_cost_ic = 26
-		is_convertable = yes
+		is_convertable = no
 	}
 
 	# Improved Jet tac_bomber
@@ -286,10 +278,8 @@ equipments = {
 		parent = jet_tac_bomber_equipment_1
 		priority = 120
 
-		is_convertable = yes
-		can_convert_from = {
-			jet_tac_bomber_equipment_1
-		}
+		is_convertable = no
+
 
 		air_range = 5000
 		maximum_speed = 1000
@@ -324,7 +314,7 @@ equipments = {
 		# build_cost_ic = 16
 		naval_strike_attack = 3
 		naval_strike_targetting = 6
-		is_convertable = yes
+		is_convertable = no
 	}
 
 	heavy_fighter_equipment_2 = {
@@ -334,10 +324,8 @@ equipments = {
 		parent = heavy_fighter_equipment_1
 		priority = 100
 
-		is_convertable = yes
-		can_convert_from = {
-			heavy_fighter_equipment_1
-		}
+		is_convertable = no
+
 		air_range = 1700
 		maximum_speed = 550
 		air_agility = 30
@@ -361,11 +349,8 @@ equipments = {
 		parent = heavy_fighter_equipment_2
 		priority = 100
 
-		is_convertable = yes
-		can_convert_from = {
-			heavy_fighter_equipment_1
-			heavy_fighter_equipment_2
-		}
+		is_convertable = no
+
 		air_range = 2000
 		maximum_speed = 600
 		air_agility = 33
@@ -390,7 +375,7 @@ equipments = {
 		}
 
 		is_archetype = yes
-		is_convertable = yes
+		is_convertable = no
 		picture = archetype_strat_bomber_equipment
 		is_buildable = no
 		type = { scout_plane }
@@ -440,7 +425,7 @@ equipments = {
 		build_cost_ic = 20
 		naval_strike_attack = 0
 		naval_strike_targetting = 0
-		is_convertable = yes
+		is_convertable = no
 	}
 
 	scout_plane_equipment_2 = {
@@ -450,10 +435,7 @@ equipments = {
 		parent = scout_plane_equipment_1
 		priority = 100
 
-		is_convertable = yes
-		can_convert_from = {
-			scout_plane_equipment_1
-		}
+		is_convertable = no
 
 		air_range = 1700
 		maximum_speed = 550
