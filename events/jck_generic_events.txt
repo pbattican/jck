@@ -22,7 +22,7 @@ country_event = {
 	}
 	title = jck.navy.0.t
 	desc = jck.navy.0.d
-	picture = GFX_idea_OTT_Horrors_of_the_Weltkrieg
+	picture = GFX_report_event_RUS_ship
 	is_triggered_only = yes
 	option = {
 		name = jck.navy.0.a
