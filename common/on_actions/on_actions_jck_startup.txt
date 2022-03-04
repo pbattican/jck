@@ -40,6 +40,18 @@ on_actions = {
 					add_compliance = 50
 				}
 			}
+			every_country = {
+				limit = {
+					is_ai = no
+					has_navy_size = {
+						size > 0
+						type = capital_ship
+					}
+				}
+				country_event = {
+					id = jck.navy.0
+				}
+			}
 		}
 	}
 }
