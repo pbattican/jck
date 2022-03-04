@@ -2,6 +2,6 @@ CAN_victory_decisions = {
 	icon = GFX_decision_category_military_operation
 
 	allowed = {
-		original_tag = CAN
+		always = no
 	}
 }
