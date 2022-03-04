@@ -94,6 +94,13 @@ NDefines.NNavy.ORG_COST_WHILE_MOVING = { -- org cost while the ships are moving
 		0.3, -- RESERVE_FLEET
 		0.2, -- NAVAL_INVASION_SUPPORT
 	}
+NDefines.NNavy.AGGRESSION_SETTINGS_VALUES = { -- ships will use this values while deciding to attack enemies
+		0.1,		-- do not engage
+		0.5,	-- low
+		0.9,	-- medium
+		2.0,	-- high
+		10000,	-- I am death incarnate!
+	}
 NDefines.NNavy.NAVAL_MINES_DECAY_AT_PEACE_TIME = 2		-- How fast mines are decaying in peace time. Planting mines in peace time may be exploitable, so it's blocked atm. That's why after war we should decay them too.
 NDefines.NNavy.BASE_SPOTTING_FROM_RADAR = 10	            -- base spotting percentage that comes from full radar coverage
 -- Modifiers the priority for convoy usage
