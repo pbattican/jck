@@ -4,28 +4,6 @@ on_actions = {
 			GER = {
 				if = {
 					limit = {
-						LIT = {
-							is_ai = yes
-						}
-					}
-					annex_country = {
-						target = LIT
-						transfer_troops = yes
-					}
-				}
-				if = {
-					limit = {
-						POL = {
-							is_ai = yes
-						}
-					}
-					annex_country = {
-						target = POL
-						transfer_troops = yes
-					}
-				}
-				if = {
-					limit = {
 						BEL = {
 							is_ai = yes
 						}
@@ -60,6 +38,18 @@ on_actions = {
 						has_resistance = yes
 					}
 					add_compliance = 50
+				}
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+					has_navy_size = {
+						size > 0
+						type = capital_ship
+					}
+				}
+				country_event = {
+					id = jck.navy.0
 				}
 			}
 		}

@@ -55,7 +55,7 @@ NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane t
 0.0, -- NAVAL_KAMIKAZE
 0.0, -- PORT_STRIKE
 300, -- ATTACK_LOGISTICS vanilla=0.0
-0.2, -- AIR_SUPPLY
+300, -- AIR_SUPPLY
 0.0, -- TRAINING
 0.0, -- NAVAL_MINES_PLANTING
 0.0, -- NAVAL_MINES_SWEEPING
@@ -70,6 +70,37 @@ NDefines.NNavy.SUBMARINE_ESCAPE_RATIOS = { -- subs will escape battle in convoy 
                                             1.0,   -- high
                                             1.0,   -- I am death incarnate!
                                         }
+NDefines.NNavy.MISSION_SUPREMACY_RATIOS = { -- supremacy multipliers for different mission types
+		0.0, -- HOLD
+		1.0, -- PATROL		
+		0.5, -- STRIKE FORCE 
+		0.5, -- CONVOY RAIDING
+		0.5, -- CONVOY ESCORT
+		0.3, -- MINES PLANTING	
+		0.3, -- MINES SWEEPING	
+		0.0, -- TRAIN
+		0.0, -- RESERVE_FLEET
+		1.0, -- NAVAL_INVASION_SUPPORT
+	}
+NDefines.NNavy.ORG_COST_WHILE_MOVING = { -- org cost while the ships are moving
+		0.3, -- HOLD
+		0.2, -- PATROL
+		0.2, -- STRIKE FORCE
+		0.2, -- CONVOY RAIDING
+		0.2, -- CONVOY ESCORT
+		0.2, -- MINES PLANTING
+		0.2, -- MINES SWEEPING
+		0.2, -- TRAIN
+		0.3, -- RESERVE_FLEET
+		0.2, -- NAVAL_INVASION_SUPPORT
+	}
+NDefines.NNavy.AGGRESSION_SETTINGS_VALUES = { -- ships will use this values while deciding to attack enemies
+		0.1,		-- do not engage
+		0.5,	-- low
+		0.9,	-- medium
+		2.0,	-- high
+		10000,	-- I am death incarnate!
+	}
 NDefines.NNavy.NAVAL_MINES_DECAY_AT_PEACE_TIME = 2		-- How fast mines are decaying in peace time. Planting mines in peace time may be exploitable, so it's blocked atm. That's why after war we should decay them too.
 NDefines.NNavy.BASE_SPOTTING_FROM_RADAR = 10	            -- base spotting percentage that comes from full radar coverage
 -- Modifiers the priority for convoy usage
