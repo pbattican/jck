@@ -1,0 +1,24 @@
+RUS_foreign_affairs = {
+	RUS_annex_AZJ = {
+		icon = generic_research
+		allowed = {
+			original_tag = RUS
+		}
+		available = {
+			date > 1939.3.1
+			has_completed_focus = RUS_The_Road_To_War
+		}
+		visible = {
+			original_tag = RUS
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision RUS_annex_AZJ"
+			annex_country = {
+				target = AZR
+				transfer_troops = no
+			}
+		}
+	}
+}
