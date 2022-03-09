@@ -271,7 +271,7 @@ focus_tree = {
 		relative_position_id = RUS_Restore_The_Monarchy
 		x = -3
 		y = 3
-		cost = 10
+		cost = 9
 		ai_will_do = {
 			factor = 10
 		}
@@ -661,7 +661,7 @@ focus_tree = {
 		relative_position_id = RUS_Political_Stabilisation
 		x = -3
 		y = 3
-		cost = 12
+		cost = 11
 		ai_will_do = {
 			factor = 10
 		}
@@ -1048,7 +1048,7 @@ focus_tree = {
 		relative_position_id = RUS_A_Firm_Hand
 		x = 1
 		y = 1
-		cost = 10
+		cost = 9
 		ai_will_do = {
 			factor = 10
 		}
@@ -1608,7 +1608,7 @@ focus_tree = {
 		relative_position_id = RUS_Establish_The_VES
 		x = -2
 		y = 2
-		cost = 10
+		cost = 6
 		prerequisite = {
 			focus = RUS_Ural_Tractor_Plants
 		}
@@ -1724,7 +1724,7 @@ focus_tree = {
 		relative_position_id = RUS_Reinstitute_The_Zemstva
 		x = -1
 		y = 2
-		cost = 10
+		cost = 6
 		prerequisite = {
 			focus = RUS_Funding_Frenzy
 		}
@@ -2046,7 +2046,7 @@ focus_tree = {
 		relative_position_id = RUS_Bureaucratic_Overhaul
 		x = 1
 		y = 2
-		cost = 10
+		cost = 6
 		prerequisite = {
 			focus = RUS_MinProm
 		}
@@ -2259,7 +2259,7 @@ focus_tree = {
 		relative_position_id = RUS_Cooperative_Capitalism
 		x = 0
 		y = 1
-		cost = 10
+		cost = 6
 		prerequisite = {
 			focus = RUS_Cooperative_Capitalism
 		}
@@ -2454,7 +2454,7 @@ focus_tree = {
 		relative_position_id = RUS_Resource_Prospection
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = RUS_Resource_Prospection
 		}
@@ -2589,7 +2589,7 @@ focus_tree = {
 		icon = GFX_goal_RUS_army
 		x = 11
 		y = 7
-		cost = 10
+		cost = 9
 
 		ai_will_do = {
 			factor = 500
@@ -2607,7 +2607,7 @@ focus_tree = {
 		relative_position_id = RUS_Army_Modernisation
 		x = -4
 		y = 1
-		cost = 10
+		cost = 9
 
 		ai_will_do = {
 			factor = 5
@@ -5384,7 +5384,7 @@ focus_tree = {
 		relative_position_id = RUS_Realpolitik
 		x = 1
 		y = 3
-		cost = 6
+		cost = 5
 		available = {
 			is_subject = no
 		}
@@ -5487,7 +5487,7 @@ focus_tree = {
 		relative_position_id = RUS_The_Road_To_War
 		x = 0
 		y = 1
-		cost = 6
+		cost = 5
 		available = {
 			is_subject = no
 		}
