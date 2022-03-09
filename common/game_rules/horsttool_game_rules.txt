@@ -10,8 +10,8 @@ horst_host_country = {
 		desc = ""
 	}
 	option = {
-		name = ITA
-		text = "Italy"
+		name = SRI
+		text = "Socialist Republic of Italy"
 		desc = ""
 	}
 	option = {
@@ -20,8 +20,8 @@ horst_host_country = {
 		desc = ""
 	}
 	option = {
-		name = HUN
-		text = "Hungary"
+		name = AUS
+		text = "Austria"
 		desc = ""
 	}
 	option = {
@@ -36,7 +36,7 @@ horst_host_country = {
 	}
 	option = {
 		name = ENG
-		text = "Great Britain"
+		text = "Union of Britain"
 		desc = ""
 	}
 	option = {
@@ -77,6 +77,16 @@ horst_host_country = {
 	option = {
 		name = MEX
 		text = "Mexico"
+		desc = ""
+	}
+	option = {
+		name = RUS
+		text = "Russia"
+		desc = ""
+	}
+	option = {
+		name = UKR
+		text = "Ukraine"
 		desc = ""
 	}
 }

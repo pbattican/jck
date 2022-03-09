@@ -8,16 +8,16 @@ on_actions = {
 				set_variable = { host = GER.id }
 			}
 			else_if = {
-				limit = {has_game_rule = { rule = horst_host_country option = ITA} }
-				set_variable = { host = ITA.id }
+				limit = {has_game_rule = { rule = horst_host_country option = SRI} }
+				set_variable = { host = SRI.id }
 			}
 			else_if = {
 				limit = {has_game_rule = { rule = horst_host_country option = ROM} }
 				set_variable = { host = ROM.id }
 			}
 			else_if = {
-				limit = {has_game_rule = { rule = horst_host_country option = HUN} }
-				set_variable = { host = HUN.id }
+				limit = {has_game_rule = { rule = horst_host_country option = AUS} }
+				set_variable = { host = AUS.id }
 			}
 			else_if = {
 				limit = {has_game_rule = { rule = horst_host_country option = BUL} }
@@ -58,6 +58,14 @@ on_actions = {
 			else_if = {
 				limit = {has_game_rule = { rule = horst_host_country option = MEX} }
 				set_variable = { host = MEX.id }
+			}
+			else_if = {
+				limit = {has_game_rule = { rule = horst_host_country option = RUS} }
+				set_variable = { host = RUS.id }
+			}
+			else_if = {
+				limit = {has_game_rule = { rule = horst_host_country option = UKR} }
+				set_variable = { host = UKR.id }
 			}
 			var:host = {
 				set_variable = { marked_states = 0 }
