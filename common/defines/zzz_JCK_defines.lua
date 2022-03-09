@@ -35,6 +35,7 @@ NDefines.NMilitary.MAX_AIR_EXPERIENCE = 1000
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 8 -- vanilla = 20
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 2 -- vanilla = 5
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 4 -- vanilla = 10
+
 NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false -- allows leaders to grind without malus if they gain traits
 
 NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.02, 0.15, 0.225, 0.35, 0.5, 0.7, 0.925, 1.15 } --vanilla={0.1, 0.3, 0.75, 0.9}
