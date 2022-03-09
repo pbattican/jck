@@ -440,7 +440,7 @@ focus_tree = {
 		x = 0
 		y = 4
 		relative_position_id = GER_political_1
-		cost = 6
+		cost = 7
 
 		ai_will_do = {
 			factor = 50
@@ -1204,11 +1204,11 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_siemens"
 			custom_effect_tooltip = GER_siemens_unlock
 			55 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				set_building_level = { type = infrastructure level = 5 }
 			}
 			51 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				set_building_level = { type = infrastructure level = 5 }
 			}
 		}
@@ -1265,7 +1265,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1295,7 +1295,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1353,7 +1353,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1383,7 +1383,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2059,12 +2059,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_mobile_3"
-			custom_effect_tooltip = GER_doctrine_mobile_3_tooltip
-			hidden_effect = {
-				swap_ideas = {
-					remove_idea = GER_invest_arms_industry
-					add_idea = GER_tank_idea
-				}
+			swap_ideas = {
+				remove_idea = GER_invest_arms_industry
+				add_idea = GER_tank_idea
 			}
 			add_tech_bonus = {
 				name = GER_doctrine_mobile_3
