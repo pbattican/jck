@@ -136,3 +136,4 @@ NDefines.NResistance.GARRISON_LOG_MAX_MONTHS = 1
 
 ------------------------------------------ Building ------------------------------------------
 NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.125						-- Vanilla is 0.2
+NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100 -- this is due to 50% increase in plane cost	-- Vanilla is 200 
