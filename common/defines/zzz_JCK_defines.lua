@@ -1,3 +1,5 @@
+--- Force update 3/9/2022
+
 ------------------------------------------ Game ------------------------------------------
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 --12
 NDefines.NGame.GAME_SPEED_SECONDS = { 2, 0.5, 0.195, 0.15, 0.1 }
@@ -21,8 +23,8 @@ NDefines.NProduction.LICENSE_EQUIPMENT_SPEED_NOT_FACTION = 0	--vanilla=-0.1
 NDefines.NProduction.LICENSE_EQUIPMENT_UPGRADE_XP_FACTOR = 1	--vanilla=2
 
 ------------------------------------------ Military ------------------------------------------
-NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 3.5 -- More XP gain per day of combat. Base is 3
-NDefines.NMilitary.LEND_LEASE_FIELD_EXPERIENCE_SCALE = 0.0055 -- Encourage more Lend-Lease for XP gain. Base is 0.005
+NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 2.4 -- More XP gain per day of combat. Base is 1.2
+NDefines.NMilitary.LEND_LEASE_FIELD_EXPERIENCE_SCALE = 0.001 -- Encourage more Lend-Lease for XP gain. Base is 0.0005
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 72		-- vanilla = 24
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 72	-- vanilla = 24
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1   -- vanilla = 3
@@ -37,6 +39,7 @@ NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 2 -- vanilla = 5
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 4 -- vanilla = 10
 
 NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false -- allows leaders to grind without malus if they gain traits
+NDefines.NMilitary.LEADER_EXPERIENCE_SCALE = 0.8 -- Reduce leader XP gain since we allow people to grind anything vanilla = 1.0
 
 NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.02, 0.15, 0.225, 0.35, 0.5, 0.7, 0.925, 1.15 } --vanilla={0.1, 0.3, 0.75, 0.9}
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.107 --vanilla=0.25
@@ -133,3 +136,4 @@ NDefines.NResistance.GARRISON_LOG_MAX_MONTHS = 1
 
 ------------------------------------------ Building ------------------------------------------
 NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.125						-- Vanilla is 0.2
+NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100 -- this is due to 50% increase in plane cost	-- Vanilla is 200 
