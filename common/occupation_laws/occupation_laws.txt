@@ -216,6 +216,7 @@ liberate_workers_occupation = {
 		OR = {
 			has_government = syndicalist
 			has_government = radical_socialist
+			has_government = totalist
 		}
 	}
 
@@ -432,7 +433,7 @@ brutally_oppressive_occupation = {
 
 	visible = {
 		OR = {
-			has_government = totalist
+			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			has_government = national_populist
 		}
