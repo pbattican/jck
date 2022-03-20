@@ -32,6 +32,39 @@ scripted_gui = {
 				}
 			}
 
+			kick_from_faction_click = { 
+				owner = {
+					set_temp_variable = { ROOT.marks = this }
+					var:marks = {
+						remove_from_faction = this
+					}
+					ROOT = {
+						for_each_scope_loop = {
+							array = marked_states
+							clear_variable = mark_status
+						}
+						clear_array = marked_states
+					}
+				}
+			}
+
+			recall_volunteers_button_click = { 
+				owner = {
+					set_temp_variable = { ROOT.marks = this }
+					var:marks = {
+						recall_volunteers_from = this
+					}
+					ROOT = {
+						for_each_scope_loop = {
+							array = marked_states
+							clear_variable = mark_status
+						}
+						clear_array = marked_states
+					}
+				}
+			}
+
+
 			clear_all_markings_click = {
 				ROOT = {
 					for_each_scope_loop = {
@@ -191,8 +224,7 @@ scripted_gui = {
 			}
 
 
-			cheat1_click={if={limit={Root={has_country_flag=cheating}} set_variable={Root.selected_cheat=1} ROOT={clr_country_flag=cheating} } else={ROOT= { set_country_flag = cheating} }
-			}
+			cheat1_click={if={limit={Root={has_country_flag=cheating}} set_variable={Root.selected_cheat=1} ROOT={clr_country_flag=cheating} } else={ROOT= { set_country_flag = cheating} }}
 			cheat2_click={set_variable={Root.selected_cheat=2} ROOT= { clr_country_flag = cheating} }
 			cheat3_click={set_variable={Root.selected_cheat=3} ROOT= { clr_country_flag = cheating} }
 			cheat4_click={set_variable={Root.selected_cheat=4} ROOT= { clr_country_flag = cheating} }
@@ -265,7 +297,12 @@ scripted_gui = {
 			add_cores_click_enabled = {
 				check_variable = { ROOT.marked_states^num > 0 }
 			}
-
+			add_compliance_click_enabled = {
+				check_variable = { ROOT.marked_states^num > 0 }
+			}
+			recall_volunteers_button_click_enabled = {
+				check_variable = { ROOT.marked_states^num > 0 }
+			}
 		}
 
 	}

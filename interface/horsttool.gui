@@ -65,19 +65,39 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "observer" 
-			position = {x=40 y=200}
+			position = {x=20 y=200}
 			spriteType = "GFX_observer_button"
-         		pdx_tooltip = "OBSERVER"
+         	pdx_tooltip = "OBSERVER"
 			pdx_tooltip_delayed = "OBSERVER_DELAYED"
-			scale = 0.70
+			scale = 0.60
 		}
 		buttonType = {
 			name = "whitepeace"	
-			position = {x=100 y=195}
+			position = {x=55 y=195}
 			spriteType = "GFX_relation_truce"
-            		scale=1.8
+            scale=1.45
 			pdx_tooltip = "WHITEPEACE"
 			pdx_tooltip_delayed = "WHITEPEACE_DELAYED"
+			#scale = 0.95
+		}
+
+		buttonType = {
+			name = "kick_from_faction"	
+			position = {x=100 y=195}
+			spriteType = "GFX_relation_faction"
+            scale=1.5
+			pdx_tooltip = "KICK_FROM_FACTION"
+			pdx_tooltip_delayed = "KICK_FROM_FACTION_DELAYED"
+			#scale = 0.95
+		}
+
+		buttonType = {
+			name = "recall_volunteers_button"	
+			position = {x=135 y=200}
+			spriteType = "GFX_relation_volunteers_initiator"
+            scale=1.45
+			pdx_tooltip = "RECALL_VOLUNTEERS_BUTTON"
+			pdx_tooltip_delayed = "RECALL_VOLUNTEERS_BUTTON_DELAYED"
 			#scale = 0.95
 		}
 	

@@ -10,6 +10,12 @@
  
  WHITEPEACE:0 "§HWhitepeace§!\nCountry will be whitepeaced with every enemy\n\n"
  WHITEPEACE_DELAYED:0 ""
+
+ KICK_FROM_FACTION:0 "§HKick from faction§!\nKick the marked country from the selected nation's faction\n\n"
+ KICK_FROM_FACTION_DELAYED:0 ""
+
+ RECALL_VOLUNTEERS_BUTTON:0 "§HRecall Volunteers§!\nVolunteers sent to the marked country will be recalled from the selected country\n\n"
+ RECALL_VOLUNTEERS_BUTTON_DELAYED:0 ""
  
  CLEAR_ALL_MARKINGS:0 "§HClear All Marks§!\nEvery mark on world will be removed\n\n"
  CLEAR_ALL_MARKINGS_DELAYED:0 ""
@@ -34,8 +40,8 @@
 
  ST_TOOLTIP_on:0 "§HActivate 'Host Tool'§!"
  ST_TOOLTIP_off:0 "§HDeactivate 'Host Tool'§!"
-transfer_states_on:0 "Host Tool:£trigger_no"
-transfer_states_off:0 "Host Tool:£trigger_yes"
+ transfer_states_on:0 "Host Tool:£trigger_no"
+ transfer_states_off:0 "Host Tool:£trigger_yes"
 
  CHEAT_SELECT:0   "Select cheat"
  CHEAT1:0   "Armor - 100%"
