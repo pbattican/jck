@@ -23,8 +23,8 @@ NDefines.NProduction.LICENSE_EQUIPMENT_SPEED_NOT_FACTION = 0	--vanilla=-0.1
 NDefines.NProduction.LICENSE_EQUIPMENT_UPGRADE_XP_FACTOR = 1	--vanilla=2
 
 ------------------------------------------ Military ------------------------------------------
-NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 3.0 -- More XP gain per day of combat. Base is 1.2
-NDefines.NMilitary.LEND_LEASE_FIELD_EXPERIENCE_SCALE = 0.00055 -- Encourage more Lend-Lease for XP gain. Base is 0.0005
+NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 2.4 -- More XP gain per day of combat. Base is 1.2
+NDefines.NMilitary.LEND_LEASE_FIELD_EXPERIENCE_SCALE = 0.001 -- Encourage more Lend-Lease for XP gain. Base is 0.0005
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 72		-- vanilla = 24
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 72	-- vanilla = 24
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1   -- vanilla = 3
