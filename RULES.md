@@ -1,9 +1,8 @@
-**Kaiserreich w/ JCK**
-
+# Kaiserreich w/ JCK
 
 _Based on Kaiserreich Weekly Ruleset_
 
-**General**
+## General
 
 
 
@@ -11,22 +10,18 @@ _Based on Kaiserreich Weekly Ruleset_
 * Breaking the rules, acting in bad faith and/or deliberately exploiting loopholes will not be tolerated.
 * Co-ops on majors are allowed if all required nations have been filled. If a co-op is new and does not pass vetting, other factions are not entitled to a co-op.
 
-**Game settings**
+### Game settings
 
 **[https://discord.com/channels/818250339362799626/947325526782115852/948435985476231209](https://discord.com/channels/818250339362799626/947325526782115852/948435985476231209)**
 
-**Formats \
+### Formats 
 _Rules listed below supercede and are in addition to the rest of the rules_**
 
-**The 2nd Weltkrieg**
-
-
+#### The 2nd Weltkrieg
 
 * The 2nd Weltkrieg kicks off over Alsace-Lorraine. The Reichspakt and Entente fight against the Third Internationale, Co-Prosperity Sphere, and Moscow Accord to determine the state of the world.
 
-**Europe Only**
-
-
+#### Europe Only
 
 * The Reichspakt and Third Int + Russia battle it out for control of Europe in the 2nd Weltkrieg.
 * Nations outside of Europe are banned in this format.
@@ -37,9 +32,9 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 * 3I + Russia will send to CSA until CSA capitulates, then may send to the PSA.
 * RP will send to AUS until AUS capitulates and then may send to USA.
 
-**Required Nations**
+## Required Nations
 
-**_Reichspakt_**
+### Reichspakt
 
 
 <table>
@@ -80,7 +75,7 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 </table>
 
 
-**_Third Internationale_**
+### Third Internationale
 
 
 <table>
@@ -109,7 +104,7 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 </table>
 
 
-**_Entente_**
+### Entente
 
 
 <table>
@@ -138,7 +133,7 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 </table>
 
 
-**_Co-Prosperity Sphere_**
+### Co-Prosperity Sphere
 
 
 <table>
@@ -167,7 +162,7 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 </table>
 
 
-**_Moscow Accord_**
+### Moscow Accord
 
 
 <table>
@@ -186,7 +181,7 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 </table>
 
 
-**General game Rules**
+## General game Rules
 
 
 
@@ -202,8 +197,8 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 * If you die as a civil war nation, you may not play another nation within the same civil war
 * If a player is subbing for an important minor, their initial nation is considered to have a player for the rest of the session for rules purposes.   
 
-**<span style="text-decoration:underline;">Exploits</span> - _Non-exhaustive list \
-<span style="text-decoration:underline;">Exploits are not allowed</span> - the only one that is allowed is field marshall frontlines_**
+## <span style="text-decoration:underline;">Exploits</span> - Non-exhaustive list
+<span style="text-decoration:underline;">Exploits are not allowed</span> - the only one that is allowed is field marshall frontlines
 
 
 
@@ -214,7 +209,7 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 * **Paradrop double combatting / preventing retreats**.
 * Using **_<span style="text-decoration:underline;">both</span> _Force Attack / Last stand** **_<span style="text-decoration:underline;">at the same time</span>_** _(or any other means that could make a division unable to lose organization)_ is **not allowed**.
 
-**Ideological Spectrum**
+## Ideological Spectrum
 
 
 
@@ -222,14 +217,14 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 * <span style="text-decoration:underline;">Center wing ideologies</span> : Social Conservatism, Market Liberalism, Social Liberalism, Social Democrats
 * <span style="text-decoration:underline;">Left wing ideologies</span>: Radical Socialism, Syndicalism, Totalism
 
-**Alignment**
+## Alignment
 
 
 
 * A nation is considered aligned to a certain faction, if the player controlling it at some point in the game states his support for that faction. Once an alignment is made, it cannot be altered unless the faction stops existing
 * Once you align yourself with a faction, you follow the faction rules. This does not include military access.
 
-**War and Peace Rules**
+## War and Peace Rules
 
 Player wars may not be declared until the start of “**The Second Weltkrieg**”. 
 
@@ -243,7 +238,7 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 * It is forbidden to give Military and naval access to any nation which is not either 1) a member of your faction, or 2) is facing the same faction in a war as you
 * You may not annex or puppet **Legation Cities** through influence decisions
 
-**Division Rules**
+## Division Rules
 
 
 
@@ -254,7 +249,7 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 * You may only deploy units within 3 provinces from any enemy unit.
 * Any division template that is used by an event spawn is prohibited from being edited until any/all associated event spawns have fired - to prevent abuse of free divisions
 
-**Volunteer, Lend lease and Attachée Rules**
+## Volunteer, Lend lease and Attachée Rules
 
 <span style="text-decoration:underline;">Volunteers</span>
 
@@ -272,20 +267,20 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 * Volunteers To **Dutch East Indies** are not allowed if there is a player on **Insulindia**
 * You may not recall volunteers if your volunteers are within 3 tiles from enemy forces.
 
-<span style="text-decoration:underline;">Lend lease</span>
+### <span style="text-decoration:underline;">Lend lease</span>
 
 
 
 * Lend-Lease may be sent without restriction for non-neutral nations
 
-<span style="text-decoration:underline;">Attachées</span>
+### <span style="text-decoration:underline;">Attachées</span>
 
 
 
 * You may only send attachées to ideological partners (see ideological spectrum above). Faction members follow the ideology of their faction leader
 * The Co Prosperity Sphere is allowed to send attachées to the **PSA**. They are never allowed to send an attachee to the **AUS**. 
 
-**Navy Rules**						
+## Navy Rules
 
 
 
@@ -293,16 +288,16 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 * Submarines are not allowed to be in stacks of 1.
 * Sub 4 hulls ( can still research for torp / engine ) and Snorkel 2 are BANNED
 
-**Air Rules**
+## Air Rules
 
 
 
 * Minimum air wing size is 100. Air volunteer wings must come as close as possible to 100
 * Strategic Bombers 3 are BANNED
 
-**Nation Specific Rules**
+## Nation Specific Rules
 
-<span style="text-decoration:underline;">Banned nation(s)	</span>						
+### <span style="text-decoration:underline;">Banned nation(s)	</span>						
 
 
 
@@ -319,7 +314,7 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 * **Hawaii, CSA, AUS**
 * **Iceland**
 
-<span style="text-decoration:underline;">Neutral Nation(s)</span>
+### <span style="text-decoration:underline;">Neutral Nation(s)</span>
 
 
 
@@ -329,7 +324,7 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 
 Neutral nations may not join a faction. Player neutrals may not receive or send lend-lease. They may not license production. **_They may send volunteers to a single nation in their faction._** No wars may be declared against these nations except nation specific exceptions. 
 
-<span style="text-decoration:underline;">Civil War nations</span>
+### <span style="text-decoration:underline;">Civil War nations</span>
 
 
 
@@ -337,183 +332,181 @@ Neutral nations may not join a faction. Player neutrals may not receive or send 
 * The PSA is the only allowed ACW nation. The Co-Pro co-op has the option to hotjoin in as the PSA if the PSA is not taken. If no USA player, this does not apply.
 * No ACW nation may be admitted to faction.
 
-**_Reichspakt countries_**
+## Reichspakt countries
 
 Reichspakt is always considered **<span style="text-decoration:underline;">Right wing</span>**
 
-**<span style="text-decoration:underline;">Germany Rules</span>**
+### <span style="text-decoration:underline;">Germany Rules</span>
 
 
 
-* **Germany **may not declare war on **Russia** over the **Don Kuban Union** via **Russia's** focus and events regarding the **Don Kuban Union**
+* **Germany** may not declare war on **Russia** over the **Don Kuban Union** via **Russia's** focus and events regarding the **Don Kuban Union**
 * **Germany** is **not allowed** to block Russian intervention in **Don-Kuban Union** and **Azerbaijan** 
-* **Germany **may not guarantee **Burma**
-* **Germany **may not annex any **Dutch-East Indies [DEI] **land in a war with the **Netherlands** - Germany may not call **German East Asia** into said war so AI will not take land. 
-* **Germany **may not release **Netherlands **after their revolution via inviting Wilhelmina back to the throne
-* **Germany **may not release **Insulindia**/**DEI** as a puppet, it must be occupied if taken prior to **the Second Weltkrieg**
-* **Germany **must annex all of France so the French treaty events fire properly, and **National France** isn’t locked out of its focus tree.
-* If **Germany **falls into exile, the German High Seas Fleet must scuttle all capital ships and cruisers. It may retain Weltkrieg era cruisers.
+* **Germany** may not guarantee **Burma**
+* **Germany** may not annex any **Dutch-East Indies [DEI]** land in a war with the **Netherlands** - Germany may not call **German East Asia** into said war so AI will not take land. 
+* **Germany** may not release **Netherlands** after their revolution via inviting Wilhelmina back to the throne
+* **Germany** may not release **Insulindia**/**DEI** as a puppet, it must be occupied if taken prior to **the Second Weltkrieg**
+* **Germany** must annex all of France so the French treaty events fire properly, and **National France** isn’t locked out of its focus tree.
+* If **Germany** falls into exile, the German High Seas Fleet must scuttle all capital ships and cruisers. It may retain Weltkrieg era cruisers.
 * **Germany in Exile** may join the Entente.
 
-**<span style="text-decoration:underline;">Austria Rules</span>**									
+### <span style="text-decoration:underline;">Austria Rules</span>							
 
 
 
-* **Austria **is considered right wing for volunteer purposes.
-* **Austria **will be put into the Reichspakt at the start of **the Second Weltkrieg**, along with its faction members
+* **Austria** is considered right wing for volunteer purposes.
+* **Austria** will be put into the Reichspakt at the start of **the Second Weltkrieg**, along with its faction members
 
-**<span style="text-decoration:underline;">Mittelafrika Rules</span>**								
-
-
-
-* **Mittelafrika **is not allowed to call the Reichspakt into the Bush War with **Portugal**
-
-**<span style="text-decoration:underline;">Poland / Polish Lithuanian Commonwealth (PLC) Rules</span>**
+### <span style="text-decoration:underline;">Mittelafrika Rules</span>								
 
 
 
-* **Poland / PLC **must join the Reichspakt.
+* **Mittelafrika** is not allowed to call the Reichspakt into the Bush War with **Portugal**
+
+### <span style="text-decoration:underline;">Poland / Polish Lithuanian Commonwealth (PLC) Rules</span>
+
+
+
+* **Poland / PLC** must join the Reichspakt.
 * **PLC** can’t use their focus to declare war on **Russia** until **The Second Weltkrieg** has started
 
-**<span style="text-decoration:underline;">Bulgaria Rules</span>**
+### <span style="text-decoration:underline;">Bulgaria Rules</span>
 
 
 
-* **Bulgaria **may use the “Seize Thrace” decision
+* **Bulgaria** may use the “Seize Thrace” decision
 * **Bulgaria** has to accept the event peace in any war with the **Ottoman Empire**. They are not allowed to try to avoid triggering it. They are not allowed to demand Constantinople afterwards. 
 
-**<span style="text-decoration:underline;">Greece Rules</span>**
+### <span style="text-decoration:underline;">Greece Rules</span>
 
 
 
-* **Greece **may not, via any method, declare war on the **Ottoman Empire.**
+* **Greece** may not, via any method, declare war on the **Ottoman Empire.**
 * Must join Reichspakt
 
-**<span style="text-decoration:underline;">Netherlands</span> **Rules
+### <span style="text-decoration:underline;">Netherlands</span> Rules
 
 
 
-* **Netherlands** may not place troops outside of Europe** **until the Civil war begins if there is a player on **DEI/Insulindia**.
-* **Netherlands **is not allowed to decline peace events from **Insulindia** if there is a** **player on **DEI/Insulindia**.
+* **Netherlands** may not place troops outside of Europe until the Civil war begins if there is a player on **DEI/Insulindia**.
+* **Netherlands** is not allowed to decline peace events from **Insulindia** if there is a player on **DEI/Insulindia**.
 * **Netherlands** has to join the Reichspakt.
 * **Netherlands** is not allowed to select Palar as the governor for the **Dutch East Indies**.
-* **Netherlands** is not allowed to invite faction members into the **Insulindian **revolt.
+* **Netherlands** is not allowed to invite faction members into the **Insulindian** revolt.
 
-**<span style="text-decoration:underline;">Serbia + Romania + Sweden</span>**
+### <span style="text-decoration:underline;">Serbia + Romania + Sweden</span>
 
 
 
 * Must join Reichspakt
 
-**_Third Internationale countries_**
+## Third Internationale countries
 
 The Third Internationale and nations in it are always considered **<span style="text-decoration:underline;">Left Wing</span>**
 
-**<span style="text-decoration:underline;">Commune of France Rules</span>**								
+### <span style="text-decoration:underline;">Commune of France Rules</span>						
 
 
 
 * **Commune of France** - If intervening in Italy and winning - must give all Italian land to the **Socialist Republic of Italy**
 
-**<span style="text-decoration:underline;">Spain Rules	</span>**									
+### <span style="text-decoration:underline;">Spain Rules	</span>							
 
 
 
 * **~~Spain must switch to CNT-FAI at the start of the civil war and cannot avoid the SCW.~~** Spain must avoid the civil war and go CNT-FAI ( SCW still busted and causes a desync / crash )
-* **Spain **is not allowed to annex **Mozambique **and **Angola **in their peace-deal with **Portugal **
-* **Spain **may attack **Portugal via decision **after completing the Consolidate Spain Focus
-* **Spain** must finish the **Portuguese-Spanish **war within six months of its start
+* **Spain** is not allowed to annex **Mozambique** and **Angola** in their peace-deal with **Portugal**
+* **Spain** may attack **Portugal via decision** after completing the Consolidate Spain Focus
+* **Spain** must finish the **Portuguese-Spanish** war within six months of its start
 
-**<span style="text-decoration:underline;">Ireland + Switzerland Rules</span>**
+### <span style="text-decoration:underline;">Ireland + Switzerland Rules</span>
 
 
 
 * Must join the Third Internationale if a player
 
-**_Entente Countries_**
+## Entente Countries
 
 The Entente and nations in it are always considered **<span style="text-decoration:underline;">Center wing</span>**
 
-**<span style="text-decoration:underline;">Canada Rules</span>**										
+### <span style="text-decoration:underline;">Canada Rules</span>										
+
+
+* **Canada** must do everything within its power to ensure an alliance with **USA if USA is a player**
+
+### <span style="text-decoration:underline;">USA Rules</span>
+
+
+* **USA** must intend to remain as the **USA **and not a civil war faction.
+* **USA** is considered aligned with the Entente, must join the Entente, and is considered **Center Wing**
+* **USA** is forced to elect Jack Reed.
+* **USA** cannot use decisions for the color- war plans before joining the Entente faction.
+* **USA** is not allowed to peacefully unite with the **PSA**
+* **USA** must reclaim Hawaii. 
+* **USA** may not use the license mechanic, or be licensed from until it joins the Entente ingame
+
+### <span style="text-decoration:underline;">Dominion of India Rules</span>								
 
 
 
-* **Canada **must do everything within its power to ensure an alliance with **USA if USA is a player**
+* **Dominion of India** is not allowed to join any Entente wars outside of **India** until **India** is united or after January 1st 1940 or it has been declared on by an outside power.
 
-**<span style="text-decoration:underline;">USA Rules</span>**
-
-
-
-* **USA **must intend to remain as the **USA **and not a civil war faction.
-* **USA **is considered aligned with the Entente, must join the Entente, and is considered **Center Wing**
-* **USA **is forced to elect Jack Reed.
-* **USA **cannot use decisions for the color- war plans before joining the Entente faction.
-* **USA **is not allowed to peacefully unite with the **PSA**
-* **USA **must reclaim Hawaii. 
-* **USA **may not use the license mechanic, or be licensed from until it joins the Entente ingame
-
-**<span style="text-decoration:underline;">Dominion of India Rules</span>**										
+### <span style="text-decoration:underline;">National France Rules	</span>					
 
 
 
-* **Dominion of India** is not allowed to join any Entente wars outside of **India **until **India **is united or after  January 1st 1940 or it has been declared on by an outside power.
+* **National France** - If intervening in **Italy** and winning – must give all Italian land to **Sardinia** if it is a player
 
-**<span style="text-decoration:underline;">National France Rules	</span>**									
-
-
-
-* **National France **- If intervening in **Italy **and winning – must give all Italian land to **Sardinia **if it is a player
-
-**<span style="text-decoration:underline;">Australasia Rules</span>**
+### <span style="text-decoration:underline;">Australasia Rules</span>
 
 
 
 * None at this time
 
-**_Co-Prosperity Sphere Countries_**
+## Co-Prosperity Sphere Countries
 
 The Co Prosperity Sphere and Japan is always considered **<span style="text-decoration:underline;">Right Wing</span>**
 
-**<span style="text-decoration:underline;">Fengtian Rules</span>**
+### <span style="text-decoration:underline;">Fengtian Rules</span>
 
 
 
-* **Fengtian **is always considered a member of the Co-Prosperity Sphere
-* **Fengtian **must join the Co-Prosperity Sphere and remain allied to **Japan**
+* **Fengtian** is always considered a member of the Co-Prosperity Sphere
+* **Fengtian** must join the Co-Prosperity Sphere and remain allied to **Japan**
 
-**<span style="text-decoration:underline;">Philippines Transamur Siam Rules</span>**
+### <span style="text-decoration:underline;">Philippines Transamur Siam Rules</span>
 
 
 
 * Must join the Co-Prosperity Sphere
 
-**_Moscow Accord Countries_**
+## Moscow Accord Countries
 
 The Moscow accord is always considered **<span style="text-decoration:underline;">Right Wing </span>**
 
-**<span style="text-decoration:underline;">Russia Rules</span>**
+### <span style="text-decoration:underline;">Russia Rules</span>
 
 
 
-* **Russia **is not allowed to Influence **White Ruthenia** in any way
+* **Russia** is not allowed to Influence **White Ruthenia** in any way
 
-**_Unaligned Nations_**
+## Unaligned Nations
 
-**<span style="text-decoration:underline;">Argentina Rules</span>**
+### <span style="text-decoration:underline;">Argentina Rules</span>
 
 
 
-* **Argentina **may choose whether or not to ally the Reichspakt or Entente
-* **Argentina **player may choose whom to give their trade deal to (**Germany** or **Canada**)
+* **Argentina** may choose whether or not to ally the Reichspakt or Entente
+* **Argentina** player may choose whom to give their trade deal to (**Germany** or **Canada**)
 
-**<span style="text-decoration:underline;">Brazil Rules</span>**
+### <span style="text-decoration:underline;">Brazil Rules</span>
 
 
 
 * **Brazil** may choose whether to align Entente or Reichspakt
 
-**<span style="text-decoration:underline;">Mexico Rules</span>**
+### <span style="text-decoration:underline;">Mexico Rules</span>
 
 
 
-* **Mexico **may not intervene in the ACW until 1st of October 1937
+* **Mexico** may not intervene in the ACW until 1st of October 1937
