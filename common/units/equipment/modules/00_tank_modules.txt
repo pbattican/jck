@@ -618,7 +618,7 @@ equipment_modules = {
 			soft_attack = 6
 			hard_attack = 2
 			ap_attack = 10
-			air_attack = 16
+			air_attack = 20
 			build_cost_ic = 2
 			reliability = -0.1
 		}
