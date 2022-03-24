@@ -16,3 +16,40 @@
 #	}
 #		desc = "RULE_ALLOW_TAKE_OVER_FACTION_BLOCKED_DESC
 #}
+
+allowed_submarine_tech = {
+	name = "Allowed Submarine Level"
+	group = "Allowed Technologies"
+	required_dlc = "Man the Guns"
+	icon = "GFX_navy_anchor"
+
+	default = {
+		name = SUB3
+		text = "Advanced Submarines"
+		desc = ""
+	}
+	option = {
+		name = SUB4
+		text = "Modern Submarines"
+		desc = ""
+	}
+}
+
+
+allowed_snorkel_tech = {
+	name = "Allowed Snorkel Level"
+	group = "Allowed Technologies"
+	required_dlc = "Man the Guns"
+	icon = "GFX_navy_anchor"
+
+	default = {
+		name = SNORKEL_1
+		text = "Basic Snorkels"
+		desc = ""
+	}
+	option = {
+		name = SNORKEL_2
+		text = "Improved Snorkels"
+		desc = ""
+	}
+}

@@ -1554,6 +1554,13 @@ technologies = {
 			sub_ship_engine_4
 		}
 
+		allow_branch = {
+			has_game_rule = {
+				rule = allowed_submarine_tech
+				option = SUB4
+			}
+		}
+
 		research_cost = 2.0
 
 		start_year = 1944
@@ -1617,6 +1624,13 @@ technologies = {
 		path = {
 			leads_to_tech = improved_submarine_snorkel
 			research_cost_coeff = 1
+		}
+
+		allow_branch = {
+			has_game_rule = {
+				rule = allowed_snorkel_tech
+				option = SNORKEL_2
+			}
 		}
 
 		xp_research_type = navy
