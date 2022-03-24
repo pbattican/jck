@@ -1,5 +1,6 @@
 on_actions = {
 	on_startup = {
+		## Reichspakt
 		effect = {
 			GER = {
 				if = {
@@ -40,6 +41,19 @@ on_actions = {
 					add_compliance = 50
 				}
 			}
+		}
+		effect = {
+			FNG = {
+				add_ideas = {
+					low_economic_mobilisation
+				}
+			}
+			JAP = {
+				add_political_power = 50
+			}
+		}
+		## Global
+		effect = {
 			every_country = {
 				limit = {
 					is_ai = no
