@@ -3659,7 +3659,7 @@ focus_tree = {
 			focus = JAP_pacific_islands
 		}
 		available = {
-			is_ai = yes
+			# is_ai = yes # jck change for objective setup
 			is_faction_leader = yes
 			can_declare_war_on = HAW
 			HAW = {
