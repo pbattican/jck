@@ -351,9 +351,9 @@ FNG_recalculate_mantetsu_effects = {
 			limit = {
 				check_variable = { party_popularity@market_liberal > 0.2 }
 			}
-			set_variable = { FNG.FNG_mantetsu_political_power = -0.3 }
-			set_variable = { FNG.FNG_mantetsu_stability = -0.3 }
-			set_variable = { FNG.FNG_mantetsu_war_support = -0.3 }
+			set_variable = { FNG.FNG_mantetsu_political_power = -0.225 }
+			set_variable = { FNG.FNG_mantetsu_stability = -0.25 }
+			set_variable = { FNG.FNG_mantetsu_war_support = -0.25 }
 
 			set_temp_variable = { FNG_mantetsu_negative_factor = 0.2 }
 			subtract_from_temp_variable = { FNG_mantetsu_negative_factor = FNG_mantetsu_influence_var }
