@@ -5222,6 +5222,13 @@ focus_tree = {
 		x = 5
 		y = 2
 
+		allow_branch = {
+			has_game_rule = {
+				rule = allowed_anderson_doctrine
+				option = yes
+			}
+		}
+
 		ai_will_do = {
 			factor = 2
 			modifier = {

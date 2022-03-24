@@ -53,3 +53,20 @@ allowed_snorkel_tech = {
 		desc = ""
 	}
 }
+
+allowed_anderson_doctrine = {
+	name = "Anderson Doctrine Allowed"
+	group = "Anderson Doctrine"
+	icon = "GFX_goal_generic_territory_or_war"
+
+	default = {
+		name = no
+		text = "No"
+		desc = ""
+	}
+	option = {
+		name = yes
+		text = "Yes"
+		desc = ""
+	}
+}
