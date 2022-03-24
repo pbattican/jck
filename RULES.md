@@ -253,8 +253,6 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 
 <span style="text-decoration:underline;">Volunteers</span>
 
-
-
 * You may only send volunteers to ideological partners of your faction leader, future faction leader (see ideological spectrum above), or player-controlled future faction members (regardless of ideology)
 * **Each faction has a maximum limit of 8 volunteers usable in any single conflict until the Second Weltkrieg**. **_The American Civil War’s limit is 10. _**
 * **_Volunteer width is 24W if a player is directly involved in the war, otherwise no maximum width. American Civil War has no limit._**
@@ -269,37 +267,25 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 
 ### <span style="text-decoration:underline;">Lend lease</span>
 
-
-
 * Lend-Lease may be sent without restriction for non-neutral nations
 
 ### <span style="text-decoration:underline;">Attachées</span>
-
-
 
 * You may only send attachées to ideological partners (see ideological spectrum above). Faction members follow the ideology of their faction leader
 * The Co Prosperity Sphere is allowed to send attachées to the **PSA**. They are never allowed to send an attachee to the **AUS**. 
 
 ## Navy Rules
 
-
-
 * You may not overfill your carriers	
 * Submarines are not allowed to be in stacks of 1.
-* Sub 4 hulls ( can still research for torp / engine ) and Snorkel 2 are BANNED
 
 ## Air Rules
 
-
-
 * Minimum air wing size is 100. Air volunteer wings must come as close as possible to 100
-* Strategic Bombers 3 are BANNED
 
 ## Nation Specific Rules
 
 ### <span style="text-decoration:underline;">Banned nation(s)	</span>						
-
-
 
 * **Socialist Republic of Russia**
 * **Qing**
@@ -316,8 +302,6 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 
 ### <span style="text-decoration:underline;">Neutral Nation(s)</span>
 
-
-
 * **Nordic Federation ( Including Sweden, Norway, and Denmark prior to Nordic Fed formation )**
 * **Ottoman Empire / Turkey**
 * **Venezuela**
@@ -325,8 +309,6 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 Neutral nations may not join a faction. Player neutrals may not receive or send lend-lease. They may not license production. **_They may send volunteers to a single nation in their faction._** No wars may be declared against these nations except nation specific exceptions. 
 
 ### <span style="text-decoration:underline;">Civil War nations</span>
-
-
 
 * Player Civil-War nations cannot deliberately sabotage their nation through any method (e.g. placing troops in unfavourable positions)
 * The PSA is the only allowed ACW nation. The Co-Pro co-op has the option to hotjoin in as the PSA if the PSA is not taken. If no USA player, this does not apply.
