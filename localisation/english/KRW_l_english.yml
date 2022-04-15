@@ -3,6 +3,10 @@
  AUS_join_Reichspakt:0 "Join the Reichspakt"
  AUS_join_RP_tech:0 "Join the Reichspakt Technology Group"
 
+ BUL_foreign_policy:0 "Bulgarian Foreign Policy"
+ BUL_ask_to_join_Reichspakt:0 "Join the Reichspakt"
+ BUL_join_RP_tech:0 "Join the Reichspakt Technology Group"
+
  CAN_remove_POR:0 "Remove Portugal from the Entente"
  CAN_remove_SRD:0 "Remove Sardinia from the Entente"
  CAN_integrate_icelands_defences:0 "Integrate Iceland and its defenses"
