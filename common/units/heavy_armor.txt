@@ -70,7 +70,7 @@ sub_units = {
 		
 		supply_consumption = 0.32
 
-		breakthrough = 0.15
+		#breakthrough = 0.15 # jck change
 
 		#Tanks are awesome
 		# soft_attack = 0.5
