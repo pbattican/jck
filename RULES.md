@@ -257,10 +257,8 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 * **Each faction has a maximum limit of 8 volunteers usable in any single conflict until the Second Weltkrieg**. **_The American Civil War’s limit is 10. _**
 * **_Volunteer width is 24W if a player is directly involved in the war, otherwise no maximum width. American Civil War has no limit._**
 * Motorized/motorized variants, Mechanized, tanks/tank variants and armored recon are not allowed in volunteer divisions until **the Second Weltkrieg**.**_ ACW only: Ignore previous, light tank battalions are the only tanks allowed._** _Light Armored Recon (Armored Cars) and motorized recon are allowed._
-* Sending volunteers to **Qing is BANNED**. **Sending volunteers to player nations in China that ally with the Qing Empire is also BANNED**.
+* Sending volunteers to **Qing is BANNED**. **Sending volunteers to player nations in China that ally with the QingEmpire is also BANNED**.
 * The Co Prosperity Sphere is allowed to send volunteers to the **Pacific States of America [PSA]**
-* Direct military intervention by other nations (e.g. declaring or joining wars or justifying) is not allowed in **India** until January 1st 1940. Exceptions to this rule are as follows: 
-    * If the **USA** loses the American Civil War [ACW], the Entente nations are allowed to join in the **Dominion of India’s** wars directly
 * Volunteers to **Afghanistan** are not allowed. 
 * Volunteers To **Dutch East Indies** are not allowed if there is a player on **Insulindia**
 * You may not recall volunteers if your volunteers are within 3 tiles from enemy forces.
@@ -429,9 +427,6 @@ The Entente and nations in it are always considered **<span style="text-decorati
 
 ### <span style="text-decoration:underline;">Dominion of India Rules</span>								
 
-
-
-* **Dominion of India** is not allowed to join any Entente wars outside of **India** until **India** is united or after January 1st 1940 or it has been declared on by an outside power.
 
 ### <span style="text-decoration:underline;">National France Rules	</span>					
 
