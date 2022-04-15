@@ -2526,8 +2526,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_MIL_small_planes"
 			add_tech_bonus = {
 				name = JAP_army_fighter_title_default
-				bonus = 0.5
-				uses = 1
+				bonus = 0.75
+				uses = 2
 				category = light_fighter
 			}
 			if = {
