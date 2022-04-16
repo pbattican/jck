@@ -2605,8 +2605,8 @@ leader_traits = {
 		random = no
 		equipment_bonus = {
 			fighter_equipment = {
-				air_attack = 0.08
-				air_agility = 0.08
+				air_attack = 0.025 # jck change -- originally 0.08
+				air_agility = 0.1 # jck change -- originally 0.08
 				build_cost_ic = -0.1
 			}
 			heavy_fighter_equipment = {
@@ -2627,8 +2627,9 @@ leader_traits = {
 			infantry_equipment = {
 				soft_attack = 0.02
 			}
-			light_tank_chassis = {
-				soft_attack = 0.02
+			armor = { # jck change
+				hard_attack = 0.075 # jck change
+				breakthrough = 0.02 # jck change
 				defense = 0.02
 			}
 			tac_bomber_equipment = {
