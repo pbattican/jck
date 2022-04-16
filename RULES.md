@@ -262,6 +262,7 @@ Player wars may not be declared until the start of â€œ**The Second Weltkrieg**â€
 * Volunteers to **Afghanistan** are not allowed. 
 * Volunteers To **Dutch East Indies** are not allowed if there is a player on **Insulindia**
 * You may not recall volunteers if your volunteers are within 3 tiles from enemy forces.
+* No naval invading with volunteers.
 
 ### <span style="text-decoration:underline;">Lend lease</span>
 
