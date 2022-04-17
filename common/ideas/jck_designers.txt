@@ -12,12 +12,32 @@ ideas = {
 
 		samsung_naval_dockyard = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea samsung_naval_dockyard" }
-			allowed = { tag = JAP }
-			traits = {
-				jck_cruiser_producers_japan_special
+			allowed = { original_tag = JAP }
+			available = {
+				has_completed_focus = JAP_MIL_SAMSUNG_DOCKYARDS
 			}
+			traits = { jck_cruiser_producers_japan_trait }
 			research_bonus = {
 				naval_equipment = 0.1
+			}
+		}
+	}
+
+	##### NFA #####
+
+	tank_manufacturer = {
+		designer = yes
+		
+		hotchkiss_armaments = {
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea hotchkiss_armaments"
+			}
+			allowed = { original_tag = NFA }
+			traits = {
+				hotchkiss_armaments_trait
+			}
+			research_bonus = {
+				armor = 0.1
 			}
 		}
 	}
