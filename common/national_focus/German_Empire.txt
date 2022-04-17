@@ -2909,8 +2909,8 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_Luftwaffe_airbases_1
 		}
-		x = 5
-		y = 5
+		x = 4 # jck change
+		y = 4 # jck change
 		relative_position_id = GER_mil_expansion
 		cost = 6
 
@@ -3094,7 +3094,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_schule"
-			air_experience = 50
+			air_experience = 75 # jck change
 		}
 		search_filters = { FOCUS_FILTER_AIR_XP }
 	}
@@ -3103,12 +3103,12 @@ focus_tree = {
 		id = GER_jet
 		icon = GFX_goal_new_airforce
 		prerequisite = {
-			focus = GER_schule
+			focus = GER_institut # jck change
 		}
-		x = 8
-		y = 5
-		relative_position_id = GER_mil_expansion
-		cost = 6
+		x = 0
+		y = 1
+		relative_position_id = GER_institut # jck change
+		cost = 10
 		available = {
 			has_war = yes
 		}
