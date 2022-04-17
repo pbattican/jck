@@ -185,8 +185,8 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 
 
 
-* Puppets and allies must be called into war immediately. Players have to accept when called into a war
-* Faction members may join rebellion wars at their discretion. (eg. IRA uprising against **Union of Britain**, Revolts in **National France** etc)
+* Puppets and allies must be called into player wars immediately. Players have to accept when called into a player war
+* Faction members may join AI/rebellion wars at their discretion. (eg. IRA uprising against **Union of Britain**, Revolts in **National France** etc)
 * Puppets are played at the overlords discretion. 
 * Puppets must attempt to remain loyal to their overlord (exception: **Dutch East Indies** / **Insulindia** and **Patagonia Workers Front**)
 * A player must take tiles where Volunteers arrive (usually ports, such as Philadelphia / New York for CSA)
