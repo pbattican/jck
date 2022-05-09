@@ -2382,6 +2382,9 @@ focus_tree = {
 				uses = 1
 				category = infantry_weapons
 			}
+			set_technology = {
+				jungle_warfare = 1
+			}
 			if = {
 				limit = {
 					has_completed_focus = JAP_MIL_AIR
@@ -2443,7 +2446,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_MIL_big_guns"
 			add_tech_bonus = {
 				name = JAP_army_big_title_default
-				bonus = 0.5
+				bonus = 0.75
 				uses = 1
 				category = artillery
 			}
