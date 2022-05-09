@@ -35,7 +35,10 @@ BUL_foreign_policy = {
 			log = "[GetDateText]: [Root.GetName]: Decision BUL_join_Reichspakt"
 			every_country = {
 				limit = {
-					is_in_faction_with = BUL
+					OR = {
+						is_in_faction_with = BUL
+						original_tag = BUL
+					}
 				}
 				GER = {
 					add_to_faction = PREV
