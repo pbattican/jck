@@ -19,6 +19,23 @@ leader_traits = {
 		}
 	}
 
+	mitsubishi_armaments_trait = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				soft_attack = 0.075
+				armor_value = -0.1
+				hard_attack = 0.075
+				build_cost_ic = -0.05
+				#reliability = -0.1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	jck_cruiser_producers_japan_trait = {
 		random = no
 		equipment_bonus = {

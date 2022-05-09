@@ -23,11 +23,12 @@ ideas = {
 		}
 	}
 
-	##### NFA #####
 
 	tank_manufacturer = {
 		designer = yes
 		
+
+		##### NFA #####
 		hotchkiss_armaments = {
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea hotchkiss_armaments"
@@ -40,5 +41,19 @@ ideas = {
 				armor = 0.1
 			}
 		}
+
+		##### Japan #####
+		mitsubishi_heavy_industry = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea mitsubishi" }
+			allowed = { original_tag = JAP }
+			traits = {
+				mitsubishi_armaments_trait
+			}
+			research_bonus = {
+				armor = 0.15
+			}
+		}
 	}
+
+
 }
