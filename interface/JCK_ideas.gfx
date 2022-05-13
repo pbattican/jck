@@ -10,7 +10,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_mitsubishi_heavy_industries"
+		name = "GFX_idea_mitsubishi_heavy_industry"
 		texturefile = "gfx/interface/companies/JAP/JAP_mitsubishi.png"
 	}
 
