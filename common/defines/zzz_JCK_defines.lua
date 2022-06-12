@@ -6,7 +6,7 @@ NDefines.NGame.GAME_SPEED_SECONDS = { 2, 0.5, 0.195, 0.15, 0.1 }
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 60
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 60
 
------------------------------------------- Graphics ------------------------------------------
+------------------------------------------ Graphics ------------------------------------------ 
 NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 800						-- 1100 
 NDefines_Graphics.NGraphics.DRAW_MAP_OBJECTS_CUTOFF = 250 					-- 550 
 NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
@@ -15,6 +15,13 @@ NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
 -- Should prevent peace events appearing for all players if there aren't winners and losers on both sides. 
 NDefines.NDiplomacy.MP_NUM_WINNERS_FOR_PEACE_PAUSE = 4
 NDefines.NDiplomacy.MP_NUM_LOSERS_FOR_PEACE_PAUSE = 0
+
+------------------------------------------ Country ---------------------------------------------
+-- Setting these scores to 0 might do something to affect the silly desyncs due to air score / other scores?
+NDefines.NCountry.ARMY_SCORE_MULTIPLIER = 0 --vanilla = 0.15
+NDefines.NCountry.AIR_SCORE_MULTIPLIER = 0 --vanilla = 0.1
+NDefines.NCountry.NAVY_SCORE_MULTIPLIER = 0 --vanilla = 0.1
+
 
 ------------------------------------------ Production ------------------------------------------
 NDefines.NProduction.EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.005 	--vanilla = 0.01

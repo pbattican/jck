@@ -1,0 +1,23 @@
+spriteTypes = {
+
+	############
+	# JCK Companies
+	############
+
+	spriteType = {
+		name = "GFX_idea_hotchkiss_armaments"
+		texturefile = "gfx/interface/companies/NFA/NFA_hotchkiss.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_mitsubishi_heavy_industry"
+		texturefile = "gfx/interface/companies/JAP/JAP_mitsubishi.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_samsung_naval_dockyard"
+		texturefile = "gfx/interface/samsung-three-star-korean-logo.png"
+	}
+
+}
+
