@@ -31,19 +31,12 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			country_event = worldtension.25
 			if = { #Does Germany flee to MAF?
 				limit = {
 					MAF = {
 						is_subject_of = GER
 						965 = { is_controlled_by = MAF } #Dar-es-Salaam
-						OR = {
-							has_war = no
-							AND = {
-								has_capitulated = no
-								surrender_progress < 0.30
-							}
-						}
+						surrender_progress < 0.30
 						OR = {
 							is_ai = yes
 							GER = { is_ai = yes }
@@ -108,9 +101,7 @@ country_event = {
 		}
 		set_country_flag = GER_capitulated
 		if = {
-			limit = {
-				MAF = { is_ai = no }
-			}
+			limit = { MAF = { is_ai = no } }
 			MAF = { country_event = capt.2 }
 		}
 		else = {
@@ -179,9 +170,7 @@ country_event = {
 	option = {
 		name = capt.3.a
 		custom_effect_tooltip = GER_will_capitulate
-		hidden_effect = {
-			country_event = capt.22
-		}
+		hidden_effect = { country_event = capt.22 }
 	}
 }
 
@@ -452,7 +441,10 @@ country_event = {
 		# First non-Russian European faction leaders peace out with any non-neighbours outside of Europe
 		if = {
 			limit = {
-				is_in_europe = yes
+				OR = {
+					is_in_europe = yes
+					tag = ENT
+				}
 				is_faction_leader = yes
 				NOT = { tag = RUS }
 			}
@@ -618,8 +610,8 @@ country_event = {
 							}
 						}
 						AND = {
-							tag = JAP
-							ROOT = { tag = GEA }
+							has_subject = GEA
+							ROOT = { tag = JAP }
 						}
 						AND = {
 							tag = HOL
@@ -666,6 +658,7 @@ country_event = {
 					is_valid_peace_target = yes
 					has_capitulated = no
 					NOT = {
+						civilwar_target = ROOT #do not peace out civil wars
 						tag = GER
 						AND = {
 							tag = HOL
@@ -841,7 +834,7 @@ country_event = {
 		}
 		add_war_support = -0.10
 		NFA = {
-			declare_war_on = {
+			create_wargoal = {
 				target = GEX
 				type = annex_everything
 			}
@@ -849,49 +842,8 @@ country_event = {
 	}
 }
 
-# Annex GEA to GEX upon peace
-country_event = {
-	id = capt.14
-	immediate = { log = "[GetDateText]: [Root.GetName]: event capt.14 FROM = [From.GetName]" }
-	title = capt.14.t
-	desc = capt.14.d
-	picture = GFX_report_event_MAF_tanganyika
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = GEA
-		has_country_flag = GEA_annex_to_GEX
-		is_subject = no
-		has_war = no
-		GEX = {
-			exists = yes
-			is_subject = no
-		}
-	}
-
-	option = {
-		name = capt.14.a
-		clr_country_flag = GEA_annex_to_GEX
-		GEX = {
-			country_event = { id = capt.15 hours = 1 }
-		}
-		if = {
-			limit = { has_country_flag = legation_council_vote }
-			GEX = { LEC_add_to_legation_council = yes }
-		}
-		else_if = {
-			limit = { has_country_flag = legation_council_member }
-			GEX = { LEC_add_to_legation_council_observer = yes }
-		}
-		if = {
-			limit = { is_ai = no }
-			GEX = { change_tag_from = GEA }
-		}
-	}
-}
-
-country_event = {
+# Event to let countries know they've received a state
+state_event = {
 	id = capt.15
 	immediate = { log = "[GetDateText]: [Root.GetName]: event capt.15 FROM = [From.GetName]" }
 	title = capt.15.t
@@ -900,15 +852,9 @@ country_event = {
 
 	is_triggered_only = yes
 
-	trigger = {
-		country_exists = GEA
-	}
-
 	option = {
-		name = capt.14.a
-		annex_country = {
-			target = GEA
-			transfer_troops = yes
+		effect_tooltip = {
+			event_target:transferred_state = { transfer_state_to = NFA }
 		}
 	}
 }
@@ -928,9 +874,6 @@ country_event = {
 		}
 		every_country = {
 			clr_country_flag = former_reichspakt_member
-			clr_country_flag = GEX_war_with_siam
-			clr_country_flag = GEX_war_with_japan
-			clr_country_flag = GEX_war_with_natfrance
 		}
 	}
 }
@@ -958,59 +901,6 @@ country_event = {
 
 	immediate = {
 		germany_capitulates = yes
-	}
-}
-
-# Re-puppeting a country to GEX if they're not at war
-country_event = {
-	id = capt.23
-	immediate = { log = "[GetDateText]: [Root.GetName]: event capt.23 FROM = [From.GetName]" }
-	title = capt.23.t
-	picture = GFX_report_event_MAF_tanganyika
-
-	desc = {
-		text = capt.23.d.nowar
-		trigger = {
-			has_war = no
-		}
-	}
-	desc = {
-		text = capt.23.d.war
-		trigger = {
-			has_war = yes
-		}
-	}
-
-	is_triggered_only = yes
-
-	option = {
-		name = capt.23.a
-		trigger = {
-			has_war = no
-		}
-		get_current_government_type = yes
-		GEX = {
-			set_autonomy = {
-				target = ROOT
-				autonomy_state = kr_autonomous_puppet
-			}
-		}
-		hidden_effect = {
-			restore_previous_government_type = yes
-		}
-	}
-	option = {
-		name = capt.23.b
-		trigger = {
-			has_war = yes
-		}
-		add_stability = -0.10
-		if = {
-			limit = {
-				tag = GEA
-			}
-			set_country_flag = GEA_annex_to_GEX
-		}
 	}
 }
 
@@ -1081,7 +971,6 @@ country_event = {
 			}
 		}
 	}
-
 
 	option = {
 		name = capt.40.a
@@ -1213,7 +1102,7 @@ country_event = {
 	}
 	option = {
 		name = capt.41.b #No, we'll keep what we're occupying
-		trigger = { is_ai = no }
+		ai_chance = { base = 0 }
 	}
 }
 
@@ -1267,7 +1156,6 @@ country_event = {
 	}
 }
 
-
 # Hidden event to peace out Internationale members
 country_event = {
 	id = capt.4200
@@ -1280,7 +1168,10 @@ country_event = {
 		# First European faction leaders peace out with any non-neighbours outside of Europe
 		if = {
 			limit = {
-				is_in_europe = yes
+				OR = {
+					tag = ENT
+					is_in_europe = yes
+				}
 				is_faction_leader = yes
 			}
 			every_enemy_country = {
@@ -1293,10 +1184,6 @@ country_event = {
 						AND = {
 							tag = NZL
 							AST = { is_in_faction_with = ROOT }
-						}
-						AND = {
-							is_ally_with = ENT
-							ROOT = { is_in_europe = yes }
 						}
 					}
 				}
@@ -1332,15 +1219,12 @@ country_event = {
 					has_capitulated = no
 					is_valid_peace_target = yes
 					NOT = {
+						civilwar_target = ROOT #do not peace out civil wars
 						is_neighbor_of = ROOT #being invaded
 						same_continent_as_ROOT = yes
 						AND = {
 							tag = NZL
 							AST = { is_in_faction_with = ROOT }
-						}
-						AND = {
-							is_ally_with = ENT
-							ROOT = { is_in_europe = yes }
 						}
 					}
 				}

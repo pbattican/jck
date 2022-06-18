@@ -1,5 +1,5 @@
 ﻿###########################
-# Nationalist France Events
+# French Republic Events
 ###########################
 # By Edouard Saladier, The Alpha Dog, Nijato and Rnk
 ###########################
@@ -23,9 +23,7 @@ country_event = { #The Situation of the French Republic - History
 
 	option = {
 		name = nfa.1.a #Political Situation
-		country_event = {
-			id = nfa.2
-		}
+		country_event = nfa.2
 	}
 }
 
@@ -42,9 +40,7 @@ country_event = { #The Situation of the French Republic - Political Situation
 
 	option = {
 		name = nfa.2.a #Growing Concerns
-		country_event = {
-			id = nfa.3
-		}
+		country_event = nfa.3
 	}
 }
 
@@ -367,10 +363,14 @@ country_event = { #CdG publishes his book regardless
 				var = Pet_influence
 				value = 1
 			}
+			clamp_variable = {
+				var = Pet_influence
+				min = 0
+				max = 30
+			}
 		}
 	}
 }
-
 
 country_event = { #Franchet d'Espèrey Retires
 	id = nfa.13
@@ -433,15 +433,11 @@ country_event = { #Franchet d'Espèrey Retires
 			clr_country_flag = nfa_lessons_1914_chosen_0
 			set_country_flag = nfa_lessons_1914_chosen
 		}
-		remove_unit_leader_role = { character = NFA_louis_franchet_desperey }
+		retire_character = NFA_louis_franchet_desperey
 		NFA_henri_mordacq = { promote_leader = yes }
 		hidden_effect = {
 			country_event = { id = nfa.16 days = 15 }
-			remove_ideas = NFA_Louis_Franchet_d'Esperey_cos_pau
-			remove_ideas = NFA_Louis_Franchet_d'Esperey_hog_pau
-			set_country_flag = Louis_Franchet_d'Esperey_dead
 		}
-		add_ideas = NFA_Henri_Mordacq_hog_ade
 	}
 
 	option = {
@@ -488,14 +484,10 @@ country_event = { #Franchet d'Espèrey Retires
 			clr_country_flag = nfa_discord_chosen_0
 			set_country_flag = nfa_discord_chosen
 		}
-		remove_unit_leader_role = { character = NFA_louis_franchet_desperey }
+		retire_character = NFA_louis_franchet_desperey
 		hidden_effect = {
 			country_event = { id = nfa.19 days = 15 }
-			remove_ideas = NFA_Louis_Franchet_d'Esperey_cos_pau
-			remove_ideas = NFA_Louis_Franchet_d'Esperey_hog_pau
-			set_country_flag = Louis_Franchet_d'Esperey_dead
 		}
-		add_ideas = NFA_Philippe_Petain_hog_pau
 	}
 
 	option = {
@@ -544,15 +536,11 @@ country_event = { #Franchet d'Espèrey Retires
 			clr_country_flag = nfa_discord_chosen_0
 			set_country_flag = nfa_discord_chosen
 		}
-		remove_unit_leader_role = { character = NFA_louis_franchet_desperey }
+		retire_character = NFA_louis_franchet_desperey
 		NFA_charles_de_gaulle = { promote_leader = yes }
 		hidden_effect = {
 			country_event = { id = nfa.43 days = 10 }
-			remove_ideas = NFA_Louis_Franchet_d'Esperey_cos_pau
-			remove_ideas = NFA_Louis_Franchet_d'Esperey_hog_pau
-			set_country_flag = Louis_Franchet_d'Esperey_dead
 		}
-		add_ideas = NFA_Charles_de_Gaulle_hog_npo
 	}
 }
 
@@ -575,6 +563,11 @@ country_event = { #Mordacq publishes his book regardless
 			subtract_from_variable = {
 				var = Mor_influence
 				value = 1
+			}
+			clamp_variable = {
+				var = Mor_influence
+				min = 0
+				max = 30
 			}
 		}
 	}
@@ -641,13 +634,8 @@ country_event = { #Put Mordacq in charge
 			ruling_party = authoritarian_democrat
 			elections_allowed = no
 		}
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Francois_de_la_Rocque_hog_ade
-			NFA_Camille_Barrere_for_sco
-			NFA_Marie_Eugene_Debeney_eco_ade
-			NFA_Ernest_Mercier_sec_pau
-		}
+		clear_sic_slot = yes
+		activate_advisor = NFA_francois_de_la_rocque_sic
 		hidden_effect = {
 			country_event = {
 				id = nfa.89 days = 25
@@ -952,13 +940,8 @@ country_event = { #New Union Sacree
 			elections_allowed = no
 		}
 		custom_effect_tooltip = NFA_union_sacree_coalition_tooltip
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Francois_de_la_Rocque_hog_ade
-			NFA_Edouard_Daladier_for_sli
-			NFA_Pierre_Etienne_Flandin_eco_mli
-			NFA_Louis_Marin_sec_sco
-		}
+		clear_sic_slot = yes
+		activate_advisor = NFA_francois_de_la_rocque_sic
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = -0.25
@@ -979,11 +962,11 @@ country_event = { #New Union Sacree
 			ideology = social_liberal
 			popularity = 0.05
 		}
+		set_temp_variable = { coalition_partner_var = token:social_liberal }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:market_liberal }
+		add_to_coalition = yes
 		hidden_effect = {
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:market_liberal }
-			add_to_coalition = yes
 			set_variable = { NFA.coalition_stability = 0.25 }
 			country_event = {
 				id = nfa.97
@@ -1014,7 +997,7 @@ country_event = { #New Union Sacree
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_HENRI_MORDACQ_DEM_DESC"
+							desc = NFA_henri_mordacq_dem_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_Bear_Elect }
 						}
@@ -1058,10 +1041,8 @@ country_event = { #AF Coup Foiled - Union Sacree
 			ideology = national_populist
 			popularity = -0.06
 		}
-		remove_unit_leader_role = { character = NFA_charles_de_gaulle }
-		remove_unit_leader_role = { character = NFA_philippe_de_hauteclocque }
-		set_country_flag = Charles_de_Gaulle_dead
-		set_country_flag = Philippe_de_Hauteclocque_dead
+		retire_character = NFA_charles_de_gaulle
+		retire_character = NFA_philippe_de_hauteclocque
 	}
 }
 
@@ -1189,10 +1170,8 @@ country_event = { #AF Coup Foiled - CSN
 	option = {
 		name = nfa.101.a #Down with Flair
 		add_stability = 0.05
-		remove_unit_leader_role = { character = NFA_charles_de_gaulle }
-		remove_unit_leader_role = { character = NFA_philippe_de_hauteclocque }
-		set_country_flag = Charles_de_Gaulle_dead
-		set_country_flag = Philippe_de_Hauteclocque_dead
+		retire_character = NFA_charles_de_gaulle
+		retire_character = NFA_philippe_de_hauteclocque
 		hidden_effect = {
 			country_event = { id = nfa.102 days = 7 }
 		}
@@ -1220,13 +1199,8 @@ country_event = { #CSN Path
 			ruling_party = authoritarian_democrat
 			elections_allowed = no
 		}
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Francois_de_la_Rocque_hog_ade
-			NFA_Camille_Barrere_for_sco
-			NFA_Marie_Eugene_Debeney_eco_ade
-			NFA_Ernest_Mercier_sec_pau
-		}
+		clear_sic_slot = yes
+		activate_advisor = NFA_francois_de_la_rocque_sic
 		remove_ideas = NFA_internal_unrest
 		add_popularity = {
 			ideology = paternal_autocrat
@@ -1294,9 +1268,9 @@ country_event = { #AF Coup
 		name = nfa.103.a #Down with Flair
 		add_stability = -0.15
 		add_political_power = -25
-		remove_unit_leader_role = { character = NFA_henri_mordacq }
-		remove_unit_leader_role = { character = NFA_aime_doumenc }
-		remove_unit_leader_role = { character = NFA_pierre_lelong }
+		retire_character = NFA_henri_mordacq
+		retire_character = NFA_aime_doumenc
+		retire_character = NFA_pierre_lelong
 		hidden_effect = {
 			country_event = { id = nfa.104 days = 3 }
 		}
@@ -1321,11 +1295,12 @@ country_event = { #DeGaulle's Election
 			ruling_party = national_populist
 			elections_allowed = no
 		}
+		clear_sic_slot = yes
+		activate_advisor = NFA_charles_maurras_sic
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.05
 		}
-		remove_all_ministers = yes
 		NFA_charles_de_gaulle = { promote_leader = yes }
 		hidden_effect = {
 			country_event = { id = nfa.105 days = 12 }
@@ -1347,12 +1322,6 @@ country_event = { #AF Full Power
 	option = {
 		name = nfa.105.a #Vive le Roi
 		add_stability = 0.025
-		add_ideas = {
-			NFA_Charles_Maurras_hog_npo
-			NFA_Maurice_Pujo_for_npo
-			NFA_Eugene_Deloncle_eco_npo
-			NFA_Henri_Massis_sec_npo
-		}
 		remove_ideas = NFA_internal_unrest
 		add_popularity = {
 			ideology = paternal_autocrat
@@ -1429,11 +1398,9 @@ country_event = { #Fight for Influence!
 			set_country_flag = Fight_for_influence_on
 			set_country_flag = Mordacq_Airwaves
 			set_country_flag = NFA_Corruption_Checker_cf
-			country_event = { id = nfa.29  days = 18 } # Allow Investment Missions
-			country_event = { id = nfa.30  days = 26 } # Looping Corruption Checker
-			remove_ideas = NFA_Henri_Mordacq_sec_ade
+			country_event = { id = nfa.29 days = 18 } # Allow Investment Missions
+			country_event = { id = nfa.30 days = 26 } # Looping Corruption Checker
 		}
-		add_ideas = NFA_George_Lamirand_sec_pau
 	}
 }
 
@@ -1470,6 +1437,11 @@ country_event = { #DwPO Airwaves
 				subtract_from_variable = {
 					var = Pet_corruption
 					value = 1
+				}
+				clamp_variable = {
+					var = Pet_corruption
+					min = 0
+					max = 30
 				}
 			}
 			else = {
@@ -1602,6 +1574,11 @@ country_event = { #DwPO Parades
 					var = Pet_corruption
 					value = 1
 				}
+				clamp_variable = {
+					var = Pet_corruption
+					min = 0
+					max = 30
+				}
 			}
 			else = {
 				add_stability = -0.005
@@ -1719,6 +1696,11 @@ country_event = { #DwPO Speech
 					var = Pet_corruption
 					value = 1
 				}
+				clamp_variable = {
+					var = Pet_corruption
+					min = 0
+					max = 30
+				}
 			}
 			else = {
 				add_political_power = -5
@@ -1791,6 +1773,11 @@ country_event = { #DwPO Barrack
 				subtract_from_variable = {
 					var = Pet_corruption
 					value = 1
+				}
+				clamp_variable = {
+					var = Pet_corruption
+					min = 0
+					max = 30
 				}
 			}
 			else = {
@@ -1868,11 +1855,11 @@ country_event = { #Competition Counter
 						compare = greater_than_or_equals
 					}
 				}
-				country_event = { id = nfa.35  days = 7 } # Mordacq coups Petain
+				country_event = { id = nfa.35 days = 7 } # Mordacq coups Petain
 				set_country_flag = NFA_Napoleon_0
 			}
 			else = {
-				country_event = { id = nfa.39  days = 15 } # Petain has more influence
+				country_event = { id = nfa.39 days = 15 } # Petain has more influence
 			}
 		}
 	}
@@ -1919,7 +1906,7 @@ country_event = { #Corruption Check
 				}
 				has_country_flag = NFA_Corruption_Checker_cf
 			}
-			country_event = { id = nfa.32  days = 1 } # Corruption still coming
+			country_event = { id = nfa.32 days = 1 } # Corruption still coming
 		}
 		else_if = {
 			limit = {
@@ -1938,15 +1925,15 @@ country_event = { #Corruption Check
 				}
 				has_country_flag = NFA_Corruption_Checker_cf
 			}
-			country_event = { id = nfa.31  days = 1 } # High Corruption warning
-			country_event = { id = nfa.30  days = 7 } #Loop the checker
+			country_event = { id = nfa.31 days = 1 } # High Corruption warning
+			country_event = { id = nfa.30 days = 7 } #Loop the checker
 		}
 		else_if = {
 			limit = {
 				has_country_flag = NFA_Corruption_Checker_cf
 				has_country_flag = Fight_for_influence_on
 			}
-			country_event = { id = nfa.30  days = 7 } #Loop the checker
+			country_event = { id = nfa.30 days = 7 } #Loop the checker
 		}
 		else = {
 			# Nothing to end this loop
@@ -1969,7 +1956,7 @@ country_event = { #High Corruption Warning
 		name = nfa.31.a #Baseless Accusations!
 		hidden_effect = {
 			set_country_flag = NFA_event_31
-			country_event = { id = nfa.34  days = 5 } #Anti-Corruption Decisions
+			country_event = { id = nfa.34 days = 5 } #Anti-Corruption Decisions
 		}
 	}
 }
@@ -1993,7 +1980,7 @@ country_event = { #Last Corruption Warning
 		}
 		hidden_effect = {
 			clr_country_flag = NFA_Corruption_Checker_cf
-			country_event = { id = nfa.33  days = 7 } #Operation Tocata
+			country_event = { id = nfa.33 days = 7 } #Operation Tocata
 		}
 	}
 
@@ -2004,7 +1991,7 @@ country_event = { #Last Corruption Warning
 		}
 		hidden_effect = {
 			clr_country_flag = NFA_Corruption_Checker_cf
-			country_event = { id = nfa.35  days = 12 } #Mordacq Coup
+			country_event = { id = nfa.35 days = 12 } #Mordacq Coup
 		}
 	}
 }
@@ -2068,12 +2055,16 @@ country_event = { #Mordacq's Coup
 	option = {
 		name = nfa.35.a #Long Live The Bear
 		add_political_power = 20
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		clear_sic_slot = yes
+		activate_advisor = NFA_francois_de_la_rocque_sic
 		NFA_henri_mordacq = { promote_leader = yes }
-		remove_unit_leader_role = { character = NFA_philippe_petain }
-		remove_unit_leader_role = { character = NFA_charles_de_gaulle }
-		remove_unit_leader_role = { character = NFA_philippe_de_hauteclocque }
-		set_country_flag = Charles_de_Gaulle_dead
-		set_country_flag = Philippe_de_Hauteclocque_dead
+		retire_character = NFA_philippe_petain
+		retire_character = NFA_charles_de_gaulle
+		retire_character = NFA_philippe_de_hauteclocque
 		hidden_effect = {
 			country_event = { id = nfa.51 days = 1 } #Form the CSN
 			country_event = { id = nfa.37 days = 24 } #Trial of Pétain
@@ -2099,13 +2090,8 @@ country_event = { #Mordacq's Election UNUSED
 			ruling_party = social_conservative
 			elections_allowed = no
 		}
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Francois_de_la_Rocque_hog_ade
-			NFA_Edouard_Daladier_for_sli
-			NFA_Pierre_Etienne_Flandin_eco_mli
-			NFA_Louis_Marin_sec_sco
-		}
+		clear_sic_slot = yes
+		activate_advisor = NFA_francois_de_la_rocque_sic
 		hidden_effect = {
 			set_country_flag = NATFRA_Democracy_Restored
 			NFA_henri_mordacq = {
@@ -2116,7 +2102,7 @@ country_event = { #Mordacq's Election UNUSED
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_HENRI_MORDACQ_DEM_DESC"
+							desc = NFA_henri_mordacq_dem_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_Old_Bear }
 						}
@@ -2279,19 +2265,14 @@ country_event = { #Le Redressement Francais
 
 	option = {
 		name = nfa.38.a #A Company?
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Ernest_Mercier_hog_pau
-			NFA_Joseph_Darnand_for_pau
-			NFA_Francois_Coty_eco_pau
-			NFA_Louis_Renault_sec_pau
-		}
+		add_political_power = 40
+		clear_sic_slot = yes
+		activate_advisor = NFA_ernest_mercier_sic
 		set_party_name = {
 			ideology = paternal_autocrat
 			long_name = Redressement_Francais_long
 			name = Redressement_Francais
 		}
-		add_political_power = 40
 	}
 }
 
@@ -2319,11 +2300,10 @@ country_event = { #En Marche!
 		NFA_philippe_petain = {
 			add_trait = { trait = NFA_Redressement ideology = paternal_autocrat_subtype }
 			set_portraits = {
-				civilian = {
-					large = "gfx/leaders/NFA/Portrait_NFA_Petain_Army.png"
-				}
+				civilian = { large = "gfx/leaders/NFA/Portrait_NFA_Petain_Army.png" }
 			}
 		}
+		set_country_leader_description = { desc = NFA_philippe_petain_redressement_leader_desc }
 		add_popularity = {
 			ideology = paternal_autocrat
 			popularity = 0.05
@@ -2333,9 +2313,9 @@ country_event = { #En Marche!
 			popularity = -0.1
 		}
 		remove_ideas = NFA_internal_unrest
-		remove_unit_leader_role = { character = NFA_henri_mordacq }
-		remove_unit_leader_role = { character = NFA_aime_doumenc }
-		remove_unit_leader_role = { character = NFA_pierre_lelong }
+		retire_character = NFA_henri_mordacq
+		retire_character = NFA_aime_doumenc
+		retire_character = NFA_pierre_lelong
 		hidden_effect = {
 			set_country_flag = NFA_Petain_wins_ffi
 			set_variable = { NFA_Invite_Investors_cost = 5 }
@@ -2414,15 +2394,15 @@ country_event = { #Operation Tocata (3)
 	option = {
 		name = nfa.41.a #The Marshall is Dead!
 		add_stability = -0.10
-		remove_unit_leader_role = { character = NFA_philippe_petain }
-		remove_unit_leader_role = { character = NFA_charles_de_gaulle }
-		remove_unit_leader_role = { character = NFA_philippe_de_hauteclocque }
-		remove_unit_leader_role = { character = NFA_maxime_weygand }
-		remove_unit_leader_role = { character = NFA_thierry_dargenlieu }
-		set_country_flag = Charles_de_Gaulle_dead
-		set_country_flag = Philippe_de_Hauteclocque_dead
-		set_country_flag = Maxime_Weygand_dead
-		set_country_flag = Georges_Thierry_d'Argenlieu_dead
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		retire_character = NFA_philippe_petain
+		retire_character = NFA_charles_de_gaulle
+		retire_character = NFA_philippe_de_hauteclocque
+		retire_character = NFA_maxime_weygand
+		retire_character = NFA_thierry_dargenlieu
 		clr_country_flag = Fight_for_influence_on
 	}
 }
@@ -2442,17 +2422,6 @@ country_event = { #Operation Tocata (4)
 		name = nfa.42.a #Vive l'Ours
 		add_stability = 0.03
 		add_political_power = 25
-		set_politics = {
-			ruling_party = authoritarian_democrat
-			elections_allowed = no
-		}
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Francois_de_la_Rocque_hog_ade
-			NFA_Camille_Barrere_for_sco
-			NFA_Marie_Eugene_Debeney_eco_ade
-			NFA_Ernest_Mercier_sec_pau
-		}
 		remove_ideas = NFA_internal_unrest
 		add_popularity = {
 			ideology = paternal_autocrat
@@ -2474,6 +2443,8 @@ country_event = { #Operation Tocata (4)
 			ideology = market_liberal
 			popularity = 0.02
 		}
+		clear_sic_slot = yes
+		activate_advisor = NFA_francois_de_la_rocque_sic
 		set_party_name = {
 			ideology = authoritarian_democrat
 			long_name = NFA_CSN_long
@@ -2531,14 +2502,12 @@ country_event = { #Arrest Mordacq
 	option = {
 		name = nfa.43.a #Mistake
 		add_stability = -0.01
+		remove_unit_leader_role = { character = NFA_henri_mordacq }
 		hidden_effect = {
 			end_coalition = yes
-			remove_unit_leader_role = { character = NFA_henri_mordacq }
-			remove_ideas = NFA_Henri_Mordacq_sec_ade
 			country_event = { id = nfa.44 days = 6 } #Mordacq Evasion
 			country_event = { id = nfa.45 days = 20 } #Defamation Campaign
 		}
-		add_ideas = NFA_George_Lamirand_sec_pau
 	}
 }
 
@@ -2573,8 +2542,7 @@ country_event = { #Defamation
 
 	option = {
 		name = nfa.45.a #Wrong side, friend
-		remove_unit_leader_role = { character = NFA_lucien_lacaze }
-		set_country_flag = Marie_Jean_Lucien_Lacaze_dead
+		retire_character = NFA_lucien_lacaze
 		hidden_effect = {
 			country_event = { id = nfa.46 days = 20 } #Lacaze Affair
 		}
@@ -2594,8 +2562,8 @@ country_event = { #Lacaze Affair
 
 	option = {
 		name = nfa.46.a #2nd Bureau
-		add_stability = -0.005
-		add_war_support = -0.005
+		add_stability = -0.01
+		add_war_support = -0.01
 		hidden_effect = {
 			country_event = { id = nfa.47 days = 12 } #Parades
 		}
@@ -2622,7 +2590,7 @@ country_event = { #Parades
 		}
 		add_ideas = NFA_parades_idea
 		hidden_effect = {
-			country_event = { id = nfa.48  days = 35 } #Parades Continue
+			country_event = { id = nfa.48 days = 35 } #Parades Continue
 		}
 	}
 }
@@ -2662,7 +2630,7 @@ country_event = { #Parades Continue
 			popularity = -0.03
 		}
 		hidden_effect = {
-			country_event = { id = nfa.49  days = 65 } #Final Parade
+			country_event = { id = nfa.49 days = 65 } #Final Parade
 		}
 	}
 
@@ -2681,7 +2649,6 @@ country_event = { #Parades Continue
 		}
 	}
 }
-
 
 country_event = { #Final Parade pt.1
 	id = nfa.49
@@ -2720,9 +2687,15 @@ country_event = { #Final Parade pt.2
 
 	option = {
 		name = nfa.50.a #Reform Republic
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		clear_sic_slot = yes
+		activate_advisor = NFA_francois_de_la_rocque_sic
 		add_field_marshal_role = {
 			character = NFA_henri_mordacq
-			desc = "NFA_HENRI_MORDACQ_ARMY_DESC"
+			desc = NFA_henri_mordacq_commander_desc
 			traits = {
 				career_officer
 				brilliant_strategist
@@ -2735,21 +2708,9 @@ country_event = { #Final Parade pt.2
 			planning_skill = 3
 			logistics_skill = 3
 		}
-		remove_unit_leader_role = { character = NFA_philippe_petain }
-		remove_unit_leader_role = { character = NFA_charles_de_gaulle }
-		set_country_flag = Charles_de_Gaulle_dead
-		NFA_lucien_lacaze = {
-			add_naval_commander_role = {
-				desc = "NFA_LUCIEN_LACAZE_NAVY_DESC"
-				traits = { fleet_protector }
-				skill = 3
-				attack_skill = 3
-				defense_skill = 3
-				maneuvering_skill = 2
-				coordination_skill = 3
-			}
-		}
-		clr_country_flag = Marie_Jean_Lucien_Lacaze_dead
+		retire_character = NFA_philippe_petain
+		retire_character = NFA_charles_de_gaulle
+		NFA_lucien_lacaze = { set_nationality = ROOT }
 		add_political_power = 15
 		remove_ideas = NFA_parades_idea
 		hidden_effect = {
@@ -2776,17 +2737,6 @@ country_event = { #Form the CSN
 		name = nfa.51.a #Vive L'Ours
 		add_political_power = 20
 		add_stability = 0.1
-		set_politics = {
-			ruling_party = authoritarian_democrat
-			elections_allowed = no
-		}
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Francois_de_la_Rocque_hog_ade
-			NFA_Camille_Barrere_for_sco
-			NFA_Marie_Eugene_Debeney_eco_ade
-			NFA_Ernest_Mercier_sec_pau
-		}
 		remove_ideas = NFA_internal_unrest
 		add_popularity = {
 			ideology = paternal_autocrat
@@ -2890,7 +2840,7 @@ country_event = { #AF Contacts us
 		add_political_power = -10
 		add_ideas = NFA_400_coup_idea
 		hidden_effect = {
-			country_event = { id = nfa.53  days = 26 } #400 Coups
+			country_event = { id = nfa.53 days = 26 } #400 Coups
 		}
 	}
 
@@ -2908,7 +2858,7 @@ country_event = { #AF Contacts us
 		}
 		add_political_power = -10
 		hidden_effect = {
-			country_event = { id = nfa.54  days = 26 } #Handle it ourselves
+			country_event = { id = nfa.54 days = 26 } #Handle it ourselves
 		}
 	}
 }
@@ -2942,7 +2892,7 @@ country_event = { #400 Coups
 		add_stability = -0.03
 		remove_ideas = NFA_400_coup_idea
 		hidden_effect = {
-			country_event = { id = nfa.54  days = 21 } #Handle it Ourselves
+			country_event = { id = nfa.54 days = 21 } #Handle it Ourselves
 		}
 	}
 
@@ -2953,7 +2903,7 @@ country_event = { #400 Coups
 		}
 		add_stability = -0.03
 		hidden_effect = {
-			country_event = { id = nfa.58  days = 34 } #Bloodbath
+			country_event = { id = nfa.58 days = 34 } #Bloodbath
 		}
 	}
 }
@@ -2982,7 +2932,7 @@ country_event = { #Handle it ourselves
 			}
 		}
 		hidden_effect = {
-			country_event = { id = nfa.49  days = 35 } #Final Parade
+			country_event = { id = nfa.49 days = 35 } #Final Parade
 		}
 	}
 
@@ -2992,7 +2942,7 @@ country_event = { #Handle it ourselves
 			base = 60
 		}
 		hidden_effect = {
-			country_event = { id = nfa.55  days = 4 } #Offer from redressment
+			country_event = { id = nfa.55 days = 4 } #Offer from redressment
 		}
 	}
 }
@@ -3011,7 +2961,7 @@ country_event = { #Offer from redressment
 	option = {
 		name = nfa.55.a #Accept the Offer
 		hidden_effect = {
-			country_event = { id = nfa.56  days = 40 } #Accepted Offer
+			country_event = { id = nfa.56 days = 40 } #Accepted Offer
 		}
 	}
 }
@@ -3030,20 +2980,15 @@ country_event = { #Accept Offer
 	option = {
 		name = nfa.56.a #Le Patria
 		add_political_power = 25
+		clear_sic_slot = yes
+		activate_advisor = NFA_ernest_mercier_sic
 		set_party_name = {
 			ideology = paternal_autocrat
 			long_name = Redressement_Francais_long
 			name = Redressement_Francais
 		}
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Ernest_Mercier_hog_pau
-			NFA_Joseph_Darnand_for_pau
-			NFA_Francois_Coty_eco_pau
-			NFA_Louis_Renault_sec_pau
-		}
 		hidden_effect = {
-			country_event = { id = nfa.57  days = 20 } #Parades end slowly
+			country_event = { id = nfa.57 days = 20 } #Parades end slowly
 		}
 	}
 }
@@ -3051,32 +2996,36 @@ country_event = { #Accept Offer
 country_event = { #Parades end slowly
 	id = nfa.57
 	immediate = { log = "[GetDateText]: [Root.GetName]: event nfa.57 FROM = [From.GetName]" }
-	immediate = {
-		log = "KR_Event_Logging;NFA PETAIN;[GetDateText];[ROOT.GetName];[FROM.GetName]"
-	}
 	title = nfa.57.t
 	desc = nfa.57.d
 	picture = GFX_report_event_NFA_event_Petain1
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
+
+	immediate = {
+		log = "KR_Event_Logging;NFA PETAIN;[GetDateText];[ROOT.GetName];[FROM.GetName]"
+	}
 
 	option = {
 		name = nfa.57.a #Adieu Mordacq
 		add_stability = 0.07
-		NFA_philippe_petain = {
-			add_country_leader_trait = { ideology = paternal_autocrat_subtype trait = NFA_Redressement }
-		}
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = -0.08
 		}
+		custom_effect_tooltip = tooltip_white_line
+		NFA_philippe_petain = {
+			remove_trait = { ideology = paternal_autocrat_subtype trait = NFA_Lion_of_Verdun }
+			add_trait = { ideology = paternal_autocrat_subtype trait = NFA_Redressement }
+		}
+		custom_effect_tooltip = tooltip_white_line
 		remove_ideas = NFA_parades_idea
 		remove_ideas = NFA_internal_unrest
-		remove_unit_leader_role = { character = NFA_henri_mordacq }
-		remove_unit_leader_role = { character = NFA_aime_doumenc }
-		remove_unit_leader_role = { character = NFA_pierre_lelong }
+		custom_effect_tooltip = tooltip_white_line
+		retire_character = NFA_henri_mordacq
+		retire_character = NFA_aime_doumenc
+		retire_character = NFA_pierre_lelong
 		hidden_effect = {
 			clr_country_flag = Fight_for_influence_on
 			set_country_flag = NFA_Petain_wins_ffi
@@ -3137,7 +3086,7 @@ country_event = { #Bloodbath
 		name = nfa.58.a #Call for a meeting
 		add_stability = -0.02
 		hidden_effect = {
-			country_event = { id = nfa.59  days = 1 } #Battleships fire on crowd
+			country_event = { id = nfa.59 days = 1 } #Battleships fire on crowd
 		}
 	}
 }
@@ -3157,7 +3106,7 @@ country_event = { #Battleships fire on crowd
 		name = nfa.59.a #The order is sent
 		add_stability = -0.05
 		hidden_effect = {
-			country_event = { id = nfa.69  days = 7 } #AF and Petain victorious
+			country_event = { id = nfa.69 days = 7 } #AF and Petain victorious
 			random_other_country = { news_event = worldnews.462 }
 			set_country_flag = NFA_democratie_shells_protestors
 		}
@@ -3180,7 +3129,7 @@ country_event = { #AF and Pétain victorious
 		remove_ideas = NFA_parades_idea
 		remove_ideas = NFA_400_coup_idea
 		hidden_effect = {
-			country_event = { id = nfa.73  days = 17 } #AF Ultimatum
+			country_event = { id = nfa.73 days = 17 } #AF Ultimatum
 		}
 		add_popularity = {
 			ideology = authoritarian_democrat
@@ -3206,7 +3155,7 @@ country_event = { #AF Ultimatum
 			base = 70
 		}
 		hidden_effect = {
-			country_event = { id = nfa.74  days = 8 } #Petain surrenders
+			country_event = { id = nfa.74 days = 8 } #Petain surrenders
 		}
 	}
 
@@ -3216,7 +3165,7 @@ country_event = { #AF Ultimatum
 			base = 30
 		}
 		hidden_effect = {
-			country_event = { id = nfa.75  days = 8 } #Petain killed
+			country_event = { id = nfa.75 days = 8 } #Petain killed
 		}
 	}
 }
@@ -3236,6 +3185,10 @@ country_event = { #Petain surrenders
 		name = nfa.74.a #Adieu Petain vive de Gaulle
 		add_political_power = 25
 		add_stability = 0.05
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.15
@@ -3244,9 +3197,11 @@ country_event = { #Petain surrenders
 			ideology = paternal_autocrat
 			popularity = -0.15
 		}
-		remove_unit_leader_role = { character = NFA_philippe_petain }
+		retire_character = NFA_philippe_petain
+		clear_sic_slot = yes
+		activate_advisor = NFA_charles_maurras_sic
 		hidden_effect = {
-			country_event = { id = nfa.76  days = 12 } #AF in full control
+			country_event = { id = nfa.76 days = 12 } #AF in full control
 		}
 	}
 }
@@ -3265,6 +3220,10 @@ country_event = { #Petain killed
 	option = {
 		name = nfa.75.a #Adieu Petain vive de Gaulle
 		add_stability = -0.08
+		set_politics = {
+			ruling_party = national_populist
+			elections_allowed = no
+		}
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.1
@@ -3273,27 +3232,11 @@ country_event = { #Petain killed
 			ideology = paternal_autocrat
 			popularity = -0.1
 		}
-		NFA_philippe_petain = {
-			retire = yes
-		}
-		NFA_charles_de_gaulle = {
-			if = {
-				limit = { has_ideology = paternal_autocrat_subtype }
-				promote_character = { ideology = paternal_autocrat_subtype }
-			}
-			else = {
-				add_country_leader_role = {
-					country_leader = {
-						desc = "POLITICS_CHARLES_DEGAULLE_DESC"
-						ideology = paternal_autocrat_subtype
-						traits = { NFA_Rooster }
-					}
-					promote_leader = yes
-				}
-			}
-		}
+		retire_character = NFA_philippe_petain
+		clear_sic_slot = yes
+		activate_advisor = NFA_charles_maurras_sic
 		hidden_effect = {
-			country_event = { id = nfa.76  days = 14 } #AF in full control
+			country_event = { id = nfa.76 days = 14 } #AF in full control
 		}
 	}
 }
@@ -3313,21 +3256,10 @@ country_event = { #Resurrection
 		name = nfa.76.a #Vive le Roi
 		add_stability = 0.05
 		add_political_power = 20
-		set_politics = {
-			ruling_party = national_populist
-			elections_allowed = no
-		}
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Charles_Maurras_hog_npo
-			NFA_Maurice_Pujo_for_npo
-			NFA_Eugene_Deloncle_eco_npo
-			NFA_Henri_Massis_sec_npo
-		}
 		remove_ideas = NFA_internal_unrest
-		remove_unit_leader_role = { character = NFA_henri_mordacq }
-		remove_unit_leader_role = { character = NFA_aime_doumenc }
-		remove_unit_leader_role = { character = NFA_pierre_lelong }
+		retire_character = NFA_henri_mordacq
+		retire_character = NFA_aime_doumenc
+		retire_character = NFA_pierre_lelong
 		add_ideas = NFA_republican_remnants
 		hidden_effect = {
 			country_event = { id = nfa.77 days = 24 } #Results of the investigation
@@ -3377,7 +3309,7 @@ country_event = { #Results of the Investigation
 			base = 95
 		}
 		hidden_effect = {
-			country_event = { id = nfa.78  days = 8 } #Guilty
+			country_event = { id = nfa.78 days = 8 } #Guilty
 		}
 	}
 
@@ -3387,8 +3319,8 @@ country_event = { #Results of the Investigation
 			base = 5
 		}
 		hidden_effect = {
-			country_event = { id = nfa.86  days = 10 } #Purge
-			country_event = { id = nfa.272  days = 16 } #Groussard flees
+			country_event = { id = nfa.86 days = 10 } #Purge
+			country_event = { id = nfa.272 days = 16 } #Groussard flees
 		}
 	}
 }
@@ -3568,7 +3500,6 @@ country_event = { #Resistance to Homecoming
 	}
 }
 
-
 # Rail Fix #
 state_event = { #Hidden Event to turn sabotaged railways back on
 	id = nfa.88
@@ -3593,7 +3524,7 @@ state_event = { #Hidden Event to turn sabotaged railways back on
 # Spanish Intervention
 #####
 
-country_event = { #Nationalist France supports us! SPA
+country_event = { #the French Republic supports us! SPA
 	id = nfa.62
 	immediate = { log = "[GetDateText]: [Root.GetName]: event nfa.62 FROM = [From.GetName]" }
 	title = nfa.62.t
@@ -3612,7 +3543,7 @@ country_event = { #Nationalist France supports us! SPA
 	}
 }
 
-country_event = { #Nationalist France supports us! SPR
+country_event = { #the French Republic supports us! SPR
 	id = nfa.63
 	immediate = { log = "[GetDateText]: [Root.GetName]: event nfa.63 FROM = [From.GetName]" }
 	title = nfa.63.t
@@ -3675,7 +3606,6 @@ country_event = { #SWF in Africa what to do with Rio de Oro
 		add_manpower = -1000
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = -500 producer = NFA }
 	}
-
 }
 
 country_event = { #Conflict in Africa seized rif
@@ -3710,7 +3640,6 @@ country_event = { #Conflict in Africa seized rif
 			add_stability = -0.04
 		}
 	}
-
 }
 
 country_event = { #Conflict in Africa gave rif
@@ -3745,7 +3674,6 @@ country_event = { #Conflict in Africa gave rif
 			add_stability = -0.04
 		}
 	}
-
 }
 
 #####
@@ -4085,7 +4013,6 @@ country_event = { #Moroccan response - independent
 	}
 }
 
-
 #####
 # NFA/GER Case Deal Peace Events
 #####
@@ -4120,7 +4047,7 @@ country_event = { # GER invites us to discuss the occupation of France
 					980 = { is_owned_and_controlled_by = GER } #Lille
 				}
 			}
-			GER = { country_event = { id = nfa.134 } } #The French enter negotiations - Case 1
+			GER = { country_event = nfa.134 } #The French enter negotiations - Case 1
 		}
 
 		else_if = {
@@ -4134,7 +4061,7 @@ country_event = { # GER invites us to discuss the occupation of France
 					980 = { is_owned_and_controlled_by = GER } #Lille
 				}
 			}
-			GER = { country_event = { id = nfa.132 } } #The French enter negotiations - Case 2
+			GER = { country_event = nfa.132 } #The French enter negotiations - Case 2
 		}
 
 		else_if = {
@@ -4148,7 +4075,7 @@ country_event = { # GER invites us to discuss the occupation of France
 					980 = { is_owned_and_controlled_by = GER } #Lille
 				}
 			}
-			GER = { country_event = { id = nfa.130 } } #The French enter negotiations - Case 3
+			GER = { country_event = nfa.130 } #The French enter negotiations - Case 3
 		}
 
 		else_if = {
@@ -4162,7 +4089,7 @@ country_event = { # GER invites us to discuss the occupation of France
 					980 = { is_owned_and_controlled_by = GER } #Lille
 				}
 			}
-			GER = { country_event = { id = nfa.128 } } #The French enter negotiations - Case 4
+			GER = { country_event = nfa.128 } #The French enter negotiations - Case 4
 		}
 
 		else_if = {
@@ -4176,9 +4103,8 @@ country_event = { # GER invites us to discuss the occupation of France
 					980 = { is_owned_and_controlled_by = GER } #Lille
 				}
 			}
-			GER = { country_event = { id = nfa.125 } } #The French enter negotiations - Case 5
+			GER = { country_event = nfa.125 } #The French enter negotiations - Case 5
 		}
-
 	}
 
 	option = { #Do not fall for the trick
@@ -4186,7 +4112,7 @@ country_event = { # GER invites us to discuss the occupation of France
 		ai_chance = {
 			base = 5
 		}
-		GER = { country_event = { id = nfa.121 } } #The French decline talks
+		GER = { country_event = nfa.121 } #The French decline talks
 	}
 }
 
@@ -4314,6 +4240,7 @@ country_event = { # France accepts deal
 		}
 		add_political_power = 50
 		set_truce = { target = NFA days = 400 }
+		set_country_flag = { flag = Truce_with_GER value = 1 days = 400 }
 		hidden_effect = { news_event = worldnews.478 }
 		if = {
 			limit = {
@@ -4486,7 +4413,6 @@ country_event = { # France accepts deal
 			}
 		}
 	}
-
 }
 
 country_event = { # Congress of Lyon - Case 5 - GER decides demands
@@ -4498,8 +4424,8 @@ country_event = { # Congress of Lyon - Case 5 - GER decides demands
 		trigger = { BEL = { is_in_faction_with = GER } }
 	}
 	desc = {
-		text = nfa.125.d.5.wll #Wallonia is an ally with GER
-		trigger = { WLL = { is_in_faction_with = GER } }
+		text = nfa.125.d.5.wal #Wallonia is an ally with GER
+		trigger = { WAL = { is_in_faction_with = GER } }
 	}
 	desc = {
 		text = nfa.125.d.5.nobel #Belgium nor Wallonia is an ally with GER
@@ -4531,7 +4457,7 @@ country_event = { # Congress of Lyon - Case 5 - GER decides demands
 			set_global_flag = NFA_peace_deal_4_nobel
 		}
 		set_global_flag = GER_pushed_peace_deal
-		NFA = { country_event = { id = nfa.127 } } #French receive case deal 4
+		NFA = { country_event = nfa.127 } #French receive case deal 4
 		custom_effect_tooltip = NFA_Hawk_Warning_tt
 	}
 
@@ -4541,7 +4467,7 @@ country_event = { # Congress of Lyon - Case 5 - GER decides demands
 			base = 100
 		}
 		set_global_flag = NFA_peace_deal_5
-		NFA = { country_event = { id = nfa.126 } } #French receive case deal 5
+		NFA = { country_event = nfa.126 } #French receive case deal 5
 	}
 }
 
@@ -4564,7 +4490,7 @@ country_event = { # French receive case deal 5
 			}
 		}
 		add_political_power = -50
-		GER = { country_event = { id = nfa.123 } } #France accepts the deal
+		GER = { country_event = nfa.123 } #France accepts the deal
 	}
 
 	option = { #Decline the offer
@@ -4577,7 +4503,7 @@ country_event = { # French receive case deal 5
 			}
 		}
 		add_political_power = -25
-		GER = { country_event = { id = nfa.122 } } #France declines the deal
+		GER = { country_event = nfa.122 } #France declines the deal
 	}
 }
 
@@ -4607,7 +4533,7 @@ country_event = { # French receive case deal 4
 			}
 		}
 		add_political_power = -50
-		GER = { country_event = { id = nfa.123 } } #France accepts the deal
+		GER = { country_event = nfa.123 } #France accepts the deal
 	}
 
 	option = { #Decline the offer
@@ -4624,9 +4550,8 @@ country_event = { # French receive case deal 4
 			}
 		}
 		add_political_power = -25
-		GER = { country_event = { id = nfa.122 } } #France declines the deal
+		GER = { country_event = nfa.122 } #France declines the deal
 	}
-
 }
 
 country_event = { # Congress of Lyon - Case 4 - GER decides demands
@@ -4638,8 +4563,8 @@ country_event = { # Congress of Lyon - Case 4 - GER decides demands
 		trigger = { BEL = { is_in_faction_with = GER } }
 	}
 	desc = {
-		text = nfa.128.d.4.wll #Wallonia is an ally with GER
-		trigger = { WLL = { is_in_faction_with = GER } }
+		text = nfa.128.d.4.wal #Wallonia is an ally with GER
+		trigger = { WAL = { is_in_faction_with = GER } }
 	}
 	desc = {
 		text = nfa.128.d.4.nobel #Belgium nor Wallonia is an ally with GER
@@ -4671,7 +4596,7 @@ country_event = { # Congress of Lyon - Case 4 - GER decides demands
 			set_global_flag = NFA_peace_deal_3_nobel
 		}
 		set_global_flag = GER_pushed_peace_deal
-		NFA = { country_event = { id = nfa.129 } } #French receive case deal 3
+		NFA = { country_event = nfa.129 } #French receive case deal 3
 		custom_effect_tooltip = NFA_Hawk_Warning_tt
 	}
 
@@ -4687,7 +4612,7 @@ country_event = { # Congress of Lyon - Case 4 - GER decides demands
 		else = {
 			set_global_flag = NFA_peace_deal_4_nobel
 		}
-		NFA = { country_event = { id = nfa.127 } } #French receive case deal 4
+		NFA = { country_event = nfa.127 } #French receive case deal 4
 	}
 
 	option = { #Push the dove plan
@@ -4708,7 +4633,7 @@ country_event = { # Congress of Lyon - Case 4 - GER decides demands
 		add_political_power = 100
 		set_global_flag = NFA_peace_deal_5
 		set_global_flag = GER_easy_peace_deal
-		NFA = { country_event = { id = nfa.126 } } #French receive case deal 5
+		NFA = { country_event = nfa.126 } #French receive case deal 5
 		custom_effect_tooltip = NFA_Dove_tt
 	}
 }
@@ -4739,7 +4664,7 @@ country_event = { # French receive case deal 3
 			}
 		}
 		add_political_power = -50
-		GER = { country_event = { id = nfa.123 } } #France accepts the deal
+		GER = { country_event = nfa.123 } #France accepts the deal
 	}
 
 	option = { #Decline the offer
@@ -4756,9 +4681,8 @@ country_event = { # French receive case deal 3
 			}
 		}
 		add_political_power = -25
-		GER = { country_event = { id = nfa.122 } } #France declines the deal
+		GER = { country_event = nfa.122 } #France declines the deal
 	}
-
 }
 
 country_event = { # Congress of Lyon - Case 3 - GER decides demands
@@ -4770,8 +4694,8 @@ country_event = { # Congress of Lyon - Case 3 - GER decides demands
 		trigger = { BEL = { is_in_faction_with = GER } }
 	}
 	desc = {
-		text = nfa.130.d.3.wll #Wallonia is an ally with GER
-		trigger = { WLL = { is_in_faction_with = GER } }
+		text = nfa.130.d.3.wal #Wallonia is an ally with GER
+		trigger = { WAL = { is_in_faction_with = GER } }
 	}
 	desc = {
 		text = nfa.130.d.3.nobel #Belgium nor Wallonia is an ally with GER
@@ -4803,7 +4727,7 @@ country_event = { # Congress of Lyon - Case 3 - GER decides demands
 			set_global_flag = NFA_peace_deal_2_nobel
 		}
 		set_global_flag = GER_pushed_peace_deal
-		NFA = { country_event = { id = nfa.131 } } #French receive case deal 2
+		NFA = { country_event = nfa.131 } #French receive case deal 2
 		custom_effect_tooltip = NFA_Hawk_Warning_tt
 	}
 
@@ -4819,7 +4743,7 @@ country_event = { # Congress of Lyon - Case 3 - GER decides demands
 		else = {
 			set_global_flag = NFA_peace_deal_3_nobel
 		}
-		NFA = { country_event = { id = nfa.129 } } #French receive case deal 3
+		NFA = { country_event = nfa.129 } #French receive case deal 3
 	}
 
 	option = { #Push the dove plan
@@ -4846,7 +4770,7 @@ country_event = { # Congress of Lyon - Case 3 - GER decides demands
 			set_global_flag = NFA_peace_deal_4_nobel
 		}
 		set_global_flag = GER_easy_peace_deal
-		NFA = { country_event = { id = nfa.127 } } #French receive case deal 4
+		NFA = { country_event = nfa.127 } #French receive case deal 4
 		custom_effect_tooltip = NFA_Dove_tt
 	}
 }
@@ -4877,7 +4801,7 @@ country_event = { # French receive case deal 2
 			}
 		}
 		add_political_power = -50
-		GER = { country_event = { id = nfa.123 } } #France accepts the deal
+		GER = { country_event = nfa.123 } #France accepts the deal
 	}
 
 	option = { #Decline the offer
@@ -4894,9 +4818,8 @@ country_event = { # French receive case deal 2
 			}
 		}
 		add_political_power = -25
-		GER = { country_event = { id = nfa.122 } } #France declines the deal
+		GER = { country_event = nfa.122 } #France declines the deal
 	}
-
 }
 
 country_event = { # Congress of Lyon - Case 2 - GER decides demands
@@ -4908,8 +4831,8 @@ country_event = { # Congress of Lyon - Case 2 - GER decides demands
 		trigger = { BEL = { is_in_faction_with = GER } }
 	}
 	desc = {
-		text = nfa.132.d.2.wll #Wallonia is an ally with GER
-		trigger = { WLL = { is_in_faction_with = GER } }
+		text = nfa.132.d.2.wal #Wallonia is an ally with GER
+		trigger = { WAL = { is_in_faction_with = GER } }
 	}
 	desc = {
 		text = nfa.132.d.2.nobel #Belgium nor Wallonia is an ally with GER
@@ -4941,7 +4864,7 @@ country_event = { # Congress of Lyon - Case 2 - GER decides demands
 			set_global_flag = NFA_peace_deal_1_nobel
 		}
 		set_global_flag = GER_pushed_peace_deal
-		NFA = { country_event = { id = nfa.133 } } #French receive case deal 1
+		NFA = { country_event = nfa.133 } #French receive case deal 1
 		custom_effect_tooltip = NFA_Hawk_Warning_tt
 	}
 
@@ -4957,7 +4880,7 @@ country_event = { # Congress of Lyon - Case 2 - GER decides demands
 		else = {
 			set_global_flag = NFA_peace_deal_2_nobel
 		}
-		NFA = { country_event = { id = nfa.131 } } #French receive case deal 2
+		NFA = { country_event = nfa.131 } #French receive case deal 2
 	}
 
 	option = { #Push the dove plan
@@ -4984,7 +4907,7 @@ country_event = { # Congress of Lyon - Case 2 - GER decides demands
 			set_global_flag = NFA_peace_deal_3_nobel
 		}
 		set_global_flag = GER_easy_peace_deal
-		NFA = { country_event = { id = nfa.129 } } #French receive case deal 3
+		NFA = { country_event = nfa.129 } #French receive case deal 3
 		custom_effect_tooltip = NFA_Dove_tt
 	}
 }
@@ -5015,7 +4938,7 @@ country_event = { # French receive case deal 1
 			}
 		}
 		add_political_power = -50
-		GER = { country_event = { id = nfa.123 } } #France accepts the deal
+		GER = { country_event = nfa.123 } #France accepts the deal
 	}
 
 	option = { #Decline the offer
@@ -5028,9 +4951,8 @@ country_event = { # French receive case deal 1
 			}
 		}
 		add_political_power = -25
-		GER = { country_event = { id = nfa.122 } } #France declines the deal
+		GER = { country_event = nfa.122 } #France declines the deal
 	}
-
 }
 
 country_event = { # Congress of Lyon - Case 1 - GER decides demands
@@ -5042,8 +4964,8 @@ country_event = { # Congress of Lyon - Case 1 - GER decides demands
 		trigger = { BEL = { is_in_faction_with = GER } }
 	}
 	desc = {
-		text = nfa.134.d.1.wll #Wallonia is an ally with GER
-		trigger = { WLL = { is_in_faction_with = GER } }
+		text = nfa.134.d.1.wal #Wallonia is an ally with GER
+		trigger = { WAL = { is_in_faction_with = GER } }
 	}
 	desc = {
 		text = nfa.134.d.1.nobel #Belgium nor Wallonia is an ally with GER
@@ -5065,7 +4987,7 @@ country_event = { # Congress of Lyon - Case 1 - GER decides demands
 		else = {
 			set_global_flag = NFA_peace_deal_1_nobel
 		}
-		NFA = { country_event = { id = nfa.133 } } #French receive case deal 1
+		NFA = { country_event = nfa.133 } #French receive case deal 1
 	}
 
 	option = { #Push the dove plan
@@ -5092,7 +5014,7 @@ country_event = { # Congress of Lyon - Case 1 - GER decides demands
 			set_global_flag = NFA_peace_deal_2_nobel
 		}
 		set_global_flag = GER_easy_peace_deal
-		NFA = { country_event = { id = nfa.131 } } #French receive case deal 2
+		NFA = { country_event = nfa.131 } #French receive case deal 2
 		custom_effect_tooltip = NFA_Dove_tt
 	}
 }
@@ -5112,9 +5034,7 @@ country_event = { #AI NFA will declare war! - CAN Player POV
 
 	option = {
 		name = nfa.140.b #Stop it! now is not the time
-		NFA = {
-			set_country_flag = CAN_block_NFA_declaration_war
-		}
+		NFA = { remove_decision = NFA_La_Lutte_Finale }
 	}
 }
 
@@ -5122,7 +5042,7 @@ country_event = { #AI NFA will declare war! - CAN Player POV
 # FRP joins NFA
 #####
 
-country_event = { #Join National France? FRP	That's if FRP is somehow freed after some peace conference fuckery
+country_event = { #Join the French Republic? FRP	That's if FRP is somehow freed after some peace conference fuckery
 	id = nfa.155
 	immediate = { log = "[GetDateText]: [Root.GetName]: event nfa.155 FROM = [From.GetName]" }
 	title = nfa.155.t
@@ -5146,7 +5066,7 @@ country_event = { #Join National France? FRP	That's if FRP is somehow freed afte
 	}
 
 	option = {
-		name = nfa.155.a #Join National France!
+		name = nfa.155.a #Join the French Republic!
 		ai_chance = {
 			base = 100
 		}
@@ -5721,7 +5641,7 @@ country_event = { #Returning state events success
 
 	option = {
 		name = nfa.193.a #Excellent!
-		add_state_claim = event_target:return_stat
+		add_state_claim = event_target:return_state
 	}
 }
 
@@ -5759,7 +5679,7 @@ country_event = { #Franco-German Business Deal - GER
 				has_democratic_government = yes
 			}
 		}
-		NFA = { country_event = { id = nfa.197  days = 1 } } #Germans agree to work together
+		NFA = { country_event = { id = nfa.197 days = 1 } } #Germans agree to work together
 		add_offsite_building = {
 			type = industrial_complex
 			level = 3
@@ -5775,7 +5695,7 @@ country_event = { #Franco-German Business Deal - GER
 				has_authoritarian_government = yes
 			}
 		}
-		NFA = { country_event = { id = nfa.198  days = 1 } } #Germans refuse to work together
+		NFA = { country_event = { id = nfa.198 days = 1 } } #Germans refuse to work together
 		add_political_power = 10
 	}
 }
@@ -5837,7 +5757,7 @@ country_event = { #Congress of Verdun - Invite - GER
 				has_democratic_government = yes
 			}
 		}
-		NFA = { country_event = { id = nfa.200  days = 3 } } #Germans agree to attend Verdun
+		NFA = { country_event = { id = nfa.200 days = 3 } } #Germans agree to attend Verdun
 	}
 
 	option = {
@@ -5849,7 +5769,7 @@ country_event = { #Congress of Verdun - Invite - GER
 				has_authoritarian_government = yes
 			}
 		}
-		NFA = { country_event = { id = nfa.201  days = 3 } } #Germans refuse to come to Verdun
+		NFA = { country_event = { id = nfa.201 days = 3 } } #Germans refuse to come to Verdun
 	}
 }
 
@@ -5866,7 +5786,7 @@ country_event = { #Congress of Verdun - Invite Accepted - NFA
 
 	option = {
 		name = nfa.200.a #Excellent!
-		GER = { country_event = { id = nfa.203  days = 16 } } #Congress of Verdun - GER
+		GER = { country_event = { id = nfa.203 days = 16 } } #Congress of Verdun - GER
 	}
 }
 
@@ -5900,8 +5820,8 @@ country_event = { #Congress of Verdun - NFA
 
 	option = {
 		name = nfa.202.a #Time for peace
-		country_event = { id = nfa.209  days = 3 } #Success of the Congress
-		GER = { country_event = { id = nfa.210  days = 3 } } #Success of the Congress
+		country_event = { id = nfa.209 days = 3 } #Success of the Congress
+		GER = { country_event = { id = nfa.210 days = 3 } } #Success of the Congress
 	}
 }
 
@@ -5926,7 +5846,7 @@ country_event = { #Congress of Verdun - GER
 			}
 		}
 		add_stability = 0.05
-		NFA = { country_event = { id = nfa.202  days = 1 } } #Germans agree to peace at Verdun
+		NFA = { country_event = { id = nfa.202 days = 1 } } #Germans agree to peace at Verdun
 	}
 
 	option = {
@@ -5939,7 +5859,7 @@ country_event = { #Congress of Verdun - GER
 			}
 		}
 		add_political_power = 15
-		NFA = { country_event = { id = nfa.204  days = 3 } } #Germans refuse peace at Verdun
+		NFA = { country_event = { id = nfa.204 days = 3 } } #Germans refuse peace at Verdun
 	}
 }
 
@@ -6017,7 +5937,7 @@ country_event = { #NFA demands A-L - GER
 		ai_chance = {
 			base = 100
 		}
-		NFA = { country_event = { id = nfa.213  days = 2 } } #Germans refuse to hand over A-L
+		NFA = { country_event = { id = nfa.213 days = 2 } } #Germans refuse to hand over A-L
 		add_political_power = 100
 	}
 
@@ -6026,7 +5946,7 @@ country_event = { #NFA demands A-L - GER
 		ai_chance = {
 			base = 0
 		}
-		NFA = { country_event = { id = nfa.214  days = 2 } } #Germans cede A-L
+		NFA = { country_event = { id = nfa.214 days = 2 } } #Germans cede A-L
 		add_political_power = -500
 	}
 }
@@ -6124,14 +6044,14 @@ country_event = { #French Ask for Naval Aid - ENT
 		ai_chance = {
 			base = 95
 		}
-		NFA = { country_event = { id = nfa.217 } }
+		NFA = { country_event = nfa.217 }
 	}
 	option = {
 		name = nfa.216.b #Keep our secrets
 		ai_chance = {
 			base = 5
 		}
-		NFA = { country_event = { id = nfa.218 } }
+		NFA = { country_event = nfa.218 }
 	}
 }
 
@@ -6257,7 +6177,7 @@ country_event = { #Cracks in the Concentration
 			base = 50
 		}
 		set_country_flag = NATFRA_Split_Concentration_cf
-		country_event = { id = nfa.222  days = 8 } #New Elections
+		country_event = { id = nfa.222 days = 8 } #New Elections
 	}
 
 	option = {
@@ -6266,7 +6186,7 @@ country_event = { #Cracks in the Concentration
 			base = 50
 		}
 		set_country_flag = NATFRA_Concentration_Holds_On_cf
-		country_event = { id = nfa.222  days = 8 } #Concentration wins the elections
+		country_event = { id = nfa.222 days = 8 } #Concentration wins the elections
 	}
 }
 
@@ -6310,7 +6230,7 @@ country_event = { #New Elections
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = POLITICS_HENRI_MORDACQ_DEM_DESC
+						desc = NFA_henri_mordacq_dem_leader_desc
 						ideology = social_liberal_subtype
 						traits = { NFA_Old_Bear }
 					}
@@ -6322,21 +6242,17 @@ country_event = { #New Elections
 			ruling_party = social_liberal
 			elections_allowed = yes
 		}
+		if = {
+			limit = { NOT = { has_idea_with_trait = KR_parliament_sic } }
+			clear_sic_slot = yes
+			activate_advisor = NFA_national_assembly
+		}
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.20
 		}
-		hidden_effect = {
-			set_temp_variable = { coalition_partner_var = token:social_democrat }
-			add_to_coalition = yes
-		}
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Edouard_Daladier_hog_sli
-			NFA_George_Bonnet_for_sli
-			NFA_Jean_Zay_eco_sde
-			NFA_Albert_Sarraut_sec_sli
-		}
+		set_temp_variable = { coalition_partner_var = token:social_democrat }
+		add_to_coalition = yes
 		set_country_flag = NATFRA_Radical_Win_cf
 	}
 
@@ -6358,7 +6274,7 @@ country_event = { #New Elections
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = "POLITICS_HENRI_MORDACQ_DEM_DESC"
+						desc = NFA_henri_mordacq_dem_leader_desc
 						ideology = social_conservative_subtype
 						traits = { NFA_Old_Bear }
 					}
@@ -6370,6 +6286,11 @@ country_event = { #New Elections
 			ruling_party = social_conservative
 			elections_allowed = yes
 		}
+		if = {
+			limit = { NOT = { has_idea_with_trait = KR_parliament_sic } }
+			clear_sic_slot = yes
+			activate_advisor = NFA_national_assembly
+		}
 		add_popularity = {
 			ideology = social_conservative
 			popularity = 0.20
@@ -6378,13 +6299,6 @@ country_event = { #New Elections
 			ideology = social_conservative
 			long_name = NFA_BN_social_conservative_party_long
 			name = NFA_BN_social_conservative_party_party
-		}
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Jean_Ybarnegaray_hog_sco
-			NFA_Georges_Mandel_for_sco
-			NFA_Paul_Reynaud_eco_mli
-			NFA_Francois_de_la_Rocque_sec_sco
 		}
 		set_country_flag = NATFRA_Bloc_National_Win_cf
 	}
@@ -6408,7 +6322,7 @@ country_event = { #New Elections
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = "POLITICS_HENRI_MORDACQ_DEM_DESC"
+						desc = NFA_henri_mordacq_dem_leader_desc
 						ideology = market_liberal_subtype
 						traits = { NFA_Old_Bear }
 					}
@@ -6420,21 +6334,17 @@ country_event = { #New Elections
 			ruling_party = market_liberal
 			elections_allowed = yes
 		}
+		if = {
+			limit = { NOT = { has_idea_with_trait = KR_parliament_sic } }
+			clear_sic_slot = yes
+			activate_advisor = NFA_national_assembly
+		}
 		add_popularity = {
 			ideology = market_liberal
 			popularity = 0.20
 		}
-		hidden_effect = {
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes
-		}
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Paul_Reynaud_hog_mli
-			NFA_Louis_Marin_for_sco
-			NFA_Edouard_Daladier_eco_sli
-			NFA_Jean_Fabry_sec_sli
-		}
+		set_temp_variable = { coalition_partner_var = token:social_liberal }
+		add_to_coalition = yes
 		set_country_flag = NATFRA_Concentration_Win_cf
 	}
 }
@@ -6459,21 +6369,17 @@ country_event = { #Fallout of the Coup
 			ruling_party = authoritarian_democrat
 			elections_allowed = yes
 		}
+		if = {
+			limit = { NOT = { has_idea_with_trait = KR_parliament_sic } }
+			clear_sic_slot = yes
+			activate_advisor = NFA_national_assembly
+		}
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.1
 		}
-		hidden_effect = {
-			set_temp_variable = { coalition_partner_var = token:social_conservative }
-			add_to_coalition = yes
-		}
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Jean_Mermoz_hog_ade
-			NFA_Jean_Ybarnegaray_for_sco
-			NFA_Charles_Vallin_eco_ade
-			NFA_George_Lamirand_sec_pau
-		}
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		add_to_coalition = yes
 		custom_effect_tooltip = NFA_tt_PSF_becomes_ade
 		hidden_effect = {
 			set_temp_variable = { NFA_conservative_to_liberal_value = party_popularity@social_conservative }
@@ -6489,7 +6395,7 @@ country_event = { #Fallout of the Coup
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_FRANCOIS_DE_LA_ROCQUE_DEM_DESC"
+							desc = NFA_francois_de_la_rocque_leader_desc
 							ideology = authoritarian_democrat_subtype
 							traits = { NFA_Colonel }
 						}
@@ -6511,16 +6417,11 @@ country_event = { #Fallout of the Coup
 			ruling_party = paternal_autocrat
 			elections_allowed = no
 		}
+		clear_sic_slot = yes
+		activate_advisor = NFA_georges_lamirand_sic
 		add_popularity = {
 			ideology = paternal_autocrat
 			popularity = 0.20
-		}
-		remove_all_ministers = yes
-		add_ideas = {
-			NFA_Louis_Alexandre_Audibert_hog_pau
-			NFA_Jean_Mermoz_for_ade
-			NFA_Charles_Vallin_eco_ade
-			NFA_George_Lamirand_sec_pau
 		}
 		custom_effect_tooltip = NFA_tt_PSF_becomes_pau
 		hidden_effect = {
@@ -6537,7 +6438,7 @@ country_event = { #Fallout of the Coup
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_FRANCOIS_DE_LA_ROCQUE_DICTATOR_DESC"
+							desc = NFA_francois_de_la_rocque_dictator_leader_desc
 							ideology = paternal_autocrat_subtype
 							traits = { NFA_Colonel }
 						}
@@ -6556,7 +6457,7 @@ country_event = { #Social Conservative Presidential Election
 	immediate = { log = "[GetDateText]: [Root.GetName]: event nfa.224 FROM = [From.GetName]" }
 	title = nfa.224.t
 	desc = {
-		text = nfa.224.d.napoleon #Napoleon is rank 4 or a field marshall
+		text = nfa.224.d.napoleon #Napoleon is rank 4 or a field marshal
 		trigger = {
 			NOT = { has_country_flag = NFA_first_presidential_election }
 			NFA_louis_bonaparte = {
@@ -6578,7 +6479,7 @@ country_event = { #Social Conservative Presidential Election
 		}
 	}
 	desc = {
-		text = nfa.224.d.napoleonfirst #Napoleon is rank 4 or a field marshall
+		text = nfa.224.d.napoleonfirst #Napoleon is rank 4 or a field marshal
 		trigger = {
 			has_country_flag = NFA_first_presidential_election
 			NFA_louis_bonaparte = {
@@ -6692,7 +6593,7 @@ country_event = { #Fourth Republic President
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = "POLITICS_LOUIS_BONAPARTE_DESC"
+						desc = NFA_louis_bonaparte_leader_desc
 						ideology = social_conservative_subtype
 						traits = { NFA_President_Prince }
 					}
@@ -6724,7 +6625,7 @@ country_event = { #Fourth Republic President
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = "POLITICS_FRANCOIS_DE_LA_ROCQUE_DEM_DESC"
+						desc = NFA_francois_de_la_rocque_leader_desc
 						ideology = social_conservative_subtype
 						traits = { NFA_Colonel }
 					}
@@ -6760,10 +6661,10 @@ country_event = { #Hidden Event to check if NFA owns Alsace-Lorraine
 					is_owned_and_controlled_by = NFA
 				}
 			}
-			country_event = { id = nfa.227  days = 1 } #Does Napoleon create the Empire?
+			country_event = { id = nfa.227 days = 1 } #Does Napoleon create the Empire?
 		}
 		else = {
-			country_event = { id = nfa.226  days = 100 random = 1000 } #Does Napoleon create the Empire?
+			country_event = { id = nfa.226 days = 100 random = 1000 } #Does Napoleon create the Empire?
 		}
 	}
 }
@@ -6819,7 +6720,7 @@ country_event = { #Concentration President Choice
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = "POLITICS_PIERRE_FLANDIN_DESC"
+						desc = NFA_pierre_etienne_flandin_leader_desc
 						ideology = market_liberal_subtype
 						traits = { NFA_Pilot }
 					}
@@ -6847,7 +6748,7 @@ country_event = { #Concentration President Choice
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = "POLITICS_PAUL_REYNAUD_DESC"
+						desc = NFA_paul_reynaud_leader_desc
 						ideology = market_liberal_subtype
 						traits = { NFA_Economist }
 					}
@@ -6941,7 +6842,7 @@ country_event = { #Presidential Republic Election - BN path
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_LOUIS_BONAPARTE_DESC"
+							desc = NFA_louis_bonaparte_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_President_Prince }
 						}
@@ -6949,20 +6850,13 @@ country_event = { #Presidential Republic Election - BN path
 					}
 				}
 			}
-			remove_all_ministers = yes
-			add_ideas = {
-				NFA_Jean_Ybarnegaray_hog_sco
-				NFA_Georges_Mandel_for_sco
-				NFA_Paul_Reynaud_eco_mli
-				NFA_Francois_de_la_Rocque_sec_sco
-			}
+			set_country_flag = NFA_Bonaparte_HoS_cf
 			hidden_effect = {
-				set_country_flag = NFA_Bonaparte_HoS_cf
 				if = {
 					limit = {
 						has_country_flag = NFA_first_presidential_election
 					}
-					country_event = { id = nfa.245 } #Bonaparte elected to the presidency
+					country_event = nfa.245 #Bonaparte elected to the presidency
 				}
 			}
 		}
@@ -6978,7 +6872,7 @@ country_event = { #Presidential Republic Election - BN path
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_FRANCOIS_DE_LA_ROCQUE_DEM_DESC"
+							desc = NFA_francois_de_la_rocque_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_Colonel }
 						}
@@ -6986,20 +6880,13 @@ country_event = { #Presidential Republic Election - BN path
 					}
 				}
 			}
-			remove_all_ministers = yes
-			add_ideas = {
-				NFA_Jean_Ybarnegaray_hog_sco
-				NFA_Georges_Mandel_for_sco
-				NFA_Paul_Reynaud_eco_mli
-				NFA_Louis_Marin_sec_sco
-			}
+			set_country_flag = NFA_DLR_HoS_cf
 			hidden_effect = {
-				set_country_flag = NFA_DLR_HoS_cf
 				if = {
 					limit = {
 						has_country_flag = NFA_first_presidential_election
 					}
-					country_event = { id = nfa.241 } #De la Rocque elected to the presidency
+					country_event = nfa.241 #De la Rocque elected to the presidency
 				}
 			}
 		}
@@ -7015,7 +6902,7 @@ country_event = { #Presidential Republic Election - BN path
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_LOUIS_MARIN_DESC"
+							desc = NFA_louis_marin_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_Professor }
 						}
@@ -7023,27 +6910,20 @@ country_event = { #Presidential Republic Election - BN path
 					}
 				}
 			}
-			remove_all_ministers = yes
-			add_ideas = {
-				NFA_Jean_Ybarnegaray_hog_sco
-				NFA_Georges_Mandel_for_sco
-				NFA_Paul_Reynaud_eco_mli
-				NFA_Francois_de_la_Rocque_sec_sco
-			}
+			set_country_flag = NFA_Marin_HoS_cf
 			hidden_effect = {
-				set_country_flag = NFA_Marin_HoS_cf
 				if = {
 					limit = {
 						has_country_flag = NFA_first_presidential_election
 					}
-					country_event = { id = nfa.242 } #Marin elected to the presidency
+					country_event = nfa.242 #Marin elected to the presidency
 				}
 			}
 		}
 		hidden_effect = {
-			country_event = { id = nfa.224  days = 2464 } #NB Candidate
-			country_event = { id = nfa.235  days = 2464 } #Radicaux Candidate
-			country_event = { id = nfa.229  days = 2492 } #Presidential Election
+			country_event = { id = nfa.224 days = 2464 } #NB Candidate
+			country_event = { id = nfa.235 days = 2464 } #Radicaux Candidate
+			country_event = { id = nfa.229 days = 2492 } #Presidential Election
 			clr_country_flag = NFA_first_presidential_election
 		}
 	}
@@ -7070,7 +6950,7 @@ country_event = { #Presidential Republic Election - BN path
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_CAMILLE_CHAUTEMPS_DESC"
+							desc = NFA_camille_chautemps_leader_desc
 							ideology = social_liberal_subtype
 							traits = { NFA_Sublime_Radical }
 						}
@@ -7081,24 +6961,18 @@ country_event = { #Presidential Republic Election - BN path
 			set_politics = {
 				ruling_party = social_liberal
 			}
+			if = {
+				limit = { NOT = { has_idea_with_trait = KR_parliament_sic } }
+				clear_sic_slot = yes
+				activate_advisor = NFA_national_assembly
+			}
 			add_popularity = {
 				ideology = social_liberal
 				popularity = 0.20
 			}
-			hidden_effect = {
-				set_temp_variable = { coalition_partner_var = token:social_democrat }
-				add_to_coalition = yes
-			}
-			remove_all_ministers = yes
-			add_ideas = {
-				NFA_Edouard_Daladier_hog_sli
-				NFA_George_Bonnet_for_sli
-				NFA_Jean_Zay_eco_sde
-				NFA_Albert_Sarraut_sec_sli
-			}
-			hidden_effect = {
-				set_country_flag = NFA_Chautemps_HoS_cf
-			}
+			set_temp_variable = { coalition_partner_var = token:social_democrat }
+			add_to_coalition = yes
+			set_country_flag = NFA_Chautemps_HoS_cf
 		}
 		else_if = {
 			limit = {
@@ -7112,7 +6986,7 @@ country_event = { #Presidential Republic Election - BN path
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_EDOUARD_DALADIER_DESC"
+							desc = NFA_edouard_daladier_leader_desc
 							ideology = social_liberal_subtype
 							traits = { NFA_Bull }
 						}
@@ -7123,29 +6997,23 @@ country_event = { #Presidential Republic Election - BN path
 			set_politics = {
 				ruling_party = social_liberal
 			}
+			if = {
+				limit = { NOT = { has_idea_with_trait = KR_parliament_sic } }
+				clear_sic_slot = yes
+				activate_advisor = NFA_national_assembly
+			}
 			add_popularity = {
 				ideology = social_liberal
 				popularity = 0.20
 			}
-			hidden_effect = {
-				set_temp_variable = { coalition_partner_var = token:social_democrat }
-				add_to_coalition = yes
-			}
-			remove_all_ministers = yes
-			add_ideas = {
-				NFA_Camille_Chautemps_hog_sli
-				NFA_George_Bonnet_for_sli
-				NFA_Jean_Zay_eco_sde
-				NFA_Albert_Sarraut_sec_sli
-			}
-			hidden_effect = {
-				set_country_flag = NFA_Daladier_HoS_cf
-			}
+			set_temp_variable = { coalition_partner_var = token:social_democrat }
+			add_to_coalition = yes
+			set_country_flag = NFA_Daladier_HoS_cf
 		}
 		hidden_effect = {
-			country_event = { id = nfa.224  days = 2464 } #NB Candidate
-			country_event = { id = nfa.235  days = 2464 } #Radicaux Candidate
-			country_event = { id = nfa.229  days = 2492 } #Presidential Election
+			country_event = { id = nfa.224 days = 2464 } #NB Candidate
+			country_event = { id = nfa.235 days = 2464 } #Radicaux Candidate
+			country_event = { id = nfa.229 days = 2492 } #Presidential Election
 		}
 	}
 }
@@ -7169,7 +7037,7 @@ country_event = { #De La Rocque """Elections"""
 			popularity = 0.07
 		}
 		hidden_effect = {
-			country_event = { id = nfa.230  days = 2555 } #Loop the PSF Sham elections
+			country_event = { id = nfa.230 days = 2555 } #Loop the PSF Sham elections
 		}
 	}
 }
@@ -7196,7 +7064,7 @@ country_event = { #Daladier Elected to Presidency, Mordacq resigns
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = "POLITICS_EDOUARD_DALADIER_DESC"
+						desc = NFA_edouard_daladier_leader_desc
 						ideology = social_liberal_subtype
 						traits = { NFA_Bull }
 					}
@@ -7206,18 +7074,9 @@ country_event = { #Daladier Elected to Presidency, Mordacq resigns
 		}
 		hidden_effect = {
 			set_country_flag = NFA_Daladier_HoS_cf
-			country_event = { id = nfa.235  days = 2464 } #Radicaux Candidate
-			country_event = { id = nfa.224  days = 2464 } #NB Candidate
-			country_event = { id = nfa.236  days = 2555 } #Presidential Election
-			if = {
-				limit = {
-					has_idea = NFA_Edouard_Daladier_hog_sli
-				}
-				swap_ideas = {
-					remove_idea = NFA_Edouard_Daladier_hog_sli
-					add_idea = NFA_Camille_Chautemps_hog_sli
-				}
-			}
+			country_event = { id = nfa.235 days = 2464 } #Radicaux Candidate
+			country_event = { id = nfa.224 days = 2464 } #NB Candidate
+			country_event = { id = nfa.236 days = 2555 } #Presidential Election
 		}
 	}
 }
@@ -7244,7 +7103,7 @@ country_event = { #Flandin Elected to Presidency, Mordacq resigns
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = "POLITICS_PIERRE_FLANDIN_DESC"
+						desc = NFA_pierre_etienne_flandin_leader_desc
 						ideology = market_liberal_subtype
 						traits = { NFA_Pilot }
 					}
@@ -7274,7 +7133,7 @@ country_event = { #Decide to stay in Unity Cabinet
 			base = 60
 		}
 		hidden_effect = {
-			country_event = { id = nfa.237  days = 180 } #United Legislature
+			country_event = { id = nfa.237 days = 180 } #United Legislature
 		}
 	}
 	option = {
@@ -7283,7 +7142,7 @@ country_event = { #Decide to stay in Unity Cabinet
 			base = 40
 		}
 		hidden_effect = {
-			country_event = { id = nfa.234  days = 180 } #Legislative Election
+			country_event = { id = nfa.234 days = 180 } #Legislative Election
 			if = {
 				limit = {
 					has_country_flag = NFA_Legislature_united
@@ -7313,7 +7172,6 @@ country_event = { #Legislative Reelections
 				has_government = social_liberal
 			}
 		}
-		remove_all_ministers = yes
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.1
@@ -7330,19 +7188,13 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_EDOUARD_DALADIER_DESC"
+							desc = NFA_edouard_daladier_leader_desc
 							ideology = social_liberal_subtype
 							traits = { NFA_Bull }
 						}
 						promote_leader = yes
 					}
 				}
-			}
-			add_ideas = {
-				NFA_Camille_Chautemps_hog_sli
-				NFA_George_Bonnet_for_sli
-				NFA_Jean_Zay_eco_sde
-				NFA_Albert_Sarraut_sec_sli
 			}
 			clr_country_flag = NFA_Daladier_HoS_cf
 		}
@@ -7358,19 +7210,13 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_CAMILLE_CHAUTEMPS_DESC"
+							desc = NFA_camille_chautemps_leader_desc
 							ideology = social_liberal_subtype
 							traits = { NFA_Sublime_Radical }
 						}
 						promote_leader = yes
 					}
 				}
-			}
-			add_ideas = {
-				NFA_Edouard_Daladier_hog_sli
-				NFA_George_Bonnet_for_sli
-				NFA_Jean_Zay_eco_sde
-				NFA_Albert_Sarraut_sec_sli
 			}
 			clr_country_flag = NFA_Chautemps_HoS_cf
 		}
@@ -7386,19 +7232,13 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_PIERRE_FLANDIN_DESC"
+							desc = NFA_pierre_etienne_flandin_leader_desc
 							ideology = social_liberal_subtype
 							traits = { NFA_Pilot }
 						}
 						promote_leader = yes
 					}
 				}
-			}
-			add_ideas = {
-				NFA_Edouard_Daladier_hog_sli
-				NFA_George_Bonnet_for_sli
-				NFA_Jean_Zay_eco_sde
-				NFA_Albert_Sarraut_sec_sli
 			}
 			clr_country_flag = NFA_Flandin_HoS_cf
 		}
@@ -7414,19 +7254,13 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_PAUL_REYNAUD_DESC"
+							desc = NFA_paul_reynaud_leader_desc
 							ideology = market_liberal_subtype
 							traits = { NFA_Economist }
 						}
 						promote_leader = yes
 					}
 				}
-			}
-			add_ideas = {
-				NFA_Edouard_Daladier_hog_sli
-				NFA_George_Bonnet_for_sli
-				NFA_Jean_Zay_eco_sde
-				NFA_Albert_Sarraut_sec_sli
 			}
 			clr_country_flag = NFA_Reynaud_HoS_cf
 		}
@@ -7442,19 +7276,13 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_LOUIS_BONAPARTE_DESC"
+							desc = NFA_louis_bonaparte_leader_desc
 							ideology = social_liberal_subtype
 							traits = { NFA_President_Prince }
 						}
 						promote_leader = yes
 					}
 				}
-			}
-			add_ideas = {
-				NFA_Edouard_Daladier_hog_sli
-				NFA_George_Bonnet_for_sli
-				NFA_Jean_Zay_eco_sde
-				NFA_Albert_Sarraut_sec_sli
 			}
 			clr_country_flag = NFA_Bonaparte_HoS_cf
 		}
@@ -7470,19 +7298,13 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_FRANCOIS_DE_LA_ROCQUE_DEM_DESC"
+							desc = NFA_francois_de_la_rocque_leader_desc
 							ideology = social_liberal_subtype
 							traits = { NFA_Colonel }
 						}
 						promote_leader = yes
 					}
 				}
-			}
-			add_ideas = {
-				NFA_Edouard_Daladier_hog_sli
-				NFA_George_Bonnet_for_sli
-				NFA_Jean_Zay_eco_sde
-				NFA_Albert_Sarraut_sec_sli
 			}
 			clr_country_flag = NFA_DLR_HoS_cf
 		}
@@ -7498,7 +7320,7 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_LOUIS_MARIN_DESC"
+							desc = NFA_louis_marin_leader_desc
 							ideology = social_liberal_subtype
 							traits = { NFA_Professor }
 						}
@@ -7506,27 +7328,24 @@ country_event = { #Legislative Reelections
 					}
 				}
 			}
-			add_ideas = {
-				NFA_Edouard_Daladier_hog_sli
-				NFA_George_Bonnet_for_sli
-				NFA_Jean_Zay_eco_sde
-				NFA_Albert_Sarraut_sec_sli
-			}
 			clr_country_flag = NFA_Marin_HoS_cf
 		}
 		set_politics = {
 			ruling_party = social_liberal
 		}
+		if = {
+			limit = { NOT = { has_idea_with_trait = KR_parliament_sic } }
+			clear_sic_slot = yes
+			activate_advisor = NFA_national_assembly
+		}
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.20
 		}
+		set_temp_variable = { coalition_partner_var = token:social_democrat }
+		add_to_coalition = yes
 		hidden_effect = {
-			set_temp_variable = { coalition_partner_var = token:social_democrat }
-			add_to_coalition = yes
-		}
-		hidden_effect = {
-			country_event = { id = nfa.234  days = 1460 } #Loop the Legislative Reelections
+			country_event = { id = nfa.234 days = 1460 } #Loop the Legislative Reelections
 		}
 	}
 
@@ -7539,7 +7358,6 @@ country_event = { #Legislative Reelections
 				has_government = social_conservative
 			}
 		}
-		remove_all_ministers = yes
 		add_popularity = {
 			ideology = social_conservative
 			popularity = 0.1
@@ -7556,19 +7374,13 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_EDOUARD_DALADIER_DESC"
+							desc = NFA_edouard_daladier_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_Bull }
 						}
 						promote_leader = yes
 					}
 				}
-			}
-			add_ideas = {
-				NFA_Jean_Ybarnegaray_hog_sco
-				NFA_Georges_Mandel_for_sco
-				NFA_Paul_Reynaud_eco_mli
-				NFA_Francois_de_la_Rocque_sec_sco
 			}
 		}
 		else_if = { #Chautemps
@@ -7583,19 +7395,13 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_CAMILLE_CHAUTEMPS_DESC"
+							desc = NFA_camille_chautemps_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_Sublime_Radical }
 						}
 						promote_leader = yes
 					}
 				}
-			}
-			add_ideas = {
-				NFA_Jean_Ybarnegaray_hog_sco
-				NFA_Georges_Mandel_for_sco
-				NFA_Paul_Reynaud_eco_mli
-				NFA_Francois_de_la_Rocque_sec_sco
 			}
 		}
 		else_if = { #Flandin
@@ -7610,19 +7416,13 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_PIERRE_FLANDIN_DESC"
+							desc = NFA_pierre_etienne_flandin_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_Pilot }
 						}
 						promote_leader = yes
 					}
 				}
-			}
-			add_ideas = {
-				NFA_Jean_Ybarnegaray_hog_sco
-				NFA_Georges_Mandel_for_sco
-				NFA_Paul_Reynaud_eco_mli
-				NFA_Francois_de_la_Rocque_sec_sco
 			}
 		}
 		else_if = { #Reynaud
@@ -7637,19 +7437,13 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_PAUL_REYNAUD_DESC"
+							desc = NFA_paul_reynaud_leader_desc
 							ideology = market_liberal_subtype
 							traits = { NFA_Economist }
 						}
 						promote_leader = yes
 					}
 				}
-			}
-			add_ideas = {
-				NFA_Jean_Ybarnegaray_hog_sco
-				NFA_Georges_Mandel_for_sco
-				NFA_Paul_Reynaud_eco_mli
-				NFA_Francois_de_la_Rocque_sec_sco
 			}
 		}
 		else_if = {
@@ -7664,19 +7458,13 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_LOUIS_BONAPARTE_DESC"
+							desc = NFA_louis_bonaparte_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_President_Prince }
 						}
 						promote_leader = yes
 					}
 				}
-			}
-			add_ideas = {
-				NFA_Jean_Ybarnegaray_hog_sco
-				NFA_Georges_Mandel_for_sco
-				NFA_Paul_Reynaud_eco_mli
-				NFA_Francois_de_la_Rocque_sec_sco
 			}
 		}
 		else_if = {
@@ -7691,19 +7479,13 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_FRANCOIS_DE_LA_ROCQUE_DEM_DESC"
+							desc = NFA_francois_de_la_rocque_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_Colonel }
 						}
 						promote_leader = yes
 					}
 				}
-			}
-			add_ideas = {
-				NFA_Jean_Ybarnegaray_hog_sco
-				NFA_Georges_Mandel_for_sco
-				NFA_Paul_Reynaud_eco_mli
-				NFA_Louis_Marin_sec_sco
 			}
 		}
 		else_if = {
@@ -7718,7 +7500,7 @@ country_event = { #Legislative Reelections
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_LOUIS_MARIN_DESC"
+							desc = NFA_louis_marin_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_Professor }
 						}
@@ -7726,22 +7508,21 @@ country_event = { #Legislative Reelections
 					}
 				}
 			}
-			add_ideas = {
-				NFA_Jean_Ybarnegaray_hog_sco
-				NFA_Georges_Mandel_for_sco
-				NFA_Paul_Reynaud_eco_mli
-				NFA_Francois_de_la_Rocque_sec_sco
-			}
 		}
 		set_politics = {
 			ruling_party = social_conservative
+		}
+		if = {
+			limit = { NOT = { has_idea_with_trait = KR_parliament_sic } }
+			clear_sic_slot = yes
+			activate_advisor = NFA_national_assembly
 		}
 		add_popularity = {
 			ideology = social_conservative
 			popularity = 0.20
 		}
 		hidden_effect = {
-			country_event = { id = nfa.234  days = 1460 } #Loop the Legislative Reelections
+			country_event = { id = nfa.234 days = 1460 } #Loop the Legislative Reelections
 		}
 	}
 }
@@ -7860,7 +7641,7 @@ country_event = { #Non Concentration President Election
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_CAMILLE_CHAUTEMPS_DESC"
+							desc = NFA_camille_chautemps_leader_desc
 							ideology = social_liberal_subtype
 							traits = { NFA_Sublime_Radical }
 						}
@@ -7876,7 +7657,7 @@ country_event = { #Non Concentration President Election
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_CAMILLE_CHAUTEMPS_DESC"
+							desc = NFA_camille_chautemps_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_Sublime_Radical }
 						}
@@ -7884,9 +7665,7 @@ country_event = { #Non Concentration President Election
 					}
 				}
 			}
-			hidden_effect = {
-				set_country_flag = NFA_Chautemps_HoS_cf
-			}
+			set_country_flag = NFA_Chautemps_HoS_cf
 		}
 		else_if = {
 			limit = {
@@ -7900,7 +7679,7 @@ country_event = { #Non Concentration President Election
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_EDOUARD_DALADIER_DESC"
+							desc = NFA_edouard_daladier_leader_desc
 							ideology = social_liberal_subtype
 							traits = { NFA_Bull }
 						}
@@ -7916,7 +7695,7 @@ country_event = { #Non Concentration President Election
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_EDOUARD_DALADIER_DESC"
+							desc = NFA_edouard_daladier_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_Bull }
 						}
@@ -7924,23 +7703,12 @@ country_event = { #Non Concentration President Election
 					}
 				}
 			}
-			hidden_effect = {
-				set_country_flag = NFA_Daladier_HoS_cf
-				if = {
-					limit = {
-						has_idea = NFA_Edouard_Daladier_hog_sli
-					}
-					swap_ideas = {
-						remove_idea = NFA_Edouard_Daladier_hog_sli
-						add_idea = NFA_Camille_Chautemps_hog_sli
-					}
-				}
-			}
+			set_country_flag = NFA_Daladier_HoS_cf
 		}
 		hidden_effect = {
-			country_event = { id = nfa.235  days = 2464 } #Radicaux Candidate
-			country_event = { id = nfa.224  days = 2464 } #NB Candidate
-			country_event = { id = nfa.236  days = 2555 } #Presidential Election
+			country_event = { id = nfa.235 days = 2464 } #Radicaux Candidate
+			country_event = { id = nfa.224 days = 2464 } #NB Candidate
+			country_event = { id = nfa.236 days = 2555 } #Presidential Election
 		}
 	}
 
@@ -7965,7 +7733,7 @@ country_event = { #Non Concentration President Election
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_LOUIS_BONAPARTE_DESC"
+							desc = NFA_louis_bonaparte_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_President_Prince }
 						}
@@ -7981,7 +7749,7 @@ country_event = { #Non Concentration President Election
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_LOUIS_BONAPARTE_DESC"
+							desc = NFA_louis_bonaparte_leader_desc
 							ideology = social_liberal_subtype
 							traits = { NFA_President_Prince }
 						}
@@ -7989,9 +7757,7 @@ country_event = { #Non Concentration President Election
 					}
 				}
 			}
-			hidden_effect = {
-				set_country_flag = NFA_Bonaparte_HoS_cf
-			}
+			set_country_flag = NFA_Bonaparte_HoS_cf
 		}
 		else_if = {
 			limit = {
@@ -8005,7 +7771,7 @@ country_event = { #Non Concentration President Election
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_FRANCOIS_DE_LA_ROCQUE_DEM_DESC"
+							desc = NFA_francois_de_la_rocque_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_Colonel }
 						}
@@ -8021,7 +7787,7 @@ country_event = { #Non Concentration President Election
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_FRANCOIS_DE_LA_ROCQUE_DEM_DESC"
+							desc = NFA_francois_de_la_rocque_leader_desc
 							ideology = social_liberal_subtype
 							traits = { NFA_Colonel }
 						}
@@ -8029,18 +7795,7 @@ country_event = { #Non Concentration President Election
 					}
 				}
 			}
-			hidden_effect = {
-				set_country_flag = NFA_DLR_HoS_cf
-				if = {
-					limit = {
-						has_idea = NFA_Francois_de_la_Rocque_sec_sco
-					}
-					swap_ideas = {
-						remove_idea = NFA_Francois_de_la_Rocque_sec_sco
-						add_idea = NFA_Louis_Marin_sec_sco
-					}
-				}
-			}
+			set_country_flag = NFA_DLR_HoS_cf
 		}
 		else_if = {
 			limit = {
@@ -8054,7 +7809,7 @@ country_event = { #Non Concentration President Election
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_LOUIS_MARIN_DESC"
+							desc = NFA_louis_marin_leader_desc
 							ideology = social_conservative_subtype
 							traits = { NFA_Professor }
 						}
@@ -8070,7 +7825,7 @@ country_event = { #Non Concentration President Election
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_LOUIS_MARIN_DESC"
+							desc = NFA_louis_marin_leader_desc
 							ideology = social_liberal_subtype
 							traits = { NFA_Professor }
 						}
@@ -8078,14 +7833,12 @@ country_event = { #Non Concentration President Election
 					}
 				}
 			}
-			hidden_effect = {
-				set_country_flag = NFA_Marin_HoS_cf
-			}
+			set_country_flag = NFA_Marin_HoS_cf
 		}
 		hidden_effect = {
-			country_event = { id = nfa.235  days = 2464 } #Radicaux Candidate
-			country_event = { id = nfa.224  days = 2464 } #NB Candidate
-			country_event = { id = nfa.236  days = 2555 } #Presidential Election
+			country_event = { id = nfa.235 days = 2464 } #Radicaux Candidate
+			country_event = { id = nfa.224 days = 2464 } #NB Candidate
+			country_event = { id = nfa.236 days = 2555 } #Presidential Election
 		}
 	}
 }
@@ -8105,7 +7858,7 @@ country_event = { #United Legislature
 			base = 100
 		}
 		hidden_effect = {
-			country_event = { id = nfa.233  days = 1278 } #Decide to stay United or split
+			country_event = { id = nfa.233 days = 1278 } #Decide to stay United or split
 			set_country_flag = NFA_Legislature_united
 		}
 	}
@@ -8143,9 +7896,9 @@ country_event = { # Hidden United Legislature Check for the Presidential Electio
 			base = 100
 		}
 		hidden_effect = {
-			country_event = { id = nfa.235  days = 90 } #Radicaux Candidate
-			country_event = { id = nfa.224  days = 90 } #NB Candidate
-			country_event = { id = nfa.236  days = 180 } #Presidential Election
+			country_event = { id = nfa.235 days = 90 } #Radicaux Candidate
+			country_event = { id = nfa.224 days = 90 } #NB Candidate
+			country_event = { id = nfa.236 days = 180 } #Presidential Election
 		}
 	}
 }
@@ -8161,9 +7914,6 @@ country_event = { #PSF is neutralized from focus tree
 
 	option = {
 		name = nfa.239.a #Vive la concentration
-		ai_chance = {
-			base = 100
-		}
 		add_popularity = {
 			ideology = social_conservative
 			popularity = -0.15
@@ -8192,7 +7942,7 @@ country_event = { #PSF is neutralized from focus tree
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = "POLITICS_HENRI_MORDACQ_ELECT_DESC"
+						desc = NFA_henri_mordacq_elect_leader_desc
 						ideology = market_liberal_subtype
 						traits = { NFA_Bear_Elect }
 					}
@@ -8203,18 +7953,14 @@ country_event = { #PSF is neutralized from focus tree
 		set_politics = {
 			ruling_party = market_liberal
 		}
-		hidden_effect = {
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes
-			clear_variable = coalition_stability
-			remove_all_ministers = yes
-			add_ideas = {
-				NFA_Paul_Reynaud_hog_mli
-				NFA_Louis_Marin_for_sco
-				NFA_Edouard_Daladier_eco_sli
-				NFA_Jean_Fabry_sec_sli
-			}
+		if = {
+			limit = { NOT = { has_idea_with_trait = KR_parliament_sic } }
+			clear_sic_slot = yes
+			activate_advisor = NFA_national_assembly
 		}
+		set_temp_variable = { coalition_partner_var = token:social_liberal }
+		add_to_coalition = yes
+		clear_variable = coalition_stability
 	}
 }
 
@@ -8259,13 +8005,6 @@ country_event = { #The PSF's constitutional referendum from the focus tree
 		hidden_effect = {
 			end_coalition = yes
 			clear_variable = coalition_stability
-			remove_all_ministers = yes
-			add_ideas = {
-				NFA_Francois_de_la_Rocque_hog_ade
-				NFA_Georges_Mandel_for_sco
-				NFA_Charles_Vallin_eco_ade
-				NFA_Louis_Marin_sec_sco
-			}
 		}
 	}
 }
@@ -8318,8 +8057,7 @@ country_event = { #Dawn of new empire (napoleon emperor path)
 		add_political_power = 100
 		set_cosmetic_tag = NFA_empire
 		NFA_louis_bonaparte = {
-			set_character_name = "Napoléon VI"
-			set_leader_name = "Napoléon VI"
+			set_character_name = NFA_louis_bonaparte_regnal
 			remove_trait = { trait = NFA_President_Prince ideology = social_liberal_subtype }
 			remove_trait = { trait = NFA_President_Prince ideology = social_conservative_subtype }
 			add_trait = { trait = NFA_New_Eagle ideology = social_liberal_subtype }
@@ -8330,7 +8068,7 @@ country_event = { #Dawn of new empire (napoleon emperor path)
 				}
 			}
 		}
-		set_country_leader_description = { desc = POLITICS_NAPOLEON_VI_DESC }
+		set_country_leader_description = { desc = NFA_louis_bonaparte_regnal_leader_desc }
 	}
 }
 
@@ -8598,7 +8336,6 @@ country_event = { #Railway Sabotaged
 					# Nothing happens
 				}
 			}
-
 		}
 		NFA_Longer_Mission_30 = yes
 		if = {
@@ -8623,6 +8360,88 @@ country_event = { #Railway Sabotaged
 				damage_building = { type = infrastructure damage = 0.3 }
 			}
 		}
+	}
+}
+
+country_event = { #Consolidate All Of British Africa?
+	id = nfa.256
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nfa.256 FROM = [From.GetName]" }
+	title = nfa.256.t
+	desc = nfa.256.d
+	picture = GFX_report_event_NFA_event_NFAGenericArmy
+
+	is_triggered_only = yes
+
+	option = {
+		name = nfa.256.a #Transfer Sierra Leone and Gambia
+		ai_chance = {
+			base = 60
+			modifier = {
+				factor = 0
+				has_dictatorship_government = yes
+			}
+		}
+		add_stability = 0.02
+		NGA = {
+			transfer_state = 700
+			transfer_state = 834
+		}
+		806 = {
+			add_compliance = 3
+			add_resistance = -4
+		}
+		hidden_effect = { # remove the dynamic modifiers
+			700 = {
+				if = {
+					limit = {
+						has_dynamic_modifier = { modifier = NFA_colonial_resistance }
+					}
+					remove_dynamic_modifier = { modifier = NFA_colonial_resistance }
+				}
+				else_if = {
+					limit = {
+						has_dynamic_modifier = { modifier = NFA_Colonial_Exploitation }
+					}
+					remove_dynamic_modifier = { modifier = NFA_Colonial_Exploitation }
+				}
+				else_if = {
+					limit = {
+						has_dynamic_modifier = { modifier = NFA_Autonomous_State }
+					}
+					remove_dynamic_modifier = { modifier = NFA_Autonomous_State }
+				}
+				add_core_of = NGA
+			}
+			834 = {
+				if = {
+					limit = {
+						has_dynamic_modifier = { modifier = NFA_colonial_resistance }
+					}
+					remove_dynamic_modifier = { modifier = NFA_colonial_resistance }
+				}
+				else_if = {
+					limit = {
+						has_dynamic_modifier = { modifier = NFA_Colonial_Exploitation }
+					}
+					remove_dynamic_modifier = { modifier = NFA_Colonial_Exploitation }
+				}
+				else_if = {
+					limit = {
+						has_dynamic_modifier = { modifier = NFA_Autonomous_State }
+					}
+					remove_dynamic_modifier = { modifier = NFA_Autonomous_State }
+				}
+				add_core_of = NGA
+			}
+		}
+	}
+
+	option = {
+		name = nfa.256.b #We will continue to hold the territory
+		ai_chance = {
+			base = 40
+		}
+		add_stability = -0.01
 	}
 }
 
@@ -8946,7 +8765,7 @@ country_event = { #Coronation of Henri VI
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = "POLITICS_HENRI_VI_DESC"
+						desc = NFA_henri_vi_leader_desc
 						ideology = national_populist_subtype
 						traits = { NFA_Young_Prince }
 					}
@@ -10303,7 +10122,6 @@ country_event = { #Check if the war started - count of paris in foreign legion
 			}
 			country_event = { id = nfa.503 days = 100 }
 		}
-
 	}
 }
 
@@ -10516,7 +10334,7 @@ country_event = { #Crowning ceremony for the AF
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_HENRI_VI_DESC"
+							desc = NFA_henri_vi_leader_desc
 							ideology = authoritarian_democrat_subtype
 							traits = { NFA_Young_Prince }
 						}
@@ -10532,7 +10350,7 @@ country_event = { #Crowning ceremony for the AF
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_HENRI_VI_DESC"
+							desc = NFA_henri_vi_leader_desc
 							ideology = paternal_autocrat_subtype
 							traits = { NFA_Young_Prince }
 						}
@@ -10548,7 +10366,7 @@ country_event = { #Crowning ceremony for the AF
 				else = {
 					add_country_leader_role = {
 						country_leader = {
-							desc = "POLITICS_HENRI_VI_DESC"
+							desc = NFA_henri_vi_leader_desc
 							ideology = national_populist_subtype
 							traits = { NFA_Young_Prince }
 						}
@@ -10565,7 +10383,7 @@ country_event = { #Crowning ceremony for the AF
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = "POLITICS_JEAN_III_DESC"
+						desc = NFA_jean_iii_leader_desc
 						ideology = authoritarian_democrat_subtype
 						traits = { NFA_Old_King }
 					}
@@ -10581,7 +10399,7 @@ country_event = { #Crowning ceremony for the AF
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = "POLITICS_JEAN_III_DESC"
+						desc = NFA_jean_iii_leader_desc
 						ideology = paternal_autocrat_subtype
 						traits = { NFA_Old_King }
 					}
@@ -10597,7 +10415,7 @@ country_event = { #Crowning ceremony for the AF
 			else = {
 				add_country_leader_role = {
 					country_leader = {
-						desc = "POLITICS_JEAN_III_DESC"
+						desc = NFA_jean_iii_leader_desc
 						ideology = national_populist_subtype
 						traits = { NFA_Old_King }
 					}
@@ -10605,10 +10423,6 @@ country_event = { #Crowning ceremony for the AF
 				}
 			}
 		}
-		remove_ideas_with_trait = head_of_government
-		remove_ideas_with_trait = economy_minister
-		add_ideas = NFA_Charles_de_Gaulle_hog_npo
-		add_ideas = NFA_Charles_Maurras_naph_npo
 		hidden_effect = {
 			complete_national_focus = NATFRA_Restauration
 			if = {
@@ -10750,15 +10564,13 @@ country_event = { #Meeting with his Holiness - AF event
 	desc = {
 		text = nfa.517.d.angrypope
 		trigger = {
-			NOT = {
-				has_global_flag = PAP_john_xxiii
-			}
+			NOT = { PAP = { has_country_leader = { character = PAP_achille_liennart } } }
 		}
 	}
 	desc = {
 		text = nfa.517.d.nicepope
 		trigger = {
-			has_global_flag = PAP_john_xxiii
+			PAP = { has_country_leader = { character = PAP_achille_liennart } }
 		}
 	}
 	picture = GFX_report_event_ITA_pope
@@ -10775,9 +10587,7 @@ country_event = { #Meeting with his Holiness - AF event
 		name = nfa.517.a #A joyous occasion
 		add_stability = 0.02
 		if = {
-			limit = {
-				has_global_flag = PAP_john_xxiii
-			}
+			limit = { PAP = { has_country_leader = { character = PAP_achille_liennart } } }
 			add_political_power = 20
 		}
 		else = {
@@ -13381,15 +13191,9 @@ country_event = { #Hidden event to decide the chain - Ivory Coast
 	is_triggered_only = yes
 
 	trigger = {
-		OR = {
-			807 = { #Ivory Coast
-				is_owned_and_controlled_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
-			963 = { #Akanland
-				is_owned_and_controlled_by = ROOT
-				NOT = { is_core_of = ROOT }
-			}
+		807 = { #Ivory Coast
+			is_owned_and_controlled_by = ROOT
+			NOT = { is_core_of = ROOT }
 		}
 		NOT = { has_country_flag = nfa_resistance_cancelled_algiers_AF }
 	}
@@ -13457,7 +13261,7 @@ country_event = { #Colony Revolts (donotlog)
 
 	option = {
 		name = nfa.601.b
-		trigger = { is_ai = no }
+		ai_chance = { base = 0 }
 		add_stability = -0.1
 		add_political_power = -150
 		every_owned_state = {
@@ -13493,7 +13297,7 @@ country_event = { #White peace with a revolter
 	}
 }
 
-country_event = { #Collapse of National France if killed or someone got algeria
+country_event = { #Collapse of the French Republic if killed or someone got algeria
 	id = nfa.623
 	immediate = { log = "[GetDateText]: [Root.GetName]: event nfa.623 FROM = [From.GetName]" }
 	title = nfa.623.t
@@ -13634,7 +13438,7 @@ country_event = { #Collapse of National France if killed or someone got algeria
 	}
 }
 
-country_event = { #Collapse of National France caused by native revolts with no other invaders
+country_event = { #Collapse of the French Republic caused by native revolts with no other invaders
 	id = nfa.624
 	immediate = { log = "[GetDateText]: [Root.GetName]: event nfa.624 FROM = [From.GetName]" }
 	title = nfa.624.t
@@ -13964,7 +13768,7 @@ country_event = { #ENT sues for peace
 		add_political_power = 50
 		ENT = {
 			white_peace_with_ROOT = yes
-			country_event = { id = nfa.627 } #EGY accepts peace
+			country_event = nfa.627 #EGY accepts peace
 		}
 	}
 
@@ -13976,7 +13780,7 @@ country_event = { #ENT sues for peace
 		add_political_power = -50
 		add_stability = -0.1
 		ENT = {
-			country_event = { id = nfa.628 } #EGY refuses peace
+			country_event = nfa.628 #EGY refuses peace
 		}
 	}
 }
@@ -14177,7 +13981,7 @@ country_event = { #BEL offers their response to NFA
 	}
 }
 
-# National France dies to Natives world news event
+# the French Republic dies to Natives world news event
 news_event = {
 	id = nfa.632
 	immediate = { log = "[GetDateText]: [Root.GetName]: event nfa.632 FROM = [From.GetName]" }
