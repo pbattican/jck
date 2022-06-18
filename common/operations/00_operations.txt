@@ -1985,7 +1985,6 @@ operation_targeted_sabotage_resources = { ### 15 3/35
 			value > 0
 		}
 
-
 		has_operation_token = {
 			tag = FROM
 			token = token_resistance_contacts

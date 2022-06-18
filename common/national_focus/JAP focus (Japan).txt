@@ -3695,7 +3695,7 @@ focus_tree = {
 			HAW = {
 				custom_trigger_tooltip = {
 					tooltip = JAP_not_member_of_sphere
-					NOT = { is_in_array = { global.asian_economic_sphere = THIS } }
+					NOT = { has_country_flag = JAP_economic_sphere_member }
 				}
 			}
 			NOT = { has_country_flag = JAP_backed_down_pacific }
