@@ -2,7 +2,6 @@ state = {
 	id = 319
 	name = "STATE_319"
 	manpower = 1520000
-
 	state_category = four
 
 	resources = {
@@ -10,7 +9,11 @@ state = {
 		chromium = 1
 	}
 	history = {
-		owner = WIF
+		add_to_array = { state_victory_points = 7660 }
+		add_to_array = { state_victory_points = 4598 }
+
+		victory_points = { 7660 5 }
+		victory_points = { 4598 1 }
 		buildings = {
 			infrastructure = 1
 			arms_factory = 2
@@ -21,12 +24,7 @@ state = {
 			}
 		}
 		add_core_of = WIF
-		victory_points = {
-			7660 5
-		}
-		victory_points = {
-			4598 1
-		}
+
 	}
 	provinces = {
 		4598 7632 7660 10484 13711 13712 13713

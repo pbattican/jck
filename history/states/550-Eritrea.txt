@@ -5,9 +5,9 @@ state = {
 	state_category = two
 
 	history = {
-		victory_points = {
-			12766 2
-		}
+		add_to_array = { state_victory_points = 12766 }
+		victory_points = { 12766 2 }
+
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
@@ -17,6 +17,7 @@ state = {
 			}
 		}
 	}
+
 	provinces = {
 		5017 5047 5091 8043 12723 12766
 	}
