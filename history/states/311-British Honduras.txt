@@ -14,6 +14,7 @@ state = {
 				naval_base = 1
 			}
 		}
+		owner = WIF
 		add_core_of = WIF
 		add_claim_by = GUA
 

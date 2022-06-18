@@ -1588,6 +1588,7 @@ technologies = {
 		local_resources_factor = 0.15
 		
 		path = {
+			leads_to_tech = excavation3 
 			research_cost_coeff = 1
 		}
 

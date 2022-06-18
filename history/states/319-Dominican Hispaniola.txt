@@ -8,12 +8,16 @@ state = {
 
 		chromium = 1
 	}
+
 	history = {
+		owner = WIF
+		add_core_of = WIF
 		add_to_array = { state_victory_points = 7660 }
 		add_to_array = { state_victory_points = 4598 }
 
 		victory_points = { 7660 5 }
 		victory_points = { 4598 1 }
+
 		buildings = {
 			infrastructure = 1
 			arms_factory = 2
@@ -23,7 +27,6 @@ state = {
 				naval_base = 2
 			}
 		}
-		add_core_of = WIF
 
 	}
 	provinces = {
