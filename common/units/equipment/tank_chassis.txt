@@ -89,7 +89,6 @@ equipments = {
 					tank_secondary_turret
 				}
 			}
-
 		}
 		module_count_limit = {
 			module = sloped_armor
@@ -134,6 +133,10 @@ equipments = {
 		}
 		module_count_limit = {
 			module = auto_loader
+			count < 2
+		}
+		module_count_limit = {
+			module = stabilizer
 			count < 2
 		}
 		default_modules = {
@@ -312,7 +315,6 @@ equipments = {
 					tank_radio_module
 				}
 			}
-
 		}
 		module_count_limit = {
 			module = sloped_armor
@@ -356,6 +358,10 @@ equipments = {
 		}
 		module_count_limit = {
 			module = auto_loader
+			count < 2
+		}
+		module_count_limit = {
+			module = stabilizer
 			count < 2
 		}
 		default_modules = {
@@ -534,7 +540,6 @@ equipments = {
 					tank_radio_module
 				}
 			}
-
 		}
 		module_count_limit = {
 			module = sloped_armor
@@ -575,6 +580,10 @@ equipments = {
 		}
 		module_count_limit = {
 			module = auto_loader
+			count < 2
+		}
+		module_count_limit = {
+			module = stabilizer
 			count < 2
 		}
 		default_modules = {
@@ -750,7 +759,6 @@ equipments = {
 					tank_radio_module
 				}
 			}
-
 		}
 		module_count_limit = {
 			module = sloped_armor
@@ -793,7 +801,10 @@ equipments = {
 			module = auto_loader
 			count < 2
 		}
-
+		module_count_limit = {
+			module = stabilizer
+			count < 2
+		}
 		default_modules = {
 			main_armament_slot = empty
 			turret_type_slot = tank_modern_tank_turret
@@ -919,7 +930,6 @@ equipments = {
 					tank_radio_module
 				}
 			}
-
 		}
 		module_count_limit = {
 			module = sloped_armor
@@ -959,6 +969,10 @@ equipments = {
 		}
 		module_count_limit = {
 			module = auto_loader
+			count < 2
+		}
+		module_count_limit = {
+			module = stabilizer
 			count < 2
 		}
 		default_modules = {
@@ -1023,6 +1037,7 @@ equipments = {
 				required = yes
 				allowed_module_categories = {
 					tank_light_turret_type
+					tank_medium_turret_type
 				}
 			}
 
@@ -1078,7 +1093,6 @@ equipments = {
 					tank_radio_module
 				}
 			}
-
 		}
 		module_count_limit = {
 			module = sloped_armor
@@ -1121,7 +1135,10 @@ equipments = {
 			module = auto_loader
 			count < 2
 		}
-
+		module_count_limit = {
+			module = stabilizer
+			count < 2
+		}
 		default_modules = {
 			main_armament_slot = empty
 			turret_type_slot = tank_light_one_man_tank_turret
@@ -1157,5 +1174,4 @@ equipments = {
 		}
 		module_slots = inherit
 	}
-
 }

@@ -6,7 +6,6 @@ technologies = {
 #    #  #  # #  #  #        # #  #  #  #      #
 ### ###  ##  #  #  #      ##  #  # ### #    ##
 
-
 	early_ship_hull_light = {
 
 		enable_equipments = {
@@ -49,7 +48,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5			# Vanilla is 1
 		}
 
 		categories = {
@@ -81,11 +80,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
+			factor = 5			# Vanilla is 1 x 2 if at war
 		}
 
 		categories = {
@@ -118,7 +113,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5			# Vanilla is 1
 		}
 
 		categories = {
@@ -146,7 +141,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5			# Vanilla is 1
 		}
 
 		categories = {
@@ -185,7 +180,6 @@ technologies = {
 #  # #  #  #   #        # #  # #  # #   # #  # #  #  #  #  # #
 #  # #  #  #  ###     ##   ##  ###  #   # #  # #  # ### #  # ###
 
-
 	basic_depth_charges = {
 
 		enable_equipment_modules = {
@@ -214,11 +208,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 4
-			modifier = {
-				factor = 2
-				anti_submarine_strategy_required_trigger = yes
-			}
+			factor = 4			# Vanilla is 4 x 2 if ASW trigger is true
 		}
 
 		categories = {
@@ -254,11 +244,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 4
-			modifier = {
-				factor = 2
-				anti_submarine_strategy_required_trigger = yes
-			}
+			factor = 2			# Vanilla is 4 x 2 if ASW trigger is true
 		}
 
 		categories = {
@@ -293,11 +279,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				anti_submarine_strategy_required_trigger = yes
-			}
+			factor = 2			# Vanilla is 4 x 2 if ASW trigger is true
 		}
 
 		categories = {
@@ -329,11 +311,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				anti_submarine_strategy_required_trigger = yes
-			}
+			factor = 2			# Vanilla is 4 x 2 if ASW trigger is true
 		}
 
 		categories = {
@@ -364,11 +342,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 2
-				anti_submarine_strategy_required_trigger = yes
-			}
+			factor = 8			# Vanilla is 2 x 2 if ASW trigger is true
 		}
 
 		categories = {
@@ -402,16 +376,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-
-			modifier = {
-				factor = 4
-				has_war_with = GER
-			}
-			modifier = {
-				factor = 2
-				anti_submarine_strategy_required_trigger = yes
-			}
+			factor = 2			# Vanilla is 2 x 2 if ASW trigger is true
 		}
 
 		categories = {
@@ -496,11 +461,11 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 2 }
+			position = { x = -1 y = 2 }
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5			# Vanilla is 1
 		}
 
 		categories = {
@@ -535,11 +500,11 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 7 }
+			position = { x = -1 y = 7 }
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5			# Vanilla is 1
 		}
 
 		categories = {
@@ -568,11 +533,11 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 13 }
+			position = { x = -1 y = 13 }
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5			# Vanilla is 1
 		}
 
 		categories = {
@@ -596,11 +561,11 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 19 }
+			position = { x = -1 y = 19 }
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5			# Vanilla is 1
 		}
 
 		categories = {
@@ -612,7 +577,6 @@ technologies = {
 
 	improved_airplane_launcher = {
 
-
 		enable_equipment_modules = {
 			ship_airplane_launcher_2
 		}
@@ -620,18 +584,17 @@ technologies = {
 			custom_effect_tooltip = airplane_launcher_advice_tt
 		}
 
-
 		research_cost = 0.75
 
 		start_year = 1936
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = 0 y = 1 }
+			position = { x = 0 y = 1 }
 		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 0			# Vanilla is 2 - not used in AI ship designs
 		}
 
 		categories = {
@@ -651,12 +614,10 @@ technologies = {
 			custom_effect_tooltip = cruiser_armor_advice_tt
 		}
 
-
 		path = {
 			leads_to_tech = improved_cruiser_armor_scheme
 			research_cost_coeff = 1
 		}
-
 
 		xp_research_type = navy
 		xp_boost_cost = 50
@@ -667,11 +628,15 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = 0 y = 6 }
+			position = { x = 0 y = 6 }
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1				# Vanilla is 1
+			modifier = {
+				factor = 10
+				has_tech = basic_ship_hull_cruiser
+			}
 		}
 
 		categories = {
@@ -697,7 +662,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -707,11 +671,15 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = 0 y = 12 }
+			position = { x = 0 y = 12 }
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1				# Vanilla is 1
+			modifier = {
+				factor = 10
+				has_tech = improved_ship_hull_cruiser
+			}
 		}
 
 		categories = {
@@ -731,7 +699,6 @@ technologies = {
 			custom_effect_tooltip = cruiser_armor_advice_tt
 		}
 
-
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -741,11 +708,15 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = 0 y = 18 }
+			position = { x = 0 y = 18 }
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1				# Vanilla is 1
+			modifier = {
+				factor = 10
+				has_tech = advanced_ship_hull_cruiser
+			}
 		}
 
 		categories = {
@@ -761,7 +732,6 @@ technologies = {
 #### ##  ####  # #    #        #  ####  #  ###   #
 #  # #   #  #  # #    #         # #  #  #  #      #
 #  # ### #  #   #     #       ##  #  # ### #    ##
-
 
 	early_ship_hull_heavy = {
 
@@ -791,19 +761,11 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 2 }
+			position = { x = -1 y = 2 }
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				is_major = no
-			}
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
+			factor = 1			# Vanilla is 1 with modifiers
 		}
 
 		categories = {
@@ -832,22 +794,14 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 7 }
+			position = { x = -1 y = 7 }
 		}
 		sub_technologies = {
 			ship_hull_super_heavy
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				is_major = no
-			}
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
+			factor = 1			# Vanilla is 1 with modifiers
 		}
 
 		categories = {
@@ -871,7 +825,7 @@ technologies = {
 		start_year = 1936
 
 		ai_will_do = {
-			factor = 0   # SHBB is banned for AI
+			factor = 0   # Vanilla is 1 - SHBB is banned for AI
 		}
 
 		categories = {
@@ -900,7 +854,7 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 13 }
+			position = { x = -1 y = 13 }
 		}
 
 		ai_will_do = {
@@ -928,7 +882,7 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 19 }
+			position = { x = -1 y = 19 }
 		}
 
 		ai_will_do = {
@@ -948,7 +902,6 @@ technologies = {
 			ship_armor_bc_2
 		}
 
-
 		on_research_complete = {
 			custom_effect_tooltip = heavy_armor_advice_tt
 		}
@@ -956,7 +909,6 @@ technologies = {
 			leads_to_tech = improved_heavy_armor_scheme
 			research_cost_coeff = 1
 		}
-
 
 		xp_research_type = navy
 		xp_boost_cost = 50
@@ -967,7 +919,7 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = 0 y = 6 }
+			position = { x = 0 y = 6 }
 		}
 
 		ai_will_do = {
@@ -993,7 +945,6 @@ technologies = {
 			custom_effect_tooltip = heavy_armor_advice_tt
 		}
 
-
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.25
@@ -1003,15 +954,15 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = 0 y = 12 }
+			position = { x = 0 y = 12 }
 		}
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 2
-				has_tech = improved_ship_hull_heavy
-			}
+			# modifier = {
+			# 	factor = 2
+			# 	has_tech = improved_ship_hull_heavy
+			# }
 		}
 
 		categories = {
@@ -1052,7 +1003,7 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 2 }
+			position = { x = -1 y = 2 }
 		}
 
 		ai_will_do = {
@@ -1084,7 +1035,7 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 7 }
+			position = { x = -1 y = 7 }
 		}
 
 		ai_will_do = {
@@ -1116,7 +1067,7 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 13 }
+			position = { x = -1 y = 13 }
 		}
 
 		ai_will_do = {
@@ -1143,7 +1094,7 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 19 }
+			position = { x = -1 y = 19 }
 		}
 
 		ai_will_do = {
@@ -1197,11 +1148,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 3
-				has_war = yes
-			}
+			factor = 3			# Vanilla is 2 with x3 mod if at war
 		}
 
 		categories = {
@@ -1243,15 +1190,13 @@ technologies = {
 			torpedo_attack = 0.2
 		}
 
-
-
 		folder = {
 			name = mtgnavalfolder
 			position = { x = 2 y = 6 }
 		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 3			# Vanilla is 2 with x3 mod if at war
 		}
 
 		categories = {
@@ -1287,11 +1232,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 3
-				has_war = yes
-			}
+			factor = 3			# Vanilla is 2 with x3 mod if at war
 		}
 
 		categories = {
@@ -1310,9 +1251,7 @@ technologies = {
 
 		start_year = 1940
 
-
 		naval_torpedo_reveal_chance_factor = -0.25
-
 
 		folder = {
 			name = mtgnavalfolder
@@ -1320,7 +1259,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 3			# Vanilla is 2 with x3 mod if at war
 		}
 
 		categories = {
@@ -1348,8 +1287,6 @@ technologies = {
 			ship_torpedo_2
 			ship_modules_tech
 		}
-
-
 
 		folder = {
 			name = mtgnavalfolder
@@ -1385,8 +1322,6 @@ technologies = {
 			ship_torpedo_3
 		}
 
-
-
 		folder = {
 			name = mtgnavalfolder
 			position = { x = 0 y = 14 }
@@ -1415,7 +1350,6 @@ technologies = {
 		on_research_complete = {
 			custom_effect_tooltip = torpedo_advice_tt
 		}
-
 
 		folder = {
 			name = mtgnavalfolder
@@ -1455,11 +1389,11 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -2 y = 2 }
+			position = { x = -2 y = 2 }
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 2			# Vanilla is 1
 		}
 
 		categories = {
@@ -1492,11 +1426,11 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -2 y = 7 }
+			position = { x = -2 y = 7 }
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 2			# Vanilla is 1
 		}
 
 		categories = {
@@ -1531,11 +1465,11 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -2 y = 13 }
+			position = { x = -2 y = 13 }
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 2			# Vanilla is 1
 		}
 
 		categories = {
@@ -1567,11 +1501,11 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -2 y = 19 }
+			position = { x = -2 y = 19 }
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 2			# Vanilla is 1
 		}
 
 		categories = {
@@ -1598,11 +1532,15 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 12 }
+			position = { x = -1 y = 12 }
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1				# Vanilla is 1
+			modifier = {
+				factor = 10
+				has_tech = improved_ship_hull_submarine
+			}
 		}
 
 		categories = {
@@ -1642,11 +1580,15 @@ technologies = {
 
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = -1 y = 18 }
+			position = { x = -1 y = 18 }
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1				# Vanilla is 1
+			modifier = {
+				factor = 10
+				has_tech = advanced_ship_hull_submarine
+			}
 		}
 
 		categories = {
@@ -1661,7 +1603,6 @@ technologies = {
 #### ###  # # # #### # # # ##  # ##  #   #
 #  # #  # #   # #  # #   # #   #  #  #    #
 #  # #  # #   # #  # #   # ### #  #  #  ##
-
 
 	basic_battery = {
 
@@ -1695,8 +1636,6 @@ technologies = {
 			ship_light_medium_battery_1
 			ship_heavy_battery_1
 		}
-
-
 
 		folder = {
 			name = mtgnavalfolder
@@ -1746,8 +1685,6 @@ technologies = {
 			ship_light_battery_2
 		}
 
-
-
 		folder = {
 			name = mtgnavalfolder
 			position = { x = -2 y = 5 }
@@ -1786,8 +1723,6 @@ technologies = {
 			ship_light_battery_3
 		}
 
-
-
 		folder = {
 			name = mtgnavalfolder
 			position = { x = -2 y = 12 }
@@ -1820,7 +1755,6 @@ technologies = {
 		on_research_complete = {
 			custom_effect_tooltip = light_battery_advice_tt
 		}
-
 
 		folder = {
 			name = mtgnavalfolder
@@ -1887,11 +1821,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
+			factor = 4			# Vanilla is 1 with x10 mod if at war
 		}
 
 		categories = {
@@ -1940,11 +1870,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
+			factor = 4			# Vanilla is 1 with x10 mod if at war
 		}
 
 		categories = {
@@ -1979,8 +1905,6 @@ technologies = {
 			ship_light_medium_battery_2
 		}
 
-
-
 		folder = {
 			name = mtgnavalfolder
 			position = { x = 0 y = 5 }
@@ -1989,8 +1913,8 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 5
-				has_tech = improved_ship_hull_cruiser
+				factor = 20
+				has_tech = basic_ship_hull_cruiser
 			}
 		}
 
@@ -2018,8 +1942,6 @@ technologies = {
 			ship_light_medium_battery_3
 		}
 
-
-
 		folder = {
 			name = mtgnavalfolder
 			position = { x = 0 y = 12 }
@@ -2028,8 +1950,8 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 5
-				has_tech = advanced_ship_hull_cruiser
+				factor = 20
+				has_tech = improved_ship_hull_cruiser
 			}
 		}
 
@@ -2053,7 +1975,6 @@ technologies = {
 			custom_effect_tooltip = medium_battery_advice_tt
 		}
 
-
 		folder = {
 			name = mtgnavalfolder
 			position = { x = 0 y = 18 }
@@ -2061,6 +1982,10 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 20
+				has_tech = advanced_ship_hull_cruiser
+			}
 		}
 
 		categories = {
@@ -2098,11 +2023,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 7
-				has_war = yes
-			}
+			factor = 3			# Vanilla is 1 with x7 mod if at war
 		}
 
 		categories = {
@@ -2119,7 +2040,6 @@ technologies = {
 
 		start_year = 1942
 
-
 		light_cruiser = {
 			lg_attack = 0.05
 			lg_armor_piercing = 0.05
@@ -2129,18 +2049,13 @@ technologies = {
 			hg_armor_piercing = 0.05
 		}
 
-
 		folder = {
 			name = mtgnavalfolder
 			position = { x = 1 y = 15 }
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 7
-				has_war = yes
-			}
+			factor = 3			# Vanilla is 1 with x7 mod if at war
 		}
 
 		categories = {
@@ -2218,7 +2133,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0 	# Disabled for AI. Enable when improved/advanced heavy guns stop crippling ship speed or they are buffed
+			factor = 0 			# Vanilla is 1 - Disabled for AI. Enable when improved/advanced heavy guns stop crippling ship speed or they are buffed
 		}
 
 		categories = {
@@ -2247,7 +2162,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 0			# Vanilla is 1
 		}
 
 		categories = {
@@ -2285,13 +2200,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-				has_war = yes
-			}
-
+			factor = 3			# Vanilla is 1 with x5 mod if at war
 		}
 
 		categories = {
@@ -2308,7 +2217,6 @@ technologies = {
 
 		start_year = 1942
 
-
 		battleship = {
 			hg_attack = 0.05
 			hg_armor_piercing = 0.05
@@ -2324,12 +2232,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				is_major = yes
-				has_war = yes
-			}
+			factor = 3			# Vanilla is 1 with x5 mod if at war
 		}
 
 		categories = {
@@ -2404,14 +2307,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 5
-				OR = {
-					has_tech = basic_ship_hull_cruiser
-					has_tech = basic_ship_hull_heavy
-				}
-			}
+			factor = 2			# Vanilla is 1 with x5 mod if has tech
 		}
 
 		categories = {
@@ -2451,7 +2347,6 @@ technologies = {
 		}
 	}
 
-
 ###   ##  #   #  ##   ##  ###      ##   ##  #  # ### ###   ##  #
 #  # #  # ## ## #  # #    #       #  # #  # ## #  #  #  # #  # #
 #  # #### # # # #### # ## ##      #    #  # # ##  #  ###  #  # #
@@ -2476,11 +2371,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
+			factor = 4			# Vanilla is 3 with x2 mod if at war
 		}
 
 		categories = {
@@ -2507,11 +2398,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
+			factor = 4			# Vanilla is 3 with x2 mod if at war
 		}
 
 		categories = {
@@ -2534,11 +2421,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
+			factor = 4			# Vanilla is 3 with x2 mod if at war
 		}
 
 		categories = {
@@ -2579,11 +2462,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
+			factor = 4			# Vanilla is 3 with x2 mod if at war
 		}
 
 		categories = {
@@ -2620,11 +2499,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
+			factor = 4			# Vanilla is 3 with x2 mod if at war
 		}
 
 		categories = {
@@ -2665,11 +2540,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
+			factor = 4			# Vanilla is 3 with x2 mod if at war
 		}
 
 		categories = {
@@ -2677,7 +2548,6 @@ technologies = {
 			ship_modules_tech
 		}
 	}
-
 
 #   # ### #  # ###  ##
 ## ##  #  ## # #   #
@@ -2719,7 +2589,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0	# Mines are banned for AI - both performance reason and AI using minelayers/minesweepers as screens
+			factor = 0		# Vanilla is 1 - Mines are banned for AI - both performance reason and AI using minelayers/minesweepers as screens
 		}
 
 		categories = {
@@ -2750,7 +2620,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 0		# Vanilla is 1
 		}
 
 		categories = {
@@ -2777,7 +2647,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 0		# Vanilla is 1
 		}
 
 		categories = {
@@ -2804,8 +2674,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-
-
 		naval_mines_damage_factor = 0.2 # more boom for the boom box
 		folder = {
 			name = mtgnavalfolder
@@ -2813,7 +2681,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 0		# Vanilla is 1
 		}
 
 		categories = {
@@ -2837,7 +2705,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 0		# Vanilla is 1
 		}
 
 		categories = {
@@ -2870,7 +2738,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 0		# Vanilla is 1
 		}
 
 		categories = {
@@ -2902,7 +2770,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 0		# Vanilla is 1
 		}
 
 		categories = {
@@ -2930,7 +2798,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 0		# Vanilla is 1
 		}
 
 		categories = {
@@ -2960,7 +2828,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 0		# Vanilla is 1
 		}
 
 		categories = {
