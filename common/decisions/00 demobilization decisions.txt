@@ -2,15 +2,7 @@ demobilization = {
 	demobilization_economic = {
 		icon = revolt
 
-		activation = {
-			is_ai = no
-			has_unsupported_economic_law = yes
-			has_war = no
-			NOT = {
-				has_global_flag = KR_demob_ai_only
-				has_global_flag = KR_no_demob
-			}
-		}
+		allowed = { always = no } #manually activated
 
 		cancel_trigger = {
 			OR = {
@@ -30,18 +22,18 @@ demobilization = {
 				limit = { has_war_support < 0.15 }
 				if = {
 					limit = { has_idea = tot_economic_mobilisation }
-					add_political_power = 200
+					add_political_power = 300
 				}
 				else_if = {
 					limit = { has_idea = war_economy }
-					add_political_power = 150
+					add_political_power = 225
 				}
 				else_if = {
 					limit = { has_idea = partial_economic_mobilisation }
-					add_political_power = 100
+					add_political_power = 150
 				}
 				else = {
-					add_political_power = 50
+					add_political_power = 75
 				}
 				add_ideas = civilian_economy
 			}
@@ -49,14 +41,14 @@ demobilization = {
 				limit = { has_war_support < 0.25 }
 				if = {
 					limit = { has_idea = tot_economic_mobilisation }
-					add_political_power = 150
+					add_political_power = 225
 				}
 				else_if = {
 					limit = { has_idea = war_economy }
-					add_political_power = 100
+					add_political_power = 150
 				}
 				else = {
-					add_political_power = 50
+					add_political_power = 75
 				}
 				add_ideas = low_economic_mobilisation
 			}
@@ -69,16 +61,16 @@ demobilization = {
 				}
 				if = {
 					limit = { has_idea = tot_economic_mobilisation }
-					add_political_power = 100
+					add_political_power = 150
 				}
 				else = {
-					add_political_power = 50
+					add_political_power = 75
 				}
 				add_ideas = partial_economic_mobilisation
 			}
 			else_if = {
 				limit = { has_war_support < 0.8 }
-				add_political_power = 50
+				add_political_power = 75
 				add_ideas = war_economy
 			}
 		}
@@ -97,15 +89,7 @@ demobilization = {
 	demobilization_manpower = {
 		icon = revolt
 
-		activation = {
-			is_ai = no
-			has_unsupported_manpower_law = yes
-			has_war = no
-			NOT = {
-				has_global_flag = KR_demob_ai_only
-				has_global_flag = KR_no_demob
-			}
-		}
+		allowed = { always = no } #manually activated
 
 		cancel_trigger = {
 			OR = {
@@ -125,22 +109,22 @@ demobilization = {
 				limit = { has_war_support < 0.1 }
 				if = {
 					limit = { has_idea = scraping_the_barrel }
-					add_political_power = 250
+					add_political_power = 375
 				}
 				else_if = {
 					limit = { has_idea = all_adults_serve }
-					add_political_power = 200
+					add_political_power = 300
 				}
 				else_if = {
 					limit = { has_idea = service_by_requirement }
-					add_political_power = 150
+					add_political_power = 225
 				}
 				else_if = {
 					limit = { has_idea = extensive_conscription }
-					add_political_power = 100
+					add_political_power = 150
 				}
 				else = {
-					add_political_power = 50
+					add_political_power = 75
 				}
 				add_ideas = volunteer_only
 			}
@@ -148,32 +132,32 @@ demobilization = {
 				limit = { has_war_support < 0.3 }
 				if = {
 					limit = { has_idea = scraping_the_barrel }
-					add_political_power = 200
+					add_political_power = 300
 				}
 				else_if = {
 					limit = { has_idea = all_adults_serve }
-					add_political_power = 150
+					add_political_power = 225
 				}
 				else_if = {
 					limit = { has_idea = service_by_requirement }
-					add_political_power = 100
+					add_political_power = 150
 				}
 				else = {
-					add_political_power = 50
+					add_political_power = 75
 				}
 				add_ideas = limited_conscription
 			}
 			else = {
 				if = {
 					limit = { has_idea = scraping_the_barrel }
-					add_political_power = 150
+					add_political_power = 225
 				}
 				else_if = {
 					limit = { has_idea = all_adults_serve }
-					add_political_power = 100
+					add_political_power = 150
 				}
 				else = {
-					add_political_power = 50
+					add_political_power = 75
 				}
 				add_ideas = extensive_conscription
 			}
@@ -188,4 +172,3 @@ demobilization = {
 		}
 	}
 }
-

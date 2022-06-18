@@ -9,10 +9,10 @@ VEN_COL_intervention_decisions = {
 			factor = 50
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision VEN_COL_org_exiles"
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_COL_org_exiles target: [From.GetName]"
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_COL_org_exiles"
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_COL_org_exiles target: [From.GetName]"
 			set_country_flag = VEN_exiles_arrive
 			hidden_effect = {
 				load_oob = VEN_COL_exiles
@@ -66,9 +66,7 @@ VEN_COL_intervention_decisions = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision VEN_COL_intervene target: [From.GetName]"
 			FROM = {
-				country_event = {
-					id = ven.23
-				}
+				country_event = ven.23
 			}
 		}
 		remove_effect = {
@@ -174,7 +172,7 @@ VEN_essequibo_decisions = {
 			highlight_state_targets = { state = 687 }
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision VEN_peace_essequibo_start"
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_peace_essequibo_start target: [From.GetName]"
 			activate_mission = VEN_peace_essequibo_timer
 		}
 	}
@@ -232,10 +230,10 @@ VEN_GCL_decisions = {
 		cost = 75
 		ai_will_do = { factor = 150 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision VEN_secure_bogota"
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_secure_bogota target: [From.GetName]"
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_secure_bogota"
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_secure_bogota target: [From.GetName]"
 			set_country_flag = VEN_bogota_secured
 		}
 	}
@@ -251,10 +249,10 @@ VEN_GCL_decisions = {
 		cost = 75
 		ai_will_do = { factor = 150 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision VEN_secure_caribe"
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_secure_caribe target: [From.GetName]"
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_secure_caribe"
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_secure_caribe target: [From.GetName]"
 			set_country_flag = VEN_caribe_secured
 		}
 	}
@@ -270,10 +268,10 @@ VEN_GCL_decisions = {
 		cost = 75
 		ai_will_do = { factor = 150 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision VEN_secure_meta"
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_secure_meta target: [From.GetName]"
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_secure_meta"
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_secure_meta target: [From.GetName]"
 			set_country_flag = VEN_meta_secured
 		}
 	}
@@ -289,10 +287,10 @@ VEN_GCL_decisions = {
 		cost = 75
 		ai_will_do = { factor = 150 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision VEN_secure_choco"
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_secure_choco target: [From.GetName]"
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_secure_choco"
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_secure_choco target: [From.GetName]"
 			set_country_flag = VEN_choco_secured
 		}
 	}
@@ -308,10 +306,10 @@ VEN_GCL_decisions = {
 		cost = 75
 		ai_will_do = { factor = 150 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision VEN_secure_cauca"
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_secure_cauca target: [From.GetName]"
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_secure_cauca"
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_secure_cauca target: [From.GetName]"
 			set_country_flag = VEN_cauca_secured
 		}
 	}
@@ -327,10 +325,10 @@ VEN_GCL_decisions = {
 		cost = 75
 		ai_will_do = { factor = 150 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision VEN_secure_amazonia"
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_secure_amazonia target: [From.GetName]"
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_secure_amazonia"
+			log = "[GetDateText]: [Root.GetName]: Decision remove VEN_secure_amazonia target: [From.GetName]"
 			set_country_flag = VEN_amazonia_secured
 		}
 	}
@@ -379,7 +377,7 @@ VEN_oil_decisions = {
 		cost = 150
 		ai_will_do = { factor = 150 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision VEN_oil_USA_buy"
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_oil_USA_buy target: [From.GetName]"
 			set_country_flag = VEN_USA_oil_get
 			hidden_effect = {
 				remove_targeted_decision = { target = USA decision = VEN_oil_USA_buy }
@@ -426,7 +424,7 @@ VEN_oil_decisions = {
 		cost = 50
 		ai_will_do = { factor = 50 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision VEN_oil_USA_seize"
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_oil_USA_seize target: [From.GetName]"
 			set_country_flag = VEN_USA_oil_get
 			hidden_effect = {
 				remove_targeted_decision = { target = USA decision = VEN_oil_USA_buy }
@@ -463,7 +461,7 @@ VEN_oil_decisions = {
 		cost = 150
 		ai_will_do = { factor = 150 }
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision VEN_oil_HOL_buy"
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_oil_HOL_buy target: [From.GetName]"
 			set_country_flag = VEN_HOL_oil_get
 			hidden_effect = {
 				remove_targeted_decision = { target = HOL decision = VEN_oil_HOL_buy }
@@ -509,7 +507,7 @@ VEN_oil_decisions = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision VEN_oil_HOL_seize"
+			log = "[GetDateText]: [Root.GetName]: Decision VEN_oil_HOL_seize target: [From.GetName]"
 			set_country_flag = VEN_HOL_oil_get
 			hidden_effect = {
 				remove_targeted_decision = { target = HOL decision = VEN_oil_HOL_buy }
@@ -553,7 +551,6 @@ VEN_alliance_decisions = {
 		visible = {
 			has_socialist_government = yes
 			FROM = {
-				exists = yes
 				is_faction_leader = yes
 				NOT = { has_war_with = ROOT }
 			}
@@ -578,7 +575,6 @@ VEN_alliance_decisions = {
 		}
 		visible = {
 			FROM = {
-				exists = yes
 				is_faction_leader = yes
 				is_in_faction_with = WIF
 				NOT = { has_war_with = ROOT }
@@ -617,7 +613,6 @@ VEN_alliance_decisions = {
 
 		visible = {
 			FROM = {
-				exists = yes
 				is_in_faction = yes
 				NOT = { has_war_with = ROOT }
 			}
