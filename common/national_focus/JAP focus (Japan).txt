@@ -809,11 +809,13 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_small_rail"
-			hidden_effect = {
-				country_event = { id = japdom.74 days = 180 }
-				add_ideas = JAP_change_rail
+			add_timed_idea = {
+				idea = JAP_change_rail
+				days = 180
 			}
-			custom_effect_tooltip = small_rail
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = after_idea_expires
+			effect_tooltip = { remove_ideas = JAP_narrow_rail }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -963,6 +965,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 25
+			modifier = {
+				factor = 3
+				has_democratic_government = yes
+			}
 		}
 		x = -5
 		y = 1
@@ -970,8 +976,32 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_ZAI_ECO"
-			add_ideas = JAP_ZAI_1
+			custom_effect_tooltip = JAP_upgrade_zaibatsu_tt
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = ZAI_BRIBE_WARNING
+			hidden_effect = {
+				if = {
+					limit = { has_idea = Mitsui_Zaibatsu }
+					swap_ideas = {
+						remove_idea = Mitsui_Zaibatsu
+						add_idea = Mitsui_Zaibatsu_based
+					}
+				}
+				if = {
+					limit = { has_idea = sumitomo }
+					swap_ideas = {
+						remove_idea = sumitomo
+						add_idea = sumitomo_based
+					}
+				}
+				if = {
+					limit = { has_idea = mitsubishi }
+					swap_ideas = {
+						remove_idea = mitsubishi
+						add_idea = mitsubishi_based
+					}
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1157,10 +1187,7 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_ZAI_SCI"
-			swap_ideas = {
-				remove_idea = JAP_ZAI_1
-				add_idea = JAP_ZAI_2
-			}
+			add_ideas = JAP_ZAI_1
 			hidden_effect = { country_event = { id = japdom.36 days = 150 } }
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1186,7 +1213,11 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 25
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = { has_completed_focus = JAP_kodoha }
+			}
 		}
 		x = 0
 		y = 1
@@ -1341,6 +1372,11 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 25
+			modifier = {
+				factor = 3
+				has_dictatorship_government = yes
+				NOT = { has_completed_focus = JAP_kodoha }
+			}
 		}
 		x = 5
 		y = 1
@@ -1508,44 +1544,6 @@ focus_tree = {
 	###############################
 
 	focus = {
-		id = JAP_INT_KOREA
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = {
-			focus = JAP_ZAI_SCI
-			focus = JAP_NAT_ZAI
-			focus = JAP_BUR_TRAIN
-		}
-		mutually_exclusive = {
-			focus = JAP_COL_KOREA
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			KOR = {
-				is_subject_of = JAP
-				owns_state = 525
-				owns_state = 527
-			}
-		}
-		x = -4
-		y = 2
-		relative_position_id = JAP_NAT_ZAI
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus JAP_INT_KOREA"
-			custom_effect_tooltip = integrate_korea
-			hidden_effect = {
-				country_event = {
-					id = japdom.40
-					days = 100
-					random_days = 100
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = JAP_COL_START
 		icon = GFX_goal_demand_sudetenland
 		prerequisite = {
@@ -1566,7 +1564,47 @@ focus_tree = {
 				idea = JAP_COL_PREP
 				days = 100
 			}
-			custom_effect_tooltip = JAP_col_warning
+		}
+	}
+
+	focus = {
+		id = JAP_INT_KOREA
+		icon = GFX_goal_generic_controlled_board
+		prerequisite = {
+			focus = JAP_ZAI_SCI
+			focus = JAP_NAT_ZAI
+			focus = JAP_BUR_TRAIN
+		}
+		mutually_exclusive = {
+			focus = JAP_COL_KOREA
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = JAP_korean_autonomy
+			controls_state = 525
+			controls_state = 527
+		}
+		x = -4
+		y = 2
+		relative_position_id = JAP_NAT_ZAI
+		cost = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_INT_KOREA"
+			add_stability = 0.05
+			every_owned_state = {
+				limit = { is_core_of = KOR }
+				custom_effect_tooltip = JAP_korean_military_administration_tooltip
+				add_to_variable = {
+					JAP_korea_garrison_factor = -0.20
+					tooltip = JAP_korea_garrison_factor_tt
+				}
+				add_to_variable = {
+					JAP_korea_slots = 0.20
+					tooltip = JAP_korea_slots_tt
+				}
+			}
 		}
 	}
 
@@ -1584,6 +1622,7 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
+				has_country_flag = JAP_korean_autonomy
 				has_idea = JAP_COL_PREP
 			}
 			owns_state = 525
@@ -1592,15 +1631,18 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = JAP_COL_START
-		cost = 5
+		cost = 15
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_COL_KOREA"
-			custom_effect_tooltip = colonise_korea
-			hidden_effect = {
-				country_event = {
-					id = japdom.39
-					days = 200
-					random_days = 100
+			every_owned_state = {
+				limit = { is_core_of = KOR }
+				add_core_of = ROOT
+				custom_effect_tooltip = JAP_korean_military_administration_tooltip
+				clear_variable = JAP_korea_garrison_factor
+				clear_variable = JAP_korea_slots
+				add_to_variable = {
+					JAP_korea_manpower = -0.25
+					tooltip = JAP_korea_manpower_tt
 				}
 			}
 		}
@@ -1616,24 +1658,19 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
-			NOT = {
-				has_idea = JAP_COL_PREP
-			}
+			NOT = { has_idea = JAP_COL_PREP }
 			owns_state = 524
+			controls_state = 524
 		}
 		x = 0
 		y = 1
 		relative_position_id = JAP_COL_START
-		cost = 5
+		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_COL_TAIWAN"
-			custom_effect_tooltip = colonise_taiwan
-			hidden_effect = {
-				country_event = {
-					id = japdom.42
-					days = 100
-					random_days = 100
-				}
+			524 = {
+				add_core_of = ROOT
+				remove_dynamic_modifier = { modifier = JAP_model_colony }
 			}
 		}
 	}
@@ -1648,25 +1685,17 @@ focus_tree = {
 			factor = 100
 		}
 		available = {
-			NOT = {
-				has_idea = JAP_COL_PREP
-			}
+			NOT = { has_idea = JAP_COL_PREP }
 			owns_state = 745
+			controls_state = 745
 		}
 		x = 2
 		y = 1
 		relative_position_id = JAP_COL_START
-		cost = 5
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_COL_PORT"
-			custom_effect_tooltip = colonise_port
-			hidden_effect = {
-				country_event = {
-					id = japdom.73
-					days = 50
-					random_days = 100
-				}
-			}
+			add_state_core = 745
 		}
 	}
 
@@ -1693,17 +1722,10 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = JAP_COL_START
-		cost = 5
+		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_colonise_hawaii"
-			custom_effect_tooltip = colonise_hawaii_tt
-			hidden_effect = {
-				country_event = {
-					id = japdom.76
-					days = 200
-					random_days = 100
-				}
-			}
+			add_state_core = 629
 		}
 	}
 
@@ -2638,11 +2660,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 
-
 	########################
 	### Military - Naval ###
 	########################
-
 
 	### Island Hopping ###
 
@@ -2702,7 +2722,6 @@ focus_tree = {
 			}
 			JAP_homma_masaharu = { add_unit_leader_trait = naval_invader }
 			JAP_imamura_hitoshi = { add_unit_leader_trait = naval_invader }
-
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -2752,7 +2771,7 @@ focus_tree = {
 				add_idea = JAP_nav_tac_idea
 			}
 		}
-		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_AIRFORCE_BONUS}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_AIRFORCE_BONUS }
 	}
 
 	### Decisive Battle ###
@@ -3299,18 +3318,18 @@ focus_tree = {
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_rising_sun"
-			swap_ideas = {
-				remove_idea = JAP_rising_sun_idea_1
-				add_idea = JAP_rising_sun_idea_2
+			add_stability = 0.05
+			add_ideas = JAP_rising_sun_idea_1
+			add_named_threat = {
+				threat = 6
+				name = JAP_rising_sun_threat
 			}
 			hidden_effect = {
 				news_event = {
 					id = worldnews.30
 					days = 2
 				}
-				country_event = worldtension.21
 			}
-			add_stability = 0.05
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 	}
@@ -3350,7 +3369,16 @@ focus_tree = {
 		select_effect = {
 			log = "[GetDateText]: [Root.GetName]: Select Focus JAP_tokyo_conference"
 			every_other_country = {
-				limit = { is_co_prosperity_candidate = yes }
+				limit = {
+					is_co_prosperity_candidate = yes
+					has_socialist_government = no
+					NOT = {
+						AND = {
+							is_in_faction = yes
+							NOT = { is_in_faction_with = ROOT }
+						}
+					}
+				}
 				country_event = japfor.21
 			}
 		}
@@ -3387,6 +3415,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_osaka_conference"
+			set_country_flag = JAP_economic_sphere_leader
 			custom_effect_tooltip = JAP_may_now_invite_sphere
 			hidden_effect = {
 				country_event = japfor.400
@@ -3521,8 +3550,6 @@ focus_tree = {
 		}
 	}
 
-
-
 	#############################
 	### Foreign - Colonialism ###
 	#############################
@@ -3553,16 +3580,16 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_go_south"
 			if = {
-				limit = { has_idea = JAP_rising_sun_idea_3 }
+				limit = { has_idea = JAP_rising_sun_idea_2 }
 				swap_ideas = {
-					remove_idea = JAP_rising_sun_idea_3
-					add_idea = JAP_rising_sun_idea_5
+					remove_idea = JAP_rising_sun_idea_2
+					add_idea = JAP_rising_sun_idea_4
 				}
 			}
 			else = {
 				swap_ideas = {
-					remove_idea = JAP_rising_sun_idea_2
-					add_idea = JAP_rising_sun_idea_4
+					remove_idea = JAP_rising_sun_idea_1
+					add_idea = JAP_rising_sun_idea_3
 				}
 			}
 			every_country = {
@@ -3598,7 +3625,7 @@ focus_tree = {
 				NOT = { is_in_faction_with = HAW }
 				custom_trigger_tooltip = {
 					tooltip = JAP_not_member_of_sphere
-					NOT = { is_in_array = { global.asian_economic_sphere = HAW } }
+					NOT = { HAW = { has_country_flag = JAP_economic_sphere_member } }
 				}
 			}
 		}
@@ -3730,7 +3757,7 @@ focus_tree = {
 				is_subject = no
 				custom_trigger_tooltip = {
 					tooltip = JAP_not_member_of_sphere
-					NOT = { is_in_array = { global.asian_economic_sphere = THIS } }
+					NOT = { has_country_flag = JAP_economic_sphere_member }
 				}
 			}
 		}
@@ -3741,7 +3768,7 @@ focus_tree = {
 				PHI = {
 					custom_trigger_tooltip = {
 						tooltip = JAP_member_of_sphere
-						is_in_array = { global.asian_economic_sphere = THIS }
+						has_country_flag = JAP_economic_sphere_member
 					}
 				}
 			}
@@ -3767,6 +3794,16 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				is_in_array = { global.JAP_possible_allies_array = "PHI" }
+			}
+			modifier = {
+				factor = 0
+				PHI = { is_in_faction = no }
+				OR = {
+					has_game_rule = { rule = PHI_forpol option = PHI_FORPOL_ENT }
+					has_game_rule = { rule = PHI_forpol option = PHI_FORPOL_GER }
+					has_game_rule = { rule = PHI_forpol option = PHI_FORPOL_HND }
+					has_game_rule = { rule = PHI_forpol option = PHI_FORPOL_INT }
+				}
 			}
 		}
 		x = 0
@@ -3819,9 +3856,8 @@ focus_tree = {
 						is_not_claim_or_core_of_ROOT = yes
 						owner = {
 							NOT = {
-								is_subject_of = ROOT
-								is_in_faction_with = ROOT
-								is_in_array = { global.asian_economic_sphere = THIS }
+								is_ally_with = ROOT
+								has_country_flag = JAP_economic_sphere_member
 							}
 						}
 						OR = {
@@ -3840,7 +3876,7 @@ focus_tree = {
 							state = 725 #Nauru
 							state = 734 #Nendo
 							state = 737 #Bismarck Arch.
-							state = 846 #Malaya
+							state = 846 #Johore
 							state = 941 #German Samoa
 						}
 					}
@@ -3874,7 +3910,7 @@ focus_tree = {
 					owns_state = 1020
 					custom_trigger_tooltip = {
 						tooltip = JAP_not_member_of_sphere
-						NOT = { is_in_array = { global.asian_economic_sphere = THIS } }
+						NOT = { has_country_flag = JAP_economic_sphere_member }
 					}
 				}
 			}
@@ -3891,7 +3927,7 @@ focus_tree = {
 					controls_state = 1020
 					custom_trigger_tooltip = {
 						tooltip = JAP_member_of_sphere
-						is_in_array = { global.asian_economic_sphere = THIS }
+						has_country_flag = JAP_economic_sphere_member
 					}
 				}
 			}
@@ -3961,28 +3997,28 @@ focus_tree = {
 				INC = {
 					custom_trigger_tooltip = {
 						tooltip = JAP_not_member_of_sphere
-						NOT = { is_in_array = { global.asian_economic_sphere = THIS } }
+						NOT = { has_country_flag = JAP_economic_sphere_member }
 					}
 				}
 				can_declare_war_on = VIN
 				VIN = {
 					custom_trigger_tooltip = {
 						tooltip = JAP_not_member_of_sphere
-						NOT = { is_in_array = { global.asian_economic_sphere = THIS } }
+						NOT = { has_country_flag = JAP_economic_sphere_member }
 					}
 				}
 				can_declare_war_on = LAO
 				LAO = {
 					custom_trigger_tooltip = {
 						tooltip = JAP_not_member_of_sphere
-						NOT = { is_in_array = { global.asian_economic_sphere = THIS } }
+						NOT = { has_country_flag = JAP_economic_sphere_member }
 					}
 				}
 				can_declare_war_on = CAM
 				CAM = {
 					custom_trigger_tooltip = {
 						tooltip = JAP_not_member_of_sphere
-						NOT = { is_in_array = { global.asian_economic_sphere = THIS } }
+						NOT = { has_country_flag = JAP_economic_sphere_member }
 					}
 				}
 			}
@@ -4034,7 +4070,7 @@ focus_tree = {
 		available = {
 			is_faction_leader = yes
 			OR = {
-				846 = { is_controlled_by_ROOT_or_ally = yes } #Malaya
+				846 = { is_controlled_by_ROOT_or_ally = yes } #Johore
 				288 = { is_controlled_by_ROOT_or_ally = yes } #Rangoon
 				286 = { is_controlled_by_ROOT_or_ally = yes } #Cochinchina
 			}
@@ -4042,7 +4078,7 @@ focus_tree = {
 			SIA = {
 				custom_trigger_tooltip = {
 					tooltip = JAP_not_member_of_sphere
-					NOT = { is_in_array = { global.asian_economic_sphere = THIS } }
+					NOT = { has_country_flag = JAP_economic_sphere_member }
 				}
 			}
 		}
@@ -4075,7 +4111,7 @@ focus_tree = {
 				SIA = {
 					custom_trigger_tooltip = {
 						tooltip = JAP_member_of_sphere
-						is_in_array = { global.asian_economic_sphere = THIS }
+						has_country_flag = JAP_economic_sphere_member
 					}
 				}
 			}
@@ -4178,28 +4214,28 @@ focus_tree = {
 				PRF = {
 					custom_trigger_tooltip = {
 						tooltip = JAP_not_member_of_sphere
-						NOT = { is_in_array = { global.asian_economic_sphere = THIS } }
+						NOT = { has_country_flag = JAP_economic_sphere_member }
 					}
 				}
 				can_declare_war_on = HND
 				HND = {
 					custom_trigger_tooltip = {
 						tooltip = JAP_not_member_of_sphere
-						NOT = { is_in_array = { global.asian_economic_sphere = THIS } }
+						NOT = { has_country_flag = JAP_economic_sphere_member }
 					}
 				}
 				can_declare_war_on = RAJ
 				RAJ = {
 					custom_trigger_tooltip = {
 						tooltip = JAP_not_member_of_sphere
-						NOT = { is_in_array = { global.asian_economic_sphere = THIS } }
+						NOT = { has_country_flag = JAP_economic_sphere_member }
 					}
 				}
 				can_declare_war_on = BRM
 				BRM = {
 					custom_trigger_tooltip = {
 						tooltip = JAP_not_member_of_sphere
-						NOT = { is_in_array = { global.asian_economic_sphere = THIS } }
+						NOT = { has_country_flag = JAP_economic_sphere_member }
 					}
 				}
 			}
@@ -4244,7 +4280,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
-
 	#################################
 	### Foreign - China and such  ###
 	#################################
@@ -4254,6 +4289,11 @@ focus_tree = {
 		icon = GFX_focus_usa_focus_on_asia
 		available = {
 			is_faction_leader = yes
+			custom_trigger_tooltip = {
+				tooltip = JAP_controls_korea
+				var:525.owner = { is_ally_with = JAP }
+				var:527.owner = { is_ally_with = JAP }
+			}
 		}
 		ai_will_do = {
 			factor = 50
@@ -4275,31 +4315,27 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_go_west"
 			if = {
-				limit = { has_idea = JAP_rising_sun_idea_4 }
+				limit = { has_idea = JAP_rising_sun_idea_3 }
 				swap_ideas = {
-					remove_idea = JAP_rising_sun_idea_4
-					add_idea = JAP_rising_sun_idea_5
+					remove_idea = JAP_rising_sun_idea_3
+					add_idea = JAP_rising_sun_idea_4
 				}
 			}
 			else = {
 				swap_ideas = {
-					remove_idea = JAP_rising_sun_idea_2
-					add_idea = JAP_rising_sun_idea_3
+					remove_idea = JAP_rising_sun_idea_1
+					add_idea = JAP_rising_sun_idea_2
 				}
 			}
 			every_country = {
 				limit = {
 					OR = {
-						tag = GER
-						is_in_faction_with = GER
-						tag = ENT
-						is_in_faction_with = ENT
+						is_ally_with = GER
+						is_ally_with = ENT
 						is_chinese_tag = yes
 					}
 					NOT = {
-						tag = JAP
-						is_in_faction_with = JAP
-						is_subject_of = JAP
+						is_ally_with = JAP
 						is_ruled_by_pro_fengtian = yes
 					}
 				}
@@ -4316,6 +4352,11 @@ focus_tree = {
 		icon = GFX_goal_mantetsu_collaboration
 		available = {
 			is_faction_leader = yes
+			custom_trigger_tooltip = {
+				tooltip = JAP_controls_korea
+				var:525.owner = { is_ally_with = JAP }
+				var:527.owner = { is_ally_with = JAP }
+			}
 		}
 		ai_will_do = {
 			factor = 50
@@ -4346,6 +4387,14 @@ focus_tree = {
 		icon = GFX_goal_ANQ_panasian
 		available = {
 			is_faction_leader = yes
+			custom_trigger_tooltip = {
+				tooltip = JAP_controls_korea
+				var:525.owner = { is_ally_with = JAP }
+				var:527.owner = { is_ally_with = JAP }
+			}
+		}
+		bypass = {
+			has_global_flag = JAP_defeated_by_china
 		}
 		ai_will_do = {
 			factor = 50
@@ -4372,6 +4421,14 @@ focus_tree = {
 		icon = GFX_goal_ANQ_institutional_chaos
 		available = {
 			is_faction_leader = yes
+			custom_trigger_tooltip = {
+				tooltip = JAP_controls_korea
+				var:525.owner = { is_ally_with = JAP }
+				var:527.owner = { is_ally_with = JAP }
+			}
+		}
+		bypass = {
+			has_global_flag = JAP_defeated_by_china
 		}
 		ai_will_do = {
 			factor = 50
@@ -4412,6 +4469,9 @@ focus_tree = {
 			is_faction_leader = yes
 			has_war = yes
 		}
+		bypass = {
+			has_global_flag = JAP_defeated_by_china
+		}
 		ai_will_do = {
 			factor = 50
 		}
@@ -4431,7 +4491,7 @@ focus_tree = {
 			}
 			else = {
 				set_war_support = 1
-				add_political_power = 150
+				add_political_power = 100
 			}
 			if = {
 				limit = {
@@ -4451,6 +4511,14 @@ focus_tree = {
 		icon = GFX_focus_chi_collaboration_with_the_japanese
 		available = {
 			is_faction_leader = yes
+			custom_trigger_tooltip = {
+				tooltip = JAP_controls_korea
+				var:525.owner = { is_ally_with = JAP }
+				var:527.owner = { is_ally_with = JAP }
+			}
+		}
+		bypass = {
+			has_global_flag = JAP_defeated_by_china
 		}
 		mutually_exclusive = { focus = JAP_three_alls }
 		ai_will_do = {
@@ -4480,10 +4548,18 @@ focus_tree = {
 		icon = GFX_goal_generic_expel_people
 		available = {
 			is_faction_leader = yes
+			custom_trigger_tooltip = {
+				tooltip = JAP_controls_korea
+				var:525.owner = { is_ally_with = JAP }
+				var:527.owner = { is_ally_with = JAP }
+			}
 			has_war_with = CHN
 		}
 		bypass = {
-			NOT = { country_exists = CHN }
+			OR = {
+				has_global_flag = JAP_defeated_by_china
+				NOT = { country_exists = CHN }
+			}
 		}
 		mutually_exclusive = { focus = JAP_spiritual_mobilisation }
 		ai_will_do = {
@@ -4511,10 +4587,19 @@ focus_tree = {
 		icon = GFX_focus_generic_provoke_border_clashes
 		available = {
 			is_faction_leader = yes
+			custom_trigger_tooltip = {
+				tooltip = JAP_controls_korea
+				var:525.owner = { is_ally_with = JAP }
+				var:527.owner = { is_ally_with = JAP }
+			}
 			OR = {
 				can_declare_war_on = CHN
 				has_war_with = CHN
 			}
+			threat > 0.60
+		}
+		bypass = {
+			has_global_flag = JAP_defeated_by_china
 		}
 		bypass_if_unavailable = yes
 		ai_will_do = {
@@ -4555,6 +4640,19 @@ focus_tree = {
 			hidden_effect = {
 				add_timed_idea = { idea = JAP_ichigo days = 100 }
 			}
+			if = {
+				limit = { has_global_flag = JAP_sino_japanese_war_threat }
+				add_named_threat = {
+					threat = 3
+					name = JAP_ichigo
+				}
+			}
+			else = {
+				add_named_threat = {
+					threat = 8
+					name = JAP_ichigo
+				}
+			}
 			custom_effect_tooltip = tooltip_white_line
 			every_other_country = {
 				limit = {
@@ -4576,11 +4674,6 @@ focus_tree = {
 					}
 				}
 			}
-			#custom_effect_tooltip = tooltip_white_line
-			#custom_effect_tooltip = JAP_chinese_war_effort_tooltip
-			#hidden_effect = {
-			#	JAP_increase_chinese_war_effort = yes
-			#}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
@@ -4590,20 +4683,26 @@ focus_tree = {
 		icon = GFX_goal_ANQ_fengtian_loyalty
 		available = {
 			is_faction_leader = yes
+			custom_trigger_tooltip = {
+				tooltip = JAP_controls_korea
+				var:525.owner = { is_ally_with = JAP }
+				var:527.owner = { is_ally_with = JAP }
+			}
 			FNG_JAP_not_hostile = yes
 			FNG = {
 				exists = yes
 				NOT = { has_war_with = ROOT }
 			}
 			if = {
-				limit = {
-					NOT = { CHN = { tag = FNG } }
-				}
+				limit = { NOT = { CHN = { tag = FNG } } }
 				OR = {
 					NOT = { country_exists = CHN }
 					has_subject = CHN
 				}
 			}
+		}
+		bypass = {
+			has_global_flag = JAP_defeated_by_china
 		}
 		ai_will_do = {
 			factor = 50
@@ -4668,15 +4767,18 @@ focus_tree = {
 		icon = GFX_JAP_sakura_tree
 		available = {
 			is_faction_leader = yes
+			custom_trigger_tooltip = {
+				tooltip = JAP_controls_korea
+				var:525.owner = { is_ally_with = JAP }
+				var:527.owner = { is_ally_with = JAP }
+			}
 			FNG_JAP_not_hostile = yes
 			FNG = {
 				exists = yes
 				NOT = { has_war_with = ROOT }
 			}
 			if = {
-				limit = {
-					NOT = { CHN = { tag = FNG } }
-				}
+				limit = { NOT = { CHN = { tag = FNG } } }
 				OR = {
 					NOT = { country_exists = CHN }
 					has_subject = CHN
@@ -4696,6 +4798,7 @@ focus_tree = {
 		}
 		bypass = {
 			OR = {
+				has_global_flag = JAP_defeated_by_china
 				FNG_JAP_hostile = yes
 				has_war_with = FNG
 				NOT = { country_exists = FNG }
@@ -4733,13 +4836,21 @@ focus_tree = {
 		available = {
 			is_faction_leader = yes
 			NOT = { has_country_flag = legation_council_member }
+			custom_trigger_tooltip = {
+				tooltip = JAP_controls_korea
+				var:525.owner = { is_ally_with = JAP }
+				var:527.owner = { is_ally_with = JAP }
+			}
 			can_declare_war_on = LEC
 			LEC = {
 				custom_trigger_tooltip = {
 					tooltip = JAP_not_member_of_sphere
-					NOT = { is_in_array = { global.asian_economic_sphere = THIS } }
+					NOT = { has_country_flag = JAP_economic_sphere_member }
 				}
 			}
+		}
+		bypass = {
+			has_global_flag = JAP_defeated_by_china
 		}
 		ai_will_do = {
 			factor = 50
@@ -4783,6 +4894,11 @@ focus_tree = {
 		available = {
 			has_war = no
 			is_faction_leader = yes
+			custom_trigger_tooltip = {
+				tooltip = JAP_controls_korea
+				var:525.owner = { is_ally_with = JAP }
+				var:527.owner = { is_ally_with = JAP }
+			}
 			286 = { is_owned_by_ROOT_or_ally = yes } #Cochinchina
 			336 = { is_owned_by_ROOT_or_ally = yes } #Singapore
 			1020 = { is_owned_by_ROOT_or_ally = yes } #Batavia
@@ -4806,8 +4922,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_final_victory"
 			add_political_power = 200
 			swap_ideas = {
-				remove_idea = JAP_rising_sun_idea_5
-				add_idea = JAP_rising_sun_idea_6
+				remove_idea = JAP_rising_sun_idea_4
+				add_idea = JAP_rising_sun_idea_5
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }

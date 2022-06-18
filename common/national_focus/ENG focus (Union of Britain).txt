@@ -28,7 +28,7 @@ focus_tree = {
 		id = ENG_tuc
 		icon = GFX_goal_ENG_TUC
 		cost = 10
-		#cancelable = no
+		cancelable = no
 		x = 3
 		y = 0
 		ai_will_do = {
@@ -54,11 +54,11 @@ focus_tree = {
 		id = ENG_home_rule
 		icon = GFX_socialist_constitution
 		cost = 8
+		available = {
+			has_government = radical_socialist
+		}
 		prerequisite = {
 			focus = ENG_tuc
-		}
-		available = {
-			has_country_flag = glais_chairman
 		}
 		x = -2
 		y = 1
@@ -77,6 +77,9 @@ focus_tree = {
 		id = ENG_dissolve_tuc
 		icon = GFX_goal_DEI_focus_disband_volksraad
 		cost = 8
+		available = {
+			has_government = radical_socialist
+		}
 		prerequisite = {
 			focus = ENG_home_rule
 		}
@@ -101,6 +104,9 @@ focus_tree = {
 		id = ENG_new_capital
 		icon = GFX_focus_prc_agrarian_socialism
 		cost = 8
+		available = {
+			has_government = radical_socialist
+		}
 		prerequisite = {
 			focus = ENG_home_rule
 		}
@@ -133,9 +139,11 @@ focus_tree = {
 			focus = ENG_revolution
 		}
 		available = {
+			has_government = radical_socialist
+			has_war = no
 			OR = {
-				has_country_flag = WK2W
-				has_country_flag = PWH2
+				NOT = { country_exists = GER }
+				NOT = { country_exists = FRA }
 			}
 		}
 		x = -2
@@ -161,10 +169,14 @@ focus_tree = {
 				release = WLS
 				release = SCO
 				ENG_niclas_y_glais = { set_nationality = WLS }
-				ENG_willie_gallacher = { set_nationality = WLS }
 				WLS = {
 					promote_character = ENG_niclas_y_glais
+					set_country_leader_description = { ideology = radical_socialist desc = ENG_niclas_y_glais_WLS_leader_desc }
+				}
+				ENG_willie_gallacher = { set_nationality = SCO }
+				SCO = {
 					promote_character = ENG_willie_gallacher
+					set_country_leader_description = { ideology = syndicalist desc = SCO_william_gallacher_leader_desc }
 				}
 			}
 			if = {
@@ -239,11 +251,7 @@ focus_tree = {
 		icon = GFX_Socialist_Law
 		cost = 5
 		available = {
-			OR = {
-				has_country_flag = horner_chairman
-				has_country_flag = pankhurst_chairman
-				has_country_flag = mann_chairman
-			}
+			has_government = syndicalist
 		}
 		prerequisite = {
 			focus = ENG_tuc
@@ -266,6 +274,9 @@ focus_tree = {
 		id = ENG_evolution
 		icon = GFX_goal_ideology_syndicalist
 		cost = 6
+		available = {
+			has_government = syndicalist
+		}
 		prerequisite = {
 			focus = ENG_status_quo
 		}
@@ -291,7 +302,7 @@ focus_tree = {
 		icon = GFX_goal_NOR_secret_police
 		cost = 8
 		available = {
-			has_country_flag = mosley_chairman
+			has_government = totalist
 		}
 		prerequisite = {
 			focus = ENG_tuc
@@ -313,6 +324,9 @@ focus_tree = {
 		id = ENG_united_britain
 		icon = GFX_focus_hol_united_netherlands
 		cost = 8
+		available = {
+			has_government = totalist
+		}
 		prerequisite = {
 			focus = ENG_political_commissars
 		}
@@ -332,6 +346,9 @@ focus_tree = {
 		id = ENG_merge
 		icon = GFX_goal_authoritarian
 		cost = 8
+		available = {
+			has_government = totalist
+		}
 		prerequisite = {
 			focus = ENG_political_commissars
 		}
@@ -341,7 +358,12 @@ focus_tree = {
 		ai_will_do = { factor = 50 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_merge"
-			country_event = uob.103
+			add_popularity = { ideology = totalist popularity = 0.10 }
+			add_trait = {
+				character = ENG_oswald_mosley
+				ideology = totalist_subtype
+				trait = ENG_grand_protector
+			}
 		}
 	}
 
@@ -349,6 +371,9 @@ focus_tree = {
 		id = ENG_revolution
 		icon = GFX_goal_ideology_totalist
 		cost = 8
+		available = {
+			has_government = totalist
+		}
 		prerequisite = {
 			focus = ENG_merge
 		}
@@ -380,9 +405,10 @@ focus_tree = {
 		icon = GFX_goal_HOL_council_communism
 		cost = 8
 		available = {
+			has_war = no
 			OR = {
-				has_country_flag = WK2W
-				has_country_flag = PWH2
+				NOT = { country_exists = GER }
+				NOT = { country_exists = FRA }
 			}
 		}
 		prerequisite = {
@@ -390,77 +416,43 @@ focus_tree = {
 			focus = ENG_evolution
 			focus = ENG_revolution
 		}
-		select_effect = {
-			log = "[GetDateText]: [Root.GetName]: Select Focus ENG_tuc2"
-			hidden_effect = {
-				country_event = {
-					id = uob.352
-					days = 10
-				}
-				country_event = {
-					id = uob.353
-					days = 20
-				}
-				country_event = {
-					id = uob.354
-					days = 30
-				}
-				if = {
-					limit = {
-						has_country_flag = mosley_chairman
-					}
-					country_event = {
-						id = uob.356
-						days = 60
-					}
-				}
-				if = {
-					limit = {
-						has_country_flag = pankhurst_chairman
-					}
-					country_event = {
-						id = uob.357
-						days = 60
-					}
-				}
-				if = {
-					limit = {
-						has_country_flag = glais_chairman
-					}
-					country_event = {
-						id = uob.358
-						days = 60
-					}
-				}
-				if = {
-					limit = {
-						has_country_flag = horner_chairman
-					}
-					country_event = {
-						id = uob.359
-						days = 60
-					}
-				}
-				if = {
-					limit = {
-						has_country_flag = coup_failed
-					}
-					country_event = {
-						id = uob.365
-						days = 60
-					}
-				}
-			}
-		}
 		x = 0
 		y = 4
 		relative_position_id = ENG_tuc
 		ai_will_do = {
 			factor = 1000
 		}
+		select_effect = {
+			log = "[GetDateText]: [Root.GetName]: Select Focus ENG_tuc2"
+			country_event = { id = uob.338 days = 30 }
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_tuc2"
-			custom_effect_tooltip = ENG_start_tuc2
+			if = {
+				limit = {
+					has_completed_focus = ENG_revolution
+					NOT = { has_government = totalist }
+				}
+				country_event = uob.365
+			}
+			else_if = {
+				limit = { has_country_leader = { character = ENG_oswald_mosley } }
+				country_event = uob.356
+			}
+			else_if = {
+				limit = { has_country_leader = { character = ENG_sylvia_pankhurst } }
+				country_event = uob.357
+			}
+			else_if = {
+				limit = { has_country_leader = { character = ENG_niclas_y_glais } }
+				country_event = uob.358
+			}
+			else = {
+				country_event = uob.359
+			}
+			hidden_effect = {
+				country_event = { id = uob.352 days = 10 }
+			}
 		}
 	}
 
@@ -549,10 +541,7 @@ focus_tree = {
 		icon = GFX_collective_housing
 		cost = 6
 		available = {
-			OR = {
-				has_country_flag = ENG_tuc_economy_glais
-				has_country_flag = ENG_tuc_economy_fem
-			}
+			NOT = { has_government = totalist }
 		}
 		mutually_exclusive = {
 			focus = ENG_central_industry_research
@@ -636,10 +625,7 @@ focus_tree = {
 		icon = GFX_goal_social_reforms
 		cost = 6
 		available = {
-			OR = {
-				has_country_flag = ENG_tuc_economy_fem
-				has_country_flag = ENG_tuc_economy_mosley
-			}
+			NOT = { has_government = radical_socialist }
 		}
 		mutually_exclusive = {
 			focus = ENG_local_talent
@@ -2127,11 +2113,9 @@ focus_tree = {
 			show_unit_leaders_tooltip = ENG_stephen_beattie
 			show_unit_leaders_tooltip = ENG_donald_macintyre
 			hidden_effect = {
-				XXA = {
-					ENG_richard_cayley = { set_nationality = ROOT }
-					ENG_stephen_beattie = { set_nationality = ROOT }
-					ENG_donald_macintyre = { set_nationality = ROOT }
-				}
+				ENG_richard_cayley = { set_nationality = ROOT }
+				ENG_stephen_beattie = { set_nationality = ROOT }
+				ENG_donald_macintyre = { set_nationality = ROOT }
 			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_ARMY_BONUS }
@@ -2674,13 +2658,13 @@ focus_tree = {
 			country_event = uob.60
 			hidden_effect = {
 				IRE = {
-					news_event = { id = uob.45 }
+					news_event = uob.45
 				}
 				CAN = {
-					news_event = { id = uob.45 }
+					news_event = uob.45
 				}
 				GER = {
-					news_event = { id = uob.45 }
+					news_event = uob.45
 				}
 			}
 		}
@@ -2803,10 +2787,10 @@ focus_tree = {
 		icon = GFX_focus_eng_move_to_secure_the_dominions
 		cost = 8
 		available = {
-			OR = {
-				has_war_with = ENT
-				has_war_with = GER
-			}
+			has_war_with = GER
+		}
+		bypass = {
+			NOT = { country_exists = GER }
 		}
 		prerequisite = {
 			focus = ENG_international
@@ -2815,7 +2799,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_international
 		ai_will_do = {
-			factor = 20
+			factor = 50
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_class_warfare"
@@ -2895,7 +2879,7 @@ focus_tree = {
 
 	focus = {# Fortress Britania
 		id = ENG_fortress_britain
-		icon = GFX_focus_generic_bastion_of_democracy
+		icon = GFX_goal_anti_air
 		cost = 8
 		prerequisite = {
 			focus = ENG_class_warfare
@@ -2909,181 +2893,66 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_fortress_britain"
-			hidden_effect = {
-				127 = {
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 3501
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 11446
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 9458
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 13070
-						instant_build = yes
-					}
+			if = {
+				limit = { 121 = { free_building_slots = { building = anti_air_building size > 1 } } }
+				121 = {
+					set_building_level = { type = anti_air_building level = 5 }
 				}
-				127 = {
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 3422
-						instant_build = yes
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 131 133 }
+					limit = {
+						is_in_home_area = yes
+						free_building_slots = { building = anti_air_building size > 1 }
 					}
 					add_building_construction = {
-						type = coastal_bunker
+						type = anti_air_building
 						level = 2
-						province = 3463
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 540
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 6526
-						instant_build = yes
-					}
-				}
-				126 = {
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 11374
-						instant_build = yes
-					}
-				}
-				221 = {
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 221
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 271
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 322
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 3287
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 296
-						instant_build = yes
-					}
-				}
-				129 = {
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 9322
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 3353
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 9250
-						instant_build = yes
-					}
-				}
-				130 = {
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 11297
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 11317
-						instant_build = yes
-					}
-				}
-				131 = {
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 11270
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 351
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 11299
-						instant_build = yes
-					}
-				}
-				131 = {
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 11378
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 9392
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 9383
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 6300
 						instant_build = yes
 					}
 				}
 			}
-			custom_effect_tooltip = ENG_fortress_britain_tp
+			if = {
+				limit = { 130 = { free_building_slots = { building = anti_air_building size > 1 } } }
+				130 = {
+					set_building_level = { type = anti_air_building level = 5 }
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 132 122 }
+					limit = {
+						is_in_home_area = yes
+						free_building_slots = { building = anti_air_building size > 1 }
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 127 = { free_building_slots = { building = anti_air_building size > 1 } } }
+				127 = {
+					set_building_level = { type = anti_air_building level = 5 }
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 128 129 338 }
+					limit = {
+						is_in_home_area = yes
+						free_building_slots = { building = anti_air_building size > 1 }
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}

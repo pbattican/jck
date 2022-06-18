@@ -15,7 +15,7 @@ focus_tree = {
 	}
 
 	default = no
-	continuous_focus_position = { x = 2400 y = 700 }
+	continuous_focus_position = { x = 2600 y = 700 }
 
 	focus = {
 		id = FRA_eco_direction
@@ -1025,6 +1025,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_road_to_war"
 			add_war_support = 0.10
 			add_timed_idea = { idea = FRA_to_war_idea days = 230 }
+			add_named_threat = {
+				threat = 2
+				name = FRA_rearmament_threat
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -1100,10 +1104,13 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_Demand_Romandy"
 			country_event = prewar.7
+			add_named_threat = {
+				threat = 7
+				name = SWI_haute_savoie_threat
+			}
 			custom_effect_tooltip = SWI_romandie_confrontation
 		}
 	}
-
 
 	focus = {
 		id = FRA_military_buildup
@@ -1477,8 +1484,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_damocles"
 			ENG = { country_event = comfrance.25 }
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = if_accepted
+			custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
 				add_tech_bonus = {
 					name = FRA_damocles
@@ -1527,40 +1533,31 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_Demand_Alsace_Lorraine
-		icon = GFX_goal_NFA_rightful_borders
+		id = FRA_War_with_germany
+		icon = GFX_goal_attack_germany
 
 		available = {
-			if = {
-				limit = {
-					NOT = {
-						GER = { has_war_with = 219.owner }
-						RUS = { focus_progress = { focus = RUS_Crush_The_German_Hegemony progress > 0 } }
-						SOV = { focus_progress = { focus = SOV_The_Final_Battle progress > 0 } }
-					}
-				}
-				date > 1939.6.14
-			}
+			second_weltkrieg_can_start = yes
 			can_declare_war_on = GER
-			is_subject = no
-			GER = { owns_state = 28 }
+			is_faction_leader = yes
+		}
+
+		continue_if_invalid = yes
+
+		cancel = {
+			is_faction_leader = no
 		}
 
 		bypass = {
-			OR = {
-				NOT = { can_declare_war_on = GER }
-				NOT = { GER = { owns_state = 28 } }
-			}
+			NOT = { can_declare_war_on = GER }
 		}
 
 		prerequisite = {
 			focus = FRA_Blanqui_Research_Institute
 		}
-
 		prerequisite = {
 			focus = FRA_Phalanstere_internationale
 		}
-
 		prerequisite = {
 			focus = FRA_military_buildup_two
 		}
@@ -1578,59 +1575,18 @@ focus_tree = {
 				factor = 0
 				alliance_strength_ratio < 0.8
 			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_Demand_Alsace_Lorraine"
-			GER = {
-				country_event = {
-					id = prewar.55
-					days = 1
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = FRA_War_with_germany
-		icon = GFX_goal_attack_germany
-
-		available = {
-			if = {
-				limit = {
-					NOT = {
-						GER = { has_war_with = 219.owner }
-						RUS = { focus_progress = { focus = FRA_Demand_Alsace_Lorraine progress > 0 } }
-						SOV = { focus_progress = { focus = SOV_The_Final_Battle progress > 0 } }
-					}
-				}
-				date > 1939.10.5
-			}
-			is_owner_neighbor_of = GER
-			can_declare_war_on = GER
-			is_subject = no
-		}
-
-		bypass = {
-			NOT = { can_declare_war_on = GER }
-		}
-
-		prerequisite = {
-			focus = FRA_Demand_Alsace_Lorraine
-		}
-
-		x = 0
-		y = 1
-		relative_position_id = FRA_Demand_Alsace_Lorraine
-		cost = 8
-
-		will_lead_to_war_with = GER
-
-		ai_will_do = {
-			factor = 1000
 			modifier = {
 				factor = 0
-				alliance_strength_ratio < 0.8
+				NOT = { has_country_flag = fra_populace_demands_war }
+				RUS = {
+					is_faction_leader = yes
+					NOT = { focus_progress = { focus = RUS_Crush_The_German_Hegemony progress > 0 } }
+				}
+			}
+			modifier = {
+				factor = 0
+				country_exists = SOV
+				SOV = { is_faction_leader = no } #hasn't recovered from the civil war yet
 			}
 		}
 
@@ -1639,6 +1595,15 @@ focus_tree = {
 			declare_war_on = {
 				type = annex_everything
 				target = GER
+			}
+			effect_tooltip = {
+				if = {
+					limit = { NOT = { has_global_flag = second_weltkrieg_has_started } }
+					add_named_threat = {
+						threat = 20
+						name = second_weltkrieg_threat
+					}
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1655,10 +1620,10 @@ focus_tree = {
 			}
 			OR = {
 				can_declare_war_on = HOL
-				can_declare_war_on = 6.owner #BEL/FLN
+				can_declare_war_on = 6.owner #BEL/FLA
 				if = {
 					limit = {
-						var:6.owner = { NOT = { owns_state = 34 } } #WLL
+						var:6.owner = { NOT = { owns_state = 34 } } #WAL
 					}
 					can_declare_war_on = 34.owner
 				}
@@ -1674,7 +1639,7 @@ focus_tree = {
 			if = {
 				limit = {
 					can_declare_war_on = 34.owner
-					var:34.owner = { NOT = { owns_state = 6 } } #WLL
+					var:34.owner = { NOT = { owns_state = 6 } } #WAL
 				}
 				var:34.owner = { has_socialist_government = no }
 			}
@@ -1706,12 +1671,12 @@ focus_tree = {
 
 		will_lead_to_war_with = HOL
 		will_lead_to_war_with = BEL
-		will_lead_to_war_with = FLN
-		will_lead_to_war_with = WLL
+		will_lead_to_war_with = FLA
+		will_lead_to_war_with = WAL
 
 		x = -2
-		y = 2
-		relative_position_id = FRA_Demand_Alsace_Lorraine
+		y = 1
+		relative_position_id = FRA_War_with_germany
 		cost = 2
 		ai_will_do = {
 			factor = 10
@@ -1771,7 +1736,7 @@ focus_tree = {
 				limit = {
 					can_declare_war_on = 34.owner
 					var:34.owner = {
-						NOT = { owns_state = 6 } #WLL
+						NOT = { owns_state = 6 } #WAL
 						has_socialist_government = no
 					}
 				}
@@ -1814,8 +1779,8 @@ focus_tree = {
 
 		icon = GFX_goal_FRA_liberate_AH
 		x = 0
-		y = 2
-		relative_position_id = FRA_Demand_Alsace_Lorraine
+		y = 1
+		relative_position_id = FRA_War_with_germany
 		cost = 4
 		ai_will_do = {
 			factor = 10
@@ -1899,8 +1864,8 @@ focus_tree = {
 		will_lead_to_war_with = POR
 
 		x = 2
-		y = 2
-		relative_position_id = FRA_Demand_Alsace_Lorraine
+		y = 1
+		relative_position_id = FRA_War_with_germany
 		cost = 4
 		ai_will_do = {
 			factor = 100
@@ -1965,8 +1930,8 @@ focus_tree = {
 			focus = FRA_european_revolution
 		}
 		x = -1
-		y = 3
-		relative_position_id = FRA_Demand_Alsace_Lorraine
+		y = 2
+		relative_position_id = FRA_War_with_germany
 		cost = 4
 
 		ai_will_do = {
@@ -2006,8 +1971,8 @@ focus_tree = {
 			focus = FRA_peaceful_revolution
 		}
 		x = 1
-		y = 3
-		relative_position_id = FRA_Demand_Alsace_Lorraine
+		y = 2
+		relative_position_id = FRA_War_with_germany
 		cost = 4
 
 		ai_will_do = {
@@ -2035,9 +2000,9 @@ focus_tree = {
 			focus = FRA_World_revolution
 			focus = FRA_european_revolution
 		}
-		x = -3
-		y = 3
-		relative_position_id = FRA_Demand_Alsace_Lorraine
+		x = 3
+		y = 2
+		relative_position_id = FRA_War_with_germany
 		cost = 6
 
 		ai_will_do = {
@@ -3841,13 +3806,7 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {
-				has_war_with = GER
-				has_war_with = ENG
-				has_war_with = SRI
-			}
-			ENG = { has_socialist_government = yes }
-			SRI = { has_socialist_government = yes }
+			is_faction_leader = yes
 		}
 
 		x = 0
@@ -3869,10 +3828,29 @@ focus_tree = {
 				uses = 1
 				category = construction_tech
 			}
-			ENG = {
-				country_event = comfrance.127
-				hidden_effect = {
-					country_event = { id = comfrance.128 days = 10 }
+			if = {
+				limit = { is_in_faction_with = ENG }
+				ENG = {
+					country_event = comfrance.127
+					hidden_effect = {
+						country_event = { id = comfrance.128 days = 10 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = SRI
+					SRI = {
+						has_socialist_government = yes
+						NOT = { has_war_with = ROOT }
+						is_valid_peace_target = yes
+					}
+				}
+				SRI = {
+					country_event = comfrance.127
+					hidden_effect = {
+						country_event = { id = comfrance.128 days = 10 }
+					}
 				}
 			}
 			if = {
@@ -3884,8 +3862,18 @@ focus_tree = {
 					}
 				}
 			}
+			every_other_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = ROOT
+						is_in_faction_with = SOV
+					}
+					NOT = { tag = ENG }
+					NOT = { tag = SOV }
+				}
+				country_event = comfrance.127
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 }
-

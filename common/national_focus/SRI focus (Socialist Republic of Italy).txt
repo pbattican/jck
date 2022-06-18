@@ -188,7 +188,8 @@ focus_tree = {
 		ai_will_do = { factor = 30 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_worker_councils"
-			increase_ruling_party_popularity_by_10 = yes
+			set_temp_variable = { ideology_change_var = 0.1 }
+			change_ruling_party_popularity = yes
 			add_stability = 0.05
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
@@ -1601,47 +1602,48 @@ focus_tree = {
 					limit = {
 						PAP = {
 							OR = {
-								has_country_leader = { character = PAP_john_xxiii }
-								has_country_leader = { character = PAP_stephen_x }
+								has_country_leader = { character = PAP_achille_liennart }
+								has_country_leader = { character = PAP_elia_dalla_costa }
 							}
 						}
 					}
 					country_event = socitaly.65 #Pope accepts SRI
 				}
-				else = {# Leave the Pope alone(Pius or Julius)
+				else_if = {# Leave the Pope alone(Pius or Julius)
 					limit = {
 						PAP = {
 							OR = {
-								has_country_leader = { character = PAP_pius_xii }
-								has_country_leader = { character = PAP_julius_iv }
+								has_country_leader = { character = PAP_eugenio_pacelli }
+								has_country_leader = { character = PAP_alfredo_schuster }
 							}
 						}
 					}
 					country_event = socitaly.50 #Pope locks himself in Vatican
 				}
 			}
-			else_if = {# Red Pope (John)
+			else_if = {# Exile the Pope
+				limit = { has_country_flag = SRI_exile_the_pope }
+				country_event = socitaly.53
+			}
+			else = {# Red Pope (John)
 				if = {
-					limit = { PAP = { has_country_leader = { character = PAP_john_xxiii } } }
+					limit = { PAP = { has_country_leader = { character = PAP_achille_liennart } } }
 					country_event = socitaly.65
 				}
-				else = {# Leave the Pope alone(Stephen, Pius or Julius)
+				else_if = {# Leave the Pope alone(Stephen, Pius or Julius)
 					limit = {
 						PAP = {
 							OR = {
-								has_country_leader = { character = PAP_stephen_x }
-								has_country_leader = { character = PAP_pius_xii }
-								has_country_leader = { character = PAP_julius_iv }
+								has_country_leader = { character = PAP_elia_dalla_costa }
+								has_country_leader = { character = PAP_eugenio_pacelli }
+								has_country_leader = { character = PAP_alfredo_schuster }
 							}
 						}
 					}
 					country_event = socitaly.51
 				}
 			}
-			else_if = {# Exile the Pope
-				limit = { has_country_flag = SRI_exile_the_pope }
-				country_event = socitaly.53
-			}
+
 		}
 	}
 	focus = {# Italian Irredentism
@@ -2989,7 +2991,7 @@ focus_tree = {
 	focus = {# Expand Shipbuilding 1
 		id = SRI_expand_shipbuilding_1
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 10.00
+		cost = 10
 		prerequisite = {
 			focus = SRI_red_navy
 		}
@@ -3255,7 +3257,7 @@ focus_tree = {
 	focus = {# Expand Shipbuilding 2
 		id = SRI_expand_shipbuilding_2
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 10.00
+		cost = 10
 		prerequisite = {
 			focus = SRI_light_cruisers
 			focus = SRI_merchant_marine
@@ -3443,6 +3445,5 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
-
 }
 
