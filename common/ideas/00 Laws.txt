@@ -64,30 +64,16 @@ ideas = {
 					has_war_support > 0.75
 					has_war = yes
 				}
-				NOT = {
-					has_country_flag = economic_isolation
-				}
 			}
 
 			ai_will_do = {
-				factor = 250
-				modifier = {
-					factor = 0
-					OR = {
-						has_idea = civilian_economy
-						has_idea = low_economic_mobilisation
-						has_idea = partial_economic_mobilisation
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
-					}
-				}
+				factor = 0
 			}
 		}
 
 		civilian_economy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea civilian_economy" }
 			level = 5
-			cost = 100
 			removal_cost = -1
 
 			modifier = {
@@ -101,33 +87,21 @@ ideas = {
 			}
 
 			default = yes
+			cancel_if_invalid = no
 
 			ai_will_do = {
-				factor = 500
-				modifier = {
-					factor = 0
-					OR = {
-						has_idea = low_economic_mobilisation
-						has_idea = partial_economic_mobilisation
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
-					}
-				}
+				factor = 0
 			}
 		}
 
 		low_economic_mobilisation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea low_economic_mobilisation" }
 			level = 4
-			cost = 100
 			removal_cost = -1
-
 			cancel_if_invalid = no
+
 			available = {
-				OR = {
-					has_war = yes
-					has_war_support > 0.15
-				}
+				has_war_support > 0.15
 			}
 
 			modifier = {
@@ -139,14 +113,10 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 800
+				factor = 2
 				modifier = {
-					factor = 0
-					OR = {
-						has_idea = partial_economic_mobilisation
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
-					}
+					factor = 20
+					manpower_per_military_factory > 1000
 				}
 			}
 		}
@@ -154,15 +124,11 @@ ideas = {
 		partial_economic_mobilisation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea partial_economic_mobilisation" }
 			level = 3
-			cost = 100
 			removal_cost = -1
-
 			cancel_if_invalid = no
+
 			available = {
-				OR = {
-					has_war = yes
-					has_war_support > 0.25
-				}
+				has_war_support > 0.25
 			}
 
 			modifier = {
@@ -175,13 +141,10 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 900
+				factor = 2
 				modifier = {
-					factor = 0
-					OR = {
-						has_idea = war_economy
-						has_idea = tot_economic_mobilisation
-					}
+					factor = 20
+					manpower_per_military_factory > 1000
 				}
 			}
 		}
@@ -189,18 +152,14 @@ ideas = {
 		war_economy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea war_economy" }
 			level = 2
-			cost = 100
 			removal_cost = -1
-
 			cancel_if_invalid = no
+
 			available = {
 				has_war_support > 0.5
 				has_war = yes
 				any_enemy_country = {
-					ic_ratio = {
-						tag = ROOT
-						ratio > 0.4
-					}
+					ic_ratio = { tag = ROOT ratio > 0.4 }
 				}
 			}
 
@@ -213,10 +172,10 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 1000
+				factor = 3
 				modifier = {
-					factor = 0
-					has_idea = tot_economic_mobilisation
+					factor = 20
+					manpower_per_military_factory > 1000
 				}
 			}
 		}
@@ -224,24 +183,19 @@ ideas = {
 		tot_economic_mobilisation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea tot_economic_mobilisation" }
 			level = 1
-			cost = 100
 			removal_cost = -1
-
 			cancel_if_invalid = no
+
 			available = {
-				has_war_support > 0.8
 				has_war = yes
+				has_war_support > 0.8
 				any_enemy_country = {
-					ic_ratio = {
-						tag = ROOT
-						ratio > 0.7
-					}
-				}
 				OR = {
 					GER = {
 						has_war_with = FRA
 					}
 					date > 1940.1.1
+					ic_ratio = { tag = ROOT ratio > 0.5 }
 				}
 			}
 
@@ -255,19 +209,14 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 50	 # The gain usually doesn't justify the manpower hit
-				modifier = { #don't increase without having enough manpower
+				factor = 1
+				modifier = { #don't increase if it would drop conscription to zero
 					factor = 0
-					has_enough_reserve_manpower_per_battalion = no
+					target_conscription_amount > 0.03
 				}
-				modifier = { #we don't want the conscription% to drop too low
-					factor = 0
-					OR = {
-						has_idea = disarmed_nation
-						has_idea = volunteer_only
-						has_idea = limited_conscription
-						has_idea = extensive_conscription
-					}
+				modifier = { #Weight will overly overtake war economy if the AI has plenty of manpower
+					factor = 25
+					manpower_per_military_factory > 15000
 				}
 			}
 		}
@@ -281,8 +230,10 @@ ideas = {
 		command_economy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea command_economy" }
 			level = 5
-			allowed = { always = no }
+			removal_cost = -1
 			cancel_if_invalid = no
+
+			allowed = { always = no }
 
 			modifier = {
 				min_export = 0
@@ -297,10 +248,31 @@ ideas = {
 			}
 		}
 
+		uncontrolled_exports = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea uncontrolled_exports" }
+			picture = isolation
+			level = 5
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			allowed = { always = no }
+
+			modifier = {
+				min_export = 0.25
+				consumer_goods_factor = 0.05
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 40.0
+				agency_upgrade_time = 0.15
+			}
+
+			allowed_to_remove = {
+				has_war = yes
+			}
+		}
+
 		free_trade = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea free_trade" }
 			level = 4
-			cost = 100
 
 			removal_cost = -1
 
@@ -321,7 +293,7 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 50
+				factor = 1
 				modifier = {
 					check_variable = { resource@steel > 0 }
 					add = resource@steel
@@ -352,7 +324,6 @@ ideas = {
 		export_focus = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea export_focus" }
 			level = 3
-			cost = 100
 
 			removal_cost = -1
 
@@ -369,7 +340,7 @@ ideas = {
 			default = yes
 
 			ai_will_do = {
-				factor = 40
+				factor = 1
 				modifier = {
 					check_variable = { resource_produced@steel > 0 }
 
@@ -412,11 +383,9 @@ ideas = {
 		limited_exports = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea limited_exports" }
 			level = 2
-			cost = 100
-
 			removal_cost = -1
-
 			cancel_if_invalid = no
+
 			available = {
 				OR = {
 					has_idea = partial_economic_mobilisation
@@ -436,7 +405,7 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 20
+				factor = 1
 				modifier = {
 					factor = 0
 					is_actual_major = no #only majors should choose limited exports
@@ -481,17 +450,11 @@ ideas = {
 		}
 
 		closed_economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea closed_economy" }
 			level = 1
-			cost = 100
-
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea closed_economy"
-				custom_effect_tooltip = closed_economy_TT
-			}
-
 			removal_cost = -1
-
 			cancel_if_invalid = no
+
 			available = {
 				has_war = yes
 				OR = {
@@ -500,14 +463,9 @@ ideas = {
 				}
 			}
 
-			allowed_to_remove = {
-				NOT = {
-					has_country_flag = economic_isolation
-				}
-			}
-
 			modifier = {
 				min_export = 0
+				custom_modifier_tooltip = closed_economy_TT
 			}
 
 			ai_will_do = {
@@ -521,18 +479,9 @@ ideas = {
 		use_list_view = yes
 
 		disarmed_nation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea disarmed_nation" }
 			level = 7
-			cost = 100
 			removal_cost = -1
-
-			available = {
-				hidden_trigger = { always = no }
-			}
-
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea disarmed_nation"
-			}
-
 			cancel_if_invalid = no
 
 			modifier = {
@@ -545,81 +494,30 @@ ideas = {
 		}
 
 		volunteer_only = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea volunteer_only" }
 			level = 6
-			cost = 100
-
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea volunteer_only"
-			}
-
-			cancel_if_invalid = no
-
-			ai_will_do = {
-				factor = 100
-				modifier = {
-					factor = 0
-					NOT = { has_idea = disarmed_nation }
-				}
-			}
-
-			modifier = {
-				conscription = 0.015
-			}
-
-			default = yes
-		}
-
-		special_forces_focus = {
-			level = 6
-			cost = 100
 			removal_cost = -1
-
-			allowed = { original_tag = NEE }
-			available = { has_completed_focus = NEE_Reorganise_National_Guard }
-
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea special_forces_focus"
-			}
-
 			cancel_if_invalid = no
+			default = yes
 
 			modifier = {
 				conscription = 0.015
-				training_time_factor = 0.1
-				custom_modifier_tooltip = NEE_special_forces_law_tt
-				hidden_modifier = {
-					weekly_manpower = 1000
-					experience_gain_army_unit_factor = 0.2
-					experience_loss_factor = -0.2
-					army_org_factor = 0.1
-				}
 			}
 
-			allowed_to_remove = { always = no }
-
 			ai_will_do = {
-				factor = 0
+				factor = 1
 			}
 		}
 
 		limited_conscription = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea limited_conscription" }
 			level = 5
-			cost = 100
 			removal_cost = -1
-
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea limited_conscription"
-			}
-
 			cancel_if_invalid = no
+
 			available = {
-				OR = {
-					has_war_support > 0.1
-					has_manpower < 1000
-				}
-				NOT = {
-					has_country_flag = cannot_have_conscription
-				}
+				has_war_support > 0.1
+				NOT = { has_country_flag = cannot_have_conscription }
 			}
 
 			modifier = {
@@ -627,89 +525,31 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 200
-				modifier = {
-					factor = 0
-					NOT = { has_idea = volunteer_only }
+				factor = 1
+				modifier = { #ignore if high on manpower
+					factor = 0.5
+					manpower_per_military_factory > 5000
 				}
-				modifier = { #already mobilising
-					factor = 0
-					NOT = { check_variable = { target_conscription_amount = current_conscription_amount } }
+				modifier = { #prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 1000
 				}
-				modifier = { #plenty of reserves
-					factor = 0
-					has_enough_reserve_manpower_per_battalion = yes
-				}
-				modifier = { #much stronger than the enemy, unless at zero manpower
-					factor = 0
-					has_war = yes
-					enemies_strength_ratio < 0.5
-					has_manpower > 0
-				}
-				modifier = {
-					factor = 5
-					has_unattained_important_goals = yes
-				}
-			}
-		}
-
-		selective_training_act = {
-			level = 5
-			cost = 100
-			removal_cost = -1
-
-			allowed = { original_tag = NEE }
-			available = {
-				has_completed_focus = NEE_Reorganise_National_Guard
-				has_completed_focus = NEE_Selective_Training_Act
-				NOT = { has_global_flag = USA_civil_war_over_flag }
-			}
-
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea selective_training_act"
-			}
-
-			cancel_if_invalid = no
-
-			modifier = {
-				conscription = 0.025
-				training_time_factor = 0.05
-				custom_modifier_tooltip = NEE_selective_training_law_tt
-				hidden_modifier = {
-					weekly_manpower = 750
-					experience_gain_army_unit_factor = 0.1
-					experience_loss_factor = -0.1
-					army_org_factor = 0.05
-				}
-			}
-
-			allowed_to_remove = { always = no }
-
-			ai_will_do = {
-				factor = 0
 			}
 		}
 
 		extensive_conscription = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea extensive_conscription" }
 			level = 4
-			cost = 100
 			removal_cost = -1
-
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea extensive_conscription"
-			}
-
 			cancel_if_invalid = no
+
 			available = {
+				has_war_support > 0.2
 				OR = {
 					has_war_support > 0.5
 					AND = {
 						has_war = yes
-						OR = {
-							enemies_strength_ratio > 0.5
-							has_manpower < 1000
-							surrender_progress > 0.15
-						}
+						enemies_strength_ratio > 0.5
 					}
 				}
 				NOT = {
@@ -724,49 +564,30 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 400
-				modifier = {
-					factor = 0
-					NOT = { has_idea = limited_conscription }
+				factor = 1
+				modifier = { #ignore if high on manpower
+					factor = 0.5
+					manpower_per_military_factory > 3000
 				}
-				modifier = { #already mobilising
-					factor = 0
-					NOT = { check_variable = { target_conscription_amount = current_conscription_amount } }
-				}
-				modifier = { #plenty of reserves
-					factor = 0
-					has_enough_reserve_manpower_per_battalion = yes
-				}
-				modifier = { #much stronger than the enemy, unless at zero manpower
-					factor = 0
-					has_war = yes
-					enemies_strength_ratio < 0.5
-					has_manpower > 0
-				}
-				modifier = {
-					factor = 5
-					has_unattained_important_goals = yes
+				modifier = { #prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 800
 				}
 			}
 		}
 
 		service_by_requirement = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea service_by_requirement" }
 			level = 3
-			cost = 100
 			removal_cost = -1
-
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea service_by_requirement"
-			}
-
 			cancel_if_invalid = no
+
 			available = {
 				has_war = yes
+				enemies_strength_ratio > 0.6
 				OR = {
 					has_war_support > 0.6
-					enemies_strength_ratio > 0.6
 					surrender_progress > 0
-					has_manpower < 1000
 				}
 				NOT = {
 					has_country_flag = cannot_have_conscription
@@ -783,49 +604,34 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 600
-				modifier = {
+				factor = 1
+				modifier = { #ignore if high on manpower
 					factor = 0
-					NOT = { has_idea = extensive_conscription }
+					manpower_per_military_factory > 3000
 				}
-				modifier = { #already mobilising
-					factor = 0
-					NOT = { check_variable = { target_conscription_amount = current_conscription_amount } }
+				modifier = { #lower if decent manpower
+					factor = 0.5
+					manpower_per_military_factory > 1000
 				}
-				modifier = { #plenty of reserves
-					factor = 0
-					has_enough_reserve_manpower_per_battalion = yes
-				}
-				modifier = { #much stronger than the enemy, unless at zero manpower
-					factor = 0
-					has_war = yes
-					enemies_strength_ratio < 0.5
-					has_manpower > 0
-				}
-				modifier = {
-					factor = 5
-					has_unattained_important_goals = yes
+				modifier = { #prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 700
 				}
 			}
 		}
 
 		all_adults_serve = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea all_adults_serve" }
 			level = 2
-			cost = 100
 			removal_cost = -1
-
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea all_adults_serve"
-			}
-
 			cancel_if_invalid = no
+
 			available = {
 				has_war = yes
+				enemies_strength_ratio > 0.75
 				OR = {
 					has_war_support > 0.7
-					enemies_strength_ratio > 0.75
-					surrender_progress > 0.15
-					has_manpower < 1000
+					surrender_progress > 0
 				}
 				NOT = {
 					has_country_flag = cannot_have_conscription
@@ -843,48 +649,34 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 800
-				modifier = {
+				factor = 1
+				modifier = { #ignore if high on manpower
 					factor = 0
-					has_idea = scraping_the_barrel
+					manpower_per_military_factory > 5000
 				}
-				modifier = { #already mobilising
-					factor = 0
-					NOT = { check_variable = { target_conscription_amount = current_conscription_amount } }
+				modifier = { #lower if decent manpower
+					factor = 0.5
+					manpower_per_military_factory > 1000
 				}
-				modifier = { #plenty of reserves
-					factor = 0
-					has_enough_reserve_manpower_per_battalion = yes
-				}
-				modifier = { #much stronger than the enemy, unless at zero manpower
-					factor = 0
-					has_war = yes
-					enemies_strength_ratio < 0.5
-					has_manpower > 0
-				}
-				modifier = {
-					factor = 5
-					has_unattained_important_goals = yes
+				modifier = { #prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 600
 				}
 			}
 		}
 
 		scraping_the_barrel = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea scraping_the_barrel" }
 			level = 1
-			cost = 100
 			removal_cost = -1
-
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea scraping_the_barrel"
-			}
-
 			cancel_if_invalid = no
+
 			available = {
 				has_war = yes
+				enemies_strength_ratio > 1
 				OR = {
 					has_war_support > 0.85
 					surrender_progress > 0.25
-					has_manpower < 1000
 				}
 				NOT = {
 					has_country_flag = cannot_have_conscription
@@ -901,27 +693,20 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 1000
-				modifier = { #already mobilising
+				factor = 1
+				modifier = { #ignore if high on manpower
 					factor = 0
-					NOT = { check_variable = { target_conscription_amount = current_conscription_amount } }
+					manpower_per_military_factory > 5000
 				}
-				modifier = { #plenty of reserves
-					factor = 0
-					has_enough_reserve_manpower_per_battalion = yes
+				modifier = { #lower if decent manpower
+					factor = 0.5
+					manpower_per_military_factory > 1000
 				}
-				modifier = { #much stronger than the enemy, unless at zero manpower
-					factor = 0
-					has_war = yes
-					enemies_strength_ratio < 0.5
-					has_manpower > 0
-				}
-				modifier = {
-					factor = 5
-					has_unattained_important_goals = yes
+				modifier = { #prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 500
 				}
 			}
 		}
 	}
 }
-

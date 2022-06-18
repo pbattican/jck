@@ -47,55 +47,41 @@ ideas = {
 			picture = imperial_glory_idea
 			allowed = { always = no }
 			modifier = {
-				surrender_limit = 0.1
+				political_power_gain = 0.25
 			}
 		}
 
-		JAP_rising_sun_idea_2 = { #hakkou ichiu
+		JAP_rising_sun_idea_2 = { #west
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_rising_sun_idea_2" }
 			name = JAP_rising_sun_idea
 			picture = imperial_glory_idea
 			allowed = { always = no }
 			modifier = {
-				surrender_limit = 0.1
-				political_power_gain = 0.25
-			}
-		}
-
-		JAP_rising_sun_idea_3 = { #west
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_rising_sun_idea_3" }
-			name = JAP_rising_sun_idea
-			picture = imperial_glory_idea
-			allowed = { always = no }
-			modifier = {
-				surrender_limit = 0.1
 				political_power_gain = 0.25
 				justify_war_goal_time = -0.5
 			}
 		}
 
-		JAP_rising_sun_idea_4 = { #south
+		JAP_rising_sun_idea_3 = { #south
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_rising_sun_idea_" }
+			name = JAP_rising_sun_idea
+			picture = imperial_glory_idea
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.25
+				naval_doctrine_cost_factor = -0.1
+			}
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+		}
+
+		JAP_rising_sun_idea_4 = { #west + south
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_rising_sun_idea_4" }
 			name = JAP_rising_sun_idea
 			picture = imperial_glory_idea
 			allowed = { always = no }
 			modifier = {
-				surrender_limit = 0.1
-				political_power_gain = 0.25
-				naval_doctrine_cost_factor = -0.1
-			}
-			research_bonus = {
-				naval_equipment = 0.10
-			}
-		}
-
-		JAP_rising_sun_idea_5 = { #west + south
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_rising_sun_idea_5" }
-			name = JAP_rising_sun_idea
-			picture = imperial_glory_idea
-			allowed = { always = no }
-			modifier = {
-				surrender_limit = 0.1
 				political_power_gain = 0.25
 				justify_war_goal_time = -0.5
 				naval_doctrine_cost_factor = -0.1
@@ -105,13 +91,12 @@ ideas = {
 			}
 		}
 
-		JAP_rising_sun_idea_6 = { #victory over imperialism
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_rising_sun_idea_6" }
+		JAP_rising_sun_idea_5 = { #victory over imperialism
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_rising_sun_idea_5" }
 			name = JAP_rising_sun_idea
 			picture = imperial_glory_idea
 			allowed = { always = no }
 			modifier = {
-				surrender_limit = 0.1
 				justify_war_goal_time = -0.75
 				political_power_gain = 0.5
 				stability_factor = 0.25
@@ -223,7 +208,7 @@ ideas = {
 			picture = JAP_yen
 			allowed = { always = no }
 			modifier = {
-				consumer_goods_factor = -0.025
+				consumer_goods_factor = -0.05
 			}
 		}
 
@@ -408,28 +393,6 @@ ideas = {
 			picture = jap_zaibatsu
 			allowed = { always = no }
 			modifier = {
-				political_power_factor = -0.05
-			}
-		}
-
-		JAP_ZAI_2 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_ZAI_2" }
-			name = JAP_ZAI
-			picture = jap_zaibatsu
-			allowed = { always = no }
-			modifier = {
-				political_power_factor = -0.05
-				research_speed_factor = 0.05
-			}
-		}
-
-		JAP_ZAI_3 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_ZAI_3" }
-			name = JAP_ZAI
-			picture = jap_zaibatsu
-			allowed = { always = no }
-			modifier = {
-				political_power_factor = -0.10
 				research_speed_factor = 0.05
 			}
 		}
@@ -458,6 +421,7 @@ ideas = {
 		JAP_change_rail = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_change_rail" }
 			picture = generic_production_bonus
+			on_remove = { country_event = japdom.74 }
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.05
@@ -559,7 +523,7 @@ ideas = {
 					air_attack = 0.1
 					instant = yes
 				}
-				CAS_equipment= {
+				CAS_equipment = {
 					air_ground_attack = 0.2
 					instant = yes
 				}
@@ -620,7 +584,7 @@ ideas = {
 					air_attack = 0.1
 					instant = yes
 				}
-				CAS_equipment= {
+				CAS_equipment = {
 					air_ground_attack = 0.2
 					instant = yes
 				}
@@ -978,7 +942,6 @@ ideas = {
 					instant = yes
 				}
 			}
-
 		}
 
 		## Supremacy of Technology ##
@@ -1377,15 +1340,6 @@ ideas = {
 			}
 		}
 
-		JAP_ANQ_Traing_Aid = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_ANQ_Traing_Aid" }
-			picture = warrior_traditions_idea
-			allowed = { always = no }
-			modifier = {
-				training_time_factor = 0.3
-			}
-		}
-
 		JAP_china_training = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_china_training" }
 			picture = warrior_traditions_idea
@@ -1470,15 +1424,13 @@ ideas = {
 			allowed = { always = no }
 			available = {
 				OR = {
-					is_in_faction = no
 					is_in_faction_with = JAP
-				}
-				OR = {
-					is_in_faction_with = JAP
-					is_in_array = { global.asian_economic_sphere = ROOT }
+					AND = {
+						is_in_faction = no
+						has_country_flag = JAP_economic_sphere_member
+					}
 				}
 				JAP = {
-					exists = yes
 					is_faction_leader = yes
 					NOT = { has_war_with = ROOT }
 				}
@@ -1502,7 +1454,7 @@ ideas = {
 			picture = japanese_integration
 			allowed = { always = no }
 			available = {
-				is_in_array = { global.asian_economic_sphere = ROOT }
+				has_country_flag = JAP_economic_sphere_member
 				is_subject = no
 			}
 			modifier = {
@@ -1527,7 +1479,7 @@ ideas = {
 			picture = japanese_integration
 			allowed = { always = no }
 			available = {
-				is_in_array = { global.asian_economic_sphere = ROOT }
+				has_country_flag = JAP_economic_sphere_member
 				is_subject = no
 			}
 			modifier = {
@@ -1552,7 +1504,7 @@ ideas = {
 			picture = japanese_integration
 			allowed = { always = no }
 			available = {
-				is_in_array = { global.asian_economic_sphere = ROOT }
+				has_country_flag = JAP_economic_sphere_member
 				is_subject = no
 			}
 			modifier = {
@@ -1571,12 +1523,11 @@ ideas = {
 			allowed = { always = no }
 			available = {
 				JAP = {
-					exists = yes
 					is_faction_leader = yes
 					NOT = { is_in_faction_with = ROOT }
 				}
 				NOT = {
-					is_in_array = { global.asian_economic_sphere = ROOT }
+					has_country_flag = JAP_economic_sphere_member
 					has_war_with = JAP
 				}
 			}
@@ -1587,17 +1538,6 @@ ideas = {
 		}
 
 		### Syndicalist Ideas (Post War) ###
-
-		JAP_Imperial_Family_dead = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_Imperial_Family_dead" }
-			picture = HOL_unionized_military
-			allowed = { always = no }
-			modifier = {
-				political_power_gain = 0.15
-				army_morale_factor = -0.2
-				army_org_regain = -0.05
-			}
-		}
 
 		JAP_Imperial_Family_exiled = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea JAP_Imperial_Family_exiled" }
@@ -1629,513 +1569,6 @@ ideas = {
 				stability_factor = -0.1
 				consumer_goods_factor = 0.30
 				resistance_growth = 0.1
-			}
-		}
-
-		### Chinese Intervention ###
-		JAP_chinese_war_effort_1 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea JAP_chinese_war_effort_1"
-				set_country_flag = JAP_chinese_war_effort
-			}
-			name = JAP_chinese_war_effort
-			picture = jap_intervene_in_china
-			allowed = { always = no }
-			targeted_modifier = {
-				custom_modifier_tooltip = JAP_chinese_war_effort_1_tt
-				tag = CHI
-				hidden_modifier = {
-					attack_bonus_against = -0.5
-					defense_bonus_against = -0.5
-				}
-			}
-			targeted_modifier = {
-				tag = QIE
-				hidden_modifier = {
-					attack_bonus_against = -0.5
-					defense_bonus_against = -0.5
-				}
-			}
-			targeted_modifier = {
-				tag = FNG
-				hidden_modifier = {
-					attack_bonus_against = -0.5
-					defense_bonus_against = -0.5
-				}
-			}
-			targeted_modifier = {
-				tag = LEP
-				hidden_modifier = {
-					attack_bonus_against = -0.5
-					defense_bonus_against = -0.5
-				}
-			}
-			targeted_modifier = {
-				tag = ANQ
-				hidden_modifier = {
-					attack_bonus_against = -0.5
-					defense_bonus_against = -0.5
-				}
-			}
-			targeted_modifier = {
-				tag = GXC
-				hidden_modifier = {
-					attack_bonus_against = -0.5
-					defense_bonus_against = -0.5
-				}
-			}
-			targeted_modifier = {
-				tag = HNN
-				hidden_modifier = {
-					attack_bonus_against = -0.5
-					defense_bonus_against = -0.5
-				}
-			}
-			targeted_modifier = {
-				tag = YUN
-				hidden_modifier = {
-					attack_bonus_against = -0.5
-					defense_bonus_against = -0.5
-				}
-			}
-			targeted_modifier = {
-				tag = SZC
-				hidden_modifier = {
-					attack_bonus_against = -0.5
-					defense_bonus_against = -0.5
-				}
-			}
-			targeted_modifier = {
-				tag = SHX
-				hidden_modifier = {
-					attack_bonus_against = -0.5
-					defense_bonus_against = -0.5
-				}
-			}
-			targeted_modifier = {
-				tag = SQI
-				hidden_modifier = {
-					attack_bonus_against = -0.5
-					defense_bonus_against = -0.5
-				}
-			}
-			targeted_modifier = {
-				tag = XSM
-				hidden_modifier = {
-					attack_bonus_against = -0.5
-					defense_bonus_against = -0.5
-				}
-			}
-			targeted_modifier = {
-				tag = SIK
-				hidden_modifier = {
-					attack_bonus_against = -0.5
-					defense_bonus_against = -0.5
-				}
-			}
-		}
-		JAP_chinese_war_effort_2 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea JAP_chinese_war_effort_2"
-				set_country_flag = JAP_chinese_war_effort
-			}
-			name = JAP_chinese_war_effort
-			picture = jap_intervene_in_china
-			allowed = { always = no }
-			targeted_modifier = {
-				custom_modifier_tooltip = JAP_chinese_war_effort_2_tt
-				tag = CHI
-				hidden_modifier = {
-					attack_bonus_against = -0.4
-					defense_bonus_against = -0.4
-				}
-			}
-			targeted_modifier = {
-				tag = QIE
-				hidden_modifier = {
-					attack_bonus_against = -0.4
-					defense_bonus_against = -0.4
-				}
-			}
-			targeted_modifier = {
-				tag = FNG
-				hidden_modifier = {
-					attack_bonus_against = -0.4
-					defense_bonus_against = -0.4
-				}
-			}
-			targeted_modifier = {
-				tag = LEP
-				hidden_modifier = {
-					attack_bonus_against = -0.4
-					defense_bonus_against = -0.4
-				}
-			}
-			targeted_modifier = {
-				tag = ANQ
-				hidden_modifier = {
-					attack_bonus_against = -0.4
-					defense_bonus_against = -0.4
-				}
-			}
-			targeted_modifier = {
-				tag = GXC
-				hidden_modifier = {
-					attack_bonus_against = -0.4
-					defense_bonus_against = -0.4
-				}
-			}
-			targeted_modifier = {
-				tag = HNN
-				hidden_modifier = {
-					attack_bonus_against = -0.4
-					defense_bonus_against = -0.4
-				}
-			}
-			targeted_modifier = {
-				tag = YUN
-				hidden_modifier = {
-					attack_bonus_against = -0.4
-					defense_bonus_against = -0.4
-				}
-			}
-			targeted_modifier = {
-				tag = SZC
-				hidden_modifier = {
-					attack_bonus_against = -0.4
-					defense_bonus_against = -0.4
-				}
-			}
-			targeted_modifier = {
-				tag = SHX
-				hidden_modifier = {
-					attack_bonus_against = -0.4
-					defense_bonus_against = -0.4
-				}
-			}
-			targeted_modifier = {
-				tag = SQI
-				hidden_modifier = {
-					attack_bonus_against = -0.4
-					defense_bonus_against = -0.4
-				}
-			}
-			targeted_modifier = {
-				tag = XSM
-				hidden_modifier = {
-					attack_bonus_against = -0.4
-					defense_bonus_against = -0.4
-				}
-			}
-			targeted_modifier = {
-				tag = SIK
-				hidden_modifier = {
-					attack_bonus_against = -0.4
-					defense_bonus_against = -0.4
-				}
-			}
-		}
-		JAP_chinese_war_effort_3 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea JAP_chinese_war_effort_3"
-				set_country_flag = JAP_chinese_war_effort
-			}
-			name = JAP_chinese_war_effort
-			picture = jap_intervene_in_china
-			allowed = { always = no }
-			targeted_modifier = {
-				custom_modifier_tooltip = JAP_chinese_war_effort_3_tt
-				tag = CHI
-				hidden_modifier = {
-					attack_bonus_against = -0.3
-					defense_bonus_against = -0.3
-				}
-			}
-			targeted_modifier = {
-				tag = QIE
-				hidden_modifier = {
-					attack_bonus_against = -0.3
-					defense_bonus_against = -0.3
-				}
-			}
-			targeted_modifier = {
-				tag = FNG
-				hidden_modifier = {
-					attack_bonus_against = -0.3
-					defense_bonus_against = -0.3
-				}
-			}
-			targeted_modifier = {
-				tag = LEP
-				hidden_modifier = {
-					attack_bonus_against = -0.3
-					defense_bonus_against = -0.3
-				}
-			}
-			targeted_modifier = {
-				tag = ANQ
-				hidden_modifier = {
-					attack_bonus_against = -0.3
-					defense_bonus_against = -0.3
-				}
-			}
-			targeted_modifier = {
-				tag = GXC
-				hidden_modifier = {
-					attack_bonus_against = -0.3
-					defense_bonus_against = -0.3
-				}
-			}
-			targeted_modifier = {
-				tag = HNN
-				hidden_modifier = {
-					attack_bonus_against = -0.3
-					defense_bonus_against = -0.3
-				}
-			}
-			targeted_modifier = {
-				tag = YUN
-				hidden_modifier = {
-					attack_bonus_against = -0.3
-					defense_bonus_against = -0.3
-				}
-			}
-			targeted_modifier = {
-				tag = SZC
-				hidden_modifier = {
-					attack_bonus_against = -0.3
-					defense_bonus_against = -0.3
-				}
-			}
-			targeted_modifier = {
-				tag = SHX
-				hidden_modifier = {
-					attack_bonus_against = -0.3
-					defense_bonus_against = -0.3
-				}
-			}
-			targeted_modifier = {
-				tag = SQI
-				hidden_modifier = {
-					attack_bonus_against = -0.3
-					defense_bonus_against = -0.3
-				}
-			}
-			targeted_modifier = {
-				tag = XSM
-				hidden_modifier = {
-					attack_bonus_against = -0.3
-					defense_bonus_against = -0.3
-				}
-			}
-			targeted_modifier = {
-				tag = SIK
-				hidden_modifier = {
-					attack_bonus_against = -0.3
-					defense_bonus_against = -0.3
-				}
-			}
-		}
-		JAP_chinese_war_effort_4 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea JAP_chinese_war_effort_4"
-				set_country_flag = JAP_chinese_war_effort
-			}
-			name = JAP_chinese_war_effort
-			picture = jap_intervene_in_china
-			allowed = { always = no }
-			targeted_modifier = {
-				custom_modifier_tooltip = JAP_chinese_war_effort_4_tt
-				tag = CHI
-				hidden_modifier = {
-					attack_bonus_against = -0.2
-					defense_bonus_against = -0.2
-				}
-			}
-			targeted_modifier = {
-				tag = QIE
-				hidden_modifier = {
-					attack_bonus_against = -0.2
-					defense_bonus_against = -0.2
-				}
-			}
-			targeted_modifier = {
-				tag = FNG
-				hidden_modifier = {
-					attack_bonus_against = -0.2
-					defense_bonus_against = -0.2
-				}
-			}
-			targeted_modifier = {
-				tag = LEP
-				hidden_modifier = {
-					attack_bonus_against = -0.2
-					defense_bonus_against = -0.2
-				}
-			}
-			targeted_modifier = {
-				tag = ANQ
-				hidden_modifier = {
-					attack_bonus_against = -0.2
-					defense_bonus_against = -0.2
-				}
-			}
-			targeted_modifier = {
-				tag = GXC
-				hidden_modifier = {
-					attack_bonus_against = -0.2
-					defense_bonus_against = -0.2
-				}
-			}
-			targeted_modifier = {
-				tag = HNN
-				hidden_modifier = {
-					attack_bonus_against = -0.2
-					defense_bonus_against = -0.2
-				}
-			}
-			targeted_modifier = {
-				tag = YUN
-				hidden_modifier = {
-					attack_bonus_against = -0.2
-					defense_bonus_against = -0.2
-				}
-			}
-			targeted_modifier = {
-				tag = SZC
-				hidden_modifier = {
-					attack_bonus_against = -0.2
-					defense_bonus_against = -0.2
-				}
-			}
-			targeted_modifier = {
-				tag = SHX
-				hidden_modifier = {
-					attack_bonus_against = -0.2
-					defense_bonus_against = -0.2
-				}
-			}
-			targeted_modifier = {
-				tag = SQI
-				hidden_modifier = {
-					attack_bonus_against = -0.2
-					defense_bonus_against = -0.2
-				}
-			}
-			targeted_modifier = {
-				tag = XSM
-				hidden_modifier = {
-					attack_bonus_against = -0.2
-					defense_bonus_against = -0.2
-				}
-			}
-			targeted_modifier = {
-				tag = SIK
-				hidden_modifier = {
-					attack_bonus_against = -0.2
-					defense_bonus_against = -0.2
-				}
-			}
-		}
-		JAP_chinese_war_effort_5 = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea JAP_chinese_war_effort_5"
-				set_country_flag = JAP_chinese_war_effort
-			}
-			name = JAP_chinese_war_effort
-			picture = jap_intervene_in_china
-			allowed = { always = no }
-			targeted_modifier = {
-				custom_modifier_tooltip = JAP_chinese_war_effort_5_tt
-				tag = CHI
-				hidden_modifier = {
-					attack_bonus_against = -0.1
-					defense_bonus_against = -0.1
-				}
-			}
-			targeted_modifier = {
-				tag = QIE
-				hidden_modifier = {
-					attack_bonus_against = -0.1
-					defense_bonus_against = -0.1
-				}
-			}
-			targeted_modifier = {
-				tag = FNG
-				hidden_modifier = {
-					attack_bonus_against = -0.1
-					defense_bonus_against = -0.1
-				}
-			}
-			targeted_modifier = {
-				tag = LEP
-				hidden_modifier = {
-					attack_bonus_against = -0.1
-					defense_bonus_against = -0.1
-				}
-			}
-			targeted_modifier = {
-				tag = ANQ
-				hidden_modifier = {
-					attack_bonus_against = -0.1
-					defense_bonus_against = -0.1
-				}
-			}
-			targeted_modifier = {
-				tag = GXC
-				hidden_modifier = {
-					attack_bonus_against = -0.1
-					defense_bonus_against = -0.1
-				}
-			}
-			targeted_modifier = {
-				tag = HNN
-				hidden_modifier = {
-					attack_bonus_against = -0.1
-					defense_bonus_against = -0.1
-				}
-			}
-			targeted_modifier = {
-				tag = YUN
-				hidden_modifier = {
-					attack_bonus_against = -0.1
-					defense_bonus_against = -0.1
-				}
-			}
-			targeted_modifier = {
-				tag = SZC
-				hidden_modifier = {
-					attack_bonus_against = -0.1
-					defense_bonus_against = -0.1
-				}
-			}
-			targeted_modifier = {
-				tag = SHX
-				hidden_modifier = {
-					attack_bonus_against = -0.1
-					defense_bonus_against = -0.1
-				}
-			}
-			targeted_modifier = {
-				tag = SQI
-				hidden_modifier = {
-					attack_bonus_against = -0.1
-					defense_bonus_against = -0.1
-				}
-			}
-			targeted_modifier = {
-				tag = XSM
-				hidden_modifier = {
-					attack_bonus_against = -0.1
-					defense_bonus_against = -0.1
-				}
-			}
-			targeted_modifier = {
-				tag = SIK
-				hidden_modifier = {
-					attack_bonus_against = -0.1
-					defense_bonus_against = -0.1
-				}
 			}
 		}
 	}
@@ -2259,8 +1692,12 @@ ideas = {
 		designer = yes
 
 		mitsubishi = {
+			name = mitsubishi
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea mitsubishi" }
 			allowed = { original_tag = JAP }
+			visible = {
+				NOT = { has_completed_focus = JAP_ZAI_ECO }
+			}
 			available = {
 				NOT = { has_completed_focus = JAP_NAT_ZAI }
 			}
@@ -2269,6 +1706,28 @@ ideas = {
 			}
 			research_bonus = {
 				air_equipment = 0.1
+			}
+		}
+		mitsubishi_based = {
+			name = mitsubishi
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea mitsubishi_based" }
+			picture = mitsubishi
+			allowed = { original_tag = JAP }
+			visible = {
+				has_completed_focus = JAP_ZAI_ECO
+			}
+			available = {
+				NOT = { has_completed_focus = JAP_NAT_ZAI }
+			}
+			traits = {
+				fighter_producer_offense_2
+			}
+			cost = 50
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
 			}
 		}
 
@@ -2340,7 +1799,6 @@ ideas = {
 				air_equipment = 0.1
 			}
 		}
-
 	}
 
 #############################
@@ -2404,7 +1862,6 @@ ideas = {
 				motorized_equipment = 0.1
 			}
 		}
-
 	}
 
 ###########################
@@ -2432,13 +1889,43 @@ ideas = {
 		}
 
 		Mitsui_Zaibatsu = {
+			name = Mitsui_Zaibatsu
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Mitsui_Zaibatsu" }
 			allowed = { original_tag = JAP }
+			visible = {
+				NOT = { has_completed_focus = JAP_ZAI_ECO }
+			}
+			available = {
+				NOT = { has_completed_focus = JAP_NAT_ZAI }
+			}
 			traits = {
 				industrial_manufacturer
 			}
 			research_bonus = {
 				industry = 0.1
+			}
+		}
+		Mitsui_Zaibatsu_based = {
+			name = Mitsui_Zaibatsu
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Mitsui_Zaibatsu_based" }
+			picture = Mitsui_Zaibatsu
+			allowed = { original_tag = JAP }
+			visible = {
+				has_completed_focus = JAP_ZAI_ECO
+			}
+			available = {
+				NOT = { has_completed_focus = JAP_NAT_ZAI }
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			cost = 50
+			research_bonus = {
+				industry = 0.15
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
 			}
 		}
 
@@ -2474,8 +1961,12 @@ ideas = {
 		}
 
 		sumitomo = {
+			name = sumitomo
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea sumitomo" }
 			allowed = { original_tag = JAP }
+			visible = {
+				NOT = { has_completed_focus = JAP_ZAI_ECO }
+			}
 			available = {
 				NOT = { has_completed_focus = JAP_NAT_ZAI }
 			}
@@ -2484,6 +1975,28 @@ ideas = {
 			}
 			research_bonus = {
 				electronics = 0.15
+			}
+		}
+		sumitomo_based = {
+			name = sumitomo
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea sumitomo_based" }
+			picture = sumitomo
+			allowed = { original_tag = JAP }
+			visible = {
+				has_completed_focus = JAP_ZAI_ECO
+			}
+			available = {
+				NOT = { has_completed_focus = JAP_NAT_ZAI }
+			}
+			traits = {
+				electronics_manufacturer
+			}
+			cost = 50
+			research_bonus = {
+				electronics = 0.15
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
 			}
 		}
 
@@ -2542,6 +2055,5 @@ ideas = {
 			}
 		}
 	}
-
 }
 

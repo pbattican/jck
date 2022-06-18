@@ -13,6 +13,7 @@ ideas = {
 			picture = NOR_labour_conflicts
 			allowed = { always = no }
 			modifier = {
+				stability_factor = -0.15
 				production_factory_max_efficiency_factor = -0.15
 				industrial_capacity_factory = -0.15
 			}
@@ -22,6 +23,7 @@ ideas = {
 			picture = NOR_labour_conflicts
 			allowed = { always = no }
 			modifier = {
+				stability_factor = -0.05
 				production_factory_max_efficiency_factor = -0.10
 				industrial_capacity_factory = -0.10
 			}
@@ -47,29 +49,6 @@ ideas = {
 			}
 		}
 
-		rus_better_working_conditions = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea rus_better_working_conditions" }
-			picture = generic_production_bonus
-			allowed = { always = no }
-			modifier = {
-				production_factory_max_efficiency_factor = -0.10
-				industrial_capacity_factory = -0.15
-				stability_weekly = 0.001
-			}
-		}
-
-		rus_better_working_conditionsDEN = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea rus_better_working_conditionsDEN" }
-			name = rus_better_working_conditions
-			picture = generic_production_bonus
-			allowed = { always = no }
-			modifier = {
-				production_factory_max_efficiency_factor = -0.15
-				industrial_capacity_factory = -0.20
-				stability_weekly = 0.001
-			}
-		}
-
 		###############
 		## New Ideas ##
 		###############
@@ -88,9 +67,8 @@ ideas = {
 			picture = SPR_political_violence
 			allowed = { always = no }
 			modifier = {
-				stability_factor = -0.2
-				political_power_cost = 0.4
-				disabled_ideas = 1
+				stability_factor = -0.25
+				political_power_factor = -0.05
 			}
 		}
 		RUS_unruly_military = {
@@ -101,16 +79,6 @@ ideas = {
 				stability_factor = -0.15
 				war_support_factor = -0.20
 				custom_modifier_tooltip = cannot_train_units_tt
-			}
-		}
-		RUS_faltering_war_effort = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_faltering_war_effort" }
-			picture = generic_army_problems
-			allowed = { always = no }
-			available = { has_war = yes }
-			modifier = {
-				surrender_limit = -0.20
-				army_org_factor = -0.20
 			}
 		}
 
@@ -641,7 +609,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				conscription_factor = 0.1
-				political_power_cost = 0.2
+				political_power_cost = 0.1
 			}
 		}
 
@@ -1327,6 +1295,8 @@ ideas = {
 				planning_speed = 0.1
 				supply_consumption_factor = -0.05
 				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				production_speed_supply_node_factor = 0.1
 				land_doctrine_cost_factor = -0.1
 			}
 		}
@@ -1629,7 +1599,6 @@ ideas = {
 				motorized_equipment = 0.1
 			}
 		}
-
 	}
 
 	#### Heavy Equipment Manufacturer ####
@@ -1710,7 +1679,6 @@ ideas = {
 				naval_equipment = 0.1
 			}
 		}
-
 	}
 
 	aircraft_manufacturer = {
@@ -1805,8 +1773,6 @@ ideas = {
 				air_equipment = 0.1
 			}
 		}
-
 	}
-
 }
 

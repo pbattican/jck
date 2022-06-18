@@ -46,28 +46,6 @@ ideas = {
 			}
 		}
 
-		Capital_Ship_Primacy = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Capital_Ship_Primacy" }
-			picture = generic_pp_unity_bonus
-			allowed = { always = no }
-			equipment_bonus = {
-				capital_ship = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-
-		Carrier_Primacy = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Carrier_Primacy" }
-			picture = AST_oversized_fleet
-			allowed = { always = no }
-			equipment_bonus = {
-				carrier = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-
 		FRA_fast_army_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_fast_army_idea" }
 			picture = FRA_motorized_focus
@@ -523,7 +501,6 @@ ideas = {
 				motorized_equipment = 0.1
 			}
 		}
-
 	}
 
 	#### Heavy Equipment Manufacturer ####
@@ -549,7 +526,7 @@ ideas = {
 		lorraine_dietrich = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea lorraine_dietrich" }
 			allowed = { tag = FRA }
-			traits = { medium_tank_producer_offense_2}
+			traits = { medium_tank_producer_offense_2 }
 			research_bonus = {
 				armor = 0.1
 			}

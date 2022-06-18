@@ -9,7 +9,6 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				production_factory_max_efficiency_factor = -0.15
-				industrial_capacity_factory = -0.35
 				production_speed_buildings_factor = -0.25
 				consumer_goods_factor = 0.40
 			}
@@ -26,7 +25,6 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				production_factory_max_efficiency_factor = -0.20
-				industrial_capacity_factory = -0.40
 				production_speed_buildings_factor = -0.40
 				consumer_goods_factor = 0.50
 			}
@@ -43,7 +41,6 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				production_factory_max_efficiency_factor = -0.10
-				industrial_capacity_factory = -0.25
 				production_speed_buildings_factor = -0.20
 				consumer_goods_factor = 0.35
 			}
@@ -61,8 +58,7 @@ ideas = {
 			modifier = {
 				war_support_weekly = -0.01
 				stability_weekly = -0.01
-				political_power_cost = 0.05
-				disabled_ideas = 1
+				political_power_cost = 1
 			}
 		}
 		USA_new_year_strike_idea = {
@@ -169,41 +165,6 @@ ideas = {
 				resistance_growth_on_our_occupied_states = 0.2
 			}
 		}
-		ACW_building_navy = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ACW_building_navy" }
-			picture = generic_navy
-			allowed = { always = no }
-			equipment_bonus = {
-				convoy = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-				submarine = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-				destroyer = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-				light_cruiser = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-				heavy_cruiser = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-				battleship = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-				carrier = {
-					build_cost_ic = -0.15
-					instant = yes
-				}
-			}
-		}
 
 		### civil war victory Ideas ###
 		USA_civil_reconstruction_idea = { #Reconstruction
@@ -262,147 +223,6 @@ ideas = {
 				army_org_Factor = 0.05
 				conscription = 0.01
 				training_time_factor = -0.1
-			}
-		}
-		amcviwar_ready_to_surrender = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea amcviwar_ready_to_surrender" }
-			picture = generic_morale_bonus
-			allowed = { always = no }
-			available = {
-				NOT = { has_global_flag = USA_civil_war_over_flag }
-			}
-			modifier = {
-				surrender_limit = -0.90
-				army_org_factor = -0.25
-				army_morale_factor = -0.25
-				army_defence_factor = -0.50
-				army_attack_factor = -0.50
-			}
-		}
-		### Fair Deal Ideas ###
-		USA_recovering_economy_idea = { #Recovering Economy
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_recovering_economy_idea" }
-			picture = can_wartime_prices_and_trade_board
-			allowed = { always = no }
-			modifier = {
-				production_factory_max_efficiency_factor = -0.10
-				industrial_capacity_factory = -0.10
-				production_speed_buildings_factor = -0.10
-				consumer_goods_factor = 0.20
-			}
-		}
-		USA_national_recovery_act_idea = { #National Recovery Act
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_national_recovery_act_idea" }
-			picture = generic_political_support
-			allowed = { always = no }
-			modifier = {
-				production_factory_max_efficiency_factor = -0.05
-				industrial_capacity_factory = -0.05
-				production_speed_buildings_factor = -0.05
-				consumer_goods_factor = 0.10
-			}
-		}
-		USA_federal_project_one_idea = { #Federal Project One
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_federal_project_one_idea" }
-			picture = man_five_year_plan_industry
-			allowed = { always = no }
-			modifier = {
-				political_power_factor = 0.05
-				research_speed_factor = 0.05
-			}
-		}
-		USA_ccc_idea = { #CCC
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_ccc_idea" }
-			picture = generic_local_self_management
-			allowed = { always = no }
-			modifier = {
-				local_resources_factor = 0.10
-				production_speed_infrastructure_factor = 0.10
-			}
-		}
-		USA_workers_management_act_idea = { #Labor Relations Act
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_workers_management_act_idea" }
-			picture = generic_constitutional_guarantees
-			allowed = { always = no }
-			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
-				production_factory_start_efficiency_factor = 0.05
-				industrial_capacity_factory = 0.05
-			}
-		}
-		USA_social_security_idea = { #Social Welfare
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_social_security_idea" }
-			picture = generic_scales
-			allowed = { always = no }
-			modifier = {
-				production_factory_efficiency_gain_factor = 0.1
-				production_factory_start_efficiency_factor = 0.1
-				industrial_capacity_factory = 0.1
-			}
-		}
-		USA_second_bill_of_rights_idea = { #Second Bill of Rights
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_second_bill_of_rights_idea" }
-			picture = generic_scales
-			allowed = { always = no }
-			modifier = {
-				production_factory_efficiency_gain_factor = 0.1
-				production_factory_start_efficiency_factor = 0.1
-				industrial_capacity_factory = 0.1
-				consumer_goods_factor = 0.10
-				production_factory_max_efficiency_factor = 0.1
-				political_power_factor = 0.05
-			}
-		}
-		USA_bastion_of_liberty_idea = { #Bastion of Liberty
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_bastion_of_liberty_idea" }
-			picture = generic_victors_of_ww1
-			allowed = { always = no }
-			modifier = {
-				army_core_attack_factor = 0.1
-				army_core_defence_factor = 0.1
-				resistance_damage_to_garrison = -0.1
-			}
-		}
-		USA_restoring_confidence = { #Restoring Confidence
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_restoring_confidence" }
-			picture = chi_war_of_resistance3
-			allowed = { always = no }
-			modifier = {
-				war_support_weekly = 0.01
-				stability_weekly = 0.01
-				political_power_gain = -0.05
-			}
-		}
-		USA_american_capitalism_idea = { #American Capitalism
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_american_capitalism_idea" }
-			picture = can_wartime_prices_and_trade_board
-			allowed = { always = no }
-			modifier = {
-				consumer_goods_factor = -0.03
-				min_export = 0.03
-				line_change_production_efficiency_factor = 0.1
-				industrial_capacity_factory = 0.05
-			}
-		}
-		USA_american_creed_idea = { #American Creed
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_american_creed_idea" }
-			picture = can_wartime_prices_and_trade_board
-			allowed = { always = no }
-			modifier = {
-				political_power_gain = 0.10
-				stability_factor = 0.05
-				conscription_factor = 0.10
-			}
-		}
-		USA_americanism_idea = { #Americanism
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_americanism_idea" }
-			picture = can_wartime_prices_and_trade_board
-			allowed = { always = no }
-			modifier = {
-				political_power_gain = 0.25
-				stability_factor = 0.05
-				conscription_factor = 0.10
-				production_factory_max_efficiency_factor = 0.10
 			}
 		}
 		### Army Focus Tree ###
@@ -800,7 +620,6 @@ ideas = {
 			}
 		}
 
-
 		USA_weapons_manufacturers2 = { #CRAIG PLAN ONLY
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_weapons_manufacturers2" }
 			name = USA_weapons_manufacturers
@@ -970,16 +789,6 @@ ideas = {
 				experience_gain_air = 0.05
 			}
 		}
-		USA_airborne_experiments = { #Screaming Eagles
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_airborne_experiments" }
-			picture = usa_airborne_divisions
-			allowed = { always = no }
-			modifier = {
-				air_paradrop_attack_factor = 0.10
-				air_paradrop_defence_factor = 0.10
-				air_paradrop_agility_factor = 0.10
-			}
-		}
 
 		USA_fire_bombings = { #Fire Bombings
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_fire_bombings" }
@@ -1010,15 +819,7 @@ ideas = {
 					build_cost_ic = -0.10
 					instant = yes
 				}
-				destroyer = {
-					build_cost_ic = -0.10
-					instant = yes
-				}
-				light_cruiser = {
-					build_cost_ic = -0.10
-					instant = yes
-				}
-				heavy_cruiser = {
+				screen_ship = {
 					build_cost_ic = -0.10
 					instant = yes
 				}
@@ -1234,15 +1035,15 @@ ideas = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				artillery = {
+				artillery_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				motorized = {
+				motorized_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				mechanized = {
+				mechanized_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -1274,15 +1075,15 @@ ideas = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				artillery = {
+				artillery_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				motorized = {
+				motorized_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				mechanized = {
+				mechanized_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -1319,15 +1120,15 @@ ideas = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				artillery = {
+				artillery_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				motorized = {
+				motorized_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				mechanized = {
+				mechanized_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -1361,15 +1162,15 @@ ideas = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				artillery = {
+				artillery_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				motorized = {
+				motorized_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-				mechanized = {
+				mechanized_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -1396,17 +1197,6 @@ ideas = {
 				convoy_escort_efficiency = 0.1
 				transport_capacity = -0.1
 				naval_invasion_capacity = 10
-			}
-		}
-		USA_on_the_beach_idea = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_on_the_beach_idea" }
-			picture = escort_effort_focus
-			allowed = { always = no }
-			modifier = {
-				amphibious_invasion = 0.20
-				invasion_preparation = -0.20
-				special_forces_min = 10
-				navy_max_range_factor = 0.10
 			}
 		}
 		USA_american_advisors_1 = {
@@ -1557,27 +1347,19 @@ ideas = {
 				nuclear = 0.1
 			}
 			equipment_bonus = {
-				destroyer = {
+				submarine = {
 					naval_speed = 0.1
 					instant = yes
 				}
-				light_cruiser = {
+				screen_ship = {
 					naval_speed = 0.1
 					instant = yes
 				}
-				heavy_cruiser = {
-					naval_speed = 0.1
-					instant = yes
-				}
-				battleship = {
+				capital_ship = {
 					naval_speed = 0.1
 					instant = yes
 				}
 				carrier = {
-					naval_speed = 0.1
-					instant = yes
-				}
-				submarine = {
 					naval_speed = 0.1
 					instant = yes
 				}
@@ -2371,7 +2153,7 @@ ideas = {
 					}
 				}
 			}
-			traits = { us_armor_companies_fisher}
+			traits = { us_armor_companies_fisher }
 			research_bonus = { armor = 0.1 }
 		}
 		kr_pacific_car_and_foundry = { #Pacific Car and Foundry
@@ -2743,7 +2525,7 @@ ideas = {
 					}
 				}
 			}
-			traits = { fighter_producer_offense_2}
+			traits = { fighter_producer_offense_2 }
 			research_bonus = { air_equipment = 0.1 }
 		}
 		kr_vultee = { #Vultee
