@@ -1,6 +1,5 @@
 ### Portuguese Decisions by Carmain ####
 
-
 POR_colonial_development_cat = {
 	POR_cape_verde = {
 		icon = GFX_decision_generic_operation
@@ -140,7 +139,6 @@ POR_colonial_development_cat = {
 	}
 }
 
-
 political_actions = {
 	POR_join_Entente = {
 		icon = generic_prepare_civil_war
@@ -240,11 +238,10 @@ crisis = {
 				MAF_decide_stalemate_advantage = yes
 			}
 			hidden_effect = { activate_mission = POR_Bush_War_mission }
-
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision POR_Bush_War_mission"
-			country_event = { id = mittel.39 }
+			country_event = mittel.39
 			MAF_end_bush_war = yes
 		}
 	}

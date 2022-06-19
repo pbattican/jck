@@ -140,8 +140,8 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = GER_security_prerequisite
 				OR = {
-					has_idea = GER_Franz_von_Papen_hog_sco
-					has_idea = GER_Kurt_von_Schleicher_hog_pau
+					has_idea = GER_franz_von_papen
+					has_idea = GER_kurt_von_schleicher
 				}
 			}
 		}
@@ -354,9 +354,16 @@ focus_tree = {
 			focus = GER_democracy_in_prussia
 		}
 		available = {
-			has_country_flag = {
-				flag = women_suffrage
-				value > 3
+			OR = {
+				has_government = social_democrat
+				AND = {
+					has_country_flag = GER_women_suffrage_moderate
+					OR = {
+						has_country_flag = GER_women_suffrage_high
+						has_country_flag = GER_hoffmann_wins
+						has_country_flag = GER_women_recognized
+					}
+				}
 			}
 		}
 		x = 4
@@ -484,7 +491,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_schleicher_prerequisite
-				has_idea = GER_Kurt_von_Schleicher_hog_pau
+				has_idea = GER_kurt_von_schleicher
 			}
 		}
 
@@ -591,15 +598,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_groener1"
-			if = {
-				limit = {
-					NOT = {
-						has_idea = GER_Wilhelm_Groener_eco_ade
-					}
-				}
-				hidden_effect = { remove_ideas_with_trait = economy_minister }
-				add_ideas = GER_Wilhelm_Groener_eco_ade
-			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = GER
@@ -648,6 +646,15 @@ focus_tree = {
 				remove_building = {
 					type = industrial_complex
 					level = 1
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_hjalmar_schacht
+			hidden_effect = {
+				remove_advisor_role = {
+					character = GER_karl_helfferich
+					slot = political_advisor
 				}
 			}
 		}
@@ -747,12 +754,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_schacht1"
 			add_stability = -0.05
-			if = {
-				limit = {
-					NOT = { has_idea = GER_Hjalmar_Schacht_eco_mli }
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GER_karl_helfferich
+			hidden_effect = {
+				remove_advisor_role = {
+					character = GER_hjalmar_schacht
+					slot = political_advisor
 				}
-				hidden_effect = { remove_ideas_with_trait = economy_minister }
-				add_ideas = GER_Hjalmar_Schacht_eco_mli
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
@@ -878,17 +887,30 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_black_monday_finish"
-			remove_ideas = GER_black_monday
+			if = {
+				limit = { has_idea = GER_black_monday_schacht_2 }
+				remove_ideas = GER_black_monday_schacht_2
+			}
+			else_if = {
+				limit = { has_idea = GER_black_monday_groener_2 }
+				remove_ideas = GER_black_monday_groener_2
+			}
+			if = {
+				limit = { has_idea = GER_black_monday_schacht_1 }
+				remove_ideas = GER_black_monday_schacht_1
+			}
+			else_if = {
+				limit = { has_idea = GER_black_monday_groener_1 }
+				remove_ideas = GER_black_monday_groener_1
+			}
+			else = {
+				effect_tooltip = { remove_ideas = GER_black_monday }
+			}
 			hidden_effect = {
-				remove_ideas = {
-					GER_black_monday_schacht_2
-					GER_black_monday_groener_2
-				}
 				IRE = {
 					country_event = { id = ire.230 days = 10 random_days = 20 }
 				}
 			}
-			add_stability = 0.25
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -2059,10 +2081,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_mobile_3"
-			swap_ideas = {
-				remove_idea = GER_invest_arms_industry
-				add_idea = GER_tank_idea
-			}
+			#custom_effect_tooltip = GER_doctrine_mobile_3_tooltip
+#			hidden_effect = {
+				swap_ideas = {
+					remove_idea = GER_invest_arms_industry
+					add_idea = GER_tank_idea
+				}
+#			}
 			add_tech_bonus = {
 				name = GER_doctrine_mobile_3
 				bonus = 1
@@ -2429,6 +2454,9 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = GER_werner_von_blomberg_high_command
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
 	}
@@ -2477,9 +2505,12 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = GER_doctrine_mobile_2
 				cost_reduction = 0.5
-				uses = 2
+				uses = 1
 				category = land_doctrine
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = GER_erich_von_manstein
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -2715,6 +2746,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_last"
+			add_doctrine_cost_reduction = {
+				name = GER_doctrine_last
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			custom_effect_tooltip = tooltip_white_line
 			remove_ideas = GER_victors_of_wwi
 		}
 	}
@@ -2726,46 +2764,28 @@ focus_tree = {
 			focus = GER_doctrine_last
 		}
 		available = {
-			has_country_flag = loth_armed
-			NOT = { has_war_with = FRA }
-			controls_state = 28
+			controls_state = 53
 		}
 		x = -1
 		y = 4
 		relative_position_id = GER_mil_expansion
 		cost = 5
-		bypass = {
-			NOT = { can_declare_war_on = FRA }
-		}
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				date < 1939.1.1
-				has_game_rule = {
-					rule = wk2_begin_options
-					option = RESTRICTED
-				}
-			}
-			modifier = {
-				factor = 10
-				NOT = { has_war_with = FRA }
-				date > 1939.10.5
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_security_3"
 			army_experience = 50
 			air_experience = 25
-			country_event = {
-				id = prewar.37
-				days = 10
-			}
-			hidden_effect = {
-				FRA = {
-					country_event = prewar.36
-				}
-			}
+			# country_event = {
+			# 	id = prewar.37
+			# 	days = 10
+			# }
+			# hidden_effect = {
+			# 	FRA = {
+			# 		country_event = prewar.36
+			# 	}
+			# }
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP }
 	}
@@ -2796,6 +2816,12 @@ focus_tree = {
 				uses = 2
 				category = air_doctrine
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_chief_of_airforce
+			show_ideas_tooltip = GER_walther_wever_air_chief
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = GER_walther_wever_high_command
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -2920,9 +2946,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_institut"
-			add_timed_idea = {
-				idea = GER_institut_idea
-				days = 365
+			add_tech_bonus = {
+				name = air_equipment
+				bonus = 1.0
+				uses = 1
+				category = air_equipment
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doctrine
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
 			}
 		}
 	}
@@ -2953,6 +2987,9 @@ focus_tree = {
 				uses = 1
 				category = air_doctrine
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_chief_of_airforce
+			show_ideas_tooltip = GER_albert_kesselring
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -3058,10 +3095,7 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				GER = { owns_state = 336 }
-				GEA = { owns_state = 336 }
-			}
+			336 = { is_controlled_by_ROOT_or_subject = yes }
 		}
 
 		completion_reward = {
@@ -3177,8 +3211,146 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_mil_expansion_naval_1"
-			country_event = gerdom.15
-			custom_effect_tooltip = naval_construction
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "GER"
+					version_name = "Kaiser Wilhelm Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "GER"
+					version_name = "Kaiser Wilhelm Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_carrier_1
+					creator = "GER"
+					version_name = "Weser Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_carrier_1
+					creator = "GER"
+					version_name = "Weser Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_2
+					creator = "GER"
+					version_name = "T214 Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 2
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_2
+					creator = "GER"
+					version_name = "T214 Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 2
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_2
+					creator = "GER"
+					version_name = "T214 Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 2
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_2
+					creator = "GER"
+					version_name = "T214 Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 2
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_2
+					creator = "GER"
+					version_name = "T214 Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 2
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_submarine_2
+					creator = "GER"
+					version_name = "Type VII Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 2
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_submarine_2
+					creator = "GER"
+					version_name = "Type VII Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 2
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_submarine_2
+					creator = "GER"
+					version_name = "Type VII Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 2
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_submarine_2
+					creator = "GER"
+					version_name = "Type VII Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 2
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_submarine_2
+					creator = "GER"
+					version_name = "Type VII Class"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 2
+			}
 		}
 	}
 
@@ -3651,9 +3823,6 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_doctrine_fleet2
 		}
-		available = {
-			has_country_flag = navy_1934_complete
-		}
 		x = 1
 		y = 4
 		relative_position_id = GER_mil_expansion_naval_1
@@ -3720,13 +3889,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_fleet_in_beeing"
-			add_ideas = GER_Karl_Doenitz_cnav_sco
 			add_doctrine_cost_reduction = {
 				name = GER_doctrine_fleet_in_beeing
 				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_chief_of_navy
+			show_ideas_tooltip = GER_wolfgang_wegener_navy_chief
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = GER_wolfgang_wegener_high_command
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -3809,13 +3983,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_base_strike"
-			add_ideas = GER_Erich_Raeder_cnav_pau
 			add_doctrine_cost_reduction = {
 				name = GER_doctrine_base_strike
 				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_chief_of_navy
+			show_ideas_tooltip = GER_erich_raeder_navy_chief
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = GER_erich_raeder_theorist
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -4540,10 +4719,17 @@ focus_tree = {
 		id = GER_destroy_internationale
 		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
 		available = {
-			is_faction_leader = yes
+			second_weltkrieg_can_start = yes
 			can_declare_war_on = INT
+			is_faction_leader = yes
 		}
-		bypass_if_unavailable = yes
+		continue_if_invalid = yes
+		cancel = {
+			is_faction_leader = no
+		}
+		bypass = {
+			NOT = { can_declare_war_on = INT }
+		}
 		prerequisite = {
 			focus = GER_border_regions
 			focus = GER_ostwall
@@ -4591,9 +4777,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_destroy_internationale"
-			create_wargoal = {
+			declare_war_on = {
 				type = annex_everything
 				target = INT
+			}
+			effect_tooltip = {
+				if = {
+					limit = { NOT = { has_global_flag = second_weltkrieg_has_started } }
+					add_named_threat = {
+						threat = 20
+						name = second_weltkrieg_threat
+					}
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -4603,7 +4798,7 @@ focus_tree = {
 		id = GER_subjugate_russia
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		available = {
-			is_faction_leader = yes
+			second_weltkrieg_can_start = yes
 			if = {
 				limit = { country_exists = SOV }
 				can_declare_war_on = SOV
@@ -4611,8 +4806,15 @@ focus_tree = {
 			else = {
 				can_declare_war_on = RUS
 			}
+			is_faction_leader = yes
 		}
-		bypass_if_unavailable = yes
+		continue_if_invalid = yes
+		cancel = {
+			is_faction_leader = no
+		}
+		bypass = {
+			NOT = { can_declare_war_on = INT }
+		}
 		prerequisite = {
 			focus = GER_border_regions
 			focus = GER_ostwall
@@ -4661,15 +4863,24 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_subjugate_russia"
 			if = {
 				limit = { country_exists = SOV }
-				create_wargoal = {
+				declare_war_on = {
 					type = annex_everything
 					target = SOV
 				}
 			}
 			else = {
-				create_wargoal = {
+				declare_war_on = {
 					type = annex_everything
 					target = RUS
+				}
+			}
+			effect_tooltip = {
+				if = {
+					limit = { NOT = { has_global_flag = second_weltkrieg_has_started } }
+					add_named_threat = {
+						threat = 20
+						name = second_weltkrieg_threat
+					}
 				}
 			}
 		}
@@ -4922,11 +5133,10 @@ focus_tree = {
 		}
 		bypass = {
 			OR = {
-				has_global_flag = DKB_said_yes_to_GER_has_oil
 				NOT = { country_exists = DKB }
+				has_war_with = DKB
 				DKB = { is_subject = yes }
 				DKB = { is_in_faction = yes }
-				has_war_with = DKB
 			}
 		}
 
@@ -4955,19 +5165,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_oil_caucasus
 		cost = 5
-		bypass = {
-			OR = {
-				NOT = { country_exists = GEO }
-				GEO = { is_subject_of = RUS }
-				is_in_faction_with = GEO
-				has_subject = GEO
-			}
-		}
 
 		available = {
-			GEO = { is_subject = no }
 			can_declare_war_on = GEO
+			GEO = {
+				is_subject = no
+				is_in_faction = no
+			}
 		}
+		bypass_if_unavailable = yes
 
 		ai_will_do = {
 			factor = 25

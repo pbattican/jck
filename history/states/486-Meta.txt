@@ -1,20 +1,20 @@
 state = {
 	id = 486
 	name = "STATE_486"
+	manpower = 57214
+	state_category = one
 
 	history = {
+		add_to_array = { state_victory_points = 1887 }
+
 		buildings = {
 			infrastructure = 1
 		}
-		victory_points = {
-			1887 2
-		}
+		victory_points = { 1887 2 }
 	}
 
 	provinces = {
 		1887 5026 13411 13413 13416 13426 13542
 	}
-	manpower = 57214
-	state_category = one
 }
 

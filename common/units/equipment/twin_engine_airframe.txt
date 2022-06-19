@@ -452,4 +452,3 @@ equipments = {
 		naval_strike_targetting = 0
 	}
 }
-

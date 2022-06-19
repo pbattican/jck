@@ -1,10 +1,18 @@
 state = {
 	id = 313
 	name = "STATE_313"
+	manpower = 2046000
+	state_category = five
+
 	resources = {
 	}
 
 	history = {
+		add_to_array = { state_victory_points = 10886 }
+		add_to_array = { state_victory_points = 10842 }
+
+		victory_points = { 10886 6 }
+		victory_points = { 10842 1 }
 		buildings = {
 			infrastructure = 2
 			arms_factory = 2
@@ -17,18 +25,10 @@ state = {
 				naval_base = 1
 			}
 		}
-		victory_points = {
-			10886 6
-		}
-		victory_points = {
-			10842 1
-		}
 	}
 
 	provinces = {
 		4991 10842 10886 13085 13441 13444 13446 13701 13702 13703 13704
 	}
-	manpower = 2046000
-	state_category = five
 }
 

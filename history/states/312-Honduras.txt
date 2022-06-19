@@ -8,15 +8,13 @@ state = {
 	}
 
 	history = {
-		victory_points = {
-			13207 4
-		}
-		victory_points = {
-			13696 3
-		}
-		victory_points = {
-			13693 1
-		}
+		add_to_array = { state_victory_points = 13207 }
+		add_to_array = { state_victory_points = 13696 }
+		add_to_array = { state_victory_points = 13693 }
+
+		victory_points = { 13207 4 }
+		victory_points = { 13696 3 }
+		victory_points = { 13693 1 }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2

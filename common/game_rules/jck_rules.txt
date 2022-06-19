@@ -17,15 +17,55 @@
 #		desc = "RULE_ALLOW_TAKE_OVER_FACTION_BLOCKED_DESC
 #}
 
+annex_belgium_rule = {
+	name = "Annex Flanders Wallonia into Germany"
+	group = "Annex AI Nations"
+	icon = "GFX_wargoals"
+
+	default = {
+		name = ANNEX
+		text = "Annex Flanders Wallonia to Germany"
+		desc = ""
+	}
+	option = {
+		name = NORMAL
+		text = "Normal Flanders Wallonia"
+		desc = ""
+	}
+}
+
+
+annex_white_ruthenia_rule = {
+	name = "Annex White Ruthenia into Ukraine"
+	group = "Annex AI Nations"
+	icon = "GFX_wargoals"
+
+	default = {
+		name = ANNEX
+		text = "Annex White Ruthenia into Ukraine"
+		desc = ""
+	}
+	option = {
+		name = NORMAL
+		text = "Normal White Ruthenia"
+		desc = ""
+	}
+}
+
 allowed_submarine_tech = {
 	name = "Allowed Submarine Level"
 	group = "Allowed Technologies"
 	required_dlc = "Man the Guns"
 	icon = "GFX_navy_anchor"
 
+	option = {
+		name = SUB2
+		text = "Basic Submarines"
+		desc = ""
+	}
 	default = {
 		name = SUB3
-		text = "Advanced Submarines"
+		text = "Improved Submarines"
 		desc = ""
 	}
 	option = {
@@ -42,6 +82,11 @@ allowed_snorkel_tech = {
 	required_dlc = "Man the Guns"
 	icon = "GFX_navy_anchor"
 
+	option = {
+		name = SNORKEL_0
+		text = "Zero Snorkels"
+		desc = ""
+	}
 	default = {
 		name = SNORKEL_1
 		text = "Basic Snorkels"
@@ -62,11 +107,11 @@ allowed_anderson_doctrine = {
 	default = {
 		name = no
 		text = "No"
-		desc = ""
+		desc = allowed_anderson_doctrine_desc
 	}
 	option = {
 		name = yes
 		text = "Yes"
-		desc = ""
+		desc = allowed_anderson_doctrine_desc
 	}
 }

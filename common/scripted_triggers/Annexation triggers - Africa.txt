@@ -45,8 +45,6 @@ can_release_botswana = {
 		has_no_african_interests = yes
 		should_release_south_africa_first = yes
 		NOT = {
-			tag = SAF
-			tag = SFR
 			has_country_flag = BOT_CONQ
 			country_exists = BOT
 		}
@@ -526,9 +524,26 @@ can_release_south_africa = {
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
 		NOT = {
-			tag = SFR
 			has_country_flag = SAF_CONQ
 			country_exists = SAF
+		}
+	}
+}
+
+#Sudan - annexation_SUD_CONQ
+can_release_sudan = {
+	state = 551 #Kassala-Sennar
+	NOT = { is_claimed_by = ROOT }
+	ROOT = {
+		# do Egyptian release first
+		OR = {
+			country_exists = EGY
+			has_country_flag = EGY_CONQ
+			446 = { is_valid_annexation_state = no } #Cairo
+		}
+		NOT = {
+			country_exists = SUD
+			has_country_flag = SUD_CONQ
 		}
 	}
 }
@@ -681,10 +696,8 @@ should_release_tanzania_first = {
 
 should_release_south_africa_first = {
 	OR = {
-		tag = SFR
 		country_exists = SAF
 		has_country_flag = SAF_CONQ
 		681 = { is_valid_annexation_state = no } #Western Cape
 	}
 }
-

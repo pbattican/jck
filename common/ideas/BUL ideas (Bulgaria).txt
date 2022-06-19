@@ -100,7 +100,7 @@ ideas = {
 			picture = bul_tsar_boris_positive
 			allowed = { always = no }
 			available = {
-				has_country_leader = { character = BUL_ferdinand_i }
+				has_country_leader = { character = BUL_ferdinand_sakskoburggotski }
 			}
 			cancel = {
 				is_subject = yes
@@ -115,7 +115,7 @@ ideas = {
 			picture = bul_tsar_boris_negative
 			allowed = { always = no }
 			available = {
-				has_country_leader = { character = BUL_ferdinand_i }
+				has_country_leader = { character = BUL_ferdinand_sakskoburggotski }
 			}
 			cancel = {
 				is_subject = yes
@@ -1585,7 +1585,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.1
-				training_time_factor = 	-0.2
+				training_time_factor = -0.2
 				conscription = 0.02
 			}
 		}
@@ -1621,7 +1621,7 @@ ideas = {
 			modifier = {
 				justify_war_goal_time = -0.25
 				political_power_factor = 0.1
-				conscription = 0.03
+				conscription = 0.02
 			}
 		}
 		BUL_patriarchate_idea = {
@@ -1755,6 +1755,9 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BUL_secret_rearmament_idea" }
 			picture = HUN_secret_rearmament
 			allowed = { always = no }
+			modifier = {
+				unit_limit_bonus = 4
+			}
 			research_bonus = {
 				infantry_weapons = 0.05
 			}
@@ -1835,13 +1838,11 @@ ideas = {
 				artillery = 0.1
 			}
 		}
-
 	}
 
 #### Heavy Equipment Manufacturer ####
 	tank_manufacturer = {
 		designer = yes
-
 
 		bdz = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea bdz" }
@@ -1874,8 +1875,6 @@ ideas = {
 				air_equipment = 0.1
 			}
 		}
-
 	}
-
 }
 

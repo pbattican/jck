@@ -126,6 +126,13 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ott.0 FROM = [From.GetName]" }
 	title = ott.0.t
 
+	trigger = { #Avoidance for backup Lybia
+		NOT = {
+			tag = LBA
+			is_subject = yes
+		}
+	}
+
 	desc = {
 		trigger = {
 			NOT = {
@@ -174,23 +181,16 @@ country_event = {
 
 	option = {
 		name = ott.1.a
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		country_event = ott.2
 	}
 	option = {
 		name = ott.1.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		country_event = ott.5
 	}
 	option = {
 		name = ott.1.c
-		ai_chance = {
-			base = 100
-		}
 	}
 }
 
@@ -206,9 +206,6 @@ country_event = {
 
 	option = {
 		name = ott.2.a
-		ai_chance = {
-			base = 100
-		}
 		country_event = ott.3
 	}
 }
@@ -225,9 +222,6 @@ country_event = {
 
 	option = {
 		name = ott.3.a
-		ai_chance = {
-			base = 100
-		}
 		country_event = ott.4
 	}
 }
@@ -244,9 +238,6 @@ country_event = {
 
 	option = {
 		name = ott.4.a
-		ai_chance = {
-			base = 100
-		}
 		country_event = ott.5
 	}
 }
@@ -263,9 +254,6 @@ country_event = {
 
 	option = {
 		name = ott.4.a
-		ai_chance = {
-			base = 100
-		}
 	}
 }
 
@@ -281,16 +269,16 @@ country_event = {	#Education debate in the Meclis-i Mebusân
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottpol.1 FROM = [From.GetName]" }
 	title = ottpol.1.t
 	desc = ottpol.1.d
-
 	picture = GFX_OTT_Speech_Kemal
+
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	is_triggered_only = yes
 
 	option = {
 		name = ottpol.1.a
-		ai_chance = {
-			base = 100
-		}
 		add_political_power = 30
 		country_event = { id = ottpol.2 days = 20 }
 	}
@@ -301,16 +289,16 @@ country_event = {	#Medreses fight back against the OHF
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottpol.2 FROM = [From.GetName]" }
 	title = ottpol.2.t
 	desc = ottpol.2.d
-
 	picture = GFX_OTT_Kemal_Teaching
+
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	is_triggered_only = yes
 
 	option = {
 		name = ottpol.2.a
-		ai_chance = {
-			base = 100
-		}
 		add_popularity = {
 			ideology = social_conservative
 			popularity = 0.03
@@ -324,8 +312,11 @@ country_event = {	#Vote on the Education Decree
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottpol.3 FROM = [From.GetName]" }
 	title = ottpol.3.t
 	desc = ottpol.3.d
-
 	picture = GFX_OTT_Desk_Kemal
+
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	is_triggered_only = yes
 
@@ -337,16 +328,16 @@ country_event = {	#Vote on the Education Decree
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCLIB
+						rule = OTT_path
+						option = OTT_PATH_SOCLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCCON
+						rule = OTT_path
+						option = OTT_PATH_SOCCON
 					}
 				}
 			}
@@ -364,28 +355,28 @@ country_event = {	#Vote on the Education Decree
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_KEMAL
+					rule = OTT_path
+					option = OTT_PATH_KEMAL
 				}
 			}
 			modifier = {
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_PATAUT
+						rule = OTT_path
+						option = OTT_PATH_PATAUT
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_AUTDEM
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_AUTDEM
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_NATPOP
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_NATPOP
 					}
 				}
 			}
@@ -411,9 +402,6 @@ country_event = {	#The Grand Vizier speaks to the International Press
 
 	option = {
 		name = ottpol.4.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = 0.03
 	}
 }
@@ -430,9 +418,6 @@ country_event = {	#Coeducation and Unification Act fails
 
 	option = {
 		name = ottpol.5.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.10
 		set_country_flag = reforms_blocked
 		hidden_effect = {
@@ -454,9 +439,6 @@ country_event = {	#Committee for Judicial Reform
 
 	option = {
 		name = ottpol.6.a
-		ai_chance = {
-			base = 100
-		}
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.03
@@ -492,16 +474,16 @@ country_event = {	#Basis of the reformed code
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCLIB
+						rule = OTT_path
+						option = OTT_PATH_SOCLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCCON
+						rule = OTT_path
+						option = OTT_PATH_SOCCON
 					}
 				}
 			}
@@ -519,16 +501,16 @@ country_event = {	#Basis of the reformed code
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCLIB
+						rule = OTT_path
+						option = OTT_PATH_SOCLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCCON
+						rule = OTT_path
+						option = OTT_PATH_SOCCON
 					}
 				}
 			}
@@ -565,16 +547,16 @@ country_event = {	#Women Rights
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCLIB
+						rule = OTT_path
+						option = OTT_PATH_SOCLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCCON
+						rule = OTT_path
+						option = OTT_PATH_SOCCON
 					}
 				}
 			}
@@ -592,28 +574,28 @@ country_event = {	#Women Rights
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_KEMAL
+					rule = OTT_path
+					option = OTT_PATH_KEMAL
 				}
 			}
 			modifier = {
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_PATAUT
+						rule = OTT_path
+						option = OTT_PATH_PATAUT
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_AUTDEM
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_AUTDEM
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_NATPOP
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_NATPOP
 					}
 				}
 			}
@@ -659,24 +641,24 @@ country_event = {	#Deadlock within the Meclis-i Mebusân
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_KEMAL
+						rule = OTT_path
+						option = OTT_PATH_KEMAL
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_PATAUT
+						rule = OTT_path
+						option = OTT_PATH_PATAUT
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_AUTDEM
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_AUTDEM
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_NATPOP
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_NATPOP
 					}
 				}
 			}
@@ -705,9 +687,6 @@ country_event = {	#Assassination of Rıza Tevfik Bey
 
 	option = {
 		name = ottpol.10.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.05
 	}
 }
@@ -730,16 +709,16 @@ country_event = {	#Sultan [OTT.GetLeader] reacts to the rising tensions
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCLIB
+						rule = OTT_path
+						option = OTT_PATH_SOCLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCCON
+						rule = OTT_path
+						option = OTT_PATH_SOCCON
 					}
 				}
 			}
@@ -756,24 +735,24 @@ country_event = {	#Sultan [OTT.GetLeader] reacts to the rising tensions
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_KEMAL
+						rule = OTT_path
+						option = OTT_PATH_KEMAL
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_PATAUT
+						rule = OTT_path
+						option = OTT_PATH_PATAUT
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_AUTDEM
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_AUTDEM
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_NATPOP
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_NATPOP
 					}
 				}
 			}
@@ -783,7 +762,7 @@ country_event = {	#Sultan [OTT.GetLeader] reacts to the rising tensions
 			ideology = authoritarian_democrat
 			popularity = -0.15
 		}
-		remove_ideas_with_trait = head_of_government
+		clear_sic_slot = yes
 		country_event = { id = ottpol.13 days = 5 }
 	}
 }
@@ -800,9 +779,6 @@ country_event = {	#The Education and Judicial Decrees are pushed through the Mec
 
 	option = {
 		name = ottpol.12.a
-		ai_chance = {
-			base = 100
-		}
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.05
@@ -829,36 +805,36 @@ country_event = {	#The New Grand Vizier
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_KEMAL
+						rule = OTT_path
+						option = OTT_PATH_KEMAL
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_PATAUT
+						rule = OTT_path
+						option = OTT_PATH_PATAUT
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_AUTDEM
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_AUTDEM
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_NATPOP
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_NATPOP
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCLIB
+						rule = OTT_path
+						option = OTT_PATH_SOCLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCCON
+						rule = OTT_path
+						option = OTT_PATH_SOCCON
 					}
 				}
 			}
@@ -868,7 +844,8 @@ country_event = {	#The New Grand Vizier
 			ideology = social_liberal
 			popularity = 0.10
 		}
-		add_ideas = TUR_Prens_Sabahaddin_Efendi_hog_sli
+		clear_sic_slot = yes
+		activate_advisor = TUR_sultanzade_mehmed_sabahaddin_sic
 		hidden_effect = {
 			country_event = { id = ottpol.14 days = 8 }
 		}
@@ -897,9 +874,6 @@ country_event = {	#Raid on the Offices of the Serbestî
 
 	option = {
 		name = ottpol.14.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.10
 		hidden_effect = {
 			country_event = { id = ottpol.15 hours = 6 }
@@ -919,9 +893,6 @@ country_event = {	#Constantinople Corps disobeys orders
 
 	option = {
 		name = ottpol.15.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.10
 		hidden_effect = {
 			country_event = { id = ottpol.16 hours = 2 }
@@ -941,21 +912,13 @@ country_event = {	#Raid on Dolmabahçe Palace
 
 	option = {
 		name = ottpol.16.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.20
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.2
 		}
-		remove_all_ministers = yes
-		add_ideas = {
-			TUR_Mustafa_Kemal_Pasa_hog_ade
-			TUR_Mustafa_Ismet_Pasa_for_ade
-			TUR_Mahmud_Celal_Pasa_eco_mli
-			TUR_Mustafa_Necati_Pasa_sec_ade
-		}
+		clear_sic_slot = yes
+		activate_advisor = TUR_mustafa_kemal_sic
 		custom_effect_tooltip = ott_elections
 		country_event = { id = ottpol.18 days = 30 }
 		hidden_effect = {
@@ -1010,16 +973,16 @@ country_event = {	#Elections of [GetYear]
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCLIB
+						rule = OTT_path
+						option = OTT_PATH_SOCLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCCON
+						rule = OTT_path
+						option = OTT_PATH_SOCCON
 					}
 				}
 			}
@@ -1044,16 +1007,16 @@ country_event = {	#Elections of [GetYear]
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCLIB
+						rule = OTT_path
+						option = OTT_PATH_SOCLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCCON
+						rule = OTT_path
+						option = OTT_PATH_SOCCON
 					}
 				}
 			}
@@ -1081,24 +1044,24 @@ country_event = {	#Elections of [GetYear]
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_KEMAL
+						rule = OTT_path
+						option = OTT_PATH_KEMAL
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_PATAUT
+						rule = OTT_path
+						option = OTT_PATH_PATAUT
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_AUTDEM
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_AUTDEM
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_NATPOP
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_NATPOP
 					}
 				}
 			}
@@ -1137,11 +1100,9 @@ country_event = {	#Mustafa Kemal is reappointed Grand Vizier
 
 	option = {
 		name = ottpol.19.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = 0.05
-		add_ideas = TUR_Mustafa_Kemal_Pasa_hog_ade
+		clear_sic_slot = yes
+		activate_advisor = TUR_mustafa_kemal_sic
 	}
 }
 
@@ -1183,32 +1144,32 @@ country_event = {	#Status of the Alīye-i Emniyet Hizmeti
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCLIB
+						rule = OTT_path
+						option = OTT_PATH_SOCLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCCON
+						rule = OTT_path
+						option = OTT_PATH_SOCCON
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_PATAUT
+						rule = OTT_path
+						option = OTT_PATH_PATAUT
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_AUTDEM
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_AUTDEM
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_NATPOP
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_NATPOP
 					}
 				}
 			}
@@ -1232,8 +1193,8 @@ country_event = {	#Status of the Alīye-i Emniyet Hizmeti
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_KEMAL
+					rule = OTT_path
+					option = OTT_PATH_KEMAL
 				}
 			}
 		}
@@ -1266,32 +1227,32 @@ country_event = {	#Conspiracy against the Grand Vizier
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCLIB
+						rule = OTT_path
+						option = OTT_PATH_SOCLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_SOCCON
+						rule = OTT_path
+						option = OTT_PATH_SOCCON
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_PATAUT
+						rule = OTT_path
+						option = OTT_PATH_PATAUT
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_AUTDEM
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_AUTDEM
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_NATPOP
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_NATPOP
 					}
 				}
 			}
@@ -1307,8 +1268,8 @@ country_event = {	#Conspiracy against the Grand Vizier
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_KEMAL
+					rule = OTT_path
+					option = OTT_PATH_KEMAL
 				}
 			}
 		}
@@ -1334,9 +1295,6 @@ country_event = {	#Assassination Attempt Thwarted
 
 	option = {
 		name = ottpol.23.a
-		ai_chance = {
-			base = 100
-		}
 		add_political_power = 100
 		country_event = { id = ottpol.24 hours = 10 }
 	}
@@ -1358,9 +1316,6 @@ country_event = {	#Maintenance of Public Order Law
 
 	option = {
 		name = ottpol.24.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.15
 		country_event = { id = ottpol.25 days = 3 }
 		complete_national_focus = OTT_Maintenance_of_Order_Law
@@ -1385,9 +1340,6 @@ country_event = {	#Tribunals of Progress opened
 
 	option = {
 		name = ottpol.25.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = 0.05
 		country_event = { id = ottpol.26 days = 3 }
 		complete_national_focus = OTT_Tribunals_of_Progress
@@ -1514,8 +1466,8 @@ country_event = {	#Tribunal of Progress: Bureaucracy
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_KEMAL
+					rule = OTT_path
+					option = OTT_PATH_KEMAL
 				}
 			}
 		}
@@ -1545,41 +1497,11 @@ country_event = {	#Ban on Political Parties
 
 	option = {
 		name = ottpol.29.a
-		ai_chance = {
-			base = 100
-		}
 		every_owned_state = {
 			ott_increase_revolt_risk = yes
 		}
 		complete_national_focus = OTT_Single_Party_Dictatorship
-		remove_all_ministers = yes
-		if = {
-			limit = { has_country_flag = Mustafa_Kemal_Pasa_dead }
-			add_ideas = {
-				TUR_Mustafa_Ismet_Pasa_hog_ade
-				TUR_Mehmed_Suekrue_Pasa_for_ade
-				TUR_Mustafa_Seref_Pasa_eco_ade
-				TUR_Kazim_Fikri_Pasa_sec_ade
-			}
-		}
-		else = {
-			add_ideas = {
-				TUR_Mustafa_Kemal_Pasa_hog_ade
-				TUR_Mustafa_Ismet_Pasa_for_ade
-				TUR_Mustafa_Seref_Pasa_eco_ade
-				TUR_Kazim_Fikri_Pasa_sec_ade
-			}
-		}
-		hidden_effect = {
-			random_country = {
-				limit = {
-					NOT = {
-						tag = OTT
-					}
-				}
-				news_event = worldnews.433
-			}
-		}
+		hidden_effect = { news_event = worldnews.433 }
 	}
 }
 
@@ -1599,9 +1521,6 @@ country_event = {	#Moderates leave the OHF
 
 	option = {
 		name = ottpol.30.a
-		ai_chance = {
-			base = 100
-		}
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.15
@@ -1631,9 +1550,6 @@ country_event = {	#[GetYear] Emergency Elections
 
 	option = {
 		name = ottpol.31.b
-		ai_chance = {
-			base = 100
-		}
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.30
@@ -1665,7 +1581,6 @@ country_event = {	#A Sunny Day in Izmir
 	option = {
 		name = ottpol.32.a
 		add_stability = -0.30
-		set_country_flag = Mustafa_Kemal_Pasa_dead
 		hidden_effect = {
 			country_event = { id = ottpol.33 days = 3 }
 		}
@@ -1693,13 +1608,8 @@ country_event = {	#Bayar Pasha assumes emergency control of the OHF
 		add_stability = 0.10
 		hidden_effect = {
 			country_event = { id = ottpol.34 days = 7 }
-			remove_all_ministers = yes
-			add_ideas = {
-				TUR_Mustafa_Ismet_Pasa_hog_ade
-				TUR_Hueseyin_Numan_Pasa_for_ade
-				TUR_Mehmed_Sakir_Pasa_eco_ade
-				TUR_Mustafa_Fevzi_Pasa_sec_pau
-			}
+			clear_sic_slot = yes
+			activate_advisor = TUR_mahmud_celaleddin_bayar_sic
 		}
 	}
 }
@@ -1723,17 +1633,9 @@ country_event = {	#Death of Kemal
 	option = {
 		name = ottpol.34.a
 		retire_character = TUR_mustafa_kemal
-		set_country_flag = Mustafa_Kemal_Pasa_dead
 		hidden_effect = {
 			country_event = { id = ottpol.35 days = 7 }
-			random_country = {
-				limit = {
-					NOT = {
-						tag = OTT
-					}
-				}
-				news_event = worldnews.434
-			}
+			news_event = worldnews.434
 		}
 	}
 }
@@ -1838,7 +1740,8 @@ country_event = {	#Divided Loyalties in the Army
 
 	option = {
 		name = ottpol.38.a
-		decrease_ruling_party_popularity_by_5 = yes
+		set_temp_variable = { ideology_change_var = -0.05 }
+		change_ruling_party_popularity = yes
 		add_stability = -0.05
 		hidden_effect = {
 			country_event = { id = ottpol.39 days = 6 }
@@ -1870,20 +1773,20 @@ country_event = {	#Fevzi Pasha announces ambitions
 				factor = 0
 				OR = {
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_PATAUT
+						rule = OTT_path
+						option = OTT_PATH_PATAUT
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_MARLIB
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_MARLIB
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_AUTDEM
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_AUTDEM
 					}
 					has_game_rule = {
-						rule = OTT_paths
-						option = OTT_PATHS_ENDEAVOUR_NATPOP
+						rule = OTT_path
+						option = OTT_PATH_ENDEAVOUR_NATPOP
 					}
 				}
 			}
@@ -1916,9 +1819,6 @@ country_event = {	#Ottoman Elections of [GetYear]
 
 	option = {
 		name = ottpol.40.b
-		ai_chance = {
-			base = 100
-		}
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.30
@@ -1944,14 +1844,11 @@ country_event = {	#Military launches Coup
 
 	option = {
 		name = ottpol.41.a
-		set_party_name = {
-			ideology = paternal_autocrat
-			long_name = "Military Government"
-			name = "Military Government"
-		}
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
+			name = TUR_military_government
+			long_name = TUR_military_government_long
 		}
 		end_coalition = yes
 		add_popularity = {
@@ -1961,16 +1858,10 @@ country_event = {	#Military launches Coup
 		hidden_effect = {
 			country_event = { id = ottfev.1 days = 3 }
 			country_event = { id = ottfev.6 days = 14 }
-			random_country = {
-				limit = {
-					NOT = {
-						tag = OTT
-					}
-				}
-				news_event = worldnews.435
-			}
+			news_event = worldnews.435
 		}
 		clr_country_flag = EGY_CONQ
+		clr_country_flag = SUD_CONQ
 		clr_country_flag = ARM_CONQ
 		clr_country_flag = LBA_CONQ
 		clr_country_flag = YEM_CONQ
@@ -1978,13 +1869,8 @@ country_event = {	#Military launches Coup
 		clr_country_flag = HEJ_CONQ
 		load_focus_tree = ottoman_fevzi_focus
 		complete_national_focus = OTT_State_of_Emergency
-		remove_all_ministers = yes
-		add_ideas = {
-			TUR_Mustafa_Fevzi_Pasa_hog_pau
-			TUR_Fahrettin_Pasa_for_pau
-			TUR_Sirri_Bey_eco_ade
-			TUR_Mehmed_Recep_Pasa_sec_pau
-		}
+		clear_sic_slot = yes
+		activate_advisor = TUR_fevzi_cakmak_sic
 	}
 }
 
@@ -2007,9 +1893,6 @@ country_event = {	#Turkish Language Committee
 
 	option = {
 		name = ottkem.1.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.10
 		custom_effect_tooltip = ott_language_reformed
 		set_country_flag = ott_language_reformed_flag
@@ -2327,28 +2210,17 @@ country_event = {	#Sublime Committee for Constitution
 
 	desc = {
 		text = ottkem.12.d.kemal
-		trigger = { has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade }
+		trigger = { OTT_kemal_is_vizier = yes }
 	}
 	desc = {
 		text = ottkem.12.d.ismet
-		trigger = { NOT = { has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade } }
+		trigger = { OTT_kemal_is_vizier = no }
 	}
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	picture = GFX_OTT_Ismet_Celal
-
-	immediate = {
-		set_variable = {
-			var = plur
-			value = 0
-		}
-		set_variable = {
-			var = auth
-			value = 0
-		}
-	}
 
 	option = {
 		name = ottkem.12.a
@@ -2563,7 +2435,8 @@ country_event = {	#Ottoman Constitution - Houses of Parliament
 		ai_chance = {
 			base = 20
 		}
-		increase_ruling_party_popularity_by_5 = yes
+		set_temp_variable = { ideology_change_var = 0.05 }
+		change_ruling_party_popularity = yes
 		hidden_effect = {
 			country_event = { id = ottkem.19 days = 2 }
 		}
@@ -2610,7 +2483,8 @@ country_event = {	#Ottoman Constitution - Right to Petition
 		ai_chance = {
 			base = 30
 		}
-		decrease_ruling_party_popularity_by_10 = yes
+		set_temp_variable = { ideology_change_var = -0.1 }
+		change_ruling_party_popularity = yes
 		679 = {
 			ott_decrease_revolt_risk = yes
 		}
@@ -2763,7 +2637,8 @@ country_event = {	#Ottoman Constitution - Women Rights
 		ai_chance = {
 			base = 30
 		}
-		decrease_ruling_party_popularity_by_5 = yes
+		set_temp_variable = { ideology_change_var = -0.05 }
+		change_ruling_party_popularity = yes
 		add_stability = -0.05
 		hidden_effect = {
 			country_event = { id = ottkem.21 days = 2 }
@@ -2785,9 +2660,6 @@ country_event = {	#Ottoman Constitution - Foreign Policy
 
 	option = {
 		name = ottkem.21.a
-		ai_chance = {
-			base = 100
-		}
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.05
@@ -3025,28 +2897,12 @@ country_event = {	#The New Constitution is Declared!
 		if = {
 			limit = { check_variable = { plur > auth } }
 			add_ideas = ott_pluralist_constitution
-			remove_all_ministers = yes
-			if = {
-				limit = { has_country_flag = Mustafa_Kemal_Pasa_dead }
-				add_ideas = {
-					TUR_Mustafa_Ismet_Pasa_hog_ade
-					TUR_Tevfik_Ruestue_Bey_for_ade
-					TUR_Sirri_Bey_eco_ade
-					TUR_Ahmed_Naci_Pasa_sec_ade
-				}
-			}
-			else = {
-				add_ideas = {
-					TUR_Mustafa_Kemal_Pasa_hog_ade
-					TUR_Mehmed_Suekrue_Pasa_for_ade
-					TUR_Mahmud_Celal_Pasa_eco_mli
-					TUR_Ali_Riza_Pasa_sec_ade
-				}
-			}
 		}
 		else = {
 			add_ideas = ott_authoritarian_constitution
 		}
+		clear_variable = plur
+		clear_variable = auth
 		complete_national_focus = OTT_Ottoman_Constitution
 	}
 }
@@ -3066,9 +2922,6 @@ country_event = {	#Mysticism in the Ottoman Empire
 
 	option = {
 		name = ottkem.27.a
-		ai_chance = {
-			base = 100
-		}
 		hidden_effect = {
 			country_event = { id = ottkem.28 days = 7 }
 		}
@@ -3648,13 +3501,15 @@ country_event = {	#Mustafa Kemal Hospitalised
 	is_triggered_only = yes
 
 	trigger = {
-		has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade
+		OTT_kemal_is_vizier = yes
 	}
 
 	option = {
 		name = ottkem.51.a
 		hidden_effect = {
 			country_event = { id = ottkem.52 days = 10 }
+			clear_sic_slot = yes
+			activate_advisor = TUR_ismet_resit_sic
 		}
 	}
 }
@@ -3670,33 +3525,12 @@ country_event = {	#Death of Kemal
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { has_country_flag = Mustafa_Kemal_Pasa_dead }
+		has_character = TUR_mustafa_kemal
 	}
 
 	option = {
 		name = ottkem.52.a
 		retire_character = TUR_mustafa_kemal
-		set_country_flag = Mustafa_Kemal_Pasa_dead
-		if = {
-			limit = {
-				OR = {
-					has_focus_tree = ottoman_centralising_focus
-					has_focus_tree = ottoman_fevzi_focus
-					has_focus_tree = ottoman_fevzi_coup_focus
-					has_focus_tree = ottoman_endeavour_focus
-				}
-			}
-			complete_national_focus = OTT_Reform_on_the_Homefront
-		}
-		if = {
-			limit = { has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade }
-			add_ideas = TUR_Mustafa_Ismet_Pasa_hog_ade
-		}
-		if = {
-			limit = { has_idea = TUR_Mustafa_Ismet_Pasa_for_ade }
-			hidden_effect = { remove_ideas_with_trait = foreign_minister }
-			add_ideas = TUR_Mehmed_Suekrue_Pasa_for_ade
-		}
 	}
 }
 
@@ -3717,45 +3551,9 @@ country_event = {	#Elections of [GetYear]
 
 	option = {
 		name = ottkem.53.a
-		remove_all_ministers = yes
-		if = {
-			limit = { has_idea = ott_pluralist_constitution }
-			if = {
-				limit = { has_country_flag = Mustafa_Kemal_Pasa_dead }
-				add_ideas = {
-					TUR_Mustafa_Ismet_Pasa_hog_ade
-					TUR_Mehmed_Suekrue_Pasa_for_ade
-					TUR_Zuehtue_Hilmi_Pasa_eco_mli
-					TUR_Ali_Riza_Pasa_sec_ade
-				}
-			}
-			else = {
-				add_ideas = {
-					TUR_Mustafa_Kemal_Pasa_hog_ade
-					TUR_Mehmed_Suekrue_Pasa_for_ade
-					TUR_Zuehtue_Hilmi_Pasa_eco_mli
-					TUR_Ali_Riza_Pasa_sec_ade
-				}
-			}
-		}
-		else = {
-			if = {
-				limit = { has_country_flag = Mustafa_Kemal_Pasa_dead }
-				add_ideas = {
-					TUR_Mustafa_Ismet_Pasa_hog_ade
-					TUR_Tevfik_Ruestue_Bey_for_ade
-					TUR_Sirri_Bey_eco_ade
-					TUR_Ahmed_Naci_Pasa_sec_ade
-				}
-			}
-			else = {
-				add_ideas = {
-					TUR_Mustafa_Kemal_Pasa_hog_ade
-					TUR_Tevfik_Ruestue_Bey_for_ade
-					TUR_Sirri_Bey_eco_ade
-					TUR_Ahmed_Naci_Pasa_sec_ade
-				}
-			}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.08
 		}
 	}
 }
@@ -3773,7 +3571,7 @@ country_event = {	#The Grand Vizier speaks
 
 	trigger = {
 		has_government = authoritarian_democrat
-		has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade
+		OTT_kemal_is_vizier = yes
 	}
 
 	option = {
@@ -3800,7 +3598,7 @@ country_event = {	#Kemalists close down HIF newspapers
 	trigger = {
 		has_war_with = BUL
 		has_government = authoritarian_democrat
-		has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade
+		OTT_kemal_is_vizier = yes
 	}
 
 	option = {
@@ -3836,7 +3634,7 @@ country_event = {	#The Grand Vizier travels to the front
 	trigger = {
 		has_war_with = BUL
 		has_government = authoritarian_democrat
-		has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade
+		OTT_kemal_is_vizier = yes
 	}
 
 	option = {
@@ -3866,7 +3664,7 @@ country_event = {	#Incorporation of Thrace
 		owns_state = 184
 		owns_state = 1089
 		NOT = { has_war_with = BUL }
-		has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade
+		OTT_kemal_is_vizier = yes
 	}
 
 	is_triggered_only = yes
@@ -3905,7 +3703,8 @@ country_event = {	#Unrest in Thrace
 		ai_chance = {
 			base = 30
 		}
-		decrease_ruling_party_popularity_by_5 = yes
+		set_temp_variable = { ideology_change_var = -0.05 }
+		change_ruling_party_popularity = yes
 	}
 	option = {
 		name = ottkem.64.b
@@ -4053,12 +3852,11 @@ country_event = {	#Yasin Al-Hashimi submits his resignation
 		name = ottfev.4.a
 		effect_tooltip = { retire_character = IRQ_yasin_al_hashimi }
 		hidden_effect = {
-			event_target:IRQ_yasin_al_hashimi_target = { set_nationality = IRQ }
 			IRQ = {
 				IRQ_yasin_al_hashimi = {
+					set_nationality = PREV
 					promote_character = yes
-					promote_leader = yes
-					remove_trait = { trait = recently_promoted }
+					promote_to_field_marshal = yes
 				}
 			}
 		}
@@ -4133,9 +3931,6 @@ country_event = {	#Maintenance of Public Order Law
 
 	option = {
 		name = ottfev.6.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.15
 		country_event = { id = ottfev.7 days = 3 }
 		complete_national_focus = OTT_Maintenance_of_Order_Law
@@ -4156,9 +3951,6 @@ country_event = {	#Tribunals of Progress opened
 
 	option = {
 		name = ottfev.7.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = 0.05
 		country_event = { id = ottfev.8 days = 3 }
 		complete_national_focus = OTT_Tribunals_of_Progress
@@ -4168,7 +3960,7 @@ country_event = {	#Tribunals of Progress opened
 country_event = {	#Tribunal of Progress: Military Command
 	id = ottfev.8
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfev.8 FROM = [From.GetName]" }
-	title =ottfev.8.t
+	title = ottfev.8.t
 	desc = ottfev.8.d
 
 	picture = GFX_OTT_Raid_Porte
@@ -4316,13 +4108,8 @@ country_event = {	#Elections of [GetYear]
 			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
 		}
 		load_focus_tree = ottoman_endeavour_focus
-		remove_all_ministers = yes
-		add_ideas = {
-			TUR_Mustafa_Ismet_Pasa_hog_ade
-			TUR_Ali_Adnan_Bey_for_mli
-			TUR_Mahmud_Celal_Pasa_eco_mli
-			TUR_Musa_Kazim_Karabekir_Pasa_sec_mli
-		}
+		clear_sic_slot = yes
+		activate_advisor = TUR_ismet_resit_sic
 		set_temp_variable = { coalition_partner_var = token:market_liberal }
 		add_to_coalition = yes
 		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
@@ -4349,13 +4136,13 @@ country_event = {	#Formation of the Çalışma Cephesi
 		add_stability = 0.05
 		set_party_name = {
 			ideology = authoritarian_democrat
-			long_name = "Çalışma Cephesi (Endeavour Front)"
-			name = "ÇC"
+			name = TUR_endeavour_front
+			long_name = TUR_endeavour_front_long
 		}
 		set_party_name = {
 			ideology = market_liberal
-			long_name = "Çalışma Cephesi (Endeavour Front)"
-			name = "ÇC"
+			name = TUR_endeavour_front
+			long_name = TUR_endeavour_front_long
 		}
 	}
 }
@@ -4370,11 +4157,13 @@ country_event = {	#The Ottoman Economy in [GetYear]: Aftermath of the Infamous D
 	immediate = { log = "[GetDateText]: [Root.GetName]: event otteco.1 FROM = [From.GetName]" }
 	title = otteco.1.t
 	desc = otteco.1.d
-
 	picture = GFX_OTT_Sublime_Porte1
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -4388,11 +4177,13 @@ country_event = {	#The Ottoman Economy in [GetYear]: An Era of Growth
 	immediate = { log = "[GetDateText]: [Root.GetName]: event otteco.2 FROM = [From.GetName]" }
 	title = otteco.2.t
 	desc = otteco.2.d
-
 	picture = GFX_OTT_Discussion_Celal
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -4405,11 +4196,13 @@ country_event = {	#Samsun Iktisat Kongresi
 	immediate = { log = "[GetDateText]: [Root.GetName]: event otteco.3 FROM = [From.GetName]" }
 	title = otteco.3.t
 	desc = otteco.3.d
-
 	picture = GFX_OTT_Rize1
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -4644,16 +4437,19 @@ country_event = {	#Antun Saadeh publishes 'The Genesis of Nations'
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsep.1 FROM = [From.GetName]" }
 	title = ottsep.1.t
 	desc = ottsep.1.d
+	picture = GFX_OTT_Antun_Saadeh
+
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
-
-	picture = GFX_OTT_Antun_Saadeh
 
 	option = {
 		name = ottsep.1.a
-		decrease_ruling_party_popularity_by_5 = yes
+		set_temp_variable = { ideology_change_var = -0.05 }
+		change_ruling_party_popularity = yes
 		553 = {
 			ott_increase_revolt_risk = yes
 		}
@@ -4668,12 +4464,14 @@ country_event = {	#Riots in Damascus
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsep.2 FROM = [From.GetName]" }
 	title = ottsep.2.t
 	desc = ottsep.2.d
+	picture = GFX_OTT_Damascus
+
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
-
-	picture = GFX_OTT_Damascus
 
 	option = {
 		name = ottsep.2.a
@@ -4688,12 +4486,14 @@ country_event = {	#Paramililtary wing of the SSNP
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsep.3 FROM = [From.GetName]" }
 	title = ottsep.3.t
 	desc = ottsep.3.d
+	picture = GFX_OTT_SSNP_protest
+
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
-
-	picture = GFX_OTT_SSNP_protest
 
 	option = {
 		name = ottsep.3.a
@@ -4706,12 +4506,14 @@ country_event = {	#Increased attacks in the Hejaz
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsep.4 FROM = [From.GetName]" }
 	title = ottsep.4.t
 	desc = ottsep.4.d
+	picture = GFX_LBA_Camel2
+
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
-
-	picture = GFX_LBA_Camel2
 
 	option = {
 		name = ottsep.4.a
@@ -4736,12 +4538,14 @@ country_event = {	#OPAD strengthens hold in the Mashriq
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsep.5 FROM = [From.GetName]" }
 	title = ottsep.5.t
 	desc = ottsep.5.d
+	picture = GFX_OTT_Ottoman_Revolution
+
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
-
-	picture = GFX_OTT_Ottoman_Revolution
 
 	option = {
 		name = ottsep.5.a
@@ -4757,12 +4561,14 @@ country_event = {	#Khalid Bakdash takes over the Arab Syndicalist Party
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsep.6 FROM = [From.GetName]" }
 	title = ottsep.6.t
 	desc = ottsep.6.d
+	picture = GFX_OTT_Syrian_Socialists
+
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
-
-	picture = GFX_OTT_Syrian_Socialists
 
 	option = {
 		name = ottsep.6.a
@@ -4779,8 +4585,11 @@ country_event = {	#Sharif Ali Haidar passes away
 	title = ottsep.7.t
 	desc = ottsep.7.d
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -4813,11 +4622,13 @@ country_event = {	#Education issues in Southern Iraq
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsep.8 FROM = [From.GetName]" }
 	title = ottsep.8.t
 	desc = ottsep.8.d
-
 	picture = GFX_OTT_Baghdad #Placeholder
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -4891,11 +4702,13 @@ country_event = {	#Increasing Social Inequality in Iraq
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsep.9 FROM = [From.GetName]" }
 	title = ottsep.9.t
 	desc = ottsep.9.d
-
 	picture = GFX_OTT_Marsh_Arabs #Placeholder
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -4910,8 +4723,11 @@ country_event = {	#Protest in Baghdad
 	title = ottsep.10.t
 	desc = ottsep.10.d
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -5118,10 +4934,10 @@ country_event = {	#Çubuk-1 Dam Completed in Anatolia
 	option = {
 		name = ottfla.10.a
 		add_tech_bonus = {
+			name = construction_tech_bonus
 			category = construction_tech
 			bonus = 0.5
 			uses = 1
-			name = "Damming Techniques"
 		}
 	}
 }
@@ -5153,16 +4969,31 @@ country_event = {	#The Empire Celebrates Eid-ul-Fitr
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfla.12 FROM = [From.GetName]" }
 	title = ottfla.12.t
 	desc = ottfla.12.d
+
+	trigger = {
+		NOT = {
+			tag = LBA
+			is_subject = no
+		}
+	}
+
 	picture = GFX_OTT_Eid_Al_Fitr
 
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			country_event = { id = ottfla.12 days = 354 }
+			if = {
+				limit = { tag = LBA }
+				country_event = { id = ott.0 days = 354 }
+			}
+		}
+	}
+
 	option = {
 		name = ottfla.12.a
 		add_political_power = 10
-		hidden_effect = {
-			country_event = { id = ottfla.12 days = 355 }
-		}
 	}
 }
 
@@ -5467,7 +5298,7 @@ country_event = {	#Trouble in Fezzan
 					amount = -25
 					occupier = OTT
 					days = 250
-					tooltip = "Increased Ottoman Garrisons"
+					tooltip = OTT_resistance_garrisons
 				}
 			}
 		}
@@ -5714,14 +5545,7 @@ country_event = {	#Sheikh Saeed bin Maktoum Disbands Dubai Majlis
 	option = {
 		name = ottsep.19.a
 		if = {
-			limit = {
-				OR = {
-					has_idea = TUR_Mustafa_Ismet_Pasa_hog_ade
-					has_idea = TUR_Mustafa_Kemal_Pasa_hog_ade
-					has_idea = TUR_Mustafa_Fevzi_Pasa_hog_pau
-					has_country_flag = centralist_DF
-				}
-			}
+			limit = { OTT_has_centralist_government = yes }
 			custom_effect_tooltip = ott_decrease_hej_int_5
 		}
 		add_to_variable = {
@@ -6115,10 +5939,6 @@ country_event = {	#Iran Abandons Musandam Peninsula
 
 	is_triggered_only = yes
 
-	immediate = {
-		clr_country_flag = HORMUZ_BLOCKED_FOR_COUNTRY
-	}
-
 	option = {
 		name = ottsep.32.a
 		trigger = {
@@ -6187,7 +6007,6 @@ country_event = {	#Invasion of Khasab (PER)
 		transfer_state = 347
 		OTT = {
 			country_event = { id = ottsep.30 days = 3 }
-			set_country_flag = HORMUZ_BLOCKED_FOR_COUNTRY
 		}
 	}
 }
@@ -6445,7 +6264,7 @@ country_event = { #Ottomans wishes to join FROM's faction
 
 	option = {
 		name = ottfor.8.b
-		trigger = { is_ai = no }
+		ai_chance = { base = 0 }
 		FROM = { country_event = ottfor.10 }
 	}
 }
@@ -6480,7 +6299,6 @@ country_event = { #FROM Refuses
 		}
 	}
 }
-
 
 # Deterence
 country_event = {	#Balkan Military Accords - Ottoman Event
@@ -6605,36 +6423,36 @@ country_event = {	#Balkan Military Accords - Somebody Leaves
 
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			FROM = {
-				diplomatic_relation = {
-					country = ROOT
-					relation = non_aggression_pact
-					active = no
-				}
-			}
-		}
-	}
-
 	option = {
 		name = ottfor.161.a
 		ai_chance = {
-			base = 10
+			base = 20
 		}
-		add_stability = 0.02
+		add_stability = 0.05
+		effect_tooltip = {
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+				active = no
+			}
+		}
 	}
 	option = {
 		name = ottfor.161.b
 		ai_chance = {
-			base = 90
+			base = 80
 		}
 		remove_ideas = ott_balkan_military_accords
 		every_country = {
-			limit = {
-				has_idea = ott_balkan_military_accords
-			}
+			limit = { has_idea = ott_balkan_military_accords }
 			country_event = ottfor.161
+		}
+		effect_tooltip = {
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+				active = no
+			}
 		}
 	}
 }
@@ -6682,12 +6500,12 @@ country_event = {	#Istanbul Pact - Invite
 				FROM = { tag = MOR }
 				OR = {
 					has_game_rule = {
-						rule = MOR_foreign_policy
-						option = MOR_FOREIGN_POLICY_ENTENTE
+						rule = MOR_forpol
+						option = MOR_FORPOL_ENTENTE
 					}
 					has_game_rule = {
-						rule = MOR_foreign_policy
-						option = MOR_FOREIGN_POLICY_CAIRO
+						rule = MOR_forpol
+						option = MOR_FORPOL_CAIRO
 					}
 				}
 			}
@@ -6727,12 +6545,12 @@ country_event = {	#Istanbul Pact - Invite
 				FROM = { tag = MOR }
 				OR = {
 					has_game_rule = {
-						rule = MOR_foreign_policy
-						option = MOR_FOREIGN_POLICY_ENTENTE
+						rule = MOR_forpol
+						option = MOR_FORPOL_ENTENTE
 					}
 					has_game_rule = {
-						rule = MOR_foreign_policy
-						option = MOR_FOREIGN_POLICY_CAIRO
+						rule = MOR_forpol
+						option = MOR_FORPOL_CAIRO
 					}
 				}
 			}
@@ -6835,7 +6653,10 @@ country_event = {	#Sarajevo Accords
 			base = 20
 			modifier = {
 				factor = 0
-				OTT = { is_ai = no }
+				OR = {
+					OTT = { is_ai = no }
+					has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_AUS }
+				}
 			}
 		}
 		country_event = { id = ottfor.24 days = 2 }
@@ -6888,7 +6709,6 @@ country_event = {	#An Alliance of Convenience
 					is_subject = no
 				}
 				set_global_flag = TEMPORARY_DISABLED_FACTION_POPUP
-				hidden_effect = { leave_faction = yes }
 				ROOT = { add_to_faction = PREV }
 			}
 			add_to_faction = AUS
@@ -7014,17 +6834,6 @@ country_event = {	#Sublime Porte requests entry to the Reichspakt
 
 	option = {
 		name = ottfor.27.a
-		ai_chance = {
-			base = 100
-		}
-		hidden_effect = {
-			FROM = {
-				if = {
-					limit = { is_faction_leader = yes }
-					dismantle_faction = yes
-				}
-			}
-		}
 		add_to_faction = FROM
 	}
 	option = {
@@ -7052,9 +6861,6 @@ country_event = {	#Offer rebuked
 
 	option = {
 		name = ottfor.28.a
-		ai_chance = {
-			base = 100
-		}
 		add_political_power = -50
 	}
 }
@@ -7073,17 +6879,6 @@ country_event = {	#Sublime Porte requests entry to the Entente
 
 	option = {
 		name = ottfor.29.a
-		ai_chance = {
-			base = 100
-		}
-		hidden_effect = {
-			FROM = {
-				if = {
-					limit = { is_faction_leader = yes }
-					dismantle_faction = yes
-				}
-			}
-		}
 		add_to_faction = FROM
 	}
 	option = {
@@ -7111,17 +6906,6 @@ country_event = {	#Sublime Porte requests entry to the Co-prosperity Sphere
 
 	option = {
 		name = ottfor.291.a
-		ai_chance = {
-			base = 100
-		}
-		hidden_effect = {
-			FROM = {
-				if = {
-					limit = { is_faction_leader = yes }
-					dismantle_faction = yes
-				}
-			}
-		}
 		add_to_faction = FROM
 	}
 	option = {
@@ -7197,9 +6981,6 @@ country_event = {	#The Baku Conference
 
 	option = {
 		name = ottfor.31.a
-		ai_chance = {
-			base = 100
-		}
 		OTT = {
 			country_event = ottfor.32
 		}
@@ -7241,7 +7022,28 @@ country_event = {	#The Baku Conference succes
 				}
 			}
 		}
-		puppet = AZR
+		if = {
+			limit = { AZR = { is_in_faction_with = FROM } }
+			AZR = {
+				if = {
+					limit = { is_subject = yes }
+					overlord = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_free
+						}
+					}
+				}
+				leave_faction = yes
+				get_current_government_type = yes
+			}
+			set_autonomy = {
+				target = AZR
+				autonomy_state = autonomy_free
+				end_wars = no
+			}
+			AZR = { restore_previous_government_type = yes }
+		}
 	}
 }
 
@@ -7358,15 +7160,11 @@ country_event = {	#Ottomans offer 'protection' from the Saudi threat
 		}
 		OTT = {
 			give_guarantee = OMA
-			country_event = { id = ottfor.36 days = 2 }
 			save_event_target_as = OMA_guarantor
-		}
-		SAU = {
-			hidden_effect = { activate_mission = SAU_OMA_Whitepeace }
-			country_event = ottfor.410
+			country_event = { id = ottfor.36 days = 2 }
 		}
 		activate_mission = OMA_SAU_Whitepeace
-		activate_targeted_decision = { target = OTT decision = OMA_Request_Urgent_Intervention }
+		SAU = { country_event = ottfor.410 }
 	}
 
 	option = {
@@ -7490,13 +7288,12 @@ country_event = {	#The Raj comes to our aid
 			amount = 5000
 			producer = RAJ
 		}
-		FROM = { save_event_target_as = OMA_guarantor }
-		SAU = {
-			hidden_effect = { activate_mission = SAU_OMA_Whitepeace }
-			country_event = ottfor.410
+		FROM = {
+			save_event_target_as = OMA_guarantor
+			effect_tooltip = { give_guarantee = ROOT }
 		}
 		activate_mission = OMA_SAU_Whitepeace
-		activate_targeted_decision = { target = RAJ decision = OMA_Request_Urgent_Intervention }
+		SAU = { country_event = ottfor.410 }
 	}
 }
 
@@ -7521,31 +7318,18 @@ country_event = {	#The Raj refrains from intervening
 		trigger = {
 			NOT = { has_event_target = OTT_abandoned_oman }
 		}
-		ai_chance = {
-			base = 100
-		}
 		add_war_support = -0.1
 		OTT = {
 			give_guarantee = OMA
-			country_event = { id = ottfor.36 days = 2 }
 			save_event_target_as = OMA_guarantor
-		}
-		SAU = {
-			hidden_effect = { activate_mission = SAU_OMA_Whitepeace }
-			country_event = ottfor.410
+			country_event = { id = ottfor.36 days = 2 }
 		}
 		activate_mission = OMA_SAU_Whitepeace
-		activate_targeted_decision = { target = OTT decision = OMA_Request_Urgent_Intervention }
+		SAU = { country_event = ottfor.410 }
 	}
 	option = {
 		name = ottfor.40.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 1
-				has_event_target = OTT_abandoned_oman
-			}
-		}
+		ai_chance = { base = 0 }
 		add_war_support = -0.1
 	}
 }
@@ -7571,10 +7355,7 @@ country_event = {	#Fall of the Imamate
 	option = {
 		name = ottfor.41.a
 		trigger = { tag = OTT }
-		ai_chance = {
-			base = 100
-		}
-		SAU = { country_event = { id = ottfor.411 days = 4 } }
+		SAU = { country_event = { id = ottfor.411 days = 2 } }
 		hidden_effect = {
 			YEM = { country_event = { id = ottfor.415 days = 2 } }
 		}
@@ -7583,10 +7364,7 @@ country_event = {	#Fall of the Imamate
 	option = {
 		name = ottfor.41.b
 		trigger = { NOT = { tag = OTT } }
-		ai_chance = {
-			base = 100
-		}
-		SAU = { country_event = { id = ottfor.411 days = 4 } }
+		SAU = { country_event = { id = ottfor.411 days = 2 } }
 		hidden_effect = {
 			YEM = { country_event = { id = ottfor.415 days = 2 } }
 		}
@@ -7618,9 +7396,8 @@ country_event = { #FROM Protects Muscat
 
 	is_triggered_only = yes
 
-	trigger = {
-		has_war_with = OMA
-		can_declare_war_on = FROM
+	immediate = {
+		hidden_effect = { activate_mission = SAU_OMA_Whitepeace }
 	}
 
 	option = {
@@ -7645,25 +7422,14 @@ country_event = { #FROM Intervenes
 
 	option = {
 		name = ottfor.411.a
-		ai_chance = {
-			base = 100
-		}
 		transfer_state = 859 #Oman
-		OMA = {
-			white_peace_with_ROOT = yes
-			hidden_effect = {
-				remove_targeted_decision = { target = OTT decision = OMA_Request_Urgent_Intervention }
-				remove_targeted_decision = { target = RAJ decision = OMA_Request_Urgent_Intervention }
-			}
-		}
 		remove_state_claim = 294 #Muscat
+		OMA = { white_peace_with_ROOT = yes }
 	}
 
 	option = {
 		name = ottfor.411.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		FROM = { country_event = { id = ottfor.412 days = 1 } }
 	}
 }
@@ -7684,9 +7450,6 @@ country_event = { #Ibn Saud Refuses to Back Down
 
 	option = {
 		name = ottfor.412.a
-		ai_chance = {
-			base = 100
-		}
 		declare_war_on = {
 			target = FROM
 			type = annex_everything
@@ -7848,9 +7611,6 @@ country_event = {	#The Ararat Debacle
 
 	option = {
 		name = ottfor.43.a
-		ai_chance = {
-			base = 100
-		}
 	}
 }
 
@@ -8131,90 +7891,41 @@ country_event = {	#Russian Expansionism in the Caucasus
 	is_triggered_only = yes
 
 	option = {
-		name = ottfor.51.a
+		name = ottfor.51.a	# OTT proposes NAP
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_RUS
+					}
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_FAILURE
+					}
+				}
+			}
+		}
 		RUS = {
 			country_event = ottfor.55
 		}
 	}
 	option = {
-		name = ottfor.51.b
-		RUS = {
-			country_event = ottfor.53
-		}
-	}
-}
-
-country_event = {	#Russia Demands the Return of Armenia
-	id = ottfor.52
-	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.52 FROM = [From.GetName]" }
-	title = ottfor.52.t
-	desc = ottfor.52.d
-	picture = GFX_report_event_soviet_soldiers_tank
-
-	is_triggered_only = yes
-
-	option = {
-		name = ottfor.52.a
+		name = ottfor.51.b	# RUS proposes NAP
 		ai_chance = {
-			base = 99
-			modifier = {
-				factor = 0.1
-				surrender_progress > 0.4
-			}
+			base = 50
 			modifier = {
 				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = OTT_forpol
-						option = OTT_FORPOL_AUSTRIA
-					}
-					has_game_rule = {
-						rule = OTT_forpol
-						option = OTT_FORPOL_ENTENTE
-					}
-					has_game_rule = {
-						rule = OTT_forpol
-						option = OTT_FORPOL_ISTANBUL_PACT
-					}
+				has_game_rule = {
+					rule = OTT_RUS_convention
+					option = OTT_RUS_CONVENTION_SUCCESS_OTT
 				}
 			}
 		}
-		if = {
-			limit = {
-				is_valid_peace_target = yes
-				NOT = { has_completed_focus = OTT_Policy_of_Deterence }
-				GER = { has_war_with = RUS }
-			}
-			if = {
-				limit = { is_faction_leader = yes }
-				dismantle_faction = yes
-			}
-			GER = {
-				add_to_faction = OTT
-			}
-		}
-		FROM = {
-			declare_war_on = {
-				target = OTT
-				type = annex_everything
-			}
-		}
-	}
-	option = {
-		name = ottfor.52.b
-		ai_chance = {
-			base = 1
-		}
-		every_owned_state = {
-			limit = {
-				OR = {
-					state = 230 #Armenia
-					state = 585 #Batumi
-					state = 1000 #Kars
-					state = 1001 #Lazistan
-				}
-			}
-			transfer_state_to = FROM
+		RUS = {
+			country_event = ottfor.53
 		}
 	}
 }
@@ -8236,23 +7947,110 @@ country_event = {	#A Deal with the Devil?
 	is_triggered_only = yes
 
 	option = {
-		name = ottfor.53.a
+		name = ottfor.53.a		# Yes
 		ai_chance = {
 			base = 25
 			modifier = {
 				factor = 4
-				has_completed_focus = RUS_Realpolitik
+				RUS_is_expansionist = no
+				NOT = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_FAILURE
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				RUS_is_expansionist = yes
+				RUS_is_empire = yes
+				NOT = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_OTT
+					}
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_RUS
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_FAILURE
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_GER
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_AUS
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_ENT
+					}
+				}
 			}
 		}
 		OTT = { country_event = { id = ottfor.54 days = 2 } }
 	}
 	option = {
-		name = ottfor.53.b
+		name = ottfor.53.b		# No
 		ai_chance = {
 			base = 25
 			modifier = {
 				factor = 4
-				has_completed_focus = RUS_Expansionism
+				RUS_is_expansionist = yes
+				NOT = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_OTT
+					}
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_RUS
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				RUS_is_expansionist = no
+				NOT = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_FAILURE
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_GER
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_AUS
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_ENT
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_OTT
+					}
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_RUS
+					}
+				}
 			}
 		}
 	}
@@ -8278,6 +8076,13 @@ country_event = {	#Russia Proposes a Non-Aggression Pact
 		name = ottfor.54.a
 		ai_chance = {
 			base = 100
+			modifier = {
+				add = -100
+				has_game_rule = {
+					rule = OTT_RUS_convention
+					option = OTT_RUS_CONVENTION_FAILURE
+				}
+			}
 		}
 		OTT = { country_event = { id = ottfor.56 days = 1 } }
 		RUS = { country_event = { id = ottfor.56 days = 1 } }
@@ -8286,6 +8091,13 @@ country_event = {	#Russia Proposes a Non-Aggression Pact
 		name = ottfor.54.b
 		ai_chance = {
 			base = 0
+			modifier = {
+				add = 100
+				has_game_rule = {
+					rule = OTT_RUS_convention
+					option = OTT_RUS_CONVENTION_FAILURE
+				}
+			}
 		}
 	}
 }
@@ -8306,25 +8118,124 @@ country_event = {	#Ottoman Empire Proposes a Non-Aggression Pact
 
 	is_triggered_only = yes
 
-	option = {
+	option = {			# yes
 		name = ottfor.55.a
 		ai_chance = {
 			base = 25
 			modifier = {
 				factor = 4
-				has_completed_focus = RUS_Realpolitik
+				RUS_is_expansionist = no
+				NOT = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_FAILURE
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_GER
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_AUS
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_ENT
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				RUS_is_expansionist = yes
+				RUS_is_empire = yes
+				NOT = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_OTT
+					}
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_RUS
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_FAILURE
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_GER
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_AUS
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_ENT
+					}
+				}
 			}
 		}
 		OTT = { country_event = { id = ottfor.56 days = 1 } }
 		RUS = { country_event = { id = ottfor.56 days = 1 } }
 	}
-	option = {
+	option = {			# no
 		name = ottfor.55.b
 		ai_chance = {
 			base = 25
 			modifier = {
 				factor = 4
-				has_completed_focus = RUS_Expansionism
+				RUS_is_expansionist = yes
+				NOT = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_OTT
+					}
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_RUS
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				RUS_is_expansionist = no
+				NOT = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_FAILURE
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_GER
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_AUS
+					}
+					has_game_rule = {
+						rule = OTT_forpol
+						option = OTT_FORPOL_ENT
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_OTT
+					}
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_RUS
+					}
+				}
 			}
 		}
 		OTT = { country_event = { id = ottfor.81 hours = 12 } }
@@ -8423,10 +8334,10 @@ country_event = {	#The Matter of Georgia
 	option = {
 		name = ottfor.57.a
 		ai_chance = {
-			base = 25
+			base = 100
 			modifier = {
-				factor = 4
-				has_completed_focus = RUS_Expansionism
+				factor = 0
+				RUS_is_expansionist = no
 			}
 		}
 		OTT = { country_event = { id = ottfor.58 days = 2 } }
@@ -8434,10 +8345,10 @@ country_event = {	#The Matter of Georgia
 	option = {
 		name = ottfor.57.b
 		ai_chance = {
-			base = 25
+			base = 100
 			modifier = {
-				factor = 4
-				has_completed_focus = RUS_Realpolitik
+				factor = 0
+				RUS_is_expansionist = yes
 			}
 		}
 		OTT = { country_event = { id = ottfor.59 days = 2 } }
@@ -8462,9 +8373,6 @@ country_event = {	#Russia Demands Georgian Annexation
 
 	option = {
 		name = ottfor.58.a
-		ai_chance = {
-			base = 100
-		}
 		set_global_flag = RUSSIAN_OTTOMAN_DEAL_GEO_ANNEX
 		RUS = { country_event = { id = ottfor.61 days = 1 } }
 	}
@@ -8495,9 +8403,6 @@ country_event = {	#Russia Demands Georgian Subjugation
 
 	option = {
 		name = ottfor.59.a
-		ai_chance = {
-			base = 100
-		}
 		set_global_flag = RUSSIAN_OTTOMAN_DEAL_GEO_PUPPET
 		RUS = { country_event = { id = ottfor.61 days = 1 } }
 	}
@@ -8549,10 +8454,10 @@ country_event = {	#The Status of Batumi
 	option = {
 		name = ottfor.61.a
 		ai_chance = {
-			base = 5
+			base = 100
 			modifier = {
-				factor = 20
-				has_completed_focus = RUS_Expansionism
+				factor = 0
+				RUS_is_expansionist = no
 			}
 		}
 		OTT = { country_event = { id = ottfor.62 days = 1 } }
@@ -8560,10 +8465,10 @@ country_event = {	#The Status of Batumi
 	option = {
 		name = ottfor.61.b
 		ai_chance = {
-			base = 25
+			base = 100
 			modifier = {
-				factor = 4
-				has_completed_focus = RUS_Realpolitik
+				factor = 0
+				RUS_is_expansionist = yes
 			}
 		}
 		if = {
@@ -8599,7 +8504,7 @@ country_event = {	#Russia Demands Batumi
 	is_triggered_only = yes
 
 	option = {
-		name = ottfor.62.a
+		name = ottfor.62.a				# Yes
 		ai_chance = {
 			base = 0
 			modifier = {
@@ -8609,6 +8514,19 @@ country_event = {	#Russia Demands Batumi
 			modifier = {
 				add = 50
 				surrender_progress > 0.4
+			}
+			modifier = {
+				add = 100
+				OR = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_OTT
+					}
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_RUS
+					}
+				}
 			}
 		}
 		set_global_flag = RUSSIAN_OTTOMAN_DEAL_BATUMI
@@ -8627,7 +8545,7 @@ country_event = {	#Russia Demands Batumi
 		}
 	}
 	option = {
-		name = ottfor.62.b
+		name = ottfor.62.b			# No
 		ai_chance = {
 			base = 100
 			modifier = {
@@ -8637,6 +8555,19 @@ country_event = {	#Russia Demands Batumi
 			modifier = {
 				add = -50
 				surrender_progress > 0.4
+			}
+			modifier = {
+				add = -100
+				OR = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_OTT
+					}
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_RUS
+					}
+				}
 			}
 		}
 		RUS = { country_event = { id = ottfor.60 days = 1 } }
@@ -8662,10 +8593,10 @@ country_event = {	#The Matter of Afghanistan
 	option = {
 		name = ottfor.63.a
 		ai_chance = {
-			base = 25
+			base = 100
 			modifier = {
-				factor = 4
-				has_completed_focus = RUS_Expansionism
+				factor = 0
+				RUS_is_expansionist = no
 			}
 		}
 		OTT = { country_event = { id = ottfor.64 days = 1 } }
@@ -8673,10 +8604,10 @@ country_event = {	#The Matter of Afghanistan
 	option = {
 		name = ottfor.63.b
 		ai_chance = {
-			base = 25
+			base = 100
 			modifier = {
-				factor = 4
-				has_completed_focus = RUS_Expansionism
+				factor = 0
+				RUS_is_expansionist = yes
 			}
 		}
 		OTT = { country_event = { id = ottfor.65 days = 1 } }
@@ -8745,17 +8676,29 @@ country_event = {	#The Future of Persia
 
 	is_triggered_only = yes
 
-	option = {
+	option = {		# Persia will be a buffer state
 		name = ottfor.66.a
 		ai_chance = {
 			base = 50
+			modifier = {
+				factor = 0
+				OR = {
+					has_authoritarian_government = yes
+					has_country_flag = centralist_DF
+				}
+			}
 		}
 		RUS = { country_event = { id = ottfor.67 days = 1 } }
 	}
-	option = {
+	option = {		# Split Persia between Ottomans and Russians
 		name = ottfor.66.b
 		ai_chance = {
 			base = 50
+			modifier = {
+				factor = 0
+				has_democratic_government = yes
+				NOT = { has_country_flag = centralist_DF }
+			}
 		}
 		RUS = { country_event = { id = ottfor.68 days = 1 } }
 	}
@@ -8780,7 +8723,24 @@ country_event = {	#The Ottomans Propose an Iranian Buffer State
 	option = {
 		name = ottfor.67.a
 		ai_chance = {
-			base = 50
+			base = 100
+			modifier = {
+				factor = 0
+				RUS_is_expansionist = yes
+				NOT = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_OTT
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = OTT_RUS_convention
+					option = OTT_RUS_CONVENTION_SUCCESS_RUS
+				}
+			}
 		}
 		set_global_flag = RUSSIAN_OTTOMAN_DEAL_PER_BUFFER
 		OTT = { country_event = { id = ottfor.71 days = 1 } }
@@ -8788,7 +8748,24 @@ country_event = {	#The Ottomans Propose an Iranian Buffer State
 	option = {
 		name = ottfor.67.b
 		ai_chance = {
-			base = 50
+			base = 100
+			modifier = {
+				factor = 0
+				RUS_is_expansionist = no
+				NOT = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_RUS
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = OTT_RUS_convention
+					option = OTT_RUS_CONVENTION_SUCCESS_OTT
+				}
+			}
 		}
 		OTT = { country_event = { id = ottfor.69 days = 1 } }
 	}
@@ -8819,9 +8796,6 @@ country_event = {	#The Ottomans Propose Splitting the Persian Empire
 
 	option = {
 		name = ottfor.68.a
-		ai_chance = {
-			base = 100
-		}
 		set_global_flag = RUSSIAN_OTTOMAN_DEAL_PER_SPLIT
 		OTT = { country_event = { id = ottfor.71 days = 1 } }
 	}
@@ -8852,9 +8826,6 @@ country_event = {	#The Russians Propose Splitting the Persian Empire
 
 	option = {
 		name = ottfor.69.a
-		ai_chance = {
-			base = 100
-		}
 		set_global_flag = RUSSIAN_OTTOMAN_DEAL_PER_SPLIT
 		OTT = { country_event = { id = ottfor.71 days = 1 } }
 	}
@@ -8956,7 +8927,17 @@ country_event = {	#The Ottomans Demand an Azeri Buffer State
 			base = 0
 			modifier = {
 				add = 50
-				has_completed_focus = RUS_Expansionism
+				RUS_is_expansionist = yes
+				NOT = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_OTT
+					}
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_RUS
+					}
+				}
 			}
 		}
 		OTT = { country_event = { id = ottfor.70 days = 1 } }
@@ -8983,6 +8964,13 @@ country_event = {	#The London Straits Convention
 		name = ottfor.73.a
 		ai_chance = {
 			base = 100
+			modifier = {
+				add = -100
+				has_game_rule = {
+					rule = OTT_RUS_convention
+					option = OTT_RUS_CONVENTION_SUCCESS_OTT
+				}
+			}
 		}
 		OTT = { country_event = { id = ottfor.74 days = 1 } }
 	}
@@ -8990,6 +8978,13 @@ country_event = {	#The London Straits Convention
 		name = ottfor.73.b
 		ai_chance = {
 			base = 0
+			modifier = {
+				add = 100
+				has_game_rule = {
+					rule = OTT_RUS_convention
+					option = OTT_RUS_CONVENTION_SUCCESS_OTT
+				}
+			}
 		}
 		country_event = { id = ottfor.75 days = 1 }
 	}
@@ -9013,9 +9008,6 @@ country_event = {	#Russia Demands Revision of the London Straits Convention
 
 	option = {
 		name = ottfor.74.a
-		ai_chance = {
-			base = 100
-		}
 		set_global_flag = RUSSIAN_OTTOMAN_DEAL_STRAITS
 		RUS = { country_event = { id = ottfor.75 days = 1 } }
 	}
@@ -9051,10 +9043,8 @@ country_event = {	#The Matter of Armenia
 		ai_chance = {
 			base = 0
 			modifier = {
-				add = 30
-				RUS = {
-					has_completed_focus = RUS_Expansionism
-				}
+				add = 50
+				RUS = { RUS_is_expansionist = yes }
 			}
 		}
 		OTT = { country_event = { id = ottfor.76 days = 1 } }
@@ -9062,7 +9052,15 @@ country_event = {	#The Matter of Armenia
 	option = {
 		name = ottfor.75.b
 		ai_chance = {
-			base = 70
+			base = 100
+			modifier = {
+				add = -100
+				RUS_is_expansionist = yes
+				has_game_rule = {
+					rule = OTT_RUS_convention
+					option = OTT_RUS_CONVENTION_SUCCESS_RUS
+				}
+			}
 		}
 		RUS = { country_event = { id = ottfor.77 days = 1 } }
 		OTT = { country_event = { id = ottfor.77 days = 1 } }
@@ -9085,7 +9083,7 @@ country_event = {	#Russia Demands the Liberation of Armenia
 
 	is_triggered_only = yes
 
-	option = {
+	option = {			# yes
 		name = ottfor.76.a
 		ai_chance = {
 			base = 0
@@ -9097,12 +9095,25 @@ country_event = {	#Russia Demands the Liberation of Armenia
 				add = 50
 				surrender_progress > 0.4
 			}
+			modifier = {
+				add = 100
+				OR = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_OTT
+					}
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_RUS
+					}
+				}
+			}
 		}
 		set_global_flag = RUSSIAN_OTTOMAN_DEAL_ARMENIA
 		RUS = { country_event = { id = ottfor.77 days = 1 } }
 		OTT = { country_event = { id = ottfor.77 days = 1 } }
 	}
-	option = {
+	option = {			# no
 		name = ottfor.76.b
 		ai_chance = {
 			base = 100
@@ -9113,6 +9124,19 @@ country_event = {	#Russia Demands the Liberation of Armenia
 			modifier = {
 				add = -50
 				surrender_progress > 0.4
+			}
+			modifier = {
+				add = -100
+				OR = {
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_OTT
+					}
+					has_game_rule = {
+						rule = OTT_RUS_convention
+						option = OTT_RUS_CONVENTION_SUCCESS_RUS
+					}
+				}
 			}
 		}
 		RUS = { country_event = { id = ottfor.60 days = 1 } }
@@ -9149,25 +9173,46 @@ country_event = {	#The Ratification of the Russo-Ottoman Convention
 				value = 200
 			}
 			add_ai_strategy = {
-				type = invade
+				type = conquer
 				id = "OTT"
-				value = -100
+				value = -200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = "AZR"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = conquer
+				id = "AZR"
+				value = -200
 			}
 			hidden_effect = {
 				country_event = { id = ottfor.7701 days = 3650 }
 			}
 		}
 		else = {
-			set_country_flag = RUS_OTT_AI_strategies
 			add_ai_strategy = {
 				type = befriend
 				id = "RUS"
 				value = 200
 			}
 			add_ai_strategy = {
-				type = invade
+				type = conquer
 				id = "RUS"
-				value = -100
+				value = -200
+			}
+			AZR = {
+				add_ai_strategy = {
+					type = befriend
+					id = "RUS"
+					value = 200
+				}
+				add_ai_strategy = {
+					type = conquer
+					id = "RUS"
+					value = -200
+				}
 			}
 		}
 	}
@@ -9228,9 +9273,9 @@ country_event = { #Clear RUS AI factors once Germany is dead or ten years have p
 			value = -200
 		}
 		add_ai_strategy = {
-			type = invade
+			type = conquer
 			id = "OTT"
-			value = 100
+			value = 200
 		}
 		if = {
 			limit = { has_variable = 266.ambition_area_@ROOT }
@@ -9243,16 +9288,27 @@ country_event = { #Clear RUS AI factors once Germany is dead or ten years have p
 			}
 		}
 		OTT = {
-			clr_country_flag = RUS_OTT_AI_strategies
 			add_ai_strategy = {
 				type = befriend
 				id = "RUS"
 				value = -200
 			}
 			add_ai_strategy = {
-				type = invade
+				type = conquer
 				id = "RUS"
-				value = 100
+				value = 200
+			}
+		}
+		AZR = {
+			add_ai_strategy = {
+				type = befriend
+				id = "RUS"
+				value = -200
+			}
+			add_ai_strategy = {
+				type = conquer
+				id = "RUS"
+				value = 200
 			}
 		}
 	}
@@ -9330,9 +9386,6 @@ country_event = {	#Russia Demands an End to Hostilities
 
 	option = {
 		name = ottfor.79.a
-		ai_chance = {
-			base = 100
-		}
 		OTT = {
 			white_peace_with_ROOT = yes
 		}
@@ -9374,9 +9427,6 @@ country_event = {	#The Russo-Ottoman Convention
 
 	option = {
 		name = ottfor.80.a
-		ai_chance = {
-			base = 100
-		}
 		add_ideas = OTT_russo_ottoman_convention
 		if = {
 			limit = { is_in_faction = yes }
@@ -9592,9 +9642,6 @@ country_event = {	#The Sublime Porte Invites Us to the Association of Muslim Nat
 
 	option = {
 		name = ottfor.84.a
-		ai_chance = {
-			base = 100
-		}
 		OTT = {
 			country_event = ottfor.85
 		}
@@ -9630,9 +9677,6 @@ country_event = {	#[FROM.GetName] Accepts Invitation
 
 	option = {
 		name = ottfor.85.a
-		ai_chance = {
-			base = 100
-		}
 	}
 }
 
@@ -9647,9 +9691,6 @@ country_event = {	#[FROM.GetName] Refuses Invitation
 
 	option = {
 		name = ottfor.86.a
-		ai_chance = {
-			base = 100
-		}
 	}
 }
 
@@ -9665,9 +9706,6 @@ country_event = {	#A Greco-Turkish Thaw?
 
 	option = {
 		name = ottfor.87.a
-		ai_chance = {
-			base = 100
-		}
 		GRE = { country_event = { id = ottfor.88 days = 5 } }
 	}
 	option = {
@@ -9782,9 +9820,6 @@ country_event = {	#Greece Accepts Our Proposal
 
 	option = {
 		name = ottfor.89.a
-		ai_chance = {
-			base = 100
-		}
 		GRE = {
 			if = {
 				limit = { 187 = { is_owned_by = OTT } }
@@ -9841,9 +9876,6 @@ country_event = {	#Greece Refuses Our Proposal
 
 	option = {
 		name = ottfor.90.a
-		ai_chance = {
-			base = 100
-		}
 
 	}
 }
@@ -9863,11 +9895,13 @@ country_event = {	#White peace with the Ottomans?
 		is_valid_peace_target = yes
 		OTT = { is_valid_peace_target = yes }
 		OR = {
+			229 = { is_owned_by_ROOT_or_ally = yes }
+			230 = { is_owned_by_ROOT_or_ally = yes }
+			231 = { is_owned_by_ROOT_or_ally = yes }
+		}
+		OR = {
 			surrender_progress > 0.30
 			AND = {
-				is_ally_with = 234.owner
-				is_ally_with = 235.owner
-				is_ally_with = 787.owner
 				234 = { is_controlled_by_ROOT_or_ally = no }
 				235 = { is_controlled_by_ROOT_or_ally = no }
 				787 = { is_controlled_by_ROOT_or_ally = no }
@@ -9879,9 +9913,6 @@ country_event = {	#White peace with the Ottomans?
 
 	option = {
 		name = ottfor.91.a
-		ai_chance = {
-			base = 100
-		}
 		OTT = { country_event = ottfor.92 }
 	}
 	option = {
@@ -9904,9 +9935,6 @@ country_event = {	#Russians offer whitepeace
 
 	option = {
 		name = ottfor.92.a
-		ai_chance = {
-			base = 100
-		}
 		every_enemy_country = {
 			limit = {
 				OR = {
@@ -9978,9 +10006,6 @@ country_event = {	#Ottoman Empire in Disarray!
 
 	option = {
 		name = ottfor.93.a
-		ai_chance = {
-			base = 100
-		}
 		declare_war_on = {
 			target = FROM
 			type = annex_everything
@@ -10025,7 +10050,6 @@ country_event = {	#The National Defence Organization lose
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottfor.95 FROM = [From.GetName]" }
 	title = ottfor.95.t
 	desc = ottfor.95.d
-
 
 	picture = GFX_report_event_generic_conference
 
@@ -10167,12 +10191,12 @@ country_event = {	#OHF loses the Elections of [GetYear]
 		country_event = { id = ottlib.2 days = 2 }
 		load_focus_tree = ottoman_sabahattin_focus
 		set_country_flag = EGY_CONQ
+		set_country_flag = SUD_CONQ
 		set_country_flag = ARM_CONQ
 		set_country_flag = LBA_CONQ
 		set_country_flag = YEM_CONQ
 		set_country_flag = ASIR_CONQ
 		set_country_flag = HEJ_CONQ
-		remove_all_ministers = yes
 		OTT_remove_kemalist_ideas = yes
 	}
 }
@@ -10241,12 +10265,8 @@ country_event = {	#Sultan [OTT.GetName] apppoints the next Grand Vizier
 		hidden_effect = { add_ideas = ott_parliament_idea }
 		OTT_calc_coalition_strength = yes
 		country_event = { id = ottsab.1 days = 5 }
-		add_ideas = {
-			TUR_Prens_Sabahaddin_Efendi_hog_sli
-			TUR_Hashim_al_Atassi_for_sco
-			TUR_Mustafa_Abduelhalik_Pasa_eco_mli
-			TUR_Agaoglu_Ahmed_Pasa_sec_sli
-		}
+		clear_sic_slot = yes
+		activate_advisor = TUR_sultanzade_mehmed_sabahaddin_sic
 		set_temp_variable = { coalition_partner_var = token:market_liberal }
 		add_to_coalition = yes
 		set_temp_variable = { coalition_partner_var = token:social_conservative }
@@ -10259,14 +10279,7 @@ country_event = {	#Sultan [OTT.GetName] apppoints the next Grand Vizier
 				add_manpower = 150000
 				add_political_power = 500
 			}
-			random_country = {
-				limit = {
-					NOT = {
-						tag = OTT
-					}
-				}
-				news_event = worldnews.436
-			}
+			news_event = worldnews.436
 		}
 	}
 }
@@ -10276,8 +10289,11 @@ country_event = {	#Turkish Nationalists leave the DF
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.5 FROM = [From.GetName]" }
 	title = ottlib.5.t
 	desc = ottlib.5.d
-
 	picture = GFX_OTT_Speech_Kemal
+
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	is_triggered_only = yes
 
@@ -10298,7 +10314,6 @@ country_event = {	#Corruption Scandal rocks the HIF
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.6 FROM = [From.GetName]" }
 	title = ottlib.6.t
 	desc = ottlib.6.d
-
 	picture = GFX_OTT_Parliament
 
 	trigger = {
@@ -10306,6 +10321,7 @@ country_event = {	#Corruption Scandal rocks the HIF
 			has_government = market_liberal
 			has_government = social_liberal
 		}
+		NOT = { has_country_flag = OTT_change_to_turkey }
 	}
 
 	is_triggered_only = yes
@@ -10327,11 +10343,13 @@ country_event = {	#The Abandoned Properties Laws
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.7 FROM = [From.GetName]" }
 	title = ottlib.7.t
 	desc = ottlib.7.d
-
 	picture = GFX_OTT_Rize2
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -10341,8 +10359,8 @@ country_event = {	#The Abandoned Properties Laws
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_MARLIB
+					rule = OTT_path
+					option = OTT_PATH_MARLIB
 				}
 			}
 		}
@@ -10384,11 +10402,13 @@ country_event = {	#Conflict in Ainteb
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.8 FROM = [From.GetName]" }
 	title = ottlib.8.t
 	desc = ottlib.8.d
-
 	picture = GFX_OTT_Antep
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -10437,22 +10457,19 @@ country_event = {	#Talk with Kazim
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.9 FROM = [From.GetName]" }
 	title = ottlib.9.t
 	desc = ottlib.9.d
-
 	picture = GFX_OTT_Kazim_Speech
+
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	is_triggered_only = yes
 
 	option = {
 		name = ottlib.9.a
-		decrease_ruling_party_popularity_by_10 = yes
+		set_temp_variable = { ideology_change_var = -0.1 }
+		change_ruling_party_popularity = yes
 		set_country_flag = df_coalition
-		remove_all_ministers = yes
-		add_ideas = {
-			TUR_Prens_Sabahaddin_Efendi_hog_sli
-			TUR_Haqqi_al_Azm_for_sli
-			TUR_Hueseyin_Huesnue_Pasa_eco_mli
-			TUR_Musa_Kazim_Karabekir_Pasa_sec_mli
-		}
 		set_temp_variable = { coalition_partner_var = token:market_liberal }
 		add_to_coalition = yes
 
@@ -10466,14 +10483,18 @@ country_event = {	#Early Elections
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.13 FROM = [From.GetName]" }
 	title = ottlib.13.t
 	desc = ottlib.13.d
-
 	picture = GFX_OTT_Sublime_Porte1
+
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	is_triggered_only = yes
 
 	option = {
 		name = ottlib.13.a
-		increase_ruling_party_popularity_by_5 = yes
+		set_temp_variable = { ideology_change_var = 0.05 }
+		change_ruling_party_popularity = yes
 
 		custom_effect_tooltip = seats_redistributed
 
@@ -10507,8 +10528,15 @@ country_event = {	#Rising support for the DF
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.14 FROM = [From.GetName]" }
 	title = ottlib.14.t
 	desc = ottlib.14.d
-
 	picture = GFX_OTT_Menderes_Smiling
+
+	trigger = {
+		OR = {
+			has_government = market_liberal
+			has_government = social_liberal
+		}
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	is_triggered_only = yes
 
@@ -10526,8 +10554,11 @@ country_event = {	#Staggering Economy
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.15 FROM = [From.GetName]" }
 	title = ottlib.15.t
 	desc = ottlib.15.d
-
 	picture = GFX_OTT_Palace_Seaside
+
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	is_triggered_only = yes
 
@@ -10602,12 +10633,14 @@ country_event = {	#Formation of Military Cliques
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.17 FROM = [From.GetName]" }
 	title = ottlib.17.t
 	desc = ottlib.17.d
-
 	picture = GFX_OTT_Discussion_Celal
 
-	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	fire_only_once = yes
+	is_triggered_only = yes
 
 	option = {
 		name = ottlib.17.a
@@ -10648,12 +10681,14 @@ country_event = {	#Trouble on the Euphrates
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottlib.18 FROM = [From.GetName]" }
 	title = ottlib.18.t
 	desc = ottlib.18.d
-
 	picture = GFX_OTT_Discussion_Celal
 
-	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
 	fire_only_once = yes
+	is_triggered_only = yes
 
 	option = {
 		name = ottlib.18.a
@@ -10687,15 +10722,15 @@ country_event = {	#Trouble on the Euphrates
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_MARLIB
+					rule = OTT_path
+					option = OTT_PATH_MARLIB
 				}
 			}
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_SOCCON
+					rule = OTT_path
+					option = OTT_PATH_SOCCON
 				}
 			}
 		}
@@ -10731,15 +10766,15 @@ country_event = {	#Trouble on the Euphrates
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_MARLIB
+					rule = OTT_path
+					option = OTT_PATH_MARLIB
 				}
 			}
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_SOCCON
+					rule = OTT_path
+					option = OTT_PATH_SOCCON
 				}
 			}
 		}
@@ -10829,15 +10864,15 @@ country_event = {	#Trouble in the Cabinet
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_SOCLIB
+					rule = OTT_path
+					option = OTT_PATH_SOCLIB
 				}
 			}
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_SOCCON
+					rule = OTT_path
+					option = OTT_PATH_SOCCON
 				}
 			}
 		}
@@ -10849,13 +10884,8 @@ country_event = {	#Trouble in the Cabinet
 			ideology = market_liberal
 			popularity = 0.05
 		}
-		remove_all_ministers = yes
-		add_ideas = {
-			TUR_Musa_Kazim_Karabekir_Pasa_hog_mli
-			TUR_Koeprueluezade_Mehmed_Fuad_Pasa_for_mli
-			TUR_Hueseyin_Huesnue_Pasa_eco_mli
-			TUR_Bekir_Refik_Pasa_sec_mli
-		}
+		clear_sic_slot = yes
+		activate_advisor = TUR_musa_kazim_karabekir_sic
 		set_temp_variable = { coalition_partner_var = token:social_conservative }
 		add_to_coalition = yes
 		set_temp_variable = { coalition_partner_var = token:social_liberal }
@@ -10868,8 +10898,8 @@ country_event = {	#Trouble in the Cabinet
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_MARLIB
+					rule = OTT_path
+					option = OTT_PATH_MARLIB
 				}
 			}
 		}
@@ -10902,18 +10932,23 @@ country_event = {	#Coup in Baghdad
 
 	option = {
 		name = ottlib.21.a
-		if = {
-			limit = { has_character = IRQ_yasin_al_hashimi }
-			IRQ_yasin_al_hashimi = { set_nationality = IRQ }
-			hidden_effect = {
-				IRQ_yasin_al_hashimi = {
-					promote_character = yes
-					promote_leader = yes
-					remove_trait = { trait = recently_promoted }
-				}
+		effect_tooltip = {
+			if = {
+				limit = { has_character = IRQ_yasin_al_hashimi }
+				IRQ_yasin_al_hashimi = { set_nationality = IRQ }
 			}
 		}
 		IRQ = {
+			hidden_effect = {
+				transfer_technology_without_doctrines = yes
+				IRQ_yasin_al_hashimi = {
+					set_nationality = PREV
+					promote_character = yes
+					promote_to_field_marshal = yes
+				}
+			}
+			clear_sic_slot = yes
+			activate_advisor = IRQ_taha_al_hashimi_sic
 			transfer_state = 676
 			transfer_state = 291
 			load_oob = IRQ
@@ -10949,15 +10984,8 @@ country_event = {	#Elections 1940
 
 	option = {
 		name = ottlib.22.a
-		remove_all_ministers = yes
-		add_ideas = {
-			TUR_Ali_Kemal_Bey_hog_sli
-			TUR_Ali_Adnan_Bey_for_mli
-			TUR_Mehmet_Fahrettin_Pasa_eco_mli
-			TUR_Refik_Sevket_Pasa_sec_mli
-		}
-
-		increase_ruling_party_popularity_by_5 = yes
+		set_temp_variable = { ideology_change_var = 0.05 }
+		change_ruling_party_popularity = yes
 		custom_effect_tooltip = seats_redistributed
 
 		subtract_from_variable = {
@@ -10995,11 +11023,13 @@ country_event = {	#The Meclis-i-Mebusân reconvenes
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.1 FROM = [From.GetName]" }
 	title = ottsab.1.t
 	desc = ottsab.1.d
-
 	picture = GFX_OTT_Parliament
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -11041,11 +11071,13 @@ country_event = {	#Reform of the Ottoman Gendarmerie
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.2 FROM = [From.GetName]" }
 	title = ottsab.2.t
 	desc = ottsab.2.d
-
 	picture = GFX_OTT_Gendarmerie
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -11085,11 +11117,13 @@ country_event = {	#Education of the Jandarma
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.3 FROM = [From.GetName]" }
 	title = ottsab.3.t
 	desc = ottsab.3.d
-
 	picture = GFX_OTT_Gendarmerie_Academy
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -11116,18 +11150,17 @@ country_event = {	#Reorganisation of the Vilayet Law
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.4 FROM = [From.GetName]" }
 	title = ottsab.4.t
 	desc = ottsab.4.d
-
 	picture = GFX_OTT_Parliament_Baghdad
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.4.a
-		ai_chance = {
-			base = 100
-		}
 		add_political_power = 100
 		country_event = { id = ottsab.5 days = 5 }
 		hidden_effect = {
@@ -11141,11 +11174,13 @@ country_event = {	#Elections for the Provincial Assembly
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.5 FROM = [From.GetName]" }
 	title = ottsab.5.t
 	desc = ottsab.5.d
-
 	picture = GFX_OTT_Sultan_Speech
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	immediate = {
@@ -11186,15 +11221,15 @@ country_event = {	#Elections for the Provincial Assembly
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_MARLIB
+					rule = OTT_path
+					option = OTT_PATH_MARLIB
 				}
 			}
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_SOCCON
+					rule = OTT_path
+					option = OTT_PATH_SOCCON
 				}
 			}
 		}
@@ -11206,16 +11241,19 @@ country_event = {	#First Provincial Elections
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.6 FROM = [From.GetName]" }
 	title = ottsab.6.t
 	desc = ottsab.6.d
-
 	picture = GFX_OTT_Sultan_Speech
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.6.a
-		increase_ruling_party_popularity_by_5 = yes
+		set_temp_variable = { ideology_change_var = 0.05 }
+		change_ruling_party_popularity = yes
 	}
 }
 
@@ -11224,11 +11262,13 @@ country_event = {	#The Iraqi Question
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.7 FROM = [From.GetName]" }
 	title = ottsab.7.t
 	desc = ottsab.7.d
-
 	picture = GFX_OTT_Basra_Port
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -11290,11 +11330,13 @@ country_event = {	#Trouble in Basra
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.8 FROM = [From.GetName]" }
 	title = ottsab.8.t
 	desc = ottsab.8.d
-
 	picture = GFX_OTT_Assyrian_Patriarch
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -11336,11 +11378,13 @@ country_event = {	#Revision of the Ottoman Civil Code
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.9 FROM = [From.GetName]" }
 	title = ottsab.9.t
 	desc = ottsab.9.d
-
 	picture = GFX_OTT_Sabahaddin
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -11367,8 +11411,8 @@ country_event = {	#Revision of the Ottoman Civil Code
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_SOCCON
+					rule = OTT_path
+					option = OTT_PATH_SOCCON
 				}
 			}
 		}
@@ -11393,18 +11437,17 @@ country_event = {	#Privatised State Monopolies
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.10 FROM = [From.GetName]" }
 	title = ottsab.10.t
 	desc = ottsab.10.d
-
 	picture = GFX_OTT_Oil1
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.10.a
-		ai_chance = {
-			base = 100
-		}
 		add_offsite_building = {
 			type = industrial_complex
 			level = 1
@@ -11442,11 +11485,13 @@ country_event = {	#The TPC Affair
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.11 FROM = [From.GetName]" }
 	title = ottsab.11.t
 	desc = ottsab.11.d
-
 	picture = GFX_OTT_Oil2
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -11457,20 +11502,14 @@ country_event = {	#The TPC Affair
 	}
 	option = {
 		name = ottsab.11.b
-		ai_chance = {
-			base = 100
-		}
 		add_resource = {
 			type = oil
 			amount = 20
 			state = 676
 		}
-		random_country = {
+		random_other_country = {
 			limit = {
-				NOT = {
-					tag = OTT
-					has_war_with = OTT
-				}
+				NOT = { has_war_with = OTT }
 				num_of_factories > 35
 				is_subject = no
 				has_socialist_government = no
@@ -11497,11 +11536,13 @@ country_event = {	#Organisation of the Armed Forces
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.12 FROM = [From.GetName]" }
 	title = ottsab.12.t
 	desc = ottsab.12.d
-
 	picture = GFX_OTT_Arab_Recruits
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -11550,18 +11591,17 @@ country_event = {	#Abolishment of the Meclis-i Ayan
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.13 FROM = [From.GetName]" }
 	title = ottsab.13.t
 	desc = ottsab.13.d
-
 	picture = GFX_OTT_Demonstration
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.13.a
-		ai_chance = {
-			base = 100
-		}
 		add_political_power = 100
 	}
 }
@@ -11571,11 +11611,13 @@ country_event = {	#Arabs demand more representation in the Armed Forces
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.14 FROM = [From.GetName]" }
 	title = ottsab.14.t
 	desc = ottsab.14.d
-
 	picture = GFX_OTT_Arab_Recruits
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -11655,11 +11697,13 @@ country_event = {	#Expansion of the Vilayet reforms
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.15 FROM = [From.GetName]" }
 	title = ottsab.15.t
 	desc = ottsab.15.d
-
 	picture = GFX_OTT_Hagia_Sophia
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -11669,12 +11713,13 @@ country_event = {	#Expansion of the Vilayet reforms
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_MARLIB
+					rule = OTT_path
+					option = OTT_PATH_MARLIB
 				}
 			}
 		}
-		increase_ruling_party_popularity_by_5 = yes
+		set_temp_variable = { ideology_change_var = 0.05 }
+		change_ruling_party_popularity = yes
 		set_country_flag = expanded_millets
 		hidden_effect = {
 			country_event = { id = ottsab.17 days = 250 }
@@ -11702,8 +11747,8 @@ country_event = {	#Expansion of the Vilayet reforms
 			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = OTT_paths
-					option = OTT_PATHS_SOCCON
+					rule = OTT_path
+					option = OTT_PATH_SOCCON
 				}
 			}
 		}
@@ -11733,11 +11778,13 @@ country_event = {	#The question of the Millets
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.16 FROM = [From.GetName]" }
 	title = ottsab.16.t
 	desc = ottsab.16.d
-
 	picture = GFX_OTT_Ottoman_Revolution
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -11767,18 +11814,17 @@ country_event = {	#Trouble in the Armed Forces
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.17 FROM = [From.GetName]" }
 	title = ottsab.17.t
 	desc = ottsab.17.d
-
 	picture = GFX_OTT_Gendarmerie_Academy
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.17.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.05
 		hidden_effect = {
 			country_event = { id = ottsab.18 days = 30 }
@@ -11791,7 +11837,6 @@ country_event = {	#Raid on the Sublime Porte
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.18 FROM = [From.GetName]" }
 	title = ottsab.18.t
 	desc = ottsab.18.d
-
 	picture = GFX_OTT_Raid_Porte
 
 	trigger = {
@@ -11799,17 +11844,14 @@ country_event = {	#Raid on the Sublime Porte
 			has_government = market_liberal
 			has_government = social_liberal
 		}
+		NOT = { has_country_flag = OTT_change_to_turkey }
 	}
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.18.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.10
 		hidden_effect = {
 			country_event = { id = ottsab.19 hours = 6 }
@@ -11822,18 +11864,13 @@ country_event = {	#Sultan [OTT.GetLeader] flees the capital
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.19 FROM = [From.GetName]" }
 	title = ottsab.19.t
 	desc = ottsab.19.d
-
 	picture = GFX_OTT_Mecid_on_da_horse
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.19.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.30
 		hidden_effect = {
 			country_event = { id = ottsab.20 days = 5 }
@@ -11846,18 +11883,13 @@ country_event = {	#Osman Fuad gathers his forces
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.20 FROM = [From.GetName]" }
 	title = ottsab.20.t
 	desc = ottsab.20.d
-
 	picture = GFX_OTT_Osman_Fuad_Posing
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.20.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.10
 		hidden_effect = {
 			country_event = { id = ottsab.21 days = 5 }
@@ -11870,27 +11902,15 @@ country_event = {	#Osman Fuad marches on Constantinople
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.21 FROM = [From.GetName]" }
 	title = ottsab.21.t
 	desc = ottsab.21.d
-
 	picture = GFX_OTT_Troops_Istanbul
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.21.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = 0.20
-		event_target:TUR_fevzi_cakmak_target = {
-			set_nationality = XXA
-		}
-		set_country_flag = Mustafa_Fevzi_Pasa_dead
-		if = {
-			limit = { has_idea = TUR_Mustafa_Fevzi_Pasa_cos_pau }
-			remove_ideas = TUR_Mustafa_Fevzi_Pasa_cos_pau
-		}
+		retire_character = TUR_fevzi_cakmak
 		country_event = { id = ottsab.22 days = 2 }
 	}
 }
@@ -11966,9 +11986,6 @@ country_event = {	#Unification Decree repealed
 
 	option = {
 		name = ottsab.23.a
-		ai_chance = {
-			base = 100
-		}
 		add_political_power = 75
 		hidden_effect = {
 			country_event = { id = ottlib.19 days = 150 }
@@ -11981,18 +11998,17 @@ country_event = {	#The Future of Ottomanism
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.24 FROM = [From.GetName]" }
 	title = ottsab.24.t
 	desc = ottsab.24.d
-
 	picture = GFX_OTT_Ottoman_Revolution
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.24.a
-		ai_chance = {
-			base = 100
-		}
 	}
 }
 
@@ -12001,18 +12017,17 @@ country_event = {	#The Power of Pan-Islamism
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.25 FROM = [From.GetName]" }
 	title = ottsab.25.t
 	desc = ottsab.25.d
-
 	picture = GFX_OTT_Sheikh_Islam
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.25.a
-		ai_chance = {
-			base = 100
-		}
 		add_popularity = {
 			ideology = social_conservative
 			popularity = 0.05
@@ -12025,7 +12040,6 @@ country_event = {	#Violence in Bursa
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.26 FROM = [From.GetName]" }
 	title = ottsab.26.t
 	desc = ottsab.26.d
-
 	picture = GFX_OTT_Palace_Seaside
 
 	fire_only_once = yes
@@ -12035,15 +12049,13 @@ country_event = {	#Violence in Bursa
 		has_government = social_liberal
 		check_variable = { con_sup_deputies = 0 }
 		NOT = { has_completed_focus = OTT_Repeal_Unification_Law }
+		NOT = { has_country_flag = OTT_change_to_turkey }
 	}
 
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.26.a
-		ai_chance = {
-			base = 100
-		}
 		340 = {
 			ott_increase_revolt_risk = yes
 		}
@@ -12067,9 +12079,6 @@ country_event = {	#Protests in Konya and Mosul
 
 	option = {
 		name = ottsab.27.a
-		ai_chance = {
-			base = 100
-		}
 		346 = {
 			ott_increase_revolt_risk = yes
 		}
@@ -12094,22 +12103,22 @@ country_event = {	#Turkish nationalists open their offensive
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.28 FROM = [From.GetName]" }
 	title = ottsab.28.t
 	desc = ottsab.28.d
-
 	picture = GFX_OTT_Ismet_Celal
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.28.a
-		ai_chance = {
-			base = 100
-		}
 		hidden_effect = {
 			country_event = { id = ottsab.29 days = 5 }
 		}
-		decrease_ruling_party_popularity_by_10 = yes
+		set_temp_variable = { ideology_change_var = -0.1 }
+		change_ruling_party_popularity = yes
 		### Return Conservative votes to opposition
 		custom_effect_tooltip = 30_con_opp_tt
 		subtract_from_variable = { con_sup_deputies = 30 }
@@ -12133,10 +12142,8 @@ country_event = {	#Conservatives issue an Ultimatum
 
 	option = {
 		name = ottsab.29.a
-		ai_chance = {
-			base = 100
-		}
-		decrease_ruling_party_popularity_by_5 = yes
+		set_temp_variable = { ideology_change_var = -0.05 }
+		change_ruling_party_popularity = yes
 		### Return Conservative votes to opposition
 		custom_effect_tooltip = 30_con_opp_tt
 		subtract_from_variable = { con_sup_deputies = 30 }
@@ -12164,20 +12171,12 @@ country_event = {	#[OTT.GetLeader] sacks Prince Sabahattin
 
 	option = {
 		name = ottsab.30.a
-		ai_chance = {
-			base = 100
-		}
 		set_politics = {
 			ruling_party = social_conservative
 			elections_allowed = yes
 		}
-		remove_all_ministers = yes
-		add_ideas = {
-			TUR_Shakib_Arslan_hog_sco
-			TUR_Muhammed_Hamdi_Yazir_for_sco
-			TUR_Ali_Fuad_Pasa_eco_sco
-			TUR_Mustafa_Sabri_Effendi_sec_sco
-		}
+		clear_sic_slot = yes
+		activate_advisor = TUR_shakib_arslan_sic
 		complete_national_focus = OTT_Grand_Vizier_Arslan
 		hidden_effect = {
 			country_event = { id = ottars.1 days = 10 }
@@ -12203,9 +12202,6 @@ country_event = {	#Flourishing Coffee House Culture
 
 	option = {
 		name = ottsab.31.a
-		ai_chance = {
-			base = 100
-		}
 	}
 }
 
@@ -12214,18 +12210,17 @@ country_event = {	#Trouble in Eastern Anatolia
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.32 FROM = [From.GetName]" }
 	title = ottsab.32.t
 	desc = ottsab.32.d
-
 	picture = GFX_OTT_Sheikh_Sait
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.32.a
-		ai_chance = {
-			base = 100
-		}
 		345 = {
 			ott_increase_revolt_risk = yes
 		}
@@ -12249,18 +12244,17 @@ country_event = {	#Declining Social Mobility & Centralisation of Land Ownership
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.33 FROM = [From.GetName]" }
 	title = ottsab.33.t
 	desc = ottsab.33.d
-
 	picture = GFX_OTT_Parliament_Baghdad
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.33.a
-		ai_chance = {
-			base = 100
-		}
 		291 = {
 			ott_increase_revolt_risk = yes
 		}
@@ -12284,18 +12278,17 @@ country_event = {	#Foundation of the Arab Organisation for Education and Develop
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.34 FROM = [From.GetName]" }
 	title = ottsab.34.t
 	desc = ottsab.34.d
-
 	picture = GFX_OTT_Military_School
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = ottsab.34.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = 0.03
 	}
 }
@@ -12305,11 +12298,13 @@ country_event = {	#Federal Education Reform
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottsab.35 FROM = [From.GetName]" }
 	title = ottsab.35.t
 	desc = ottsab.35.d
-
 	picture = GFX_OTT_Military_School
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -12351,19 +12346,19 @@ country_event = {	#Arslan reshuffles the Cabinet
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottars.1 FROM = [From.GetName]" }
 	title = ottars.1.t
 	desc = ottars.1.d
-
 	picture = GFX_OTT_Arab_Protest_Indoors
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = ottars.1.a
-		ai_chance = {
-			base = 100
-		}
-		increase_ruling_party_popularity_by_5 = yes
+		set_temp_variable = { ideology_change_var = 0.05 }
+		change_ruling_party_popularity = yes
 		hidden_effect = {
 			country_event = { id = ottars.3 days = 50 }
 		}
@@ -12375,18 +12370,17 @@ country_event = {	#Islamic Reading Rooms
 	immediate = { log = "[GetDateText]: [Root.GetName]: event ottars.2 FROM = [From.GetName]" }
 	title = ottars.2.t
 	desc = ottars.2.d
-
 	picture = GFX_OTT_Arab_Protest_Indoors
 
-	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = OTT_change_to_turkey }
+	}
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = ottars.2.a
-		ai_chance = {
-			base = 100
-		}
 	}
 }
 
@@ -12404,9 +12398,6 @@ country_event = {	#The First Islamic Congress
 
 	option = {
 		name = ottars.3.a
-		ai_chance = {
-			base = 100
-		}
 		add_political_power = -25
 	}
 }
@@ -12425,9 +12416,6 @@ country_event = {	#Renovation and Rejuvenation Program
 
 	option = {
 		name = ottars.4.a
-		ai_chance = {
-			base = 100
-		}
 		add_political_power = -25
 	}
 }
@@ -12446,9 +12434,6 @@ country_event = {	#The New Ottoman Curriculum
 
 	option = {
 		name = ottars.5.a
-		ai_chance = {
-			base = 100
-		}
 		add_political_power = -25
 	}
 }
@@ -12467,9 +12452,6 @@ country_event = {	#The Position of the Şeyhülislam
 
 	option = {
 		name = ottars.6.a
-		ai_chance = {
-			base = 100
-		}
 	}
 }
 
@@ -12487,9 +12469,6 @@ country_event = {	#Revising the Constitution
 
 	option = {
 		name = ottars.7.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.05
 		hidden_effect = {
 			country_event = { id = ottars.12 days = 30 }
@@ -12511,9 +12490,6 @@ country_event = {	#Sultan Ahmed IV prorogues Parliament
 
 	option = {
 		name = ottars.8.a
-		ai_chance = {
-			base = 100
-		}
 		add_stability = -0.10
 	}
 }
@@ -12532,9 +12508,6 @@ country_event = {	#Handling the Armed Forces
 
 	option = {
 		name = ottars.9.a
-		ai_chance = {
-			base = 100
-		}
 		army_experience = -20
 	}
 }
@@ -12553,9 +12526,6 @@ country_event = {	#Dealing with the Emancipation Movement
 
 	option = {
 		name = ottars.10.a
-		ai_chance = {
-			base = 100
-		}
 		773 = {
 			ott_increase_revolt_risk = yes
 		}
@@ -12576,26 +12546,15 @@ country_event = {	#Coup d'État in Konstantiniyye
 
 	option = {
 		name = ottars.11.a
-		ai_chance = {
-			base = 100
-		}
-		set_party_name = {
-			ideology = paternal_autocrat
-			long_name = "Military Government"
-			name = "Military Government"
-		}
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
+			name = TUR_military_government
+			long_name = TUR_military_government_long
 		}
 		end_coalition = yes
-		remove_all_ministers = yes
-		add_ideas = {
-			TUR_Mustafa_Fevzi_Pasa_hog_pau
-			TUR_Fahrettin_Pasa_for_pau
-			TUR_Sirri_Bey_eco_ade
-			TUR_Mehmed_Recep_Pasa_sec_pau
-		}
+		clear_sic_slot = yes
+		activate_advisor = TUR_fevzi_cakmak_sic
 		add_popularity = {
 			ideology = paternal_autocrat
 			popularity = 0.15
@@ -12603,16 +12562,10 @@ country_event = {	#Coup d'État in Konstantiniyye
 		hidden_effect = {
 			country_event = { id = ottfev.1 days = 3 }
 			country_event = { id = ottfev.6 days = 14 }
-			random_country = {
-				limit = {
-					NOT = {
-						tag = OTT
-					}
-				}
-				news_event = worldnews.435
-			}
+			news_event = worldnews.435
 		}
 		clr_country_flag = EGY_CONQ
+		clr_country_flag = SUD_CONQ
 		clr_country_flag = ARM_CONQ
 		clr_country_flag = LBA_CONQ
 		clr_country_flag = YEM_CONQ

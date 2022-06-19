@@ -3733,7 +3733,6 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 }
 
-
 shared_focus = {
 	id = CUB_protect_trade
 	icon = GFX_goal_generic_navy_cruiser
@@ -4388,6 +4387,7 @@ shared_focus = {
 	cost = 5
 
 	available = {
+		is_subject = no
 		has_country_flag = CUB_pol_tree_finished
 	}
 
@@ -4493,11 +4493,12 @@ shared_focus = {
 	prerequisite = {
 		focus = CUB_foreign_relate
 	}
+	available = {
+		is_subject = no
+	}
 	bypass = {
 		OR = {
-			NOT = {
-				country_exists = WIF
-			}
+			NOT = { country_exists = WIF }
 			has_war_with = WIF
 		}
 	}
@@ -4546,91 +4547,8 @@ shared_focus = {
 	prerequisite = {
 		focus = CUB_foreign_relate
 	}
-	bypass = {
-		OR = {
-			NOT = {
-				country_exists = HAI
-			}
-			has_war_with = HAI
-		}
-		OR = {
-			NOT = {
-				country_exists = DOM
-			}
-			has_war_with = DOM
-		}
-		OR = {
-			NOT = {
-				country_exists = YUC
-			}
-			has_war_with = YUC
-		}
-		OR = {
-			NOT = {
-				country_exists = MEX
-			}
-			has_war_with = MEX
-		}
-		OR = {
-			NOT = {
-				country_exists = GUA
-			}
-			has_war_with = GUA
-		}
-		OR = {
-			NOT = {
-				country_exists = ELS
-			}
-			has_war_with = ELS
-		}
-		OR = {
-			NOT = {
-				country_exists = COL
-			}
-			has_war_with = COL
-		}
-		OR = {
-			NOT = {
-				country_exists = PUE
-			}
-			has_war_with = PUE
-		}
-		OR = {
-			NOT = {
-				country_exists = HON
-			}
-			has_war_with = HON
-		}
-		OR = {
-			NOT = {
-				country_exists = NIC
-			}
-			has_war_with = NIC
-		}
-		OR = {
-			NOT = {
-				country_exists = COS
-			}
-			has_war_with = COS
-		}
-		OR = {
-			NOT = {
-				country_exists = PAN
-			}
-			has_war_with = PAN
-		}
-		OR = {
-			NOT = {
-				country_exists = VEN
-			}
-			has_war_with = VEN
-		}
-		OR = {
-			NOT = {
-				country_exists = CEN
-			}
-			has_war_with = CEN
-		}
+	available = {
+		is_subject = no
 	}
 
 	ai_will_do = {
@@ -4676,6 +4594,10 @@ shared_focus = {
 
 	prerequisite = {
 		focus = CUB_foreign_relate
+	}
+
+	available = {
+		is_subject = no
 	}
 
 	bypass = {
@@ -4851,6 +4773,10 @@ shared_focus = {
 	relative_position_id = CUB_foreign_relate
 	cost = 5
 
+	available = {
+		is_subject = no
+	}
+
 	prerequisite = {
 		focus = CUB_foreign_relate
 	}
@@ -4934,6 +4860,10 @@ shared_focus = {
 	relative_position_id = CUB_foreign_relate
 	cost = 5
 
+	available = {
+		is_subject = no
+	}
+
 	prerequisite = {
 		focus = CUB_fed_relate_trade
 	}
@@ -4990,6 +4920,7 @@ shared_focus = {
 
 	available = {
 		has_war = no
+		is_subject = no
 		is_in_faction = no
 		NOT = { has_completed_focus = CUB_new_allies }
 		has_global_flag = USA_civil_war_over_flag
@@ -5019,14 +4950,11 @@ shared_focus = {
 	}
 	bypass = {
 		OR = {
+			is_subject = yes
 			is_in_faction_with = USA
 			is_in_faction_with = CSA
 			is_in_faction_with = TEX
 			is_in_faction_with = PSA
-			is_subject_of = USA
-			is_subject_of = CSA
-			is_subject_of = TEX
-			is_subject_of = PSA
 		}
 	}
 	prerequisite = {
@@ -5036,44 +4964,32 @@ shared_focus = {
 	ai_will_do = {
 		factor = 15
 		modifier = {
-			OR = {
-				USA = {
-					is_in_faction = yes
-					exists = yes
-				}
-				CSA = {
-					is_in_faction = yes
-					exists = yes
-				}
-				TEX = {
-					is_in_faction = yes
-					exists = yes
-				}
-				PSA = {
-					is_in_faction = yes
-					exists = yes
-				}
-			}
 			factor = 3
+			OR = {
+				USA = { is_in_faction = yes }
+				CSA = { is_in_faction = yes }
+				PSA = { is_in_faction = yes }
+				TEX = { is_in_faction = yes }
+			}
 		}
 		modifier = {
 			has_game_rule = { rule = CUB_forpol option = CUB_FORPOL_GER }
-			GER = { exists = yes }
+			GER = { is_faction_leader = yes }
 			factor = 0
 		}
 		modifier = {
 			has_game_rule = { rule = CUB_forpol option = CUB_FORPOL_FRA }
-			FRA = { exists = yes }
+			FRA = { is_faction_leader = yes }
 			factor = 0
 		}
 		modifier = {
 			has_game_rule = { rule = CUB_forpol option = CUB_FORPOL_CAN }
-			CAN = { exists = yes }
+			CAN = { is_faction_leader = yes }
 			factor = 0
 		}
 		modifier = {
 			has_game_rule = { rule = CUB_forpol option = CUB_FORPOL_COS }
-			COS = { exists = yes }
+			COS = { is_subject = no }
 			factor = 0
 		}
 	}
@@ -5097,6 +5013,7 @@ shared_focus = {
 	}
 	available = {
 		has_war = no
+		is_subject = no
 		is_in_faction = no
 		if = {
 			limit = { has_completed_focus = CUB_old_friends }
@@ -5144,9 +5061,7 @@ shared_focus = {
 					tooltip = CUB_csawon_tt
 					hidden_trigger = {
 						has_global_flag = USA_civil_war_over_flag
-						CSA = {
-							exists = yes
-						}
+						country_exists = CSA
 					}
 				}
 			}
@@ -5265,107 +5180,8 @@ shared_focus = {
 	y = 4
 	relative_position_id = CUB_foreign_relate
 	cost = 5
-	allow_branch = {
-		has_dlc = "Together for Victory"
-	}
 	available = {
-		custom_trigger_tooltip = {
-			tooltip = CUB_researchgroup_tt
-			hidden_trigger = {
-				OR = {
-					INS = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = maphilinsul_research_group
-					}
-					COL = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = colombia_research
-					}
-					ARG = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = argentina_research
-					}
-					FLN = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = belgian_research
-					}
-					BEL = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = belgian_research
-					}
-					HOL = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = belgian_research
-					}
-					DEN = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = scandinavian_research
-					}
-					NOR = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = scandinavian_research
-					}
-					SWE = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = scandinavian_research
-					}
-					SCA = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = scandinavian_research
-					}
-					AUS = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = austrian_research
-					}
-					JAP = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = japan_research
-					}
-					GER = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = german_research
-					}
-					INT = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = phalanstere_research
-					}
-				}
-			}
-		}
-	}
-	bypass = {
-		custom_trigger_tooltip = {
-			tooltip = CUB_researchgroup3_tt
-			hidden_trigger = {
-				CUB = {
-					OR = {
-						is_in_tech_sharing_group = maphilinsul_research_group
-						is_in_tech_sharing_group = colombia_research
-						is_in_tech_sharing_group = argentina_research
-						is_in_tech_sharing_group = belgian_research
-						is_in_tech_sharing_group = scandinavian_research
-						is_in_tech_sharing_group = austrian_research
-						is_in_tech_sharing_group = japan_research
-						is_in_tech_sharing_group = german_research
-						is_in_tech_sharing_group = phalanstere_research
-					}
-				}
-			}
-		}
+		is_in_faction = yes
 	}
 	prerequisite = {
 		focus = CUB_new_allies
@@ -5374,156 +5190,15 @@ shared_focus = {
 
 	ai_will_do = {
 		factor = 15
-		modifier = {
-			has_global_flag = USA_civil_war_over_flag
-			OR = {
-				AND = {
-					has_socialist_government = no
-					country_exists = CSA
-				}
-				AND = {
-					has_socialist_government = yes
-					NOT = {
-						country_exists = CSA
-					}
-				}
-			}
-			factor = 2
-		}
 	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CUB_joint_research"
-		if = {
-			limit = {
-				INT = {
-					is_faction_leader = yes
-					is_in_faction_with = CUB
-					is_in_tech_sharing_group = phalanstere_research
-				}
-			}
-			add_to_tech_sharing_group = phalanstere_research
-		}
-		else_if = {
-			limit = {
-				GER = {
-					is_faction_leader = yes
-					is_in_faction_with = CUB
-					is_in_tech_sharing_group = german_research
-				}
-			}
-			add_to_tech_sharing_group = german_research
-		}
-		else_if = {
-			limit = {
-				JAP = {
-					is_faction_leader = yes
-					is_in_faction_with = CUB
-					is_in_tech_sharing_group = japan_research
-				}
-			}
-			add_to_tech_sharing_group = japan_research
-		}
-		else_if = {
-			limit = {
-				AUS = {
-					is_faction_leader = yes
-					is_in_faction_with = CUB
-					is_in_tech_sharing_group = austrian_research
-				}
-			}
-			add_to_tech_sharing_group = austrian_research
-		}
-		else_if = {
-			limit = {
-				OR = {
-					DEN = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = scandinavian_research
-					}
-					NOR = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = scandinavian_research
-					}
-					SWE = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = scandinavian_research
-					}
-					SCA = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = scandinavian_research
-					}
-				}
-			}
-			add_to_tech_sharing_group = scandinavian_research
-		}
-		else_if = {
-			limit = {
-				OR = {
-					FLN = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = belgian_research
-					}
-					BEL = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = belgian_research
-					}
-					HOL = {
-						is_faction_leader = yes
-						is_in_faction_with = CUB
-						is_in_tech_sharing_group = belgian_research
-					}
-				}
-			}
-			add_to_tech_sharing_group = belgian_research
-		}
-		else_if = {
-			limit = {
-				ARG = {
-					is_faction_leader = yes
-					is_in_faction_with = CUB
-					is_in_tech_sharing_group = argentina_research
-				}
-			}
-			add_to_tech_sharing_group = argentina_research
-		}
-		else_if = {
-			limit = {
-				COL = {
-					is_faction_leader = yes
-					is_in_faction_with = CUB
-					is_in_tech_sharing_group = colombia_research
-				}
-			}
-			add_to_tech_sharing_group = colombia_research
-		}
-		else_if = {
-			limit = {
-				INS = {
-					is_faction_leader = yes
-					is_in_faction_with = CUB
-					is_in_tech_sharing_group = maphilinsul_research_group
-				}
-			}
-			add_to_tech_sharing_group = maphilinsul_research_group
-		}
-		else_if = {
-			limit = {
-				COS = {
-					is_faction_leader = yes
-					is_in_faction_with = CUB
-				}
-			}
-			country_event = cuba.130
-		}
-		else = {
-			custom_effect_tooltip = CUB_researchgroup2_tt
+		add_tech_bonus = {
+			name = CUB_joint_research
+			bonus = 1
+			uses = 2
+			category = electronics
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
@@ -5534,20 +5209,12 @@ shared_focus = {
 	icon = GFX_goal_generic_position_armies
 	x = 1
 	y = 4
-	offset = {
-		x = -1
-		trigger = {
-			NOT = { has_dlc = "Together for Victory" }
-		}
-	}
 	relative_position_id = CUB_foreign_relate
 	cost = 5
 
 	available = {
 		is_in_faction = yes
-		NOT = {
-			is_faction_leader = yes
-		}
+		is_faction_leader = no
 	}
 	prerequisite = {
 		focus = CUB_old_friends
@@ -5556,37 +5223,18 @@ shared_focus = {
 
 	ai_will_do = {
 		factor = 15
-		modifier = {
-			has_global_flag = USA_civil_war_over_flag
-			OR = {
-				AND = {
-					has_socialist_government = no
-					country_exists = CSA
-				}
-				AND = {
-					has_socialist_government = yes
-					NOT = {
-						country_exists = CSA
-					}
-				}
-			}
-			factor = 2
-		}
 	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CUB_military_integrate"
 		add_political_power = 50
-		hidden_effect = {
-			every_other_country = {
-				limit = {
-					is_in_faction_with = CUB
-					is_faction_leader = yes
-				}
-				country_event = cuba.129
-			}
+		if = {
+			limit = { is_in_faction = yes }
+			faction_leader = { country_event = cuba.129 }
 		}
-		custom_effect_tooltip = CUB_milint_tooltip
+		else = {
+			custom_effect_tooltip = CUB_milint_tooltip
+		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -6781,7 +6429,6 @@ shared_focus = {
 			ideology = totalist
 			popularity = 0.05
 		}
-		CUB_remove_guiteras_as_general = yes
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_ARMY_XP }
 }
@@ -6970,13 +6617,12 @@ shared_focus = {
 			meta_effect = {
 				text = {
 					set_politics = {
-						ruling_party = [RULING_PARTY_TAG]
+						ruling_party = var:current_party_ideology_group
 						last_election = "[ELECTION_DATE_TAG]"
 						election_frequency = 48
 						elections_allowed = yes
 					}
 				}
-				RULING_PARTY_TAG = "[Root.GetRulingIdeologyId]"
 				ELECTION_DATE_TAG = "[GetYear].1.28"
 			}
 		}
@@ -7395,7 +7041,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CUB_mella_4"
 		add_stability = -0.05
-		add_popularity = {ideology = syndicalist popularity = -0.1}
+		add_popularity = { ideology = syndicalist popularity = -0.1 }
 	}
 	search_filters = { FOCUS_FILTER_STABILITY }
 }
@@ -7591,7 +7237,8 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus CUB_mella_9"
 		add_trait = {
 			character = CUB_julio_mella_mcpartland
-			trait = el_caballo
+			ideology = totalist_subtype
+			trait = CUB_el_caballo
 		}
 	}
 }
@@ -7811,16 +7458,16 @@ shared_focus = {
 			limit = {
 				has_country_flag = CUB_melstrongarmblasag
 			}
-			add_popularity = {ideology = totalist popularity = 0.03}
-			add_popularity = {ideology = radical_socialist popularity = -0.02}
+			add_popularity = { ideology = totalist popularity = 0.03 }
+			add_popularity = { ideology = radical_socialist popularity = -0.02 }
 			swap_ideas = {
 				remove_idea = CUB_extsyndagr_2
 				add_idea = CUB_extsyndagr_3
 			}
 		}
 		else = {
-			add_popularity = {ideology = totalist popularity = -0.02}
-			add_popularity = {ideology = radical_socialist popularity = 0.03}
+			add_popularity = { ideology = totalist popularity = -0.02 }
+			add_popularity = { ideology = radical_socialist popularity = 0.03 }
 			swap_ideas = {
 				remove_idea = CUB_extsyndagr_2
 				add_idea = CUB_extsyndagr_4
@@ -7862,13 +7509,13 @@ shared_focus = {
 			limit = {
 				has_country_flag = CUB_melstrongarmblaspol
 			}
-			add_popularity = {ideology = totalist popularity = 0.03}
-			add_popularity = {ideology = radical_socialist popularity = -0.02}
+			add_popularity = { ideology = totalist popularity = 0.03 }
+			add_popularity = { ideology = radical_socialist popularity = -0.02 }
 			add_stability = 0.05
 		}
 		else = {
-			add_popularity = {ideology = totalist popularity = -0.02}
-			add_popularity = {ideology = radical_socialist popularity = 0.03}
+			add_popularity = { ideology = totalist popularity = -0.02 }
+			add_popularity = { ideology = radical_socialist popularity = 0.03 }
 			add_war_support = 0.05
 		}
 	}
@@ -7908,8 +7555,8 @@ shared_focus = {
 				has_country_flag = CUB_melstrongarmblasmil
 				has_idea = CUB_militia_idea
 			}
-			add_popularity = {ideology = totalist popularity = 0.03}
-			add_popularity = {ideology = radical_socialist popularity = -0.02}
+			add_popularity = { ideology = totalist popularity = 0.03 }
+			add_popularity = { ideology = radical_socialist popularity = -0.02 }
 			swap_ideas = {
 				remove_idea = CUB_militia_idea
 				add_idea = CUB_militia_idea_3
@@ -7920,8 +7567,8 @@ shared_focus = {
 				has_country_flag = CUB_melstrongarmblasmil
 				has_idea = CUB_militia_idea_2
 			}
-			add_popularity = {ideology = totalist popularity = 0.03}
-			add_popularity = {ideology = radical_socialist popularity = -0.02}
+			add_popularity = { ideology = totalist popularity = 0.03 }
+			add_popularity = { ideology = radical_socialist popularity = -0.02 }
 			swap_ideas = {
 				remove_idea = CUB_militia_idea_2
 				add_idea = CUB_militia_idea_4
@@ -7934,8 +7581,8 @@ shared_focus = {
 				}
 				has_idea = CUB_militia_idea
 			}
-			add_popularity = {ideology = totalist popularity = -0.02}
-			add_popularity = {ideology = radical_socialist popularity = 0.03}
+			add_popularity = { ideology = totalist popularity = -0.02 }
+			add_popularity = { ideology = radical_socialist popularity = 0.03 }
 			swap_ideas = {
 				remove_idea = CUB_militia_idea
 				add_idea = CUB_militia_idea_5
@@ -7948,8 +7595,8 @@ shared_focus = {
 				}
 				has_idea = CUB_militia_idea_2
 			}
-			add_popularity = {ideology = totalist popularity = -0.02}
-			add_popularity = {ideology = radical_socialist popularity = 0.03}
+			add_popularity = { ideology = totalist popularity = -0.02 }
+			add_popularity = { ideology = radical_socialist popularity = 0.03 }
 			swap_ideas = {
 				remove_idea = CUB_militia_idea_2
 				add_idea = CUB_militia_idea_6
@@ -8118,22 +7765,14 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus CUB_melraddeal_9"
 		add_stability = 0.05
 		add_war_support = 0.05
-		if = {
-			limit = {
-				country_exists = PAP
-			}
-			reverse_add_opinion_modifier = { target = PAP modifier = CUB_anticlericalpushpap }
-		}
+		reverse_add_opinion_modifier = { target = PAP modifier = CUB_anticlericalpushpap }
 		custom_effect_tooltip = cub_anticleric_tt
 		hidden_effect = {
 			every_country = {
 				limit = {
 					has_socialist_government = no
 					is_catholic_tag = yes
-					NOT = {
-						tag = PAP
-					}
-					exists = yes
+					NOT = { tag = PAP }
 				}
 				add_opinion_modifier = { target = ROOT modifier = CUB_anticlericalpush }
 			}
@@ -8420,13 +8059,12 @@ shared_focus = {
 			meta_effect = {
 				text = {
 					set_politics = {
-						ruling_party = [RULING_PARTY_TAG]
+						ruling_party = var:current_party_ideology_group
 						last_election = "[ELECTION_DATE_TAG]"
 						election_frequency = 48
 						elections_allowed = yes
 					}
 				}
-				RULING_PARTY_TAG = "[Root.GetRulingIdeologyId]"
 				ELECTION_DATE_TAG = "[GetYear].1.28"
 			}
 		}
@@ -8504,7 +8142,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CUB_autenticfoc_6"
-		add_popularity = {ideology = authoritarian_democrat popularity = 0.05}
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 		315 = {
 			add_building_construction = {
 				type = infrastructure
@@ -8695,7 +8333,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CUB_autenticfoc_11"
 		add_stability = 0.05
-		add_popularity = {ideology = authoritarian_democrat popularity = 0.05}
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.05 }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 }
@@ -9002,13 +8640,12 @@ shared_focus = {
 			meta_effect = {
 				text = {
 					set_politics = {
-						ruling_party = [RULING_PARTY_TAG]
+						ruling_party = var:current_party_ideology_group
 						last_election = "[ELECTION_DATE_TAG]"
 						election_frequency = 48
 						elections_allowed = yes
 					}
 				}
-				RULING_PARTY_TAG = "[Root.GetRulingIdeologyId]"
 				ELECTION_DATE_TAG = "[GetYear].1.28"
 			}
 		}
@@ -9802,13 +9439,12 @@ shared_focus = {
 			meta_effect = {
 				text = {
 					set_politics = {
-						ruling_party = [RULING_PARTY_TAG]
+						ruling_party = var:current_party_ideology_group
 						last_election = "[ELECTION_DATE_TAG]"
 						election_frequency = 48
 						elections_allowed = yes
 					}
 				}
-				RULING_PARTY_TAG = "[Root.GetRulingIdeologyId]"
 				ELECTION_DATE_TAG = "[GetYear].1.28"
 			}
 		}
@@ -10099,13 +9735,12 @@ shared_focus = {
 			meta_effect = {
 				text = {
 					set_politics = {
-						ruling_party = [RULING_PARTY_TAG]
+						ruling_party = var:current_party_ideology_group
 						last_election = "[ELECTION_DATE_TAG]"
 						election_frequency = 48
 						elections_allowed = yes
 					}
 				}
-				RULING_PARTY_TAG = "[Root.GetRulingIdeologyId]"
 				ELECTION_DATE_TAG = "[GetYear].1.28"
 			}
 		}

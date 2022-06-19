@@ -1,8 +1,8 @@
-﻿capital = 16
+capital = 16
 oob = "FRA"
 set_naval_oob = "FRA_naval"
 set_convoys = 100
-set_stability = 0.5
+set_stability = 0.75
 set_war_support = 0.4
 set_research_slots = 4
 starting_train_buffer = 2
@@ -140,16 +140,7 @@ set_popularities = {
 	paternal_autocrat = 0
 	national_populist = 0
 }
-add_ideas = {
-	#Ideas
-	FRA_communard_spirit
-
-	#Cabinet
-	FRA_Marceau_Pivert_hog_syn
-	FRA_Pierre_Brossolette_for_syn
-	FRA_Pierre_Monatte_eco_syn
-	FRA_Charles_Rappoport_sec_syn
-}
+add_ideas = FRA_communard_spirit
 
 ### Events ###
 country_event = { id = comfrance.1 days = 1 }
@@ -217,6 +208,33 @@ recruit_character = FRA_gabriel_auphan
 recruit_character = FRA_philippe_auboyneau
 recruit_character = FRA_marcel_gensoul
 recruit_character = FRA_edouard_peisson
+
+### Advisors ###
+recruit_character = FRA_confederation_general_du_travail
+activate_advisor = FRA_confederation_general_du_travail_sic
+
+recruit_character = FRA_leon_blum
+recruit_character = FRA_pierre_monatte
+recruit_character = FRA_daniel_guerin
+recruit_character = FRA_maurice_thorez
+recruit_character = FRA_charles_rappoport
+recruit_character = FRA_henri_barbe
+recruit_character = FRA_gabriel_lafaye
+recruit_character = FRA_joseph_paul_boncour
+recruit_character = FRA_jacque_duclos
+recruit_character = FRA_jean_zyromski
+recruit_character = FRA_pierre_jules_cot
+recruit_character = FRA_suzanne_girault
+
+recruit_character = FRA_irene_and_frederic_joliot_curie
+recruit_character = FRA_robert_esnault_pelterie
+
+recruit_character = FRA_etienne_schlumberger
+
+recruit_character = FRA_joseph_vuillemin
+recruit_character = FRA_martial_henri_valin
+recruit_character = FRA_maryse_bastie
+recruit_character = FRA_victor_leon_ernest_denain
 
 if = {
 	limit = { has_dlc = "La Resistance" }

@@ -70,7 +70,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_freedom_of_the_press"
 			add_political_power = 100
-			increase_ruling_party_popularity_by_5 = yes
+			set_temp_variable = { ideology_change_var = 0.05 }
+			change_ruling_party_popularity = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -126,7 +127,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_lift_martial_law"
 			add_stability = 0.10
-			increase_ruling_party_popularity_by_5 = yes
+			set_temp_variable = { ideology_change_var = 0.05 }
+			change_ruling_party_popularity = yes
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -164,7 +166,8 @@ focus_tree = {
 			add_stability = 0.05
 			add_popularity = { ideology = national_populist popularity = 0.05 }
 			add_popularity = { ideology = syndicalist popularity = -0.05 }
-			decrease_ruling_party_popularity_by_5 = yes
+			set_temp_variable = { ideology_change_var = -0.05 }
+			change_ruling_party_popularity = yes
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -200,7 +203,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_workers_deal"
 			add_political_power = 50
 			add_popularity = { ideology = syndicalist popularity = 0.05 }
-			increase_ruling_party_popularity_by_5 = yes
+			set_temp_variable = { ideology_change_var = 0.05 }
+			change_ruling_party_popularity = yes
 			add_popularity = { ideology = national_populist popularity = -0.03 }
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -447,7 +451,7 @@ focus_tree = {
 	focus = {
 		id = AST_we_march_forward
 		icon = GFX_goal_australasia_flag
-		cost = 10.00
+		cost = 10
 		available = {
 			has_democratic_government = yes
 		}
@@ -471,7 +475,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
-
 
 	### POLITICAL - SYNDICALIST
 
@@ -526,8 +529,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_purge_army"
 			if = {
-				limit = { has_character = AST_thomas_blamey }
-				retire_character = AST_thomas_blamey
+				limit = { has_character = AST_thomas_albert_blamey }
+				retire_character = AST_thomas_albert_blamey
 			}
 			add_ideas = AST_army_purged
 			custom_effect_tooltip = AST_six_months_reform
@@ -609,7 +612,7 @@ focus_tree = {
 	focus = {
 		id = AST_restore_order_1
 		icon = GFX_goal_authoritarian
-		cost = 10.00
+		cost = 10
 		available = {
 			has_socialist_government = yes
 			has_idea = AST_new_unrest
@@ -959,7 +962,7 @@ focus_tree = {
 	focus = {
 		id = AST_join_internationale
 		icon = GFX_goal_comfrance
-		cost = 10.00
+		cost = 10
 		available = {
 			is_in_faction = no
 			has_socialist_government = yes
@@ -998,7 +1001,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
-
 
 	### POLITICAL - AFM
 
@@ -1054,10 +1056,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_total_control"
 			add_stability = -0.05
 			add_political_power = 100
-			decrease_ruling_party_popularity_by_10 = yes
+			set_temp_variable = { ideology_change_var = -0.1 }
+			change_ruling_party_popularity = yes
 			custom_effect_tooltip = AST_no_elections
 			hidden_effect = {
-				country_event = { id = austral.137 days = 1 }
 				set_politics = {
 					ruling_party = paternal_autocrat
 					elections_allowed = no
@@ -1089,7 +1091,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_propaganda_effort"
-			increase_ruling_party_popularity_by_5 = yes
+			set_temp_variable = { ideology_change_var = 0.05 }
+			change_ruling_party_popularity = yes
 			add_war_support = 0.10
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
@@ -1147,7 +1150,7 @@ focus_tree = {
 	focus = {
 		id = AST_restore_order_2
 		icon = GFX_goal_authoritarian
-		cost = 10.00
+		cost = 10
 		available = {
 			has_government = paternal_autocrat
 			has_idea = AST_new_unrest
@@ -1241,7 +1244,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_white_australasia"
-			decrease_ruling_party_popularity_by_5 = yes
+			set_temp_variable = { ideology_change_var = -0.05 }
+			change_ruling_party_popularity = yes
 			swap_ideas = {
 				remove_idea = AST_social_reforms_1
 				add_idea = AST_social_reforms_2
@@ -1277,8 +1281,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_monarchist_officers"
 			if = {
-				limit = { has_character = AST_thomas_blamey }
-				retire_character = AST_thomas_blamey
+				limit = { has_character = AST_thomas_albert_blamey }
+				retire_character = AST_thomas_albert_blamey
 			}
 			add_ideas = AST_army_purged
 			custom_effect_tooltip = AST_six_months_reform
@@ -1473,7 +1477,7 @@ focus_tree = {
 	focus = {
 		id = AST_united_we_stand
 		icon = GFX_goal_ideology_paternal_autocrat
-		cost = 10.00
+		cost = 10
 		available = {
 			has_government = paternal_autocrat
 		}
@@ -1497,7 +1501,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
-
 
 	### POLITICAL - NEW GUARD
 
@@ -1640,7 +1643,7 @@ focus_tree = {
 	focus = {
 		id = AST_restore_order_3
 		icon = GFX_goal_authoritarian
-		cost = 10.00
+		cost = 10
 		available = {
 			has_government = national_populist
 			has_idea = AST_new_unrest
@@ -1949,7 +1952,7 @@ focus_tree = {
 	focus = {
 		id = AST_the_future_is_ours
 		icon = GFX_goal_volunteer_alliance
-		cost = 10.00
+		cost = 10
 		available = {
 			has_government = national_populist
 		}
@@ -1973,7 +1976,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
-
 
 	### ECONOMIC
 
@@ -2247,7 +2249,7 @@ focus_tree = {
 	focus = {
 		id = AST_new_resources_1
 		icon = GFX_all_resource
-		cost = 8
+		cost = 5
 		available = {
 			OR = {
 				521 = { is_owned_and_controlled_by = AST } #Queensland
@@ -2278,9 +2280,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_new_resources_1"
-			unlock_decision_tooltip = AST_develop_queensland_coal_mines
-			unlock_decision_tooltip = AST_develop_victoria_aluminium_deposits
-			unlock_decision_tooltip = AST_develop_tasmania_iron_mines
+			activate_targeted_decision = { target = 521 decision = AST_develop_queensland_coal_mines }
+			activate_targeted_decision = { target = 517 decision = AST_develop_victoria_aluminium_deposits }
+			activate_targeted_decision = { target = 518 decision = AST_develop_tasmania_iron_mines }
 		}
 	}
 
@@ -2354,7 +2356,7 @@ focus_tree = {
 	focus = {
 		id = AST_end_of_depression
 		icon = GFX_goal_ideology_market_liberal
-		cost = 10.00
+		cost = 10
 		available = {
 			OR = {
 				has_idea = AST_depression_1
@@ -2725,19 +2727,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_new_resources_2"
-			unlock_decision_tooltip = AST_develop_new_zealand_coal_mines
-			unlock_decision_tooltip = AST_develop_nsw_aluminium_deposits
-			unlock_decision_tooltip = AST_develop_kimberley_iron_mines
+			activate_targeted_decision = { target = 284 decision = AST_develop_new_zealand_coal_mines }
+			activate_targeted_decision = { target = 285 decision = AST_develop_nsw_aluminium_deposits }
+			activate_targeted_decision = { target = 987 decision = AST_develop_kimberley_iron_mines }
 		}
 	}
-
 
 	### TECHNOLOGY
 
 	focus = {
 		id = AST_research_council
 		icon = GFX_goal_generic_scientific_exchange
-		cost = 8
+		cost = 5
 		x = 33
 		y = 1
 
@@ -2761,7 +2762,7 @@ focus_tree = {
 	focus = {
 		id = AST_council_funding
 		icon = GFX_goal_generic_intelligence_exchange
-		cost = 8
+		cost = 6
 		prerequisite = {
 			focus = AST_research_council
 		}
@@ -2788,7 +2789,7 @@ focus_tree = {
 	focus = {
 		id = AST_radar_focus
 		icon = GFX_goal_generic_radar
-		cost = 8
+		cost = 6
 		available = {
 			285 = { is_owned_and_controlled_by = AST } #New South Wales
 		}
@@ -2893,7 +2894,7 @@ focus_tree = {
 	focus = {
 		id = AST_national_university
 		icon = GFX_goal_AST_national_university
-		cost = 8
+		cost = 6
 		prerequisite = {
 			focus = AST_council_funding
 		}
@@ -2992,7 +2993,7 @@ focus_tree = {
 	focus = {
 		id = AST_rocketry_division
 		icon = GFX_focus_rocketry
-		cost = 8
+		cost = 6
 		prerequisite = {
 			focus = AST_increased_research_1
 		}
@@ -3036,14 +3037,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_oil_exploration"
-			unlock_decision_tooltip = AST_develop_queensland_oil_deposits
-			unlock_decision_tooltip = AST_develop_new_zealand_oil_deposits
 			add_tech_bonus = {
 				name = AST_oil_exploration
 				bonus = 1
 				uses = 1
 				category = synth_resources
 			}
+			custom_effect_tooltip = tooltip_white_line
+			activate_targeted_decision = { target = 521 decision = AST_develop_queensland_oil_deposits }
+			activate_targeted_decision = { target = 284 decision = AST_develop_new_zealand_oil_deposits }
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -3051,7 +3053,7 @@ focus_tree = {
 	focus = {
 		id = AST_uranium_mining
 		icon = GFX_focus_wonderweapons
-		cost = 8
+		cost = 6
 		available = {
 			519 = { is_owned_and_controlled_by = AST }
 		}
@@ -3080,14 +3082,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
-
 	### NAVY
 
 	focus = {
 		id = AST_state_of_the_navy
 		icon = GFX_goal_AST_state_of_RAN
 		dynamic = yes
-		cost = 8
+		cost = 6
 		available = {
 			any_owned_state = {
 				is_coastal = yes
@@ -3125,7 +3126,7 @@ focus_tree = {
 	focus = {
 		id = AST_upgrade_facilities
 		icon = GFX_goal_generic_production
-		cost = 8
+		cost = 6
 		available = {
 			285 = { is_owned_and_controlled_by = AST }
 		}
@@ -3437,7 +3438,7 @@ focus_tree = {
 		id = AST_royal_marines
 		icon = GFX_goal_generic_amphibious_assault
 		dynamic = yes
-		cost = 8
+		cost = 6
 		available = {
 			any_owned_state = {
 				is_coastal = yes
@@ -3955,14 +3956,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
-
 	### AIR FORCE
 
 	focus = {
 		id = AST_state_of_RAAF
 		icon = GFX_goal_AST_state_of_RAAF
 		dynamic = yes
-		cost = 8
+		cost = 6
 		x = 49
 		y = 0
 
@@ -4020,7 +4020,7 @@ focus_tree = {
 	focus = {
 		id = AST_expand_air_base
 		icon = GFX_goal_generic_construction
-		cost = 8
+		cost = 5
 		available = {
 			521 = { is_owned_and_controlled_by = AST }
 		}
@@ -4124,7 +4124,7 @@ focus_tree = {
 	focus = {
 		id = AST_CAS_effort
 		icon = GFX_goal_generic_air_CAS_new
-		cost = 8
+		cost = 6
 		prerequisite = {
 			focus = AST_new_fighters
 		}
@@ -4192,7 +4192,7 @@ focus_tree = {
 	focus = {
 		id = AST_naval_bombers
 		icon = GFX_goal_generic_air_naval_bomber_new
-		cost = 8
+		cost = 6
 		prerequisite = {
 			focus = AST_new_bombers
 		}
@@ -4225,7 +4225,7 @@ focus_tree = {
 	focus = {
 		id = AST_air_observer_corps
 		icon = GFX_focus_generic_air_defense
-		cost = 8
+		cost = 6
 		available = {
 			controls_all_owned_states = yes
 		}
@@ -4290,7 +4290,7 @@ focus_tree = {
 	focus = {
 		id = AST_womens_auxiliary
 		icon = GFX_focus_generic_female_pilots
-		cost = 8
+		cost = 5
 		prerequisite = {
 			focus = AST_CAS_effort
 			focus = AST_naval_bombers
@@ -4316,7 +4316,7 @@ focus_tree = {
 	focus = {
 		id = AST_darwin_base
 		icon = GFX_goal_generic_occupy_states_coastal
-		cost = 8
+		cost = 5
 		available = {
 			520 = { is_owned_and_controlled_by = AST } #Northern Territory
 		}
@@ -4422,13 +4422,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
 	}
 
-
 	### ARMY
 
 	focus = {
 		id = AST_state_of_the_army
 		icon = GFX_goal_AST_state_of_army
-		cost = 8
+		cost = 6
 		x = 58
 		y = 0
 
@@ -4456,7 +4455,7 @@ focus_tree = {
 	focus = {
 		id = AST_artillery_focus
 		icon = GFX_goal_national_artillery
-		cost = 8
+		cost = 6
 		prerequisite = {
 			focus = AST_state_of_the_army
 		}
@@ -4493,7 +4492,7 @@ focus_tree = {
 	focus = {
 		id = AST_improve_equipment
 		icon = GFX_goal_national_arsenal
-		cost = 8
+		cost = 6
 		prerequisite = {
 			focus = AST_state_of_the_army
 		}
@@ -4579,7 +4578,9 @@ focus_tree = {
 		available = {
 			has_war = yes
 			has_idea = AST_bled_dry
-			NOT = { has_idea = volunteer_only }
+		}
+		bypass = {
+			NOT = { has_idea = AST_bled_dry }
 		}
 		prerequisite = { focus = AST_artillery_focus }
 		prerequisite = { focus = AST_improve_equipment }
@@ -4590,17 +4591,9 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				NOT = { any_enemy_country = { num_of_factories > 35 } }
-			}
 		}
 
 		available_if_capitulated = yes
-
-		bypass = {
-			NOT = { has_idea = AST_bled_dry }
-		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AST_war_effort"
@@ -4991,7 +4984,7 @@ focus_tree = {
 						}
 					}
 					create_unit = {
-						division =  "name = \"The Rats of Tobruk\" division_template = \"Rats of Tobruk\" start_experience_factor = 0.3"
+						division = "name = \"The Rats of Tobruk\" division_template = \"Rats of Tobruk\" start_experience_factor = 0.3"
 						owner = ROOT
 					}
 				}
@@ -5065,7 +5058,7 @@ focus_tree = {
 	focus = {
 		id = AST_defense_focus
 		icon = GFX_goal_generic_defence
-		cost = 8
+		cost = 6
 		prerequisite = { focus = AST_artillery_focus }
 		prerequisite = { focus = AST_improve_equipment }
 		prerequisite = { focus = AST_clarify_anzac }
@@ -5101,7 +5094,7 @@ focus_tree = {
 	focus = {
 		id = AST_fortify_the_cities
 		icon = GFX_goal_nested_fortifications
-		cost = 8
+		cost = 6
 		prerequisite = {
 			focus = AST_defense_focus
 		}
@@ -5162,7 +5155,7 @@ focus_tree = {
 	focus = {
 		id = AST_increase_reserves
 		icon = GFX_goal_conscription
-		cost = 8
+		cost = 6
 		available = {
 			OR = {
 				has_idea = limited_conscription
@@ -5208,7 +5201,7 @@ focus_tree = {
 	focus = {
 		id = AST_anderson_doctrine
 		icon = GFX_goal_generic_territory_or_war
-		cost = 15.00
+		cost = 10
 		available = {
 			is_subject = no
 			controls_all_owned_states = yes

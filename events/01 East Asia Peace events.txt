@@ -378,10 +378,7 @@ country_event = { #Netherlands is defeated in Asia
 			# remove any Asian subjects/allies of HOL
 			every_country = {
 				limit = {
-					OR = {
-						is_in_faction_with = ROOT
-						is_subject_of = ROOT
-					}
+					is_ally_with = ROOT
 					OR = {
 						is_in_asia = yes
 						is_in_australia = yes

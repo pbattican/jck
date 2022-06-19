@@ -17,7 +17,7 @@ MIE_decisions = {
 		}
 	}
 	visible = {
-		has_global_flag = MIE_intermarium_formed
+		has_global_flag = MIE_intermarium_active
 		has_country_flag = MIE_member
 	}
 }

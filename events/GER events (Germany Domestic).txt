@@ -35,17 +35,7 @@ country_event = { # Hans von Seeckt dies
 	option = {
 		name = gerdom.2.a
 		custom_effect_tooltip = GER_army_reform
-		set_country_flag = Hans_von_Seeckt_dead
-		set_country_flag = August_von_Mackensen_dead
 		retire_character = GER_august_von_mackensen
-		if = {
-			limit = { has_idea = GER_Hans_von_Seeckt_cos_pau }
-			remove_ideas = GER_Hans_von_Seeckt_cos_pau
-		}
-		if = {
-			limit = { has_idea = GER_August_Von_Mackensen_carm_pau }
-			remove_ideas = GER_August_Von_Mackensen_carm_pau
-		}
 	}
 }
 
@@ -151,23 +141,14 @@ country_event = { # The increasing activity of the suffragist movement - trigger
 	picture = GFX_report_event_GER_suffrags
 	is_triggered_only = yes
 
-	immediate = {
-		set_country_flag = { flag = women_suffrage value = 0 }
-	}
-
 	option = { # full
 		name = gerdom.12.a
 		ai_chance = {
 			base = 5
 		}
-		GER = {
-			modify_country_flag = {
-				flag = women_suffrage
-				value = 2
-			}
-		}
+		set_country_flag = GER_women_suffrage_high
 		custom_effect_tooltip = GER_women_suffrage_high_tp
-		add_political_power = -100
+		add_political_power = -50
 		reverse_add_opinion_modifier = {
 			target = ENG
 			modifier = women_yes
@@ -187,14 +168,9 @@ country_event = { # The increasing activity of the suffragist movement - trigger
 		ai_chance = {
 			base = 70
 		}
-		GER = {
-			modify_country_flag = {
-				flag = women_suffrage
-				value = 1
-			}
-		}
+		set_country_flag = GER_women_suffrage_moderate
 		custom_effect_tooltip = GER_women_suffrage_tp
-		add_political_power = -50
+		add_political_power = -25
 		reverse_add_opinion_modifier = {
 			target = ENG
 			modifier = women_maybe
@@ -213,7 +189,6 @@ country_event = { # The increasing activity of the suffragist movement - trigger
 		ai_chance = {
 			base = 10
 		}
-		add_political_power = -25
 		reverse_add_opinion_modifier = {
 			target = ENG
 			modifier = women_no
@@ -251,12 +226,7 @@ country_event = { # German women demand recognition for their war effort
 	option = {
 		name = gerdom.13.a
 		add_political_power = -50
-		GER = {
-			modify_country_flag = {
-				flag = women_suffrage
-				value = 1
-			}
-		}
+		set_country_flag = GER_women_recognized
 		custom_effect_tooltip = GER_women_suffrage_tp
 	}
 }
@@ -274,482 +244,6 @@ country_event = { #Halbstarke terrorize the cities
 		name = gerdom.14.a
 		add_stability = -0.2
 		set_country_flag = GER_halbstarke
-	}
-}
-
-### German Navy Construction
-
-# First event
-country_event = {
-	id = gerdom.15
-	immediate = { log = "[GetDateText]: [Root.GetName]: event gerdom.15 FROM = [From.GetName]" }
-	title = gerdom.15.t
-	desc = gerdom.15.d
-	picture = GFX_report_event_GER_ship
-
-	is_triggered_only = yes
-
-	option = {
-		name = gerdom.15.a
-		set_country_flag = { flag = tirpitz_battleship value = 1 }
-		hidden_effect = {
-			country_event = {
-				id = gerdom.16
-				days = 120
-			}
-		}
-	}
-
-	option = {
-		name = gerdom.15.b
-		set_country_flag = { flag = tirpitz_carrier value = 1 }
-		hidden_effect = {
-			country_event = {
-				id = gerdom.16
-				days = 120
-			}
-		}
-	}
-
-	option = {
-		name = gerdom.15.c
-		set_country_flag = { flag = tirpitz_destroyer value = 1 }
-		hidden_effect = {
-			country_event = {
-				id = gerdom.16
-				days = 120
-			}
-		}
-	}
-
-	option = {
-		name = gerdom.15.e
-		set_country_flag = { flag = tirpitz_sub value = 1 }
-		hidden_effect = {
-			country_event = {
-				id = gerdom.16
-				days = 120
-			}
-		}
-	}
-}
-
-# Time to review the program!
-
-country_event = {
-	id = gerdom.16
-	immediate = { log = "[GetDateText]: [Root.GetName]: event gerdom.16 FROM = [From.GetName]" }
-	title = gerdom.16.t
-	desc = gerdom.16.d
-	picture = GFX_report_event_GER_ship
-
-	is_triggered_only = yes
-
-	trigger = {
-		owns_state = 58 #must own Kiel
-	}
-
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = {
-						flag = tirpitz_battleship
-						value > 1
-					}
-					NOT = {
-						has_country_flag = tirpitz_built_battleships
-					}
-					controls_state = 58
-				}
-				create_ship = {
-					type = ship_hull_super_heavy_1
-					equipment_variant = "Kaiser Wilhelm Class"
-				}
-				create_ship = {
-					type = ship_hull_super_heavy_1
-					equipment_variant = "Kaiser Wilhelm Class"
-				}
-				set_country_flag = tirpitz_built_battleships
-			}
-			if = {
-				limit = {
-					has_country_flag = {
-						flag = tirpitz_carrier
-						value > 1
-					}
-					NOT = {
-						has_country_flag = tirpitz_built_carriers
-					}
-					controls_state = 58
-				}
-				create_ship = {
-					type = ship_hull_carrier_1
-					equipment_variant = "Weser Class"
-				}
-				create_ship = {
-					type = ship_hull_carrier_1
-					equipment_variant = "Weser Class"
-				}
-				set_country_flag = tirpitz_built_carriers
-			}
-			if = {
-				limit = {
-					has_country_flag = {
-						flag = tirpitz_destroyer
-						value > 0
-					}
-					NOT = {
-						has_country_flag = tirpitz_built_destroyers1
-					}
-					controls_state = 58
-				}
-				create_ship = {
-					type = ship_hull_light_2
-					equipment_variant = "T214 Class"
-				}
-				create_ship = {
-					type = ship_hull_light_2
-					equipment_variant = "T214 Class"
-				}
-				create_ship = {
-					type = ship_hull_light_2
-					equipment_variant = "T214 Class"
-				}
-				create_ship = {
-					type = ship_hull_light_2
-					equipment_variant = "T214 Class"
-				}
-				set_country_flag = tirpitz_built_destroyers1
-			}
-			if = {
-				limit = {
-					has_country_flag = {
-						flag = tirpitz_destroyer
-						value > 1
-					}
-					NOT = {
-						has_country_flag = tirpitz_built_destroyers2
-					}
-					controls_state = 58
-				}
-				create_ship = {
-					type = ship_hull_light_2
-					equipment_variant = "T214 Class"
-				}
-				create_ship = {
-					type = ship_hull_light_2
-					equipment_variant = "T214 Class"
-				}
-				create_ship = {
-					type = ship_hull_light_2
-					equipment_variant = "T214 Class"
-				}
-				create_ship = {
-					type = ship_hull_light_2
-					equipment_variant = "T214 Class"
-				}
-				set_country_flag = tirpitz_built_destroyers2
-			}
-			if = {
-				limit = {
-					has_country_flag = {
-						flag = tirpitz_destroyer
-						value > 2
-					}
-					NOT = {
-						has_country_flag = tirpitz_built_destroyers3
-					}
-					controls_state = 58
-				}
-				create_ship = {
-					type = ship_hull_light_2
-					equipment_variant = "T214 Class"
-				}
-				create_ship = {
-					type = ship_hull_light_2
-					equipment_variant = "T214 Class"
-				}
-				create_ship = {
-					type = ship_hull_light_2
-					equipment_variant = "T214 Class"
-				}
-				create_ship = {
-					type = ship_hull_light_2
-					equipment_variant = "T214 Class"
-				}
-				set_country_flag = tirpitz_built_destroyers3
-			}
-			if = {
-				limit = {
-					has_country_flag = {
-						flag = tirpitz_sub
-						value > 0
-					}
-					NOT = {
-						has_country_flag = tirpitz_built_subs1
-					}
-					controls_state = 58
-				}
-				create_ship = {
-					type = ship_hull_submarine_2
-					equipment_variant = "Type VII Class"
-				}
-				create_ship = {
-					type = ship_hull_submarine_2
-					equipment_variant = "Type VII Class"
-				}
-				create_ship = {
-					type = ship_hull_submarine_2
-					equipment_variant = "Type VII Class"
-				}
-				create_ship = {
-					type = ship_hull_submarine_2
-					equipment_variant = "Type VII Class"
-				}
-				create_ship = {
-					type = ship_hull_submarine_2
-					equipment_variant = "Type VII Class"
-				}
-				set_country_flag = tirpitz_built_subs1
-			}
-			if = {
-				limit = {
-					has_country_flag = {
-						flag = tirpitz_sub
-						value > 1
-					}
-					NOT = {
-						has_country_flag = tirpitz_built_subs2
-					}
-					controls_state = 58
-				}
-				create_ship = {
-					type = ship_hull_submarine_2
-					equipment_variant = "Type VII Class"
-				}
-				create_ship = {
-					type = ship_hull_submarine_2
-					equipment_variant = "Type VII Class"
-				}
-				create_ship = {
-					type = ship_hull_submarine_2
-					equipment_variant = "Type VII Class"
-				}
-				create_ship = {
-					type = ship_hull_submarine_2
-					equipment_variant = "Type VII Class"
-				}
-				create_ship = {
-					type = ship_hull_submarine_2
-					equipment_variant = "Type VII Class"
-				}
-				set_country_flag = tirpitz_built_subs2
-			}
-		}
-	}
-
-	option = {
-		name = gerdom.16.a
-		trigger = {
-			controls_state = 58
-			NOT = {
-				has_country_flag = tirpitz_battleship
-			}
-		}
-		set_country_flag = { flag = tirpitz_battleship value = 1 }
-		hidden_effect = {
-			country_event = {
-				id = gerdom.16
-				days = 120
-			}
-		}
-	}
-
-	option = {
-		name = gerdom.16.b
-		trigger = {
-			controls_state = 58
-			NOT = {
-				has_country_flag = tirpitz_carrier
-			}
-		}
-		set_country_flag = tirpitz_carrier
-		hidden_effect = {
-			country_event = {
-				id = gerdom.16
-				days = 120
-			}
-		}
-	}
-
-	option = {
-		name = gerdom.16.c
-		trigger = {
-			controls_state = 58
-			NOT = {
-				has_country_flag = tirpitz_destroyer
-			}
-		}
-		set_country_flag = tirpitz_destroyer
-		hidden_effect = {
-			country_event = {
-				id = gerdom.16
-				days = 120
-			}
-		}
-	}
-
-	option = {
-		name = gerdom.16.e
-		trigger = {
-			controls_state = 58
-			NOT = {
-				has_country_flag = tirpitz_sub
-			}
-		}
-		set_country_flag = tirpitz_sub
-		hidden_effect = {
-			country_event = {
-				id = gerdom.16
-				days = 120
-			}
-		}
-	}
-
-	option = {
-		name = gerdom.16.f
-		trigger = {
-			controls_state = 58
-			has_country_flag = {
-				flag = tirpitz_battleship
-				value < 2
-			}
-		}
-		modify_country_flag = {
-			flag = tirpitz_battleship
-			value = 1
-		}
-		hidden_effect = {
-			country_event = {
-				id = gerdom.16
-				days = 120
-			}
-		}
-	}
-
-	option = {
-		name = gerdom.16.g
-		trigger = {
-			controls_state = 58
-			has_country_flag = {
-				flag = tirpitz_carrier
-				value < 2
-			}
-		}
-		modify_country_flag = {
-			flag = tirpitz_carrier
-			value = 1
-		}
-		hidden_effect = {
-			country_event = {
-				id = gerdom.16
-				days = 120
-			}
-		}
-	}
-
-	option = {
-		name = gerdom.16.h
-		trigger = {
-			controls_state = 58
-			has_country_flag = {
-				flag = tirpitz_destroyer
-				value < 3
-			}
-		}
-		modify_country_flag = {
-			flag = tirpitz_destroyer
-			value = 1
-		}
-		hidden_effect = {
-			country_event = {
-				id = gerdom.16
-				days = 120
-			}
-		}
-	}
-
-	option = {
-		name = gerdom.16.i
-		trigger = {
-			controls_state = 58
-			has_country_flag = {
-				flag = tirpitz_sub
-				value < 2
-			}
-		}
-		modify_country_flag = {
-			flag = tirpitz_sub
-			value = 1
-		}
-		hidden_effect = {
-			country_event = {
-				id = gerdom.16
-				days = 120
-			}
-		}
-	}
-
-	option = {
-		name = gerdom.16.j
-		trigger = {
-			controls_state = 58
-			has_country_flag = {
-				flag = tirpitz_battleship
-				value > 1
-			}
-			has_country_flag = {
-				flag = tirpitz_carrier
-				value > 1
-			}
-			has_country_flag = {
-				flag = tirpitz_destroyer
-				value > 2
-			}
-			has_country_flag = {
-				flag = tirpitz_sub
-				value > 1
-			}
-		}
-		add_political_power = 50
-		clr_country_flag = tirpitz_battleship
-		clr_country_flag = tirpitz_built_battleships
-		clr_country_flag = tirpitz_carrier
-		clr_country_flag = tirpitz_built_carriers
-		clr_country_flag = tirpitz_destroyer
-		clr_country_flag = tirpitz_built_destroyers1
-		clr_country_flag = tirpitz_built_destroyers2
-		clr_country_flag = tirpitz_built_destroyers3
-		clr_country_flag = tirpitz_sub
-		clr_country_flag = tirpitz_built_subs1
-		clr_country_flag = tirpitz_built_subs2
-		set_country_flag = navy_1934_complete
-	}
-
-	option = {
-		name = gerdom.16.k
-		trigger = {
-			NOT = {
-				controls_state = 58
-			}
-		}
-		hidden_effect = {
-			country_event = {
-				id = gerdom.16
-				days = 180
-			}
-		}
 	}
 }
 
@@ -785,7 +279,8 @@ country_event = {
 			ruling_party = authoritarian_democrat
 			elections_allowed = no
 		}
-		add_ideas = GER_Franz_von_Papen_hog_sco
+		clear_sic_slot = yes
+		activate_advisor = GER_franz_von_papen
 	}
 
 	option = {
@@ -807,7 +302,8 @@ country_event = {
 		}
 		set_temp_variable = { coalition_partner_var = token:social_liberal }
 		add_to_coalition = yes
-		add_ideas = GER_Hans_Vogel_hog_sde
+		clear_sic_slot = yes
+		activate_advisor = GER_hans_vogel
 	}
 
 	option = {
@@ -827,7 +323,8 @@ country_event = {
 			ruling_party = social_conservative
 			elections_allowed = no
 		}
-		add_ideas = GER_Heinrich_Bruening_hog_sco
+		clear_sic_slot = yes
+		activate_advisor = GER_heinrich_bruning
 	}
 
 	option = {
@@ -903,15 +400,8 @@ country_event = { # 1937 elections
 			}
 			set_temp_variable = { coalition_partner_var = token:social_liberal }
 			add_to_coalition = yes
-			hidden_effect = {
-				remove_ideas_with_trait = foreign_minister
-				remove_ideas_with_trait = security_minister
-			}
-			add_ideas = {
-				GER_Otto_Wels_hog_sde
-				GER_Erich_Ollenhauer_for_sde
-				GER_Gertrud_Baeumer_sec_sli
-			}
+			clear_sic_slot = yes
+			activate_advisor = GER_otto_wels
 			else = {
 				country_event = {
 					id = gerdom.28
@@ -952,13 +442,8 @@ country_event = { # 1937 elections
 			}
 			set_temp_variable = { coalition_partner_var = token:social_liberal }
 			add_to_coalition = yes
-			remove_all_ministers = yes
-			add_ideas = {
-				GER_Paul_von_Lettow_Vorbeck_hog_mli
-				GER_Heinrich_von_Brentano_for_sco
-				GER_Walther_von_Rathenau_eco_mli
-				GER_Helmuth_von_Moltke_sec_sco
-			}
+			clear_sic_slot = yes
+			activate_advisor = GER_paul_von_lettow_vorbeck
 			else = {
 				country_event = {
 					id = gerdom.29
@@ -1036,12 +521,8 @@ country_event = { # SPD-FVP Reichskanzler?
 		}
 		set_temp_variable = { coalition_partner_var = token:social_liberal }
 		add_to_coalition = yes
-		hidden_effect = {
-			remove_ideas_with_trait = foreign_minister
-		}
-		add_ideas = GER_Otto_Wels_hog_sde
-		add_ideas = GER_Erich_Ollenhauer_for_sde
-		####add_ideas = GER_Elisabeth_Schwarzhaupt_sec_sli replace this with different soclib sec min
+		clear_sic_slot = yes
+		activate_advisor = GER_otto_wels
 	}
 
 	option = { # Current one is fine
@@ -1081,7 +562,8 @@ country_event = { # SPD-FVP Reichskanzler?
 				name = GER_KAI_paternal_autocrat_party
 			}
 		}
-		add_ideas = GER_Kurt_von_Schleicher_hog_pau
+		clear_sic_slot = yes
+		activate_advisor = GER_kurt_von_schleicher
 	}
 }
 
@@ -1110,11 +592,8 @@ country_event = { # Neue grosse Koalition Reichskanzler?
 		}
 		set_temp_variable = { coalition_partner_var = token:social_liberal }
 		add_to_coalition = yes
-		remove_all_ministers = yes
-		add_ideas = GER_Paul_von_Lettow_Vorbeck_hog_mli
-		add_ideas = GER_Heinrich_von_Brentano_for_sco
-		add_ideas = GER_Walther_von_Rathenau_eco_mli
-		add_ideas = GER_Helmuth_von_Moltke_sec_sco
+		clear_sic_slot = yes
+		activate_advisor = GER_paul_von_lettow_vorbeck
 	}
 
 	option = { # Paul von Lettow-Vorbeck, demand concessions
@@ -1134,11 +613,8 @@ country_event = { # Neue grosse Koalition Reichskanzler?
 		}
 		set_temp_variable = { coalition_partner_var = token:social_liberal }
 		add_to_coalition = yes
-		remove_all_ministers = yes
-		add_ideas = GER_Paul_von_Lettow_Vorbeck_hog_mli
-		add_ideas = GER_Heinrich_von_Brentano_for_sco
-		add_ideas = GER_Hans_Juergen_von_Blumenthal_eco_ade
-		add_ideas = GER_Kurt_von_Schleicher_sec_pau
+		clear_sic_slot = yes
+		activate_advisor = GER_paul_von_lettow_vorbeck
 	}
 
 	option = { # Current one is fine
@@ -1178,7 +654,8 @@ country_event = { # Neue grosse Koalition Reichskanzler?
 				name = GER_KAI_paternal_autocrat_party
 			}
 		}
-		add_ideas = GER_Kurt_von_Schleicher_hog_pau
+		clear_sic_slot = yes
+		activate_advisor = GER_kurt_von_schleicher
 	}
 }
 
@@ -1212,15 +689,10 @@ country_event = { # DKP-Zentrum Reichskanzler?
 			}
 		}
 		add_political_power = 20
-		hidden_effect = {
-			remove_ideas_with_trait = economy_minister
-			remove_ideas_with_trait = security_minister
-		}
 		set_temp_variable = { coalition_partner_var = token:social_conservative }
 		add_to_coalition = yes
-		add_ideas = GER_Heinrich_Bruening_hog_sco
-		add_ideas = GER_Hjalmar_Schacht_eco_mli
-		add_ideas = GER_Kurt_von_Schleicher_sec_pau
+		clear_sic_slot = yes
+		activate_advisor = GER_heinrich_bruning
 	}
 
 	option = { # Kurt von Schleicher
@@ -1245,7 +717,8 @@ country_event = { # DKP-Zentrum Reichskanzler?
 			election_frequency = 60
 			elections_allowed = yes
 		}
-		add_ideas = GER_Kurt_von_Schleicher_hog_pau
+		clear_sic_slot = yes
+		activate_advisor = GER_kurt_von_schleicher
 	}
 }
 
@@ -1331,13 +804,8 @@ country_event = { # 1942 elections
 			}
 			set_temp_variable = { coalition_partner_var = token:social_liberal }
 			add_to_coalition = yes
-			hidden_effect = {
-				remove_ideas_with_trait = foreign_minister
-				remove_ideas_with_trait = security_minister
-			}
-			add_ideas = GER_Hans_Vogel_hog_sde
-			add_ideas = GER_Erich_Ollenhauer_for_sde
-			add_ideas = GER_Gertrud_Baeumer_sec_sli
+			clear_sic_slot = yes
+			activate_advisor = GER_hans_vogel
 			else = {
 				country_event = {
 					id = gerdom.34
@@ -1378,11 +846,8 @@ country_event = { # 1942 elections
 			}
 			set_temp_variable = { coalition_partner_var = token:social_liberal }
 			add_to_coalition = yes
-			remove_all_ministers = yes
-			add_ideas = GER_Paul_von_Lettow_Vorbeck_hog_mli
-			add_ideas = GER_Heinrich_von_Brentano_for_sco
-			add_ideas = GER_Walther_von_Rathenau_eco_mli
-			add_ideas = GER_Helmuth_von_Moltke_sec_sco
+			clear_sic_slot = yes
+			activate_advisor = GER_paul_von_lettow_vorbeck
 			else = {
 				country_event = {
 					id = gerdom.35
@@ -1454,12 +919,8 @@ country_event = { # SPD-FVP Reichskanzler?
 		}
 		set_temp_variable = { coalition_partner_var = token:social_liberal }
 		add_to_coalition = yes
-		hidden_effect = {
-			remove_ideas_with_trait = foreign_minister
-		}
-		add_ideas = GER_Hans_Vogel_hog_sde
-		add_ideas = GER_Erich_Ollenhauer_for_sde
-		####add_ideas = GER_Elisabeth_Schwarzhaupt_sec_sli replace this with different soclib sec min
+		clear_sic_slot = yes
+		activate_advisor = GER_hans_vogel
 	}
 
 	option = { # Current one is fine
@@ -1469,7 +930,7 @@ country_event = { # SPD-FVP Reichskanzler?
 		}
 		trigger = {
 			NOT = {
-				has_idea = GER_Hans_Vogel_hog_sde
+				has_idea = GER_hans_vogel
 			}
 		}
 		add_political_power = -40
@@ -1497,11 +958,8 @@ country_event = { # Neue grosse Koalition Reichskanzler?
 		}
 		set_temp_variable = { coalition_partner_var = token:social_liberal }
 		add_to_coalition = yes
-		remove_all_ministers = yes
-		add_ideas = GER_Paul_von_Lettow_Vorbeck_hog_mli
-		add_ideas = GER_Heinrich_von_Brentano_for_sco
-		add_ideas = GER_Walther_von_Rathenau_eco_mli
-		add_ideas = GER_Helmuth_von_Moltke_sec_sco
+		clear_sic_slot = yes
+		activate_advisor = GER_paul_von_lettow_vorbeck
 	}
 
 	option = { # Paul von Lettow-Vorbeck, demand concessions
@@ -1517,11 +975,8 @@ country_event = { # Neue grosse Koalition Reichskanzler?
 		}
 		set_temp_variable = { coalition_partner_var = token:social_liberal }
 		add_to_coalition = yes
-		remove_all_ministers = yes
-		add_ideas = GER_Paul_von_Lettow_Vorbeck_hog_mli
-		add_ideas = GER_Heinrich_von_Brentano_for_sco
-		add_ideas = GER_Hans_Juergen_von_Blumenthal_eco_ade
-		add_ideas = GER_Helmuth_von_Moltke_sec_sco
+		clear_sic_slot = yes
+		activate_advisor = GER_paul_von_lettow_vorbeck
 	}
 
 	option = { # Current one is fine
@@ -1531,7 +986,7 @@ country_event = { # Neue grosse Koalition Reichskanzler?
 		}
 		trigger = {
 			NOT = {
-				has_idea = GER_Paul_von_Lettow_Vorbeck_hog_mli
+				has_idea = GER_paul_von_lettow_vorbeck
 			}
 		}
 		add_political_power = -40
@@ -1557,19 +1012,8 @@ country_event = { # DKP-Zentrum Reichskanzler?
 			base = 40
 		}
 		add_political_power = 60
-		remove_all_ministers = yes
-		add_ideas = GER_Franz_von_Papen_hog_sco
-		add_ideas = GER_Friedrich_Werner_von_der_Schulenburg_for_ade
-		add_ideas = GER_Hjalmar_Schacht_eco_mli
-		if = {
-			limit = {
-				NOT = { has_country_flag = Johann_von_Bernstorff_dead }
-			}
-			add_ideas = GER_Johann_von_Bernstorff_sec_ade
-		}
-		else = {
-			add_ideas = GER_Henning_von_Tresckow_sec_ade
-		}
+		clear_sic_slot = yes
+		activate_advisor = GER_franz_von_papen
 	}
 
 	option = { # Brüning instead
@@ -1585,14 +1029,8 @@ country_event = { # DKP-Zentrum Reichskanzler?
 			base = 40
 		}
 		add_political_power = 20
-		hidden_effect = {
-			remove_ideas_with_trait = head_of_government
-			remove_ideas_with_trait = economy_minister
-			remove_ideas_with_trait = security_minister
-		}
-		add_ideas = GER_Heinrich_Bruening_hog_sco
-		add_ideas = GER_Hjalmar_Schacht_eco_mli
-		add_ideas = GER_Kurt_von_Schleicher_sec_pau
+		clear_sic_slot = yes
+		activate_advisor = GER_heinrich_bruning
 	}
 
 	option = { # Current one is fine
@@ -1603,8 +1041,8 @@ country_event = { # DKP-Zentrum Reichskanzler?
 		trigger = {
 			NOT = {
 				OR = {
-					has_idea = GER_Franz_von_Papen_hog_sco
-					has_idea = GER_Heinrich_Bruening_hog_sco
+					has_idea = GER_franz_von_papen
+					has_idea = GER_heinrich_bruning
 				}
 			}
 		}
@@ -1638,8 +1076,6 @@ country_event = { # Elections cancelled
 	}
 }
 
-
-
 ### Reichskanzler events
 
 country_event = { # The first SPD Reichskanzler is dead!
@@ -1650,7 +1086,7 @@ country_event = { # The first SPD Reichskanzler is dead!
 	picture = GFX_report_event_GER_reichstag
 
 	trigger = {
-		has_idea = GER_Otto_Wels_hog_sde
+		has_idea = GER_otto_wels
 	}
 
 	is_triggered_only = yes
@@ -1663,7 +1099,9 @@ country_event = { # The first SPD Reichskanzler is dead!
 				has_completed_focus = GER_finalise_centralisation
 			}
 		}
-		add_ideas = GER_Hans_Vogel_hog_sde
+		retire_character = GER_otto_wels
+		clear_sic_slot = yes
+		activate_advisor = GER_hans_vogel
 	}
 
 	option = { # Hans Vogel
@@ -1677,7 +1115,9 @@ country_event = { # The first SPD Reichskanzler is dead!
 		ai_chance = {
 			base = 30
 		}
-		add_ideas = GER_Hans_Vogel_hog_sde
+		retire_character = GER_otto_wels
+		clear_sic_slot = yes
+		activate_advisor = GER_hans_vogel
 		add_stability = 0.04
 	}
 	option = { #Heinrich Brüning
@@ -1698,7 +1138,9 @@ country_event = { # The first SPD Reichskanzler is dead!
 				}
 			}
 		}
-		add_ideas = GER_Heinrich_Bruening_hog_sco
+		retire_character = GER_otto_wels
+		clear_sic_slot = yes
+		activate_advisor = GER_heinrich_bruning
 		add_popularity = {
 			ideology = social_conservative
 			popularity = 0.1
@@ -1734,7 +1176,9 @@ country_event = { # The first SPD Reichskanzler is dead!
 			election_frequency = 60
 			elections_allowed = yes
 		}
-		add_ideas = GER_Franz_von_Papen_hog_sco
+		retire_character = GER_otto_wels
+		clear_sic_slot = yes
+		activate_advisor = GER_franz_von_papen
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.1
@@ -1771,7 +1215,9 @@ country_event = { # The first SPD Reichskanzler is dead!
 				name = GER_KAI_paternal_autocrat_party
 			}
 		}
-		add_ideas = GER_Kurt_von_Schleicher_hog_pau
+		retire_character = GER_otto_wels
+		clear_sic_slot = yes
+		activate_advisor = GER_kurt_von_schleicher
 		add_popularity = {
 			ideology = paternal_autocrat
 			popularity = 0.1
@@ -1789,7 +1235,7 @@ country_event = { #Otto Wels dies
 
 	trigger = {
 		NOT = {
-			has_idea = GER_Otto_Wels_hog_sde
+			has_idea = GER_otto_wels
 		}
 	}
 
@@ -1797,6 +1243,41 @@ country_event = { #Otto Wels dies
 
 	option = {
 		name = gerdom.41.a
+		retire_character = GER_otto_wels
+	}
+}
+
+country_event = { # Crown Prince given army command
+	id = gerdom.42
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gerdom.42 FROM = [From.GetName]" }
+	title = gerdom.42.t
+	desc = gerdom.42.d
+	picture = GFX_report_event_GER_remove_france
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_leader = { character = GER_wilhelm_iii } }
+	}
+
+	option = {
+		name = gerdom.42.a
+		add_war_support = 0.02
+		add_field_marshal_role = {
+			character = GER_wilhelm_iii
+			desc = GER_wilhelm_iii_commander_desc
+			traits = {
+				politically_connected
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	option = {
+		name = gerdom.42.b
+
 	}
 }
 
@@ -1808,7 +1289,7 @@ country_event = { #Relations with Italy
 	picture = GFX_report_event_PAP_vatican
 
 	trigger = {
-		has_idea = GER_Heinrich_Bruening_hog_sco
+		has_idea = GER_heinrich_bruning
 	}
 
 	is_triggered_only = yes
@@ -1861,25 +1342,24 @@ country_event = { #hidden event to trigger Wilhelm's death even if GER is dead
 
 	hidden = yes
 	fire_only_once = yes
-	is_triggered_only = yes
 
-	immediate = {
+	trigger = {
+		tag = 64.owner #this needs to be a MTTH due to the variance in GER scenarios
+		date > 1941.6.4
+	}
+
+	option = {
 		if = {
-			limit = {
-				country_exists = GER
-				GER = { has_character = GER_wilhelm_ii }
-			}
-			GER = {
-				country_event = gerdom.47
-				news_event = { id = worldnews.235 days = 1 }
-			}
+			limit = { has_character = GER_wilhelm_ii }
+			country_event = gerdom.47
+			news_event = { id = worldnews.235 days = 1 }
 		}
 		else_if = {
 			limit = {
-				country_exists = GEX
-				GEX = { has_character = GER_wilhelm_ii }
+				country_exists = MAF
+				MAF = { has_character = GER_wilhelm_ii }
 			}
-			GEX = {
+			MAF = {
 				country_event = gerdom.47
 				news_event = { id = worldnews.235 days = 1 }
 			}
@@ -1903,7 +1383,7 @@ country_event = { #Death of Wilhelm II
 	desc = {
 		text = gerdom.47.d_GEX
 		trigger = {
-			tag = GEX
+			tag = MAF
 		}
 	}
 	picture = GFX_report_event_GER_willy_dead
@@ -1920,71 +1400,6 @@ country_event = { #Death of Wilhelm II
 	}
 }
 
-country_event = { #Reichskanzler Vogel dies
-	id = gerdom.49
-	immediate = { log = "[GetDateText]: [Root.GetName]: event gerdom.49 FROM = [From.GetName]" }
-	title = gerdom.49.t
-	desc = gerdom.49.d
-	picture = GFX_report_event_europe_funeral
-
-	trigger = {
-		has_idea = GER_Hans_Vogel_hog_sde
-	}
-
-	is_triggered_only = yes
-
-	option = { #Kurt Schumacher
-		name = gerdom.49.a
-		ai_chance = {
-			base = 40
-		}
-		add_stability = 0.04
-		add_ideas = GER_Kurt_Schumacher_hog_sde
-	}
-
-	option = { #Heinrich Brüning
-		name = gerdom.49.b
-		ai_chance = {
-			base = 40
-			modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = GER_election
-					option = GER_ELECTION_SOCDEM
-				}
-			}
-		}
-		set_politics = {
-			ruling_party = social_conservative
-			election_frequency = 60
-			elections_allowed = yes
-		}
-		add_stability = -0.04
-		add_ideas = GER_Heinrich_Bruening_hog_sco
-	}
-
-	option = { #Carl Friedrich
-		name = gerdom.49.c
-		ai_chance = {
-			base = 20
-			modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = GER_election
-					option = GER_ELECTION_SOCDEM
-				}
-			}
-		}
-		set_politics = {
-			ruling_party = authoritarian_democrat
-			election_frequency = 60
-			elections_allowed = yes
-		}
-		add_stability = -0.04
-		add_ideas = GER_Carl_Friedrich_Goerdeler_hog_ade
-	}
-}
-
 country_event = { # ban parties
 	id = gerdom.51
 	immediate = { log = "[GetDateText]: [Root.GetName]: event gerdom.51 FROM = [From.GetName]" }
@@ -1995,8 +1410,8 @@ country_event = { # ban parties
 	trigger = {
 		tag = GER
 		OR = {
-			has_idea = GER_Franz_von_Papen_hog_sco
-			has_idea = GER_Kurt_von_Schleicher_hog_pau
+			has_idea = GER_franz_von_papen
+			has_idea = GER_kurt_von_schleicher
 		}
 		has_war_with = FRA
 	}
@@ -2299,115 +1714,35 @@ country_event = { #Syndicalist Involvement in the General Strike
 		name = gerdom.61.b
 		ai_chance = {
 			base = 50
+			modifier = {
+				factor = 0.25
+				date < 1939.6.1
+				has_game_rule = {
+					rule = wk2_begin_options
+					option = RARE
+				}
+			}
+			modifier = {
+				factor = 0
+				date < 1939.6.1
+				has_game_rule = {
+					rule = wk2_begin_options
+					option = RESTRICTED
+				}
+			}
+		}
+		add_political_power = -50
+		declare_war_on = {
+			target = FRA
+			type = annex_everything
+		}
+	}
+	option = { #not that
+		name = gerdom.61.b
+		ai_chance = {
+			base = 50
 		}
 		add_political_power = -90
-	}
-}
-
-
-#####some more death#####
-
-country_event = { #Johann von Bernstorff dies
-	id = gerdom.62
-	immediate = { log = "[GetDateText]: [Root.GetName]: event gerdom.62 FROM = [From.GetName]" }
-	title = gerdom.62.t
-	desc = gerdom.62.d
-	picture = GFX_report_event_europe_funeral
-
-	is_triggered_only = yes
-
-	option = {
-		name = gerdom.62.a
-		set_country_flag = Johann_von_Bernstorff_dead
-		if = {
-			limit = { has_idea = GER_Johann_von_Bernstorff_sec_ade }
-			hidden_effect = { remove_ideas = GER_Johann_von_Bernstorff_sec_ade }
-			add_ideas = GER_Henning_von_Tresckow_sec_ade
-		}
-	}
-}
-
-country_event = { #Wilhelm Groener dies
-	id = gerdom.63
-	immediate = { log = "[GetDateText]: [Root.GetName]: event gerdom.63 FROM = [From.GetName]" }
-	title = gerdom.63.t
-	desc = gerdom.63.d
-	picture = GFX_report_event_europe_funeral
-
-	is_triggered_only = yes
-
-	option = {
-		name = gerdom.62.a
-		if = {
-			limit = { has_idea = GER_Wilhelm_Groener_eco_ade }
-			hidden_effect = { remove_ideas = GER_Wilhelm_Groener_eco_ade }
-			add_ideas = GER_Johann_Schwerin_von_Krosigk_eco_ade
-		}
-	}
-}
-
-country_event = { #Ludwig von Reuter dies
-	id = gerdom.64
-	immediate = { log = "[GetDateText]: [Root.GetName]: event gerdom.64 FROM = [From.GetName]" }
-	title = gerdom.64.t
-	desc = gerdom.64.d
-	picture = GFX_report_event_europe_funeral
-
-	trigger = {
-		OR = {
-			tag = GER
-			tag = GEX
-		}
-	}
-
-	is_triggered_only = yes
-
-	option = {
-		name = gerdom.62.a
-		GER = { set_country_flag = Ludwig_von_Reuter_dead }
-		if = {
-			limit = { has_idea = GER_Ludwig_von_Reuter_cnav_ade }
-			remove_ideas = GER_Ludwig_von_Reuter_cnav_ade
-		}
-	}
-}
-
-country_event = { #Wilhelm Souchon dies
-	id = gerdom.65
-	immediate = { log = "[GetDateText]: [Root.GetName]: event gerdom.65 FROM = [From.GetName]" }
-	title = gerdom.65.t
-	desc = gerdom.65.d
-	picture = GFX_report_event_europe_funeral
-
-	is_triggered_only = yes
-
-	option = {
-		name = gerdom.62.a
-		retire_character = GER_wilhelm_souchon
-		set_country_flag = Wilhelm_Souchon_dead
-		if = {
-			limit = { has_idea = GER_Wilhelm_Souchon_cnav_ade }
-			remove_ideas = GER_Wilhelm_Souchon_cnav_ade
-		}
-	}
-}
-
-country_event = { #Georg Bruchmüller dies
-	id = gerdom.66
-	immediate = { log = "[GetDateText]: [Root.GetName]: event gerdom.66 FROM = [From.GetName]" }
-	title = gerdom.66.t
-	desc = gerdom.66.d
-	picture = GFX_report_event_europe_funeral
-
-	is_triggered_only = yes
-
-	option = {
-		name = gerdom.62.a
-		set_country_flag = Georg_von_Bruchmueller_dead
-		if = {
-			limit = { has_idea = GER_Georg_von_Bruchmueller_carm_ade }
-			remove_ideas = GER_Georg_von_Bruchmueller_carm_ade
-		}
 	}
 }
 
@@ -2631,7 +1966,6 @@ country_event = { #Further increasing our internal security
 		clr_country_flag = surpress_french
 	}
 }
-
 
 ### Syndicalist volunteers from the Rhineland
 
@@ -2951,6 +2285,7 @@ country_event = { # resetting elections
 	id = gerdom.210
 	immediate = { log = "[GetDateText]: [Root.GetName]: event gerdom.210 FROM = [From.GetName]" }
 	trigger = {
+		tag = GER
 		has_war = no
 		OR = {
 			has_country_flag = GER_1937_elections_cancelled
@@ -2968,27 +2303,21 @@ country_event = { # resetting elections
 
 ### Flavour Events ###
 
-# Sedanday
-news_event = {
+# Sedan Day
+country_event = {
 	id = gerfla.1
 	immediate = { log = "[GetDateText]: [Root.GetName]: event gerfla.1 FROM = [From.GetName]" }
 	title = gerfla.1.t
 	desc = gerfla.1.d
-	picture = GFX_news_event_GER_sedan
+	picture = GFX_report_event_GER_sedan
 
 	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = {
 		name = gerfla.1.a
 		add_political_power = 10
 		hidden_effect = {
-			GER = {
-				news_event = {
-					id = gerfla.1
-					days = 365
-				}
-			}
+			country_event = { id = gerfla.1 days = 365 }
 		}
 	}
 }
@@ -3063,12 +2392,7 @@ news_event = {
 
 	option = {
 		name = gerfla.4.a
-		GER = {
-			modify_country_flag = {
-				flag = women_suffrage
-				value = 1
-			}
-		}
+		set_country_flag = GER_hoffmann_wins
 		custom_effect_tooltip = GER_women_suffrage_tp
 	}
 }
