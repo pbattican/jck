@@ -1459,6 +1459,13 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+		allow_branch = {
+			has_game_rule = {
+				rule = allowed_submarine_tech
+				option = SUB3
+			}
+		}
+
 		research_cost = 2.0
 
 		start_year = 1940
@@ -1533,6 +1540,13 @@ technologies = {
 		folder = {
 			name = mtgnavalfolder
 			position = { x = -1 y = 12 }
+		}
+
+		allow_branch = {
+			has_game_rule = {
+				rule = allowed_snorkel_tech
+				option = SNORKEL_1
+			}
 		}
 
 		ai_will_do = {

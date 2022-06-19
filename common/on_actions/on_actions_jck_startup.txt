@@ -8,6 +8,11 @@ on_actions = {
 						BEL = {
 							is_ai = yes
 						}
+						
+						has_game_rule = {
+							rule = annex_belgium_rule
+							option = ANNEX
+						}
 					}
 					annex_country = {
 						target = BEL
@@ -17,9 +22,9 @@ on_actions = {
 				every_owned_state = {
 					limit = {
 						OR = {
-							is_core_of = POL
+							#is_core_of = POL
 							is_core_of = BEL
-							is_core_of = LIT
+							#is_core_of = LIT
 						}
 					}
 					add_resistance_target = {
@@ -29,16 +34,28 @@ on_actions = {
 				}
 			}
 			UKR = {
-				annex_country = {
-					target = WHR
-					transfer_troops = yes
-				}
-				every_owned_state = {
+				if = {
 					limit = {
-						is_core_of = WHR
-						has_resistance = yes
+						WHR = {
+							is_ai = yes
+						}
+	
+						has_game_rule = {
+							rule = annex_white_ruthenia_rule
+							option = ANNEX
+						}
 					}
-					add_compliance = 50
+					annex_country = {
+						target = WHR
+						transfer_troops = yes
+					}
+					every_owned_state = {
+						limit = {
+							is_core_of = WHR
+							has_resistance = yes
+						}
+						add_compliance = 50
+					}
 				}
 			}
 		}
