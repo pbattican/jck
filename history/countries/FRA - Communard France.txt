@@ -1,4 +1,4 @@
-capital = 16
+﻿capital = 16
 oob = "FRA"
 set_naval_oob = "FRA_naval"
 set_convoys = 100
