@@ -869,7 +869,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_Reform_Schutztruppe"
 			add_stability = 0.05
 			add_war_support = 0.10
-			add_manpower = -70000
+			add_manpower = -2000
 		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
@@ -1794,6 +1794,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_end_british_protectorates"
+			if = {
+				limit = { has_idea = MAF_British_Settlers }
+				remove_ideas = MAF_British_Settlers
+			}
 			every_owned_state = {
 				limit = { has_dynamic_modifier = { modifier = MAF_british_kenya } }
 				remove_dynamic_modifier = { modifier = MAF_british_kenya }
@@ -1852,7 +1856,10 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 
 			every_owned_state = {
-				limit = { region = 145 }
+				limit = {
+					region = 145
+					NOT = { is_core_of = MAF }
+				}
 				add_compliance = -20
 			}
 			custom_effect_tooltip = tooltip_white_line
@@ -1903,7 +1910,10 @@ focus_tree = {
 			}
 
 			every_owned_state = {
-				limit = { region = 145 }
+				limit = {
+					region = 145
+					NOT = { is_core_of = MAF }
+				}
 				add_resistance = 20
 				add_extra_state_shared_building_slots = 1
 			}
@@ -4480,21 +4490,21 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus NMB_begin_campaign"
 			if = {
 				limit = { can_declare_war_on = ZAM }
-				create_wargoal = {
+				declare_war_on = {
 					target = ZAM
 					type = annex_everything
 				}
 			}
 			if = {
 				limit = { can_declare_war_on = BRT }
-				create_wargoal = {
+				declare_war_on = {
 					target = BRT
 					type = annex_everything
 				}
 			}
 			if = {
 				limit = { can_declare_war_on = MLW }
-				create_wargoal = {
+				declare_war_on = {
 					target = MLW
 					type = annex_everything
 				}
