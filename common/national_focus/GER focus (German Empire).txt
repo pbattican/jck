@@ -1561,8 +1561,6 @@ focus_tree = {
 		icon = GFX_goal_construction_engineering
 		prerequisite = {
 			focus = GER_civ_industry_2
-		}
-		prerequisite = {
 			focus = GER_infra_2
 		}
 		x = 1
@@ -2042,12 +2040,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_mobile_3"
-			custom_effect_tooltip = GER_doctrine_mobile_3_tooltip
-			hidden_effect = {
-				swap_ideas = {
-					remove_idea = GER_invest_arms_industry
-					add_idea = GER_tank_idea
-				}
+			#custom_effect_tooltip = GER_doctrine_mobile_3_tooltip
+			swap_ideas = {
+				remove_idea = GER_invest_arms_industry
+				add_idea = GER_tank_idea
 			}
 			custom_effect_tooltip = tooltip_white_line
 			add_tech_bonus = {
