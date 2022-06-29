@@ -137,12 +137,9 @@ focus_tree = {
 			focus = GER_political_1
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = GER_security_prerequisite
-				OR = {
-					has_idea = GER_franz_von_papen
-					has_idea = GER_kurt_von_schleicher
-				}
+			OR = {
+				has_idea = GER_franz_von_papen_sic
+				has_idea = GER_kurt_von_schleicher_sic
 			}
 		}
 		x = -2
@@ -196,7 +193,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_embrace_faud"
-			add_political_power = -25
 			add_ideas = GER_embrace_faud_idea
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
@@ -239,7 +235,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_a_christian_trade_union"
-			add_political_power = 25
+			add_political_power = 40
 			add_ideas = GER_dcgb_idea
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
@@ -447,7 +443,7 @@ focus_tree = {
 		x = 0
 		y = 4
 		relative_position_id = GER_political_1
-		cost = 7
+		cost = 6
 
 		ai_will_do = {
 			factor = 50
@@ -489,10 +485,7 @@ focus_tree = {
 			focus = GER_finalise_centralisation
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = GER_schleicher_prerequisite
-				has_idea = GER_kurt_von_schleicher
-			}
+			has_idea = GER_kurt_von_schleicher_sic
 		}
 
 		select_effect = {
@@ -561,7 +554,7 @@ focus_tree = {
 		id = GER_black_monday_aftermath
 		icon = GFX_goal_Empower_the_Reichsbank
 		available = {
-			has_country_flag = GER_black_monday_wow
+			has_idea = GER_black_monday
 		}
 		x = 10
 		y = 0
@@ -599,9 +592,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_groener1"
 			random_owned_controlled_state = {
+				prioritize = { 64 }
 				limit = {
-					is_core_of = GER
-					industrial_complex > 1
+					is_core_of = ROOT
+					industrial_complex > 0
 				}
 				remove_building = {
 					type = industrial_complex
@@ -609,9 +603,10 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
+				prioritize = { 66 }
 				limit = {
-					is_core_of = GER
-					industrial_complex > 1
+					is_core_of = ROOT
+					industrial_complex > 0
 				}
 				remove_building = {
 					type = industrial_complex
@@ -619,9 +614,10 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
+				prioritize = { 65 }
 				limit = {
-					is_core_of = GER
-					industrial_complex > 1
+					is_core_of = ROOT
+					industrial_complex > 0
 				}
 				remove_building = {
 					type = industrial_complex
@@ -629,9 +625,10 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
+				prioritize = { 68 }
 				limit = {
-					is_core_of = GER
-					industrial_complex > 1
+					is_core_of = ROOT
+					industrial_complex > 0
 				}
 				remove_building = {
 					type = industrial_complex
@@ -639,9 +636,10 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
+				prioritize = { 147 }
 				limit = {
-					is_core_of = GER
-					industrial_complex > 1
+					is_core_of = ROOT
+					industrial_complex > 0
 				}
 				remove_building = {
 					type = industrial_complex
@@ -652,10 +650,7 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_hjalmar_schacht
 			hidden_effect = {
-				remove_advisor_role = {
-					character = GER_karl_helfferich
-					slot = political_advisor
-				}
+				GER_karl_helfferich = { remove_political_advisor_role = yes }
 			}
 		}
 	}
@@ -758,10 +753,7 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_karl_helfferich
 			hidden_effect = {
-				remove_advisor_role = {
-					character = GER_hjalmar_schacht
-					slot = political_advisor
-				}
+				GER_hjalmar_schacht = { remove_political_advisor_role = yes }
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
@@ -1209,7 +1201,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = GER_economy
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 25
@@ -1224,15 +1216,31 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_siemens"
-			custom_effect_tooltip = GER_siemens_unlock
-			55 = {
+			random_owned_controlled_state = {
+				prioritize = { 55 }
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+				}
 				add_extra_state_shared_building_slots = 2
 				set_building_level = { type = infrastructure level = 5 }
 			}
-			51 = {
+			random_owned_controlled_state = {
+				prioritize = { 51 }
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+				}
 				add_extra_state_shared_building_slots = 2
 				set_building_level = { type = infrastructure level = 5 }
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = siemens_schuckert
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1261,28 +1269,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_infra_1"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1291,28 +1283,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1349,28 +1325,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_infra_2"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1379,28 +1339,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1426,7 +1370,7 @@ focus_tree = {
 		x = 3
 		y = 0
 		relative_position_id = GER_siemens
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 25
@@ -1441,24 +1385,45 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_krupp_steel_focus"
-			custom_effect_tooltip = GER_krupp_steel_unlock
-			51 = {
-				add_extra_state_shared_building_slots = 2
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
-
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					has_idea = krupp
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
 				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_idea = krupp }
 				swap_ideas = {
 					remove_idea = krupp
 					add_idea = krupp2
 				}
+			}
+			else = {
+				custom_effect_tooltip = tooltip_white_line
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = krupp2
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
@@ -1474,7 +1439,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_siemens
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 25
@@ -1489,28 +1454,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_civ_industry_1"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1519,28 +1468,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1562,7 +1495,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = GER_siemens
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 25
@@ -1577,28 +1510,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_civ_industry_2"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1607,33 +1524,31 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1651,7 +1566,7 @@ focus_tree = {
 		x = 1
 		y = 3
 		relative_position_id = GER_siemens
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 25
@@ -1666,28 +1581,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_civ_industry_3"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1696,33 +1595,31 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1748,20 +1645,12 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 25
-				has_completed_focus = GER_black_monday_finish
-			}
+			factor = 500
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_industry_finished"
 			add_ideas = german_eco_finished
-			country_event = {
-				id = black.10
-				days = 15
-			}
 		}
 	}
 	focus = {
@@ -1769,7 +1658,6 @@ focus_tree = {
 		icon = GFX_goal_German_Investements
 		available = {
 			has_completed_focus = GER_black_monday_finish
-			has_completed_focus = GER_civ_industry_2
 		}
 		prerequisite = {
 			focus = GER_infra_2
@@ -1783,20 +1671,12 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 25
-				has_completed_focus = GER_black_monday_finish
-			}
+			factor = 500
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_further_siemens_contracts"
 			add_ideas = GER_Sie_Contracts
-			country_event = {
-				id = black.10
-				days = 15
-			}
 		}
 	}
 	focus = {
@@ -1809,7 +1689,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = GER_siemens
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 25
@@ -1844,7 +1724,7 @@ focus_tree = {
 		x = 5
 		y = 2
 		relative_position_id = GER_siemens
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 25
@@ -1862,13 +1742,28 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
 					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-					prefer_home_area_states_unless_filled = yes
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1886,7 +1781,7 @@ focus_tree = {
 		x = 4
 		y = 3
 		relative_position_id = GER_siemens
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 25
@@ -1904,13 +1799,28 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
 					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-					prefer_home_area_states_unless_filled = yes
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1929,7 +1839,7 @@ focus_tree = {
 		x = 6
 		y = 3
 		relative_position_id = GER_siemens
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 25
@@ -1945,11 +1855,13 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_arms_industry"
 			add_ideas = GER_invest_arms_industry
+			custom_effect_tooltip = tooltip_white_line
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
 					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-					prefer_home_area_states_unless_filled = yes
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1974,7 +1886,7 @@ focus_tree = {
 		x = 6
 		y = 0
 		relative_position_id = GER_siemens
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 25
@@ -1989,20 +1901,51 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_Mauser_werke"
-			custom_effect_tooltip = mauser_werke_desc
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
 					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-					prefer_home_area_states_unless_filled = yes
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = mauser
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -2016,7 +1959,7 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = GER_siemens
-		cost = 5
+		cost = 6
 
 		ai_will_do = {
 			factor = 25
@@ -2031,24 +1974,40 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_Infantry_divs"
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_tech_bonus = {
 				name = GER_Infantry_divs
 				bonus = 1
 				uses = 1
 				category = infantry_weapons
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-					prefer_home_area_states_unless_filled = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -2082,21 +2041,16 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_mobile_3"
 			#custom_effect_tooltip = GER_doctrine_mobile_3_tooltip
-#			hidden_effect = {
-				swap_ideas = {
-					remove_idea = GER_invest_arms_industry
-					add_idea = GER_tank_idea
-				}
-#			}
+			swap_ideas = {
+				remove_idea = GER_invest_arms_industry
+				add_idea = GER_tank_idea
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_tech_bonus = {
 				name = GER_doctrine_mobile_3
 				bonus = 1
 				uses = 1
 				category = armor
-			}
-			country_event = {
-				id = black.10
-				days = 15
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4239,11 +4193,38 @@ focus_tree = {
 		cost = 5
 		available = {
 			can_declare_war_on = 118.owner
+			if = {
+				limit = {
+					OR = {
+						INT = { is_in_faction_with = var:118.owner }
+						RUS = { is_in_faction_with = var:118.owner }
+						SOV = { is_in_faction_with = var:118.owner }
+					}
+				}
+				second_weltkrieg_can_start = yes
+			}
+			is_faction_leader = yes
 		}
-		bypass_if_unavailable = yes
+		continue_if_invalid = yes
+		cancel = {
+			is_faction_leader = no
+		}
+		bypass = {
+			NOT = { can_declare_war_on = POL }
+		}
 
 		ai_will_do = {
 			factor = 0
+			modifier = {
+				factor = 0
+				var:118.owner = {
+					is_in_faction = yes
+					faction_leader = {
+						NOT = { tag = RUS }
+						has_socialist_government = no
+					}
+				}
+			}
 			modifier = {
 				factor = 0
 				date < 1939.1.1
@@ -4940,13 +4921,40 @@ focus_tree = {
 		cost = 5
 		available = {
 			can_declare_war_on = POL
+			if = {
+				limit = {
+					OR = {
+						INT = { is_in_faction_with = POL }
+						RUS = { is_in_faction_with = POL }
+						SOV = { is_in_faction_with = POL }
+					}
+				}
+				second_weltkrieg_can_start = yes
+			}
+			is_faction_leader = yes
 		}
-		bypass_if_unavailable = yes
+		continue_if_invalid = yes
+		cancel = {
+			is_faction_leader = no
+		}
+		bypass = {
+			NOT = { can_declare_war_on = POL }
+		}
 
 		will_lead_to_war_with = POL
 
 		ai_will_do = {
 			factor = 25
+			modifier = {
+				factor = 0
+				POL = {
+					is_in_faction = yes
+					faction_leader = {
+						NOT = { tag = RUS }
+						has_socialist_government = no
+					}
+				}
+			}
 			modifier = {
 				factor = 0
 				has_war = yes

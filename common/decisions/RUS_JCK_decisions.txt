@@ -2,14 +2,20 @@ RUS_foreign_affairs = {
 	RUS_annex_AZJ = {
 		icon = generic_research
 		allowed = {
-			original_tag = RUS
+			OR = {
+				original_tag = RUS
+				original_tag = SOV
+			}
 		}
 		available = {
 			date > 1939.3.1
 			has_completed_focus = RUS_The_Road_To_War
 		}
 		visible = {
-			original_tag = RUS
+			OR = {
+				original_tag = RUS
+				original_tag = SOV
+			}
 		}
 		fire_only_once = yes
 		cost = 0
