@@ -19,7 +19,7 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 
 #### The 2nd Weltkrieg
 
-* The 2nd Weltkrieg kicks off over Alsace-Lorraine. The Reichspakt and Entente fight against the Third Internationale, Co-Prosperity Sphere, and Moscow Accord to determine the state of the world.
+* The 2nd Weltkrieg kicks off over long standing disputes between the Reichspakt and its neighbors. The Reichspakt and Entente fight against the Third Internationale, Co-Prosperity Sphere, and Moscow Accord to determine the state of the world.
 
 #### Europe Only
 
