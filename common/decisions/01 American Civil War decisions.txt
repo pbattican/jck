@@ -18,7 +18,6 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 			arms_factory > 4
 			has_socialist_government = yes
 			has_global_flag = USA_civil_war_begun_flag
-			NOT = { has_global_flag = USA_civil_war_over_flag }
 			NOT = {
 				has_war_with = CSA
 				has_country_flag = ACW_supported_CSA
@@ -71,7 +70,6 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 			arms_factory > 4
 			NOT = { has_socialist_government = yes }
 			has_global_flag = USA_civil_war_begun_flag
-			NOT = { has_global_flag = USA_civil_war_over_flag }
 			NOT = {
 				has_war_with = USA
 				has_country_flag = ACW_supported_CSA
@@ -143,7 +141,6 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 			arms_factory > 4
 			NOT = {	has_socialist_government = yes }
 			has_global_flag = USA_civil_war_begun_flag
-			NOT = { has_global_flag = USA_civil_war_over_flag }
 			NOT = {
 				has_war_with = TEX
 				has_country_flag = ACW_supported_CSA
@@ -210,7 +207,6 @@ ACW_foreign_volunteer_decisions = {# Foreign Volunteers
 			arms_factory > 4
 			NOT = {	has_socialist_government = yes }
 			has_global_flag = USA_civil_war_begun_flag
-			NOT = { has_global_flag = USA_civil_war_over_flag }
 			NOT = {
 				has_war_with = PSA
 				has_country_flag = ACW_supported_CSA
@@ -353,13 +349,11 @@ ACW_civil_war_decisions = {
 		visible = {
 			has_global_flag = USA_civil_war_begun_flag
 			has_global_flag = { flag = USA_civil_war_begun_flag days > 90 }
-			NOT = { has_global_flag = USA_civil_war_over_flag }
 			is_in_faction = no
 			OR = {
 				AND = {
 					NOT = { country_exists = USA }
 					CSA = {
-						exists = yes
 						has_war_with = ROOT
 						has_war_with = FROM
 					}
@@ -367,7 +361,6 @@ ACW_civil_war_decisions = {
 				AND = {
 					NOT = { country_exists = CSA }
 					USA = {
-						exists = yes
 						has_war_with = ROOT
 						has_war_with = FROM
 					}
@@ -456,7 +449,6 @@ ACW_civil_war_decisions = {
 		visible = {
 			has_global_flag = USA_civil_war_begun_flag
 			has_global_flag = { flag = USA_civil_war_begun_flag days > 90 }
-			NOT = { has_global_flag = USA_civil_war_over_flag }
 			NOT = { country_exists = PSA }
 			is_in_faction = no
 			country_exists = CSA
@@ -558,7 +550,6 @@ ACW_civil_war_decisions = {
 		visible = {
 			has_country_flag = ACW_has_deal_with_devil
 			has_global_flag = USA_civil_war_begun_flag
-			NOT = { has_global_flag = USA_civil_war_over_flag }
 			FROM = {
 				exists = yes
 				has_country_flag = ACW_deal_with_devil_@ROOT
@@ -653,7 +644,6 @@ ACW_civil_war_decisions = {
 		visible = {
 			has_global_flag = USA_civil_war_begun_flag
 			NOT = {
-				has_global_flag = USA_civil_war_over_flag
 				has_country_flag = USA_assassinated_reed
 				has_country_flag = USA_ACW_compromise_rejected
 				has_country_flag = USA_assassinated_long
@@ -710,7 +700,6 @@ ACW_civil_war_decisions = {
 		}
 		visible = {
 			has_global_flag = USA_civil_war_begun_flag
-			NOT = { has_global_flag = USA_civil_war_over_flag }
 			has_war_with = USA
 		}
 
@@ -1747,7 +1736,6 @@ ACW_rocky_mountain_ceasefire_decisions = {
 		}
 
 		visible = {
-			has_global_flag = PSA_rockies_ceasefire
 			can_declare_war_on = FROM
 			is_subject = no
 		}
@@ -1857,7 +1845,6 @@ ACW_rocky_mountain_ceasefire_decisions = {
 			}
 		}
 		visible = {
-			has_global_flag = PSA_rockies_ceasefire
 			country_exists = FROM
 			NOT = { has_war_with = FROM }
 		}
@@ -2008,10 +1995,11 @@ ACW_mobilization_decisions = {
 		ai_will_do = {
 			base = 50
 			modifier = {
-				num_divisions < 50
+				add = FROM.num_of_civilian_factories
 			}
 			modifier = {
-				add = FROM.num_of_civilian_factories
+				factor = 0
+				num_divisions < 70
 			}
 		}
 
@@ -2077,6 +2065,10 @@ ACW_mobilization_decisions = {
 			base = 10
 			modifier = {
 				add = FROM.num_of_civilian_factories
+			}
+			modifier = {
+				factor = 0
+				num_divisions < 70
 			}
 		}
 

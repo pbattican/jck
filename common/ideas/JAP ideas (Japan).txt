@@ -1455,7 +1455,6 @@ ideas = {
 			allowed = { always = no }
 			available = {
 				has_country_flag = JAP_economic_sphere_member
-				is_subject = no
 			}
 			modifier = {
 				political_power_cost = 0.20
@@ -1480,7 +1479,6 @@ ideas = {
 			allowed = { always = no }
 			available = {
 				has_country_flag = JAP_economic_sphere_member
-				is_subject = no
 			}
 			modifier = {
 				political_power_cost = 0.50
@@ -1505,7 +1503,6 @@ ideas = {
 			allowed = { always = no }
 			available = {
 				has_country_flag = JAP_economic_sphere_member
-				is_subject = no
 			}
 			modifier = {
 				political_power_cost = 0.75
