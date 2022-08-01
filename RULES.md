@@ -187,15 +187,12 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 
 * Puppets and allies must be called into player wars immediately. Players have to accept when called into a player war
 * Faction members may join AI/rebellion wars at their discretion. (eg. IRA uprising against **Union of Britain**, Revolts in **National France** etc)
-* Puppets are played at the overlords discretion. 
-* Puppets must attempt to remain loyal to their overlord (exception: **Dutch East Indies** / **Insulindia** and **Patagonia Workers Front**)
 * A player must take tiles where Volunteers arrive (usually ports, such as Philadelphia / New York for CSA)
 * Deleting factories is not allowed except when at maximum factory-capacity.
 * Factory boosting is not allowed (eg. mass licensing tech/ mass buying resources you don’t need)
 * Factory tradeback is allowed (example: sending 2 civs back when someone trades 16 steel from you) 
 * You may only license tech from / to other members of your faction or the **Legation Cities**
 * If you die as a civil war nation, you may not play another nation within the same civil war
-* If a player is subbing for an important minor, their initial nation is considered to have a player for the rest of the session for rules purposes.   
 
 ## <span style="text-decoration:underline;">Exploits</span> - Non-exhaustive list
 <span style="text-decoration:underline;">Exploits are not allowed</span> - the only one that is allowed is field marshall frontlines
@@ -219,31 +216,24 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 
 ## Alignment
 
-
-
-* A nation is considered aligned to a certain faction, if the player controlling it at some point in the game states his support for that faction. Once an alignment is made, it cannot be altered unless the faction stops existing
+* A nation is considered aligned to a certain faction at the start of the game.
 * Once you align yourself with a faction, you follow the faction rules. This does not include military access.
 
 ## War and Peace Rules
 
 Player wars may not be declared until the start of “**The Second Weltkrieg**”. 
 
-
-
 * **_You may not justify manually!!!!!_**
 * **Germany** and the **Commune of France** may only declare war on each other after June 14th, 1939 to start **“The Second Weltkrieg”**
 * Your faction must take all possible land unless specified in the nation specific rules.
-* Player nations within the same faction may not pass between each other to gain points in peace deals with other factions present, you MUST spend your points if you are able. (ie. take land or give points to an ally)
 * In a peace deal, you may not annex territory occupied by foreign troops. 
 * It is forbidden to give Military and naval access to any nation which is not either 1) a member of your faction, or 2) is facing the same faction in a war as you
 * You may not annex or puppet **Legation Cities** through influence decisions
 
 ## Division Rules
 
-
-
 * **_18 width is the minimum_** for deploying new divisions.
-* **_No Space Marines_**. Tanks cannot be mixed with infantry divisions. Cavalry / Bicycles allowed.
+* **_No Space Marines_**. Tanks cannot be mixed with infantry divisions.
 * You must have an existing direct land or sea supply route to a division to switch templates
 * You may not delete a division or change a divisions template if it is within 3 tiles from enemy forces
 * You may only deploy units within 3 provinces from any enemy unit.
@@ -253,12 +243,12 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 
 <span style="text-decoration:underline;">Volunteers</span>
 
-* You may only send volunteers to ideological partners of your faction leader, future faction leader (see ideological spectrum above), or player-controlled future faction members (regardless of ideology)
+* You may only send volunteers to ideological partners of your faction leader
 * **Each faction has a maximum limit of 8 volunteers usable in any single conflict until the Second Weltkrieg**. **_The American Civil War’s limit is 10. _**
 * **_Volunteer width is 24W if a player is directly involved in the war, otherwise no maximum width. American Civil War has no limit._**
 * Motorized/motorized variants, Mechanized, tanks/tank variants and armored recon are not allowed in volunteer divisions until **the Second Weltkrieg**.**_ ACW only: Ignore previous, light tank battalions are the only tanks allowed._** _Light Armored Recon (Armored Cars) and motorized recon are allowed._
 * Sending volunteers to **Qing is BANNED**. **Sending volunteers to player nations in China that ally with the QingEmpire is also BANNED**.
-* The Co Prosperity Sphere is allowed to send volunteers to the **Pacific States of America [PSA]**
+* The Co Prosperity Sphere and Moscow Accord are allowed to send volunteers to the **Pacific States of America [PSA]**
 * Volunteers to **Afghanistan** are not allowed. 
 * Volunteers To **Dutch East Indies** are not allowed if there is a player on **Insulindia**
 * You may not recall volunteers if your volunteers are within 3 tiles from enemy forces.
@@ -271,7 +261,7 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 ### <span style="text-decoration:underline;">Attachées</span>
 
 * You may only send attachées to ideological partners (see ideological spectrum above). Faction members follow the ideology of their faction leader
-* The Co Prosperity Sphere is allowed to send attachées to the **PSA**. They are never allowed to send an attachee to the **AUS**. 
+* The Co Prosperity Sphere and Moscow Accord are allowed to send attachées to the **PSA**. They are never allowed to send an attachee to the **AUS**. 
 
 ## Navy Rules
 
@@ -280,7 +270,8 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 
 ## Air Rules
 
-* Minimum air wing size is 100. Air volunteer wings must come as close as possible to 100
+* Minimum air wing size is 100. Air wings must come as close as possible to 100
+* CAS / Navs / Tacs / Strats **max** air wing size = 100
 
 ## Nation Specific Rules
 
@@ -310,8 +301,8 @@ Neutral nations may not join a faction. Player neutrals may not receive or send 
 ### <span style="text-decoration:underline;">Civil War nations</span>
 
 * Player Civil-War nations cannot deliberately sabotage their nation through any method (e.g. placing troops in unfavourable positions)
-* The PSA is the only allowed ACW nation. The Co-Pro co-op has the option to hotjoin in as the PSA if the PSA is not taken. If no USA player, this does not apply.
-* No ACW nation may be admitted to faction.
+* The PSA is the only allowed ACW nation. The Co-Pro or Moscow Accord co-ops have the option to hotjoin in as the PSA. If no USA player, this does not apply.
+* No ACW nation may be admitted to faction, including USA.
 
 ## Reichspakt countries
 
