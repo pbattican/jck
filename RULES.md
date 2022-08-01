@@ -208,16 +208,9 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 
 ## Ideological Spectrum
 
-
-
 * <span style="text-decoration:underline;">Right wing ideologies</span>: National Populists, Paternal Autocrats, Authoritarian Democrats
 * <span style="text-decoration:underline;">Center wing ideologies</span> : Social Conservatism, Market Liberalism, Social Liberalism, Social Democrats
 * <span style="text-decoration:underline;">Left wing ideologies</span>: Radical Socialism, Syndicalism, Totalism
-
-## Alignment
-
-* A nation is considered aligned to a certain faction at the start of the game.
-* Once you align yourself with a faction, you follow the faction rules. This does not include military access.
 
 ## War and Peace Rules
 
@@ -410,7 +403,7 @@ The Entente and nations in it are always considered **<span style="text-decorati
 
 
 * **USA** must intend to remain as the **USA **and not a civil war faction.
-* **USA** is considered aligned with the Entente, must join the Entente, and is considered **Center Wing**
+* **USA** is considered must join the Entente, and is considered **Center Wing**
 * **USA** is forced to elect Jack Reed.
 * **USA** cannot use decisions for the color- war plans before joining the Entente faction.
 * **USA** is not allowed to peacefully unite with the **PSA**
@@ -463,16 +456,12 @@ The Moscow accord is always considered **<span style="text-decoration:underline;
 
 ### <span style="text-decoration:underline;">Argentina Rules</span>
 
-
-
 * **Argentina** may choose whether or not to ally the Reichspakt or Entente
 * **Argentina** player may choose whom to give their trade deal to (**Germany** or **Canada**)
 
 ### <span style="text-decoration:underline;">Brazil Rules</span>
 
-
-
-* **Brazil** may choose whether to align Entente or Reichspakt
+* **Brazil** may choose whether to ally Entente or Reichspakt
 
 ### <span style="text-decoration:underline;">Mexico Rules</span>
 
