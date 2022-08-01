@@ -287,7 +287,7 @@ Player wars may not be declared until the start of â€œ**The Second Weltkrieg**â€
 * **Don Kuban Union, Azerbaijan, Turkestan, Alash Autonomy**
 * **Bharatiya Commune, Princely Federation, Madras**
 * **Bohemia, Illyria, Hungary, Galicia and Lodomeria**
-* **Hawaii, CSA, AUS**
+* **Hawaii, CSA, AUS, PSA, USA**
 * **Iceland**
 
 ### <span style="text-decoration:underline;">Neutral Nation(s)</span>
