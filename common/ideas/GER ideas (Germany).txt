@@ -272,7 +272,10 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_mil_support_idea" }
 			picture = advisors_germany
 			allowed = { always = no }
-			available = { country_exists = GER }
+			available = {
+				country_exists = GER
+				NOT = { has_war_with = GER }
+			}
 			modifier = {
 				land_doctrine_cost_factor = -0.1
 			}
@@ -310,8 +313,8 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.15
-				industrial_capacity_factory = -0.20
-				production_speed_buildings_factor = -0.20
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.15
 			}
 		}
 
@@ -321,8 +324,8 @@ ideas = {
 			picture = great_depression
 			allowed = { always = no }
 			modifier = {
-				industrial_capacity_factory = -0.20
-				production_speed_buildings_factor = -0.20
+				industrial_capacity_factory = -0.10
+				production_speed_buildings_factor = -0.10
 			}
 		}
 
@@ -333,8 +336,8 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.20
-				industrial_capacity_factory = -0.15
-				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
 			}
 		}
 
@@ -345,8 +348,6 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.10
-				industrial_capacity_factory = -0.05
-				production_speed_buildings_factor = -0.05
 			}
 		}
 

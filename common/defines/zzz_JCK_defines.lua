@@ -3,8 +3,8 @@
 ------------------------------------------ Game ------------------------------------------
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 --12
 NDefines.NGame.GAME_SPEED_SECONDS = { 2, 0.5, 0.2, 0.15, 0.1 }
-NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 60
-NDefines.NGame.LAG_DAYS_FOR_PAUSE = 60
+NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 72
+NDefines.NGame.LAG_DAYS_FOR_PAUSE = 72
 
 ------------------------------------------ Graphics ------------------------------------------ 
 NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 800						-- 1100 

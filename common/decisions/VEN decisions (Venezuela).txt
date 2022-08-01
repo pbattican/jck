@@ -83,8 +83,10 @@ VEN_essequibo_decisions = {
 		icon = eng_trade_unions_demand
 		allowed = { tag = VEN }
 		available = {
-			has_full_control_of_state = 1078
-			has_full_control_of_state = 1079
+			WIF = {
+				has_full_control_of_state = 1078
+				has_full_control_of_state = 1079
+			}
 		}
 		visible = {
 			WIF = {

@@ -1281,7 +1281,6 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				monthly_population = -0.25
-				civilian_intel_to_others = 0.25
 			}
 		}
 		USA_great_migration3 = {
