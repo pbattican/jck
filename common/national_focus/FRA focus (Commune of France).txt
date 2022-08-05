@@ -118,7 +118,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_chemins_de_fer"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
@@ -129,7 +129,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
@@ -140,7 +140,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
@@ -170,7 +170,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_autoroutes"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
@@ -181,7 +181,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
@@ -192,7 +192,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
@@ -310,7 +310,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_fac_towns"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
@@ -323,7 +323,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
@@ -336,7 +336,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
@@ -388,7 +388,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_inter_coop"
 			add_ideas = FRA_inter_coop_idea
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
@@ -428,7 +428,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_orth_syndicalism"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
@@ -441,7 +441,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
@@ -498,7 +498,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_reduce_unemploy"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
@@ -509,7 +509,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
@@ -520,7 +520,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
@@ -550,7 +550,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_improve_manage"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
@@ -563,7 +563,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
@@ -576,7 +576,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
@@ -637,7 +637,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_modern_farms"
 			add_ideas = FRA_modern_farms_idea
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
@@ -650,7 +650,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
@@ -663,7 +663,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
@@ -717,7 +717,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_war_industry"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
@@ -730,7 +730,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
@@ -770,7 +770,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_cooperatives"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
@@ -783,7 +783,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
@@ -796,7 +796,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
@@ -834,7 +834,7 @@ focus_tree = {
 					is_core_of = ROOT
 					is_metropolis_state = no
 				}
-				add_extra_state_shared_building_slots = 3
+				increase_state_category_by_two_levels = yes
 			}
 			random_owned_controlled_state = {
 				prioritize = { 25 }
@@ -842,7 +842,7 @@ focus_tree = {
 					is_core_of = ROOT
 					is_metropolis_state = no
 				}
-				add_extra_state_shared_building_slots = 2
+				increase_state_category_by_two_levels = yes
 			}
 			random_owned_controlled_state = {
 				prioritize = { 26 }
@@ -850,7 +850,7 @@ focus_tree = {
 					is_core_of = ROOT
 					is_metropolis_state = no
 				}
-				add_extra_state_shared_building_slots = 2
+				increase_state_category_by_two_levels = yes
 			}
 			random_owned_controlled_state = {
 				prioritize = { 763 }
@@ -858,7 +858,7 @@ focus_tree = {
 					is_core_of = ROOT
 					is_metropolis_state = no
 				}
-				add_extra_state_shared_building_slots = 2
+				increase_state_category_by_two_levels = yes
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -899,7 +899,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_ruralism"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
@@ -912,7 +912,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
@@ -1141,7 +1141,7 @@ focus_tree = {
 				uses = 1
 				category = construction_tech
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
@@ -1154,7 +1154,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
@@ -1187,7 +1187,6 @@ focus_tree = {
 
 		available = {
 			controls_state = 27
-			controls_state = 779
 			controls_state = 785
 		}
 
@@ -1205,7 +1204,7 @@ focus_tree = {
 					level = 2
 				}
 			}
-			779 = {
+			785 = {
 				add_building_construction = {
 					type = bunker
 					province = 11516
@@ -1216,8 +1215,6 @@ focus_tree = {
 					province = 521
 					level = 2
 				}
-			}
-			785 = {
 				add_building_construction = {
 					type = bunker
 					province = 5291
@@ -1360,7 +1357,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_military_buildup_three"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = arms_factory size > 1 include_locked = yes }
@@ -1373,7 +1370,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
@@ -1386,7 +1383,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
 					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
@@ -1573,7 +1570,13 @@ focus_tree = {
 			factor = 1000
 			modifier = {
 				factor = 0
+				NOT = { has_country_flag = fra_populace_demands_war }
 				alliance_strength_ratio < 0.8
+				GER = { alliance_strength_ratio > 1.5 }
+				UKR = {
+					is_in_faction_with = GER
+					surrender_progress < 0.1
+				}
 			}
 			modifier = {
 				factor = 0
@@ -1585,6 +1588,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0
+				NOT = { has_country_flag = fra_populace_demands_war }
 				country_exists = SOV
 				SOV = { is_faction_leader = no } #hasn't recovered from the civil war yet
 			}
@@ -1592,18 +1596,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_War_with_germany"
-			declare_war_on = {
-				type = annex_everything
+			create_wargoal = {
+				type = topple_government
 				target = GER
-			}
-			effect_tooltip = {
-				if = {
-					limit = { NOT = { has_global_flag = second_weltkrieg_has_started } }
-					add_named_threat = {
-						threat = 20
-						name = second_weltkrieg_threat
-					}
-				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -1861,6 +1856,7 @@ focus_tree = {
 		}
 		will_lead_to_war_with = SPA
 		will_lead_to_war_with = SPR
+		will_lead_to_war_with = SWF
 		will_lead_to_war_with = POR
 
 		x = 2
@@ -1879,8 +1875,9 @@ focus_tree = {
 			if = {
 				limit = {
 					can_declare_war_on = 41.owner
-					41 = {
-						owner = { has_socialist_government = no }
+					OR = {
+						is_ai = no
+						var:41.owner = { has_socialist_government = no }
 					}
 				}
 				declare_war_on = {
@@ -1891,7 +1888,10 @@ focus_tree = {
 			if = {
 				limit = {
 					can_declare_war_on = POR
-					POR = { has_socialist_government = no }
+					OR = {
+						is_ai = no
+						POR = { has_socialist_government = no }
+					}
 				}
 				declare_war_on = {
 					target = POR
@@ -3157,7 +3157,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_arsenaux_back_on"
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
 					is_core_of = ROOT
@@ -3171,7 +3171,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
 					is_core_of = ROOT
