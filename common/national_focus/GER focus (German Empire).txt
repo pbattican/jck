@@ -443,7 +443,7 @@ focus_tree = {
 		x = 0
 		y = 4
 		relative_position_id = GER_political_1
-		cost = 6
+		cost = 8
 
 		ai_will_do = {
 			factor = 50
@@ -2869,9 +2869,11 @@ focus_tree = {
 		icon = GFX_goal_generic_air_fighter_new
 		prerequisite = {
 			focus = GER_heerflieger
+			focus = GER_luftwaffe	
 		}
-		x = 4
-		y = 2
+
+		x = 5
+		y = 3
 		relative_position_id = GER_mil_expansion
 		cost = 6
 
@@ -2922,11 +2924,11 @@ focus_tree = {
 		id = GER_Luftwaffe_airbases_1
 		icon = GFX_goal_generic_airports
 		prerequisite = {
-			focus = GER_luftwaffe
+			#focus = GER_luftwaffe #JCK CHANGE
 			focus = GER_heerflieger
 		}
-		x = 5
-		y = 3
+		x = 4
+		y = 2
 		relative_position_id = GER_mil_expansion
 		cost = 6
 		ai_will_do = {
@@ -2971,11 +2973,11 @@ focus_tree = {
 		id = GER_institut
 		icon = GFX_focus_CZE_military_aeronautical_institute
 		prerequisite = {
-			focus = GER_Luftwaffe_airbases_1
+			focus = GER_sturzflieger
 		}
-		x = 4 # jck change
-		y = 4 # jck change
-		relative_position_id = GER_mil_expansion
+		x = -1 # jck change
+		y = 1 # jck change
+		relative_position_id = GER_sturzflieger
 		cost = 6
 
 		ai_will_do = {
@@ -2984,12 +2986,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_institut"
-			add_tech_bonus = {
-				name = air_equipment
-				bonus = 1.0
-				uses = 1
-				category = air_equipment
-			}
+			# add_tech_bonus = {
+			# 	name = air_equipment
+			# 	bonus = 1.0
+			# 	uses = 1
+			# 	category = air_equipment
+			# }
 			add_doctrine_cost_reduction = {
 				name = air_doctrine
 				cost_reduction = 0.5
