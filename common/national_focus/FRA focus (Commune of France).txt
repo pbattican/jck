@@ -121,33 +121,33 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
-					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+					free_building_slots = { building = infrastructure size > 1 include_locked = yes }
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
-					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+					free_building_slots = { building = infrastructure size > 1 include_locked = yes }
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
-					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+					free_building_slots = { building = infrastructure size > 1 include_locked = yes }
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1024,7 +1024,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_road_to_war"
 			add_war_support = 0.10
-			add_timed_idea = { idea = FRA_to_war_idea days = 230 }
+			add_timed_idea = { idea = FRA_to_war_idea days = 300 }
 			add_named_threat = {
 				threat = 2
 				name = FRA_rearmament_threat
@@ -1337,7 +1337,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_military_buildup_two"
 			add_political_power = 50
-			add_timed_idea = { idea = FRA_military_buildup_two_idea days = 230 }
+			add_timed_idea = { idea = FRA_military_buildup_two_idea days = 300 }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
 	}

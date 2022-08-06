@@ -22,12 +22,12 @@ annex_belgium_rule = {
 	group = "Annex AI Nations"
 	icon = "GFX_wargoals"
 
-	default = {
+	option = {
 		name = ANNEX
 		text = "Annex Flanders Wallonia to Germany"
 		desc = ""
 	}
-	option = {
+	default = {
 		name = NORMAL
 		text = "Normal Flanders Wallonia"
 		desc = ""
@@ -102,7 +102,7 @@ allowed_snorkel_tech = {
 allowed_anderson_doctrine = {
 	name = "Anderson Doctrine Allowed"
 	group = "Anderson Doctrine"
-	icon = "GFX_goal_generic_territory_or_war"
+	icon = "GFX_wargoals"
 
 	default = {
 		name = no
