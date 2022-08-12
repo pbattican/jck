@@ -134,6 +134,7 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 40	--vanilla=24
 NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 14
 
 ------------------------------------------ AI ------------------------------------------
+NDefines.NAI.DIPLOMACY_ACCEPT_VOLUNTEERS_BASE = 200;	-- Base value of volunteer acceptance (help is welcome)
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_BASE = 100;
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 0;
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0;
