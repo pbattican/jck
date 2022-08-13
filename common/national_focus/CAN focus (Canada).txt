@@ -4420,6 +4420,12 @@ focus_tree = {
 		y = 4
 
 		available = {
+			has_game_rule = {
+				rule = allowed_quid_pro_quo
+				option = allowed
+			}
+
+
 			is_faction_leader = yes
 			if = {
 				limit = { country_exists = CSA }
