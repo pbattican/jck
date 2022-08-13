@@ -8133,25 +8133,25 @@ country_event = { #Russian claims FIN
 	option = {
 		name = rusfor.1229.a #Never!
 		ai_chance = {
-			base = 95
-			modifier = {
-				factor = 0
-				any_enemy_country = {
-					OR = {
-						is_actual_major = yes
-						is_neighbor_of = ROOT
-					}
-				}
-			}
-			modifier = {
-				add = -15
-				RUS = {
-					NOT = {
-						surrender_progress > 0
-						any_enemy_country = { is_actual_major = yes }
-					}
-				}
-			}
+			base = 100
+			# modifier = {
+			# 	factor = 0
+			# 	any_enemy_country = {
+			# 		OR = {
+			# 			is_actual_major = yes
+			# 			is_neighbor_of = ROOT
+			# 		}
+			# 	}
+			# }
+			# modifier = {
+			# 	add = -15
+			# 	RUS = {
+			# 		NOT = {
+			# 			surrender_progress > 0
+			# 			any_enemy_country = { is_actual_major = yes }
+			# 		}
+			# 	}
+			# }
 		}
 		custom_effect_tooltip = RUS_will_declare_war_on_ROOT
 		FROM = {
@@ -8166,22 +8166,22 @@ country_event = { #Russian claims FIN
 	option = {
 		name = rusfor.1229.b #All right.
 		ai_chance = {
-			base = 5
-			modifier = {
-				factor = 30
-				is_in_faction = no
-				RUS = {
-					NOT = {
-						surrender_progress > 0
-						any_enemy_country = { is_actual_major = yes }
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				tag = FIN
-				has_government = national_populist
-			}
+			base = 0 # JCK Change
+			# modifier = {
+			# 	factor = 0 # JCK Change
+			# 	is_in_faction = no
+			# 	RUS = {
+			# 		NOT = {
+			# 			surrender_progress > 0
+			# 			any_enemy_country = { is_actual_major = yes }
+			# 		}
+			# 	}
+			# }
+			# modifier = {
+			# 	factor = 0
+			# 	tag = FIN
+			# 	has_government = national_populist
+			# }
 		}
 		add_political_power = -150
 		effect_tooltip = {
