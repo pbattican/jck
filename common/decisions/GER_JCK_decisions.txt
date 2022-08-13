@@ -1,0 +1,18 @@
+crisis = {
+	GER_occupy_rif = {
+		icon = generic_research
+		allowed = {
+			original_tag = GER
+		}
+		available = {
+			SWF = {
+				controls_state = 290
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Germany to Occupy Rif - JCK"
+			country_event = sprc.507
+		}
+	}
+}

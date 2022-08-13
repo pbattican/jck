@@ -115,3 +115,36 @@ allowed_anderson_doctrine = {
 		desc = allowed_anderson_doctrine_desc
 	}
 }
+
+allowed_quid_pro_quo = {
+	name = "Canada Quid Pro Quo"
+	group = "Canada JCK Rules"
+	icon = "GFX_wargoals"
+
+	option = {
+		name = allowed
+		text = "Allowed"
+	}
+
+	default = {
+		name = not_allowed
+		text = "No"
+	}
+
+}
+
+allowed_reclaim_NEE = {
+	name = "USA Reclaim New England"
+	group = "USA JCK Rules"
+	icon = "GFX_wargoals"
+
+	default = {
+		name = not_allowed
+		text = "No"
+	}
+
+	option = {
+		name = allowed
+		text = "Allowed"
+	}
+}

@@ -31,6 +31,7 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 * Russia is only allowed to send volunteers according to 3I rules ( syndicalists, rad soc, totalist ideologies)
 * 3I + Russia will send to CSA until CSA capitulates, then may send to the PSA.
 * RP will send to AUS until AUS capitulates and then may send to USA.
+* Player Nat France cannot use their decision to eat Sardinia
 
 ## Required Nations
 

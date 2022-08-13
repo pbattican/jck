@@ -443,7 +443,7 @@ focus_tree = {
 		x = 0
 		y = 4
 		relative_position_id = GER_political_1
-		cost = 8
+		cost = 6
 
 		ai_will_do = {
 			factor = 50
@@ -1664,7 +1664,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_industry_finished
-		cost = 10
+		cost = 6 # jck change
 
 		ai_will_do = {
 			factor = 500
