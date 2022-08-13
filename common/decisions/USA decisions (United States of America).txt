@@ -993,6 +993,11 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			}
 		}
 		available = {
+
+			has_game_rule = {
+				rule = allowed_reclaim_NEE
+				option = allowed
+			}
 			controls_all_owned_states = yes
 			if = {
 				limit = { country_exists = NEE }
@@ -1089,6 +1094,10 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 	USA_reclaim_new_england_decision2 = {
 		icon = generic_political_discourse
 		allowed = {
+			has_game_rule = {
+				rule = allowed_reclaim_NEE
+				option = allowed
+			}
 			OR = {
 				tag = USA
 				tag = PSA

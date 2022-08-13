@@ -132,3 +132,19 @@ allowed_quid_pro_quo = {
 	}
 
 }
+
+allowed_reclaim_NEE = {
+	name = "USA Reclaim New England"
+	group = "USA JCK Rules"
+	icon = "GFX_wargoals"
+
+	default = {
+		name = not_allowed
+		text = "No"
+	}
+
+	option = {
+		name = allowed
+		text = "Allowed"
+	}
+}
