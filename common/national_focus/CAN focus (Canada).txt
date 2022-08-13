@@ -1704,6 +1704,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = CAN_william_avery_bishop_air_chief
+			country_event = { id = canada.38 days = 90 } # jck change
 		}
 		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_AIRFORCE_BONUS }
 	}

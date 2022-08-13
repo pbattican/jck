@@ -1193,12 +1193,12 @@ country_event = {
 
 	is_triggered_only = yes
 
-	trigger = {
-		OR = {
-			has_idea = CAN_william_avery_bishop_air_chief
-			has_idea = CAN_william_avery_bishop_high_command
-		}
-	}
+	# trigger = {
+	# 	OR = {
+	# 		has_idea = CAN_william_avery_bishop_air_chief
+	# 		has_idea = CAN_william_avery_bishop_high_command
+	# 	}
+	# }
 
 	option = {
 		name = canada.38.a #Bishop is a good man and I trust his methods

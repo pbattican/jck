@@ -1414,9 +1414,9 @@ characters = {
 			}
 			traits = { KR_air_chief_reform_3 }
 			cost = 200
-			on_add = {
-				country_event = { id = canada.38 days = 90 }
-			}
+			# on_add = { # JCK Change
+			# 	country_event = { id = canada.38 days = 90 }
+			# }
 		}
 		advisor = {
 			slot = high_command
