@@ -939,6 +939,11 @@ country_event = {
 
 	option = {
 		name = pact.41.a #Agree
+
+		trigger = {
+			always = no
+		}
+
 		add_political_power = -50
 		if = {
 			limit = { owns_state = 184 }
@@ -1099,6 +1104,9 @@ country_event = {
 		}
 	}
 	option = {
+		trigger = {
+			always = no
+		}
 		name = pact.43.b #Refuse
 		ai_chance = { base = 0 }
 		add_war_support = -0.10
