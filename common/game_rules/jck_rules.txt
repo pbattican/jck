@@ -75,7 +75,6 @@ allowed_submarine_tech = {
 	}
 }
 
-
 allowed_snorkel_tech = {
 	name = "Allowed Snorkel Level"
 	group = "Allowed Technologies"
@@ -113,5 +112,27 @@ allowed_anderson_doctrine = {
 		name = yes
 		text = "Yes"
 		desc = allowed_anderson_doctrine_desc
+	}
+}
+
+bulgaria_game_rules = {
+	name = "Bulgaria JCK Rules"
+	group = "Bulgaria JCK Rules"
+	icon = "GFX_wargoals"
+
+	option = {
+		name = first
+		text = "Adrianople"
+		desc = bulgaria_first_peace_event
+	}
+	option = {
+		name = second
+		text = "Adrianople and Constantinople"
+		desc = bulgaria_second_peace_event
+	}
+	default = {
+		name = normal
+		text = "Normal Events"
+		desc = bulgaria_normal
 	}
 }
