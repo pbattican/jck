@@ -398,21 +398,12 @@ The Entente and nations in it are always considered **<span style="text-decorati
 ### <span style="text-decoration:underline;">Canada Rules</span>										
 
 
-* **Canada** must do everything within its power to ensure an alliance with **USA if USA is a player**
+* May only keep New England, out of USA's territory.
 
-### <span style="text-decoration:underline;">USA Rules</span>
-
-
-* **USA** must intend to remain as the **USA **and not a civil war faction.
-* **USA** is considered must join the Entente, and is considered **Center Wing**
-* **USA** is forced to elect Jack Reed.
-* **USA** cannot use decisions for the color- war plans before joining the Entente faction.
-* **USA** is not allowed to peacefully unite with the **PSA**
-* **USA** must reclaim Hawaii. 
-* **USA** may not use the license mechanic, or be licensed from until it joins the Entente ingame
 
 ### <span style="text-decoration:underline;">Dominion of India Rules</span>								
 
+* None at this time
 
 ### <span style="text-decoration:underline;">National France Rules	</span>					
 
