@@ -295,8 +295,7 @@ Neutral nations may not join a faction. Player neutrals may not receive or send 
 ### <span style="text-decoration:underline;">Civil War nations</span>
 
 * Player Civil-War nations cannot deliberately sabotage their nation through any method (e.g. placing troops in unfavourable positions)
-* The PSA is the only allowed ACW nation. The Co-Pro or Moscow Accord co-ops have the option to hotjoin in as the PSA. If no USA player, this does not apply.
-* No ACW nation may be admitted to faction, including USA.
+* No ACW nation may be admitted to a faction, including the USA.
 
 ## Reichspakt countries
 
@@ -398,7 +397,7 @@ The Entente and nations in it are always considered **<span style="text-decorati
 ### <span style="text-decoration:underline;">Canada Rules</span>										
 
 
-* May only keep New England, out of USA's territory.
+* **Canada** may only keep New England from the ACW.
 
 
 ### <span style="text-decoration:underline;">Dominion of India Rules</span>								
