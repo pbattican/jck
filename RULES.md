@@ -220,9 +220,7 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 * **_You may not justify manually!!!!!_**
 * **Germany** and the **Commune of France** may only declare war on each other after June 14th, 1939 to start **“The Second Weltkrieg”**
 * Your faction must take all possible land unless specified in the nation specific rules.
-* In a peace deal, you may not annex territory occupied by foreign troops. 
 * It is forbidden to give Military and naval access to any nation which is not either 1) a member of your faction, or 2) is facing the same faction in a war as you
-* You may not annex or puppet **Legation Cities** through influence decisions
 
 ## Division Rules
 
@@ -237,14 +235,10 @@ Player wars may not be declared until the start of “**The Second Weltkrieg**�
 
 <span style="text-decoration:underline;">Volunteers</span>
 
-* You may only send volunteers to ideological partners of your faction leader
-* **Each faction has a maximum limit of 8 volunteers usable in any single conflict until the Second Weltkrieg**. **_The American Civil War’s limit is 10. _**
-* **_Volunteer width is 24W if a player is directly involved in the war, otherwise no maximum width. American Civil War has no limit._**
+* **_Volunteer width is 24W. American Civil War has no limit._**
 * Motorized/motorized variants, Mechanized, tanks/tank variants and armored recon are not allowed in volunteer divisions until **the Second Weltkrieg**.**_ ACW only: Ignore previous, light tank battalions are the only tanks allowed._** _Light Armored Recon (Armored Cars) and motorized recon are allowed._
-* Sending volunteers to **Qing is BANNED**. **Sending volunteers to player nations in China that ally with the QingEmpire is also BANNED**.
-* The Co Prosperity Sphere and Moscow Accord are allowed to send volunteers to the **Pacific States of America [PSA]**
+* Sending volunteers to **Qing is BANNED**.
 * Volunteers to **Afghanistan** are not allowed. 
-* Volunteers To **Dutch East Indies** are not allowed if there is a player on **Insulindia**
 * You may not recall volunteers if your volunteers are within 3 tiles from enemy forces.
 * No naval invading with volunteers.
 
@@ -413,43 +407,32 @@ The Entente and nations in it are always considered **<span style="text-decorati
 
 ### <span style="text-decoration:underline;">Dominion of India Rules</span>								
 
-
 ### <span style="text-decoration:underline;">National France Rules	</span>					
-
-
 
 * **National France** - If intervening in **Italy** and winning – must give all Italian land to **Sardinia** if it is a player
 
 ### <span style="text-decoration:underline;">Australasia Rules</span>
 
-
-
 * None at this time
 
 ## Co-Prosperity Sphere Countries
 
-The Co Prosperity Sphere and Japan is always considered **<span style="text-decoration:underline;">Right Wing</span>**
+* Co-Prosperity Sphere Countries may send volunteers to ***Left-Wing*** or Moscow Accord countries
 
 ### <span style="text-decoration:underline;">Fengtian Rules</span>
-
-
 
 * **Fengtian** is always considered a member of the Co-Prosperity Sphere
 * **Fengtian** must join the Co-Prosperity Sphere and remain allied to **Japan**
 
 ### <span style="text-decoration:underline;">Philippines Transamur Siam Rules</span>
 
-
-
 * Must join the Co-Prosperity Sphere
 
 ## Moscow Accord Countries
 
-The Moscow accord is always considered **<span style="text-decoration:underline;">Right Wing </span>**
+* Moscow Accord countries may send to ***Left-Wing*** or Co-prosperity sphere countries
 
 ### <span style="text-decoration:underline;">Russia Rules</span>
-
-
 
 * **Russia** is not allowed to Influence **White Ruthenia** in any way
 
@@ -465,7 +448,5 @@ The Moscow accord is always considered **<span style="text-decoration:underline;
 * **Brazil** may choose whether to ally Entente or Reichspakt
 
 ### <span style="text-decoration:underline;">Mexico Rules</span>
-
-
 
 * **Mexico** may not intervene in the ACW until 1st of October 1937
