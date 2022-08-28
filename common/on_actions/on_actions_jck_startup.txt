@@ -87,6 +87,7 @@ on_actions = {
 			}
 			JAP = {
 				add_political_power = 75
+				add_ideas = JAP_air_industry
 			}
 		}
 		## Global
