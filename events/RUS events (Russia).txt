@@ -1413,17 +1413,19 @@ country_event = { #Russian capitulation system event
 			limit = {
 				is_in_faction_with = ROOT
 				is_subject = no
-				surrender_progress < 0.8
+				has_capitulated = no
 			}
-			leave_faction = yes
-			country_event = capt.4200
+			faction_collapse_member_peace_effect = yes
 			country_event = russia.1901
 		}
 		every_country = {
 			limit = { is_in_tech_sharing_group = russian_research }
 			remove_from_tech_sharing_group = russian_research
 		}
-		faction_leader = { dismantle_faction = yes }
+		if = {
+			limit = { is_in_faction = yes }
+			faction_leader = { dismantle_faction = yes }
+		}
 		news_event = { id = russia.1902 hours = 30 }
 	}
 }
@@ -1462,6 +1464,64 @@ news_event = {
 
 	option = {
 		name = russia.1902.a
+		trigger = { is_ally_with = GER }
+	}
+	option = {
+		name = russia.1902.b
+		trigger = {
+			is_ally_with = INT
+			NOT = { has_war_with = GER }
+		}
+	}
+	option = {
+		name = russia.1902.c
+		trigger = {
+			is_ally_with = INT
+			has_war_with = GER
+		}
+	}
+	option = {
+		name = russia.1902.e
+		trigger = {
+			is_ally_with = ENT
+			INT = { is_faction_leader = yes }
+			NOT = { has_war_with = INT }
+		}
+	}
+	option = {
+		name = russia.1902.f
+		trigger = {
+			is_ally_with = ENT
+			INT = { is_faction_leader = yes }
+			has_war_with = INT
+		}
+	}
+	option = {
+		name = russia.1902.g
+		trigger = {
+			is_ally_with = ENT
+			INT = { is_faction_leader = no }
+		}
+	}
+	option = {
+		name = russia.1902.h
+		trigger = { original_tag = JAP }
+	}
+	option = {
+		name = russia.1902.i
+		trigger = { is_han_chinese_tag = yes }
+	}
+	option = {
+		name = russia.1902.j
+		trigger = {
+			NOT = {
+				is_ally_with = GER
+				is_ally_with = INT
+				is_ally_with = ENT
+				original_tag = JAP
+				is_han_chinese_tag = yes
+			}
+		}
 	}
 }
 
@@ -4743,10 +4803,14 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = { add_ideas = RUS_economic_depression_1 }
+	}
+
 	option = {
 		name = rusd.120.a
-		add_ideas = RUS_economic_depression_1
 		add_stability = -0.05
+		effect_tooltip = { add_ideas = RUS_economic_depression_1 }
 		if = {
 			limit = { RUS_savinkov_in_government = yes }
 			custom_effect_tooltip = RUS_economic_tree_unlocked_ves
@@ -6044,7 +6108,17 @@ country_event = { #The Terek Conflict (DKB)
 		trigger = {
 			UKR = { is_in_faction_with = GER }
 		}
-		ai_chance = { base = 40 }
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 1.5 # More likely to choose if GER has focused on them in the Oil Must Flow tree
+				GER = { has_completed_focus = GER_oil_caucasus_land }
+			}
+			modifier = {
+				factor = 2 # More likely to choose if GER has focused on them in the Oil Must Flow tree
+				GER = { has_completed_focus = GER_DKB_deal }
+			}
+		}
 		GER = {
 			country_event = { id = rusfor.5 days = 2 }
 		}
@@ -6757,6 +6831,11 @@ country_event = { #Russia offers us an alliance
 				factor = 0
 				tag = BPL
 				has_global_flag = SER_keeping_the_pact
+			}
+			modifier = {
+				factor = 0
+				tag = TUR
+				RUS = { RUS_is_empire = yes }
 			}
 		}
 		GER = {
@@ -7893,15 +7972,32 @@ country_event = { #Transfer of the territory
 		remove_decision = RUS_Demand_Armenia
 		TUR = {
 			every_owned_state = {
-				limit = {
-					OR = {
-						is_core_of = ROOT
-						state = 230 #Erivan
-						state = 585 #Batumi
-						state = 1000 #Kars
-					}
-				}
+				limit = { is_core_of = ROOT }
 				transfer_state_to = ROOT
+			}
+			if = {
+				limit = { owns_state = 230 }
+				230 = { transfer_state_to = ROOT }
+			}
+			if = {
+				limit = { owns_state = 585 }
+				if = {
+					limit = { is_in_faction_with = GEO }
+					585 = { transfer_state_to = GEO }
+				}
+				else = {
+					585 = { transfer_state_to = ROOT }
+				}
+			}
+			if = {
+				limit = { owns_state = 1000 }
+				if = {
+					limit = { is_in_faction_with = ARM }
+					1000 = { transfer_state_to = ARM }
+				}
+				else = {
+					1000 = { transfer_state_to = ROOT }
+				}
 			}
 			diplomatic_relation = {
 				country = ROOT

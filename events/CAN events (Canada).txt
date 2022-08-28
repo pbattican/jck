@@ -555,25 +555,51 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { has_idea = CAN_great_depression_3 }
+				save_event_target_as = CAN_great_depression_3
+				swap_ideas = {
+					remove_idea = CAN_great_depression_3
+					add_idea = CAN_great_depression_2
+				}
+			}
+			else_if = {
+				limit = { has_idea = CAN_great_depression_2 }
+				save_event_target_as = CAN_great_depression_2
+				swap_ideas = {
+					remove_idea = CAN_great_depression_2
+					add_idea = CAN_great_depression_1
+				}
+			}
+			else = {
+				add_ideas = CAN_great_depression_3
+			}
+		}
+	}
+
 	option = {
 		name = canada.23.a
 		add_stability = -0.05
-		if = {
-			limit = { has_idea = CAN_great_depression_3 }
-			swap_ideas = {
-				remove_idea = CAN_great_depression_3
-				add_idea = CAN_great_depression_2
+		effect_tooltip = {
+			if = {
+				limit = { has_event_target = CAN_great_depression_3 }
+				swap_ideas = {
+					remove_idea = CAN_great_depression_3
+					add_idea = CAN_great_depression_2
+				}
 			}
-		}
-		else_if = {
-			limit = { has_idea = CAN_great_depression_2 }
-			swap_ideas = {
-				remove_idea = CAN_great_depression_2
-				add_idea = CAN_great_depression_1
+			else_if = {
+				limit = { has_event_target = CAN_great_depression_2 }
+				swap_ideas = {
+					remove_idea = CAN_great_depression_2
+					add_idea = CAN_great_depression_1
+				}
 			}
-		}
-		else = {
-			add_ideas = CAN_great_depression_3
+			else = {
+				add_ideas = CAN_great_depression_3
+			}
 		}
 	}
 }
@@ -2295,9 +2321,9 @@ country_event = {
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 466 #Quebec
+					state = 466 #Saguenay
 					state = 468 #Saint Lawrence
-					state = 832 #Montreal
+					state = 832 #Quebec
 				}
 			}
 			damage_building = {
@@ -3523,9 +3549,9 @@ country_event = {
 		tag = CAN
 		is_subject = no
 		OR = {
-			466 = { is_owned_and_controlled_by = CAN } #Quebec
+			466 = { is_owned_and_controlled_by = CAN } #Saguenay
 			468 = { is_owned_and_controlled_by = CAN } #Saint Lawrence
-			832 = { is_owned_and_controlled_by = CAN } #Montreal
+			832 = { is_owned_and_controlled_by = CAN } #Quebec
 		}
 		OR = {
 			has_idea = extensive_conscription
@@ -3580,9 +3606,9 @@ country_event = {
 			limit = {
 				is_controlled_by = CAN
 				OR = {
-					state = 466 #Quebec
+					state = 466 #Saguenay
 					state = 468 #Saint Lawrence
-					state = 832 #Montreal
+					state = 832 #Quebec
 				}
 			}
 			add_dynamic_modifier = { modifier = CAN_french_resistance_3 }
@@ -6698,7 +6724,7 @@ country_event = {
 			set_temp_variable = { NEE_legitimacy_change = 20 }
 			NEE_Change_Legitimacy = yes
 		}
-		every_country = {
+		every_other_country = {
 			limit = { is_in_faction_with = CAN }
 			add_opinion_modifier = { target = ROOT modifier = ACW_entente_helping }
 			if = {
@@ -7457,7 +7483,7 @@ country_event = {
 			base = 40
 		}
 		add_political_power = 50
-		effect_tooltip = { CAN_louis_mountbatten = { set_nationality = CAN } }
+		effect_tooltip = { GBR_louis_mountbatten = { set_nationality = CAN } }
 		CAN = {
 			set_country_flag = CAN_gov_gen_mountbatten
 			add_opinion_modifier = { target = ROOT modifier = KR_disapproves_of_govt }
@@ -7470,7 +7496,7 @@ country_event = {
 			base = 20
 		}
 		add_political_power = 30
-		effect_tooltip = { CAN_john_vereker = { set_nationality = CAN } }
+		effect_tooltip = { GBR_john_vereker = { set_nationality = CAN } }
 		CAN = {
 			set_country_flag = CAN_gov_gen_vereker
 			add_opinion_modifier = { target = ROOT modifier = KR_disapproves_of_govt }
@@ -7525,11 +7551,11 @@ country_event = {
 			}
 			else_if = {
 				limit = { has_country_flag = CAN_gov_gen_mountbatten }
-				CAN_louis_mountbatten = { set_nationality = PREV }
+				GBR_louis_mountbatten = { set_nationality = PREV }
 			}
 			else_if = {
 				limit = { has_country_flag = CAN_gov_gen_vereker }
-				CAN_john_vereker = { set_nationality = PREV }
+				GBR_john_vereker = { set_nationality = PREV }
 			}
 		}
 	}
@@ -7572,7 +7598,7 @@ country_event = {
 			limit = { has_country_flag = CAN_gov_gen_mountbatten }
 			add_political_power = -50
 			subtract_from_variable = { CAN_was_king_popularity = 1 }
-			CAN_louis_mountbatten = {
+			GBR_louis_mountbatten = {
 				add_country_leader_role = {
 					country_leader = { ideology = social_democrat_subtype }
 					promote_leader = yes
@@ -7603,7 +7629,7 @@ country_event = {
 			limit = { has_country_flag = CAN_gov_gen_vereker }
 			add_political_power = -30
 			subtract_from_variable = { CAN_was_king_popularity = 1 }
-			CAN_john_vereker = {
+			GBR_john_vereker = {
 				set_nationality = PREV
 				add_country_leader_role = {
 					country_leader = { ideology = social_democrat_subtype }
@@ -8205,10 +8231,10 @@ country_event = {
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 466 #Quebec
+					state = 332 #Labrador
+					state = 466 #Saguenay
 					state = 468 #Saint Lawrence
-					state = 683 #New Quebec
-					state = 832 #Montreal
+					state = 832 #Quebec
 				}
 			}
 			remove_core_of = CAN
@@ -8252,10 +8278,10 @@ country_event = {
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 466 #Quebec
+					state = 332 #Labrador
+					state = 466 #Saguenay
 					state = 468 #Saint Lawrence
-					state = 683 #New Quebec
-					state = 832 #Montreal
+					state = 832 #Quebec
 				}
 			}
 			remove_core_of = CAN
