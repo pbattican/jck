@@ -83,9 +83,10 @@ on_actions = {
 				add_ideas = {
 					low_economic_mobilisation
 				}
+				add_war_support = 0.05
 			}
 			JAP = {
-				add_political_power = 50
+				add_political_power = 75
 			}
 		}
 		## Global
