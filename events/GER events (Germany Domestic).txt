@@ -1747,7 +1747,6 @@ country_event = { # The Free Workers Union of Germany
 			base = 25
 		}
 		add_political_power = -150
-		set_country_flag = FAUD_allow
 		custom_effect_tooltip = FAUD_allow1
 	}
 }
@@ -1958,9 +1957,8 @@ country_event = { #Syndicalist Involvement in the General Strike
 	desc = gerdom.61.d
 	picture = GFX_report_event_GER_reichstag
 	is_triggered_only = yes
-	# Remove option to declare on FRA
-	option = { #not that
-		name = gerdom.61.b
+	option = { #smash france
+		name = gerdom.61.a
 		ai_chance = {
 			base = 50
 			modifier = {
@@ -2228,21 +2226,21 @@ country_event = {
 
 	trigger = {
 		tag = GER
-		has_war = no
 		OR = {
 			AND = { # America
-				american_civil_war = yes
 				country_exists = CSA
+				american_civil_war = yes
 			}
 			AND = { # Soviets
-				russian_civil_war = yes
 				country_exists = SOV
+				russian_civil_war = yes
 			}
 			AND = { # Spain
-				spanish_civil_war = yes
 				country_exists = SWF
+				spanish_civil_war = yes
 			}
 		}
+		has_war = no
 		has_socialist_government = no
 	}
 
@@ -2347,11 +2345,7 @@ country_event = {
 	option = {
 		name = gerdom.201.a
 		add_manpower = 10000
-		set_global_flag = GER_SYNDIE_CSA
-		hidden_effect = {
-			load_oob = GER_SYNDIE_CSA
-		}
-		custom_effect_tooltip = GER_csavol_tt
+		GER_spawn_volunteer_divisions = yes
 	}
 }
 
@@ -2375,10 +2369,7 @@ country_event = {
 	option = {
 		name = gerdom.203.a
 		add_manpower = 10000
-		hidden_effect = {
-			load_oob = GER_SYNDIE_SOV
-		}
-		custom_effect_tooltip = GER_csavol_tt
+		GER_spawn_volunteer_divisions = yes
 	}
 }
 
@@ -2392,10 +2383,7 @@ country_event = {
 	picture = GFX_report_event_GER_syndie_volunteers
 
 	trigger = {
-		OR = {
-			has_war_with = SPA
-			has_war_with = SPR
-		}
+		has_civil_war = yes
 	}
 
 	is_triggered_only = yes
@@ -2403,10 +2391,7 @@ country_event = {
 	option = {
 		name = gerdom.204.a
 		add_manpower = 10000
-		hidden_effect = {
-			load_oob = GER_SYNDIE_SWF
-		}
-		custom_effect_tooltip = GER_csavol_tt
+		GER_spawn_volunteer_divisions = yes
 	}
 }
 
@@ -2461,12 +2446,10 @@ country_event = {
 
 	option = {
 		name = gerdom.206.a
+		ai_chance = { base = 0 }
 		add_political_power = -40
 		add_manpower = 2500
 		army_experience = 10
-		ai_chance = {
-			base = 20
-		}
 		clr_global_flag = GER_SYNDIE_SWF
 		clr_global_flag = GER_SYNDIE_CSA
 		clr_global_flag = GER_SYNDIE_RUS
@@ -2474,9 +2457,7 @@ country_event = {
 
 	option = {
 		name = gerdom.206.b
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 0 }
 		add_political_power = -20
 		clr_global_flag = GER_SYNDIE_SWF
 		clr_global_flag = GER_SYNDIE_CSA
@@ -2485,9 +2466,6 @@ country_event = {
 
 	option = {
 		name = gerdom.206.c
-		ai_chance = {
-			base = 60
-		}
 		clr_global_flag = GER_SYNDIE_SWF
 		clr_global_flag = GER_SYNDIE_CSA
 		clr_global_flag = GER_SYNDIE_RUS
@@ -2513,19 +2491,46 @@ country_event = {
 	option = {
 		name = gerdom.209.a
 		add_political_power = 20
-		hidden_effect = {
-			load_oob = GER_SYNDIE_EXILE
-		}
 		add_equipment_to_stockpile = {
-			type = infantry_equipment_1
+			type = infantry_equipment
 			amount = -500
-			producer = FRA
+		}
+		division_template = {
+			name = "German Militia Division"
+			is_locked = yes
+			division_names_group = FRA_MIL_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { valid_state_for_spawning_friendly_unit = yes }
+			create_unit = {
+				division = "name = \"I. International Division\" division_template = \"German Militia Division\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
+				owner = PREV
+			}
+			create_unit = {
+				division = "name = \"II. International Division\" division_template = \"German Militia Division\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
+				owner = PREV
+			}
 		}
 		custom_effect_tooltip = GER_angry_socialists
 	}
 
 	option = {
 		name = gerdom.209.b
+		ai_chance = { base = 0 }
 		add_political_power = -40
 	}
 }

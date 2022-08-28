@@ -3516,7 +3516,7 @@ state_event = { #Hidden Event to turn sabotaged railways back on
 # Spanish Intervention
 #####
 
-country_event = { #the French Republic supports us! SPA
+country_event = { #the French Republic supports us! SPK
 	id = nfa.62
 	immediate = { log = "[GetDateText]: [Root.GetName]: event nfa.62 FROM = [From.GetName]" }
 	title = nfa.62.t
@@ -5057,10 +5057,9 @@ country_event = { #Resistance or Compliance Paris
 		name = nfa.161.a #Resistance
 		activate_mission = NFA_Paris_Focus_Resist_Mission
 		16 = {
-			add_state_modifier = {
-				modifier = {
-					resistance_decay = 0.15
-				}
+			custom_effect_tooltip = integration_resistance_allocation
+			hidden_effect = {
+				add_state_modifier = { modifier = { resistance_decay = 0.15 } }
 			}
 		}
 	}
@@ -5069,10 +5068,9 @@ country_event = { #Resistance or Compliance Paris
 		name = nfa.161.b #Compliance
 		activate_mission = NFA_Paris_Focus_Comply_Mission
 		16 = {
-			add_state_modifier = {
-				modifier = {
-					compliance_gain = 0.15
-				}
+			custom_effect_tooltip = integration_compliance_allocation
+			hidden_effect = {
+				add_state_modifier = { modifier = { compliance_gain = 0.15 } }
 			}
 		}
 	}
@@ -5091,10 +5089,9 @@ country_event = { #Resistance or Compliance Provence
 		name = nfa.162.a #Resistance
 		activate_mission = NFA_Provence_Focus_Resist_Mission
 		21 = {
-			add_state_modifier = {
-				modifier = {
-					resistance_decay = 0.15
-				}
+			custom_effect_tooltip = integration_resistance_allocation
+			hidden_effect = {
+				add_state_modifier = { modifier = { resistance_decay = 0.15 } }
 			}
 		}
 	}
@@ -5103,10 +5100,9 @@ country_event = { #Resistance or Compliance Provence
 		name = nfa.162.b #Compliance
 		activate_mission = NFA_Provence_Focus_Comply_Mission
 		21 = {
-			add_state_modifier = {
-				modifier = {
-					compliance_gain = 0.15
-				}
+			custom_effect_tooltip = integration_compliance_allocation
+			hidden_effect = {
+				add_state_modifier = { modifier = { compliance_gain = 0.15 } }
 			}
 		}
 	}
@@ -5125,10 +5121,9 @@ country_event = { #Resistance or Compliance Lyon
 		name = nfa.163.a #Resistance
 		activate_mission = NFA_Lyonnais_Focus_Resist_Mission
 		20 = {
-			add_state_modifier = {
-				modifier = {
-					resistance_decay = 0.15
-				}
+			custom_effect_tooltip = integration_resistance_allocation
+			hidden_effect = {
+				add_state_modifier = { modifier = { resistance_decay = 0.15 } }
 			}
 		}
 	}
@@ -5137,10 +5132,9 @@ country_event = { #Resistance or Compliance Lyon
 		name = nfa.163.b #Compliance
 		activate_mission = NFA_Lyonnais_Focus_Comply_Mission
 		20 = {
-			add_state_modifier = {
-				modifier = {
-					compliance_gain = 0.15
-				}
+			custom_effect_tooltip = integration_compliance_allocation
+			hidden_effect = {
+				add_state_modifier = { modifier = { compliance_gain = 0.15 } }
 			}
 		}
 	}
@@ -5159,10 +5153,9 @@ country_event = { #Resistance or Compliance Bordeaux
 		name = nfa.164.a #Resistance
 		activate_mission = NFA_Bordeaux_Focus_Resist_Mission
 		19 = {
-			add_state_modifier = {
-				modifier = {
-					resistance_decay = 0.15
-				}
+			custom_effect_tooltip = integration_resistance_allocation
+			hidden_effect = {
+				add_state_modifier = { modifier = { resistance_decay = 0.15 } }
 			}
 		}
 	}
@@ -5171,10 +5164,9 @@ country_event = { #Resistance or Compliance Bordeaux
 		name = nfa.164.b #Compliance
 		activate_mission = NFA_Bordeaux_Focus_Comply_Mission
 		19 = {
-			add_state_modifier = {
-				modifier = {
-					compliance_gain = 0.15
-				}
+			custom_effect_tooltip = integration_compliance_allocation
+			hidden_effect = {
+				add_state_modifier = { modifier = { compliance_gain = 0.15 } }
 			}
 		}
 	}
@@ -5193,10 +5185,9 @@ country_event = { #Resistance or Compliance Lille
 		name = nfa.165.a #Resistance
 		activate_mission = NFA_Lille_Focus_Resist_Mission
 		980 = {
-			add_state_modifier = {
-				modifier = {
-					resistance_decay = 0.15
-				}
+			custom_effect_tooltip = integration_resistance_allocation
+			hidden_effect = {
+				add_state_modifier = { modifier = { resistance_decay = 0.15 } }
 			}
 		}
 	}
@@ -5205,10 +5196,9 @@ country_event = { #Resistance or Compliance Lille
 		name = nfa.165.b #Compliance
 		activate_mission = NFA_Lille_Focus_Comply_Mission
 		980 = {
-			add_state_modifier = {
-				modifier = {
-					compliance_gain = 0.15
-				}
+			custom_effect_tooltip = integration_compliance_allocation
+			hidden_effect = {
+				add_state_modifier = { modifier = { compliance_gain = 0.15 } }
 			}
 		}
 	}
@@ -8901,17 +8891,16 @@ country_event = { #Load that tree
 	immediate = { log = "[GetDateText]: [Root.GetName]: event nfa.318 FROM = [From.GetName]" }
 	title = nfa.318.t
 	desc = nfa.318.d
-	picture = GFX_report_event_NFA_event_flavor1
+	picture = GFX_report_event_NFA_event_FlavorRouen
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
-
-	hidden = yes
+	trigger = { NFA_controls_major_city = yes }
 
 	option = {
 		name = nfa.318.a
 		mark_focus_tree_layout_dirty = yes
+		custom_effect_tooltip = your_focus_tree_has_expanded
 	}
 }
 
@@ -9382,15 +9371,10 @@ country_event = { #Aux Martyrs Espagnols
 	picture = GFX_report_event_NFA_event_flavor21
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
+
 	trigger = {
-		SPR = {
-			OR = {
-				has_war_with = SPA
-				has_war_with = SWF
-			}
-		}
+		SPR = { has_civil_war = yes }
 	}
 
 	option = {
@@ -13767,6 +13751,7 @@ country_event = { #BEL lands back to NFA
 			every_owned_state = {
 				limit = { is_european_france = yes }
 				transfer_state_to = NFA
+				remove_core_of = ROOT
 			}
 		}
 		NFA = {
@@ -13793,6 +13778,7 @@ country_event = { #BEL lands back to NFA
 					NOT = { state = 29 } #Don't give away Dunkirk
 				}
 				transfer_state_to = NFA
+				remove_core_of = ROOT
 			}
 		}
 		NFA = {
@@ -13842,6 +13828,7 @@ country_event = { #BEL offers their response to NFA
 			every_owned_state = {
 				limit = { is_european_france = yes }
 				transfer_state_to = ROOT
+				remove_core_of = FROM
 			}
 		}
 	}
@@ -13861,6 +13848,7 @@ country_event = { #BEL offers their response to NFA
 					NOT = { state = 29 } #Don't give away Dunkirk
 				}
 				transfer_state_to = ROOT
+				remove_core_of = FROM
 			}
 		}
 	}

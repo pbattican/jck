@@ -1,0 +1,19 @@
+on_actions = {
+	on_capitulation = {
+		## China
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						is_han_chinese_tag = yes
+					}
+				}
+				every_owned_state = {
+					save_current_factory_count = yes
+					transfer_state_to = FROM
+					restore_previous_factory_count = yes
+				}
+			}
+		}
+	}
+}

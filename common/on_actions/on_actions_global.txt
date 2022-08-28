@@ -1128,8 +1128,8 @@ on_actions = {
 						}
 						#Spain
 						AND = {
-							is_spanish_tag = yes
-							FROM = { is_spanish_tag = yes }
+							original_tag = SPA
+							FROM = { original_tag = SPA }
 						}
 						#Russia
 						AND = {
@@ -1642,6 +1642,18 @@ on_actions = {
 				country_event = kr.political.50
 				country_event = kr.political.52
 				country_event = kr.political.54
+
+				if = {
+					limit = { has_global_flag = TEMPORARY_DISABLED_FACTION_POPUP }
+					clr_global_flag = TEMPORARY_DISABLED_FACTION_POPUP
+				}
+				else_if = {
+					limit = { NOT = { is_in_array = { global.faction_joining_alerts = THIS } } }
+					set_variable = { FROM.faction_joining_alert = PREV }
+					add_to_array = { global.faction_joining_alerts = THIS }
+					add_to_variable = { global.faction_joining_alert_dirty = 1 }
+					country_event = { id = kr.political.20 days = 10 }
+				}
 			}
 			if = {
 				limit = {
@@ -1702,20 +1714,6 @@ on_actions = {
 	on_assume_faction_leadership = {
 		effect = {
 			log = "[GetDateText] [Root.GetName] on_assume_faction_leadership"
-			if = {
-				limit = { FROM = { tag = ENT } }
-				save_global_event_target_as = KR_entente_leader
-				save_event_target_as = entente_transfer_to
-				CAN_transfer_entente_leader = yes
-				if = {
-					limit = { has_global_flag = CAN_iedc_created }
-					CAN_transfer_iedc_leadership = yes
-				}
-			}
-			else_if = {
-				limit = { FROM = { tag = INT } }
-				save_global_event_target_as = KR_internationale_leader
-			}
 		}
 	}
 

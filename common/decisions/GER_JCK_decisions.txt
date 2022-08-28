@@ -5,7 +5,7 @@ crisis = {
 			original_tag = GER
 		}
 		available = {
-			SWF = {
+			SPA = {
 				controls_state = 290
 			}
 		}

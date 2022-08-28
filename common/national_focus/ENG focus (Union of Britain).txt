@@ -90,7 +90,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ENG_tuc
 		ai_will_do = {
-			factor = 0
+			factor = 0		#wad
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_dissolve_tuc"

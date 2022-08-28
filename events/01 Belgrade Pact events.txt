@@ -2774,8 +2774,10 @@ country_event = {
 			}
 			AUS = {
 				OR = {
+					owns_state = 103 #Fiume
 					owns_state = 488 #Trieste
-					owns_state = 736 #Austrian Littoral
+					owns_state = 683 #Gorizia
+					owns_state = 736 #Istria
 					owns_state = 783 #Trentino
 				}
 			}
@@ -2830,8 +2832,10 @@ country_event = {
 					}
 					AUS = {
 						OR = {
+							owns_state = 103 #Fiume
 							owns_state = 488 #Trieste
-							owns_state = 736 #Austrian Littoral
+							owns_state = 683 #Gorizia
+							owns_state = 736 #Istria
 							owns_state = 783 #Trentino
 						}
 					}
@@ -2854,9 +2858,11 @@ country_event = {
 			}
 			AUS = {
 				OR = {
+					owns_state = 103 #Fiume
 					owns_state = 488 #Trieste
+					owns_state = 683 #Gorizia
+					owns_state = 736 #Istria
 					owns_state = 783 #Trentino
-					owns_state = 736 #Austrian Littoral
 				}
 			}
 			POL = {
@@ -2892,8 +2898,10 @@ country_event = {
 				}
 				AUS = {
 					OR = {
+						owns_state = 103 #Fiume
 						owns_state = 488 #Trieste
-						owns_state = 736 #Austrian Littoral
+						owns_state = 683 #Gorizia
+						owns_state = 736 #Istria
 						owns_state = 783 #Trentino
 					}
 				}
@@ -2935,8 +2943,10 @@ country_event = {
 				}
 				AUS = {
 					OR = {
+						owns_state = 103 #Fiume
 						owns_state = 488 #Trieste
-						owns_state = 736 #Austrian Littoral
+						owns_state = 683 #Gorizia
+						owns_state = 736 #Istria
 						owns_state = 783 #Trentino
 					}
 				}
@@ -3275,6 +3285,7 @@ country_event = {
 		add_state_claim = 105 #Montenegro
 		add_state_claim = 109 #Central Croatia
 		add_state_claim = 163 #Dalmatia
+		add_state_claim = 683 #Gorizia
 		add_state_claim = 736 #Istria
 		add_state_claim = 794 #Syrmia
 		add_state_claim = 841 #Kotor
@@ -3429,7 +3440,9 @@ country_event = {
 
 	option = {
 		name = pact.213.a #We shall recover Istria and Trento!
+		add_state_claim = 103 #Fiume
 		add_state_claim = 488 #Trieste
+		add_state_claim = 683 #Gorizia
 		add_state_claim = 736 #Istria
 		add_state_claim = 783 #Trentino
 	}

@@ -22,14 +22,15 @@ country_event = {
 		is_in_faction = yes
 		NOT = {
 			any_allied_country = {
-				is_actual_major = yes
+				is_major = yes
+				is_subject = no
 				is_in_europe = yes
-				num_of_owned_factories > 50
 				surrender_progress < 0.8
 			}
 			TUR = {
 				is_in_faction_with = ROOT
-				is_actual_major = yes
+				is_major = yes
+				is_subject = no
 				surrender_progress < 0.8
 			}
 		}

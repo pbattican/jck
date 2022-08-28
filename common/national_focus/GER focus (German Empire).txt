@@ -172,8 +172,10 @@ focus_tree = {
 			focus = GER_a_christian_trade_union
 		}
 		available = {
-			has_government = social_democrat
-			has_country_flag = FAUD_allow
+			OR = {
+				NOT = { has_country_flag = FAUD_ban }
+				has_government = social_democrat
+			}
 		}
 		x = 2
 		y = 2
@@ -211,10 +213,6 @@ focus_tree = {
 			focus = GER_embrace_faud
 		}
 		available = {
-			OR = {
-				has_government = authoritarian_democrat
-				has_government = paternal_autocrat
-			}
 			has_country_flag = FAUD_ban
 		}
 		x = 0
@@ -887,7 +885,7 @@ focus_tree = {
 				limit = { has_idea = GER_black_monday_groener_2 }
 				remove_ideas = GER_black_monday_groener_2
 			}
-			if = {
+			else_if = {
 				limit = { has_idea = GER_black_monday_schacht_1 }
 				remove_ideas = GER_black_monday_schacht_1
 			}
@@ -2485,7 +2483,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_great_war_2"
-			army_experience = 50
 			add_doctrine_cost_reduction = {
 				name = GER_doctrine_great_war_2
 				cost_reduction = 0.5
@@ -3232,9 +3229,6 @@ focus_tree = {
 	focus = {
 		id = GER_mil_expansion_naval_1
 		icon = GFX_goal_Kaiserliche_Marine
-		available = {
-			58 = { is_owned_and_controlled_by = GER }
-		}
 		x = 47
 		y = 0
 		cost = 6
@@ -3243,154 +3237,9 @@ focus_tree = {
 			factor = 25
 		}
 
-		continue_if_invalid = yes
-
-		bypass = {
-			NOT = { owns_state = 58 }
-		}
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_mil_expansion_naval_1"
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_super_heavy_1
-					creator = "GER"
-					version_name = "Kaiser Wilhelm Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 1
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_super_heavy_1
-					creator = "GER"
-					version_name = "Kaiser Wilhelm Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 1
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_carrier_1
-					creator = "GER"
-					version_name = "Weser Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 1
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_carrier_1
-					creator = "GER"
-					version_name = "Weser Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 1
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_light_2
-					creator = "GER"
-					version_name = "T214 Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 2
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_light_2
-					creator = "GER"
-					version_name = "T214 Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 2
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_light_2
-					creator = "GER"
-					version_name = "T214 Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 2
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_light_2
-					creator = "GER"
-					version_name = "T214 Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 2
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_light_2
-					creator = "GER"
-					version_name = "T214 Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 2
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_submarine_2
-					creator = "GER"
-					version_name = "Type VII Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 2
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_submarine_2
-					creator = "GER"
-					version_name = "Type VII Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 2
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_submarine_2
-					creator = "GER"
-					version_name = "Type VII Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 2
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_submarine_2
-					creator = "GER"
-					version_name = "Type VII Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 2
-			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_submarine_2
-					creator = "GER"
-					version_name = "Type VII Class"
-				}
-				requested_factories = 1
-				progress = 0.5
-				amount = 2
-			}
+			navy_experience = 50
 		}
 	}
 
@@ -3403,7 +3252,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = GER_mil_expansion_naval_1
-		cost = 6
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
@@ -3418,9 +3267,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_global1"
 			add_equipment_to_stockpile = {
-				type = convoy_1
-				amount = 100
-				producer = GER
+				type = convoy
+				amount = 250
 			}
 		}
 	}
@@ -3438,6 +3286,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 2
+				GEA = { is_ai = no }
+			}
 		}
 
 		available = {
@@ -3449,7 +3301,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_global2"
 			336 = {
-				increase_state_category_by_two_levels = yes
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
 					level = 2
@@ -3481,36 +3333,47 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_mil_expansion_naval_1
-		cost = 6
-		available = {
-			56 = {
-				is_owned_and_controlled_by = GER
-			}
-		}
+		cost = 8
 
 		ai_will_do = {
 			factor = 10
 		}
 
-		bypass = {
-			NOT = {
-				owns_state = 56
-			}
-		}
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_north_sea1"
-			56 = {
-				increase_state_category_by_two_levels = yes
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 1
 					instant_build = yes
 				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = naval_base
-					level = 2
-					province = 241
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3866,16 +3729,48 @@ focus_tree = {
 		x = 1
 		y = 4
 		relative_position_id = GER_mil_expansion_naval_1
-		cost = 6
+		cost = 8
 		ai_will_do = {
 			factor = 10
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_tirpitzprogramm"
-			add_timed_idea = {
-				idea = GER_tirpitz_idea
-				days = 365
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -3896,10 +3791,7 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				ENG = { has_country_flag = PWH2 }
-				126 = { is_controlled_by_ROOT_or_subject = yes }
-			}
+			126 = { is_controlled_by_ROOT_or_subject = yes }
 		}
 
 		completion_reward = {
@@ -4247,16 +4139,18 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 0		#wad
 		}
 
 		available = {
-			118 = {
-				owner = { is_spanish_tag = yes }
-			}
-			can_declare_war_on = 118.owner
+			is_faction_leader = yes
 		}
-		bypass_if_unavailable = yes
+		bypass = {
+			118 = { owner = { is_ally_with = ROOT } }
+		}
+
+		will_lead_to_war_with = SPA
+		will_lead_to_war_with = GBR
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_gibraltar"
@@ -4278,17 +4172,7 @@ focus_tree = {
 		relative_position_id = GER_europakammer
 		cost = 5
 		available = {
-			can_declare_war_on = 118.owner
-			if = {
-				limit = {
-					OR = {
-						INT = { is_in_faction_with = var:118.owner }
-						RUS = { is_in_faction_with = var:118.owner }
-						SOV = { is_in_faction_with = var:118.owner }
-					}
-				}
-				second_weltkrieg_can_start = yes
-			}
+			second_weltkrieg_can_start = yes
 			is_faction_leader = yes
 		}
 		continue_if_invalid = yes
@@ -4296,52 +4180,30 @@ focus_tree = {
 			is_faction_leader = no
 		}
 		bypass = {
-			NOT = { can_declare_war_on = 118.owner }
+			NOT = { can_declare_war_on = SPA }
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 0		#wad
 			modifier = {
 				factor = 0
-				var:118.owner = {
+				SPA = {
 					is_in_faction = yes
 					faction_leader = {
-						NOT = { tag = RUS }
+						NOT = { original_tag = RUS }
 						has_socialist_government = no
 					}
 				}
 			}
-			modifier = {
-				factor = 0
-				date < 1939.1.1
-				OR = {
-					118 = { owner = { is_in_faction_with = FRA } }
-					118 = { owner = { is_guaranteed_by = FRA } }
-				}
-				has_game_rule = {
-					rule = wk2_begin_options
-					option = RESTRICTED
-				}
-			}
-			modifier = {
-				factor = 0.25
-				date < 1939.1.1
-				OR = {
-					118 = { owner = { is_in_faction_with = FRA } }
-					118 = { owner = { is_guaranteed_by = FRA } }
-				}
-				has_game_rule = {
-					rule = wk2_begin_options
-					option = RARE
-				}
-			}
 		}
+
+		will_lead_to_war_with = SPA
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_spain"
 			create_wargoal = {
 				type = annex_everything
-				target = 118.owner
+				target = SPA
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -4844,7 +4706,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_destroy_internationale"
-			create_wargoal = {
+			declare_war_on = {
 				type = topple_government
 				target = INT
 			}
@@ -4922,7 +4784,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_subjugate_russia"
-			create_wargoal = {
+			declare_war_on = {
 				type = topple_government
 				target = 219.owner
 			}
@@ -5276,6 +5138,8 @@ focus_tree = {
 				}
 			}
 		}
+
+		will_lead_to_war_with = GEO
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_oil_georgia"
