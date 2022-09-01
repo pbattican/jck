@@ -67,6 +67,22 @@ on_actions = {
 				limit = {has_game_rule = { rule = horst_host_country option = UKR} }
 				set_variable = { host = UKR.id }
 			}
+			else_if = {
+				limit = {has_game_rule = { rule = horst_host_country option = ENG} }
+				set_variable = { host = ENG.id }
+			}
+			else_if = {
+				limit = {has_game_rule = { rule = horst_host_country option = SWE} }
+				set_variable = { host = SWE.id }
+			}
+			else_if = {
+				limit = {has_game_rule = { rule = horst_host_country option = FNG} }
+				set_variable = { host = FNG.id }
+			}
+			else_if = {
+				limit = {has_game_rule = { rule = horst_host_country option = NFA} }
+				set_variable = { host = NFA.id }
+			}
 			var:host = {
 				set_variable = { marked_states = 0 }
 				set_country_flag = host
