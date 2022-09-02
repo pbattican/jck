@@ -750,7 +750,7 @@ focus_tree = {
 			is_subject = no
 			is_in_faction = no
 			INT = { is_faction_leader = yes }
-			at_peace_or_same_enemies_as_INT = yes
+			#at_peace_or_same_enemies_as_INT = yes # jck change
 		}
 		prerequisite = { focus = SWF_foreign_focus }
 		relative_position_id = SWF_election_success
