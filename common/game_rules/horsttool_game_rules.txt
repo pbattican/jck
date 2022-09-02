@@ -66,7 +66,7 @@ horst_host_country = {
 	}
 	option = {
 		name = FRA
-		text = "France"
+		text = "Commune of France"
 		desc = ""
 	}
 	option = {
@@ -87,6 +87,21 @@ horst_host_country = {
 	option = {
 		name = UKR
 		text = "Ukraine"
+		desc = ""
+	}
+	option = {
+		name = SWE
+		text = "Sweden"
+		desc = ""
+	}
+	option = {
+		name = FNG
+		text = "Fengtian Government"
+		desc = ""
+	}
+	option = {
+		name = NFA
+		text = "National France"
 		desc = ""
 	}
 }
