@@ -43,10 +43,10 @@ adjacency_rule = {
 
 	required_provinces = { 1155 4073 9947 12049 }
 
-	is_disabled = {
-		has_global_flag = SUEZ_CANAL_BLOCKED
-		tooltip = disable_canal_tt
-	}
+	# is_disabled = {
+	# 	has_global_flag = SUEZ_CANAL_BLOCKED
+	# 	tooltip = disable_canal_tt
+	# }
 
 	icon = 12049
 	offset = { 1 0 -6 }
