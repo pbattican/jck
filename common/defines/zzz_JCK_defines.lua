@@ -18,10 +18,12 @@ NDefines.NDiplomacy.MP_NUM_LOSERS_FOR_PEACE_PAUSE = 0
 
 ------------------------------------------ Country ---------------------------------------------
 -- Setting these scores to 0 might do something to affect the silly desyncs due to air score / other scores?
+NDefines.NCountry.COUNTRY_SCORE_MULTIPLIER = 0 --vanilla = 1.0
 NDefines.NCountry.ARMY_SCORE_MULTIPLIER = 0 --vanilla = 0.15
 NDefines.NCountry.AIR_SCORE_MULTIPLIER = 0 --vanilla = 0.1
 NDefines.NCountry.NAVY_SCORE_MULTIPLIER = 0 --vanilla = 0.1
-
+NDefines.NCountry.INDUSTRY_SCORE_MULTIPLIER = 0 --vanilla = 1.0
+NDefines.NCountry.PROVINCE_SCORE_MULTIPLIER = 0 --vanilla = 0.1
 
 ------------------------------------------ Production ------------------------------------------
 NDefines.NProduction.EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.005 	--vanilla = 0.01
