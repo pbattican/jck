@@ -54,19 +54,31 @@ on_actions = {
 							is_core_of = WHR
 							has_resistance = yes
 						}
-						add_compliance = 50
+						add_compliance = 100
+						add_resistance_target = {
+							amount = -50
+							occupier = UKR
+						}
 					}
 				}
-			}
-			FIN = {
-				add_ideas = {
-					low_economic_mobilisation
-				}
-				840 = {
-					add_extra_state_shared_building_slots = 4
+				197 = {
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 3
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				192 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
 						instant_build = yes
 					}
 					add_building_construction = {
@@ -144,6 +156,27 @@ on_actions = {
 					add_building_construction = {
 						type = dockyard
 						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		## Moscow Accord
+		effect = {
+			FIN = {
+				add_ideas = {
+					low_economic_mobilisation
+				}
+				840 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
 						instant_build = yes
 					}
 				}
