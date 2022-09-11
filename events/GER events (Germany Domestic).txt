@@ -1528,6 +1528,9 @@ country_event = { #Relations with Italy
 		ai_chance = {
 			base = 35
 		}
+		trigger = {
+			has_game_rule = { rule = jck_style option = jck_casual }
+		}
 		add_opinion_modifier = {
 			target = PAP
 			modifier = ITA_SUP
@@ -1538,6 +1541,9 @@ country_event = { #Relations with Italy
 		name = gerdom.43.c
 		ai_chance = {
 			base = 30
+		}
+		trigger = {
+			has_game_rule = { rule = jck_style option = jck_casual }
 		}
 		add_opinion_modifier = {
 			target = PAP
@@ -2207,6 +2213,9 @@ country_event = { #Further increasing our internal security
 		ai_chance = {
 			base = 50
 		}
+		trigger = {
+			has_game_rule = { rule = jck_style option = jck_casual }
+		}
 		add_political_power = -40
 		FRA = {
 			country_event = {
@@ -2220,6 +2229,9 @@ country_event = { #Further increasing our internal security
 		name = gerdom.106.c
 		ai_chance = {
 			base = 20
+		}
+		trigger = {
+			has_game_rule = { rule = jck_style option = jck_casual }
 		}
 		add_political_power = -40
 		clr_country_flag = surpress_french
