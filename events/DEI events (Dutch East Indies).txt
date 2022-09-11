@@ -327,15 +327,12 @@ country_event = { #Insulindian National Revolution - id being 13 wasn't intended
 
 	trigger = {
 		tag = DEI
-		if ={
-			limit = {
-				has_game_rule = {
-					rule = allowed_insulindia_revolt
-					option = not_allowed
-				}
-			}
-			always = no
+
+		has_game_rule = {
+			rule = allowed_insulindia_revolt
+			option = allowed
 		}
+
 		OR = {
 			has_idea = DEI_idea_insulindian_strength_high
 			has_idea = DEI_idea_insulindian_strength_very_high
