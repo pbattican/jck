@@ -177,11 +177,27 @@ deix_faction_choice = {
 
 	option = {
 		name = deix_reichspakt
-		text = "Reichkspakt"
+		text = "Reichspakt"
 	}
 
 	option = {
 		name = deix_random
 		text = "default"
+	}
+}
+
+jck_style = {
+	name = "JCK Style"
+	group = "JCK Simplifications"
+	icon = "GFX_wargoals"
+
+	option = {
+		name = jck_casual
+		text = "Vanilla KR"
+	}
+
+	default = {
+		name = jck_competitive
+		text = "Simplified"
 	}
 }
