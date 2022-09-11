@@ -1528,6 +1528,9 @@ country_event = { #Relations with Italy
 		ai_chance = {
 			base = 35
 		}
+		trigger = {
+			has_game_rule = { rule = jck_style option = jck_casual }
+		}
 		add_opinion_modifier = {
 			target = PAP
 			modifier = ITA_SUP
@@ -1538,6 +1541,9 @@ country_event = { #Relations with Italy
 		name = gerdom.43.c
 		ai_chance = {
 			base = 30
+		}
+		trigger = {
+			has_game_rule = { rule = jck_style option = jck_casual }
 		}
 		add_opinion_modifier = {
 			target = PAP
@@ -1746,6 +1752,9 @@ country_event = { # The Free Workers Union of Germany
 		ai_chance = {
 			base = 25
 		}
+		trigger = {
+			has_game_rule = { rule = jck_style option = jck_casual }
+		}
 		add_political_power = -150
 		custom_effect_tooltip = FAUD_allow1
 	}
@@ -1813,6 +1822,9 @@ country_event = { #Worker's Unrest in the Rhineland
 		ai_chance = {
 			base = 90
 		}
+		trigger = {
+			has_game_rule = { rule = jck_style option = jck_casual }
+		}
 		add_political_power = -40
 		GER = {
 			country_event = {
@@ -1833,6 +1845,9 @@ country_event = { #General Strike in the Rhineland
 		name = gerdom.56.a
 		ai_chance = {
 			base = 10
+		}
+		trigger = {
+			has_game_rule = { rule = jck_style option = jck_casual }
 		}
 		add_political_power = -100
 		country_event = {
@@ -1878,6 +1893,9 @@ country_event = { #Negotiating with the strikers
 		name = gerdom.58.a
 		ai_chance = {
 			base = 40
+		}
+		trigger = {
+			has_game_rule = { rule = jck_style option = jck_casual }
 		}
 		country_event = {
 			id = gerdom.60
@@ -2195,6 +2213,9 @@ country_event = { #Further increasing our internal security
 		ai_chance = {
 			base = 50
 		}
+		trigger = {
+			has_game_rule = { rule = jck_style option = jck_casual }
+		}
 		add_political_power = -40
 		FRA = {
 			country_event = {
@@ -2208,6 +2229,9 @@ country_event = { #Further increasing our internal security
 		name = gerdom.106.c
 		ai_chance = {
 			base = 20
+		}
+		trigger = {
+			has_game_rule = { rule = jck_style option = jck_casual }
 		}
 		add_political_power = -40
 		clr_country_flag = surpress_french
