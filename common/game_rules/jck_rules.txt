@@ -148,3 +148,40 @@ allowed_reclaim_NEE = {
 		text = "Allowed"
 	}
 }
+
+allowed_insulindia_revolt = {
+	name = "Insulindia Revolt"
+	group = "DEI JCK Rules"
+	icon = "GFX_wargoals"
+
+	default = {
+		name = not_allowed
+		text = "No Revolt"
+	}
+
+	option = {
+		name = allowed
+		text = "Revolt Possible"
+	}
+}
+
+deix_faction_choice = {
+	name = "DEI Exiles Faction"
+	group = "DEI Exiles JCK Rules"
+	icon = "GFX_wargoals"
+
+	default = {
+		name = deix_entente
+		text = "Entente"
+	}
+
+	option = {
+		name = deix_reichspakt
+		text = "Reichkspakt"
+	}
+
+	option = {
+		name = deix_random
+		text = "default"
+	}
+}

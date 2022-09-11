@@ -327,6 +327,15 @@ country_event = { #Insulindian National Revolution - id being 13 wasn't intended
 
 	trigger = {
 		tag = DEI
+		if ={
+			limit = {
+				has_game_rule = {
+					rule = allowed_insulindia_revolt
+					option = not_allowed
+				}
+			}
+			always = no
+		}
 		OR = {
 			has_idea = DEI_idea_insulindian_strength_high
 			has_idea = DEI_idea_insulindian_strength_very_high
@@ -3752,6 +3761,16 @@ country_event = { #Picking an ally - otherwise you will never be able to restore
 			base = 30
 		}
 		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = deix_faction_choice
+					option = deix_entente
+				}
+				has_game_rule = {
+					rule = deix_faction_choice
+					option = deix_random
+				}
+			}
 			ENT = {
 				is_faction_leader = yes
 				NOT = {
@@ -3769,6 +3788,16 @@ country_event = { #Picking an ally - otherwise you will never be able to restore
 			base = 70
 		}
 		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = deix_faction_choice
+					option = deix_reichspakt
+				}
+				has_game_rule = {
+					rule = deix_faction_choice
+					option = deix_random
+				}
+			}
 			GER = {
 				is_faction_leader = yes
 				NOT = {
