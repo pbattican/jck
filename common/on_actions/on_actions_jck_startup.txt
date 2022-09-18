@@ -197,5 +197,48 @@ on_actions = {
 				}
 			}
 		}
+
+		## Resources
+		effect = {
+			####### Indian Tungsten
+			425 = {
+				add_resource = {
+					type = tungsten
+					amount = -55
+				}
+			}
+			868 = {
+				add_resource = {
+					type = tungsten
+					amount = -17
+				}
+			}
+			429 = {
+				add_resource = {
+					type = tungsten
+					amount = -15
+				}
+			}
+			433 = {
+				add_resource = {
+					type = tungsten
+					amount = -25
+				}
+			}
+
+			####### Brazil Rubber
+			855 = {
+				add_resource = {
+					type = rubber
+					amount = -25
+				}
+			}
+			497 = {
+				add_resource = {
+					type = rubber
+					amount = -12
+				}
+			}
+		}
 	}
 }

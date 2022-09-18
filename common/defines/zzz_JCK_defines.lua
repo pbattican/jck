@@ -11,6 +11,9 @@ NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 800						-- 1100
 NDefines_Graphics.NGraphics.DRAW_MAP_OBJECTS_CUTOFF = 250 					-- 550 
 NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
 
+NDefines_Graphics.NGraphics.MAPICON_GROUP_PASSES = 10 -- how many mapicons get processed per frame for grouping. more = quicker response, fewer = better performance
+NDefines_Graphics.NGraphics.WEATHER_DISTANCE_CUTOFF = 1000 -- At what distance weather effects are hidden
+
 ------------------------------------------ Diplomacy ------------------------------------------
 -- Should prevent peace events appearing for all players if there aren't winners and losers on both sides. 
 NDefines.NDiplomacy.MP_NUM_WINNERS_FOR_PEACE_PAUSE = 4
@@ -145,5 +148,5 @@ NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0;
 NDefines.NResistance.GARRISON_LOG_MAX_MONTHS = 1
 
 ------------------------------------------ Building ------------------------------------------
-NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.125						-- Vanilla is 0.2
+--NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.125						-- Vanilla is 0.2
 NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 100 -- this is due to 50% increase in plane cost	-- Vanilla is 200 

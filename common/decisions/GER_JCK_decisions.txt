@@ -16,3 +16,148 @@ crisis = {
 		}
 	}
 }
+
+GER_prepare_the_inundation_lines = {
+	GER_inundate_the_water_lines = {
+		icon = hol_inundate_water_lines
+
+		available = {
+			has_war = yes
+			has_full_control_of_state = 7
+		}
+
+		visible = {
+			NOT = { has_global_flag = GER_inundation_lines_flooded }
+		}
+
+		cost = 25
+		days_remove = 14
+		fire_only_once = no
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					NOT = { controls_state = 36 } #Frisia
+					NOT = { controls_state = 866 } #Guelders
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GER_inundate_the_water_lines"
+			7 = {
+				add_province_modifier = {
+					static_modifiers = { flooded }
+					province = {
+						id = 9498
+						id = 391
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 2
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 0.5
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 0.5
+				}
+			}
+			866 = {
+				add_province_modifier = {
+					static_modifiers = { flooded }
+					province = {
+						id = 11456
+						id = 9363
+						id = 6241
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 3
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 1.5
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 1.5
+				}
+			}
+			set_global_flag = GER_inundation_lines_flooded
+		}
+	}
+
+	GER_drain_the_water_lines = {
+		icon = hol_drain_water_lines
+
+		available = {
+			has_full_control_of_state = 7
+		}
+
+		cost = 25
+		days_remove = 14
+		fire_only_once = no
+
+		highlight_states = {
+			highlight_provinces = { 9498 13544 11456 }
+		}
+
+		visible = {
+			owns_state = 7
+			has_global_flag = GER_inundation_lines_flooded
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				any_owned_state = {
+					is_in_home_area = yes
+					NOT = { is_controlled_by = ROOT }
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GER_drain_the_water_lines"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GER_drain_the_water_lines"
+			7 = {
+				remove_province_modifier = {
+					static_modifiers = { flooded }
+					province = {
+						id = 9498
+						id = 391
+					}
+				}
+			}
+			35 = {
+				remove_province_modifier = {
+					static_modifiers = { flooded }
+					province = {
+						id = 11456
+						id = 9363
+					}
+				}
+			}
+			36 = {
+				remove_province_modifier = {
+					static_modifiers = { flooded }
+					province = {
+						id = 6241
+					}
+				}
+			}
+			clr_global_flag = GER_inundation_lines_flooded
+		}
+	}
+}
