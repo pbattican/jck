@@ -293,7 +293,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		x = -6
 		y = 1
-		cost = 8
+		cost = 5 # jck change
 
 		relative_position_id = AUS_military_expansion
 
@@ -325,7 +325,7 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		x = -2
 		y = 1
-		cost = 8
+		cost = 5 # jck change
 
 		ai_will_do = {
 			factor = 1
@@ -348,7 +348,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_doctrine_Jansa"
-			every_army_leader = { add_planning = 1 }
 			add_doctrine_cost_reduction = {
 				name = AUS_doctrine_Jansa
 				cost_reduction = 0.5
@@ -364,7 +363,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_artillery2
 		x = 0
 		y = 1
-		cost = 8
+		cost = 5 # jck change
 
 		ai_will_do = {
 			factor = 1
@@ -387,7 +386,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_doctrine_Hickmann"
-			every_army_leader = { add_attack = 1 }
 			add_doctrine_cost_reduction = {
 				name = AUS_doctrine_Hickmann
 				cost_reduction = 0.5
@@ -403,7 +401,7 @@ focus_tree = {
 		icon = GFX_goal_doctrine_tank_warfare
 		x = 2
 		y = 1
-		cost = 8
+		cost = 5 # jck change
 
 		ai_will_do = {
 			factor = 1
@@ -426,7 +424,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_doctrine_von_Hubicki"
-			every_army_leader = { add_logistics = 1 }
 			add_doctrine_cost_reduction = {
 				name = AUS_doctrine_von_Hubicki
 				cost_reduction = 0.5
@@ -535,6 +532,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_kavalleriepanzer"
+			every_army_leader = { add_logistics = 1 }
 			add_tech_bonus = {
 				name = AUS_kavalleriepanzer
 				bonus = 1
@@ -561,6 +559,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_infanteriepanzer"
+			every_army_leader = { add_planning = 1 }
 			add_tech_bonus = {
 				name = AUS_infanteriepanzer
 				bonus = 1
@@ -587,6 +586,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_auftragstaktik"
+			every_army_leader = { add_attack = 1 }
 			if = {
 				limit = { has_completed_focus = AUS_doctrine_Hickmann }
 				swap_ideas = {
@@ -1349,7 +1349,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 1
 		y = 1
-		cost = 8
+		cost = 5 # jck change
 
 		available = {
 			AUS_no_black_monday = yes
@@ -1404,7 +1404,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 1
-		cost = 8
+		cost = 5 # jck change
 
 		available = {
 			AUS_no_black_monday = yes
@@ -1435,7 +1435,7 @@ focus_tree = {
 		icon = GFX_goal_agricultural_policies
 		x = 3
 		y = 1
-		cost = 8
+		cost = 5 # jck change
 
 		available = {
 			AUS_no_black_monday = yes
@@ -1470,7 +1470,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		x = 0
 		y = 1
-		cost = 8
+		cost = 5 # jck change
 
 		available = {
 			AUS_no_black_monday = yes
@@ -1503,7 +1503,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 0
 		y = 2
-		cost = 8
+		cost = 5 # jck change
 
 		available = {
 			AUS_no_black_monday = yes
@@ -4379,7 +4379,7 @@ focus_tree = {
 			add_ideas = AUS_DNF_political_instability
 			add_timed_idea = {
 				idea = AUS_new_administration
-				days = 365
+				days = 180 # jck change 
 			}
 			custom_effect_tooltip = tooltip_white_line
 			set_cosmetic_tag = AUS_danubia
@@ -4611,7 +4611,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_united_states"
 			add_timed_idea = {
 				idea = AUS_new_administration
-				days = 365
+				days = 180 # jck change
 			}
 			add_political_power = 70
 		}
