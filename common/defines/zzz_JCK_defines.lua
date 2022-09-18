@@ -11,6 +11,9 @@ NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 800						-- 1100
 NDefines_Graphics.NGraphics.DRAW_MAP_OBJECTS_CUTOFF = 250 					-- 550 
 NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
 
+NDefines_Graphics.NGraphics.MAPICON_GROUP_PASSES = 10 -- how many mapicons get processed per frame for grouping. more = quicker response, fewer = better performance
+NDefines_Graphics.NGraphics.WEATHER_DISTANCE_CUTOFF = 1000 -- At what distance weather effects are hidden
+
 ------------------------------------------ Diplomacy ------------------------------------------
 -- Should prevent peace events appearing for all players if there aren't winners and losers on both sides. 
 NDefines.NDiplomacy.MP_NUM_WINNERS_FOR_PEACE_PAUSE = 4
