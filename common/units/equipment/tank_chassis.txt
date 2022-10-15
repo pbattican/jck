@@ -5,11 +5,16 @@ equipments = {
 		is_archetype = yes
 		is_buildable = no
 
+		can_be_produced = {
+			NOT = { has_country_flag = cannot_produce_armor }
+		}
+
 		picture = archetype_light_tank_equipment
 		type = armor
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
+
 
 
 		module_slots = {
@@ -85,12 +90,11 @@ equipments = {
 					tank_secondary_turret
 				}
 			}
-
 		}
 		module_count_limit = {
 			module = sloped_armor
 			count < 2
-		}	
+		}
 		module_count_limit = {
 			category = tank_radio_module
 			count < 2
