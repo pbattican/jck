@@ -139,11 +139,11 @@ ideas = {
 					build_cost_ic = -0.075
 					instant = yes
 				}
-				motorized = {
+				motorized_equipment = {
 					build_cost_ic = -0.075
 					instant = yes
 				}
-				mechanized = {
+				mechanized_equipment = {
 					build_cost_ic = -0.075
 					instant = yes
 				}
@@ -166,11 +166,11 @@ ideas = {
 					build_cost_ic = -0.075
 					instant = yes
 				}
-				motorized = {
+				motorized_equipment = {
 					build_cost_ic = -0.075
 					instant = yes
 				}
-				mechanized = {
+				mechanized_equipment = {
 					build_cost_ic = -0.075
 					instant = yes
 				}
