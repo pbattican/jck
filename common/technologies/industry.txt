@@ -1458,7 +1458,6 @@ technologies = {
 	}
 	#####################################
 
-
 	construction1 = {
 
 		production_speed_buildings_factor = 0.10
