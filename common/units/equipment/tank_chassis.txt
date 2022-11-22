@@ -1578,12 +1578,11 @@ equipments = {
 					tank_radio_module
 				}
 			}
-
 		}
 		module_count_limit = {
 			module = sloped_armor
 			count < 2
-		}	
+		}
 		module_count_limit = {
 			category = tank_radio_module
 			count < 2
@@ -1665,7 +1664,9 @@ equipments = {
 		year = 1936
 		is_archetype = yes
 		is_buildable = no
-
+		can_be_produced = {
+			NOT = { has_country_flag = cannot_produce_armor }
+		}
 		picture = archetype_amphibious_tank_equipment
 		type = armor
 		group_by = archetype
@@ -1728,7 +1729,7 @@ equipments = {
 		module_count_limit = {
 			module = sloped_armor
 			count < 2
-		}	
+		}
 		module_count_limit = {
 			category = tank_radio_module
 			count < 2
@@ -1766,12 +1767,10 @@ equipments = {
 			module = auto_loader
 			count < 2
 		}
-
 		module_count_limit = {
 			module = stabilizer
 			count < 2
 		}
-
 		default_modules = {
 			main_armament_slot = empty
 			turret_type_slot = tank_light_one_man_tank_turret
