@@ -741,7 +741,7 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_tech_team"
-			add_research_slot = 1
+			add_research_slot_until_five = yes
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -3292,11 +3292,7 @@ focus_tree = {
 			is_faction_leader = yes
 		}
 		ai_will_do = {
-			factor = 1000
-			modifier = {
-				factor = 0
-				date < 1938.1.1
-			}
+			factor = 20
 			modifier = {
 				factor = 3
 				OR = {
@@ -3305,7 +3301,15 @@ focus_tree = {
 				}
 			}
 			modifier = {
-				factor = 2
+				factor = 3
+				date > 1938.1.1
+			}
+			modifier = {
+				factor = 10
+				date > 1939.1.1
+			}
+			modifier = {
+				factor = 20
 				date > 1940.1.1
 			}
 		}
@@ -3522,18 +3526,17 @@ focus_tree = {
 		will_lead_to_war_with = AST
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_isolate_australasia"
-			add_opinion_modifier = { target = AST modifier = embargo }
 			AST = {
+				embargo_ROOT = yes
 				country_event = japfor.450
-			}
-			hidden_effect = {
-				for_each_loop = {
-					array = global.asian_economic_sphere
-					add_opinion_modifier = {
-						target = AST
-						modifier = embargo
+				hidden_effect = {
+					for_each_scope_loop = {
+						array = global.asian_economic_sphere
+						embargo_PREV = yes
 					}
 				}
+			}
+			hidden_effect = {
 				activate_targeted_decision = { target = AST decision = JAP_attack_australia }
 				activate_targeted_decision = { target = NZL decision = JAP_attack_australia }
 			}
@@ -3554,13 +3557,25 @@ focus_tree = {
 			is_faction_leader = yes
 		}
 		ai_will_do = {
-			factor = 2500
+			factor = 20
 			modifier = {
 				factor = 3
 				OR = {
 					has_completed_focus = JAP_chuou
 					has_completed_focus = JAP_ishinha
 				}
+			}
+			modifier = {
+				factor = 3
+				date > 1938.1.1
+			}
+			modifier = {
+				factor = 10
+				date > 1939.1.1
+			}
+			modifier = {
+				factor = 20
+				date > 1940.1.1
 			}
 		}
 		x = 5
@@ -3633,7 +3648,7 @@ focus_tree = {
 				var:629.owner = { is_stronger_than_ROOT_and_not_vulnerable_consider_naval_strength = yes }
 			}
 		}
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = JAP_go_south
 		cost = 5
@@ -3721,9 +3736,9 @@ focus_tree = {
 				is_in_array = { global.JAP_possible_allies_array = HAW }
 			}
 		}
-		x = 2
-		y = 2
-		relative_position_id = JAP_go_south
+		x = 0
+		y = 1
+		relative_position_id = JAP_pacific_islands
 		cost = 5
 		will_lead_to_war_with = HAW
 		completion_reward = {
@@ -3777,12 +3792,12 @@ focus_tree = {
 				OR = {
 					any_enemy_country = { is_actual_major = yes }
 					has_war_with = CHN
-					"PHI" = { is_in_faction = yes }
+					PHI = { is_in_faction = yes }
 				}
 			}
 			modifier = {
 				factor = 0
-				is_in_array = { global.JAP_possible_allies_array = "PHI" }
+				is_in_array = { global.JAP_possible_allies_array = PHI }
 			}
 			modifier = {
 				factor = 0
@@ -3795,13 +3810,13 @@ focus_tree = {
 				}
 			}
 		}
-		x = 0
-		y = 1
+		x = -1
+		y = 2
 		relative_position_id = JAP_go_south
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_philippines"
-			"PHI" = {
+			PHI = {
 				country_event = japfor.55
 			}
 			hidden_effect = { activate_targeted_decision = { target = PHI decision = JAP_threaten_philippines } }
@@ -3813,31 +3828,38 @@ focus_tree = {
 		id = JAP_claim_colonies
 		icon = GFX_goal_JAP_south_seas_mandate
 		prerequisite = {
-			focus = JAP_philippines
+			focus = JAP_go_south
 		}
 		available = {
 			is_faction_leader = yes
 		}
 		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 3
-				OR = {
-					has_completed_focus = JAP_chuou
-					has_completed_focus = JAP_ishinha
-				}
-			}
+			factor = 1500
 			modifier = {
 				factor = 0
-				GER = { has_war = no }
+				date < 1939.7.1
+				NOT = {
+					GER = {
+						any_enemy_country = {
+							is_major = yes
+							num_of_controlled_factories > 50
+						}
+					}
+					FRA = { focus_progress = { focus = FRA_War_with_germany progress > 0 } }
+					RUS = { focus_progress = { focus = RUS_Crush_The_German_Hegemony progress > 0 } }
+				}
 			}
 		}
 		x = 0
-		y = 2
+		y = 3
 		relative_position_id = JAP_go_south
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_claim_colonies"
+			add_named_threat = {
+				threat = 6
+				name = JAP_claim_colonies_threat
+			}
 			custom_effect_tooltip = JAP_gain_claim_southern_islands
 			hidden_effect = {
 				every_state = {
@@ -3943,12 +3965,25 @@ focus_tree = {
 				is_in_array = { global.JAP_possible_allies_array = INS }
 				INS = { controls_state = 1020 }
 			}
+			modifier = {
+				factor = 0
+				INS = { is_in_faction = no }
+				OR = {
+					AND = {
+						has_game_rule = { rule = INS_forpol option = INS_FORPOL_GER }
+						INS = { NOT = { has_country_flag = ins_sultans_countercoup } }
+					}
+					has_game_rule = { rule = INS_forpol option = INS_FORPOL_ENT }
+					has_game_rule = { rule = INS_forpol option = INS_FORPOL_HND }
+					has_game_rule = { rule = INS_forpol option = INS_FORPOL_INS }
+				}
+			}
 		}
 		x = -2
-		y = 3
+		y = 1
 		will_lead_to_war_with = DEI
 		will_lead_to_war_with = INS
-		relative_position_id = JAP_go_south
+		relative_position_id = JAP_claim_colonies
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_demand_indonesia"
@@ -4120,6 +4155,7 @@ focus_tree = {
 			focus = JAP_claim_colonies
 		}
 		will_lead_to_war_with = GEA
+		will_lead_to_war_with = GER
 		available = {
 			is_faction_leader = yes
 			if = {
@@ -4137,35 +4173,27 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 25
+			factor = 1500
 			modifier = {
 				factor = 0
-				has_war = yes
-				OR = {
-					any_enemy_country = { is_actual_major = yes }
-					has_war_with = CHN
-				}
-			}
-			modifier = {
-				factor = 0
-				GEA = { is_subject_of = GER }
 				NOT = {
-					date > 1941.1.1
+					FRA = { focus_progress = { focus = FRA_War_with_germany progress > 0 } }
+					RUS = { focus_progress = { focus = RUS_Crush_The_German_Hegemony progress > 0 } }
 					GER = {
-						OR = {
-							has_war_with = FRA
-							has_war_with = RUS
-							has_war_with = SOV
+						any_enemy_country = {
+							is_major = yes
+							num_of_controlled_factories > 50
 						}
 					}
 				}
 			}
 			modifier = {
-				factor = 3
-				OR = {
-					has_completed_focus = JAP_chuou
-					has_completed_focus = JAP_ishinha
-				}
+				factor = 0
+				surrender_progress > 0.05
+			}
+			modifier = {
+				factor = 0
+				GEA = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 		x = 2
@@ -4176,14 +4204,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus JAP_ultimatum"
 			if = {
 				limit = { country_exists = GEA }
-				GEA = {
-					country_event = japfor.41
-				}
+				GEA = { country_event = japfor.41 }
 			}
 			else = {
-				GER = {
-					country_event = japfor.41
-				}
+				GER = { country_event = japfor.41 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }

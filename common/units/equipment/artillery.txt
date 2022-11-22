@@ -114,14 +114,14 @@ equipments = {
 		hard_attack = 1
 		ap_attack = 2
 		air_attack = 0
-		
+
 		build_cost_ic = 4
 		resources = {
 			tungsten = 2
 			steel = 1
 		}
 	}
-	
+
 	rocket_artillery_equipment_1 = {
 		year = 1940
 
@@ -129,7 +129,7 @@ equipments = {
 		priority = 60
 		visual_level = 0
 	}
-	
+
 	rocket_artillery_equipment_2 = {
 		year = 1943
 
