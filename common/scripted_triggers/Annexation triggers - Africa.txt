@@ -168,11 +168,7 @@ can_release_eritrea = {
 	state = 550 #Eritrea
 	NOT = { is_claimed_by = ROOT }
 	ROOT = {
-		OR = {
-			country_exists = ETH
-			has_country_flag = ETH_CONQ
-			271 = { is_valid_annexation_state = no } #Addis Ababa
-		}
+		should_release_ethiopia_first = yes
 		NOT = {
 			has_country_flag = ERI_CONQ
 			country_exists = ERI
@@ -205,29 +201,24 @@ can_release_gabon = {
 	}
 }
 
-#German Somaliland - annexation_GERSOM_CONQ
-can_release_german_somaliland = {
+#Djibouti - annexation_DJIBOUTI_CONQ
+can_release_djibouti = {
 	state = 268 #Djibouti
 	NOT = { is_claimed_by = ROOT }
-	OR = {
-		SOM = { ROOT_can_grant_land = yes }
-		# var:921.owner = { #Afar
-		# 	OR = {
-		# 		tag = ETH
-		# 		tag = ERI
-		# 	}
-		# 	ROOT_can_grant_land = yes
-		# }
-	}
 	ROOT = {
-		NOT = {
-			tag = GER
-			tag = GEX
-			tag = NFA
-			tag = SOM
-			tag = ETH
-			has_country_flag = GERSOL_CONQ
+		should_release_somalia_first = yes
+		should_release_ethiopia_first = yes
+		OR = {
+			SOM = { ROOT_can_grant_land = yes }
+			var:921.owner = { #Afar
+				OR = {
+					tag = ETH
+					tag = ERI
+				}
+				ROOT_can_grant_land = yes
+			}
 		}
+		NOT = { has_country_flag = GERSOL_CONQ }
 	}
 }
 
