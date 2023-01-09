@@ -161,3 +161,39 @@ GER_prepare_the_inundation_lines = {
 		}
 	}
 }
+
+# GER_blow_the_rhine_bridges = {
+# 	GER_blow_the_baden_bridges = {
+# 		icon = generic_army
+# 		allowed = {
+# 			original_tag = GER
+# 		}
+# 		available = {
+# 			has_war = yes
+# 			has_full_control_of_state = 780
+# 		}
+
+# 	}
+# 	GER_blow_the_hesse_bridges = {
+# 		icon = generic_army
+# 		allowed = {
+# 			original_tag = GER
+# 		}
+# 		available = {
+# 			has_war = yes
+# 			has_full_control_of_state = 55
+# 		}
+		
+# 	}
+# 	GER_blow_the_rhineland_bridges = {
+# 		icon = generic_army
+# 		allowed = {
+# 			original_tag = GER
+# 		}
+# 		available = {
+# 			has_war = yes
+# 			has_full_control_of_state = 55
+# 		}
+		
+# 	}
+# }

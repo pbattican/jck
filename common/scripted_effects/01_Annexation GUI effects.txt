@@ -1170,10 +1170,10 @@ check_possible_annexations_africa = {
 		limit = { can_release_gabon = yes }
 		ROOT = { activate_mission = annexation_GAB_CONQ }
 	}
-	else_if = {
-		limit = { can_release_german_somaliland = yes }
-		ROOT = { activate_mission = annexation_GERSOM_CONQ }
-	}
+	# else_if = {
+	# 	limit = { can_release_german_somaliland = yes }
+	# 	ROOT = { activate_mission = annexation_GERSOM_CONQ }
+	# }
 	else_if = {
 		limit = { can_release_ghana = yes }
 		ROOT = { activate_mission = annexation_GHA_CONQ }

@@ -3343,6 +3343,12 @@ focus_tree = {
 				uses = 1
 				category = air_doctrine
 			}
+			add_tech_bonus = {
+				name = RUS_Wing_Formations
+				bonus = 1
+				uses = 1
+				category = cat_air_engine
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
