@@ -68,7 +68,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 			modifier = {
-				factor = 100
+				factor = 50
 				OR = {
 					has_completed_focus = GER_groener1
 					has_completed_focus = GER_schacht1
@@ -98,7 +98,7 @@ focus_tree = {
 		cost = 6
 
 		ai_will_do = {
-			factor = 50
+			factor = 50		# Get rid of manpower bottleneck ASAP
 			modifier = {
 				factor = 100
 				OR = {
@@ -106,26 +106,19 @@ focus_tree = {
 					has_completed_focus = GER_schacht1
 				}
 			}
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_war_with = FRA }
-				date > 1939.10.5
-			}
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_organise_the_youth"
-			remove_ideas = GER_quenched_militarism
-			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
-				amount = 250
-				producer = GER
+			add_war_support = 0.1
+			add_manpower = 30000
+			if = {
+				limit = { has_idea = GER_quenched_militarism }
+				swap_ideas = {
+					remove_idea = GER_quenched_militarism
+					add_idea = GER_quenched_militarism_2
+				}
 			}
-			add_manpower = 25000
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
@@ -138,8 +131,8 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				has_idea = GER_franz_von_papen_sic
-				has_idea = GER_kurt_von_schleicher_sic
+				GER_franz_von_papen = { is_second_in_command = yes }
+				GER_kurt_von_schleicher = { is_second_in_command = yes }
 			}
 		}
 		x = -2
@@ -361,9 +354,7 @@ focus_tree = {
 		relative_position_id = GER_political_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_women_suffrage"
@@ -473,7 +464,7 @@ focus_tree = {
 			focus = GER_finalise_centralisation
 		}
 		available = {
-			has_idea = GER_kurt_von_schleicher_sic
+			GER_kurt_von_schleicher = { is_second_in_command = yes }
 		}
 
 		select_effect = {
@@ -489,9 +480,7 @@ focus_tree = {
 		relative_position_id = GER_political_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_schleicher"
@@ -523,9 +512,7 @@ focus_tree = {
 		relative_position_id = GER_political_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_poli_temp"
@@ -548,9 +535,7 @@ focus_tree = {
 		y = 0
 		cost = 5
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_black_monday_aftermath"
@@ -573,9 +558,7 @@ focus_tree = {
 		relative_position_id = GER_black_monday_aftermath
 		cost = 5
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_groener1"
@@ -661,9 +644,7 @@ focus_tree = {
 		relative_position_id = GER_black_monday_aftermath
 		cost = 10
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_groener2"
@@ -673,7 +654,7 @@ focus_tree = {
 			}
 			hidden_effect = {
 				IRE = {
-					country_event = { id = ire.229 days = 10 random_days = 20 }
+					country_event = { id = ireland.229 days = 10 random_days = 20 }
 				}
 			}
 		}
@@ -698,9 +679,7 @@ focus_tree = {
 		relative_position_id = GER_black_monday_aftermath
 		cost = 10
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_groener3"
@@ -710,7 +689,7 @@ focus_tree = {
 			}
 			hidden_effect = {
 				IRE = {
-					country_event = { id = ire.229 days = 10 random_days = 20 }
+					country_event = { id = ireland.229 days = 10 random_days = 20 }
 				}
 			}
 		}
@@ -730,9 +709,7 @@ focus_tree = {
 		relative_position_id = GER_black_monday_aftermath
 		cost = 5
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_schacht1"
@@ -765,9 +742,7 @@ focus_tree = {
 		relative_position_id = GER_black_monday_aftermath
 		cost = 10
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_schacht2"
@@ -777,7 +752,7 @@ focus_tree = {
 			}
 			hidden_effect = {
 				IRE = {
-					country_event = { id = ire.229 days = 10 random_days = 20 }
+					country_event = { id = ireland.229 days = 10 random_days = 20 }
 				}
 			}
 		}
@@ -802,9 +777,7 @@ focus_tree = {
 		relative_position_id = GER_black_monday_aftermath
 		cost = 10
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_schacht3"
@@ -814,7 +787,7 @@ focus_tree = {
 			}
 			hidden_effect = {
 				IRE = {
-					country_event = { id = ire.229 days = 10 random_days = 20 }
+					country_event = { id = ireland.229 days = 10 random_days = 20 }
 				}
 			}
 		}
@@ -836,7 +809,14 @@ focus_tree = {
 		cost = 7
 
 		ai_will_do = {
-			factor = 1000
+			factor = 10
+			modifier = {
+				factor = 100
+				OR = {
+					has_completed_focus = GER_schacht2
+					has_completed_focus = GER_groener2
+				}
+			}
 		}
 
 		completion_reward = {
@@ -861,9 +841,7 @@ focus_tree = {
 		relative_position_id = GER_black_monday_aftermath
 		cost = 10
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_black_monday_finish"
@@ -888,7 +866,7 @@ focus_tree = {
 			}
 			hidden_effect = {
 				IRE = {
-					country_event = { id = ire.230 days = 10 random_days = 20 }
+					country_event = { id = ireland.230 days = 10 random_days = 20 }
 				}
 			}
 		}
@@ -906,9 +884,7 @@ focus_tree = {
 		relative_position_id = GER_black_monday_aftermath
 		cost = 8
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_zollverein"
@@ -975,7 +951,12 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 50
+			base = 0
+			modifier = {
+				add = 200
+				has_completed_focus = GER_mil_expansion_land_1
+				has_completed_focus = GER_industry_finished
+			}
 		}
 
 		completion_reward = {
@@ -1001,9 +982,7 @@ focus_tree = {
 		relative_position_id = GER_experimental_research
 		cost = 8
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_ig_farben"
@@ -1027,9 +1006,7 @@ focus_tree = {
 		relative_position_id = GER_experimental_research
 		cost = 8
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_synthetic"
@@ -1054,9 +1031,7 @@ focus_tree = {
 		relative_position_id = GER_experimental_research
 		cost = 8
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_research_expansion"
@@ -1076,9 +1051,7 @@ focus_tree = {
 		relative_position_id = GER_experimental_research
 		cost = 8
 
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_zuse"
@@ -1134,9 +1107,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_hahn_meitner"
@@ -1161,9 +1132,7 @@ focus_tree = {
 		relative_position_id = GER_experimental_research
 		cost = 8
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_rocket"
@@ -1196,7 +1165,7 @@ focus_tree = {
 		cost = 6
 
 		ai_will_do = {
-			factor = 10
+			factor = 0
 			modifier = {
 				factor = 5
 				OR = {
@@ -1365,9 +1334,9 @@ focus_tree = {
 		cost = 6
 
 		ai_will_do = {
-			factor = 100
+			factor = 0
 			modifier = {
-				factor = 20
+				add = 500
 				OR = {
 					has_completed_focus = GER_groener2
 					has_completed_focus = GER_schacht2
@@ -1407,16 +1376,7 @@ focus_tree = {
 		relative_position_id = GER_siemens
 		cost = 6
 
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 25
-				OR = {
-					has_completed_focus = GER_groener2
-					has_completed_focus = GER_schacht2
-				}
-			}
-		}
+		ai_will_do = { factor = 500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_civ_industry_1"
@@ -1437,16 +1397,7 @@ focus_tree = {
 		relative_position_id = GER_siemens
 		cost = 6
 
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 25
-				OR = {
-					has_completed_focus = GER_groener2
-					has_completed_focus = GER_schacht2
-				}
-			}
-		}
+		ai_will_do = { factor = 500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_civ_industry_2"
@@ -1468,16 +1419,7 @@ focus_tree = {
 		relative_position_id = GER_siemens
 		cost = 6
 
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 25
-				OR = {
-					has_completed_focus = GER_groener2
-					has_completed_focus = GER_schacht2
-				}
-			}
-		}
+		ai_will_do = { factor = 500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_civ_industry_3"
@@ -1505,9 +1447,7 @@ focus_tree = {
 		relative_position_id = GER_siemens
 		cost = 8
 
-		ai_will_do = {
-			factor = 500
-		}
+		ai_will_do = { factor = 500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_industry_finished"
@@ -1529,7 +1469,11 @@ focus_tree = {
 		cost = 6 # jck change
 
 		ai_will_do = {
-			factor = 500
+			base = 0
+			modifier = {
+				add = 200
+				has_completed_focus = GER_mil_expansion_land_1
+			}
 		}
 
 		completion_reward = {
@@ -1614,9 +1558,7 @@ focus_tree = {
 		relative_position_id = GER_siemens
 		cost = 8
 
-		ai_will_do = {
-			factor = 500
-		}
+		ai_will_do = { factor = 500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_further_siemens_contracts"
@@ -1636,22 +1578,22 @@ focus_tree = {
 		cost = 6
 
 		ai_will_do = {
-			factor = 25
+			factor = 0
 			modifier = {
-				factor = 10
-				OR = {
-					has_completed_focus = GER_groener2
-					has_completed_focus = GER_schacht2
-				}
+				add = 500
+				has_completed_focus = GER_mil_expansion_land_1
 			}
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_artillery_research"
+			add_one_random_military_factory = yes
+			custom_effect_tooltip = tooltip_white_line
 			add_tech_bonus = {
 				name = GER_artillery_research
 				bonus = 1
 				uses = 1
+				ahead_reduction = 2
 				category = artillery
 			}
 		}
@@ -1670,16 +1612,7 @@ focus_tree = {
 		relative_position_id = GER_siemens
 		cost = 6
 
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 25
-				OR = {
-					has_completed_focus = GER_groener2
-					has_completed_focus = GER_schacht2
-				}
-			}
-		}
+		ai_will_do = { factor = 500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_mil_industry_2"
@@ -1701,16 +1634,7 @@ focus_tree = {
 		relative_position_id = GER_siemens
 		cost = 6
 
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 10
-				OR = {
-					has_completed_focus = GER_groener2
-					has_completed_focus = GER_schacht2
-				}
-			}
-		}
+		ai_will_do = { factor = 500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_mil_industry_3"
@@ -1768,7 +1692,7 @@ focus_tree = {
 		cost = 6
 
 		ai_will_do = {
-			factor = 10
+			factor = 0
 			modifier = {
 				factor = 20
 				OR = {
@@ -1879,9 +1803,7 @@ focus_tree = {
 		y = 0
 		cost = 3
 
-		ai_will_do = {
-			factor = 200
-		}
+		ai_will_do = { factor = 200 }
 
 		continue_if_invalid = yes
 
@@ -1912,9 +1834,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_mil_expansion
 		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_linie1"
 			8 = {
@@ -1984,9 +1904,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 5
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_linie2_small"
@@ -2027,9 +1945,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_linie2_full"
@@ -2115,9 +2031,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 5
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_linie3"
@@ -2170,31 +2084,10 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 50
+			base = 0
 			modifier = {
-				factor = 0
-				NOT = { has_completed_focus = GER_industrial_boom }
-			}
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 2
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1938.1.1
-			}
-			modifier = {
-				factor = 5
-				date > 1939.1.1
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_war_with = FRA }
-				date > 1939.10.5
+				add = 500
+				has_completed_focus = GER_black_monday_finish
 			}
 		}
 
@@ -2227,34 +2120,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 8
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = { has_completed_focus = GER_industrial_boom }
-			}
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 2
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1938.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1939.1.1
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_war_with = FRA }
-				date > 1939.10.5
-			}
-		}
+		ai_will_do = { factor = 0 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_mobile_2"
@@ -2276,43 +2142,21 @@ focus_tree = {
 		icon = GFX_focus_prc_infiltration
 		prerequisite = {
 			focus = GER_doctrine_great_war_2
+			focus = GER_doctrine_mobile_2
 		}
 		x = -2
 		y = 2
 		relative_position_id = GER_mil_expansion
 		cost = 8
 
-		ai_will_do = {
-			factor = 50
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 2
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1938.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1939.1.1
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_war_with = FRA }
-				date > 1939.10.5
-			}
-		}
+		ai_will_do = { factor = 500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_great_war"
 			add_tech_bonus = {
 				name = GER_doctrine_great_war
-				bonus = 1
-				uses = 1
+				bonus = 0.75
+				uses = 2
 				category = infantry_weapons
 			}
 		}
@@ -2320,8 +2164,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_doctrine_mobile
-		icon = GFX_goal_generic_army_motorized
+		id = GER_doctrine_artillery
+		icon = GFX_goal_generic_army_artillery
 		prerequisite = {
 			focus = GER_doctrine_great_war_2
 			focus = GER_doctrine_mobile_2
@@ -2331,38 +2175,15 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 8
 
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 2
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1938.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1939.1.1
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_war_with = FRA }
-				date > 1939.10.5
-			}
-		}
+		ai_will_do = { factor = 500 }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_mobile"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_artillery"
 			add_tech_bonus = {
-				name = GER_doctrine_mobile
-				bonus = 1
-				uses = 1
-				category = cat_mechanized_equipment
+				name = GER_doctrine_artillery
+				bonus = 0.75
+				uses = 2
+				category = artillery
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -2372,6 +2193,7 @@ focus_tree = {
 		id = GER_doctrine_armor
 		icon = GFX_EGY_Operation_Abu
 		prerequisite = {
+			focus = GER_doctrine_great_war_2
 			focus = GER_doctrine_mobile_2
 		}
 		x = 2
@@ -2379,30 +2201,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 8
 
-		ai_will_do = {
-			factor = 50
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 2
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1938.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1939.1.1
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_war_with = FRA }
-				date > 1939.10.5
-			}
-		}
+		ai_will_do = { factor = 0 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_armor"
@@ -2422,42 +2221,23 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_doctrine_last
 		}
-		x = 1
+		x = -1
 		y = 4
 		relative_position_id = GER_mil_expansion
 		cost = 8
-		available = {
-			NOT = { has_idea = GER_quenched_militarism }
-		}
 
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 2
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1938.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1939.1.1
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_war_with = FRA }
-				date > 1939.10.5
-			}
-		}
+		ai_will_do = { factor = 500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_mil_expansion_land_1"
-			add_ideas = GER_renwed_militarism
+			add_war_support = 0.2
+			if = {
+				limit = { has_idea = GER_quenched_militarism }
+				remove_ideas = GER_quenched_militarism
+			}
+			else = {
+				remove_ideas = GER_quenched_militarism_2
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER }
 	}
@@ -2466,7 +2246,7 @@ focus_tree = {
 		id = GER_doctrine_last
 		icon = GFX_focus_generic_military_academy
 		prerequisite = {
-			focus = GER_doctrine_mobile
+			focus = GER_doctrine_artillery
 		}
 		prerequisite = {
 			focus = GER_doctrine_great_war
@@ -2476,30 +2256,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = GER_mil_expansion
 		cost = 8
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 2
-				date > 1937.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1938.1.1
-			}
-			modifier = {
-				factor = 2
-				date > 1939.1.1
-			}
-			modifier = {
-				factor = 5
-				NOT = { has_war_with = FRA }
-				date > 1939.10.5
-			}
-		}
+		ai_will_do = { factor = 500 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_last"
 			add_doctrine_cost_reduction = {
@@ -2519,26 +2276,43 @@ focus_tree = {
 		prerequisite = {
 			focus = GER_doctrine_last
 		}
-		available = {
-			controls_state = 53
-		}
-		x = -1
+		x = 1
 		y = 4
 		relative_position_id = GER_mil_expansion
 		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 75 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_security_3"
+			add_command_power = 50
 			army_experience = 50
 			air_experience = 25
-			# country_event = { id = prewar.37 days = 10 }
-			# hidden_effect = {
-			# 	FRA = { country_event = prewar.36 }
-			# }
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP }
+	}
+
+	focus = {
+		id = GER_doctrine_mobile
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = {
+			focus = GER_security_3
+		}
+		x = 0
+		y = 1
+		relative_position_id = GER_security_3
+		cost = 8
+
+		ai_will_do = { factor = 500 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_mobile"
+			add_tech_bonus = {
+				name = GER_doctrine_mobile
+				bonus = 2
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -2555,9 +2329,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 0 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_heerflieger"
@@ -2590,9 +2362,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_sturzflieger"
@@ -2623,9 +2393,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_cas_focus"
@@ -2650,38 +2418,69 @@ focus_tree = {
 		y = 2
 		relative_position_id = GER_mil_expansion
 		cost = 6
-		ai_will_do = {
-			factor = 10
-		}
+
+		ai_will_do = { factor = 500 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_Luftwaffe_airbases_1"
-			55 = {
-				add_building_construction = {
-					type = air_base
-					level = 6
-					instant_build = yes
+			if = {
+				limit = { 50 = { is_owned_and_controlled_by = ROOT }}
+				50 = {			# FRA border - South
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes
+					}
 				}
 			}
-			56 = {
-				add_building_construction = {
-					type = air_base
-					level = 5
-					instant_build = yes
+			if = {
+				limit = { 51 = { is_owned_and_controlled_by = ROOT }}
+				51 = {			# FRA border - Rhineland
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes
+					}
 				}
 			}
-			52 = {
-				add_building_construction = {
-					type = air_base
-					level = 4
-					instant_build = yes
+			if = {
+				limit = { 55 = { is_owned_and_controlled_by = ROOT }}
+				55 = {			# FRA border - Hesse
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes
+					}
 				}
 			}
-			64 = {
-				add_building_construction = {
-					type = air_base
-					level = 4
-					instant_build = yes
+			if = {
+				limit = { 52 = { is_owned_and_controlled_by = ROOT }}
+				52 = {			# Bavaria
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 59 = { is_owned_and_controlled_by = ROOT }}
+				59 = {			# Hannover
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			if = {			# Belgium
+				limit = { 925 = { is_owned_and_controlled_by_ROOT_or_ally = yes } }
+				925 = {
+					add_building_construction = {
+						type = air_base
+						level = 4
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -2699,9 +2498,7 @@ focus_tree = {
 		relative_position_id = GER_sturzflieger
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_institut"
@@ -2735,7 +2532,12 @@ focus_tree = {
 		cost = 6
 
 		ai_will_do = {
-			factor = 10
+			base = 0
+			modifier = {
+				add = 500
+				has_completed_focus = GER_mil_expansion_land_1
+				has_completed_focus = GER_industry_finished
+			}
 		}
 
 		completion_reward = {
@@ -2764,9 +2566,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_bombergruppen"
@@ -2791,9 +2591,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_Henschel_Albatros"
@@ -2819,9 +2617,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_Junkers_Fogger"
@@ -2849,9 +2645,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available = {
 			336 = { is_controlled_by_ROOT_or_subject = yes }
@@ -2881,13 +2675,17 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_schule"
-			air_experience = 75 # jck change
+			air_experience = 25
+			add_doctrine_cost_reduction = {
+				name = GER_luftwaffe
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
 		}
 		search_filters = { FOCUS_FILTER_AIR_XP }
 	}
@@ -2906,9 +2704,7 @@ focus_tree = {
 			has_war = yes
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_jet"
@@ -2928,9 +2724,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_para"
@@ -2955,9 +2749,7 @@ focus_tree = {
 		y = 0
 		cost = 6
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_mil_expansion_naval_1"
@@ -2976,9 +2768,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 8
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available = {
 			336 = { is_controlled_by_ROOT_or_subject = yes }
@@ -3057,9 +2847,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 8
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_north_sea1"
@@ -3081,9 +2869,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available = {
 			925 = { is_controlled_by_ROOT_or_ally = yes }
@@ -3145,9 +2931,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available = {
 			IRE = {
@@ -3187,9 +2971,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 5
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		bypass = {
 			NOT = {
@@ -3294,9 +3076,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 5
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		bypass = {
 			753 = { is_owned_and_controlled_by_ROOT_or_subject = no } #Suez
@@ -3388,9 +3168,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_fleet1"
@@ -3416,9 +3194,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_fleet2"
@@ -3442,9 +3218,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 8
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_tirpitzprogramm"
@@ -3465,9 +3239,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		available = {
 			126 = { is_controlled_by_ROOT_or_subject = yes }
@@ -3494,9 +3266,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_fleet_in_beeing"
@@ -3530,9 +3300,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_fleet_in_beeing2"
@@ -3557,9 +3325,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_fleet_in_beeing3"
@@ -3588,9 +3354,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_base_strike"
@@ -3624,9 +3388,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_base_strike2"
@@ -3651,9 +3413,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_doctrine_base_strike3"
@@ -3679,9 +3439,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_independent_seebataillons"
@@ -3706,9 +3464,7 @@ focus_tree = {
 		relative_position_id = GER_mil_expansion_naval_1
 		cost = 6
 
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_marine_transports"
@@ -3738,9 +3494,7 @@ focus_tree = {
 		y = 6
 		cost = 8
 
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_europakammer"
@@ -3780,9 +3534,7 @@ focus_tree = {
 		relative_position_id = GER_europakammer
 		cost = 8
 
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_europakommission"
@@ -3817,9 +3569,7 @@ focus_tree = {
 		relative_position_id = GER_europakammer
 		cost = 5
 
-		ai_will_do = {
-			factor = 0		#wad
-		}
+		ai_will_do = { factor = 0 }
 
 		available = {
 			is_faction_leader = yes
@@ -3899,9 +3649,7 @@ focus_tree = {
 		relative_position_id = GER_europakammer
 		cost = 10
 
-		ai_will_do = {
-			factor = 250
-		}
+		ai_will_do = { factor = 250 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_erasmus"
@@ -3936,9 +3684,7 @@ focus_tree = {
 		relative_position_id = GER_europakammer
 		cost = 10
 
-		ai_will_do = {
-			factor = 250
-		}
+		ai_will_do = { factor = 250 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_grain_and_steel"
@@ -4038,9 +3784,7 @@ focus_tree = {
 		relative_position_id = GER_europakammer
 		cost = 10
 
-		ai_will_do = {
-			factor = 250
-		}
+		ai_will_do = { factor = 250 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_mitteleuropa_brigades"
@@ -4077,9 +3821,7 @@ focus_tree = {
 		relative_position_id = GER_europakammer
 		cost = 10
 
-		ai_will_do = {
-			factor = 250
-		}
+		ai_will_do = { factor = 250 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_border_regions"
@@ -4468,9 +4210,7 @@ focus_tree = {
 		relative_position_id = GER_europakammer
 		cost = 5
 
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_poland_alliance"
@@ -4497,19 +4237,32 @@ focus_tree = {
 		available = {
 			is_faction_leader = yes
 		}
-		ai_will_do = {
-			factor = 25
-		}
+		ai_will_do = { factor = 25 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_poland_war"
-			add_ideas = GER_russia_strategy
-			every_other_country = {
+			if = {
 				limit = {
-					is_in_faction_with = GER
-					is_possible_intermarium_country = yes
+					country_exists = SOV
 				}
+				add_ideas = GER_russia_strategy_soc
+				every_other_country = {
+					limit = {
+						is_in_faction_with = GER
+						is_possible_intermarium_country = yes
+					}
+					add_ideas = GER_russia_strategy_soc
+				}
+			}
+			else = {
 				add_ideas = GER_russia_strategy
+				every_other_country = {
+					limit = {
+						is_in_faction_with = GER
+						is_possible_intermarium_country = yes
+					}
+					add_ideas = GER_russia_strategy
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -4534,9 +4287,7 @@ focus_tree = {
 		}
 		continue_if_invalid = yes
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_oil"
@@ -4714,9 +4465,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_oil
 		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		select_effect = {
 			log = "[GetDateText]: [Root.GetName]: Select Focus GER_Settling_Old_Disputes"
 			OTT = { country_event = { id = gerfor.80 days = 10 } }
@@ -4771,9 +4520,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_Settling_Old_Disputes
 		cost = 10
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_Vanguard_In_The_South"
 			340 = {
@@ -4819,9 +4566,7 @@ focus_tree = {
 			is_in_faction_with = VEN
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_oil_venezuela_start"

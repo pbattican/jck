@@ -22,21 +22,17 @@ ideas = {
 			picture = ENG_the_war_to_end_all_wars
 			allowed = { always = no }
 			modifier = {
-				war_support_factor = -0.3
-				conscription_factor = -0.25
-				army_morale_factor = -0.2
-				conscription = -0.007
+				conscription_factor = -0.5
 			}
 		}
 
-		GER_renwed_militarism = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_renwed_militarism" }
-			picture = triumphant_will
+		GER_quenched_militarism_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_quenched_militarism_2" }
+			name = GER_quenched_militarism
+			picture = ENG_the_war_to_end_all_wars
 			allowed = { always = no }
 			modifier = {
-				war_support_factor = 0.2
-				conscription = 0.03
-				army_morale_factor = 0.05
+				conscription_factor = -0.3
 			}
 		}
 
@@ -115,7 +111,7 @@ ideas = {
 		}
 		GER_invest_arms_industry = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_invest_arms_industry" }
-			picture = KTG_Mitteleuropean_Industrial_Support
+			picture = KTG_Mitteleuropan_Industrial_Support
 			allowed = { always = no }
 			equipment_bonus = {
 				infantry_equipment = {
@@ -139,7 +135,7 @@ ideas = {
 		GER_tank_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_tank_idea" }
 			name = GER_invest_arms_industry
-			picture = KTG_Mitteleuropean_Industrial_Support
+			picture = KTG_Mitteleuropan_Industrial_Support
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = -0.05
@@ -182,6 +178,16 @@ ideas = {
 			allowed = { always = no }
 			targeted_modifier = {
 				tag = RUS
+				defense_bonus_against = 0.05
+			}
+		}
+		GER_russia_strategy_soc = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_russia_strategy_soc" }
+			name = GER_russia_strategy
+			picture = triumphant_will
+			allowed = { always = no }
+			targeted_modifier = {
+				tag = SOV
 				defense_bonus_against = 0.05
 			}
 		}
@@ -296,6 +302,7 @@ ideas = {
 				consumer_goods_factor = 0.30
 				industrial_capacity_factory = -0.20
 				production_speed_buildings_factor = -0.20
+				war_support_factor = -0.3
 			}
 		}
 
@@ -308,6 +315,7 @@ ideas = {
 				consumer_goods_factor = 0.15
 				industrial_capacity_factory = -0.15
 				production_speed_buildings_factor = -0.15
+				war_support_factor = -0.25
 			}
 		}
 
@@ -319,6 +327,7 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = -0.10
 				production_speed_buildings_factor = -0.10
+				war_support_factor = -0.1
 			}
 		}
 
@@ -331,6 +340,7 @@ ideas = {
 				consumer_goods_factor = 0.20
 				industrial_capacity_factory = -0.1
 				production_speed_buildings_factor = -0.1
+				war_support_factor = -0.25
 			}
 		}
 
@@ -341,6 +351,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.10
+				war_support_factor = -0.1
 			}
 		}
 

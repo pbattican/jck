@@ -91,7 +91,7 @@ check_possible_annexations_europe = {
 		ROOT = { activate_mission = annexation_BAS_CONQ }
 	}
 	else_if = {
-		limit = { can_release_bavaria = yes }
+		limit = { can_release_south_germany = yes }
 		ROOT = { activate_mission = annexation_BAY_CONQ }
 	}
 	# else_if = { # jck change
@@ -239,7 +239,7 @@ check_possible_annexations_europe = {
 		ROOT = { activate_mission = annexation_GRE_CONQ }
 	}
 	else_if = {
-		limit = { can_release_hanover = yes }
+		limit = { can_release_north_germany = yes }
 		ROOT = { activate_mission = annexation_NGF_CONQ }
 	}
 	else_if = {
