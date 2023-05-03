@@ -5,7 +5,7 @@ on_actions = {
 			if = {
 				limit = {
 					FROM = {
-						is_han_chinese_tag = yes
+						is_chinese_tag = yes
 					}
 				}
 				every_owned_state = {
