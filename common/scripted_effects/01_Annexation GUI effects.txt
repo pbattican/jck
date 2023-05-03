@@ -378,14 +378,14 @@ check_possible_annexations_europe = {
 	#	limit = { can_release_pressburg = yes }
 	#	ROOT = { activate_mission = annexation_PRESSBURG_CONQ }
 	#}
-	else_if = {
-		limit = { can_release_prussia = yes }
-		ROOT = { activate_mission = annexation_PRE_CONQ }
-	}
-	else_if = {
-		limit = { can_release_rhineland = yes }
-		ROOT = { activate_mission = annexation_RHI_CONQ }
-	}
+	# else_if = {
+	# 	limit = { can_release_prussia = yes }
+	# 	ROOT = { activate_mission = annexation_PRE_CONQ }
+	# }
+	# else_if = {
+	# 	limit = { can_release_rhineland = yes }
+	# 	ROOT = { activate_mission = annexation_RHI_CONQ }
+	# }
 	else_if = {
 		limit = { can_release_romania = yes }
 		ROOT = { activate_mission = annexation_ROM_CONQ }
@@ -394,26 +394,26 @@ check_possible_annexations_europe = {
 		limit = { can_release_rome = yes }
 		ROOT = { activate_mission = annexation_PAP_CONQ }
 	}
-	else_if = {
-		limit = { can_release_roussillon = yes }
-		ROOT = { activate_mission = annexation_ROUSSILLON_CONQ }
-	}
+	# else_if = {
+	# 	limit = { can_release_roussillon = yes }
+	# 	ROOT = { activate_mission = annexation_ROUSSILLON_CONQ }
+	# }
 	else_if = {
 		limit = { can_release_russia = yes }
 		ROOT = { activate_mission = annexation_RUS_CONQ }
 	}
-	else_if = {
-		limit = { can_release_salonica = yes }
-		ROOT = { activate_mission = annexation_SALONICA_CONQ }
-	}
+	# else_if = {
+	# 	limit = { can_release_salonica = yes }
+	# 	ROOT = { activate_mission = annexation_SALONICA_CONQ }
+	# }
 	# else_if = {
 	# 	limit = { can_release_sardinia = yes }
 	# 	ROOT = { activate_mission = annexation_SRD_CONQ }
 	# }
-	else_if = {
-		limit = { can_release_schleswig = yes }
-		ROOT = { activate_mission = annexation_SCHLESWIG_CONQ }
-	}
+	# else_if = {
+	# 	limit = { can_release_schleswig = yes }
+	# 	ROOT = { activate_mission = annexation_SCHLESWIG_CONQ }
+	# }
 	# else_if = {
 	# 	limit = { can_release_scotland = yes }
 	# 	ROOT = { activate_mission = annexation_SCO_CONQ }
@@ -446,10 +446,10 @@ check_possible_annexations_europe = {
 		limit = { can_release_switzerland = yes }
 		ROOT = { activate_mission = annexation_SWI_CONQ }
 	}
-	else_if = {
-		limit = { can_release_teschen = yes }
-		ROOT = { activate_mission = annexation_TESCHEN_CONQ }
-	}
+	# else_if = {
+	# 	limit = { can_release_teschen = yes }
+	# 	ROOT = { activate_mission = annexation_TESCHEN_CONQ }
+	# }
 	# else_if = {
 	# 	limit = { can_release_thessaloniki = yes }
 	# 	ROOT = { activate_mission = annexation_THESS_CONQ }
@@ -482,14 +482,14 @@ check_possible_annexations_europe = {
 	# 	limit = { can_release_vilnius = yes }
 	# 	ROOT = { activate_mission = annexation_VILNIUS_CONQ }
 	# }
-	else_if = {
-		limit = { can_release_volkovysk = yes }
-		ROOT = { activate_mission = annexation_VOLKOVYSK_CONQ }
-	}
-	else_if = {
-		limit = { can_release_vojvodina = yes }
-		ROOT = { activate_mission = annexation_VOJVODINA_CONQ }
-	}
+	# else_if = {
+	# 	limit = { can_release_volkovysk = yes }
+	# 	ROOT = { activate_mission = annexation_VOLKOVYSK_CONQ }
+	# }
+	# else_if = {
+	# 	limit = { can_release_vojvodina = yes }
+	# 	ROOT = { activate_mission = annexation_VOJVODINA_CONQ }
+	# }
 	# else_if = {
 	# 	limit = { can_release_wales = yes }
 	# 	ROOT = { activate_mission = annexation_WLS_CONQ }
@@ -502,18 +502,18 @@ check_possible_annexations_europe = {
 		limit = { can_release_west_banat = yes }
 		ROOT = { activate_mission = annexation_WESTBANAT_CONQ }
 	}
-	else_if = {
-		limit = { can_release_western_thrace = yes }
-		ROOT = { activate_mission = annexation_THRACE_CONQ }
-	}
+	# else_if = {
+	# 	limit = { can_release_western_thrace = yes }
+	# 	ROOT = { activate_mission = annexation_THRACE_CONQ }
+	# }
 	# else_if = {
 	# 	limit = { can_release_romandie = yes }
 	# 	ROOT = { activate_mission = annexation_ROMANDIE_CONQ }
 	# }
-	else_if = {
-		limit = { can_release_ticino = yes }
-		ROOT = { activate_mission = annexation_TICINO_CONQ }
-	}
+	# else_if = {
+	# 	limit = { can_release_ticino = yes }
+	# 	ROOT = { activate_mission = annexation_TICINO_CONQ }
+	# }
 }
 
 check_possible_annexations_north_america = {
