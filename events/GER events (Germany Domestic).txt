@@ -1,4 +1,4 @@
-﻿###########################
+###########################
 # German Domestic Events
 ###########################
 # By Levi, Zarasophos and Zankoas
@@ -1696,23 +1696,7 @@ country_event = { #Germany bans the FAUD
 	option = { #peace
 		log = "[GetLogInfo]: event gerdom.53 option gerdom.53.a"
 		name = gerdom.53.a
-		ai_chance = {
-			base = 70
-			modifier = {
-				factor = 0
-				date < 1939.6.1
-				has_game_rule = { rule = wk2_begin_options option = RESTRICTED }
-			}
-			modifier = {
-				factor = 0.2
-				date < 1939.6.1
-				has_game_rule = { rule = wk2_begin_options option = RARE }
-			}
-		}
-		declare_war_on = {
-			target = GER
-			type = annex_everything
-		}
+		ai_chance = { base = 30 }
 	}
 	# Remove early war option
 }
@@ -1816,16 +1800,11 @@ country_event = { #Negotiating with the strikers
 	option = { #crush
 		log = "[GetLogInfo]: event gerdom.58 option gerdom.58.a"
 		name = gerdom.58.a
-		ai_chance = {
-			base = 40
-		}
+		ai_chance = { base = 40 }
 		trigger = {
 			has_game_rule = { rule = jck_style option = jck_casual }
 		}
-		country_event = {
-			id = gerdom.60
-			days = 40
-		}
+		country_event = { id = gerdom.60 days = 40 }
 		add_ideas = GER_kill_workers
 		add_political_power = -50
 	}
@@ -1989,31 +1968,7 @@ country_event = { #International community condemns us!
 	desc = gerdom.86.d
 	picture = GFX_report_event_GER_reichstag
 	is_triggered_only = yes
-	# Remove another early war
-	option = {
-		name = gerdom.86.b
-		ai_chance = {
-			base = 70
-		}
-		every_country = {
-			limit = {
-				exists = yes
-				OR = {
-					tag = HOL
-					tag = BEL
-					tag = AUS
-					tag = CZE
-					tag = POL
-					tag = LIT
-					tag = BAT
-					tag = RUS
-					tag = SOV
-				}
-			}
-			add_opinion_modifier = { target = ROOT modifier = condem }
-		}
-		add_political_power = -30
-	}
+	# Remove another early war and not cuck yourself
 	option = {
 		log = "[GetLogInfo]: event gerdom.86 option gerdom.86.c"
 		name = gerdom.86.c
