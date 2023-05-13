@@ -30,14 +30,14 @@ country_event = {
 		name = jck.navy.0.a
 		create_equipment_variant = {
 			name = "Le War Support Defense Boat"
-			type = ship_hull_cruiser_coastal_defense_ship
+			type = ship_hull_cruiser_1
 			modules = {
 				fixed_ship_battery_slot = ship_medium_battery_1
 				fixed_ship_anti_air_slot = ship_anti_air_1
 				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = cruiser_ship_engine_1
-				fixed_ship_armor_slot = ship_armor_cruiser_2
+				fixed_ship_armor_slot = ship_armor_cruiser_1
 				fixed_ship_secondaries_slot = ship_secondaries_1
 				mid_1_custom_slot = empty
 				mid_2_custom_slot = empty
@@ -49,7 +49,7 @@ country_event = {
 			set_ship_pride_of_fleet = yes # maybe one day this will work
 			equipment_variant = "Le War Support Defense Boat"
 			name = "You Forgot This"
-			type = ship_hull_cruiser_coastal_defense_ship
+			type = ship_hull_cruiser_1
 		}
 	}
 }
