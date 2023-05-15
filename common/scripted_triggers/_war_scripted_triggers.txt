@@ -1,6 +1,6 @@
 second_weltkrieg_can_start = {
 	OR = {
-		threat > 0.69
+		threat > 0.65
 		date > 1940.8.1
 	}
 }

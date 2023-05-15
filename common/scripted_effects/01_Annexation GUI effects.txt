@@ -183,6 +183,10 @@ check_possible_annexations_europe = {
 		ROOT = { activate_mission = annexation_DVINSK_CONQ }
 	}
 	else_if = {
+		limit = { can_release_east_oder = yes }
+		ROOT = { activate_mission = annexation_EAST_ODER_CONQ }
+	}
+	else_if = {
 		limit = { can_release_eastern_belarus = yes }
 		ROOT = { activate_mission = annexation_EASTERN_BELARUS_CONQ }
 	}
@@ -243,6 +247,10 @@ check_possible_annexations_europe = {
 		ROOT = { activate_mission = annexation_NGF_CONQ }
 	}
 	else_if = {
+		limit = { can_release_holstein = yes }
+		ROOT = { activate_mission = annexation_HOLSTEIN_CONQ }
+	}
+	else_if = {
 		limit = { can_release_hungary = yes }
 		ROOT = { activate_mission = annexation_HUN_CONQ }
 	}
@@ -273,6 +281,10 @@ check_possible_annexations_europe = {
 	else_if = {
 		limit = { can_release_kotor = yes }
 		ROOT = { activate_mission = annexation_KOTOR_CONQ }
+	}
+	else_if = {
+		limit = { can_release_labourd = yes }
+		ROOT = { activate_mission = annexation_LABOURD_CONQ }
 	}
 	else_if = {
 		limit = { can_release_latvia = yes }
@@ -782,6 +794,10 @@ check_possible_annexations_asia = {
 		ROOT = { activate_mission = annexation_CHI_CONQ }
 	}
 	else_if = {
+		limit = { can_release_east_timor = yes }
+		ROOT = { activate_mission = annexation_EAST_TIMOR_CONQ }
+	}
+	else_if = {
 		limit = { can_release_indochina = yes }
 		ROOT = { activate_mission = annexation_INC_CONQ }
 	}
@@ -1014,6 +1030,10 @@ check_possible_annexations_middle_east = {
 	if = {
 		limit = { can_release_aegean_coast = yes }
 		ROOT = { activate_mission = annexation_AEGEAN_CONQ }
+	}
+	else_if = {
+		limit = { can_release_afghanistan = yes }
+		ROOT = { activate_mission = annexation_AFG_CONQ }
 	}
 	else_if = {
 		limit = { can_release_arabia = yes }

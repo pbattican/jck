@@ -1,110 +1,110 @@
 JAP_victory_decisions = {
-	JAP_copro_victory = {
-		icon = generic_research
-		allowed = {
-			original_tag = JAP
-		}
-		available = {
-			AND = {
-				# Uses KR Scripted trigger in _useful_scripted_triggers.txt
-				64 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				286 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				327 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				336 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				427 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				608 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				629 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				743 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				1020 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				GER = {
-					OR = {
-						has_capitulated = yes
-						exists = no
-					}
-				}
-				RAJ = {
-					OR = {
-						has_capitulated = yes
-						exists = no
-					}
-				}
-			}
-		}
+	# JAP_copro_victory = {
+	# 	icon = generic_research
+	# 	allowed = {
+	# 		original_tag = JAP
+	# 	}
+	# 	available = {
+	# 		AND = {
+	# 			# Uses KR Scripted trigger in _useful_scripted_triggers.txt
+	# 			64 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			286 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			327 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			336 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			427 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			608 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			629 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			743 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			1020 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			GER = {
+	# 				OR = {
+	# 					has_capitulated = yes
+	# 					exists = no
+	# 				}
+	# 			}
+	# 			RAJ = {
+	# 				OR = {
+	# 					has_capitulated = yes
+	# 					exists = no
+	# 				}
+	# 			}
+	# 		}
+	# 	}
 
-		cancel_trigger = {
-			hidden_trigger = {
-				OR = {
-					64 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					286 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					327 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					336 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					427 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					608 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					629 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					743 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					1020 = {
-						is_controlled_by_ROOT_or_ally = yes
-					}
-					GER = {
-						OR = {
-							has_capitulated = no
-							exists = yes
-						}
-					}
-					RAJ = {
-						OR = {
-							has_capitulated = no
-							exists = yes
-						}
-					}
-				}
-			}
-		}
+	# 	cancel_trigger = {
+	# 		hidden_trigger = {
+	# 			OR = {
+	# 				64 = {
+	# 					is_controlled_by_ROOT_or_ally = yes
+	# 				}
+	# 				286 = {
+	# 					is_controlled_by_ROOT_or_ally = yes
+	# 				}
+	# 				327 = {
+	# 					is_controlled_by_ROOT_or_ally = yes
+	# 				}
+	# 				336 = {
+	# 					is_controlled_by_ROOT_or_ally = yes
+	# 				}
+	# 				427 = {
+	# 					is_controlled_by_ROOT_or_ally = yes
+	# 				}
+	# 				608 = {
+	# 					is_controlled_by_ROOT_or_ally = yes
+	# 				}
+	# 				629 = {
+	# 					is_controlled_by_ROOT_or_ally = yes
+	# 				}
+	# 				743 = {
+	# 					is_controlled_by_ROOT_or_ally = yes
+	# 				}
+	# 				1020 = {
+	# 					is_controlled_by_ROOT_or_ally = yes
+	# 				}
+	# 				GER = {
+	# 					OR = {
+	# 						has_capitulated = no
+	# 						exists = yes
+	# 					}
+	# 				}
+	# 				RAJ = {
+	# 					OR = {
+	# 						has_capitulated = no
+	# 						exists = yes
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
 
-		fire_only_once = no
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision JAP_copro_victory"
-		}
-		days_remove = 30
-		remove_effect = {
-			news_event = {
-				id = jck.victory.0
-				days = 1
-			}
-		}
-	}
+	# 	fire_only_once = no
+	# 	complete_effect = {
+	# 		log = "[GetDateText]: [Root.GetName]: Decision JAP_copro_victory"
+	# 	}
+	# 	days_remove = 30
+	# 	remove_effect = {
+	# 		news_event = {
+	# 			id = jck.victory.0
+	# 			days = 1
+	# 		}
+	# 	}
+	# }
 }
