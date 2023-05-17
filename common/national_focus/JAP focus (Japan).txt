@@ -4285,7 +4285,7 @@ focus_tree = {
 				can_declare_war_on = CHN
 				has_war_with = CHN
 			}
-			threat > 0.60
+			threat > 0.40
 		}
 		bypass = {
 			OR = {
@@ -4296,16 +4296,16 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				FNG_JAP_hostile = no
-				NOT = { CHN = { has_war_with = FNG } }
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_war_with = CHN }
-				ROOT_is_threatened = yes
-			}
+			# modifier = {
+			# 	factor = 0
+			# 	FNG_JAP_hostile = no
+			# 	NOT = { CHN = { has_war_with = FNG } }
+			# }
+			# modifier = {
+			# 	factor = 0
+			# 	NOT = { has_war_with = CHN }
+			# 	ROOT_is_threatened = yes
+			# }
 		}
 		x = 0
 		y = 4
