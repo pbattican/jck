@@ -1,4 +1,13 @@
+block_annexation_mission_selection = {
+	set_country_flag = { flag = open_annexation_event days = 15 value = 1 }
+}
+
+allow_annexation_mission_selection = {
+	clr_country_flag = open_annexation_event
+}
+
 recheck_annexations = {
+	allow_annexation_mission_selection = yes
 	hidden_effect = {
 		if = {
 			limit = {
@@ -11,6 +20,7 @@ recheck_annexations = {
 }
 
 recheck_annexations_immediate = {
+	allow_annexation_mission_selection = yes
 	hidden_effect = { country_event = annex.1 }
 }
 
@@ -283,6 +293,10 @@ check_possible_annexations_europe = {
 		ROOT = { activate_mission = annexation_KOTOR_CONQ }
 	}
 	else_if = {
+		limit = { can_release_kuban = yes }
+		ROOT = { activate_mission = annexation_KUBAN_CONQ }
+	}
+	else_if = {
 		limit = { can_release_labourd = yes }
 		ROOT = { activate_mission = annexation_LABOURD_CONQ }
 	}
@@ -317,6 +331,10 @@ check_possible_annexations_europe = {
 	else_if = {
 		limit = { can_release_netherlands = yes }
 		ROOT = { activate_mission = annexation_HOL_CONQ }
+	}
+	else_if = {
+		limit = { can_release_nice = yes }
+		ROOT = { activate_mission = annexation_NICE_CONQ }
 	}
 	else_if = {
 		limit = { can_release_nis = yes }
