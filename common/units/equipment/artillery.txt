@@ -46,7 +46,7 @@ equipments = {
 		priority = 50
 		visual_level = 0
 	}
-	
+
 	artillery_equipment_2 = {
 		year = 1939
 
