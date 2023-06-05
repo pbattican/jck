@@ -1,5 +1,5 @@
 # The name of the flag is the key here - allow_take_over_faction
-# Rules are then applied on_startup typically in on_actions_krw_generic.txt ( or other on_actions file )
+# Rules are then applied on_startup typically in on_actions_jck_XXXX.txt ( or other on_actions file )
 # allow_take_over_faction = {
 #	name = "RULE_ALLOW_TAKE_OVER_FACTION"
 #	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
@@ -16,6 +16,42 @@
 #	}
 #		desc = "RULE_ALLOW_TAKE_OVER_FACTION_BLOCKED_DESC
 #}
+
+annex_lithuania_rule = {
+	name = "Annex Lithuania into Poland"
+	group = "Annex AI Nations"
+	icon = "GFX_wargoals"
+
+	option = {
+		name = ANNEX
+		text = "Annex Lithuania into Poland"
+		desc = ""
+	}
+	default = {
+		name = NORMAL
+		text = "Normal Lithuania"
+		desc = ""
+	}
+}
+
+
+annex_ubd_rule = {
+	name = "Annex United Baltic Dutchy into Ukraine into Germany"
+	group = "Annex AI Nations"
+	icon = "GFX_wargoals"
+
+	option = {
+		name = ANNEX
+		text = "Annex United Baltic Dutchy into Ukraine"
+		desc = ""
+	}
+	default = {
+		name = NORMAL
+		text = "Normal United Baltic Dutchy"
+		desc = ""
+	}
+}
+
 
 annex_belgium_rule = {
 	name = "Annex Flanders Wallonia into Germany"
