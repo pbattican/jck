@@ -208,6 +208,16 @@ on_actions = {
 					}
 				}
 			}
+			SRD = {
+				if = {
+					limit = {
+						SRI = {
+							is_ai = no
+						}
+					}
+					leave_faction = yes #Leave the Entente so SRI can eat it
+				}
+			}
 		}
 		## Moscow Accord
 		effect = {
