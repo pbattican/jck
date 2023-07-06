@@ -1,4 +1,4 @@
---- Force update 6/16/23
+--- Force update 7/6/23
 
 ------------------------------------------ Game ------------------------------------------
 -- NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 --12
@@ -76,7 +76,7 @@ NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane t
 0.0, -- NAVAL_KAMIKAZE
 0.0, -- PORT_STRIKE
 300, -- ATTACK_LOGISTICS vanilla=0.0
-300, -- AIR_SUPPLY
+0.05, -- AIR_SUPPLY
 0.0, -- TRAINING
 0.0, -- NAVAL_MINES_PLANTING
 0.0, -- NAVAL_MINES_SWEEPING
