@@ -12,29 +12,8 @@ add_namespace = holex
 # Starting Events
 ###################################
 
-country_event = { #Dutch East Indies in 1936
-	id = dei.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.1 FROM = [From.GetName]" }
-	title = dei.1.t
-	desc = dei.1.d
-	picture = GFX_report_event_HOL_rhine_ships
-
-	is_triggered_only = yes
-
-	option = {
-		name = dei.1.a
-		activate_mission = dei_rebel_tick
-		activate_mission = dei_rebel_tick_mon
-		hidden_effect = {
-			activate_targeted_decision = { decision = dei_rebel_hit_unity target = INS }
-			activate_targeted_decision = { decision = dei_rebel_hit_strength target = INS }
-		}
-	}
-}
-
 country_event = { #Black Monday comes to the Indies
 	id = dei.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.2 FROM = [From.GetName]" }
 	title = dei.2.t
 	desc = dei.2.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -43,6 +22,13 @@ country_event = { #Black Monday comes to the Indies
 
 	immediate = {
 		hidden_effect = {
+			# Moving INS mission here should be ok
+			activate_mission = dei_rebel_tick
+			activate_mission = dei_rebel_tick_mon
+			hidden_effect = {
+				activate_targeted_decision = { decision = dei_rebel_hit_unity target = INS }
+				activate_targeted_decision = { decision = dei_rebel_hit_strength target = INS }
+			}
 			add_stability = -0.1
 			add_political_power = -200
 			add_ideas = DEI_idea_black_monday
@@ -51,6 +37,7 @@ country_event = { #Black Monday comes to the Indies
 	}
 
 	option = {
+		log = "[GetLogInfo]: event dei.2 option dei.2.a"
 		name = dei.2.a
 		effect_tooltip = {
 			add_stability = -0.1
@@ -58,12 +45,12 @@ country_event = { #Black Monday comes to the Indies
 			add_ideas = DEI_idea_black_monday
 			custom_effect_tooltip = dei_unity_up
 		}
+		custom_effect_tooltip = dei_activates_INS_mission_tt
 	}
 }
 
 country_event = { #Unity within the independence movement is rising
 	id = dei.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.3 FROM = [From.GetName]" }
 	title = dei.3.t
 	desc = dei.3.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -71,6 +58,7 @@ country_event = { #Unity within the independence movement is rising
 	is_triggered_only = yes
 
 	option = { #We'll have to stay vigilant
+		log = "[GetLogInfo]: event dei.3 option dei.3.a"
 		name = dei.3.a
 		add_political_power = -10
 	}
@@ -82,7 +70,6 @@ country_event = { #Unity within the independence movement is rising
 
 country_event = { #Unity within the independence movement is falling
 	id = dei.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.4 FROM = [From.GetName]" }
 	title = dei.4.t
 	desc = dei.4.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -90,6 +77,7 @@ country_event = { #Unity within the independence movement is falling
 	is_triggered_only = yes
 
 	option = { #That's great news
+		log = "[GetLogInfo]: event dei.4 option dei.4.a"
 		name = dei.4.a
 		add_political_power = 10
 	}
@@ -97,7 +85,6 @@ country_event = { #Unity within the independence movement is falling
 
 country_event = { #Strength of the independence movement is rising
 	id = dei.5
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.5 FROM = [From.GetName]" }
 	title = dei.5.t
 	desc = dei.5.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -105,6 +92,7 @@ country_event = { #Strength of the independence movement is rising
 	is_triggered_only = yes
 
 	option = { #We'll have to stay vigilant
+		log = "[GetLogInfo]: event dei.5 option dei.5.a"
 		name = dei.5.a
 		add_political_power = -10
 	}
@@ -112,7 +100,6 @@ country_event = { #Strength of the independence movement is rising
 
 country_event = { #Strength of the independence movement is falling
 	id = dei.6
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.6 FROM = [From.GetName]" }
 	title = dei.6.t
 	desc = dei.6.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -120,6 +107,7 @@ country_event = { #Strength of the independence movement is falling
 	is_triggered_only = yes
 
 	option = { #That's great news
+		log = "[GetLogInfo]: event dei.6 option dei.6.a"
 		name = dei.6.a
 		add_political_power = 10
 	}
@@ -131,7 +119,6 @@ country_event = { #Strength of the independence movement is falling
 
 country_event = { #Governor General De Jonge resigns
 	id = dei.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.7 FROM = [From.GetName]" }
 	title = dei.7.t
 	desc = dei.7.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -142,7 +129,8 @@ country_event = { #Governor General De Jonge resigns
 
 	is_triggered_only = yes
 
-	option = { #Who will the the ministry of colonies appoint as his replacement?
+	option = { #Who will the ministry of colonies appoint as his replacement?
+		log = "[GetLogInfo]: event dei.7 option dei.7.a"
 		name = dei.7.a
 		#complete_national_focus = DEI_de_jonge_resigns #crashes for some reason
 		set_country_flag = dei_bye_de_jonge
@@ -154,7 +142,6 @@ country_event = { #Governor General De Jonge resigns
 
 country_event = { #Governor General De Jonge resigns, appoint successor
 	id = dei.8
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.8 FROM = [From.GetName]" }
 	title = dei.8.t
 	desc = dei.8.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -166,6 +153,7 @@ country_event = { #Governor General De Jonge resigns, appoint successor
 	is_triggered_only = yes
 
 	option = { #Nico Palar, a SDAP member who will rule through compromise
+		log = "[GetLogInfo]: event dei.8 option dei.8.a"
 		name = dei.8.a
 		ai_chance = {
 			base = 50
@@ -189,6 +177,7 @@ country_event = { #Governor General De Jonge resigns, appoint successor
 	}
 
 	option = { #A. Tjarda van Starkenborgh-Stachouwer, conservative candidate
+		log = "[GetLogInfo]: event dei.8 option dei.8.b"
 		name = dei.8.b
 		ai_chance = {
 			base = 30
@@ -206,6 +195,7 @@ country_event = { #Governor General De Jonge resigns, appoint successor
 	}
 
 	option = { #Johan Furstner, VNH candidate who will keep the Insulindians in line by force
+		log = "[GetLogInfo]: event dei.8 option dei.8.c"
 		name = dei.8.c
 		ai_chance = {
 			base = 40
@@ -235,7 +225,6 @@ country_event = { #Governor General De Jonge resigns, appoint successor
 
 country_event = { #Nico Palar is appointed as our new Governor General
 	id = dei.9
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.9 FROM = [From.GetName]" }
 	title = dei.9.t
 	desc = dei.9.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -243,6 +232,7 @@ country_event = { #Nico Palar is appointed as our new Governor General
 	is_triggered_only = yes
 
 	option = { #Welcome, your excellence
+		log = "[GetLogInfo]: event dei.9 option dei.9.a"
 		name = dei.9.a
 		retire_character = DEI_bonifacius_de_jonge
 		promote_character = DEI_nico_palar
@@ -252,7 +242,6 @@ country_event = { #Nico Palar is appointed as our new Governor General
 
 country_event = { #Alidius Tjarda van Starkenborgh-Stachouwer is appointed as our new Governor General
 	id = dei.10
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.10 FROM = [From.GetName]" }
 	title = dei.10.t
 	desc = dei.10.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -260,6 +249,7 @@ country_event = { #Alidius Tjarda van Starkenborgh-Stachouwer is appointed as ou
 	is_triggered_only = yes
 
 	option = { #Welcome, your excellence
+		log = "[GetLogInfo]: event dei.10 option dei.10.a"
 		name = dei.10.a
 		retire_character = DEI_bonifacius_de_jonge
 		promote_character = DEI_alidius_tjarda_van_starkenborgh_stachouwer
@@ -269,7 +259,6 @@ country_event = { #Alidius Tjarda van Starkenborgh-Stachouwer is appointed as ou
 
 country_event = { #Johan Furstner is appointed as our new Governor General
 	id = dei.11
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.11 FROM = [From.GetName]" }
 	title = dei.11.t
 	desc = dei.11.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -277,6 +266,7 @@ country_event = { #Johan Furstner is appointed as our new Governor General
 	is_triggered_only = yes
 
 	option = { #Welcome, your excellence
+		log = "[GetLogInfo]: event dei.11 option dei.11.a"
 		name = dei.11.a
 		retire_character = DEI_bonifacius_de_jonge
 		add_country_leader_role = {
@@ -290,7 +280,6 @@ country_event = { #Johan Furstner is appointed as our new Governor General
 
 country_event = { #Insulindian National Revolution - id being 13 wasn't intended :P
 	id = dei.13
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.13 FROM = [From.GetName]" }
 	title = dei.13.t
 	desc = dei.13.d
 
@@ -370,6 +359,7 @@ country_event = { #Insulindian National Revolution - id being 13 wasn't intended
 	}
 
 	option = { #Play as Insulindia
+		log = "[GetLogInfo]: event dei.13 option dei.13.a"
 		name = dei.13.a
 		hidden_effect = {
 			INS = {
@@ -475,6 +465,7 @@ country_event = { #Insulindian National Revolution - id being 13 wasn't intended
 	}
 
 	option = { #Stay as the Indies
+		log = "[GetLogInfo]: event dei.13 option dei.13.b"
 		name = dei.13.b
 		hidden_effect = {
 			INS = {
@@ -560,7 +551,6 @@ country_event = { #Insulindian National Revolution - id being 13 wasn't intended
 
 country_event = { #Insulindians loot Dutch armouries
 	id = dei.14
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.14 FROM = [From.GetName]" }
 	title = dei.14.t
 	desc = dei.14.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -572,6 +562,7 @@ country_event = { #Insulindians loot Dutch armouries
 	}
 
 	option = { #Long live the Republic!
+		log = "[GetLogInfo]: event dei.14 option dei.14.a"
 		name = dei.14.a
 		add_equipment_to_stockpile = {
 			type = infantry_equipment_1
@@ -585,7 +576,6 @@ country_event = { #Insulindians loot Dutch armouries
 
 country_event = { #Insulindians loot Dutch armouries (Dutch perspective
 	id = dei.15
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.15 FROM = [From.GetName]" }
 	title = dei.15.t
 	desc = dei.15.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -597,6 +587,7 @@ country_event = { #Insulindians loot Dutch armouries (Dutch perspective
 	}
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event dei.15 option dei.15.a"
 		name = dei.15.a
 		add_equipment_to_stockpile = {
 			type = infantry_equipment_1
@@ -607,7 +598,6 @@ country_event = { #Insulindians loot Dutch armouries (Dutch perspective
 
 country_event = { #Volksraad passes Petition-Sutardjo
 	id = dei.16
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.16 FROM = [From.GetName]" }
 	title = dei.16.t
 	desc = dei.16.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -619,10 +609,9 @@ country_event = { #Volksraad passes Petition-Sutardjo
 	}
 
 	option = { #Veto it
+		log = "[GetLogInfo]: event dei.16 option dei.16.a"
 		name = dei.16.a
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		increase_insulindian_independence_unity = yes
 		increase_insulindian_independence_unity = yes
 		custom_effect_tooltip = dei_unity_upup
@@ -632,10 +621,9 @@ country_event = { #Volksraad passes Petition-Sutardjo
 	}
 
 	option = { #Send it to the Netherlands
+		log = "[GetLogInfo]: event dei.16 option dei.16.b"
 		name = dei.16.b
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		HOL = {
 			country_event = { id = dei.17 days = 20 }
 		}
@@ -644,7 +632,6 @@ country_event = { #Volksraad passes Petition-Sutardjo
 
 country_event = { #Volksraad passes Petition-Sutardjo
 	id = dei.17
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.17 FROM = [From.GetName]" }
 	title = dei.17.t
 	desc = dei.17.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -656,6 +643,7 @@ country_event = { #Volksraad passes Petition-Sutardjo
 	is_triggered_only = yes
 
 	option = { #Delay it until the next government takes seat
+		log = "[GetLogInfo]: event dei.17 option dei.17.a"
 		name = dei.17.a
 		country_event = { id = dei.18 days = 365 }
 	}
@@ -663,7 +651,6 @@ country_event = { #Volksraad passes Petition-Sutardjo
 
 country_event = { #Sutardjo-petition brought to the Tweede Kamer
 	id = dei.18
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.18 FROM = [From.GetName]" }
 	title = dei.18.t
 	desc = dei.18.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -676,6 +663,7 @@ country_event = { #Sutardjo-petition brought to the Tweede Kamer
 	}
 
 	option = { #The petition is accepted, but all time-limits are removed
+		log = "[GetLogInfo]: event dei.18 option dei.18.a"
 		name = dei.18.a
 		ai_chance = {
 			base = 70
@@ -692,6 +680,7 @@ country_event = { #Sutardjo-petition brought to the Tweede Kamer
 	}
 
 	option = { #The petition is rejected
+		log = "[GetLogInfo]: event dei.18 option dei.18.b"
 		name = dei.18.b
 		ai_chance = {
 			base = 50
@@ -710,7 +699,6 @@ country_event = { #Sutardjo-petition brought to the Tweede Kamer
 
 country_event = { #Sutardjo-petition rejected by the 2nd chamber
 	id = dei.19
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.19 FROM = [From.GetName]" }
 	title = dei.19.t
 	desc = dei.19.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -722,6 +710,7 @@ country_event = { #Sutardjo-petition rejected by the 2nd chamber
 	}
 
 	option = { #The natives will not like this
+		log = "[GetLogInfo]: event dei.19 option dei.19.a"
 		name = dei.19.a
 		add_political_power = -25
 		increase_insulindian_independence_unity = yes
@@ -737,7 +726,6 @@ country_event = { #Sutardjo-petition rejected by the 2nd chamber
 
 country_event = { #Sutardjo-petition accepted by the 2nd chamber but timelimits removed
 	id = dei.20
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.20 FROM = [From.GetName]" }
 	title = dei.20.t
 	desc = dei.20.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -749,6 +737,7 @@ country_event = { #Sutardjo-petition accepted by the 2nd chamber but timelimits 
 	}
 
 	option = { #The natives will be glad
+		log = "[GetLogInfo]: event dei.20 option dei.20.a"
 		name = dei.20.a
 		add_political_power = -25
 		decrease_insulindian_independence_unity = yes
@@ -758,7 +747,6 @@ country_event = { #Sutardjo-petition accepted by the 2nd chamber but timelimits 
 
 country_event = { #Formation of GAPI
 	id = dei.21
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.21 FROM = [From.GetName]" }
 	title = dei.21.t
 	desc = dei.21.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -770,6 +758,7 @@ country_event = { #Formation of GAPI
 	}
 
 	option = { #Erm, interesting
+		log = "[GetLogInfo]: event dei.21 option dei.21.a"
 		name = dei.21.a
 		add_political_power = -25
 		increase_insulindian_independence_unity = yes
@@ -780,7 +769,6 @@ country_event = { #Formation of GAPI
 
 country_event = { #Round-Table Agreements
 	id = dei.22
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.22 FROM = [From.GetName]" }
 	title = dei.22.t
 	desc = dei.22.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -788,6 +776,7 @@ country_event = { #Round-Table Agreements
 	is_triggered_only = yes
 
 	option = { #The Dutch cannot refuse our independence now
+		log = "[GetLogInfo]: event dei.22 option dei.22.a"
 		name = dei.22.a
 		if = {
 			limit = {
@@ -807,7 +796,6 @@ country_event = { #Round-Table Agreements
 
 country_event = { #The republicans want to offer a peace deal
 	id = dei.23
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.23 FROM = [From.GetName]" }
 	title = dei.23.t
 	desc = dei.23.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -815,10 +803,9 @@ country_event = { #The republicans want to offer a peace deal
 	is_triggered_only = yes
 
 	option = { #Sign the treaty as is
+		log = "[GetLogInfo]: event dei.23 option dei.23.a"
 		name = dei.23.a
-		ai_chance = {
-			base = 10
-		}
+		ai_chance = { base = 10 }
 		INS = {
 			country_event = { id = dei.24 days = 5 }
 		}
@@ -830,15 +817,14 @@ country_event = { #The republicans want to offer a peace deal
 	}
 
 	option = { #Sign the treaty on the condition of getting to keep Western New Guinea
+		log = "[GetLogInfo]: event dei.23 option dei.23.b"
 		name = dei.23.b
 		trigger = {
 			DEI = { is_subject = yes }
 			669 = { is_owned_and_controlled_by = DEI }
 			843 = { is_owned_and_controlled_by = DEI }
 		}
-		ai_chance = {
-			base = 70
-		}
+		ai_chance = { base = 70 }
 		add_stability = -0.05
 		add_war_support = -0.05
 		INS = {
@@ -847,6 +833,7 @@ country_event = { #The republicans want to offer a peace deal
 	}
 
 	option = { #Sign the treaty on the condition of getting to keep Western New Guinea and the Moluccas
+		log = "[GetLogInfo]: event dei.23 option dei.23.c"
 		name = dei.23.c
 		trigger = {
 			DEI = { is_subject = yes }
@@ -855,9 +842,7 @@ country_event = { #The republicans want to offer a peace deal
 			972 = { is_owned_and_controlled_by = DEI }
 			843 = { is_owned_and_controlled_by = DEI }
 		}
-		ai_chance = {
-			base = 10
-		}
+		ai_chance = { base = 10 }
 		add_stability = -0.1
 		add_war_support = -0.1
 		INS = {
@@ -866,10 +851,9 @@ country_event = { #The republicans want to offer a peace deal
 	}
 
 	option = { #refuse to sign the treaty
+		log = "[GetLogInfo]: event dei.23 option dei.23.e"
 		name = dei.23.e
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		add_stability = -0.2
 		add_war_support = -0.2
 		INS = {
@@ -880,7 +864,6 @@ country_event = { #The republicans want to offer a peace deal
 
 country_event = { #The Dutch leave the archipelago altogether!
 	id = dei.24
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.24 FROM = [From.GetName]" }
 	title = dei.24.t
 	desc = dei.24.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -888,6 +871,7 @@ country_event = { #The Dutch leave the archipelago altogether!
 	is_triggered_only = yes
 
 	option = { #There you go with our signature
+		log = "[GetLogInfo]: event dei.24 option dei.24.a"
 		name = dei.24.a
 		DEI_peace_deal = yes
 	}
@@ -895,7 +879,6 @@ country_event = { #The Dutch leave the archipelago altogether!
 
 country_event = { #The Dutch agree to transfer control of the archipelago to us, with exception of New Guinea
 	id = dei.25
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.25 FROM = [From.GetName]" }
 	title = dei.25.t
 	desc = dei.25.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -903,10 +886,9 @@ country_event = { #The Dutch agree to transfer control of the archipelago to us,
 	is_triggered_only = yes
 
 	option = { #We'll run with that... for now...
+		log = "[GetLogInfo]: event dei.25 option dei.25.a"
 		name = dei.25.a
-		ai_chance = {
-			base = 90
-		}
+		ai_chance = { base = 90 }
 		hidden_effect = {
 			remove_state_core = 669
 			remove_state_core = 843
@@ -921,10 +903,9 @@ country_event = { #The Dutch agree to transfer control of the archipelago to us,
 	}
 
 	option = { #We'll rule everything or bust!
+		log = "[GetLogInfo]: event dei.25 option dei.25.b"
 		name = dei.25.b
-		ai_chance = {
-			base = 10
-		}
+		ai_chance = { base = 10 }
 		add_war_support = -0.1
 		HOL = {
 			country_event = { id = dei.26 days = 5 }
@@ -934,7 +915,6 @@ country_event = { #The Dutch agree to transfer control of the archipelago to us,
 
 country_event = { #The Insulindians refuse
 	id = dei.26
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.26 FROM = [From.GetName]" }
 	title = dei.26.t
 	desc = dei.26.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -942,6 +922,7 @@ country_event = { #The Insulindians refuse
 	is_triggered_only = yes
 
 	option = { #And hostilities resume!
+		log = "[GetLogInfo]: event dei.26 option dei.26.a"
 		name = dei.26.a
 		INS = { clr_country_flag = ins_mission_completed }
 		DEI = { clr_country_flag = ins_mission_completed }
@@ -950,7 +931,6 @@ country_event = { #The Insulindians refuse
 
 country_event = { #The Dutch agree to transfer control of the archipelago to us, with exception of New Guinea and the Moluccas
 	id = dei.27
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.27 FROM = [From.GetName]" }
 	title = dei.27.t
 	desc = dei.27.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -958,10 +938,9 @@ country_event = { #The Dutch agree to transfer control of the archipelago to us,
 	is_triggered_only = yes
 
 	option = { #We'll run with that... for now...
+		log = "[GetLogInfo]: event dei.27 option dei.27.a"
 		name = dei.27.a
-		ai_chance = {
-			base = 40
-		}
+		ai_chance = { base = 40 }
 		hidden_effect = {
 			remove_state_core = 669
 			remove_state_core = 668
@@ -982,10 +961,9 @@ country_event = { #The Dutch agree to transfer control of the archipelago to us,
 	}
 
 	option = { #We'll rule everything or bust!
+		log = "[GetLogInfo]: event dei.27 option dei.27.b"
 		name = dei.27.b
-		ai_chance = {
-			base = 60
-		}
+		ai_chance = { base = 60 }
 		add_war_support = -0.05
 		HOL = {
 			country_event = { id = dei.26 days = 5 }
@@ -995,7 +973,6 @@ country_event = { #The Dutch agree to transfer control of the archipelago to us,
 
 country_event = { #The Dutch Dutch still refuse to give up
 	id = dei.28
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.28 FROM = [From.GetName]" }
 	title = dei.28.t
 	desc = dei.28.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -1003,6 +980,7 @@ country_event = { #The Dutch Dutch still refuse to give up
 	is_triggered_only = yes
 
 	option = { #We'll run with that... for now...
+		log = "[GetLogInfo]: event dei.28 option dei.28.a"
 		name = dei.28.a
 		clr_country_flag = ins_mission_completed
 		DEI = { clr_country_flag = ins_mission_completed }
@@ -1011,24 +989,14 @@ country_event = { #The Dutch Dutch still refuse to give up
 
 country_event = { #The Netherlands became socialist peacefully, and evacuates the Indies
 	id = dei.35
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.35 FROM = [From.GetName]" }
 	title = dei.35.t
 	desc = dei.35.d
-
 	picture = GFX_report_event_HOL_rhine_ships
-
-	immediate = {
-		GEA = {
-			country_event = { id = dei.36 days = 2 }
-		}
-		AST = {
-			country_event = { id = dei.38 days = 3 }
-		}
-	}
 
 	is_triggered_only = yes
 
 	option = { #Switch over to the Netherlands
+		log = "[GetLogInfo]: event dei.35 option dei.35.a"
 		name = dei.35.a
 		effect_tooltip = { release = INS }
 		hidden_effect = {
@@ -1041,6 +1009,8 @@ country_event = { #The Netherlands became socialist peacefully, and evacuates th
 				}
 			}
 			INS = { load_oob = INS }
+			GEA = { country_event = { id = dei.36 days = 2 } }
+			AST = { country_event = { id = dei.38 days = 3 } }
 		}
 		if = {
 			limit = { is_ai = no }
@@ -1049,6 +1019,7 @@ country_event = { #The Netherlands became socialist peacefully, and evacuates th
 	}
 
 	option = { #Switch over to Insulindia
+		log = "[GetLogInfo]: event dei.35 option dei.35.b"
 		name = dei.35.b
 		effect_tooltip = { release = INS }
 		hidden_effect = {
@@ -1071,145 +1042,147 @@ country_event = { #The Netherlands became socialist peacefully, and evacuates th
 
 country_event = { #Anarchy in the Indies
 	id = dei.36
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.36 FROM = [From.GetName]" }
 	title = dei.36.t
 	desc = dei.36.d
+	picture = GFX_report_event_DEI_hotel_des_indes
+
+	trigger = {
+		controls_state = 336
+		controls_state = 757
+	}
 
 	is_triggered_only = yes
 
-	picture = GFX_report_event_DEI_hotel_des_indes
-
 	option = { #Send ships to secure Northwestern New Guinea and the other side of the strait of Malacca
+		log = "[GetLogInfo]: event dei.36 option dei.36.a"
 		name = dei.36.a
-		ai_chance = {
-			base = 90
-		}
 		INS = {
 			country_event = dei.37
+			effect_tooltip = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 672 #Sumatra's East Coast
+							state = 669 #NW. New Guinea
+							AND = {
+								state = 843 #SW. New Guinea
+								ROOT = { owns_state = 523 } #SE New Guinea
+							}
+						}
+					}
+					transfer_state_to = GEA
+				}
+			}
 		}
-		GEA = {
-			transfer_state = 672
-		}
-		GEA = {
-			transfer_state = 669
-		}
-		set_country_flag = ins_interested_in_occupying_insulindian_land
 	}
 
 	option = { #It'll be fine
+		log = "[GetLogInfo]: event dei.36 option dei.36.b"
 		name = dei.36.b
-		ai_chance = {
-			base = 10
-		}
+		ai_chance = { base = 0 }
 		add_political_power = -25
 	}
 }
 
 country_event = { #Anarchy in the Indies - Germany occupies the strait of malacca and northern New Guinea
 	id = dei.37
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.37 FROM = [From.GetName]" }
 	title = dei.37.t
 	desc = dei.37.d
+	picture = GFX_report_event_DEI_hotel_des_indes
 
 	is_triggered_only = yes
 
-	picture = GFX_report_event_DEI_hotel_des_indes
-
 	option = { #Blast!
+		log = "[GetLogInfo]: event dei.37 option dei.37.a"
 		name = dei.37.a
 		add_political_power = -25
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 672 #Sumatra's East Coast
+					state = 669 #NW. New Guinea
+					AND = {
+						state = 843 #SW. New Guinea
+						ROOT = { owns_state = 523 } #SE New Guinea
+					}
+				}
+			}
+			add_claim_by = GEA
+			transfer_state_to = GEA
+		}
 	}
 }
 
 country_event = { #Anarchy in the Indies
 	id = dei.38
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.38 FROM = [From.GetName]" }
 	title = dei.38.t
 	desc = dei.38.d
+	picture = GFX_report_event_DEI_hotel_des_indes
+
+	trigger = {
+		controls_state = 523
+	}
 
 	is_triggered_only = yes
 
-	picture = GFX_report_event_DEI_hotel_des_indes
-
 	option = { #Sent troops to occupy the south of the area
+		log = "[GetLogInfo]: event dei.38 option dei.38.a"
 		name = dei.38.a
-		ai_chance = {
-			base = 90
-		}
-		#GEA = {
-		#	country_event = dei.39
-		#}
-		AST = {
-			transfer_state = 843
-		}
+		add_state_claim = 843
+		transfer_state = 843
 	}
 
 	option = { #It'll be fine
+		log = "[GetLogInfo]: event dei.38 option dei.38.b"
 		name = dei.38.b
-		ai_chance = {
-			base = 10
-		}
+		ai_chance = { base = 0 }
 		add_political_power = -25
 		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = ins_interested_in_occupying_insulindian_land
-				}
-				GEA = {
-					country_event = dei.39
-				}
-			}
+			GEA = { country_event = dei.39 }
 		}
 	}
 }
 
 country_event = { #Anarchy in the Indies - Occupy the south of New Guinea too
 	id = dei.39
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.39 FROM = [From.GetName]" }
 	title = dei.39.t
 	desc = dei.39.d
 
 	is_triggered_only = yes
 
 	trigger = {
-		owns_state = 669
-		INS = {
-			owns_state = 843
-		}
+		controls_state = 669
+		INS = { owns_state = 843 }
 	}
 
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Good riddance!
+		log = "[GetLogInfo]: event dei.39 option dei.39.a"
 		name = dei.39.a
-		GEA = {
-			transfer_state = 843
-		}
-		INS = {
-			country_event = dei.40
-		}
+		transfer_state = 843
+		INS = { country_event = dei.40 }
 	}
 }
 
 country_event = { #Anarchy in the Indies - Occupy the south of New Guinea too
 	id = dei.40
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.40 FROM = [From.GetName]" }
 	title = dei.40.t
 	desc = dei.40.d
+	picture = GFX_report_event_DEI_hotel_des_indes
 
 	is_triggered_only = yes
 
-	picture = GFX_report_event_DEI_hotel_des_indes
-
 	option = { #Ugh
+		log = "[GetLogInfo]: event dei.40 option dei.40.a"
 		name = dei.40.a
 		add_political_power = -25
+		effect_tooltip = { 843 = { transfer_state_to = GEA } }
 	}
 }
 
 country_event = { #Conference of Batavia - Division of the new countries within the kingdom
 	id = dei.41
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.41 FROM = [From.GetName]" }
 	title = dei.41.t
 	desc = dei.41.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -1223,32 +1196,28 @@ country_event = { #Conference of Batavia - Division of the new countries within 
 	}
 
 	option = { #Several very small ones: Java divided in three, for instance
+		log = "[GetLogInfo]: event dei.41 option dei.41.a"
 		name = dei.41.a
-		ai_chance = {
-			base = 60
-		}
+		ai_chance = { base = 60 }
 		subtract_from_variable = { DEI.dei_insulindian_content = 2 }
 	}
 
 	option = { #Slightly divided: Borneo, Sumatra, Java, Celebes all one state each, the great east combined
+		log = "[GetLogInfo]: event dei.41 option dei.41.b"
 		name = dei.41.b
-		ai_chance = {
-			base = 30
-		}
+		ai_chance = { base = 30 }
 	}
 
 	option = { #Hardly divided: Java and Sumatra combined, Celebes and Kalimantan loose, and the great east
+		log = "[GetLogInfo]: event dei.41 option dei.41.c"
 		name = dei.41.c
-		ai_chance = {
-			base = 10
-		}
+		ai_chance = { base = 10 }
 		add_to_variable = { DEI.dei_insulindian_content = 1 }
 	}
 }
 
 country_event = { #Conference of Batavia - The government of the hypothetical new kingdom
 	id = dei.42
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.42 FROM = [From.GetName]" }
 	title = dei.42.t
 	desc = dei.42.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -1262,25 +1231,22 @@ country_event = { #Conference of Batavia - The government of the hypothetical ne
 	}
 
 	option = { #The Dutch cabinet, and the prime ministers of the other countries
+		log = "[GetLogInfo]: event dei.42 option dei.42.a"
 		name = dei.42.a
-		ai_chance = {
-			base = 60
-		}
+		ai_chance = { base = 60 }
 		subtract_from_variable = { DEI.dei_insulindian_content = 1 }
 	}
 
 	option = { #The Dutch cabinet, and those of the other countries with at least half of the Dutch population, and the prime ministers of other countries
+		log = "[GetLogInfo]: event dei.42 option dei.42.b"
 		name = dei.42.b
-		ai_chance = {
-			base = 60
-		}
+		ai_chance = { base = 60 }
 		add_to_variable = { DEI.dei_insulindian_content = 1 }
 	}
 }
 
 country_event = { #Conference of Batavia - Representation on the international stage
 	id = dei.43
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.43 FROM = [From.GetName]" }
 	title = dei.43.t
 	desc = dei.43.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -1302,25 +1268,22 @@ country_event = { #Conference of Batavia - Representation on the international s
 	}
 
 	option = { #The Dutch foreign ministry will represent the kingdom on the international stage
+		log = "[GetLogInfo]: event dei.43 option dei.43.a"
 		name = dei.43.a
-		ai_chance = {
-			base = 60
-		}
+		ai_chance = { base = 60 }
 		subtract_from_variable = { DEI.dei_insulindian_content = 1 }
 	}
 
 	option = { #A shared foreign ministry will be established, appointed by vote through each country in the kingdom in accordance to their population.
+		log = "[GetLogInfo]: event dei.43 option dei.43.b"
 		name = dei.43.b
-		ai_chance = {
-			base = 60
-		}
+		ai_chance = { base = 60 }
 		add_to_variable = { DEI.dei_insulindian_content = 1 }
 	}
 }
 
 country_event = { #Conference of Batavia - Finished product is voted upon in the Netherlands
 	id = dei.44
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.44 FROM = [From.GetName]" }
 	title = dei.44.t
 
 	desc = {
@@ -1347,6 +1310,7 @@ country_event = { #Conference of Batavia - Finished product is voted upon in the
 	is_triggered_only = yes
 
 	option = { #Sign it
+		log = "[GetLogInfo]: event dei.44 option dei.44.a"
 		name = dei.44.a
 		ai_chance = {
 			base = 70
@@ -1355,7 +1319,8 @@ country_event = { #Conference of Batavia - Finished product is voted upon in the
 				check_variable = { DEI.dei_insulindian_content > 4 }
 			}
 		}
-		set_country_flag = dei_insulindia_ready_for_koninkrijksstatuut
+		668 = { set_state_flag = HOL_will_gain_core } #Moluccas
+		972 = { set_state_flag = HOL_will_gain_core } #Aru Islands
 		if = {
 			limit = {
 				check_variable = { DEI.dei_insulindian_content < 5 }
@@ -1367,18 +1332,31 @@ country_event = { #Conference of Batavia - Finished product is voted upon in the
 			limit = {
 				check_variable = { DEI.dei_insulindian_content = 5 }
 			}
+			669 = { set_state_flag = HOL_will_gain_core } #NW New Guinea
+			843 = { set_state_flag = HOL_will_gain_core } #SW New Guinea
+			1017 = { set_state_flag = HOL_will_gain_core } #West Timor
+			1018 = { set_state_flag = HOL_will_gain_core } #Flores & Sumba
 			custom_effect_tooltip = dei_batavia_conference_core_great_east_no_celebes_plus_new_guinea
 			add_stability = -0.3
-			set_country_flag = dei_medium_coring
 		}
 		else = {
+			669 = { set_state_flag = HOL_will_gain_core } #NW New Guinea
+			843 = { set_state_flag = HOL_will_gain_core } #SW New Guinea
+			1017 = { set_state_flag = HOL_will_gain_core } #West Timor
+			1018 = { set_state_flag = HOL_will_gain_core } #Flores & Sumba
+			667 = { set_state_flag = HOL_will_gain_core } #Bali & Sumbawa
+			1020 = { set_state_flag = HOL_will_gain_core } #Batavia
 			custom_effect_tooltip = dei_batavia_conference_core_great_east_new_guinea
 			add_stability = -0.45
-			set_country_flag = dei_max_coring
+		}
+		if = {
+			limit = { tag = HOL }
+			country_event = dei.48
 		}
 	}
 
 	option = { #NO!
+		log = "[GetLogInfo]: event dei.44 option dei.44.b"
 		name = dei.44.b
 		ai_chance = {
 			base = 30
@@ -1387,15 +1365,12 @@ country_event = { #Conference of Batavia - Finished product is voted upon in the
 				check_variable = { DEI.dei_insulindian_content > 4 }
 			}
 		}
-		DEI = {
-			country_event = dei.47
-		}
+		DEI = { country_event = dei.47 }
 	}
 }
 
 country_event = { #Conference of Batavia - Finished product is voted upon in the Netherlands
 	id = dei.47
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.47 FROM = [From.GetName]" }
 	title = dei.47.t
 	desc = dei.47.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -1403,6 +1378,7 @@ country_event = { #Conference of Batavia - Finished product is voted upon in the
 	is_triggered_only = yes
 
 	option = { #Sign it
+		log = "[GetLogInfo]: event dei.47 option dei.47.a"
 		name = dei.47.a
 		increase_insulindian_independence_unity = yes
 		increase_insulindian_independence_strength = yes
@@ -1411,7 +1387,6 @@ country_event = { #Conference of Batavia - Finished product is voted upon in the
 
 country_event = { #Charter for the kingdom of the Netherlands
 	id = dei.48
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.48 FROM = [From.GetName]" }
 	title = dei.48.t
 	desc = dei.48.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -1419,60 +1394,50 @@ country_event = { #Charter for the kingdom of the Netherlands
 	is_triggered_only = yes
 
 	option = { #Sign it
+		log = "[GetLogInfo]: event dei.48 option dei.48.a"
 		name = dei.48.a
-		if = {
-			limit = {
-				has_country_flag = dei_insulindia_ready_for_koninkrijksstatuut
-			}
-			DEI = {
-				country_event = dei.49
-			}
-			effect_tooltip = {
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 668
-							state = 972
-							AND = {
-								HOL = { has_country_flag = dei_medium_coring }
-								OR = {
-									state = 669
-									state = 843
-									state = 1017
-									state = 1018
-								}
-							}
-							AND = {
-								HOL = { has_country_flag = dei_max_coring }
-								OR = {
-									state = 667
-									state = 1020
-								}
-							}
-						}
-					}
-					add_core_of = HOL
-				}
-			}
-		}
 		every_owned_state = {
 			limit = {
+				NOT = { is_core_of = ROOT }
 				OR = {
 					state = 309
 					state = 695
 					state = 1038
 					state = 1077
 				}
-				NOT = { is_core_of = HOL }
 			}
-			add_core_of = HOL
+			add_core_of = ROOT
+			hidden_effect = { remove_claim_by = ROOT }
+		}
+		DEI = {
+			country_event = dei.49
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = PREV
+						is_claimed_by = PREV
+					}
+					has_state_flag = HOL_will_gain_core
+				}
+				add_core_of = ROOT
+				hidden_effect = { remove_claim_by = ROOT }
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = PREV
+						is_claimed_by = PREV
+					}
+					NOT = { has_state_flag = HOL_will_gain_core }
+				}
+				add_claim_by = ROOT
+			}
 		}
 	}
 }
 
 country_event = { #The Koninkrijksstatuut
 	id = dei.49
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.49 FROM = [From.GetName]" }
 	title = dei.49.t
 	desc = dei.49.d
 
@@ -1481,54 +1446,26 @@ country_event = { #The Koninkrijksstatuut
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Sign it
+		log = "[GetLogInfo]: event dei.49 option dei.49.a"
 		name = dei.49.a
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 668
-					state = 972
-					AND = {
-						HOL = { has_country_flag = dei_medium_coring }
-						OR = {
-							state = 669
-							state = 843
-							state = 1017
-							state = 1018
-						}
-					}
-					AND = {
-						HOL = { has_country_flag = dei_max_coring }
-						OR = {
-							state = 667
-							state = 1020
-						}
-					}
+					is_core_of = ROOT
+					is_claimed_by = ROOT
 				}
+				has_state_flag = HOL_will_gain_core
 			}
+			clr_state_flag = HOL_will_gain_core
 			add_core_of = HOL
 		}
 		every_owned_state = {
 			limit = {
-				NOT = {
-					state = 668
-					state = 972
-					AND = {
-						HOL = { has_country_flag = dei_medium_coring }
-						OR = {
-							state = 669
-							state = 843
-							state = 1017
-							state = 1018
-						}
-					}
-					AND = {
-						HOL = { has_country_flag = dei_max_coring }
-						OR = {
-							state = 667
-							state = 1020
-						}
-					}
+				OR = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
 				}
+				NOT = { has_state_flag = HOL_will_gain_core }
 			}
 			add_claim_by = HOL
 		}
@@ -1557,7 +1494,6 @@ country_event = { #The Koninkrijksstatuut
 
 country_event = { #Prepared for an Emergency
 	id = dei.50
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.50 FROM = [From.GetName]" }
 	hidden = yes
 
 	trigger = {
@@ -1567,6 +1503,7 @@ country_event = { #Prepared for an Emergency
 	is_triggered_only = yes
 
 	option = { #Sign it
+		log = "[GetLogInfo]: event dei.50 option dei.49.a"
 		name = dei.49.a
 		country_event = { id = dei.51 days = 30 }
 	}
@@ -1574,7 +1511,6 @@ country_event = { #Prepared for an Emergency
 
 country_event = { #Prepared for an Emergency
 	id = dei.51
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.51 FROM = [From.GetName]" }
 	title = dei.51.t
 	desc = dei.51.d
 
@@ -1583,6 +1519,7 @@ country_event = { #Prepared for an Emergency
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Sign it
+		log = "[GetLogInfo]: event dei.51 option dei.51.a"
 		name = dei.51.a
 		add_manpower = 8000
 		hidden_effect = {
@@ -1594,7 +1531,6 @@ country_event = { #Prepared for an Emergency
 
 country_event = { #Prepared for an Emergency
 	id = dei.52
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.52 FROM = [From.GetName]" }
 	title = dei.52.t
 	desc = dei.52.d
 
@@ -1603,6 +1539,7 @@ country_event = { #Prepared for an Emergency
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Sign it
+		log = "[GetLogInfo]: event dei.52 option dei.52.a"
 		name = dei.52.a
 		add_country_leader_role = {
 			character = HOL_johannes_furstner
@@ -1632,7 +1569,6 @@ country_event = { #Prepared for an Emergency
 
 country_event = { #Furstner dissolved the Volksraad
 	id = dei.53
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.53 FROM = [From.GetName]" }
 	title = dei.53.t
 	desc = dei.53.d
 
@@ -1641,6 +1577,7 @@ country_event = { #Furstner dissolved the Volksraad
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Sign it
+		log = "[GetLogInfo]: event dei.53 option dei.53.a"
 		name = dei.53.a
 		effect_tooltip = {
 			DEI = {
@@ -1708,7 +1645,6 @@ country_event = { #Furstner dissolved the Volksraad
 
 country_event = { #Anarchy in Suriname and St Maarten (and Curacao if Venezuela didn't take off with it already
 	id = dei.59
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.59 FROM = [From.GetName]" }
 	title = dei.59.t
 	desc = dei.59.d
 
@@ -1746,6 +1682,7 @@ country_event = { #Anarchy in Suriname and St Maarten (and Curacao if Venezuela 
 	}
 
 	option = { #No choice
+		log = "[GetLogInfo]: event dei.59 option dei.59.a"
 		name = dei.59.a
 		if = {
 			limit = {
@@ -1795,7 +1732,6 @@ country_event = { #Anarchy in Suriname and St Maarten (and Curacao if Venezuela 
 }
 country_event = { #Foreign Pilots
 	id = dei.60
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.60 FROM = [From.GetName]" }
 	title = dei.60.t
 	desc = dei.60.d
 	picture = GFX_report_event_ace_promoted
@@ -1803,12 +1739,12 @@ country_event = { #Foreign Pilots
 	is_triggered_only = yes
 
 	option = { #Longer contract - PP daily
+		log = "[GetLogInfo]: event dei.60 option dei.60.a"
 		name = dei.60.a
 	}
 }
 country_event = { #KNIL Assement
 	id = dei.61
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.61 FROM = [From.GetName]" }
 	title = dei.61.t
 	desc = dei.61.d
 	picture = GFX_report_event_DEI_KNIL
@@ -1816,12 +1752,12 @@ country_event = { #KNIL Assement
 	is_triggered_only = yes
 
 	option = { #Thoma, and the boys marching to Batavia
+		log = "[GetLogInfo]: event dei.61 option dei.61.a"
 		name = dei.61.a
 	}
 }
 country_event = { #Naval Review
 	id = dei.62
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.62 FROM = [From.GetName]" }
 	title = dei.62.t
 	desc = dei.62.d
 	picture = GFX_report_event_HOL_lichte_kruiser
@@ -1829,12 +1765,12 @@ country_event = { #Naval Review
 	is_triggered_only = yes
 
 	option = { #Thoma, and the swimming around Batavia
+		log = "[GetLogInfo]: event dei.62 option dei.62.a"
 		name = dei.62.a
 	}
 }
 country_event = { #Aparthied... Don't look at me, just White Aussie Policy
 	id = dei.63
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.63 FROM = [From.GetName]" }
 	title = dei.63.t
 	desc = dei.63.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -1842,6 +1778,7 @@ country_event = { #Aparthied... Don't look at me, just White Aussie Policy
 	is_triggered_only = yes
 
 	option = { #
+		log = "[GetLogInfo]: event dei.63 option dei.63.a"
 		name = dei.63.a
 		custom_effect_tooltip = DEI_Apartheid_tt
 		hidden_effect = {
@@ -1901,7 +1838,6 @@ country_event = { #Aparthied... Don't look at me, just White Aussie Policy
 }
 country_event = { #A new beginning
 	id = dei.64
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.64 FROM = [From.GetName]" }
 	title = dei.64.t
 	desc = dei.63.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -1909,6 +1845,7 @@ country_event = { #A new beginning
 	is_triggered_only = yes
 
 	option = { #Soc Dem government
+		log = "[GetLogInfo]: event dei.64 option dei.64.a"
 		trigger = {
 			has_completed_focus = DEI_werkverschaffing_for_east_indians
 		}
@@ -1921,6 +1858,7 @@ country_event = { #A new beginning
 		}
 	}
 	option = { #Auth Dem government
+		log = "[GetLogInfo]: event dei.64 option dei.64.b"
 		trigger = {
 			has_completed_focus = DEI_werkverschaffing_for_east_indians
 		}
@@ -1935,7 +1873,6 @@ country_event = { #A new beginning
 }
 country_event = { #New Volksraad
 	id = dei.65
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.65 FROM = [From.GetName]" }
 	title = dei.65.t
 	desc = dei.63.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -1943,6 +1880,7 @@ country_event = { #New Volksraad
 	is_triggered_only = yes
 
 	option = { #
+		log = "[GetLogInfo]: event dei.65 option dei.65.a"
 		name = dei.65.a
 		hidden_effect = {
 			country_event = { id = dei.66 days = 7 }
@@ -1951,7 +1889,6 @@ country_event = { #New Volksraad
 }
 country_event = { #Week 1 - Idealogy Issues
 	id = dei.66
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.66 FROM = [From.GetName]" }
 	title = dei.66.t
 	desc = { #Auth
 		text = dei.66.dt
@@ -1970,6 +1907,7 @@ country_event = { #Week 1 - Idealogy Issues
 	is_triggered_only = yes
 
 	option = { #No they will stay
+		log = "[GetLogInfo]: event dei.66 option dei.66.a"
 		trigger = {
 			has_completed_focus = DEI_expand_the_papua_camps
 		}
@@ -1980,6 +1918,7 @@ country_event = { #Week 1 - Idealogy Issues
 		}
 	}
 	option = { #We will only release SOME
+		log = "[GetLogInfo]: event dei.66 option dei.66.b"
 		trigger = {
 			has_completed_focus = DEI_expand_the_papua_camps
 		}
@@ -1990,6 +1929,7 @@ country_event = { #Week 1 - Idealogy Issues
 		}
 	}
 	option = { #Fine fine
+		log = "[GetLogInfo]: event dei.66 option dei.66.c"
 		trigger = {
 			has_completed_focus = DEI_expand_the_papua_camps
 		}
@@ -2000,6 +1940,7 @@ country_event = { #Week 1 - Idealogy Issues
 		}
 	}
 	option = { #Allow the Insudlians to control the program
+		log = "[GetLogInfo]: event dei.66 option dei.66.d"
 		trigger = {
 			has_completed_focus = DEI_werkverschaffing_for_east_indians
 		}
@@ -2010,6 +1951,7 @@ country_event = { #Week 1 - Idealogy Issues
 		}
 	}
 	option = { #Federal Based
+		log = "[GetLogInfo]: event dei.66 option dei.66.e"
 		trigger = {
 			has_completed_focus = DEI_werkverschaffing_for_east_indians
 		}
@@ -2022,7 +1964,6 @@ country_event = { #Week 1 - Idealogy Issues
 }
 country_event = { #Language
 	id = dei.67
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.67 FROM = [From.GetName]" }
 	title = dei.67.t
 	desc = dei.67.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -2030,6 +1971,7 @@ country_event = { #Language
 	is_triggered_only = yes
 
 	option = { # Each state choses
+		log = "[GetLogInfo]: event dei.67 option dei.67.a"
 		name = dei.67.a
 		hidden_effect = {
 			country_event = { id = dei.68 days = 7 }
@@ -2037,6 +1979,7 @@ country_event = { #Language
 		}
 	}
 	option = { # Dutch Remains
+		log = "[GetLogInfo]: event dei.67 option dei.67.b"
 		name = dei.67.b
 		hidden_effect = {
 			country_event = { id = dei.68 days = 7 }
@@ -2046,7 +1989,6 @@ country_event = { #Language
 }
 country_event = { #States
 	id = dei.68
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.68 FROM = [From.GetName]" }
 	title = dei.68.t
 	desc = dei.68.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -2054,6 +1996,7 @@ country_event = { #States
 	is_triggered_only = yes
 
 	option = { # Keep them happy
+		log = "[GetLogInfo]: event dei.68 option dei.68.a"
 		name = dei.68.a
 		hidden_effect = {
 			country_event = { id = dei.69 days = 7 }
@@ -2061,6 +2004,7 @@ country_event = { #States
 		}
 	}
 	option = { # We stick to what we agreed on
+		log = "[GetLogInfo]: event dei.68 option dei.68.b"
 		name = dei.68.b
 		hidden_effect = {
 			country_event = { id = dei.69 days = 7 }
@@ -2070,7 +2014,6 @@ country_event = { #States
 }
 country_event = { #Dutch Privileges
 	id = dei.69
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.69 FROM = [From.GetName]" }
 	title = dei.69.t
 	desc = dei.69.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -2078,6 +2021,7 @@ country_event = { #Dutch Privileges
 	is_triggered_only = yes
 
 	option = { # Keep them happy
+		log = "[GetLogInfo]: event dei.69 option dei.69.a"
 		name = dei.69.a
 		hidden_effect = {
 			country_event = { id = dei.70 days = 7 }
@@ -2085,6 +2029,7 @@ country_event = { #Dutch Privileges
 		}
 	}
 	option = { # Dutch still have old rights
+		log = "[GetLogInfo]: event dei.69 option dei.69.b"
 		name = dei.69.b
 		hidden_effect = {
 			country_event = { id = dei.70 days = 7 }
@@ -2094,7 +2039,6 @@ country_event = { #Dutch Privileges
 }
 country_event = { #Role of the Queen
 	id = dei.70
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.70 FROM = [From.GetName]" }
 	title = dei.70.t
 	desc = dei.70.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -2102,6 +2046,7 @@ country_event = { #Role of the Queen
 	is_triggered_only = yes
 
 	option = { # Reduce her role in the states
+		log = "[GetLogInfo]: event dei.70 option dei.70.a"
 		name = dei.70.a
 		hidden_effect = {
 			country_event = { id = dei.71 days = 7 }
@@ -2109,6 +2054,7 @@ country_event = { #Role of the Queen
 		}
 	}
 	option = { # No, we stick to what we agreed on
+		log = "[GetLogInfo]: event dei.70 option dei.70.b"
 		name = dei.70.b
 		hidden_effect = {
 			country_event = { id = dei.71 days = 7 }
@@ -2118,7 +2064,6 @@ country_event = { #Role of the Queen
 }
 country_event = { #Final count down
 	id = dei.71
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.71 FROM = [From.GetName]" }
 	title = dei.71.t
 	desc = {
 		text = dei.71.d.coop
@@ -2136,6 +2081,7 @@ country_event = { #Final count down
 	is_triggered_only = yes
 
 	option = { #
+		log = "[GetLogInfo]: event dei.71 option dei.71.a"
 		name = dei.71.a
 		trigger = {
 			check_variable = { DEI.dei_insulindian_content > 6 }
@@ -2143,6 +2089,7 @@ country_event = { #Final count down
 		#complete_national_focus = DEI_indon_coop
 	}
 	option = { #Last chance
+		log = "[GetLogInfo]: event dei.71 option dei.71.b"
 		name = dei.71.b
 		trigger = {
 			check_variable = { DEI.dei_insulindian_content < 6 }
@@ -2156,7 +2103,6 @@ country_event = { #Final count down
 }
 country_event = { #Last chance
 	id = dei.72
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.72 FROM = [From.GetName]" }
 	title = dei.72.t
 	desc = dei.72.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -2164,10 +2110,12 @@ country_event = { #Last chance
 	is_triggered_only = yes
 
 	option = { # We yield...
+		log = "[GetLogInfo]: event dei.72 option dei.72.a"
 		name = dei.72.a
 		#complete_national_focus = DEI_indon_coup
 	}
 	option = { # they wouldn't dare....
+		log = "[GetLogInfo]: event dei.72 option dei.72.b"
 		name = dei.72.b
 		hidden_effect = {
 			country_event = { id = dei.73 days = 3 }
@@ -2176,7 +2124,6 @@ country_event = { #Last chance
 }
 country_event = { #The Coop
 	id = dei.73
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.73 FROM = [From.GetName]" }
 	title = dei.73.t
 	desc = dei.73.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -2184,6 +2131,7 @@ country_event = { #The Coop
 	is_triggered_only = yes
 
 	option = { #INS
+		log = "[GetLogInfo]: event dei.73 option dei.73.a"
 		name = dei.73.a
 		hidden_effect = {
 			INS = {
@@ -2200,15 +2148,9 @@ country_event = { #The Coop
 				set_province_controller = 12138
 				set_province_controller = 12165
 				set_province_controller = 12209
+				load_oob = INS
 				if = {
-					limit = {
-						DEI = {
-							num_divisions > 2
-						}
-					}
-					load_oob = INS
-				}
-				else = {
+					limit = { DEI = { num_divisions < 10 } } #starting amount
 					DEI = {
 						load_oob = DEI
 						load_oob = DEI_reinforcements
@@ -2288,6 +2230,7 @@ country_event = { #The Coop
 		}
 	}
 	option = { #DEI
+		log = "[GetLogInfo]: event dei.73 option dei.73.b"
 		name = dei.73.b
 		hidden_effect = {
 			INS = {
@@ -2396,7 +2339,6 @@ country_event = { #The Coop
 #}
 country_event = { #Peace Offering
 	id = dei.80
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.80 FROM = [From.GetName]" }
 	title = dei.80.t
 	desc = dei.80.d
 	picture = GFX_report_event_DEI_hotel_des_indes
@@ -2410,7 +2352,17 @@ country_event = { #Peace Offering
 		controls_state = 1023 #N.Sumarta
 		controls_state = 335 #Java
 		controls_state = 1020 #Batavia
-		NOT = { surrender_progress > 0.20 }
+		surrender_progress < 0.20
+		is_valid_peace_target = yes
+		DEI = {
+			if = {
+				limit = { is_subject = yes }
+				overlord = { is_valid_peace_target = yes }
+			}
+			else = {
+				is_valid_peace_target = yes
+			}
+		}
 	}
 
 	mean_time_to_happen = {
@@ -2420,26 +2372,20 @@ country_event = { #Peace Offering
 	fire_only_once = yes
 
 	option = { #Peace Deal
+		log = "[GetLogInfo]: event dei.80 option dei.80.a"
 		name = dei.80.a
-		ai_chance = {
-			base = 98
-		}
-		DEI = {
-			country_event = dei.81
-		}
+		DEI = { country_event = dei.81 }
 	}
 	option = { #We conquer it all
+		log = "[GetLogInfo]: event dei.80 option dei.80.b"
 		name = dei.80.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		add_war_support = -0.20
 		add_political_power = -200
 	}
 }
 country_event = { #peace deal
 	id = dei.81
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.81 FROM = [From.GetName]" }
 	title = dei.81.t
 	desc = dei.81.d
 	picture = GFX_report_event_generic_diplomacy1
@@ -2447,6 +2393,7 @@ country_event = { #peace deal
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event dei.81 option dei.81.a"
 		name = dei.81.a #We had a good run
 		add_political_power = -200
 		INS = {
@@ -2454,6 +2401,7 @@ country_event = { #peace deal
 		}
 	}
 	option = {
+		log = "[GetLogInfo]: event dei.81 option dei.81.b"
 		name = dei.81.b #We will fight them on the fodders
 		ai_chance = { base = 0 }
 		add_political_power = -200
@@ -2464,7 +2412,6 @@ country_event = { #peace deal
 }
 country_event = { #We will take their fodders
 	id = dei.82
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.82 FROM = [From.GetName]" }
 	title = dei.82.t
 	desc = dei.82.d
 	picture = GFX_report_event_PRF_war
@@ -2472,14 +2419,13 @@ country_event = { #We will take their fodders
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event dei.82 option dei.82.a"
 		name = dei.82.a
 		add_war_support = 0.10
-
 	}
 }
 country_event = { #Peace Deal
 	id = dei.83
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.83 FROM = [From.GetName]" }
 	title = dei.83.t
 	desc = dei.83.d
 	picture = GFX_report_event_PRF_war
@@ -2487,6 +2433,7 @@ country_event = { #Peace Deal
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event dei.83 option dei.83.a"
 		name = dei.83.a
 		DEI = {
 			every_owned_state = {
@@ -2518,7 +2465,6 @@ country_event = { #Peace Deal
 
 country_event = { #Failed Project
 	id = dei.84
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.84 FROM = [From.GetName]" }
 	title = dei.84.t
 	desc = dei.84.d
 	picture = GFX_report_event_generic_diplomacy1
@@ -2526,6 +2472,7 @@ country_event = { #Failed Project
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event dei.84 option dei.84.a"
 		name = dei.84.a
 		INS = { embargo_ROOT = yes }
 		DEI = {
@@ -2577,7 +2524,6 @@ country_event = { #Failed Project
 #}
 country_event = { #The Future
 	id = dei.86
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei.86 FROM = [From.GetName]" }
 	title = dei.86.t
 	desc = dei.86.d
 	picture = GFX_report_event_PRF_war
@@ -2585,6 +2531,7 @@ country_event = { #The Future
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event dei.86 option dei.86.a"
 		name = dei.86.a
 	}
 }
@@ -2594,7 +2541,6 @@ country_event = { #The Future
 
 country_event = { #Founding of ANTARA
 	id = dei_flavor.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_flavor.1 FROM = [From.GetName]" }
 	title = dei_flavor.1.t
 	desc = dei_flavor.1.d
 
@@ -2603,12 +2549,14 @@ country_event = { #Founding of ANTARA
 	is_triggered_only = yes
 
 	option = {
+		log = "[GetLogInfo]: event dei_flavor.1 option dei_flavor.1.a"
 		name = dei_flavor.1.a
 		custom_effect_tooltip = dei_unity_up
 		increase_insulindian_independence_unity = yes
 	}
 
 	option = {
+		log = "[GetLogInfo]: event dei_flavor.1 option dei_flavor.1.b"
 		name = dei_flavor.1.b
 		add_stability = -0.025
 	}
@@ -2616,7 +2564,6 @@ country_event = { #Founding of ANTARA
 
 country_event = { #Renovation of the Sociëteit Concordia
 	id = dei_flavor.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_flavor.2 FROM = [From.GetName]" }
 	title = dei_flavor.2.t
 	desc = dei_flavor.2.d
 
@@ -2625,18 +2572,19 @@ country_event = { #Renovation of the Sociëteit Concordia
 	is_triggered_only = yes
 
 	option = { #great plan
+		log = "[GetLogInfo]: event dei_flavor.2 option dei_flavor.2.a"
 		name = dei_flavor.2.a
 		add_political_power = -25
 	}
 
 	option = { #Too expensive!
+		log = "[GetLogInfo]: event dei_flavor.2 option dei_flavor.1.b"
 		name = dei_flavor.1.b
 	}
 }
 
 country_event = { #Founding of the NIVU
 	id = dei_flavor.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_flavor.3 FROM = [From.GetName]" }
 	title = dei_flavor.3.t
 	desc = dei_flavor.3.d
 
@@ -2645,13 +2593,13 @@ country_event = { #Founding of the NIVU
 	is_triggered_only = yes
 
 	option = { #great plan
+		log = "[GetLogInfo]: event dei_flavor.3 option dei_flavor.2.a"
 		name = dei_flavor.2.a
 	}
 }
 
 country_event = { #Premiere of Terang Boelan
 	id = dei_flavor.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_flavor.4 FROM = [From.GetName]" }
 	title = dei_flavor.4.t
 	desc = dei_flavor.4.d
 
@@ -2660,13 +2608,13 @@ country_event = { #Premiere of Terang Boelan
 	is_triggered_only = yes
 
 	option = { #great plan
+		log = "[GetLogInfo]: event dei_flavor.4 option dei_flavor.4.a"
 		name = dei_flavor.4.a
 	}
 }
 
 country_event = { #First launch of Cultureel Indië
 	id = dei_flavor.5
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_flavor.5 FROM = [From.GetName]" }
 	title = dei_flavor.5.t
 	desc = dei_flavor.5.d
 
@@ -2675,6 +2623,7 @@ country_event = { #First launch of Cultureel Indië
 	is_triggered_only = yes
 
 	option = { #great plan
+		log = "[GetLogInfo]: event dei_flavor.5 option dei_flavor.4.a"
 		name = dei_flavor.4.a
 		add_stability = 0.02
 	}
@@ -2682,7 +2631,6 @@ country_event = { #First launch of Cultureel Indië
 
 country_event = { #The Carstenz Expedition
 	id = dei_flavor.6
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_flavor.6 FROM = [From.GetName]" }
 	title = dei_flavor.6.t
 	desc = dei_flavor.6.d
 
@@ -2691,6 +2639,7 @@ country_event = { #The Carstenz Expedition
 	is_triggered_only = yes
 
 	option = { #great plan
+		log = "[GetLogInfo]: event dei_flavor.6 option dei_flavor.6.a"
 		name = dei_flavor.6.a
 		hidden_effect = {
 			random_list = {
@@ -2710,7 +2659,6 @@ country_event = { #The Carstenz Expedition
 
 country_event = { #The Carstenz Expedition
 	id = dei_flavor.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_flavor.7 FROM = [From.GetName]" }
 	title = dei_flavor.7.t
 	desc = dei_flavor.7.d
 
@@ -2719,6 +2667,7 @@ country_event = { #The Carstenz Expedition
 	is_triggered_only = yes
 
 	option = { #great plan
+		log = "[GetLogInfo]: event dei_flavor.7 option dei_flavor.7.a"
 		name = dei_flavor.7.a
 		add_political_power = 25
 	}
@@ -2726,7 +2675,6 @@ country_event = { #The Carstenz Expedition
 
 country_event = { #The Carstenz Expedition
 	id = dei_flavor.8
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_flavor.8 FROM = [From.GetName]" }
 	title = dei_flavor.8.t
 	desc = dei_flavor.8.d
 
@@ -2735,6 +2683,7 @@ country_event = { #The Carstenz Expedition
 	is_triggered_only = yes
 
 	option = { #great plan
+		log = "[GetLogInfo]: event dei_flavor.8 option dei_flavor.8.a"
 		name = dei_flavor.8.a
 		add_political_power = 10
 	}
@@ -2742,7 +2691,6 @@ country_event = { #The Carstenz Expedition
 
 country_event = { #The Carstenz Expedition
 	id = dei_flavor.9
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_flavor.9 FROM = [From.GetName]" }
 	title = dei_flavor.9.t
 	desc = dei_flavor.9.d
 
@@ -2751,6 +2699,7 @@ country_event = { #The Carstenz Expedition
 	is_triggered_only = yes
 
 	option = { #great plan
+		log = "[GetLogInfo]: event dei_flavor.9 option dei_flavor.9.a"
 		name = dei_flavor.9.a
 		add_political_power = -25
 	}
@@ -2758,7 +2707,6 @@ country_event = { #The Carstenz Expedition
 
 country_event = { #East-Indies-Hungary
 	id = dei_flavor.10
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_flavor.10 FROM = [From.GetName]" }
 	title = dei_flavor.10.t
 	desc = dei_flavor.10.d
 
@@ -2767,13 +2715,13 @@ country_event = { #East-Indies-Hungary
 	is_triggered_only = yes
 
 	option = { #Gets blasted by Hungary
+		log = "[GetLogInfo]: event dei_flavor.10 option dei_flavor.10.a"
 		name = dei_flavor.10.a
 	}
 }
 
 country_event = { #Return of the Mimika expedition
 	id = dei_flavor.11
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_flavor.11 FROM = [From.GetName]" }
 	title = dei_flavor.11.t
 	desc = dei_flavor.11.d
 
@@ -2782,6 +2730,7 @@ country_event = { #Return of the Mimika expedition
 	is_triggered_only = yes
 
 	option = { #Welcome back!
+		log = "[GetLogInfo]: event dei_flavor.11 option dei_flavor.11.a"
 		name = dei_flavor.11.a
 		add_political_power = 10
 	}
@@ -2793,7 +2742,6 @@ country_event = { #Return of the Mimika expedition
 
 country_event = { #Nationalist holds rousing speech
 	id = dei_random.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random.2 FROM = [From.GetName]" }
 	title = dei_random.2.t
 	desc = dei_random.2.d
 
@@ -2802,6 +2750,7 @@ country_event = { #Nationalist holds rousing speech
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Arrest that man!
+		log = "[GetLogInfo]: event dei_random.2 option dei_random.2.a"
 		name = dei_random.2.a
 		add_political_power = -25
 		custom_effect_tooltip = dei_strength_downdown
@@ -2812,6 +2761,7 @@ country_event = { #Nationalist holds rousing speech
 	}
 
 	option = { #Let them talk...
+		log = "[GetLogInfo]: event dei_random.2 option dei_random.2.b"
 		name = dei_random.2.b
 		custom_effect_tooltip = dei_strength_up
 		increase_insulindian_independence_strength = yes
@@ -2820,7 +2770,6 @@ country_event = { #Nationalist holds rousing speech
 
 country_event = { #Nationalist group infiltrated
 	id = dei_random.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random.3 FROM = [From.GetName]" }
 	title = dei_random.3.t
 	desc = dei_random.3.d
 
@@ -2829,12 +2778,14 @@ country_event = { #Nationalist group infiltrated
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Sow discord
+		log = "[GetLogInfo]: event dei_random.3 option dei_random.3.a"
 		name = dei_random.3.a
 		custom_effect_tooltip = dei_unity_down
 		decrease_insulindian_independence_unity = yes
 	}
 
 	option = { #Sabotage their weapons
+		log = "[GetLogInfo]: event dei_random.3 option dei_random.3.b"
 		name = dei_random.3.b
 		custom_effect_tooltip = dei_strength_down
 		decrease_insulindian_independence_strength = yes
@@ -2843,7 +2794,6 @@ country_event = { #Nationalist group infiltrated
 
 country_event = { #Nationalists and syndicalists fight eachother
 	id = dei_random.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random.4 FROM = [From.GetName]" }
 	title = dei_random.4.t
 	desc = dei_random.4.d
 
@@ -2852,12 +2802,14 @@ country_event = { #Nationalists and syndicalists fight eachother
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Intervene immediately
+		log = "[GetLogInfo]: event dei_random.4 option dei_random.4.a"
 		name = dei_random.4.a
 		custom_effect_tooltip = dei_unity_down
 		decrease_insulindian_independence_unity = yes
 	}
 
 	option = { #Let them kill eachother and only intervene later
+		log = "[GetLogInfo]: event dei_random.4 option dei_random.4.b"
 		name = dei_random.4.b
 		add_political_power = -25
 		custom_effect_tooltip = dei_unity_downdown
@@ -2870,7 +2822,6 @@ country_event = { #Nationalists and syndicalists fight eachother
 
 country_event = { #Administrator murdered
 	id = dei_random.5
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random.5 FROM = [From.GetName]" }
 	title = dei_random.5.t
 	desc = dei_random.5.d
 
@@ -2879,6 +2830,7 @@ country_event = { #Administrator murdered
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Just arrest the usual suspects
+		log = "[GetLogInfo]: event dei_random.5 option dei_random.5.a"
 		name = dei_random.5.a
 		custom_effect_tooltip = dei_strength_down
 		custom_effect_tooltip = dei_unity_up
@@ -2887,6 +2839,7 @@ country_event = { #Administrator murdered
 	}
 
 	option = { #Let them kill eachother and only intervene later
+		log = "[GetLogInfo]: event dei_random.5 option dei_random.5.b"
 		name = dei_random.5.b
 		add_political_power = -25
 		random_list = {
@@ -2905,7 +2858,6 @@ country_event = { #Administrator murdered
 
 country_event = { #Prominent nationalist arrested
 	id = dei_random.6
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random.6 FROM = [From.GetName]" }
 	title = dei_random.6.t
 	desc = dei_random.6.d
 
@@ -2914,6 +2866,7 @@ country_event = { #Prominent nationalist arrested
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Court seems unneeded to me: just put him in exile
+		log = "[GetLogInfo]: event dei_random.6 option dei_random.6.a"
 		name = dei_random.6.a
 		add_political_power = -25
 		custom_effect_tooltip = dei_strength_down
@@ -2923,6 +2876,7 @@ country_event = { #Prominent nationalist arrested
 	}
 
 	option = { #The laws says he has to go to court, so he'll go to court
+		log = "[GetLogInfo]: event dei_random.6 option dei_random.6.b"
 		name = dei_random.6.b
 		random_list = {
 			50 = {
@@ -2937,7 +2891,6 @@ country_event = { #Prominent nationalist arrested
 
 country_event = { #Dutch representative calls for Insulindian independence
 	id = dei_random.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random.7 FROM = [From.GetName]" }
 	title = dei_random.7.t
 	desc = dei_random.7.d
 
@@ -2952,6 +2905,7 @@ country_event = { #Dutch representative calls for Insulindian independence
 	}
 
 	option = { #I would hardly consider a syndicalist Dutch
+		log = "[GetLogInfo]: event dei_random.7 option dei_random.7.a"
 		name = dei_random.7.a
 		add_political_power = -25
 		custom_effect_tooltip = dei_strength_up
@@ -2963,7 +2917,6 @@ country_event = { #Dutch representative calls for Insulindian independence
 
 country_event = { #Indoeuropean speaks against independence
 	id = dei_random.8
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random.8 FROM = [From.GetName]" }
 	title = dei_random.8.t
 	desc = dei_random.8.d
 
@@ -2972,6 +2925,7 @@ country_event = { #Indoeuropean speaks against independence
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Good riddance!
+		log = "[GetLogInfo]: event dei_random.8 option dei_random.8.a"
 		name = dei_random.8.a
 		custom_effect_tooltip = dei_unity_down
 		decrease_insulindian_independence_unity = yes
@@ -2980,7 +2934,6 @@ country_event = { #Indoeuropean speaks against independence
 
 country_event = { #Nationalists riot
 	id = dei_random.9
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random.9 FROM = [From.GetName]" }
 	title = dei_random.9.t
 	desc = dei_random.9.d
 
@@ -2989,10 +2942,9 @@ country_event = { #Nationalists riot
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Crack down on them... Hard!
+		log = "[GetLogInfo]: event dei_random.9 option dei_random.9.a"
 		name = dei_random.9.a
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		custom_effect_tooltip = dei_strength_downdown
 		custom_effect_tooltip = dei_unity_up
 		decrease_insulindian_independence_strength = yes
@@ -3001,19 +2953,17 @@ country_event = { #Nationalists riot
 	}
 
 	option = { #Keep the violence in proportion
+		log = "[GetLogInfo]: event dei_random.9 option dei_random.9.b"
 		name = dei_random.9.b
-		ai_chance = {
-			base = 60
-		}
+		ai_chance = { base = 60 }
 		custom_effect_tooltip = dei_strength_down
 		decrease_insulindian_independence_strength = yes
 	}
 
 	option = { #Don't shoot!
+		log = "[GetLogInfo]: event dei_random.9 option dei_random.9.c"
 		name = dei_random.9.c
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		custom_effect_tooltip = dei_strength_up
 		increase_insulindian_independence_strength = yes
 	}
@@ -3021,7 +2971,6 @@ country_event = { #Nationalists riot
 
 country_event = { #Inlanders lynch Dutch couple
 	id = dei_random.10
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random.10 FROM = [From.GetName]" }
 	title = dei_random.10.t
 	desc = dei_random.10.d
 
@@ -3030,26 +2979,23 @@ country_event = { #Inlanders lynch Dutch couple
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Arrest every last person in that mob
+		log = "[GetLogInfo]: event dei_random.10 option dei_random.10.a"
 		name = dei_random.10.a
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		custom_effect_tooltip = dei_unity_up
 		increase_insulindian_independence_unity = yes
 	}
 
 	option = { #Just let it slide
+		log = "[GetLogInfo]: event dei_random.10 option dei_random.10.b"
 		name = dei_random.10.b
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		add_political_power = -25
 	}
 }
 
 country_event = { #Guerilla ambush on the KNIL
 	id = dei_random.11
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random.11 FROM = [From.GetName]" }
 	title = dei_random.11.t
 	desc = dei_random.11.d
 
@@ -3058,20 +3004,18 @@ country_event = { #Guerilla ambush on the KNIL
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Shit!
+		log = "[GetLogInfo]: event dei_random.11 option dei_random.11.a"
 		name = dei_random.11.a
-		ai_chance = {
-			base = 80
-		}
+		ai_chance = { base = 80 }
 		custom_effect_tooltip = dei_strength_up
 		increase_insulindian_independence_strength = yes
 		add_manpower = -3000
 	}
 
 	option = { #Outfit a punitive expedition
+		log = "[GetLogInfo]: event dei_random.11 option dei_random.11.b"
 		name = dei_random.11.b
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		add_political_power = -25
 		custom_effect_tooltip = dei_strength_up
 		increase_insulindian_independence_strength = yes
@@ -3089,7 +3033,6 @@ country_event = { #Guerilla ambush on the KNIL
 
 country_event = { #Administrator murdered - investigation proves the usual suspects were the guilty ones
 	id = dei_random_followup.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random_followup.1 FROM = [From.GetName]" }
 	title = dei_random_followup.1.t
 	desc = dei_random_followup.1.d
 
@@ -3098,6 +3041,7 @@ country_event = { #Administrator murdered - investigation proves the usual suspe
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Arrest the usual suspects
+		log = "[GetLogInfo]: event dei_random_followup.1 option dei_random_followup.1.a"
 		name = dei_random_followup.1.a
 		custom_effect_tooltip = dei_strength_down
 		decrease_insulindian_independence_strength = yes
@@ -3106,7 +3050,6 @@ country_event = { #Administrator murdered - investigation proves the usual suspe
 
 country_event = { #Administrator murdered - it was a serial killer and the pro-independence people had nothing to do with it
 	id = dei_random_followup.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random_followup.2 FROM = [From.GetName]" }
 	title = dei_random_followup.2.t
 	desc = dei_random_followup.2.d
 
@@ -3115,13 +3058,13 @@ country_event = { #Administrator murdered - it was a serial killer and the pro-i
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #At least we got him
+		log = "[GetLogInfo]: event dei_random_followup.2 option dei_random_followup.2.a"
 		name = dei_random_followup.2.a
 	}
 }
 
 country_event = { #Administrator murdered - investigation ends up nowhere
 	id = dei_random_followup.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random_followup.3 FROM = [From.GetName]" }
 	title = dei_random_followup.3.t
 	desc = dei_random_followup.3.d
 
@@ -3130,19 +3073,20 @@ country_event = { #Administrator murdered - investigation ends up nowhere
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Just arrest these people you said must've been it.
+		log = "[GetLogInfo]: event dei_random_followup.3 option dei_random_followup.3.a"
 		name = dei_random_followup.3.a
 		custom_effect_tooltip = dei_strength_down
 		decrease_insulindian_independence_strength = yes
 	}
 
 	option = { #We can't arrest anyone in that case
+		log = "[GetLogInfo]: event dei_random_followup.3 option dei_random_followup.3.b"
 		name = dei_random_followup.3.b
 	}
 }
 
 country_event = { #Nationalist arrested - suspect holds inspiring speech
 	id = dei_random_followup.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random_followup.4 FROM = [From.GetName]" }
 	title = dei_random_followup.4.t
 	desc = dei_random_followup.4.d
 
@@ -3151,6 +3095,7 @@ country_event = { #Nationalist arrested - suspect holds inspiring speech
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #At least he was convicted.
+		log = "[GetLogInfo]: event dei_random_followup.4 option dei_random_followup.4.a"
 		name = dei_random_followup.4.a
 		custom_effect_tooltip = dei_strength_up_unity_up
 		increase_insulindian_independence_unity = yes
@@ -3160,7 +3105,6 @@ country_event = { #Nationalist arrested - suspect holds inspiring speech
 
 country_event = { #Nationalist arrested - pathetic defense
 	id = dei_random_followup.5
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random_followup.5 FROM = [From.GetName]" }
 	title = dei_random_followup.5.t
 	desc = dei_random_followup.5.d
 
@@ -3169,6 +3113,7 @@ country_event = { #Nationalist arrested - pathetic defense
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Hehe...
+		log = "[GetLogInfo]: event dei_random_followup.5 option dei_random_followup.5.a"
 		name = dei_random_followup.5.a
 		custom_effect_tooltip = dei_strength_down_unity_down
 		decrease_insulindian_independence_unity = yes
@@ -3178,7 +3123,6 @@ country_event = { #Nationalist arrested - pathetic defense
 
 country_event = { #Punitive Expedition successful
 	id = dei_random_followup.6
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random_followup.6 FROM = [From.GetName]" }
 	title = dei_random_followup.6.t
 	desc = dei_random_followup.6.d
 
@@ -3187,6 +3131,7 @@ country_event = { #Punitive Expedition successful
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Hehe...
+		log = "[GetLogInfo]: event dei_random_followup.6 option dei_random_followup.6.a"
 		name = dei_random_followup.6.a
 		custom_effect_tooltip = dei_strength_downdown
 		decrease_insulindian_independence_strength = yes
@@ -3196,7 +3141,6 @@ country_event = { #Punitive Expedition successful
 
 country_event = { #Punitive Expedition butchered
 	id = dei_random_followup.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event dei_random_followup.7 FROM = [From.GetName]" }
 	title = dei_random_followup.7.t
 	desc = dei_random_followup.7.d
 
@@ -3205,6 +3149,7 @@ country_event = { #Punitive Expedition butchered
 	picture = GFX_report_event_DEI_hotel_des_indes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event dei_random_followup.7 option dei_random_followup.7.a"
 		name = dei_random_followup.7.a
 		custom_effect_tooltip = dei_strength_up
 		increase_insulindian_independence_strength = yes
@@ -3218,7 +3163,6 @@ country_event = { #Punitive Expedition butchered
 
 country_event = { #Formation of the government in Exile
 	id = holex.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.1 FROM = [From.GetName]" }
 	title = holex.1.t
 	desc = holex.1.d
 
@@ -3251,10 +3195,9 @@ country_event = { #Formation of the government in Exile
 	}
 
 	option = { #Stay as the Batavian Commune
+		log = "[GetLogInfo]: event holex.1 option holex.1.a"
 		name = holex.1.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		if = {
 			limit = { has_character = HOL_johannes_furstner }
 			HOL_johannes_furstner = { set_nationality = DEI }
@@ -3296,10 +3239,9 @@ country_event = { #Formation of the government in Exile
 	}
 
 	option = { #Become the exiles
+		log = "[GetLogInfo]: event holex.1 option holex.1.b"
 		name = holex.1.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		effect_tooltip = {
 			set_autonomy = {
 				target = DEI
@@ -3330,7 +3272,6 @@ country_event = { #Formation of the government in Exile
 
 country_event = { #Picking an ally - otherwise you will never be able to restore the birthright
 	id = holex.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.2 FROM = [From.GetName]" }
 	title = holex.2.t
 	desc = holex.2.d
 	picture = GFX_report_event_HOL_rhine_ships
@@ -3342,10 +3283,9 @@ country_event = { #Picking an ally - otherwise you will never be able to restore
 	}
 
 	option = { #Open channels with the Canadians
+		log = "[GetLogInfo]: event holex.2 option holex.2.a"
 		name = holex.2.a
-		ai_chance = {
-			base = 30
-		}
+		ai_chance = { base = 30 }
 		trigger = {
 			OR = {
 				has_game_rule = {
@@ -3369,10 +3309,9 @@ country_event = { #Picking an ally - otherwise you will never be able to restore
 	}
 
 	option = { #Set sail to Hamburg
+		log = "[GetLogInfo]: event holex.2 option holex.2.b"
 		name = holex.2.b
-		ai_chance = {
-			base = 70
-		}
+		ai_chance = { base = 70 }
 		trigger = {
 			OR = {
 				has_game_rule = {
@@ -3396,16 +3335,14 @@ country_event = { #Picking an ally - otherwise you will never be able to restore
 	}
 
 	option = { #Set sail to Batavia, we need no allies
+		log = "[GetLogInfo]: event holex.2 option holex.2.c"
 		name = holex.2.c
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 	}
 }
 
 country_event = { #The Dutch want to settle their government in exile here.
 	id = holex.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.3 FROM = [From.GetName]" }
 	title = holex.3.t
 	desc = holex.3.d
 	picture = GFX_report_event_HOL_rhine_ships
@@ -3413,19 +3350,17 @@ country_event = { #The Dutch want to settle their government in exile here.
 	is_triggered_only = yes
 
 	option = { #The enemy of my enemy is my friend!
+		log = "[GetLogInfo]: event holex.3 option holex.3.a"
 		name = holex.3.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		add_to_faction = FROM
 		FROM = { country_event = { id = holex.4 days = 2 } }
 	}
 
 	option = { #No, thank you
+		log = "[GetLogInfo]: event holex.3 option holex.3.b"
 		name = holex.3.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = { flag = HOL_rejected_DEI days = 50 value = 1 }
 		FROM = { country_event = { id = holex.5 days = 2 } }
 	}
@@ -3433,7 +3368,6 @@ country_event = { #The Dutch want to settle their government in exile here.
 
 country_event = { #The Canadians accept
 	id = holex.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.4 FROM = [From.GetName]" }
 	title = holex.4.t
 	desc = holex.4.d
 	picture = GFX_report_event_HOL_rhine_ships
@@ -3441,6 +3375,7 @@ country_event = { #The Canadians accept
 	is_triggered_only = yes
 
 	option = { #Good
+		log = "[GetLogInfo]: event holex.4 option holex.5.a"
 		name = holex.5.a
 		effect_tooltip = {
 			FROM = { add_to_faction = ROOT }
@@ -3450,7 +3385,6 @@ country_event = { #The Canadians accept
 
 country_event = { #The Canadians reject the notion
 	id = holex.5
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.5 FROM = [From.GetName]" }
 	title = holex.5.t
 	desc = holex.5.d
 	picture = GFX_report_event_HOL_rhine_ships
@@ -3458,10 +3392,9 @@ country_event = { #The Canadians reject the notion
 	is_triggered_only = yes
 
 	option = { #No choice but to ask the Germans then
+		log = "[GetLogInfo]: event holex.5 option holex.5.a"
 		name = holex.5.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			OR = {
 				GER = {
@@ -3492,6 +3425,7 @@ country_event = { #The Canadians reject the notion
 	}
 
 	option = { #We'll have to fight on our own, this won't be good for our hopes
+		log = "[GetLogInfo]: event holex.5 option holex.5.b"
 		name = holex.5.b
 		ai_chance = {
 			base = 100
@@ -3523,7 +3457,6 @@ country_event = { #The Canadians reject the notion
 
 country_event = { #The West Indian Federation seizes our colonies in the west
 	id = holex.6
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.6 FROM = [From.GetName]" }
 	title = holex.6.t
 	desc = holex.6.d
 	picture = GFX_report_event_HOL_rhine_ships
@@ -3531,6 +3464,7 @@ country_event = { #The West Indian Federation seizes our colonies in the west
 	is_triggered_only = yes
 
 	option = { #Good
+		log = "[GetLogInfo]: event holex.6 option holex.6.a"
 		name = holex.6.a
 		every_owned_state = {
 			limit = {
@@ -3548,7 +3482,6 @@ country_event = { #The West Indian Federation seizes our colonies in the west
 
 country_event = { #The Dutch are weak, seize Curacao!
 	id = holex.7
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.7 FROM = [From.GetName]" }
 	title = holex.7.t
 	desc = holex.7.d
 
@@ -3561,26 +3494,24 @@ country_event = { #The Dutch are weak, seize Curacao!
 	}
 
 	option = { #Do it...
+		log = "[GetLogInfo]: event holex.7 option holex.7.a"
 		name = holex.7.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
+		add_state_claim = 695
 		transfer_state = 695
 		DEI = { country_event = holex.8 }
 	}
 
 	option = { #we can't risk it
+		log = "[GetLogInfo]: event holex.7 option holex.7.b"
 		name = holex.7.b
-		ai_chance = {
-			base = 0
-		}
+		ai_chance = { base = 0 }
 		add_political_power = -50
 	}
 }
 
 country_event = { #Venezuela occupies Curacao!
 	id = holex.8
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.8 FROM = [From.GetName]" }
 	title = holex.8.t
 	desc = holex.8.d
 
@@ -3589,6 +3520,7 @@ country_event = { #Venezuela occupies Curacao!
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.8 option holex.8.a"
 		name = holex.8.a
 		effect_tooltip = {
 			FROM = { transfer_state = 695 }
@@ -3598,7 +3530,6 @@ country_event = { #Venezuela occupies Curacao!
 
 country_event = { #Which government: absolute Wilhelmina or classic government in exile
 	id = holex.9
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.9 FROM = [From.GetName]" }
 	title = holex.9.t
 	desc = holex.9.d
 
@@ -3607,10 +3538,9 @@ country_event = { #Which government: absolute Wilhelmina or classic government i
 	is_triggered_only = yes
 
 	option = { #Absolute wilhelminite
+		log = "[GetLogInfo]: event holex.9 option holex.9.a"
 		name = holex.9.a
-		ai_chance = {
-			base = 30
-		}
+		ai_chance = { base = 30 }
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no
@@ -3623,10 +3553,9 @@ country_event = { #Which government: absolute Wilhelmina or classic government i
 	}
 
 	option = { #Classic government in exile
+		log = "[GetLogInfo]: event holex.9 option holex.9.b"
 		name = holex.9.b
-		ai_chance = {
-			base = 20
-		}
+		ai_chance = { base = 20 }
 		set_politics = {
 			ruling_party = social_conservative
 			elections_allowed = no
@@ -3639,10 +3568,9 @@ country_event = { #Which government: absolute Wilhelmina or classic government i
 	}
 
 	option = { #Classic government in exile but with the more battleworthy prime minister Pieter Gerbrandy
+		log = "[GetLogInfo]: event holex.9 option holex.9.c"
 		name = holex.9.c
-		ai_chance = {
-			base = 50
-		}
+		ai_chance = { base = 50 }
 		set_politics = {
 			ruling_party = social_conservative
 			elections_allowed = no
@@ -3657,7 +3585,6 @@ country_event = { #Which government: absolute Wilhelmina or classic government i
 
 country_event = { #Bargain of Batavia
 	id = holex.10
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.10 FROM = [From.GetName]" }
 	title = holex.10.t
 	desc = holex.10.d
 
@@ -3666,10 +3593,9 @@ country_event = { #Bargain of Batavia
 	is_triggered_only = yes
 
 	option = { #Promise full independence after the fatherland is reclaimed
+		log = "[GetLogInfo]: event holex.10 option holex.10.a"
 		name = holex.10.a
-		ai_chance = {
-			base = 30
-		}
+		ai_chance = { base = 30 }
 		custom_effect_tooltip = holex_tt_insulindia_released_after_recovery
 		add_stability = 0.05
 		add_political_power = -300
@@ -3737,10 +3663,9 @@ country_event = { #Bargain of Batavia
 	}
 
 	option = { #Promise equal status within the kingdom
+		log = "[GetLogInfo]: event holex.10 option holex.10.b"
 		name = holex.10.b
-		ai_chance = {
-			base = 60
-		}
+		ai_chance = { base = 60 }
 		add_political_power = -100
 		custom_effect_tooltip = holex_tt_insulindia_equal_status_after_recovery
 		decrease_insulindian_independence_unity = yes
@@ -3752,10 +3677,9 @@ country_event = { #Bargain of Batavia
 	}
 
 	option = { #Don't make any concessions
+		log = "[GetLogInfo]: event holex.10 option holex.10.c"
 		name = holex.10.c
-		ai_chance = {
-			base = 10
-		}
+		ai_chance = { base = 10 }
 		custom_effect_tooltip = holex_tt_insulindians_angery
 		increase_insulindian_independence_unity = yes
 		increase_insulindian_independence_unity = yes
@@ -3767,7 +3691,6 @@ country_event = { #Bargain of Batavia
 
 country_event = { #Resistance raids a factory!
 	id = holex.11
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.11 FROM = [From.GetName]" }
 	title = holex.11.t
 	desc = holex.11.d
 
@@ -3776,6 +3699,7 @@ country_event = { #Resistance raids a factory!
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.11 option holex.11.a"
 		name = holex.11.a
 		random_owned_controlled_state = {
 			limit = {
@@ -3795,7 +3719,6 @@ country_event = { #Resistance raids a factory!
 
 country_event = { #Resistance raids a factory, successful
 	id = holex.12
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.12 FROM = [From.GetName]" }
 	title = holex.12.t
 	desc = holex.12.d
 
@@ -3804,6 +3727,7 @@ country_event = { #Resistance raids a factory, successful
 	is_triggered_only = yes
 
 	option = { #Great!
+		log = "[GetLogInfo]: event holex.12 option holex.12.a"
 		name = holex.12.a
 		add_to_variable = {
 			var = holex_active_resistance_members
@@ -3815,7 +3739,6 @@ country_event = { #Resistance raids a factory, successful
 
 country_event = { #Resistance raids a factory, partially successful but killed 4, arrested 2
 	id = holex.13
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.13 FROM = [From.GetName]" }
 	title = holex.13.t
 	desc = holex.13.d
 
@@ -3824,6 +3747,7 @@ country_event = { #Resistance raids a factory, partially successful but killed 4
 	is_triggered_only = yes
 
 	option = { #Good, but bad
+		log = "[GetLogInfo]: event holex.13 option holex.13.a"
 		name = holex.13.a
 		random_owned_controlled_state = {
 			limit = {
@@ -3843,7 +3767,6 @@ country_event = { #Resistance raids a factory, partially successful but killed 4
 
 country_event = { #Resistance raids a factory, partially successful but 4 killed, 2 arrested
 	id = holex.14
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.14 FROM = [From.GetName]" }
 	title = holex.14.t
 	desc = holex.14.d
 
@@ -3852,6 +3775,7 @@ country_event = { #Resistance raids a factory, partially successful but 4 killed
 	is_triggered_only = yes
 
 	option = { #Good, but bad
+		log = "[GetLogInfo]: event holex.14 option holex.14.a"
 		name = holex.14.a
 		custom_effect_tooltip = holex_tt_four_dead_two_arrested_nineteen_hiding
 		hidden_effect = {
@@ -3895,7 +3819,6 @@ country_event = { #Resistance raids a factory, partially successful but 4 killed
 
 country_event = { #Resistance raids a factory, but hits a patrol and fails to do it. 7 casualties and 1 arrest
 	id = holex.15
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.15 FROM = [From.GetName]" }
 	title = holex.15.t
 	desc = holex.15.d
 
@@ -3904,6 +3827,7 @@ country_event = { #Resistance raids a factory, but hits a patrol and fails to do
 	is_triggered_only = yes
 
 	option = { #Good!
+		log = "[GetLogInfo]: event holex.15 option holex.15.a"
 		name = holex.15.a
 		hidden_effect = {
 			DEI = {
@@ -3915,7 +3839,6 @@ country_event = { #Resistance raids a factory, but hits a patrol and fails to do
 
 country_event = { #Resistance fails the raid, hits a patrol and loses 7 good men with one wounded man being hauled off by the authorities
 	id = holex.16
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.16 FROM = [From.GetName]" }
 	title = holex.16.t
 	desc = holex.16.d
 
@@ -3924,6 +3847,7 @@ country_event = { #Resistance fails the raid, hits a patrol and loses 7 good men
 	is_triggered_only = yes
 
 	option = { #Good, but bad
+		log = "[GetLogInfo]: event holex.16 option holex.16.a"
 		name = holex.16.a
 		custom_effect_tooltip = holex_tt_seven_dead_one_arrested_seventeen_hiding
 		hidden_effect = {
@@ -3967,7 +3891,6 @@ country_event = { #Resistance fails the raid, hits a patrol and loses 7 good men
 
 country_event = { #Resistance raids a factory, but it was a trap set by the authorities and it worked!
 	id = holex.17
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.17 FROM = [From.GetName]" }
 	title = holex.17.t
 	desc = holex.17.d
 
@@ -3976,6 +3899,7 @@ country_event = { #Resistance raids a factory, but it was a trap set by the auth
 	is_triggered_only = yes
 
 	option = { #Good!
+		log = "[GetLogInfo]: event holex.17 option holex.17.a"
 		name = holex.17.a
 		hidden_effect = {
 			DEI = {
@@ -3987,7 +3911,6 @@ country_event = { #Resistance raids a factory, but it was a trap set by the auth
 
 country_event = { #Resistance raids a factory, but it was a trap set by the authorities and it worked!
 	id = holex.18
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.18 FROM = [From.GetName]" }
 	title = holex.18.t
 	desc = holex.18.d
 
@@ -3996,6 +3919,7 @@ country_event = { #Resistance raids a factory, but it was a trap set by the auth
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.18 option holex.18.a"
 		name = holex.18.a
 		custom_effect_tooltip = holex_tt_all_fourteen_dead_eleven_arrested_another_thirty_possibly_contaminated
 		hidden_effect = {
@@ -4039,7 +3963,6 @@ country_event = { #Resistance raids a factory, but it was a trap set by the auth
 
 country_event = { #Resistance raids a factory, but it was a trap set by the authorities. We didn't fall for it
 	id = holex.19
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.19 FROM = [From.GetName]" }
 	title = holex.19.t
 	desc = holex.19.d
 
@@ -4048,13 +3971,13 @@ country_event = { #Resistance raids a factory, but it was a trap set by the auth
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.19 option holex.19.a"
 		name = holex.19.a
 	}
 }
 
 country_event = { #Resistance raids a military factory!
 	id = holex.20
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.20 FROM = [From.GetName]" }
 	title = holex.20.t
 	desc = holex.20.d
 
@@ -4063,6 +3986,7 @@ country_event = { #Resistance raids a military factory!
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.20 option holex.20.a"
 		name = holex.20.a
 		random_owned_controlled_state = {
 			limit = {
@@ -4082,7 +4006,6 @@ country_event = { #Resistance raids a military factory!
 
 country_event = { #Resistance raids a factory, successful
 	id = holex.21
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.21 FROM = [From.GetName]" }
 	title = holex.21.t
 	desc = holex.21.d
 
@@ -4091,6 +4014,7 @@ country_event = { #Resistance raids a factory, successful
 	is_triggered_only = yes
 
 	option = { #Great!
+		log = "[GetLogInfo]: event holex.21 option holex.21.a"
 		name = holex.21.a
 		add_to_variable = {
 			var = holex_active_resistance_members
@@ -4102,7 +4026,6 @@ country_event = { #Resistance raids a factory, successful
 
 country_event = { #Resistance raids a factory, partially successful but killed 4, arrested 2
 	id = holex.22
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.22 FROM = [From.GetName]" }
 	title = holex.22.t
 	desc = holex.22.d
 
@@ -4111,6 +4034,7 @@ country_event = { #Resistance raids a factory, partially successful but killed 4
 	is_triggered_only = yes
 
 	option = { #Good, but bad
+		log = "[GetLogInfo]: event holex.22 option holex.22.a"
 		name = holex.22.a
 		random_owned_controlled_state = {
 			limit = {
@@ -4130,7 +4054,6 @@ country_event = { #Resistance raids a factory, partially successful but killed 4
 
 country_event = { #Resistance raids a factory, partially successful but 4 killed, 2 arrested
 	id = holex.23
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.23 FROM = [From.GetName]" }
 	title = holex.23.t
 	desc = holex.23.d
 
@@ -4139,6 +4062,7 @@ country_event = { #Resistance raids a factory, partially successful but 4 killed
 	is_triggered_only = yes
 
 	option = { #Good, but bad
+		log = "[GetLogInfo]: event holex.23 option holex.23.a"
 		name = holex.23.a
 		custom_effect_tooltip = holex_tt_four_dead_two_arrested_nineteen_hiding
 		hidden_effect = {
@@ -4178,7 +4102,6 @@ country_event = { #Resistance raids a factory, partially successful but 4 killed
 
 country_event = { #Resistance raids a factory, but hits a patrol and fails to do it. 7 casualties and 1 arrest
 	id = holex.24
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.24 FROM = [From.GetName]" }
 	title = holex.24.t
 	desc = holex.24.d
 
@@ -4187,6 +4110,7 @@ country_event = { #Resistance raids a factory, but hits a patrol and fails to do
 	is_triggered_only = yes
 
 	option = { #Good!
+		log = "[GetLogInfo]: event holex.24 option holex.24.a"
 		name = holex.24.a
 		hidden_effect = {
 			DEI = {
@@ -4198,7 +4122,6 @@ country_event = { #Resistance raids a factory, but hits a patrol and fails to do
 
 country_event = { #Resistance fails the raid, hits a patrol and loses 7 good men with one wounded man being hauled off by the authorities
 	id = holex.25
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.25 FROM = [From.GetName]" }
 	title = holex.25.t
 	desc = holex.25.d
 
@@ -4207,6 +4130,7 @@ country_event = { #Resistance fails the raid, hits a patrol and loses 7 good men
 	is_triggered_only = yes
 
 	option = { #Good, but bad
+		log = "[GetLogInfo]: event holex.25 option holex.25.a"
 		name = holex.25.a
 		custom_effect_tooltip = holex_tt_eleven_dead_two_arrested_twelve_hiding
 		hidden_effect = {
@@ -4246,7 +4170,6 @@ country_event = { #Resistance fails the raid, hits a patrol and loses 7 good men
 
 country_event = { #Resistance raids a factory, but it was a trap set by the authorities and it worked!
 	id = holex.26
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.26 FROM = [From.GetName]" }
 	title = holex.26.t
 	desc = holex.26.d
 
@@ -4255,6 +4178,7 @@ country_event = { #Resistance raids a factory, but it was a trap set by the auth
 	is_triggered_only = yes
 
 	option = { #Good!
+		log = "[GetLogInfo]: event holex.26 option holex.26.a"
 		name = holex.26.a
 		hidden_effect = {
 			DEI = {
@@ -4266,7 +4190,6 @@ country_event = { #Resistance raids a factory, but it was a trap set by the auth
 
 country_event = { #Resistance raids a factory, but it was a trap set by the authorities and it worked!
 	id = holex.27
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.27 FROM = [From.GetName]" }
 	title = holex.27.t
 	desc = holex.27.d
 
@@ -4275,6 +4198,7 @@ country_event = { #Resistance raids a factory, but it was a trap set by the auth
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.27 option holex.27.a"
 		name = holex.27.a
 		custom_effect_tooltip = holex_tt_all_fourteen_dead_eleven_arrested_another_thirty_possibly_contaminated
 		hidden_effect = {
@@ -4318,7 +4242,6 @@ country_event = { #Resistance raids a factory, but it was a trap set by the auth
 
 country_event = { #Resistance raids a factory, but it was a trap set by the authorities. We didn't fall for it
 	id = holex.28
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.28 FROM = [From.GetName]" }
 	title = holex.28.t
 	desc = holex.28.d
 
@@ -4327,13 +4250,13 @@ country_event = { #Resistance raids a factory, but it was a trap set by the auth
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.28 option holex.28.a"
 		name = holex.28.a
 	}
 }
 
 country_event = { #Resistance raids a railway! Successful
 	id = holex.29
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.29 FROM = [From.GetName]" }
 	title = holex.29.t
 	desc = holex.29.d
 
@@ -4342,6 +4265,7 @@ country_event = { #Resistance raids a railway! Successful
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.29 option holex.29.a"
 		name = holex.29.a
 		random_owned_controlled_state = {
 			limit = {
@@ -4361,7 +4285,6 @@ country_event = { #Resistance raids a railway! Successful
 
 country_event = { #Resistance bombs a railway, successful
 	id = holex.30
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.30 FROM = [From.GetName]" }
 	title = holex.30.t
 	desc = holex.30.d
 
@@ -4370,6 +4293,7 @@ country_event = { #Resistance bombs a railway, successful
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.30 option holex.30.a"
 		name = holex.30.a
 		add_to_variable = {
 			var = holex_active_resistance_members
@@ -4380,7 +4304,6 @@ country_event = { #Resistance bombs a railway, successful
 
 country_event = { #Resistance raids a railway, failed - bombers arrested
 	id = holex.31
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.31 FROM = [From.GetName]" }
 	title = holex.31.t
 	desc = holex.31.d
 
@@ -4389,6 +4312,7 @@ country_event = { #Resistance raids a railway, failed - bombers arrested
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.31 option holex.31.a"
 		name = holex.31.a
 		hidden_effect = {
 			DEI = { country_event = holex.32 }
@@ -4398,7 +4322,6 @@ country_event = { #Resistance raids a railway, failed - bombers arrested
 
 country_event = { #Resistance bombs a railway, failed
 	id = holex.32
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.32 FROM = [From.GetName]" }
 	title = holex.32.t
 	desc = holex.32.d
 
@@ -4407,6 +4330,7 @@ country_event = { #Resistance bombs a railway, failed
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.32 option holex.32.a"
 		name = holex.32.a
 		custom_effect_tooltip = holex_tt_all_two_arrested_three_possibly_contaminated
 		hidden_effect = {
@@ -4450,7 +4374,6 @@ country_event = { #Resistance bombs a railway, failed
 
 country_event = { #Successful Razzia
 	id = holex.33
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.33 FROM = [From.GetName]" }
 	title = holex.33.t
 	desc = holex.33.d
 
@@ -4459,6 +4382,7 @@ country_event = { #Successful Razzia
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.33 option holex.33.a"
 		name = holex.33.a
 		custom_effect_tooltip = holex_tt_resistance_eight_arrested
 		DEI = { country_event = holex.34 }
@@ -4467,7 +4391,6 @@ country_event = { #Successful Razzia
 
 country_event = { #Razzia in [From.GetNameDef]
 	id = holex.34
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.34 FROM = [From.GetName]" }
 	title = holex.34.t
 	desc = holex.34.d
 
@@ -4476,6 +4399,7 @@ country_event = { #Razzia in [From.GetNameDef]
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.34 option holex.34.a"
 		name = holex.34.a
 		custom_effect_tooltip = holex_tt_resistance_eight_arrested
 		custom_effect_tooltip = holex_tt_resistance_five_hiding
@@ -4520,7 +4444,6 @@ country_event = { #Razzia in [From.GetNameDef]
 
 country_event = { #semi-Successful Razzia
 	id = holex.35
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.35 FROM = [From.GetName]" }
 	title = holex.35.t
 	desc = holex.35.d
 
@@ -4529,6 +4452,7 @@ country_event = { #semi-Successful Razzia
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.35 option holex.35.a"
 		name = holex.35.a
 		custom_effect_tooltip = holex_tt_resistance_four_arrested
 		DEI = { country_event = holex.36 }
@@ -4537,7 +4461,6 @@ country_event = { #semi-Successful Razzia
 
 country_event = { #Razzia in [From.GetNameDef]
 	id = holex.36
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.36 FROM = [From.GetName]" }
 	title = holex.36.t
 	desc = holex.36.d
 
@@ -4546,6 +4469,7 @@ country_event = { #Razzia in [From.GetNameDef]
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.36 option holex.36.a"
 		name = holex.36.a
 		custom_effect_tooltip = holex_tt_resistance_four_arrested
 		custom_effect_tooltip = holex_tt_resistance_nine_hiding
@@ -4590,7 +4514,6 @@ country_event = { #Razzia in [From.GetNameDef]
 
 country_event = { #failed Razzia
 	id = holex.37
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.37 FROM = [From.GetName]" }
 	title = holex.37.t
 	desc = holex.37.d
 
@@ -4599,6 +4522,7 @@ country_event = { #failed Razzia
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.37 option holex.35.a"
 		name = holex.35.a
 		custom_effect_tooltip = holex_tt_resistance_none_arrested
 		DEI = { country_event = holex.38 }
@@ -4607,7 +4531,6 @@ country_event = { #failed Razzia
 
 country_event = { #Razzia in [From.GetNameDef]
 	id = holex.38
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.38 FROM = [From.GetName]" }
 	title = holex.38.t
 	desc = holex.38.d
 
@@ -4616,6 +4539,7 @@ country_event = { #Razzia in [From.GetNameDef]
 	is_triggered_only = yes
 
 	option = { #Oh no!
+		log = "[GetLogInfo]: event holex.38 option holex.38.a"
 		name = holex.38.a
 		custom_effect_tooltip = holex_tt_resistance_none_arrested
 		hidden_effect = {
@@ -4659,7 +4583,6 @@ country_event = { #Razzia in [From.GetNameDef]
 
 country_event = { #Formation of the government in exile
 	id = holex.39
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.39 FROM = [From.GetName]" }
 	title = holex.39.t
 	desc = holex.39.d
 
@@ -4690,6 +4613,7 @@ country_event = { #Formation of the government in exile
 	}
 
 	option = { #Stay as the Batavian Commune
+		log = "[GetLogInfo]: event holex.39 option holex.39.a"
 		name = holex.39.a
 		if = {
 			limit = { has_idea = DEI_idea_colonial_nation }
@@ -4756,15 +4680,8 @@ country_event = { #Formation of the government in exile
 			every_owned_state = {
 				limit = { NOT = { is_in_home_area = yes } }
 				transfer_state_to = ROOT
-				if = {
-					limit = { is_core_of = PREV }
-					add_core_of = ROOT
-				}
-				else_if = {
-					limit = { is_claimed_by = PREV }
-					add_claim_by = ROOT
-					remove_claim_by = PREV
-				}
+				add_claim_by = ROOT
+				remove_claim_by = PREV
 			}
 			every_owned_state = {
 				limit = { is_in_home_area = yes }
@@ -4795,7 +4712,6 @@ country_event = { #Formation of the government in exile
 
 country_event = { #Reclaimed the birthright as the exiles
 	id = holex.40
-	immediate = { log = "[GetDateText]: [Root.GetName]: event holex.40 FROM = [From.GetName]" }
 	title = holex.40.t
 	desc = holex.40.d
 	picture = GFX_report_event_HOL_rhine_ships
@@ -4812,6 +4728,8 @@ country_event = { #Reclaimed the birthright as the exiles
 			HOL = {
 				HOL_create_wilhelmina = yes
 				set_country_flag = hol_dont_burn_binnenhof
+				add_state_claim = 309 #renewing claims to Suriname
+				add_state_claim = 1039
 				remove_targeted_decision = { target = DEI decision = holex_recruit_informants }
 				remove_targeted_decision = { target = DEI decision = holex_lure_resistance_into_trap }
 				remove_targeted_decision = { target = DEI decision = holex_direct_razzia }
@@ -4829,10 +4747,9 @@ country_event = { #Reclaimed the birthright as the exiles
 	}
 
 	option = { #Release INS as promised and play as restored HOL
+		log = "[GetLogInfo]: event holex.40 option holex.40.a"
 		name = holex.40.a
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			has_country_flag = holex_will_release_insulindia
 			NOT = { country_exists = INS }
@@ -4849,10 +4766,9 @@ country_event = { #Reclaimed the birthright as the exiles
 	}
 
 	option = { #Release INS as promised and play as released INS
+		log = "[GetLogInfo]: event holex.40 option holex.40.b"
 		name = holex.40.b
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			has_country_flag = holex_will_release_insulindia
 			NOT = { country_exists = INS }
@@ -4869,10 +4785,9 @@ country_event = { #Reclaimed the birthright as the exiles
 	}
 
 	option = { #Give INS equal status as promised - same as the Batavia Conference with minimum coring
+		log = "[GetLogInfo]: event holex.40 option holex.40.c"
 		name = holex.40.c
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			has_country_flag = holex_will_equal_status_insulindia
 		}
@@ -4892,10 +4807,9 @@ country_event = { #Reclaimed the birthright as the exiles
 	}
 
 	option = { #Didn't promise to give the Insulindians anything and still managed to restore the birthright - play as DEI
+		log = "[GetLogInfo]: event holex.40 option holex.40.e"
 		name = holex.40.e
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			if = {
 				limit = { has_country_flag = holex_will_release_insulindia }
@@ -4910,10 +4824,9 @@ country_event = { #Reclaimed the birthright as the exiles
 	}
 
 	option = { #Didn't promise to give the Insulindians anything and still managed to restore the birthright - play as restored HOL
+		log = "[GetLogInfo]: event holex.40 option holex.40.f"
 		name = holex.40.f
-		ai_chance = {
-			base = 100
-		}
+		ai_chance = { base = 100 }
 		trigger = {
 			if = {
 				limit = { has_country_flag = holex_will_release_insulindia }

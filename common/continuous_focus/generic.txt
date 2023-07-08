@@ -48,9 +48,7 @@ continuous_focus_palette = {
 
 		idea = continuous_air_production
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		supports_ai_strategy = ai_focus_aviation
 
@@ -80,9 +78,7 @@ continuous_focus_palette = {
 			production_speed_radar_station_factor = 0.2
 		}
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		supports_ai_strategy = ai_focus_defense
 
@@ -104,6 +100,7 @@ continuous_focus_palette = {
 			factor = 1
 			modifier = {
 				factor = 0
+				NOT = { has_game_rule = { rule = unit_limit_options option = NONE } }
 				has_reached_maximum_divisions = yes
 			}
 		}
@@ -170,7 +167,6 @@ continuous_focus_palette = {
 
 		available = {
 			hidden_trigger = { has_tech_sharing_feature = yes }
-
 		}
 
 		enable = {
@@ -197,9 +193,7 @@ continuous_focus_palette = {
 			remove_from_tech_sharing_group = continuous_tech_share
 		}
 
-		ai_will_do = {
-			factor = 0
-		}
+		ai_will_do = { factor = 0 }
 
 		supports_ai_strategy = ai_focus_military_advancements
 

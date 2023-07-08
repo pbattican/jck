@@ -23,9 +23,7 @@ focus_tree = {
 		x = 5
 		y = 0
 		cost = 5
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_eco_direction"
 			add_tech_bonus = {
@@ -45,9 +43,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_eco_direction
 		cost = 6
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		prerequisite = {
 			focus = FRA_orth_syndicalism
 			focus = FRA_Industrialisation
@@ -68,9 +64,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_amenagement
 		cost = 6
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		prerequisite = {
 			focus = FRA_amenagement
 		}
@@ -91,9 +85,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_plan_prost
 		cost = 4
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		prerequisite = {
 			focus = FRA_plan_prost
 		}
@@ -110,9 +102,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_plan_prost
 		cost = 6
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		prerequisite = {
 			focus = FRA_plan_prost
 		}
@@ -162,9 +152,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_chemins_de_fer
 		cost = 6
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		prerequisite = {
 			focus = FRA_chemins_de_fer
 		}
@@ -214,9 +202,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_plan_prost
 		cost = 6
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		prerequisite = {
 			focus = FRA_plan_prost
 		}
@@ -248,9 +234,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_eco_direction
 		cost = 7
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		available = {
 			has_country_flag = ECO_JACO
 		}
@@ -270,26 +254,14 @@ focus_tree = {
 					free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
 					is_metropolis_state = no
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
-					is_metropolis_state = no
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
+			add_one_random_civilian_factory = yes
 			add_ideas = FRA_industrialization_idea
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -302,9 +274,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_Industrialisation
 		cost = 7
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = FRA_Industrialisation
 		}
@@ -316,26 +286,14 @@ focus_tree = {
 					free_building_slots = { building = industrial_complex size > 1 include_locked = yes }
 					is_metropolis_state = no
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
-					is_metropolis_state = no
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
+			add_one_random_civilian_factory = yes
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = ROOT
@@ -358,9 +316,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_Industrialisation
 		cost = 6
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = FRA_fac_towns
 		}
@@ -379,28 +335,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_Industrialisation
 		cost = 6
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		prerequisite = {
 			focus = FRA_Industrialisation
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_inter_coop"
 			add_ideas = FRA_inter_coop_idea
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-					is_metropolis_state = no
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+			add_one_random_military_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -412,9 +354,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_eco_direction
 		cost = 7
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		available = {
 			has_country_flag = ECO_TRAV
 		}
@@ -465,9 +405,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_orth_syndicalism
 		cost = 8
-		ai_will_do = {
-			factor = 6
-		}
+		ai_will_do = { factor = 6 }
 		prerequisite = {
 			focus = FRA_orth_syndicalism
 		}
@@ -490,9 +428,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_orth_syndicalism
 		cost = 6
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = FRA_orth_syndicalism
 		}
@@ -544,9 +480,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_orth_syndicalism
 		cost = 8
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = FRA_orth_syndicalism
 		}
@@ -578,19 +512,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-					is_metropolis_state = no
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+			add_one_random_military_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -602,9 +524,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_eco_direction
 		cost = 6
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		available = {
 			has_country_flag = ECO_SORE
 		}
@@ -630,9 +550,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_war_eco_agri
 		cost = 8
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = FRA_war_eco_agri
 		}
@@ -688,9 +606,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_war_eco_agri
 		cost = 6
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = FRA_war_eco_agri
 		}
@@ -707,9 +623,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = FRA_war_eco_agri
 		cost = 7
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = FRA_modern_farms
 		}
@@ -759,9 +673,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_eco_direction
 		cost = 8
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		available = {
 			has_country_flag = ECO_ANAR
 		}
@@ -788,32 +700,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
-					is_metropolis_state = no
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-					is_metropolis_state = no
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -825,9 +713,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_cooperatives
 		cost = 8
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		prerequisite = {
 			focus = FRA_cooperatives
 		}
@@ -876,9 +762,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_cooperatives
 		cost = 6
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = FRA_cooperatives
 		}
@@ -896,40 +780,14 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_cooperatives
 		cost = 7
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		prerequisite = {
 			focus = FRA_decentralized_industry
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_ruralism"
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
-					is_metropolis_state = no
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
-					is_metropolis_state = no
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
 			add_ideas = FRA_ruralism_idea
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -941,9 +799,7 @@ focus_tree = {
 		x = 13
 		y = 0
 		cost = 6
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_socialist_education"
 			add_ideas = FRA_socialist_education_idea
@@ -961,9 +817,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_socialist_education
 		cost = 6
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		prerequisite = {
 			focus = FRA_socialist_education
 		}
@@ -981,9 +835,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_socialist_education
 		cost = 8
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 		prerequisite = {
 			focus = FRA_socialist_education
 		}
@@ -1001,9 +853,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_socialist_education
 		cost = 6
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = FRA_socialist_education
 		}
@@ -1023,13 +873,11 @@ focus_tree = {
 		y = 0
 		relative_position_id = FRA_socialist_education
 		cost = 7
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_road_to_war"
 			add_war_support = 0.10
-			add_timed_idea = { idea = FRA_to_war_idea days = 300 }
+			add_timed_idea = { idea = FRA_to_war_idea days = 230 }
 			add_named_threat = {
 				threat = 2
 				name = FRA_rearmament_threat
@@ -1045,9 +893,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_road_to_war
 		cost = 6
-		ai_will_do = {
-			factor = 70
-		}
+		ai_will_do = { factor = 70 }
 		prerequisite = {
 			focus = FRA_road_to_war
 		}
@@ -1102,9 +948,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_road_to_war
 
-		ai_will_do = {
-			factor = 1000
-		}
+		ai_will_do = { factor = 1000 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_Demand_Romandy"
@@ -1183,9 +1027,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_road_to_war
 		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		prerequisite = {
 			focus = FRA_military_buildup
 		}
@@ -1262,9 +1104,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = FRA_road_to_war
 		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		prerequisite = {
 			focus = FRA_German_borders
 		}
@@ -1354,9 +1194,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = FRA_socialist_education
 		cost = 8
-		ai_will_do = {
-			factor = 70
-		}
+		ai_will_do = { factor = 70 }
 		prerequisite = {
 			focus = FRA_Blanqui_Research_Institute
 		}
@@ -1375,32 +1213,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-					is_metropolis_state = no
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
-					is_metropolis_state = no
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1412,9 +1226,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_military_buildup_three
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_military_buildup_three
 		}
@@ -1448,9 +1260,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_military_buildup_three
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_military_buildup_three
 		}
@@ -1473,9 +1283,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = FRA_socialist_education
 		cost = 8
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		available = {
 			country_exists = ENG
 			ENG = { has_socialist_government = yes }
@@ -1573,6 +1381,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1000
+			modifier = {
+				factor = 0
+				date < 1939.6.1
+			}
 			modifier = {
 				factor = 0
 				NOT = { has_country_flag = fra_populace_demands_war }
@@ -1888,7 +1700,7 @@ focus_tree = {
 			}
 			4 = { is_controlled_by_ROOT_or_ally = yes } #Vienna
 			43 = { is_controlled_by_ROOT_or_ally = yes } #Budapest
-			2 = { is_controlled_by_ROOT_or_ally = yes } #Rome
+			2 = { is_controlled_by_ROOT_or_ally = yes } #Latium
 			41 = { is_controlled_by_ROOT_or_ally = yes } #Madrid
 		}
 
@@ -1901,9 +1713,7 @@ focus_tree = {
 		relative_position_id = FRA_War_with_germany
 		cost = 4
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_World_revolution"
@@ -1929,7 +1739,7 @@ focus_tree = {
 			has_country_flag = FRA2_FOR_ANAR
 			4 = { is_controlled_by_ROOT_or_ally = yes } #Vienna
 			43 = { is_controlled_by_ROOT_or_ally = yes } #Budapest
-			2 = { is_controlled_by_ROOT_or_ally = yes } #Rome
+			2 = { is_controlled_by_ROOT_or_ally = yes } #Latium
 			41 = { is_controlled_by_ROOT_or_ally = yes } #Madrid
 		}
 
@@ -1942,9 +1752,7 @@ focus_tree = {
 		relative_position_id = FRA_War_with_germany
 		cost = 4
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_european_revolution"
@@ -2002,9 +1810,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_road_to_war
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_military_buildup
 		}
@@ -2027,9 +1833,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = FRA_road_to_war
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_German_borders
 			focus = FRA_equipment_modern
@@ -2065,9 +1869,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = FRA_road_to_war
 		cost = 8
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_tank_division"
 			if = {
@@ -2092,6 +1894,76 @@ focus_tree = {
 						artillery = { x = 0 y = 2 }
 					}
 					priority = 2
+				}
+			}
+			#remove these variants if the empty chassis bug is ever fixed
+			if = {
+				limit = { has_dlc_nsb = yes }
+				if = {
+					limit = { has_tech = advanced_medium_tank_chassis }
+					create_equipment_variant = {
+						name = "Lorraine 42"
+						type = medium_tank_chassis_3
+						modules = {
+							main_armament_slot = tank_medium_cannon_2
+							turret_type_slot = tank_medium_three_man_tank_turret
+							suspension_type_slot = tank_torsion_bar_suspension
+							armor_type_slot = tank_welded_armor
+							engine_type_slot = tank_gasoline_engine
+							special_type_slot_1 = empty
+							special_type_slot_2 = empty
+							special_type_slot_3 = empty
+							special_type_slot_4 = empty
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 12
+							tank_nsb_armor_upgrade = 9
+						}
+					}
+				}
+				else_if = {
+					limit = { has_tech = improved_medium_tank_chassis }
+					create_equipment_variant = {
+						name = "S35"
+						type = medium_tank_chassis_2
+						modules = {
+							main_armament_slot = tank_medium_cannon
+							turret_type_slot = tank_medium_two_man_tank_turret
+							suspension_type_slot = tank_torsion_bar_suspension
+							armor_type_slot = tank_riveted_armor
+							engine_type_slot = tank_gasoline_engine
+							special_type_slot_1 = empty
+							special_type_slot_2 = empty
+							special_type_slot_3 = empty
+							special_type_slot_4 = empty
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 8
+							tank_nsb_armor_upgrade = 6
+						}
+					}
+				}
+				else_if = {
+					limit = { has_tech = basic_medium_tank_chassis }
+					create_equipment_variant = {
+						name = "AMC 35"
+						type = medium_tank_chassis_1
+						modules = {
+							main_armament_slot = tank_small_cannon_2
+							turret_type_slot = tank_medium_two_man_tank_turret
+							suspension_type_slot = tank_bogie_suspension
+							armor_type_slot = tank_riveted_armor
+							engine_type_slot = tank_gasoline_engine
+							special_type_slot_1 = empty
+							special_type_slot_2 = empty
+							special_type_slot_3 = empty
+							special_type_slot_4 = empty
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 4
+							tank_nsb_armor_upgrade = 3
+						}
+					}
 				}
 			}
 			custom_effect_tooltip = FRA_tank_division_tooltip
@@ -2122,12 +1994,11 @@ focus_tree = {
 		x = 35
 		y = 0
 		cost = 5
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_communal_army"
-			add_war_support = 0.08
+			add_war_support = 0.05
+			army_experience = 25
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -2139,9 +2010,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_communal_army
 		cost = 6
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		available = {
 			has_country_flag = ARMY_TRAV
 		}
@@ -2167,9 +2036,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_principe_concentration
 		cost = 8
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_principe_concentration
 		}
@@ -2198,9 +2065,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_principe_concentration
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_principe_concentration
 		}
@@ -2227,9 +2092,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = FRA_principe_concentration
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		mutually_exclusive = {
 			focus = FRA_tank_quality_line
 		}
@@ -2252,9 +2115,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = FRA_principe_concentration
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		mutually_exclusive = {
 			focus = FRA_tank_assembly_line
 		}
@@ -2277,9 +2138,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_communal_army
 		cost = 6
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		available = {
 			has_country_flag = ARMY_JACO
 		}
@@ -2305,9 +2164,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_communal_army
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_centralized_hc
 		}
@@ -2330,9 +2187,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = FRA_communal_army
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_centralized_hc
 		}
@@ -2350,9 +2205,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = FRA_communal_army
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_analysing_wki
 		}
@@ -2373,9 +2226,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_communal_army
 		cost = 6
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		available = {
 			has_country_flag = ARMY_SORE
 		}
@@ -2401,9 +2252,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_officers_initiative
 		cost = 6
-		ai_will_do = {
-			factor = 5
-		}
+		ai_will_do = { factor = 5 }
 		prerequisite = {
 			focus = FRA_officers_initiative
 		}
@@ -2421,9 +2270,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_officers_initiative
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_officers_initiative
 		}
@@ -2446,9 +2293,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_officers_initiative
 		cost = 7
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_officers_initiative
 		}
@@ -2477,9 +2322,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_communal_army
 		cost = 6
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		available = {
 			has_country_flag = ARMY_ANAR
 		}
@@ -2512,9 +2355,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_mass_conscription
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_mass_conscription
 		}
@@ -2537,9 +2378,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = FRA_mass_conscription
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_global_organization
 		}
@@ -2559,9 +2398,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = FRA_mass_conscription
 		cost = 6
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_global_organization
 		}
@@ -2585,9 +2422,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = FRA_communal_army
 		cost = 10
-		ai_will_do = {
-			factor = 3
-		}
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = FRA_tank_assembly_line
 			focus = FRA_tank_quality_line
@@ -2598,7 +2433,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_grand_army_reform"
-			army_experience = 50
+			army_experience = 75
 			add_ideas = FRA_Red_Army
 			add_doctrine_cost_reduction = {
 				name = FRA_grand_army_reform
@@ -2642,9 +2477,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_Host_the_Internationale
 		cost = 4
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_mission_bhartiya"
 			HND = {
@@ -2663,9 +2496,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_Host_the_Internationale
 		cost = 5
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_arab_committee"
 			add_political_power = 60
@@ -2699,9 +2530,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = FRA_Host_the_Internationale
 		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_working_women"
 			add_ideas = FRA_working_women_idea
@@ -2719,9 +2548,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = FRA_Host_the_Internationale
 		cost = 5
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_avantgarde"
 			add_ideas = FRA_avantgarde_idea
@@ -2746,7 +2573,11 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
+			modifier = {		# Get that sweet XP to upgrade planes
+				factor = 100
+				has_tech = basic_small_airframe
+			}
 		}
 
 		completion_reward = {
@@ -2767,9 +2598,7 @@ focus_tree = {
 		}
 		cost = 5
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_amateur_pilots"
@@ -2793,9 +2622,7 @@ focus_tree = {
 		}
 		cost = 6
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_ecole_air"
@@ -2814,9 +2641,7 @@ focus_tree = {
 		}
 		cost = 5
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_air_bases"
@@ -2879,9 +2704,7 @@ focus_tree = {
 		}
 		cost = 6
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_valin_doctrine"
@@ -2909,9 +2732,7 @@ focus_tree = {
 		}
 		cost = 6
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_fighters"
@@ -2940,9 +2761,7 @@ focus_tree = {
 		}
 		cost = 6
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_bombers"
@@ -2968,9 +2787,7 @@ focus_tree = {
 		}
 		cost = 6
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_strat_bombers"
@@ -2995,9 +2812,7 @@ focus_tree = {
 		}
 		cost = 6
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_paratrooper_focus"
@@ -3026,9 +2841,7 @@ focus_tree = {
 		}
 		cost = 6
 
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_rocket_development"
@@ -3133,11 +2946,11 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					14 = {
+					983 = {
 						is_controlled_by = ROOT
 					}
 				}
-				14 = {
+				983 = {
 					add_building_construction = {
 						type = naval_base
 						level = 2
@@ -3681,35 +3494,23 @@ focus_tree = {
 			21 = {
 				add_building_construction = {
 					type = coastal_bunker
-					province = 911
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
 					level = 2
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = 11834
-					level = 2
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = 11849
-					level = 2
+					instant_build = yes
 				}
 			}
 			22 = {
 				add_building_construction = {
 					type = coastal_bunker
-					province = 9898
-					level = 3
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = 6960
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
 					level = 2
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = 11877
-					level = 2
+					instant_build = yes
 				}
 			}
 			15 = {
@@ -3756,9 +3557,7 @@ focus_tree = {
 		relative_position_id = FRA_Host_the_Internationale
 		cost = 8
 
-		ai_will_do = {
-			factor = 100
-		}
+		ai_will_do = { factor = 100 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_Phalanstere_internationale"

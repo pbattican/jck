@@ -306,10 +306,12 @@ diff_very_hard_player = {
 }
 
 diff_very_easy_ai = {
+	peace_score_ratio_transferred_to_players = 0.25
 }
 
 diff_easy_ai = {
 	no_supply_grace = 24
+	peace_score_ratio_transferred_to_players = 0.1
 }
 
 diff_normal_ai = {
@@ -440,7 +442,7 @@ country_is_at_peace = {
 }
 
 country_is_at_war = {
-
+	war_support_factor = -0.2
 }
 
 # targeted modifiers that will apply when you have fully decrypted a country's cipher

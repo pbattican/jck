@@ -5,6 +5,8 @@ state = {
 	state_category = one
 
 	history = {
+		owner = WIF
+		add_core_of = WIF
 		add_to_array = { state_victory_points = 2077 }
 
 		victory_points = { 2077 1 }
@@ -15,10 +17,6 @@ state = {
 				naval_base = 1
 			}
 		}
-		owner = WIF
-		add_core_of = WIF
-		add_claim_by = GUA
-
 	}
 
 	provinces = {

@@ -1,84 +1,84 @@
 FRA_victory_decisions = {
-	FRA_third_int_victory = {
-		icon = generic_research
-		allowed = {
-			original_tag = FRA
-		}
-		available = {
-			AND = {
-				GER = {
-					OR = {
-						has_capitulated = yes
-						exists = no
-					}
-				}
-				AUS = {
-					OR = {
-						has_capitulated = yes
-						exists = no
-					}
-				}
-				NFA = {
-					OR = {
-						has_capitulated = yes
-						exists = no
-					}				
-				}
-				# Uses KR Scripted trigger in _useful_scripted_triggers.txt
-				64 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				43 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				272 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-			}
-		} 
-		fire_only_once = no
+	# FRA_third_int_victory = {
+	# 	icon = generic_research
+	# 	allowed = {
+	# 		original_tag = FRA
+	# 	}
+	# 	available = {
+	# 		AND = {
+	# 			GER = {
+	# 				OR = {
+	# 					has_capitulated = yes
+	# 					exists = no
+	# 				}
+	# 			}
+	# 			AUS = {
+	# 				OR = {
+	# 					has_capitulated = yes
+	# 					exists = no
+	# 				}
+	# 			}
+	# 			NFA = {
+	# 				OR = {
+	# 					has_capitulated = yes
+	# 					exists = no
+	# 				}				
+	# 			}
+	# 			# Uses KR Scripted trigger in _useful_scripted_triggers.txt
+	# 			64 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			43 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			272 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 		}
+	# 	} 
+	# 	fire_only_once = no
 
-		cancel_trigger = {
-			hidden_trigger = {
-				OR = {
-					64 = {
-						is_controlled_by_ROOT_or_ally = no
-					}
-					43 = {
-						is_controlled_by_ROOT_or_ally = no
-					}
-					272 = {
-						is_controlled_by_ROOT_or_ally = no
-					}
-					GER = {
-						OR = {
-							has_capitulated = no
-							exists = yes
-						}
-					}
-					AUS = {
-						OR = {
-							has_capitulated = no
-							exists = yes
-						}
-					}
-					NFA = {
-						OR = {
-							has_capitulated = no
-							exists = yes
-						}
-					}
-				}
-			}
-		}
+	# 	cancel_trigger = {
+	# 		hidden_trigger = {
+	# 			OR = {
+	# 				64 = {
+	# 					is_controlled_by_ROOT_or_ally = no
+	# 				}
+	# 				43 = {
+	# 					is_controlled_by_ROOT_or_ally = no
+	# 				}
+	# 				272 = {
+	# 					is_controlled_by_ROOT_or_ally = no
+	# 				}
+	# 				GER = {
+	# 					OR = {
+	# 						has_capitulated = no
+	# 						exists = yes
+	# 					}
+	# 				}
+	# 				AUS = {
+	# 					OR = {
+	# 						has_capitulated = no
+	# 						exists = yes
+	# 					}
+	# 				}
+	# 				NFA = {
+	# 					OR = {
+	# 						has_capitulated = no
+	# 						exists = yes
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
 
-		days_remove = 30
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision FRA_third_int_victory"
-			news_event = {
-				id = jck.victory.0
-				days = 1
-			}
-		}
-	}
+	# 	days_remove = 30
+	# 	remove_effect = {
+	# 		log = "[GetDateText]: [Root.GetName]: Decision FRA_third_int_victory"
+	# 		news_event = {
+	# 			id = jck.victory.0
+	# 			days = 1
+	# 		}
+	# 	}
+	# }
 }

@@ -1,8 +1,8 @@
---- Force update 3/9/2022
+--- Force update 7/6/23
 
 ------------------------------------------ Game ------------------------------------------
-NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 --12
-NDefines.NGame.GAME_SPEED_SECONDS = { 2, 0.5, 0.2, 0.15, 0.1 }
+-- NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 --12
+NDefines.NGame.GAME_SPEED_SECONDS = { 2, 0.5, 0.18, 0.135, 0.07 }
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 72
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 72
 
@@ -16,8 +16,8 @@ NDefines_Graphics.NGraphics.WEATHER_DISTANCE_CUTOFF = 1000 -- At what distance w
 
 ------------------------------------------ Diplomacy ------------------------------------------
 -- Should prevent peace events appearing for all players if there aren't winners and losers on both sides. 
-NDefines.NDiplomacy.MP_NUM_WINNERS_FOR_PEACE_PAUSE = 4
-NDefines.NDiplomacy.MP_NUM_LOSERS_FOR_PEACE_PAUSE = 0
+-- NDefines.NDiplomacy.MP_NUM_WINNERS_FOR_PEACE_PAUSE = 4
+-- NDefines.NDiplomacy.MP_NUM_LOSERS_FOR_PEACE_PAUSE = 0
 
 ------------------------------------------ Country ---------------------------------------------
 -- Setting these scores to 0 might do something to affect the silly desyncs due to air score / other scores?
@@ -42,13 +42,18 @@ NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 72	-- vanilla = 24
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 1   -- vanilla = 3
 
 -- Boost Max XP so it is not lost to the ether
-NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 1000
-NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 1000
-NDefines.NMilitary.MAX_AIR_EXPERIENCE = 1000
+NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999
+NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999
+NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999
 -- Reduce Div XP cost for NSB
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 -- vanilla = 20
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0 -- vanilla = 5
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0 -- vanilla = 10
+-- XP Cost for equipment changes
+NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0			--vanilla=2	
+NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0		--vanilla=3	
+NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0		--vanilla=1
+NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0		--vanilla=1
 
 NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false -- allows leaders to grind without malus if they gain traits
 NDefines.NMilitary.LEADER_EXPERIENCE_SCALE = 0.9 -- Reduce leader XP gain since we allow people to grind anything vanilla = 1.0
@@ -71,7 +76,7 @@ NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane t
 0.0, -- NAVAL_KAMIKAZE
 0.0, -- PORT_STRIKE
 300, -- ATTACK_LOGISTICS vanilla=0.0
-300, -- AIR_SUPPLY
+0.05, -- AIR_SUPPLY
 0.0, -- TRAINING
 0.0, -- NAVAL_MINES_PLANTING
 0.0, -- NAVAL_MINES_SWEEPING
@@ -120,15 +125,15 @@ NDefines.NNavy.AGGRESSION_SETTINGS_VALUES = { -- ships will use this values whil
 NDefines.NNavy.NAVAL_MINES_DECAY_AT_PEACE_TIME = 2		-- How fast mines are decaying in peace time. Planting mines in peace time may be exploitable, so it's blocked atm. That's why after war we should decay them too.
 NDefines.NNavy.BASE_SPOTTING_FROM_RADAR = 10	            -- base spotting percentage that comes from full radar coverage
 -- Modifiers the priority for convoy usage
-NDefines.NNavy.SUPPLY_PRIORITY = 1              -- vanilla = 2; Default convoy priority for supplying units via sea
-NDefines.NNavy.RESOURCE_ORIGIN_PRIORITY = 2     -- vanilla = 5; Default convoy priority for resources shipped internally
-NDefines.NNavy.RESOURCE_EXPORT_PRIORITY = 3     -- vanilla = 4; Default convoy priority for export trade
-NDefines.NNavy.NAVAL_INVASION_PRIORITY = 4      -- vanilla = 1; Default convoy priority for naval invasions
-NDefines.NNavy.NAVAL_TRANSFER_PRIORITY = 4      -- vanilla = 1; Default convoy priority for naval transports
-NDefines.NNavy.RESOURCE_LENDLEASE_PRIORITY = 5  -- vanilla = 3; Default convoy priority for export lend lease
+-- NDefines.NNavy.SUPPLY_PRIORITY = 1              -- vanilla = 2; Default convoy priority for supplying units via sea
+-- NDefines.NNavy.RESOURCE_ORIGIN_PRIORITY = 2     -- vanilla = 5; Default convoy priority for resources shipped internally
+-- NDefines.NNavy.RESOURCE_EXPORT_PRIORITY = 3     -- vanilla = 4; Default convoy priority for export trade
+-- NDefines.NNavy.NAVAL_INVASION_PRIORITY = 4      -- vanilla = 1; Default convoy priority for naval invasions
+-- NDefines.NNavy.NAVAL_TRANSFER_PRIORITY = 4      -- vanilla = 1; Default convoy priority for naval transports
+-- NDefines.NNavy.RESOURCE_LENDLEASE_PRIORITY = 5  -- vanilla = 3; Default convoy priority for export lend lease
 
 ------------------------------------------ Country ------------------------------------------
-NDefines.NCountry.MAX_HEROES_BEING_KILLED_WAR_SUPPORT_IMPACT = -0.4
+-- NDefines.NCountry.MAX_HEROES_BEING_KILLED_WAR_SUPPORT_IMPACT = -0.4
 NDefines.NCountry.INTERPOLATED_FRONT_STEPS_SHORT = 1    -- supposedly a performance optimization - The amount of steps for interpolated fronts. Non-AI countries got full interpolated fronts, the rest has optimized version of it.
 NDefines.NCountry.EVENT_PROCESS_OFFSET = 40 -- supposedly a performance optimization - vanilla = 20
 NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.00007	    -- vanilla = 0.0005

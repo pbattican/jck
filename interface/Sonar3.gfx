@@ -8,5 +8,16 @@ spriteTypes = {
 		name = "GFX_SMI_ship_sonar_3"
 		textureFile = "gfx/interface/equipmentdesigner/naval/modules/icons/sonar_icn_3.png"
 	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_light_fixed_turret_type"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/tank_module_light_fixed_superstructure.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_medium_fixed_turret_type"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/tank_module_medium_fixed_superstructure.dds"
+		legacy_lazy_load = no
+	}
 }
-	

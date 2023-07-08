@@ -1,87 +1,87 @@
 GER_victory_decisions = {
-	GER_reichspakt_victory = {
-		icon = generic_research
-		allowed = {
-			original_tag = GER
-		}
-		available = {
-			AND = {
-				# Uses KR Scripted trigger in _useful_scripted_triggers.txt
-				2 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				16 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				195 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				217 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				219 = {
-					is_controlled_by_ROOT_or_ally = yes
-				}
+	# GER_reichspakt_victory = {
+	# 	icon = generic_research
+	# 	allowed = {
+	# 		original_tag = GER
+	# 	}
+	# 	available = {
+	# 		AND = {
+	# 			# Uses KR Scripted trigger in _useful_scripted_triggers.txt
+	# 			2 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			16 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			195 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			217 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
+	# 			219 = {
+	# 				is_controlled_by_ROOT_or_ally = yes
+	# 			}
 
-				FRA = {
-					OR = {
-						has_capitulated = yes
-						exists = no
-					}
-				}
-				SRI = {
-					OR = {
-						has_capitulated = yes
-						exists = no
-					}
-				}
-			}
-		}
+	# 			FRA = {
+	# 				OR = {
+	# 					has_capitulated = yes
+	# 					exists = no
+	# 				}
+	# 			}
+	# 			SRI = {
+	# 				OR = {
+	# 					has_capitulated = yes
+	# 					exists = no
+	# 				}
+	# 			}
+	# 		}
+	# 	}
 
-		cancel_trigger = {
-			hidden_trigger = {
-				OR = {
-					2 = {
-						is_controlled_by_ROOT_or_ally = no
-					}
-					16 = {
-						is_controlled_by_ROOT_or_ally = no
-					}
-					195 = {
-						is_controlled_by_ROOT_or_ally = no
-					}
-					217 = {
-						is_controlled_by_ROOT_or_ally = no
-					}
-					219 = {
-						is_controlled_by_ROOT_or_ally = no
-					}
-					FRA = {
-						OR = {
-							has_capitulated = no
-							exists = yes
-						}
-					}
-					SRI = {
-						OR = {
-							has_capitulated = no
-							exists = yes
-						}
-					}
-				}
-			}
-		}
+	# 	cancel_trigger = {
+	# 		hidden_trigger = {
+	# 			OR = {
+	# 				2 = {
+	# 					is_controlled_by_ROOT_or_ally = no
+	# 				}
+	# 				16 = {
+	# 					is_controlled_by_ROOT_or_ally = no
+	# 				}
+	# 				195 = {
+	# 					is_controlled_by_ROOT_or_ally = no
+	# 				}
+	# 				217 = {
+	# 					is_controlled_by_ROOT_or_ally = no
+	# 				}
+	# 				219 = {
+	# 					is_controlled_by_ROOT_or_ally = no
+	# 				}
+	# 				FRA = {
+	# 					OR = {
+	# 						has_capitulated = no
+	# 						exists = yes
+	# 					}
+	# 				}
+	# 				SRI = {
+	# 					OR = {
+	# 						has_capitulated = no
+	# 						exists = yes
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
 
-		fire_only_once = no
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision GER_reichspakt_victory"
-		}
-		days_remove = 30
-		remove_effect = {
-			news_event = {
-				id = jck.victory.0
-				days = 1
-			}
-		}
-	}
+	# 	fire_only_once = no
+	# 	complete_effect = {
+	# 		log = "[GetDateText]: [Root.GetName]: Decision GER_reichspakt_victory"
+	# 	}
+	# 	days_remove = 30
+	# 	remove_effect = {
+	# 		news_event = {
+	# 			id = jck.victory.0
+	# 			days = 1
+	# 		}
+	# 	}
+	# }
 }
