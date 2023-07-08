@@ -27,10 +27,10 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 * Nations outside of Europe are banned in this format.
 * USA will have a 4-way civil war enabled in the game settings for volunteer purposes and Canada will support USA
 * Russia should be given a co-op if possible. 
-* Russia is only allowed to send volunteers according to 3I rules ( syndicalists, rad soc, totalist ideologies)
+* Russia is allowed to send volunteers according to 3I rules ( syndicalists, rad soc, totalist ideologies) in addition to regular rules
 * 3I + Russia will send to CSA until CSA capitulates, then may send to the PSA.
 * RP will send to AUS until AUS capitulates and then may send to USA.
-* Player Nat France cannot use their decision to eat Sardinia
+* Player Nat France cannot eat Sardinia
 
 ## Required Nations
 
@@ -183,8 +183,6 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 
 ## General game Rules
 
-
-
 * Puppets and allies must be called into player wars immediately. Players have to accept when called into a player war
 * Faction members may join AI/rebellion wars at their discretion. (eg. IRA uprising against **Union of Britain**, Revolts in **National France** etc)
 * A player must take tiles where Volunteers arrive (usually ports, such as Philadelphia / New York for CSA)
@@ -233,8 +231,7 @@ Player wars may not be declared until the start of â€œ**The Second Weltkrieg**â€
 
 * **_Volunteer width is 24W. American Civil War has no limit._**
 * Motorized/motorized variants, Mechanized, tanks/tank variants and armored recon are not allowed in volunteer divisions until **the Second Weltkrieg**.**_ ACW only: Ignore previous, light tank battalions are the only tanks allowed._** _Light Armored Recon (Armored Cars) and motorized recon are allowed._
-* Sending volunteers to **Qing is BANNED**.
-* Volunteers to **Afghanistan** are not allowed. 
+* Sending volunteers to **Qing, Afghanistan is BANNED**.
 * You may not recall volunteers if your volunteers are within 3 tiles from enemy forces.
 * No naval invading with volunteers.
 
@@ -292,7 +289,7 @@ Neutral nations may not join a faction. Player neutrals may not receive or send 
 
 ### <span style="text-decoration:underline;">Austria Rules</span>							
 
-* **Austria** will be put into the Reichspakt at the start of **the Second Weltkrieg**, along with its faction members
+* **Austria** will join the Reichspakt at the start of **the Second Weltkrieg**, along with its faction members
 
 ### <span style="text-decoration:underline;">Mittelafrika Rules</span>								
 
