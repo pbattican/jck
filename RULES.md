@@ -27,7 +27,6 @@ _Rules listed below supercede and are in addition to the rest of the rules_**
 * Nations outside of Europe are banned in this format.
 * USA will have a 4-way civil war enabled in the game settings for volunteer purposes and Canada will support USA
 * Russia should be given a co-op if possible. 
-* Russia is allowed to go Socialist.
 * Russia is only allowed to send volunteers according to 3I rules ( syndicalists, rad soc, totalist ideologies)
 * 3I + Russia will send to CSA until CSA capitulates, then may send to the PSA.
 * RP will send to AUS until AUS capitulates and then may send to USA.
@@ -268,7 +267,7 @@ Player wars may not be declared until the start of â€œ**The Second Weltkrieg**â€
 * **Italian Republic, Two Sicilies, Papal States**
 * **Paraguay, Bolivia, Venezuela, Panama**
 * **Burma, Nepal, Yunnan**
-* **Don Kuban Union, Azerbaijan, Turkestan, Alash Autonomy**
+* **Azerbaijan, Turkestan, Alash Autonomy**
 * **Bharatiya Commune, Princely Federation, Madras**
 * **Bohemia, Illyria, Hungary, Galicia and Lodomeria**
 * **Hawaii, CSA, AUS, PSA, USA**
@@ -286,8 +285,6 @@ Neutral nations may not join a faction. Player neutrals may not receive or send 
 
 ### <span style="text-decoration:underline;">Germany Rules</span>
 
-* **Germany** may not declare war on **Russia** over the **Don Kuban Union** via **Russia's** focus and events regarding the **Don Kuban Union**
-* **Germany** is **not allowed** to block Russian intervention in **Don-Kuban Union**
 * **Germany** may not guarantee **Burma**
 * **Germany** may not annex any **Dutch-East Indies [DEI]** land in a war with the **Netherlands** - Germany may not call **German East Asia** into said war so AI will not take land. 
 * **Germany** may not release **Netherlands** after their revolution via inviting Wilhelmina back to the throne
@@ -368,8 +365,6 @@ Neutral nations may not join a faction. Player neutrals may not receive or send 
 * Moscow Accord countries may send to ***Left-Wing*** or Co-prosperity sphere countries
 
 ### <span style="text-decoration:underline;">Russia Rules</span>
-
-* **Russia** is not allowed to Influence **White Ruthenia** in any way
 
 ## Unaligned Nations
 
