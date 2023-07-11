@@ -5,6 +5,7 @@ BRA_foreign_policy = {
 			original_tag = BRA
 		}
 		available = {
+			is_ai = no
 			AND = {
 				has_socialist_government = no
 				has_left_democratic_government = no

@@ -932,11 +932,6 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event pact.41 option pact.41.a"
 		name = pact.41.a #Agree
-
-		trigger = {
-			always = no
-		}
-
 		add_political_power = -50
 		if = {
 			limit = { owns_state = 184 }
@@ -1102,6 +1097,7 @@ country_event = {
 		trigger = {
 			always = no
 		}
+		log = "[GetLogInfo]: event pact.43 option pact.43.b"
 		name = pact.43.b #Refuse
 		ai_chance = { base = 0 }
 		add_war_support = -0.10

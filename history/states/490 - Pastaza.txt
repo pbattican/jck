@@ -5,14 +5,15 @@ state = {
 	state_category = one
 
 	history = {
-		add_to_array = { state_victory_points = 8149 }
+		# owner = ECU
+		# add_core_of = ECU
+		# add_core_of = PRU
 
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
 			air_base = 1
 		}
-		victory_points = { 8149 1 }
 	}
 
 	provinces = {

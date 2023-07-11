@@ -1,49 +1,49 @@
 AUS_foreign_policy = {
-	AUS_join_Reichspakt = {
-		icon = generic_political_discourse
-		allowed = {
-			original_tag = AUS
-		}
-		available = {
-			OR = {
-				GER = {
-					has_war_with = FRA
-				}
-				date > 1939.6.1
-			}
-		}
-		visible = {
-			country_exists = GER
-			GER = {
-				is_faction_leader = yes
-			}
-			GER = {
-				is_faction_leader = yes
-				NOT = {
-					is_in_faction_with = ROOT
-					has_war_with = ROOT
-				}
-			}
-		}
-		fire_only_once = yes
-		cost = 0
-		#days_remove = 30
-		ai_will_do = {
-			factor = 100
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision AUS_join_Reichspakt"
-			set_country_flag = AUS_intervened_in_weltkrieg
-			every_country = {
-				limit = {
-					is_in_faction_with = AUS
-				}
-				GER = {
-					add_to_faction = PREV
-				}
-			}
-		}
-	}
+	# AUS_join_Reichspakt = {
+	# 	icon = generic_political_discourse
+	# 	allowed = {
+	# 		original_tag = AUS
+	# 	}
+	# 	available = {
+	# 		OR = {
+	# 			GER = {
+	# 				has_war_with = FRA
+	# 			}
+	# 			date > 1939.6.1
+	# 		}
+	# 	}
+	# 	visible = {
+	# 		country_exists = GER
+	# 		GER = {
+	# 			is_faction_leader = yes
+	# 		}
+	# 		GER = {
+	# 			is_faction_leader = yes
+	# 			NOT = {
+	# 				is_in_faction_with = ROOT
+	# 				has_war_with = ROOT
+	# 			}
+	# 		}
+	# 	}
+	# 	fire_only_once = yes
+	# 	cost = 0
+	# 	#days_remove = 30
+	# 	ai_will_do = {
+	# 		factor = 100
+	# 	}
+	# 	complete_effect = {
+	# 		log = "[GetDateText]: [Root.GetName]: Decision AUS_join_Reichspakt"
+	# 		set_country_flag = AUS_intervened_in_weltkrieg
+	# 		every_country = {
+	# 			limit = {
+	# 				is_in_faction_with = AUS
+	# 			}
+	# 			GER = {
+	# 				add_to_faction = PREV
+	# 			}
+	# 		}
+	# 	}
+	# }
 	AUS_join_RP_tech = {
 		icon = generic_research
 		allowed = {

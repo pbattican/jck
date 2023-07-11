@@ -5,6 +5,8 @@ state = {
 	state_category = one
 
 	history = {
+		# owner = COL
+		# add_core_of = COL
 		add_to_array = { state_victory_points = 1887 }
 
 		buildings = {

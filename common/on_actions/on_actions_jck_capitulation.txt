@@ -1,76 +1,76 @@
-on_actions = {
-	on_capitulation = {
-		## China
-		effect = {
-			if = {
-				limit = {
-					FROM = {
-						is_chinese_tag = yes
-					}
-				}
-				every_owned_state = {
-					save_current_factory_count = yes
-					transfer_state_to = FROM
-					restore_previous_factory_count = yes
-				}
-			}
-		}
-	}
-	on_capitulation = {
-		## Balkan Boys
-		effect = {
-			if = {
-				limit = {
-					OR = {
-						original_tag = ROM
-						original_tag = GRE
-						original_tag = SER
-						original_tag = ALB
-					}
-				}
-				every_owned_state = {
-					save_current_factory_count = yes
-					transfer_state_to = FROM
-					restore_previous_factory_count = yes
-				}
-			}
-		}
-		## Austrian Hegemony
-		effect = {
-			if = {
-				limit = {
-					OR = {
-						tag = HUN
-						tag = CRO
-						tag = GAL
-						tag = CZE
-					}
-				}
-				every_owned_state = {
-					save_current_factory_count = yes
-					transfer_state_to = FROM
-					restore_previous_factory_count = yes
-				}
-			}
-		}
-		## Central Asia
-		effect = {
-			if = {
-				limit = {
-					OR = {
-						original_tag = ALO
-						original_tag = TRK
-						original_tag = BUK
-						original_tag = KHI
+# on_actions = {
+# 	# on_capitulation = {
+# 	# 	## China
+# 	# 	effect = {
+# 	# 		if = {
+# 	# 			limit = {
+# 	# 				FROM = {
+# 	# 					is_chinese_tag = yes
+# 	# 				}
+# 	# 			}
+# 	# 			every_owned_state = {
+# 	# 				save_current_factory_count = yes
+# 	# 				transfer_state_to = FROM
+# 	# 				restore_previous_factory_count = yes
+# 	# 			}
+# 	# 		}
+# 	# 	}
+# 	# }
+# 	# on_capitulation = {
+# 	# 	# ## Balkan Boys
+# 	# 	# effect = {
+# 	# 	# 	if = {
+# 	# 	# 		limit = {
+# 	# 	# 			OR = {
+# 	# 	# 				original_tag = ROM
+# 	# 	# 				original_tag = GRE
+# 	# 	# 				original_tag = SER
+# 	# 	# 				original_tag = ALB
+# 	# 	# 			}
+# 	# 	# 		}
+# 	# 	# 		every_owned_state = {
+# 	# 	# 			save_current_factory_count = yes
+# 	# 	# 			transfer_state_to = FROM
+# 	# 	# 			restore_previous_factory_count = yes
+# 	# 	# 		}
+# 	# 	# 	}
+# 	# 	# }
+# 	# 	# ## Austrian Hegemony
+# 	# 	# effect = {
+# 	# 	# 	if = {
+# 	# 	# 		limit = {
+# 	# 	# 			OR = {
+# 	# 	# 				tag = HUN
+# 	# 	# 				tag = CRO
+# 	# 	# 				tag = GAL
+# 	# 	# 				tag = CZE
+# 	# 	# 			}
+# 	# 	# 		}
+# 	# 	# 		every_owned_state = {
+# 	# 	# 			save_current_factory_count = yes
+# 	# 	# 			transfer_state_to = FROM
+# 	# 	# 			restore_previous_factory_count = yes
+# 	# 	# 		}
+# 	# 	# 	}
+# 	# 	# }
+# 	# 	# ## Central Asia
+# 	# 	# effect = {
+# 	# 	# 	if = {
+# 	# 	# 		limit = {
+# 	# 	# 			OR = {
+# 	# 	# 				original_tag = ALO
+# 	# 	# 				original_tag = TRK
+# 	# 	# 				original_tag = BUK
+# 	# 	# 				original_tag = KHI
 
-					}
-				}
-				every_owned_state = {
-					save_current_factory_count = yes
-					transfer_state_to = FROM
-					restore_previous_factory_count = yes
-				}
-			}
-		}
-	}
-}
+# 	# 	# 			}
+# 	# 	# 		}
+# 	# 	# 		every_owned_state = {
+# 	# 	# 			save_current_factory_count = yes
+# 	# 	# 			transfer_state_to = FROM
+# 	# 	# 			restore_previous_factory_count = yes
+# 	# 	# 		}
+# 	# 	# 	}
+# 	# 	# }
+# 	# }
+# }

@@ -46,7 +46,6 @@ country_event = {
 			obsolete = yes
 		}
 		create_ship = {
-			set_ship_pride_of_fleet = yes # maybe one day this will work
 			equipment_variant = "Le War Support Defense Boat"
 			name = "You Forgot This"
 			type = ship_hull_cruiser_1

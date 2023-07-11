@@ -3,8 +3,8 @@
 ------------------------------------------ Game ------------------------------------------
 -- NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 12 --12
 NDefines.NGame.GAME_SPEED_SECONDS = { 2, 0.5, 0.18, 0.135, 0.07 }
-NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 72
-NDefines.NGame.LAG_DAYS_FOR_PAUSE = 72
+-- NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 72
+-- NDefines.NGame.LAG_DAYS_FOR_PAUSE = 72
 
 ------------------------------------------ Graphics ------------------------------------------ 
 NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 800						-- 1100 
@@ -21,12 +21,12 @@ NDefines_Graphics.NGraphics.WEATHER_DISTANCE_CUTOFF = 1000 -- At what distance w
 
 ------------------------------------------ Country ---------------------------------------------
 -- Setting these scores to 0 might do something to affect the silly desyncs due to air score / other scores?
-NDefines.NCountry.COUNTRY_SCORE_MULTIPLIER = 0 --vanilla = 1.0
-NDefines.NCountry.ARMY_SCORE_MULTIPLIER = 0 --vanilla = 0.15
-NDefines.NCountry.AIR_SCORE_MULTIPLIER = 0 --vanilla = 0.1
-NDefines.NCountry.NAVY_SCORE_MULTIPLIER = 0 --vanilla = 0.1
-NDefines.NCountry.INDUSTRY_SCORE_MULTIPLIER = 0 --vanilla = 1.0
-NDefines.NCountry.PROVINCE_SCORE_MULTIPLIER = 0 --vanilla = 0.1
+-- NDefines.NCountry.COUNTRY_SCORE_MULTIPLIER = 0 --vanilla = 1.0
+-- NDefines.NCountry.ARMY_SCORE_MULTIPLIER = 0 --vanilla = 0.15
+-- NDefines.NCountry.AIR_SCORE_MULTIPLIER = 0 --vanilla = 0.1
+-- NDefines.NCountry.NAVY_SCORE_MULTIPLIER = 0 --vanilla = 0.1
+-- NDefines.NCountry.INDUSTRY_SCORE_MULTIPLIER = 0 --vanilla = 1.0
+-- NDefines.NCountry.PROVINCE_SCORE_MULTIPLIER = 0 --vanilla = 0.1
 
 ------------------------------------------ Production ------------------------------------------
 NDefines.NProduction.EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.005 	--vanilla = 0.01
@@ -35,7 +35,7 @@ NDefines.NProduction.LICENSE_EQUIPMENT_SPEED_NOT_FACTION = 0	--vanilla=-0.1
 NDefines.NProduction.LICENSE_EQUIPMENT_UPGRADE_XP_FACTOR = 1	--vanilla=2
 
 ------------------------------------------ Military ------------------------------------------
-NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 2.4 -- More XP gain per day of combat. Base is 1.2
+-- NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 2.4 -- More XP gain per day of combat. Base is 1.2
 NDefines.NMilitary.LEND_LEASE_FIELD_EXPERIENCE_SCALE = 0.001 -- Encourage more Lend-Lease for XP gain. Base is 0.0005
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 72		-- vanilla = 24
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 72	-- vanilla = 24
@@ -122,7 +122,7 @@ NDefines.NNavy.AGGRESSION_SETTINGS_VALUES = { -- ships will use this values whil
 		2.0,	-- high
 		10000,	-- I am death incarnate!
 	}
-NDefines.NNavy.NAVAL_MINES_DECAY_AT_PEACE_TIME = 2		-- How fast mines are decaying in peace time. Planting mines in peace time may be exploitable, so it's blocked atm. That's why after war we should decay them too.
+-- NDefines.NNavy.NAVAL_MINES_DECAY_AT_PEACE_TIME = 2		-- How fast mines are decaying in peace time. Planting mines in peace time may be exploitable, so it's blocked atm. That's why after war we should decay them too.
 NDefines.NNavy.BASE_SPOTTING_FROM_RADAR = 10	            -- base spotting percentage that comes from full radar coverage
 -- Modifiers the priority for convoy usage
 -- NDefines.NNavy.SUPPLY_PRIORITY = 1              -- vanilla = 2; Default convoy priority for supplying units via sea
@@ -134,8 +134,8 @@ NDefines.NNavy.BASE_SPOTTING_FROM_RADAR = 10	            -- base spotting percen
 
 ------------------------------------------ Country ------------------------------------------
 -- NDefines.NCountry.MAX_HEROES_BEING_KILLED_WAR_SUPPORT_IMPACT = -0.4
-NDefines.NCountry.INTERPOLATED_FRONT_STEPS_SHORT = 1    -- supposedly a performance optimization - The amount of steps for interpolated fronts. Non-AI countries got full interpolated fronts, the rest has optimized version of it.
-NDefines.NCountry.EVENT_PROCESS_OFFSET = 40 -- supposedly a performance optimization - vanilla = 20
+-- NDefines.NCountry.INTERPOLATED_FRONT_STEPS_SHORT = 1    -- supposedly a performance optimization - The amount of steps for interpolated fronts. Non-AI countries got full interpolated fronts, the rest has optimized version of it.
+-- NDefines.NCountry.EVENT_PROCESS_OFFSET = 40 -- supposedly a performance optimization - vanilla = 20
 NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.00007	    -- vanilla = 0.0005
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 40	--vanilla=24
 
@@ -150,7 +150,7 @@ NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 0;
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0;
 
 ------------------------------------------ Resistance ------------------------------------------
-NDefines.NResistance.GARRISON_LOG_MAX_MONTHS = 1
+-- NDefines.NResistance.GARRISON_LOG_MAX_MONTHS = 1
 
 ------------------------------------------ Building ------------------------------------------
 --NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.125						-- Vanilla is 0.2

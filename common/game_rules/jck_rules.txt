@@ -185,42 +185,42 @@ allowed_reclaim_NEE = {
 	}
 }
 
-allowed_insulindia_revolt = {
-	name = "Insulindia Revolt"
-	group = "DEI JCK Rules"
-	icon = "GFX_wargoals"
+# allowed_insulindia_revolt = {
+# 	name = "Insulindia Revolt"
+# 	group = "DEI JCK Rules"
+# 	icon = "GFX_wargoals"
 
-	default = {
-		name = not_allowed
-		text = "No Revolt"
-	}
+# 	default = {
+# 		name = not_allowed
+# 		text = "No Revolt"
+# 	}
 
-	option = {
-		name = allowed
-		text = "Revolt Possible"
-	}
-}
+# 	option = {
+# 		name = allowed
+# 		text = "Revolt Possible"
+# 	}
+# }
 
-deix_faction_choice = {
-	name = "DEI Exiles Faction"
-	group = "DEI Exiles JCK Rules"
-	icon = "GFX_wargoals"
+# deix_faction_choice = {
+# 	name = "DEI Exiles Faction"
+# 	group = "DEI Exiles JCK Rules"
+# 	icon = "GFX_wargoals"
 
-	default = {
-		name = deix_entente
-		text = "Entente"
-	}
+# 	default = {
+# 		name = deix_entente
+# 		text = "Entente"
+# 	}
 
-	option = {
-		name = deix_reichspakt
-		text = "Reichspakt"
-	}
+# 	option = {
+# 		name = deix_reichspakt
+# 		text = "Reichspakt"
+# 	}
 
-	option = {
-		name = deix_random
-		text = "default"
-	}
-}
+# 	option = {
+# 		name = deix_random
+# 		text = "default"
+# 	}
+# }
 
 jck_style = {
 	name = "JCK Style"
