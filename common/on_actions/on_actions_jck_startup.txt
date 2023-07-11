@@ -297,6 +297,13 @@ on_actions = {
 					amount = -12
 				}
 			}
+			####### Sweden
+			666 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+			}
 		}
 	}
 }
