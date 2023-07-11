@@ -140,6 +140,7 @@ political_actions = {
 		available = {
 			has_completed_focus = POR_matters_of_the_realm
 			at_peace_or_same_enemies_as_FROM = yes
+			always = no
 		}
 
 		visible = {
@@ -152,8 +153,7 @@ political_actions = {
 			}
 		}
 
-		targets = { }
-
+		targets = { ENT }
 		target_trigger = {
 			is_subject = no
 			is_in_faction = no

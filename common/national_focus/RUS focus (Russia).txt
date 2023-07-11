@@ -264,9 +264,7 @@ focus_tree = {
 		x = -3
 		y = 3
 		cost = 9
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Imperial_Benevolence"
 			swap_ideas = {
@@ -645,9 +643,7 @@ focus_tree = {
 		x = -3
 		y = 3
 		cost = 11
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Money_For_The_Motherland"
 			add_political_power = 100
@@ -1007,9 +1003,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 9
-		ai_will_do = {
-			factor = 10
-		}
+		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus RUS_Centralised_Apparatus_Of_State"
 			custom_effect_tooltip = RUS_state_duma_trait_change
@@ -1532,7 +1526,7 @@ focus_tree = {
 		relative_position_id = RUS_Establish_The_VES
 		x = -2
 		y = 2
-		cost = 6
+		cost = 6 # JCK change
 		prerequisite = {
 			focus = RUS_Ural_Tractor_Plants
 		}
@@ -1631,7 +1625,7 @@ focus_tree = {
 		relative_position_id = RUS_Reinstitute_The_Zemstva
 		x = -1
 		y = 2
-		cost = 6
+		cost = 6 # JCK change
 		prerequisite = {
 			focus = RUS_Funding_Frenzy
 		}
@@ -1935,7 +1929,7 @@ focus_tree = {
 		relative_position_id = RUS_Bureaucratic_Overhaul
 		x = 1
 		y = 2
-		cost = 6
+		cost = 6 # JCK change
 		prerequisite = {
 			focus = RUS_MinProm
 		}
@@ -2136,7 +2130,7 @@ focus_tree = {
 		relative_position_id = RUS_Cooperative_Capitalism
 		x = 0
 		y = 1
-		cost = 6
+		cost = 6 # JCK change
 		prerequisite = {
 			focus = RUS_Cooperative_Capitalism
 		}
@@ -2321,7 +2315,7 @@ focus_tree = {
 		relative_position_id = RUS_Resource_Prospection
 		x = 0
 		y = 2
-		cost = 5
+		cost = 5 # JCK Change
 		prerequisite = {
 			focus = RUS_Resource_Prospection
 		}
@@ -3257,12 +3251,6 @@ focus_tree = {
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
-			}
-			add_tech_bonus = {
-				name = RUS_Wing_Formations
-				bonus = 1
-				uses = 1
-				category = cat_air_engine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }

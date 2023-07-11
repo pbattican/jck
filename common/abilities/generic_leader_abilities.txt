@@ -8,6 +8,7 @@ ability = {
 
 		allowed = {
 			is_leading_army_group = no
+			is_border_war = no
 		}
 
 		ai_will_do = {
@@ -26,7 +27,8 @@ ability = {
 				add = 2
 			}
 		}
-		cost = 0.4
+
+		cost = 0.22
 		duration = 168
 
 		one_time_effect = {
@@ -53,8 +55,10 @@ ability = {
 
 		allowed = {
 			is_leading_army_group = no
+			is_border_war = no
 		}
-		cost = 0.4
+
+		cost = 0.22
 		duration = 168
 
 		one_time_effect = {
@@ -97,12 +101,17 @@ ability = {
 
 		type = army_leader
 
+		allowed = {
+			is_border_war = no
+		}
+
 		cost = 0.12
 		duration = 168
 
 		unit_modifiers = {
 			planning_speed = 4.0
 		}
+
 
 		ai_will_do = {
 			factor = -1
@@ -119,6 +128,7 @@ ability = {
 		}
 	}
 
+
 	siege_artillery = {
 		name = ABILITY_SIEGE_ARTILLERY
 		desc = ABILITY_SIEGE_ARTILLERY_DESC
@@ -127,6 +137,7 @@ ability = {
 
 		allowed = {
 			has_ability = siege_artillery
+			is_border_war = no
 		}
 
 		unit_modifiers = {
@@ -138,6 +149,7 @@ ability = {
 		}
 		cost = 0.1
 		duration = 168
+
 
 		ai_will_do = {
 			factor = -1
@@ -165,6 +177,7 @@ ability = {
 
 		allowed = {
 			has_ability = glider_planes
+			is_border_war = no
 		}
 
 		unit_modifiers = {
@@ -184,6 +197,7 @@ ability = {
 
 		allowed = {
 			has_ability = faster_naval_invasion_planning
+			is_border_war = no
 		}
 
 		unit_modifiers = {
@@ -202,6 +216,7 @@ ability = {
 
 		allowed = {
 			has_ability = probing_attack
+			is_border_war = no
 		}
 
 		unit_modifiers = {
@@ -222,7 +237,9 @@ ability = {
 
 		allowed = {
 			has_ability = makeshift_bridges
+			is_border_war = no
 		}
+
 
 		unit_modifiers = {
 			river_crossing_factor = -0.4
@@ -255,6 +272,7 @@ ability = {
 
 		allowed = {
 			has_ability = extra_suplies
+			is_border_war = no
 		}
 
 		unit_modifiers = {
@@ -278,6 +296,7 @@ ability = {
 
 		allowed = {
 			has_ability = requisition_winter_gear
+			is_border_war = no
 		}
 
 		unit_modifiers = {
@@ -286,6 +305,7 @@ ability = {
 
 		cost = 0.1
 		duration = 168
+
 
 		ai_will_do = {
 			factor = -1
