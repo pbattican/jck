@@ -1,107 +1,107 @@
-#### Host Tool rules - from Lennard
+# #### Host Tool rules - from Lennard
 
-horst_host_country = {
-	name = "Select Host"
-	group = "Host Rules"
-	icon = "GFX_volunteers"
-	default = {
-		name = GER
-		text = "Germany"
-		desc = ""
-	}
-	option = {
-		name = SRI
-		text = "Socialist Republic of Italy"
-		desc = ""
-	}
-	option = {
-		name = ROM
-		text = "Romania"
-		desc = ""
-	}
-	option = {
-		name = AUS
-		text = "Austria"
-		desc = ""
-	}
-	option = {
-		name = BUL
-		text = "Bulgaria"
-		desc = ""
-	}
-	option = {
-		name = FIN
-		text = "Finland"
-		desc = ""
-	}
-	option = {
-		name = ENG
-		text = "Union of Britain"
-		desc = ""
-	}
-	option = {
-		name = USA
-		text = "USA"
-		desc = ""
-	}
-	option = {
-		name = CAN
-		text = "Canada"
-		desc = ""
-	}
-	option = {
-		name = SAF
-		text = "South Africa"
-		desc = ""
-	}
-	option = {
-		name = AST
-		text = "Australia"
-		desc = ""
-	}
-	option = {
-		name = JAP
-		text = "Japan"
-		desc = ""
-	}
-	option = {
-		name = FRA
-		text = "Commune of France"
-		desc = ""
-	}
-	option = {
-		name = BRA
-		text = "Brazil"
-		desc = ""
-	}
-	option = {
-		name = MEX
-		text = "Mexico"
-		desc = ""
-	}
-	option = {
-		name = RUS
-		text = "Russia"
-		desc = ""
-	}
-	option = {
-		name = UKR
-		text = "Ukraine"
-		desc = ""
-	}
-	option = {
-		name = SWE
-		text = "Sweden"
-		desc = ""
-	}
-	option = {
-		name = FNG
-		text = "Fengtian Government"
-		desc = ""
-	}
-	option = {
-		name = NFA
-		text = "National France"
-		desc = ""
-	}
-}
+# horst_host_country = {
+# 	name = "Select Host"
+# 	group = "Host Rules"
+# 	icon = "GFX_volunteers"
+# 	default = {
+# 		name = GER
+# 		text = "Germany"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = SRI
+# 		text = "Socialist Republic of Italy"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = ROM
+# 		text = "Romania"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = AUS
+# 		text = "Austria"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = BUL
+# 		text = "Bulgaria"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = FIN
+# 		text = "Finland"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = ENG
+# 		text = "Union of Britain"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = USA
+# 		text = "USA"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = CAN
+# 		text = "Canada"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = SAF
+# 		text = "South Africa"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = AST
+# 		text = "Australia"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = JAP
+# 		text = "Japan"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = FRA
+# 		text = "Commune of France"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = BRA
+# 		text = "Brazil"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = MEX
+# 		text = "Mexico"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = RUS
+# 		text = "Russia"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = UKR
+# 		text = "Ukraine"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = SWE
+# 		text = "Sweden"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = FNG
+# 		text = "Fengtian Government"
+# 		desc = ""
+# 	}
+# 	option = {
+# 		name = NFA
+# 		text = "National France"
+# 		desc = ""
+# 	}
+# }
