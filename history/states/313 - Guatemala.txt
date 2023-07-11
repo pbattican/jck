@@ -5,9 +5,12 @@ state = {
 	state_category = five
 
 	resources = {
+		# chromium = 5
 	}
 
 	history = {
+		# owner = GUA
+		# add_core_of = GUA
 		add_to_array = { state_victory_points = 10886 }
 		add_to_array = { state_victory_points = 10842 }
 

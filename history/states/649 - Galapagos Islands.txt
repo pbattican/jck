@@ -7,7 +7,10 @@ state = {
 	history = {
 		owner = CHL
 		add_core_of = CHL
-		
+		add_to_array = { state_victory_points = 5023 }
+
+		victory_points = { 5023 1 }
+
 		buildings = {
 			infrastructure = 1
 			5023 = {
@@ -20,4 +23,3 @@ state = {
 		5023
 	}
 }
-

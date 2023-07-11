@@ -6,9 +6,12 @@ state = {
 	local_supplies = 4.0
 
 	resources = {
+		# oil = 15
 	}
 
 	history = {
+		# owner = COL
+		# add_core_of = COL
 		add_to_array = { state_victory_points = 10747 }
 
 		victory_points = { 10747 15 }

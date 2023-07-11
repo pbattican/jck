@@ -7,6 +7,7 @@ state = {
 	history = {
 		owner = WIF
 		add_core_of = WIF
+		# add_claim_by = GUA
 		add_to_array = { state_victory_points = 2077 }
 
 		victory_points = { 2077 1 }
